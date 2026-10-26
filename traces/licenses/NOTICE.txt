@@ -1,0 +1,23 @@
+The expert operation recordings contain small, unmodified parameter slices from IBM Granite 3.1 1B-A400M base.
+Model: ibm-granite/granite-3.1-1b-a400m-base
+Revision: 408b6e90baab8cf24f4aa9f8e19703ffa0a53b29
+Source: https://huggingface.co/ibm-granite/granite-3.1-1b-a400m-base/tree/408b6e90baab8cf24f4aa9f8e19703ffa0a53b29
+License: Apache License, Version 2.0 (included as Apache-2.0.txt).
+The accompanying capture script produces new activation measurements and compact parameter previews. The complete checkpoint is not included.
+
+The speech recording plays and analyses one LibriSpeech utterance, redistributed unmodified.
+Audio: LibriSpeech ASR corpus, dev-clean, utterance 1272-135031-0012 (speaker 1272, chapter 135031)
+Authors: Vassil Panayotov, Guoguo Chen, Daniel Povey and Sanjeev Khudanpur, from LibriVox public-domain audiobooks
+Copy used: hf-internal-testing/librispeech_asr_dummy, revision 5be91486e11a2d616f4ec5db8d3fd248585ac07a
+Corpus: https://www.openslr.org/12
+License: Creative Commons Attribution 4.0 International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/
+File: static/architectures/speech-librispeech-1272-135031-0012.flac (SHA-256 2da8a3d5a915be58a29cae9520c94e96395619f1dd3a0968486c9d5154b77b12)
+The Whisper recording (openai/whisper-base, Apache-2.0) stores activations only; it contains no model parameters.
+
+The time-series recording forecasts one public-domain series, redistributed unmodified.
+Data: NOAA National Centers for Environmental Information, Climate at a Glance: National Time Series,
+contiguous U.S. average temperature, monthly, January 1895 – September 2026 (retrieved October 25, 2026)
+Source: https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/national/time-series/110/tavg/1/0/1895-2026/data.csv
+License: U.S. Government work, not subject to copyright in the United States (public domain)
+File: static/traces/time-series/ncei-conus-tavg-monthly.csv (SHA-256 6152f89d28d44fff936532ec09c392be2042aef27b47dbfffe77913ba026978f)
+The Chronos-T5 small recording (amazon/chronos-t5-small, Apache-2.0) stores activations only; it contains no model parameters.
