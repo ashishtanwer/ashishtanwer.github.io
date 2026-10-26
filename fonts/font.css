@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Jersey 10';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./jersey10.ttf') format('truetype');
+}
