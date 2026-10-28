@@ -1,0 +1,985 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "linear",
+	"source": "model",
+	"model": {
+		"id": "fla-hub/rwkv7-0.1B-g1",
+		"name": "RWKV-7 0.1B (g1)",
+		"revision": "7450ee04eb9c66baa7161b7a5c0fe09e5b2817d8",
+		"url": "https://huggingface.co/fla-hub/rwkv7-0.1B-g1/tree/7450ee04eb9c66baa7161b7a5c0fe09e5b2817d8",
+		"license": "apache-2.0",
+		"numLayers": 12,
+		"hiddenSize": 768,
+		"attentionHeads": 12,
+		"keyValueHeads": 12,
+		"headDim": 64,
+		"stateSize": [64, 64],
+		"decayScale": 0.6065306597126334,
+		"mask": "causal by construction: the state only holds earlier tokens",
+		"predictions": {
+			"coreference": " to",
+			"induction": " fox",
+			"names": " Mary"
+		}
+	},
+	"layers": [0, 3, 7, 11],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "coreference",
+			"title": "Coreference",
+			"prompt": "The animal didn't cross the street because it was too tired",
+			"tokens": [
+				{
+					"id": 6699,
+					"text": "The"
+				},
+				{
+					"id": 45169,
+					"text": " animal"
+				},
+				{
+					"id": 30633,
+					"text": " didn"
+				},
+				{
+					"id": 461,
+					"text": "'t"
+				},
+				{
+					"id": 38154,
+					"text": " cross"
+				},
+				{
+					"id": 22590,
+					"text": " the"
+				},
+				{
+					"id": 47424,
+					"text": " street"
+				},
+				{
+					"id": 51018,
+					"text": " because"
+				},
+				{
+					"id": 4601,
+					"text": " it"
+				},
+				{
+					"id": 22748,
+					"text": " was"
+				},
+				{
+					"id": 22614,
+					"text": " too"
+				},
+				{
+					"id": 39964,
+					"text": " tired"
+				}
+			],
+			"file": {
+				"file": "coreference.f32",
+				"bytes": 1898496,
+				"sha256": "3f639db3b9d49a333a9e1f3f62dcb2d8d0ff9b9818431d6579f8a9b6b59e444b",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.0.q": {
+						"offset": 768,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.0.k": {
+						"offset": 9984,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.0.v": {
+						"offset": 19200,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.0.scores": {
+						"offset": 28416,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.0.weights": {
+						"offset": 30144,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.0.heads": {
+						"offset": 31872,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.0.out": {
+						"offset": 41088,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.0.decay": {
+						"offset": 41856,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.0.kk": {
+						"offset": 51072,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.0.a": {
+						"offset": 60288,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.0.state": {
+						"offset": 69504,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					},
+					"layer.3.x": {
+						"offset": 118656,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.3.q": {
+						"offset": 119424,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.3.k": {
+						"offset": 128640,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.3.v": {
+						"offset": 137856,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.3.scores": {
+						"offset": 147072,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.3.weights": {
+						"offset": 148800,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.3.heads": {
+						"offset": 150528,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.3.out": {
+						"offset": 159744,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.3.decay": {
+						"offset": 160512,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.3.kk": {
+						"offset": 169728,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.3.a": {
+						"offset": 178944,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.3.state": {
+						"offset": 188160,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					},
+					"layer.7.x": {
+						"offset": 237312,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.7.q": {
+						"offset": 238080,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.7.k": {
+						"offset": 247296,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.7.v": {
+						"offset": 256512,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.7.scores": {
+						"offset": 265728,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.7.weights": {
+						"offset": 267456,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.7.heads": {
+						"offset": 269184,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.7.out": {
+						"offset": 278400,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.7.decay": {
+						"offset": 279168,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.7.kk": {
+						"offset": 288384,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.7.a": {
+						"offset": 297600,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.7.state": {
+						"offset": 306816,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					},
+					"layer.11.x": {
+						"offset": 355968,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.11.q": {
+						"offset": 356736,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.11.k": {
+						"offset": 365952,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.11.v": {
+						"offset": 375168,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.11.scores": {
+						"offset": 384384,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.11.weights": {
+						"offset": 386112,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.11.heads": {
+						"offset": 387840,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.11.out": {
+						"offset": 397056,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.11.decay": {
+						"offset": 397824,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.11.kk": {
+						"offset": 407040,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.11.a": {
+						"offset": 416256,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.11.state": {
+						"offset": 425472,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "induction",
+			"title": "Repeated phrase",
+			"prompt": "The quick brown fox jumps over the lazy dog. The quick brown",
+			"tokens": [
+				{
+					"id": 6699,
+					"text": "The"
+				},
+				{
+					"id": 39418,
+					"text": " quick"
+				},
+				{
+					"id": 37917,
+					"text": " brown"
+				},
+				{
+					"id": 21704,
+					"text": " fox"
+				},
+				{
+					"id": 38828,
+					"text": " jumps"
+				},
+				{
+					"id": 31601,
+					"text": " over"
+				},
+				{
+					"id": 22590,
+					"text": " the"
+				},
+				{
+					"id": 31261,
+					"text": " lazy"
+				},
+				{
+					"id": 21551,
+					"text": " dog"
+				},
+				{
+					"id": 47,
+					"text": "."
+				},
+				{
+					"id": 20996,
+					"text": " The"
+				},
+				{
+					"id": 39418,
+					"text": " quick"
+				},
+				{
+					"id": 37917,
+					"text": " brown"
+				}
+			],
+			"file": {
+				"file": "induction.f32",
+				"bytes": 1996160,
+				"sha256": "9df0b569fa4c1d724cab8aae44f94460fd93ad88f9e59984cb31d7469d6802a8",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.0.q": {
+						"offset": 832,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.0.k": {
+						"offset": 10816,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.0.v": {
+						"offset": 20800,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.0.scores": {
+						"offset": 30784,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.0.weights": {
+						"offset": 32812,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.0.heads": {
+						"offset": 34840,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.0.out": {
+						"offset": 44824,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.0.decay": {
+						"offset": 45656,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.0.kk": {
+						"offset": 55640,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.0.a": {
+						"offset": 65624,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.0.state": {
+						"offset": 75608,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					},
+					"layer.3.x": {
+						"offset": 124760,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.3.q": {
+						"offset": 125592,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.3.k": {
+						"offset": 135576,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.3.v": {
+						"offset": 145560,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.3.scores": {
+						"offset": 155544,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.3.weights": {
+						"offset": 157572,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.3.heads": {
+						"offset": 159600,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.3.out": {
+						"offset": 169584,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.3.decay": {
+						"offset": 170416,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.3.kk": {
+						"offset": 180400,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.3.a": {
+						"offset": 190384,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.3.state": {
+						"offset": 200368,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					},
+					"layer.7.x": {
+						"offset": 249520,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.7.q": {
+						"offset": 250352,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.7.k": {
+						"offset": 260336,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.7.v": {
+						"offset": 270320,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.7.scores": {
+						"offset": 280304,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.7.weights": {
+						"offset": 282332,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.7.heads": {
+						"offset": 284360,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.7.out": {
+						"offset": 294344,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.7.decay": {
+						"offset": 295176,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.7.kk": {
+						"offset": 305160,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.7.a": {
+						"offset": 315144,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.7.state": {
+						"offset": 325128,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					},
+					"layer.11.x": {
+						"offset": 374280,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.11.q": {
+						"offset": 375112,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.11.k": {
+						"offset": 385096,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.11.v": {
+						"offset": 395080,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.11.scores": {
+						"offset": 405064,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.11.weights": {
+						"offset": 407092,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.11.heads": {
+						"offset": 409120,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.11.out": {
+						"offset": 419104,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.11.decay": {
+						"offset": 419936,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.11.kk": {
+						"offset": 429920,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.11.a": {
+						"offset": 439904,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.11.state": {
+						"offset": 449888,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "names",
+			"title": "Two names",
+			"prompt": "When Mary and John went to the store, John gave a drink to",
+			"tokens": [
+				{
+					"id": 24327,
+					"text": "When"
+				},
+				{
+					"id": 29355,
+					"text": " Mary"
+				},
+				{
+					"id": 21265,
+					"text": " and"
+				},
+				{
+					"id": 29165,
+					"text": " John"
+				},
+				{
+					"id": 32460,
+					"text": " went"
+				},
+				{
+					"id": 4811,
+					"text": " to"
+				},
+				{
+					"id": 22590,
+					"text": " the"
+				},
+				{
+					"id": 39829,
+					"text": " store"
+				},
+				{
+					"id": 45,
+					"text": ","
+				},
+				{
+					"id": 29165,
+					"text": " John"
+				},
+				{
+					"id": 30949,
+					"text": " gave"
+				},
+				{
+					"id": 332,
+					"text": " a"
+				},
+				{
+					"id": 38305,
+					"text": " drink"
+				},
+				{
+					"id": 4811,
+					"text": " to"
+				}
+			],
+			"file": {
+				"file": "names.f32",
+				"bytes": 2094592,
+				"sha256": "c020db7268e1c3bff1c849c1db7dbdd5358728830e48e4b874eb4682907b6d9e",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.0.q": {
+						"offset": 896,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.0.k": {
+						"offset": 11648,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.0.v": {
+						"offset": 22400,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.0.scores": {
+						"offset": 33152,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.0.weights": {
+						"offset": 35504,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.0.heads": {
+						"offset": 37856,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.0.out": {
+						"offset": 48608,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.0.decay": {
+						"offset": 49504,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.0.kk": {
+						"offset": 60256,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.0.a": {
+						"offset": 71008,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.0.state": {
+						"offset": 81760,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					},
+					"layer.3.x": {
+						"offset": 130912,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.3.q": {
+						"offset": 131808,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.3.k": {
+						"offset": 142560,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.3.v": {
+						"offset": 153312,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.3.scores": {
+						"offset": 164064,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.3.weights": {
+						"offset": 166416,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.3.heads": {
+						"offset": 168768,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.3.out": {
+						"offset": 179520,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.3.decay": {
+						"offset": 180416,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.3.kk": {
+						"offset": 191168,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.3.a": {
+						"offset": 201920,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.3.state": {
+						"offset": 212672,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					},
+					"layer.7.x": {
+						"offset": 261824,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.7.q": {
+						"offset": 262720,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.7.k": {
+						"offset": 273472,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.7.v": {
+						"offset": 284224,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.7.scores": {
+						"offset": 294976,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.7.weights": {
+						"offset": 297328,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.7.heads": {
+						"offset": 299680,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.7.out": {
+						"offset": 310432,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.7.decay": {
+						"offset": 311328,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.7.kk": {
+						"offset": 322080,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.7.a": {
+						"offset": 332832,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.7.state": {
+						"offset": 343584,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					},
+					"layer.11.x": {
+						"offset": 392736,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.11.q": {
+						"offset": 393632,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.11.k": {
+						"offset": 404384,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.11.v": {
+						"offset": 415136,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.11.scores": {
+						"offset": 425888,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.11.weights": {
+						"offset": 428240,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.11.heads": {
+						"offset": 430592,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.11.out": {
+						"offset": 441344,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.11.decay": {
+						"offset": 442240,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.11.kk": {
+						"offset": 452992,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.11.a": {
+						"offset": 463744,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.11.state": {
+						"offset": 474496,
+						"length": 49152,
+						"shape": [12, 64, 64]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_linear.py",
+		"blocks": "scripts/capture-linear-attention.py (run_block, mixing_matrices), imported",
+		"torch": "2.14.1",
+		"numpy": "2.5.4",
+		"safetensors": "0.8.0",
+		"device": "cpu",
+		"dtype": "float32 from the bfloat16 checkpoint (exact upcast); the mixing matrix in float64",
+		"weightsSha256": "051b3684ffa896aa842522e5bbc2f355ac00783e12e373a8eb7e4907dd5ead70",
+		"blocksSha256": "ffddbf274cc668494f783cc84c1459dd1d09fdbbed886e2403b14ca8b288ec70",
+		"reference": {
+			"package": "rwkv 0.8.32 (BlinkDL), RWKV_x070, strategy \"cpu fp32\", RWKV_JIT_ON=0",
+			"modelPySha256": "75482aee89a08d2a8c8dbe628110b317fc8d0974ddffbaa52aa19190667305e0",
+			"vocabSha256": "8324476023347dec2964625ccb2075c864d250a9c6d9a74f36daba628de8c008"
+		},
+		"x": "input to the time mix, after ln1 (attn_norm); block 1 also applies ln0 to the embedding",
+		"q": "receptance r, the query role",
+		"k": "k̃ = k ⊙ (1 + (a − 1) ⊙ k_a), the key written into the state",
+		"heads": "o_t = S_t r_t per head, before GroupNorm, the bonus and the gate",
+		"out": "W_o · ((GroupNorm(o) + (r · (k̃ ⊙ r_k)) v) ⊙ g), before the residual add"
+	},
+	"validation": {
+		"maxMatrixVsRecurrenceError": 9.06e-6,
+		"maxStoredMatrixVsRecurrenceError": 7.63e-6,
+		"maxStateRebuildError": 4.73e-6,
+		"maxFinalStateReadoutError": 0.0,
+		"maxReferenceLogitError": 0.000105,
+		"maxReferenceFinalStateError": 4.2e-5
+	},
+	"extras": {
+		"weights": "[H, T, T] A[t,i] = k̃_iᵀ G_{i+1} ⋯ G_t r_t with G_j = diag(w_j) − κ̂_j (κ̂_j ⊙ a_j)ᵀ: the token mixing the state recurrence applies, o_t = Σ_i A[t,i] v_i (float64, then stored as float32)",
+		"scores": "[H, T, T] k̃_i · r_t, the plain linear-attention score with no decay and no delta rule; a comparison the model does not compute",
+		"decay": "[H, T, N] w_t = exp(−e^−0.5 σ(·)), the per-channel decay applied to the state",
+		"kk": "[H, T, N] κ̂_t, the unit-norm key the delta rule removes from the state",
+		"a": "[H, T, N] a_t, the in-context learning rate of the delta rule",
+		"state": "[H, N, N] S_T, each head's whole state after the last token, [value index][key index]"
+	}
+}

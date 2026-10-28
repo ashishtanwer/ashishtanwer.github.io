@@ -1,0 +1,14 @@
+Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms.
+
+These files contain activations recorded from Gemma 3 270M (blocks 5 and 6: attention inputs, queries,
+keys, values, attention weights, head outputs and output projections; no weights).
+Model: google/gemma-3-270m, revision 9b0cfec892e2bc2afd938c98eabe4e4a7b1e0ca1, read from the ungated
+mirror unsloth/gemma-3-270m, revision edcf1fe394ee1168e7c5538afd104cfb1f7947e6. Both list
+model.safetensors with SHA-256 abb58eb73aece5163624090d5383c59cbcdb9e9539ec84cb864f74386c4b21d5.
+Gemma Terms of Use: https://ai.google.dev/gemma/terms
+Gemma Prohibited Use Policy: https://ai.google.dev/gemma/prohibited_use_policy
+
+The two passages are public-domain texts, taken from Project Gutenberg ebooks 1661 and 11 (the same
+cuts as static/traces/local-global/): Arthur Conan Doyle, The Adventures of Sherlock Holmes (1892),
+"The Boscombe Valley Mystery"; Lewis Carroll, Alice's Adventures in Wonderland (1865), "A Caucus-Race
+and a Long Tale".

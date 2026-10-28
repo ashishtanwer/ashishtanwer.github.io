@@ -1,0 +1,659 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "hyena",
+	"source": "model",
+	"model": {
+		"id": "LongSafari/hyenadna-tiny-1k-seqlen-hf",
+		"name": "HyenaDNA-tiny (1k)",
+		"revision": "e8c1effa8673814e257e627d2e1eda9ea5a373f6",
+		"url": "https://huggingface.co/LongSafari/hyenadna-tiny-1k-seqlen-hf/tree/e8c1effa8673814e257e627d2e1eda9ea5a373f6",
+		"license": "bsd-3-clause",
+		"numLayers": 2,
+		"hiddenSize": 128,
+		"attentionHeads": 128,
+		"keyValueHeads": 128,
+		"headDim": 1,
+		"channels": 128,
+		"order": 2,
+		"maxSeqLen": 1026,
+		"filterOrder": 64,
+		"shortFilterOrder": 3,
+		"positions": "none; the implicit filter is a function of the lag",
+		"mask": "causal (the long and short convolutions only look back)"
+	},
+	"layers": [0, 1],
+	"previewDims": 128,
+	"examples": [
+		{
+			"id": "hbb",
+			"title": "β-globin (HBB) start",
+			"prompt": "ATGGTGCATCTGACTCCTGAGGAG",
+			"tokens": [
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 8,
+					"text": "C"
+				},
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 8,
+					"text": "C"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 8,
+					"text": "C"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 8,
+					"text": "C"
+				},
+				{
+					"id": 8,
+					"text": "C"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				}
+			],
+			"file": {
+				"file": "hbb.f32",
+				"bytes": 1812480,
+				"sha256": "44c3a34f5c8059fb37bad4ffdaab852a1daf5f0f572149e3c7492647b2487a9a",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.0.v": {
+						"offset": 3072,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.0.weights": {
+						"offset": 6144,
+						"length": 73728,
+						"shape": [128, 24, 24]
+					},
+					"layer.0.heads": {
+						"offset": 79872,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.0.out": {
+						"offset": 82944,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.0.gate1": {
+						"offset": 86016,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.0.gate2": {
+						"offset": 89088,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.0.vRaw": {
+						"offset": 92160,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.0.filter": {
+						"offset": 95232,
+						"length": 131328,
+						"shape": [128, 1026]
+					},
+					"layer.1.x": {
+						"offset": 226560,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.1.v": {
+						"offset": 229632,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.1.weights": {
+						"offset": 232704,
+						"length": 73728,
+						"shape": [128, 24, 24]
+					},
+					"layer.1.heads": {
+						"offset": 306432,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.1.out": {
+						"offset": 309504,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.1.gate1": {
+						"offset": 312576,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.1.gate2": {
+						"offset": 315648,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.1.vRaw": {
+						"offset": 318720,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.1.filter": {
+						"offset": 321792,
+						"length": 131328,
+						"shape": [128, 1026]
+					}
+				}
+			}
+		},
+		{
+			"id": "sickle",
+			"title": "Sickle-cell variant",
+			"prompt": "ATGGTGCATCTGACTCCTGTGGAG",
+			"tokens": [
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 8,
+					"text": "C"
+				},
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 8,
+					"text": "C"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 8,
+					"text": "C"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 8,
+					"text": "C"
+				},
+				{
+					"id": 8,
+					"text": "C"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				}
+			],
+			"file": {
+				"file": "sickle.f32",
+				"bytes": 1812480,
+				"sha256": "6e02482bb23251db2dfec861603ee8821aa69136222b86ff48199eefddff3481",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.0.v": {
+						"offset": 3072,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.0.weights": {
+						"offset": 6144,
+						"length": 73728,
+						"shape": [128, 24, 24]
+					},
+					"layer.0.heads": {
+						"offset": 79872,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.0.out": {
+						"offset": 82944,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.0.gate1": {
+						"offset": 86016,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.0.gate2": {
+						"offset": 89088,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.0.vRaw": {
+						"offset": 92160,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.0.filter": {
+						"offset": 95232,
+						"length": 131328,
+						"shape": [128, 1026]
+					},
+					"layer.1.x": {
+						"offset": 226560,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.1.v": {
+						"offset": 229632,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.1.weights": {
+						"offset": 232704,
+						"length": 73728,
+						"shape": [128, 24, 24]
+					},
+					"layer.1.heads": {
+						"offset": 306432,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.1.out": {
+						"offset": 309504,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.1.gate1": {
+						"offset": 312576,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.1.gate2": {
+						"offset": 315648,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.1.vRaw": {
+						"offset": 318720,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.1.filter": {
+						"offset": 321792,
+						"length": 131328,
+						"shape": [128, 1026]
+					}
+				}
+			}
+		},
+		{
+			"id": "telomere",
+			"title": "Telomere repeat",
+			"prompt": "TTAGGGTTAGGGTTAGGGTTAGGG",
+			"tokens": [
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 10,
+					"text": "T"
+				},
+				{
+					"id": 7,
+					"text": "A"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				},
+				{
+					"id": 9,
+					"text": "G"
+				}
+			],
+			"file": {
+				"file": "telomere.f32",
+				"bytes": 1812480,
+				"sha256": "7e9c1e91347d0f710f06a74d2059075c89259008d5c8218b50dcf52254e980ff",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.0.v": {
+						"offset": 3072,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.0.weights": {
+						"offset": 6144,
+						"length": 73728,
+						"shape": [128, 24, 24]
+					},
+					"layer.0.heads": {
+						"offset": 79872,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.0.out": {
+						"offset": 82944,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.0.gate1": {
+						"offset": 86016,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.0.gate2": {
+						"offset": 89088,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.0.vRaw": {
+						"offset": 92160,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.0.filter": {
+						"offset": 95232,
+						"length": 131328,
+						"shape": [128, 1026]
+					},
+					"layer.1.x": {
+						"offset": 226560,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.1.v": {
+						"offset": 229632,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.1.weights": {
+						"offset": 232704,
+						"length": 73728,
+						"shape": [128, 24, 24]
+					},
+					"layer.1.heads": {
+						"offset": 306432,
+						"length": 3072,
+						"shape": [128, 24, 1]
+					},
+					"layer.1.out": {
+						"offset": 309504,
+						"length": 3072,
+						"shape": [24, 128]
+					},
+					"layer.1.gate1": {
+						"offset": 312576,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.1.gate2": {
+						"offset": 315648,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.1.vRaw": {
+						"offset": 318720,
+						"length": 3072,
+						"shape": [128, 24]
+					},
+					"layer.1.filter": {
+						"offset": 321792,
+						"length": 131328,
+						"shape": [128, 1026]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_hyena.py",
+		"torch": "2.14.1",
+		"device": "cpu",
+		"dtype": "float32",
+		"weights": "model.safetensors, loaded into a port of the repository’s modeling_hyena.py",
+		"modelingSha256": "d78029cacea2c9259f1293fdb50b60f90872089469185e27d5c769086c475607",
+		"crossCheck": "each block also run through pytorch/attention_hyena.py with these weights (maxCheckedBlocksError)",
+		"input": "DNA bases, one token each, no special tokens",
+		"hbbSource": "NCBI RefSeq NM_000518.5, HBB coding sequence",
+		"nextBaseLossHbbCds": 1.327,
+		"nextBaseLossUniform": 1.386,
+		"x": "input to the Hyena operator, after norm1",
+		"out": "output of out_proj, before the residual add"
+	},
+	"validation": {
+		"maxConvRecomputeError": 9.54e-7,
+		"maxOperatorRecomputeError": 4.77e-7,
+		"maxOutRecomputeError": 2.38e-7,
+		"maxCheckedBlocksError": 8.34e-7
+	},
+	"extras": {
+		"weights": "per channel: the causal long convolution as a T × T Toeplitz matrix, h[i - j] below the diagonal and h[0] + D on it",
+		"v": "x₁ ⊙ v, the gated values the long convolution mixes",
+		"heads": "the long convolution’s output, recorded from the operator’s own FFT convolution",
+		"gate1": "x₁ (d, T): the gate applied to v before the long convolution",
+		"gate2": "x₀ (d, T): the gate applied to the convolution’s output",
+		"vRaw": "v (d, T) after the short convolution, before the gate",
+		"filter": "the implicit filter h (d, 1026) at every lag the model supports"
+	}
+}

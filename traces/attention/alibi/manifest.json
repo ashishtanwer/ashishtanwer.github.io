@@ -1,0 +1,1196 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "alibi",
+	"source": "model",
+	"model": {
+		"id": "bigscience/bloom-560m",
+		"name": "BLOOM-560m",
+		"revision": "ac2ae5fab2ce3f9f40dc79b5ca9f637430d24971",
+		"url": "https://huggingface.co/bigscience/bloom-560m/tree/ac2ae5fab2ce3f9f40dc79b5ca9f637430d24971",
+		"license": "bigscience-bloom-rail-1.0",
+		"numLayers": 24,
+		"hiddenSize": 1024,
+		"attentionHeads": 16,
+		"keyValueHeads": 16,
+		"headDim": 64,
+		"scale": 0.125,
+		"slopes": [
+			0.7071067811865476, 0.5, 0.3535533905932738, 0.25, 0.1767766952966369, 0.125,
+			0.08838834764831845, 0.0625, 0.04419417382415922, 0.03125, 0.02209708691207961, 0.015625,
+			0.011048543456039806, 0.0078125, 0.005524271728019903, 0.00390625
+		],
+		"positions": "none: no position embedding; ALiBi adds m_h · (j − i) to every score",
+		"mask": "causal"
+	},
+	"layers": [0, 4, 8, 12, 16, 20, 23],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "mat",
+			"title": "Repeated words",
+			"prompt": "The cat sat on the mat. The dog sat on the mat too, and the cat watched the dog.",
+			"tokens": [
+				{
+					"id": 2175,
+					"text": "The"
+				},
+				{
+					"id": 10683,
+					"text": " cat"
+				},
+				{
+					"id": 13770,
+					"text": " sat"
+				},
+				{
+					"id": 664,
+					"text": " on"
+				},
+				{
+					"id": 368,
+					"text": " the"
+				},
+				{
+					"id": 1976,
+					"text": " mat"
+				},
+				{
+					"id": 17,
+					"text": "."
+				},
+				{
+					"id": 1387,
+					"text": " The"
+				},
+				{
+					"id": 35433,
+					"text": " dog"
+				},
+				{
+					"id": 13770,
+					"text": " sat"
+				},
+				{
+					"id": 664,
+					"text": " on"
+				},
+				{
+					"id": 368,
+					"text": " the"
+				},
+				{
+					"id": 1976,
+					"text": " mat"
+				},
+				{
+					"id": 10136,
+					"text": " too"
+				},
+				{
+					"id": 15,
+					"text": ","
+				},
+				{
+					"id": 530,
+					"text": " and"
+				},
+				{
+					"id": 368,
+					"text": " the"
+				},
+				{
+					"id": 10683,
+					"text": " cat"
+				},
+				{
+					"id": 135986,
+					"text": " watched"
+				},
+				{
+					"id": 368,
+					"text": " the"
+				},
+				{
+					"id": 35433,
+					"text": " dog"
+				},
+				{
+					"id": 17,
+					"text": "."
+				}
+			],
+			"file": {
+				"file": "mat.f32",
+				"bytes": 3066688,
+				"sha256": "32b031b4b574f4d59015d0832403bf52d73b9b15e5a6809fee095a9b81e1f7d2",
+				"tensors": {
+					"slopes": {
+						"offset": 0,
+						"length": 16,
+						"shape": [16]
+					},
+					"bias": {
+						"offset": 16,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.0.x": {
+						"offset": 7760,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.0.q": {
+						"offset": 9168,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.0.k": {
+						"offset": 31696,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.0.v": {
+						"offset": 54224,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.0.scores": {
+						"offset": 76752,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.0.weights": {
+						"offset": 84496,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.0.heads": {
+						"offset": 92240,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.0.out": {
+						"offset": 114768,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.4.x": {
+						"offset": 116176,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.4.q": {
+						"offset": 117584,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.4.k": {
+						"offset": 140112,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.4.v": {
+						"offset": 162640,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.4.scores": {
+						"offset": 185168,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.4.weights": {
+						"offset": 192912,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.4.heads": {
+						"offset": 200656,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.4.out": {
+						"offset": 223184,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.8.x": {
+						"offset": 224592,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.8.q": {
+						"offset": 226000,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.8.k": {
+						"offset": 248528,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.8.v": {
+						"offset": 271056,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.8.scores": {
+						"offset": 293584,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.8.weights": {
+						"offset": 301328,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.8.heads": {
+						"offset": 309072,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.8.out": {
+						"offset": 331600,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.12.x": {
+						"offset": 333008,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.12.q": {
+						"offset": 334416,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.12.k": {
+						"offset": 356944,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.12.v": {
+						"offset": 379472,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.12.scores": {
+						"offset": 402000,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.12.weights": {
+						"offset": 409744,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.12.heads": {
+						"offset": 417488,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.12.out": {
+						"offset": 440016,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.16.x": {
+						"offset": 441424,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.16.q": {
+						"offset": 442832,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.16.k": {
+						"offset": 465360,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.16.v": {
+						"offset": 487888,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.16.scores": {
+						"offset": 510416,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.16.weights": {
+						"offset": 518160,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.16.heads": {
+						"offset": 525904,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.16.out": {
+						"offset": 548432,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.20.x": {
+						"offset": 549840,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.20.q": {
+						"offset": 551248,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.20.k": {
+						"offset": 573776,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.20.v": {
+						"offset": 596304,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.20.scores": {
+						"offset": 618832,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.20.weights": {
+						"offset": 626576,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.20.heads": {
+						"offset": 634320,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.20.out": {
+						"offset": 656848,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.23.x": {
+						"offset": 658256,
+						"length": 1408,
+						"shape": [22, 64]
+					},
+					"layer.23.q": {
+						"offset": 659664,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.23.k": {
+						"offset": 682192,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.23.v": {
+						"offset": 704720,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.23.scores": {
+						"offset": 727248,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.23.weights": {
+						"offset": 734992,
+						"length": 7744,
+						"shape": [16, 22, 22]
+					},
+					"layer.23.heads": {
+						"offset": 742736,
+						"length": 22528,
+						"shape": [16, 22, 64]
+					},
+					"layer.23.out": {
+						"offset": 765264,
+						"length": 1408,
+						"shape": [22, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "count",
+			"title": "Counting",
+			"prompt": "one, two, three, four, five, six, seven, eight, nine, ten,",
+			"tokens": [
+				{
+					"id": 1738,
+					"text": "one"
+				},
+				{
+					"id": 15,
+					"text": ","
+				},
+				{
+					"id": 4085,
+					"text": " two"
+				},
+				{
+					"id": 15,
+					"text": ","
+				},
+				{
+					"id": 8603,
+					"text": " three"
+				},
+				{
+					"id": 15,
+					"text": ","
+				},
+				{
+					"id": 8215,
+					"text": " four"
+				},
+				{
+					"id": 15,
+					"text": ","
+				},
+				{
+					"id": 19465,
+					"text": " five"
+				},
+				{
+					"id": 15,
+					"text": ","
+				},
+				{
+					"id": 12338,
+					"text": " six"
+				},
+				{
+					"id": 15,
+					"text": ","
+				},
+				{
+					"id": 39518,
+					"text": " seven"
+				},
+				{
+					"id": 15,
+					"text": ","
+				},
+				{
+					"id": 38438,
+					"text": " eight"
+				},
+				{
+					"id": 15,
+					"text": ","
+				},
+				{
+					"id": 56221,
+					"text": " nine"
+				},
+				{
+					"id": 15,
+					"text": ","
+				},
+				{
+					"id": 2714,
+					"text": " ten"
+				},
+				{
+					"id": 15,
+					"text": ","
+				}
+			],
+			"file": {
+				"file": "count.f32",
+				"bytes": 2749504,
+				"sha256": "a938bb93c34847f156a3cb773748e5ee137017b99633bcc6a1ee6fad5244d5a7",
+				"tensors": {
+					"slopes": {
+						"offset": 0,
+						"length": 16,
+						"shape": [16]
+					},
+					"bias": {
+						"offset": 16,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.0.x": {
+						"offset": 6416,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.0.q": {
+						"offset": 7696,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.0.k": {
+						"offset": 28176,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.0.v": {
+						"offset": 48656,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.0.scores": {
+						"offset": 69136,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.0.weights": {
+						"offset": 75536,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.0.heads": {
+						"offset": 81936,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.0.out": {
+						"offset": 102416,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.4.x": {
+						"offset": 103696,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.4.q": {
+						"offset": 104976,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.4.k": {
+						"offset": 125456,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.4.v": {
+						"offset": 145936,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.4.scores": {
+						"offset": 166416,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.4.weights": {
+						"offset": 172816,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.4.heads": {
+						"offset": 179216,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.4.out": {
+						"offset": 199696,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.8.x": {
+						"offset": 200976,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.8.q": {
+						"offset": 202256,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.8.k": {
+						"offset": 222736,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.8.v": {
+						"offset": 243216,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.8.scores": {
+						"offset": 263696,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.8.weights": {
+						"offset": 270096,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.8.heads": {
+						"offset": 276496,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.8.out": {
+						"offset": 296976,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.12.x": {
+						"offset": 298256,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.12.q": {
+						"offset": 299536,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.12.k": {
+						"offset": 320016,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.12.v": {
+						"offset": 340496,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.12.scores": {
+						"offset": 360976,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.12.weights": {
+						"offset": 367376,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.12.heads": {
+						"offset": 373776,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.12.out": {
+						"offset": 394256,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.16.x": {
+						"offset": 395536,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.16.q": {
+						"offset": 396816,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.16.k": {
+						"offset": 417296,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.16.v": {
+						"offset": 437776,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.16.scores": {
+						"offset": 458256,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.16.weights": {
+						"offset": 464656,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.16.heads": {
+						"offset": 471056,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.16.out": {
+						"offset": 491536,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.20.x": {
+						"offset": 492816,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.20.q": {
+						"offset": 494096,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.20.k": {
+						"offset": 514576,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.20.v": {
+						"offset": 535056,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.20.scores": {
+						"offset": 555536,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.20.weights": {
+						"offset": 561936,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.20.heads": {
+						"offset": 568336,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.20.out": {
+						"offset": 588816,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.23.x": {
+						"offset": 590096,
+						"length": 1280,
+						"shape": [20, 64]
+					},
+					"layer.23.q": {
+						"offset": 591376,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.23.k": {
+						"offset": 611856,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.23.v": {
+						"offset": 632336,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.23.scores": {
+						"offset": 652816,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.23.weights": {
+						"offset": 659216,
+						"length": 6400,
+						"shape": [16, 20, 20]
+					},
+					"layer.23.heads": {
+						"offset": 665616,
+						"length": 20480,
+						"shape": [16, 20, 64]
+					},
+					"layer.23.out": {
+						"offset": 686096,
+						"length": 1280,
+						"shape": [20, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "names",
+			"title": "Two names",
+			"prompt": "When Mary and John went to the store, John gave a drink to",
+			"tokens": [
+				{
+					"id": 15169,
+					"text": "When"
+				},
+				{
+					"id": 29163,
+					"text": " Mary"
+				},
+				{
+					"id": 530,
+					"text": " and"
+				},
+				{
+					"id": 8749,
+					"text": " John"
+				},
+				{
+					"id": 21592,
+					"text": " went"
+				},
+				{
+					"id": 427,
+					"text": " to"
+				},
+				{
+					"id": 368,
+					"text": " the"
+				},
+				{
+					"id": 18706,
+					"text": " store"
+				},
+				{
+					"id": 15,
+					"text": ","
+				},
+				{
+					"id": 8749,
+					"text": " John"
+				},
+				{
+					"id": 29408,
+					"text": " gave"
+				},
+				{
+					"id": 267,
+					"text": " a"
+				},
+				{
+					"id": 34116,
+					"text": " drink"
+				},
+				{
+					"id": 427,
+					"text": " to"
+				}
+			],
+			"file": {
+				"file": "names.f32",
+				"bytes": 1844032,
+				"sha256": "fe51055b0518152e657e4c47829d402fdfdbede22b8934c7e337f1d257beddec",
+				"tensors": {
+					"slopes": {
+						"offset": 0,
+						"length": 16,
+						"shape": [16]
+					},
+					"bias": {
+						"offset": 16,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.0.x": {
+						"offset": 3152,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.0.q": {
+						"offset": 4048,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.0.k": {
+						"offset": 18384,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.0.v": {
+						"offset": 32720,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.0.scores": {
+						"offset": 47056,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.0.weights": {
+						"offset": 50192,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.0.heads": {
+						"offset": 53328,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.0.out": {
+						"offset": 67664,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.4.x": {
+						"offset": 68560,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.4.q": {
+						"offset": 69456,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.4.k": {
+						"offset": 83792,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.4.v": {
+						"offset": 98128,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.4.scores": {
+						"offset": 112464,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.4.weights": {
+						"offset": 115600,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.4.heads": {
+						"offset": 118736,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.4.out": {
+						"offset": 133072,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.8.x": {
+						"offset": 133968,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.8.q": {
+						"offset": 134864,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.8.k": {
+						"offset": 149200,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.8.v": {
+						"offset": 163536,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.8.scores": {
+						"offset": 177872,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.8.weights": {
+						"offset": 181008,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.8.heads": {
+						"offset": 184144,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.8.out": {
+						"offset": 198480,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.12.x": {
+						"offset": 199376,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.12.q": {
+						"offset": 200272,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.12.k": {
+						"offset": 214608,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.12.v": {
+						"offset": 228944,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.12.scores": {
+						"offset": 243280,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.12.weights": {
+						"offset": 246416,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.12.heads": {
+						"offset": 249552,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.12.out": {
+						"offset": 263888,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.16.x": {
+						"offset": 264784,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.16.q": {
+						"offset": 265680,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.16.k": {
+						"offset": 280016,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.16.v": {
+						"offset": 294352,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.16.scores": {
+						"offset": 308688,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.16.weights": {
+						"offset": 311824,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.16.heads": {
+						"offset": 314960,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.16.out": {
+						"offset": 329296,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.20.x": {
+						"offset": 330192,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.20.q": {
+						"offset": 331088,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.20.k": {
+						"offset": 345424,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.20.v": {
+						"offset": 359760,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.20.scores": {
+						"offset": 374096,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.20.weights": {
+						"offset": 377232,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.20.heads": {
+						"offset": 380368,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.20.out": {
+						"offset": 394704,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.23.x": {
+						"offset": 395600,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.23.q": {
+						"offset": 396496,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.23.k": {
+						"offset": 410832,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.23.v": {
+						"offset": 425168,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.23.scores": {
+						"offset": 439504,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.23.weights": {
+						"offset": 442640,
+						"length": 3136,
+						"shape": [16, 14, 14]
+					},
+					"layer.23.heads": {
+						"offset": 445776,
+						"length": 14336,
+						"shape": [16, 14, 64]
+					},
+					"layer.23.out": {
+						"offset": 460112,
+						"length": 896,
+						"shape": [14, 64]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_alibi.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "cpu",
+		"dtype": "float32",
+		"attention": "eager",
+		"modelingSha256": "02f9f83c2898fcbfd71f904ca8f30590c2b993b3224d5582b56a3ecd632fe9fc",
+		"x": "input to self_attention, after input_layernorm",
+		"q": "query, split from the fused query_key_value as (heads, 3, head_dim)",
+		"out": "output of dense, before the residual add (BloomAttention adds the residual itself)"
+	},
+	"validation": {
+		"maxHookedVsUnhookedLogitError": 0.0,
+		"repeatedTokenPairs": 59,
+		"maxRepeatedTokenInputDifference": 0.0,
+		"causalMaskMismatches": 0.0,
+		"maxAttentionsOutputDifference": 0.0,
+		"maxAlibiTensorError": 9.54e-7,
+		"maxQkvError": 0.0,
+		"maxWeightsError": 7.09e-6,
+		"maxRowShiftError": 2.48e-5,
+		"maxHeadsError": 0.0,
+		"maxOutError": 0.0
+	},
+	"extras": {
+		"slopes": "[H] the ALiBi slope m_h of each head, 2^(−h/2) for h = 1 … 16",
+		"bias": "[H, T, T] m_h · (j − i) for key j ≤ query i (0 above the diagonal), the same in every block",
+		"layer.*.scores": "[H, T, T] q·k / √64 + m_h · (j − i), 0 above the diagonal"
+	}
+}

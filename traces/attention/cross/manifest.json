@@ -1,0 +1,1139 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "cross",
+	"source": "model",
+	"model": {
+		"id": "google-t5/t5-small",
+		"name": "T5-small (60M)",
+		"revision": "df1b051c49625cf57a3d0d8d3863ed4d13564fe4",
+		"url": "https://huggingface.co/google-t5/t5-small/tree/df1b051c49625cf57a3d0d8d3863ed4d13564fe4",
+		"license": "apache-2.0",
+		"numLayers": 6,
+		"encoderLayers": 6,
+		"hiddenSize": 512,
+		"attentionHeads": 8,
+		"keyValueHeads": 8,
+		"headDim": 64,
+		"scale": 1,
+		"positions": "relative position buckets in self-attention only; cross-attention has none",
+		"mask": "none: every decoder token sees every encoder token",
+		"translations": {
+			"garden": "Ich habe nie einen so schönen Garten gesehen.",
+			"house": "Das Haus ist wunderbar.",
+			"cat": "Le chat noir dorme sur le canapé chaud."
+		}
+	},
+	"layers": [0, 1, 2, 3, 4, 5],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "garden",
+			"title": "English → German · verb last",
+			"prompt": "translate English to German: I have never seen such a beautiful garden.",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "<pad>"
+				},
+				{
+					"id": 1674,
+					"text": " Ich"
+				},
+				{
+					"id": 2010,
+					"text": " habe"
+				},
+				{
+					"id": 6691,
+					"text": " nie"
+				},
+				{
+					"id": 595,
+					"text": " einen"
+				},
+				{
+					"id": 78,
+					"text": " so"
+				},
+				{
+					"id": 3,
+					"text": " "
+				},
+				{
+					"id": 19287,
+					"text": "schönen"
+				},
+				{
+					"id": 10469,
+					"text": " Garten"
+				},
+				{
+					"id": 3,
+					"text": " "
+				},
+				{
+					"id": 11139,
+					"text": "gesehen"
+				},
+				{
+					"id": 5,
+					"text": "."
+				}
+			],
+			"keyTokens": [
+				{
+					"id": 13959,
+					"text": " translate"
+				},
+				{
+					"id": 1566,
+					"text": " English"
+				},
+				{
+					"id": 12,
+					"text": " to"
+				},
+				{
+					"id": 2968,
+					"text": " German"
+				},
+				{
+					"id": 10,
+					"text": ":"
+				},
+				{
+					"id": 27,
+					"text": " I"
+				},
+				{
+					"id": 43,
+					"text": " have"
+				},
+				{
+					"id": 470,
+					"text": " never"
+				},
+				{
+					"id": 894,
+					"text": " seen"
+				},
+				{
+					"id": 224,
+					"text": " such"
+				},
+				{
+					"id": 3,
+					"text": " "
+				},
+				{
+					"id": 9,
+					"text": "a"
+				},
+				{
+					"id": 786,
+					"text": " beautiful"
+				},
+				{
+					"id": 2004,
+					"text": " garden"
+				},
+				{
+					"id": 5,
+					"text": "."
+				},
+				{
+					"id": 1,
+					"text": "</s>"
+				}
+			],
+			"file": {
+				"file": "garden.f32",
+				"bytes": 802816,
+				"sha256": "e89a925925d68e702cd2ffcc3d64aad253356a8946ab0d309b0550893b3b9343",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.0.q": {
+						"offset": 768,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.0.k": {
+						"offset": 6912,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.0.v": {
+						"offset": 15104,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.0.scores": {
+						"offset": 23296,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.0.weights": {
+						"offset": 24832,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.0.heads": {
+						"offset": 26368,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.0.out": {
+						"offset": 32512,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.1.x": {
+						"offset": 33280,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.1.q": {
+						"offset": 34048,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.1.k": {
+						"offset": 40192,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.1.v": {
+						"offset": 48384,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.1.scores": {
+						"offset": 56576,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.1.weights": {
+						"offset": 58112,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.1.heads": {
+						"offset": 59648,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.1.out": {
+						"offset": 65792,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.2.x": {
+						"offset": 66560,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.2.q": {
+						"offset": 67328,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.2.k": {
+						"offset": 73472,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.2.v": {
+						"offset": 81664,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.2.scores": {
+						"offset": 89856,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.2.weights": {
+						"offset": 91392,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.2.heads": {
+						"offset": 92928,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.2.out": {
+						"offset": 99072,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.3.x": {
+						"offset": 99840,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.3.q": {
+						"offset": 100608,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.3.k": {
+						"offset": 106752,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.3.v": {
+						"offset": 114944,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.3.scores": {
+						"offset": 123136,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.3.weights": {
+						"offset": 124672,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.3.heads": {
+						"offset": 126208,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.3.out": {
+						"offset": 132352,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.4.x": {
+						"offset": 133120,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.4.q": {
+						"offset": 133888,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.4.k": {
+						"offset": 140032,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.4.v": {
+						"offset": 148224,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.4.scores": {
+						"offset": 156416,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.4.weights": {
+						"offset": 157952,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.4.heads": {
+						"offset": 159488,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.4.out": {
+						"offset": 165632,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.5.x": {
+						"offset": 166400,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.5.q": {
+						"offset": 167168,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.5.k": {
+						"offset": 173312,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.5.v": {
+						"offset": 181504,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.5.scores": {
+						"offset": 189696,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.5.weights": {
+						"offset": 191232,
+						"length": 1536,
+						"shape": [8, 12, 16]
+					},
+					"layer.5.heads": {
+						"offset": 192768,
+						"length": 6144,
+						"shape": [8, 12, 64]
+					},
+					"layer.5.out": {
+						"offset": 198912,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"memory": {
+						"offset": 199680,
+						"length": 1024,
+						"shape": [16, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "house",
+			"title": "English → German",
+			"prompt": "translate English to German: The house is wonderful.",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "<pad>"
+				},
+				{
+					"id": 644,
+					"text": " Das"
+				},
+				{
+					"id": 4598,
+					"text": " Haus"
+				},
+				{
+					"id": 229,
+					"text": " ist"
+				},
+				{
+					"id": 19250,
+					"text": " wunderbar"
+				},
+				{
+					"id": 5,
+					"text": "."
+				}
+			],
+			"keyTokens": [
+				{
+					"id": 13959,
+					"text": " translate"
+				},
+				{
+					"id": 1566,
+					"text": " English"
+				},
+				{
+					"id": 12,
+					"text": " to"
+				},
+				{
+					"id": 2968,
+					"text": " German"
+				},
+				{
+					"id": 10,
+					"text": ":"
+				},
+				{
+					"id": 37,
+					"text": " The"
+				},
+				{
+					"id": 629,
+					"text": " house"
+				},
+				{
+					"id": 19,
+					"text": " is"
+				},
+				{
+					"id": 1627,
+					"text": " wonderful"
+				},
+				{
+					"id": 5,
+					"text": "."
+				},
+				{
+					"id": 1,
+					"text": "</s>"
+				}
+			],
+			"file": {
+				"file": "house.f32",
+				"bytes": 464384,
+				"sha256": "9b74a40eb3cad281a72a20638c84b468a066a5722afbd15e91c71f978344882f",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.0.q": {
+						"offset": 384,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.0.k": {
+						"offset": 3456,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.0.v": {
+						"offset": 9088,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.0.scores": {
+						"offset": 14720,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.0.weights": {
+						"offset": 15248,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.0.heads": {
+						"offset": 15776,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.0.out": {
+						"offset": 18848,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.1.x": {
+						"offset": 19232,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.1.q": {
+						"offset": 19616,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.1.k": {
+						"offset": 22688,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.1.v": {
+						"offset": 28320,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.1.scores": {
+						"offset": 33952,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.1.weights": {
+						"offset": 34480,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.1.heads": {
+						"offset": 35008,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.1.out": {
+						"offset": 38080,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.2.x": {
+						"offset": 38464,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.2.q": {
+						"offset": 38848,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.2.k": {
+						"offset": 41920,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.2.v": {
+						"offset": 47552,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.2.scores": {
+						"offset": 53184,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.2.weights": {
+						"offset": 53712,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.2.heads": {
+						"offset": 54240,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.2.out": {
+						"offset": 57312,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.3.x": {
+						"offset": 57696,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.3.q": {
+						"offset": 58080,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.3.k": {
+						"offset": 61152,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.3.v": {
+						"offset": 66784,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.3.scores": {
+						"offset": 72416,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.3.weights": {
+						"offset": 72944,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.3.heads": {
+						"offset": 73472,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.3.out": {
+						"offset": 76544,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.4.x": {
+						"offset": 76928,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.4.q": {
+						"offset": 77312,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.4.k": {
+						"offset": 80384,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.4.v": {
+						"offset": 86016,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.4.scores": {
+						"offset": 91648,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.4.weights": {
+						"offset": 92176,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.4.heads": {
+						"offset": 92704,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.4.out": {
+						"offset": 95776,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.5.x": {
+						"offset": 96160,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.5.q": {
+						"offset": 96544,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.5.k": {
+						"offset": 99616,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.5.v": {
+						"offset": 105248,
+						"length": 5632,
+						"shape": [8, 11, 64]
+					},
+					"layer.5.scores": {
+						"offset": 110880,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.5.weights": {
+						"offset": 111408,
+						"length": 528,
+						"shape": [8, 6, 11]
+					},
+					"layer.5.heads": {
+						"offset": 111936,
+						"length": 3072,
+						"shape": [8, 6, 64]
+					},
+					"layer.5.out": {
+						"offset": 115008,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"memory": {
+						"offset": 115392,
+						"length": 704,
+						"shape": [11, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "cat",
+			"title": "English → French",
+			"prompt": "translate English to French: The black cat is sleeping on the warm sofa.",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "<pad>"
+				},
+				{
+					"id": 312,
+					"text": " Le"
+				},
+				{
+					"id": 3582,
+					"text": " chat"
+				},
+				{
+					"id": 9691,
+					"text": " noir"
+				},
+				{
+					"id": 103,
+					"text": " do"
+				},
+				{
+					"id": 52,
+					"text": "r"
+				},
+				{
+					"id": 526,
+					"text": "me"
+				},
+				{
+					"id": 244,
+					"text": " sur"
+				},
+				{
+					"id": 90,
+					"text": " le"
+				},
+				{
+					"id": 54,
+					"text": " can"
+				},
+				{
+					"id": 9,
+					"text": "a"
+				},
+				{
+					"id": 3890,
+					"text": "pé"
+				},
+				{
+					"id": 13025,
+					"text": " chaud"
+				},
+				{
+					"id": 5,
+					"text": "."
+				}
+			],
+			"keyTokens": [
+				{
+					"id": 13959,
+					"text": " translate"
+				},
+				{
+					"id": 1566,
+					"text": " English"
+				},
+				{
+					"id": 12,
+					"text": " to"
+				},
+				{
+					"id": 2379,
+					"text": " French"
+				},
+				{
+					"id": 10,
+					"text": ":"
+				},
+				{
+					"id": 37,
+					"text": " The"
+				},
+				{
+					"id": 1001,
+					"text": " black"
+				},
+				{
+					"id": 1712,
+					"text": " cat"
+				},
+				{
+					"id": 19,
+					"text": " is"
+				},
+				{
+					"id": 9182,
+					"text": " sleeping"
+				},
+				{
+					"id": 30,
+					"text": " on"
+				},
+				{
+					"id": 8,
+					"text": " the"
+				},
+				{
+					"id": 1978,
+					"text": " warm"
+				},
+				{
+					"id": 5650,
+					"text": " sofa"
+				},
+				{
+					"id": 5,
+					"text": "."
+				},
+				{
+					"id": 1,
+					"text": "</s>"
+				}
+			],
+			"file": {
+				"file": "cat.f32",
+				"bytes": 870400,
+				"sha256": "a7a666b7f8a5e9abc8c4395d01717a1afbebf1f9ebda0d938c4f1d5560da87d3",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.0.q": {
+						"offset": 896,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.0.k": {
+						"offset": 8064,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.0.v": {
+						"offset": 16256,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.0.scores": {
+						"offset": 24448,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.0.weights": {
+						"offset": 26240,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.0.heads": {
+						"offset": 28032,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.0.out": {
+						"offset": 35200,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.1.x": {
+						"offset": 36096,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.1.q": {
+						"offset": 36992,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.1.k": {
+						"offset": 44160,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.1.v": {
+						"offset": 52352,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.1.scores": {
+						"offset": 60544,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.1.weights": {
+						"offset": 62336,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.1.heads": {
+						"offset": 64128,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.1.out": {
+						"offset": 71296,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.2.x": {
+						"offset": 72192,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.2.q": {
+						"offset": 73088,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.2.k": {
+						"offset": 80256,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.2.v": {
+						"offset": 88448,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.2.scores": {
+						"offset": 96640,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.2.weights": {
+						"offset": 98432,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.2.heads": {
+						"offset": 100224,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.2.out": {
+						"offset": 107392,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.3.x": {
+						"offset": 108288,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.3.q": {
+						"offset": 109184,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.3.k": {
+						"offset": 116352,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.3.v": {
+						"offset": 124544,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.3.scores": {
+						"offset": 132736,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.3.weights": {
+						"offset": 134528,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.3.heads": {
+						"offset": 136320,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.3.out": {
+						"offset": 143488,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.4.x": {
+						"offset": 144384,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.4.q": {
+						"offset": 145280,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.4.k": {
+						"offset": 152448,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.4.v": {
+						"offset": 160640,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.4.scores": {
+						"offset": 168832,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.4.weights": {
+						"offset": 170624,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.4.heads": {
+						"offset": 172416,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.4.out": {
+						"offset": 179584,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.5.x": {
+						"offset": 180480,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.5.q": {
+						"offset": 181376,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.5.k": {
+						"offset": 188544,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.5.v": {
+						"offset": 196736,
+						"length": 8192,
+						"shape": [8, 16, 64]
+					},
+					"layer.5.scores": {
+						"offset": 204928,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.5.weights": {
+						"offset": 206720,
+						"length": 1792,
+						"shape": [8, 14, 16]
+					},
+					"layer.5.heads": {
+						"offset": 208512,
+						"length": 7168,
+						"shape": [8, 14, 64]
+					},
+					"layer.5.out": {
+						"offset": 215680,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"memory": {
+						"offset": 216576,
+						"length": 1024,
+						"shape": [16, 64]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_cross.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "cpu",
+		"dtype": "float32",
+		"attention": "eager",
+		"weightsSha256": "bd944e5f1b3ad9b70dd9d00010a517059e19265671076b8b0a4a58d9491842bc",
+		"modelingSha256": "ee1a043f5c03c684a2bbb0213ea3b3f8be272a03ab884bdca57c31e7315e7b7e",
+		"decoding": "greedy (num_beams=1); the decoder input is the generated prefix, start token first",
+		"x": "input to EncDecAttention: the decoder residual after layer[1].layer_norm (T5 RMSNorm)",
+		"out": "output of EncDecAttention.o, before the residual add"
+	},
+	"validation": {
+		"maxHookedVsUnhookedLogitError": 0.0,
+		"maxKeyValueSourceError": 0.0,
+		"maxKeyValueRecomputeError": 0.0,
+		"maxCrossPositionBias": 0.0,
+		"maxWeightsRecomputeError": 0.0,
+		"maxHeadsRecomputeError": 0.0,
+		"maxOutRecomputeError": 0.0
+	},
+	"extras": {
+		"memory": "[Tk, P] first P coordinates of the encoder last hidden state (after its final RMSNorm), which every decoder layer projects into its cross-attention keys and values"
+	}
+}

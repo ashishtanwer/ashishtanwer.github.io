@@ -1,0 +1,1431 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "sinks",
+	"source": "model",
+	"model": {
+		"id": "openai-community/gpt2",
+		"name": "GPT-2 small (124M)",
+		"revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+		"url": "https://huggingface.co/openai-community/gpt2/tree/607a30d783dfa663caf39e06633721c8d4cfcd7e",
+		"license": "mit",
+		"numLayers": 12,
+		"hiddenSize": 768,
+		"attentionHeads": 12,
+		"keyValueHeads": 12,
+		"headDim": 64,
+		"scale": 0.125,
+		"positions": "learned absolute embeddings, added before block 1",
+		"mask": "causal",
+		"sinks": 4,
+		"cacheSize": 64
+	},
+	"layers": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "boscombe",
+			"title": "Boscombe Valley (557 tokens)",
+			"prompt": "IV. The Boscombe Valley Mystery · first 557 GPT-2 tokens, ending “…. I have just been looking through all the recent”",
+			"tokens": [
+				{
+					"id": 423,
+					"text": " have"
+				},
+				{
+					"id": 655,
+					"text": " just"
+				},
+				{
+					"id": 587,
+					"text": " been"
+				},
+				{
+					"id": 2045,
+					"text": " looking"
+				},
+				{
+					"id": 832,
+					"text": " through"
+				},
+				{
+					"id": 477,
+					"text": " all"
+				},
+				{
+					"id": 262,
+					"text": " the"
+				},
+				{
+					"id": 2274,
+					"text": " recent"
+				}
+			],
+			"keyTokens": [
+				{
+					"id": 3824,
+					"text": "IV"
+				},
+				{
+					"id": 13,
+					"text": "."
+				},
+				{
+					"id": 3336,
+					"text": " THE"
+				},
+				{
+					"id": 347,
+					"text": " B"
+				},
+				{
+					"id": 22591,
+					"text": " tossed"
+				},
+				{
+					"id": 606,
+					"text": " them"
+				},
+				{
+					"id": 510,
+					"text": " up"
+				},
+				{
+					"id": 4291,
+					"text": " onto"
+				},
+				{
+					"id": 262,
+					"text": " the"
+				},
+				{
+					"id": 19127,
+					"text": " rack"
+				},
+				{
+					"id": 13,
+					"text": "."
+				},
+				{
+					"id": 423,
+					"text": " have"
+				},
+				{
+					"id": 655,
+					"text": " just"
+				},
+				{
+					"id": 587,
+					"text": " been"
+				},
+				{
+					"id": 2045,
+					"text": " looking"
+				},
+				{
+					"id": 832,
+					"text": " through"
+				},
+				{
+					"id": 477,
+					"text": " all"
+				},
+				{
+					"id": 262,
+					"text": " the"
+				},
+				{
+					"id": 2274,
+					"text": " recent"
+				}
+			],
+			"file": {
+				"file": "boscombe.f32",
+				"bytes": 2993660,
+				"sha256": "b685198ae8d0f366617eca7d28cc14a628f92a71396cecd8f18e6e1ba49f6f96",
+				"tensors": {
+					"rows": {
+						"offset": 0,
+						"length": 8,
+						"shape": [8]
+					},
+					"cols": {
+						"offset": 8,
+						"length": 19,
+						"shape": [19]
+					},
+					"sinkMass": {
+						"offset": 27,
+						"length": 144,
+						"shape": [12, 12]
+					},
+					"layer.0.x": {
+						"offset": 171,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.0.q": {
+						"offset": 683,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.0.k": {
+						"offset": 6827,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.0.v": {
+						"offset": 21419,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.0.scores": {
+						"offset": 36011,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.0.weights": {
+						"offset": 37835,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.0.heads": {
+						"offset": 39659,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.0.out": {
+						"offset": 45803,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.1.x": {
+						"offset": 46315,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.1.q": {
+						"offset": 46827,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.1.k": {
+						"offset": 52971,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.1.v": {
+						"offset": 67563,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.1.scores": {
+						"offset": 82155,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.1.weights": {
+						"offset": 83979,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.1.heads": {
+						"offset": 85803,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.1.out": {
+						"offset": 91947,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.2.x": {
+						"offset": 92459,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.2.q": {
+						"offset": 92971,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.2.k": {
+						"offset": 99115,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.2.v": {
+						"offset": 113707,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.2.scores": {
+						"offset": 128299,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.2.weights": {
+						"offset": 130123,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.2.heads": {
+						"offset": 131947,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.2.out": {
+						"offset": 138091,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.3.x": {
+						"offset": 138603,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.3.q": {
+						"offset": 139115,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.3.k": {
+						"offset": 145259,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.3.v": {
+						"offset": 159851,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.3.scores": {
+						"offset": 174443,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.3.weights": {
+						"offset": 176267,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.3.heads": {
+						"offset": 178091,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.3.out": {
+						"offset": 184235,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.4.x": {
+						"offset": 184747,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.4.q": {
+						"offset": 185259,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.4.k": {
+						"offset": 191403,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.4.v": {
+						"offset": 205995,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.4.scores": {
+						"offset": 220587,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.4.weights": {
+						"offset": 222411,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.4.heads": {
+						"offset": 224235,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.4.out": {
+						"offset": 230379,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.5.x": {
+						"offset": 230891,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.5.q": {
+						"offset": 231403,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.5.k": {
+						"offset": 237547,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.5.v": {
+						"offset": 252139,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.5.scores": {
+						"offset": 266731,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.5.weights": {
+						"offset": 268555,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.5.heads": {
+						"offset": 270379,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.5.out": {
+						"offset": 276523,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.6.x": {
+						"offset": 277035,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.6.q": {
+						"offset": 277547,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.6.k": {
+						"offset": 283691,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.6.v": {
+						"offset": 298283,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.6.scores": {
+						"offset": 312875,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.6.weights": {
+						"offset": 314699,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.6.heads": {
+						"offset": 316523,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.6.out": {
+						"offset": 322667,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.7.x": {
+						"offset": 323179,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.7.q": {
+						"offset": 323691,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.7.k": {
+						"offset": 329835,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.7.v": {
+						"offset": 344427,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.7.scores": {
+						"offset": 359019,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.7.weights": {
+						"offset": 360843,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.7.heads": {
+						"offset": 362667,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.7.out": {
+						"offset": 368811,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.8.x": {
+						"offset": 369323,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.8.q": {
+						"offset": 369835,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.8.k": {
+						"offset": 375979,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.8.v": {
+						"offset": 390571,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.8.scores": {
+						"offset": 405163,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.8.weights": {
+						"offset": 406987,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.8.heads": {
+						"offset": 408811,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.8.out": {
+						"offset": 414955,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.9.x": {
+						"offset": 415467,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.9.q": {
+						"offset": 415979,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.9.k": {
+						"offset": 422123,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.9.v": {
+						"offset": 436715,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.9.scores": {
+						"offset": 451307,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.9.weights": {
+						"offset": 453131,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.9.heads": {
+						"offset": 454955,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.9.out": {
+						"offset": 461099,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.10.x": {
+						"offset": 461611,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.10.q": {
+						"offset": 462123,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.10.k": {
+						"offset": 468267,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.10.v": {
+						"offset": 482859,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.10.scores": {
+						"offset": 497451,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.10.weights": {
+						"offset": 499275,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.10.heads": {
+						"offset": 501099,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.10.out": {
+						"offset": 507243,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.11.x": {
+						"offset": 507755,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.11.q": {
+						"offset": 508267,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.11.k": {
+						"offset": 514411,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.11.v": {
+						"offset": 529003,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.11.scores": {
+						"offset": 543595,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.11.weights": {
+						"offset": 545419,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.11.heads": {
+						"offset": 547243,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.11.out": {
+						"offset": 553387,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"sink.cache": {
+						"offset": 553899,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"sink.cacheWeights": {
+						"offset": 554411,
+						"length": 73728,
+						"shape": [12, 12, 8, 64]
+					},
+					"sink.mask": {
+						"offset": 628139,
+						"length": 152,
+						"shape": [8, 19]
+					},
+					"sink.weights": {
+						"offset": 628291,
+						"length": 21888,
+						"shape": [12, 12, 8, 19]
+					},
+					"window.cache": {
+						"offset": 650179,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"window.cacheWeights": {
+						"offset": 650691,
+						"length": 73728,
+						"shape": [12, 12, 8, 64]
+					},
+					"window.mask": {
+						"offset": 724419,
+						"length": 152,
+						"shape": [8, 19]
+					},
+					"window.weights": {
+						"offset": 724571,
+						"length": 21888,
+						"shape": [12, 12, 8, 19]
+					},
+					"streamSinkMass": {
+						"offset": 746459,
+						"length": 288,
+						"shape": [2, 12, 12]
+					},
+					"nll": {
+						"offset": 746747,
+						"length": 1668,
+						"shape": [3, 556]
+					}
+				}
+			}
+		},
+		{
+			"id": "caucus",
+			"title": "Caucus-race (481 tokens)",
+			"prompt": "III. A Caucus-Race and a Long Tale · first 481 GPT-2 tokens, ending “…car, the earls of Mercia and North”",
+			"tokens": [
+				{
+					"id": 262,
+					"text": " the"
+				},
+				{
+					"id": 1027,
+					"text": " ear"
+				},
+				{
+					"id": 7278,
+					"text": "ls"
+				},
+				{
+					"id": 286,
+					"text": " of"
+				},
+				{
+					"id": 12185,
+					"text": " Merc"
+				},
+				{
+					"id": 544,
+					"text": "ia"
+				},
+				{
+					"id": 290,
+					"text": " and"
+				},
+				{
+					"id": 2258,
+					"text": " North"
+				}
+			],
+			"keyTokens": [
+				{
+					"id": 41481,
+					"text": "CHAPTER"
+				},
+				{
+					"id": 6711,
+					"text": " III"
+				},
+				{
+					"id": 13,
+					"text": "."
+				},
+				{
+					"id": 317,
+					"text": " A"
+				},
+				{
+					"id": 22002,
+					"text": " frown"
+				},
+				{
+					"id": 278,
+					"text": "ing"
+				},
+				{
+					"id": 11,
+					"text": ","
+				},
+				{
+					"id": 475,
+					"text": " but"
+				},
+				{
+					"id": 845,
+					"text": " very"
+				},
+				{
+					"id": 34313,
+					"text": " politely"
+				},
+				{
+					"id": 25,
+					"text": ":"
+				},
+				{
+					"id": 262,
+					"text": " the"
+				},
+				{
+					"id": 1027,
+					"text": " ear"
+				},
+				{
+					"id": 7278,
+					"text": "ls"
+				},
+				{
+					"id": 286,
+					"text": " of"
+				},
+				{
+					"id": 12185,
+					"text": " Merc"
+				},
+				{
+					"id": 544,
+					"text": "ia"
+				},
+				{
+					"id": 290,
+					"text": " and"
+				},
+				{
+					"id": 2258,
+					"text": " North"
+				}
+			],
+			"file": {
+				"file": "caucus.f32",
+				"bytes": 2992748,
+				"sha256": "1780404b568214dfeb4d1d275ee8c17fcb553dcd8e62f9bf70c71bd0e8178c83",
+				"tensors": {
+					"rows": {
+						"offset": 0,
+						"length": 8,
+						"shape": [8]
+					},
+					"cols": {
+						"offset": 8,
+						"length": 19,
+						"shape": [19]
+					},
+					"sinkMass": {
+						"offset": 27,
+						"length": 144,
+						"shape": [12, 12]
+					},
+					"layer.0.x": {
+						"offset": 171,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.0.q": {
+						"offset": 683,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.0.k": {
+						"offset": 6827,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.0.v": {
+						"offset": 21419,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.0.scores": {
+						"offset": 36011,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.0.weights": {
+						"offset": 37835,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.0.heads": {
+						"offset": 39659,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.0.out": {
+						"offset": 45803,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.1.x": {
+						"offset": 46315,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.1.q": {
+						"offset": 46827,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.1.k": {
+						"offset": 52971,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.1.v": {
+						"offset": 67563,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.1.scores": {
+						"offset": 82155,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.1.weights": {
+						"offset": 83979,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.1.heads": {
+						"offset": 85803,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.1.out": {
+						"offset": 91947,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.2.x": {
+						"offset": 92459,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.2.q": {
+						"offset": 92971,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.2.k": {
+						"offset": 99115,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.2.v": {
+						"offset": 113707,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.2.scores": {
+						"offset": 128299,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.2.weights": {
+						"offset": 130123,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.2.heads": {
+						"offset": 131947,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.2.out": {
+						"offset": 138091,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.3.x": {
+						"offset": 138603,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.3.q": {
+						"offset": 139115,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.3.k": {
+						"offset": 145259,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.3.v": {
+						"offset": 159851,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.3.scores": {
+						"offset": 174443,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.3.weights": {
+						"offset": 176267,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.3.heads": {
+						"offset": 178091,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.3.out": {
+						"offset": 184235,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.4.x": {
+						"offset": 184747,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.4.q": {
+						"offset": 185259,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.4.k": {
+						"offset": 191403,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.4.v": {
+						"offset": 205995,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.4.scores": {
+						"offset": 220587,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.4.weights": {
+						"offset": 222411,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.4.heads": {
+						"offset": 224235,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.4.out": {
+						"offset": 230379,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.5.x": {
+						"offset": 230891,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.5.q": {
+						"offset": 231403,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.5.k": {
+						"offset": 237547,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.5.v": {
+						"offset": 252139,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.5.scores": {
+						"offset": 266731,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.5.weights": {
+						"offset": 268555,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.5.heads": {
+						"offset": 270379,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.5.out": {
+						"offset": 276523,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.6.x": {
+						"offset": 277035,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.6.q": {
+						"offset": 277547,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.6.k": {
+						"offset": 283691,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.6.v": {
+						"offset": 298283,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.6.scores": {
+						"offset": 312875,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.6.weights": {
+						"offset": 314699,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.6.heads": {
+						"offset": 316523,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.6.out": {
+						"offset": 322667,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.7.x": {
+						"offset": 323179,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.7.q": {
+						"offset": 323691,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.7.k": {
+						"offset": 329835,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.7.v": {
+						"offset": 344427,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.7.scores": {
+						"offset": 359019,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.7.weights": {
+						"offset": 360843,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.7.heads": {
+						"offset": 362667,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.7.out": {
+						"offset": 368811,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.8.x": {
+						"offset": 369323,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.8.q": {
+						"offset": 369835,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.8.k": {
+						"offset": 375979,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.8.v": {
+						"offset": 390571,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.8.scores": {
+						"offset": 405163,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.8.weights": {
+						"offset": 406987,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.8.heads": {
+						"offset": 408811,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.8.out": {
+						"offset": 414955,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.9.x": {
+						"offset": 415467,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.9.q": {
+						"offset": 415979,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.9.k": {
+						"offset": 422123,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.9.v": {
+						"offset": 436715,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.9.scores": {
+						"offset": 451307,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.9.weights": {
+						"offset": 453131,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.9.heads": {
+						"offset": 454955,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.9.out": {
+						"offset": 461099,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.10.x": {
+						"offset": 461611,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.10.q": {
+						"offset": 462123,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.10.k": {
+						"offset": 468267,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.10.v": {
+						"offset": 482859,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.10.scores": {
+						"offset": 497451,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.10.weights": {
+						"offset": 499275,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.10.heads": {
+						"offset": 501099,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.10.out": {
+						"offset": 507243,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.11.x": {
+						"offset": 507755,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"layer.11.q": {
+						"offset": 508267,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.11.k": {
+						"offset": 514411,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.11.v": {
+						"offset": 529003,
+						"length": 14592,
+						"shape": [12, 19, 64]
+					},
+					"layer.11.scores": {
+						"offset": 543595,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.11.weights": {
+						"offset": 545419,
+						"length": 1824,
+						"shape": [12, 8, 19]
+					},
+					"layer.11.heads": {
+						"offset": 547243,
+						"length": 6144,
+						"shape": [12, 8, 64]
+					},
+					"layer.11.out": {
+						"offset": 553387,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"sink.cache": {
+						"offset": 553899,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"sink.cacheWeights": {
+						"offset": 554411,
+						"length": 73728,
+						"shape": [12, 12, 8, 64]
+					},
+					"sink.mask": {
+						"offset": 628139,
+						"length": 152,
+						"shape": [8, 19]
+					},
+					"sink.weights": {
+						"offset": 628291,
+						"length": 21888,
+						"shape": [12, 12, 8, 19]
+					},
+					"window.cache": {
+						"offset": 650179,
+						"length": 512,
+						"shape": [8, 64]
+					},
+					"window.cacheWeights": {
+						"offset": 650691,
+						"length": 73728,
+						"shape": [12, 12, 8, 64]
+					},
+					"window.mask": {
+						"offset": 724419,
+						"length": 152,
+						"shape": [8, 19]
+					},
+					"window.weights": {
+						"offset": 724571,
+						"length": 21888,
+						"shape": [12, 12, 8, 19]
+					},
+					"streamSinkMass": {
+						"offset": 746459,
+						"length": 288,
+						"shape": [2, 12, 12]
+					},
+					"nll": {
+						"offset": 746747,
+						"length": 1440,
+						"shape": [3, 480]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_sinks.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "cpu",
+		"dtype": "float32",
+		"attention": "eager",
+		"modelingSha256": "b591253d7acadd39635bbf6f9f6fd0a97d6be5d7cf901074e2d959ff3e478e80",
+		"texts": {
+			"boscombe": {
+				"source": "Arthur Conan Doyle, The Adventures of Sherlock Holmes (1892), public domain",
+				"file": "static/traces/local-global/boscombe.txt",
+				"sha256": "5e2ed55f8a9a04827cb751c28d4fd4bed0e5f23bdc1644c5dc3dec8cea12467c",
+				"tokens": 557
+			},
+			"caucus": {
+				"source": "Lewis Carroll, Alice’s Adventures in Wonderland (1865), public domain",
+				"file": "static/traces/local-global/caucus.txt",
+				"sha256": "6cdc612f5eebf45fe4ee30511ae0b571b23fca6ca5366b9d300a9577071dadfb",
+				"tokens": 481
+			}
+		},
+		"runs": {
+			"full": "one forward pass over the whole passage",
+			"sink": "token by token; the DynamicCache keeps the first 4 tokens and the last 60",
+			"window": "token by token; the DynamicCache keeps the last 64 tokens"
+		},
+		"meanNllAfterCacheFills": {
+			"boscombe": {
+				"full": 3.3164453506469727,
+				"sink": 3.9569761753082275,
+				"window": 8.720771789550781
+			},
+			"caucus": {
+				"full": 3.0722451210021973,
+				"sink": 3.8825533390045166,
+				"window": 9.107172966003418
+			}
+		},
+		"x": "input to attention, after ln_1",
+		"out": "output of c_proj, before the residual add"
+	},
+	"validation": {
+		"maxHookedVsUnhookedLogitError": 0.0,
+		"cacheLengthMismatches": 0,
+		"cacheContentMismatches": 0,
+		"maxWeightsError": 0.0,
+		"maxHeadsError": 0.0,
+		"maxOutError": 0.0,
+		"maxStreamVsMaskedAttentionError": 8.19e-5,
+		"maxStreamRowSumError": 4.77e-7,
+		"maxDecodedVsForwardLogitRelativeError": 4.14e-6,
+		"maxStreamVsMaskedLogitRelativeError": 1.69e-5
+	},
+	"extras": {
+		"rows": "[R] passage position of each shown query row (the tokens)",
+		"cols": "[K] passage position of each shown key column (the keyTokens)",
+		"layer.*": "the full run at the shown rows and columns; heads and out use every key",
+		"sinkMass": "[L, H] full run: mean attention on token 0 over queries 1 … T − 1",
+		"streamSinkMass": "[2, L, H] sinks + window, window only: mean attention on the first cached entry over queries 64 … T − 1",
+		"nll": "[3, T − 1] next-token loss (nats) of the full, sinks + window and window-only runs",
+		"<run>.weights": "[L, H, R, K] the cached run's attention at the shown rows and columns, 0 where not cached",
+		"<run>.mask": "[R, K] 1 where the key is in that run's KV cache at that query, itself included",
+		"<run>.cache": "[R, 64] positions in that run's KV cache at each shown query (−1 for an empty slot)",
+		"<run>.cacheWeights": "[L, H, R, 64] the cached run's attention over its whole cache"
+	}
+}

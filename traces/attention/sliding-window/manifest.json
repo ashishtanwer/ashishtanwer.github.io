@@ -1,0 +1,6156 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "sliding-window",
+	"source": "model",
+	"model": {
+		"id": "unsloth/gemma-3-270m",
+		"name": "Gemma 3 270M",
+		"revision": "edcf1fe394ee1168e7c5538afd104cfb1f7947e6",
+		"url": "https://huggingface.co/unsloth/gemma-3-270m/tree/edcf1fe394ee1168e7c5538afd104cfb1f7947e6",
+		"upstream": "https://huggingface.co/google/gemma-3-270m/tree/9b0cfec892e2bc2afd938c98eabe4e4a7b1e0ca1",
+		"license": "gemma",
+		"licenseNote": "Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms.",
+		"numLayers": 18,
+		"hiddenSize": 640,
+		"attentionHeads": 4,
+		"keyValueHeads": 1,
+		"headDim": 256,
+		"scale": 0.0625,
+		"slidingWindow": 512,
+		"layerTypes": [
+			"local",
+			"local",
+			"local",
+			"local",
+			"local",
+			"global",
+			"local",
+			"local",
+			"local",
+			"local",
+			"local",
+			"global",
+			"local",
+			"local",
+			"local",
+			"local",
+			"local",
+			"global"
+		],
+		"ropeLocalTheta": 10000.0,
+		"ropeGlobalTheta": 1000000.0,
+		"positions": "RoPE after QK-norm; θ = 10,000 in local blocks, 1,000,000 in global blocks",
+		"mask": "local blocks: the last 512 keys, the query itself included; global blocks: causal"
+	},
+	"layers": [4, 5],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "boscombe",
+			"title": "Boscombe Valley (663 tokens)",
+			"prompt": "IV. The Boscombe Valley Mystery · first 663 tokens, ending “…, in a very few words. “Bos”",
+			"tokens": [
+				{
+					"id": 2,
+					"text": "<bos>"
+				},
+				{
+					"id": 161375,
+					"text": " BOS"
+				},
+				{
+					"id": 22738,
+					"text": " Bos"
+				},
+				{
+					"id": 80833,
+					"text": "combe"
+				},
+				{
+					"id": 11849,
+					"text": " Valley"
+				},
+				{
+					"id": 1093,
+					"text": " would"
+				},
+				{
+					"id": 776,
+					"text": " do"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 83138,
+					"text": "Bos"
+				}
+			],
+			"keyTokens": [
+				{
+					"id": 2,
+					"text": "<bos>"
+				},
+				{
+					"id": 3767,
+					"text": "IV"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 4455,
+					"text": " THE"
+				},
+				{
+					"id": 161375,
+					"text": " BOS"
+				},
+				{
+					"id": 183033,
+					"text": "COMB"
+				},
+				{
+					"id": 236788,
+					"text": "E"
+				},
+				{
+					"id": 218371,
+					"text": " VALLEY"
+				},
+				{
+					"id": 27714,
+					"text": " MY"
+				},
+				{
+					"id": 1393,
+					"text": "ST"
+				},
+				{
+					"id": 27079,
+					"text": "ERY"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 1882,
+					"text": "We"
+				},
+				{
+					"id": 964,
+					"text": " were"
+				},
+				{
+					"id": 45212,
+					"text": " seated"
+				},
+				{
+					"id": 657,
+					"text": " at"
+				},
+				{
+					"id": 13932,
+					"text": " breakfast"
+				},
+				{
+					"id": 886,
+					"text": " one"
+				},
+				{
+					"id": 5597,
+					"text": " morning"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1041,
+					"text": " my"
+				},
+				{
+					"id": 6853,
+					"text": " wife"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1056,
+					"text": " when"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 74289,
+					"text": " maid"
+				},
+				{
+					"id": 6111,
+					"text": " brought"
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 68548,
+					"text": " telegram"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 1030,
+					"text": " It"
+				},
+				{
+					"id": 691,
+					"text": " was"
+				},
+				{
+					"id": 699,
+					"text": " from"
+				},
+				{
+					"id": 104434,
+					"text": " Sherlock"
+				},
+				{
+					"id": 48213,
+					"text": " Holmes"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 11536,
+					"text": " ran"
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 672,
+					"text": " this"
+				},
+				{
+					"id": 1595,
+					"text": " way"
+				},
+				{
+					"id": 236787,
+					"text": ":"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 19845,
+					"text": "Have"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 4628,
+					"text": " couple"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 2668,
+					"text": " days"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 25315,
+					"text": " spare"
+				},
+				{
+					"id": 236881,
+					"text": "?"
+				},
+				{
+					"id": 13433,
+					"text": " Have"
+				},
+				{
+					"id": 1164,
+					"text": " just"
+				},
+				{
+					"id": 1010,
+					"text": " been"
+				},
+				{
+					"id": 54933,
+					"text": " wired"
+				},
+				{
+					"id": 573,
+					"text": " for"
+				},
+				{
+					"id": 699,
+					"text": " from"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 11895,
+					"text": " west"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 7591,
+					"text": " England"
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 5603,
+					"text": " connection"
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 22738,
+					"text": " Bos"
+				},
+				{
+					"id": 80833,
+					"text": "combe"
+				},
+				{
+					"id": 11849,
+					"text": " Valley"
+				},
+				{
+					"id": 40578,
+					"text": " tragedy"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 91573,
+					"text": " Shall"
+				},
+				{
+					"id": 577,
+					"text": " be"
+				},
+				{
+					"id": 16126,
+					"text": " glad"
+				},
+				{
+					"id": 768,
+					"text": " if"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 795,
+					"text": " will"
+				},
+				{
+					"id": 2229,
+					"text": " come"
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 786,
+					"text": " me"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 5661,
+					"text": " Air"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 35750,
+					"text": " scenery"
+				},
+				{
+					"id": 4011,
+					"text": " perfect"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 38591,
+					"text": " Leave"
+				},
+				{
+					"id": 187269,
+					"text": " Paddington"
+				},
+				{
+					"id": 684,
+					"text": " by"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 236743,
+					"text": " "
+				},
+				{
+					"id": 236770,
+					"text": "1"
+				},
+				{
+					"id": 236770,
+					"text": "1"
+				},
+				{
+					"id": 236787,
+					"text": ":"
+				},
+				{
+					"id": 236770,
+					"text": "1"
+				},
+				{
+					"id": 236810,
+					"text": "5"
+				},
+				{
+					"id": 1827,
+					"text": ".”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 3689,
+					"text": "What"
+				},
+				{
+					"id": 776,
+					"text": " do"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 1879,
+					"text": " say"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 23348,
+					"text": " dear"
+				},
+				{
+					"id": 9377,
+					"text": "?”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 1041,
+					"text": " my"
+				},
+				{
+					"id": 6853,
+					"text": " wife"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 3182,
+					"text": " looking"
+				},
+				{
+					"id": 3418,
+					"text": " across"
+				},
+				{
+					"id": 657,
+					"text": " at"
+				},
+				{
+					"id": 786,
+					"text": " me"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 15600,
+					"text": "Will"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 817,
+					"text": " go"
+				},
+				{
+					"id": 9377,
+					"text": "?”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 236777,
+					"text": "I"
+				},
+				{
+					"id": 2126,
+					"text": " really"
+				},
+				{
+					"id": 1537,
+					"text": " don"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 236745,
+					"text": "t"
+				},
+				{
+					"id": 1281,
+					"text": " know"
+				},
+				{
+					"id": 1144,
+					"text": " what"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 1879,
+					"text": " say"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 735,
+					"text": " have"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 13493,
+					"text": " fairly"
+				},
+				{
+					"id": 1440,
+					"text": " long"
+				},
+				{
+					"id": 1694,
+					"text": " list"
+				},
+				{
+					"id": 657,
+					"text": " at"
+				},
+				{
+					"id": 1861,
+					"text": " present"
+				},
+				{
+					"id": 1827,
+					"text": ".”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 12932,
+					"text": "Oh"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1455,
+					"text": " An"
+				},
+				{
+					"id": 1714,
+					"text": "str"
+				},
+				{
+					"id": 23541,
+					"text": "uther"
+				},
+				{
+					"id": 1093,
+					"text": " would"
+				},
+				{
+					"id": 776,
+					"text": " do"
+				},
+				{
+					"id": 822,
+					"text": " your"
+				},
+				{
+					"id": 981,
+					"text": " work"
+				},
+				{
+					"id": 573,
+					"text": " for"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 1599,
+					"text": " You"
+				},
+				{
+					"id": 735,
+					"text": " have"
+				},
+				{
+					"id": 1010,
+					"text": " been"
+				},
+				{
+					"id": 3182,
+					"text": " looking"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 2268,
+					"text": " little"
+				},
+				{
+					"id": 24327,
+					"text": " pale"
+				},
+				{
+					"id": 33208,
+					"text": " lately"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 1751,
+					"text": " think"
+				},
+				{
+					"id": 600,
+					"text": " that"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 2352,
+					"text": " change"
+				},
+				{
+					"id": 1093,
+					"text": " would"
+				},
+				{
+					"id": 776,
+					"text": " do"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 1535,
+					"text": " good"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 659,
+					"text": " are"
+				},
+				{
+					"id": 2462,
+					"text": " always"
+				},
+				{
+					"id": 834,
+					"text": " so"
+				},
+				{
+					"id": 7467,
+					"text": " interested"
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 3186,
+					"text": " Mr"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 104434,
+					"text": " Sherlock"
+				},
+				{
+					"id": 48213,
+					"text": " Holmes"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 3636,
+					"text": " cases"
+				},
+				{
+					"id": 1827,
+					"text": ".”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 236777,
+					"text": "I"
+				},
+				{
+					"id": 1374,
+					"text": " should"
+				},
+				{
+					"id": 577,
+					"text": " be"
+				},
+				{
+					"id": 723,
+					"text": " un"
+				},
+				{
+					"id": 195634,
+					"text": "grateful"
+				},
+				{
+					"id": 768,
+					"text": " if"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 964,
+					"text": " were"
+				},
+				{
+					"id": 711,
+					"text": " not"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 9333,
+					"text": " seeing"
+				},
+				{
+					"id": 1144,
+					"text": " what"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 16531,
+					"text": " gained"
+				},
+				{
+					"id": 1343,
+					"text": " through"
+				},
+				{
+					"id": 886,
+					"text": " one"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 1091,
+					"text": " them"
+				},
+				{
+					"id": 2130,
+					"text": ",”"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 19398,
+					"text": " answered"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 4573,
+					"text": "But"
+				},
+				{
+					"id": 768,
+					"text": " if"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 1006,
+					"text": " am"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 817,
+					"text": " go"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 1921,
+					"text": " must"
+				},
+				{
+					"id": 3294,
+					"text": " pack"
+				},
+				{
+					"id": 657,
+					"text": " at"
+				},
+				{
+					"id": 3622,
+					"text": " once"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 573,
+					"text": " for"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 735,
+					"text": " have"
+				},
+				{
+					"id": 1186,
+					"text": " only"
+				},
+				{
+					"id": 3746,
+					"text": " half"
+				},
+				{
+					"id": 614,
+					"text": " an"
+				},
+				{
+					"id": 6468,
+					"text": " hour"
+				},
+				{
+					"id": 1827,
+					"text": ".”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 4754,
+					"text": "My"
+				},
+				{
+					"id": 2707,
+					"text": " experience"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 3545,
+					"text": " camp"
+				},
+				{
+					"id": 1972,
+					"text": " life"
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 27098,
+					"text": " Afghanistan"
+				},
+				{
+					"id": 1053,
+					"text": " had"
+				},
+				{
+					"id": 657,
+					"text": " at"
+				},
+				{
+					"id": 3198,
+					"text": " least"
+				},
+				{
+					"id": 1053,
+					"text": " had"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 1763,
+					"text": " effect"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 3043,
+					"text": " making"
+				},
+				{
+					"id": 786,
+					"text": " me"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 11172,
+					"text": " prompt"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 5508,
+					"text": " ready"
+				},
+				{
+					"id": 75507,
+					"text": " traveller"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 3551,
+					"text": " My"
+				},
+				{
+					"id": 8150,
+					"text": " wants"
+				},
+				{
+					"id": 964,
+					"text": " were"
+				},
+				{
+					"id": 2321,
+					"text": " few"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 3606,
+					"text": " simple"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 834,
+					"text": " so"
+				},
+				{
+					"id": 600,
+					"text": " that"
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 2344,
+					"text": " less"
+				},
+				{
+					"id": 1082,
+					"text": " than"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 990,
+					"text": " time"
+				},
+				{
+					"id": 8249,
+					"text": " stated"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 691,
+					"text": " was"
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 6335,
+					"text": " cab"
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 1041,
+					"text": " my"
+				},
+				{
+					"id": 1016,
+					"text": " val"
+				},
+				{
+					"id": 1117,
+					"text": "ise"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 190179,
+					"text": " rattling"
+				},
+				{
+					"id": 3121,
+					"text": " away"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 187269,
+					"text": " Paddington"
+				},
+				{
+					"id": 14629,
+					"text": " Station"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 104434,
+					"text": " Sherlock"
+				},
+				{
+					"id": 48213,
+					"text": " Holmes"
+				},
+				{
+					"id": 691,
+					"text": " was"
+				},
+				{
+					"id": 93354,
+					"text": " pacing"
+				},
+				{
+					"id": 872,
+					"text": " up"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 1679,
+					"text": " down"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 5058,
+					"text": " platform"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 914,
+					"text": " his"
+				},
+				{
+					"id": 13030,
+					"text": " tall"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 11557,
+					"text": " ga"
+				},
+				{
+					"id": 3012,
+					"text": "unt"
+				},
+				{
+					"id": 5811,
+					"text": " figure"
+				},
+				{
+					"id": 1603,
+					"text": " made"
+				},
+				{
+					"id": 1581,
+					"text": " even"
+				},
+				{
+					"id": 11557,
+					"text": " ga"
+				},
+				{
+					"id": 14863,
+					"text": "unter"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 53153,
+					"text": " taller"
+				},
+				{
+					"id": 684,
+					"text": " by"
+				},
+				{
+					"id": 914,
+					"text": " his"
+				},
+				{
+					"id": 1440,
+					"text": " long"
+				},
+				{
+					"id": 13501,
+					"text": " grey"
+				},
+				{
+					"id": 26326,
+					"text": " travelling"
+				},
+				{
+					"id": 236772,
+					"text": "-"
+				},
+				{
+					"id": 184542,
+					"text": "cloak"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 3107,
+					"text": " close"
+				},
+				{
+					"id": 236772,
+					"text": "-"
+				},
+				{
+					"id": 50742,
+					"text": "fitting"
+				},
+				{
+					"id": 20182,
+					"text": " cloth"
+				},
+				{
+					"id": 1670,
+					"text": " cap"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 1509,
+					"text": "It"
+				},
+				{
+					"id": 563,
+					"text": " is"
+				},
+				{
+					"id": 2126,
+					"text": " really"
+				},
+				{
+					"id": 1401,
+					"text": " very"
+				},
+				{
+					"id": 1535,
+					"text": " good"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 2229,
+					"text": " come"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 34440,
+					"text": " Watson"
+				},
+				{
+					"id": 2130,
+					"text": ",”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 668,
+					"text": " he"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 1509,
+					"text": "It"
+				},
+				{
+					"id": 3590,
+					"text": " makes"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 13492,
+					"text": " considerable"
+				},
+				{
+					"id": 4954,
+					"text": " difference"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 786,
+					"text": " me"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 2963,
+					"text": " having"
+				},
+				{
+					"id": 5026,
+					"text": " someone"
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 786,
+					"text": " me"
+				},
+				{
+					"id": 580,
+					"text": " on"
+				},
+				{
+					"id": 8761,
+					"text": " whom"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 740,
+					"text": " can"
+				},
+				{
+					"id": 21410,
+					"text": " thoroughly"
+				},
+				{
+					"id": 18039,
+					"text": " rely"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 12263,
+					"text": " Local"
+				},
+				{
+					"id": 11278,
+					"text": " aid"
+				},
+				{
+					"id": 563,
+					"text": " is"
+				},
+				{
+					"id": 2462,
+					"text": " always"
+				},
+				{
+					"id": 3477,
+					"text": " either"
+				},
+				{
+					"id": 85541,
+					"text": " worthless"
+				},
+				{
+					"id": 653,
+					"text": " or"
+				},
+				{
+					"id": 1663,
+					"text": " else"
+				},
+				{
+					"id": 2702,
+					"text": " bi"
+				},
+				{
+					"id": 70058,
+					"text": "assed"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 1637,
+					"text": " If"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 795,
+					"text": " will"
+				},
+				{
+					"id": 2514,
+					"text": " keep"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 1156,
+					"text": " two"
+				},
+				{
+					"id": 9895,
+					"text": " corner"
+				},
+				{
+					"id": 17823,
+					"text": " seats"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 2863,
+					"text": " shall"
+				},
+				{
+					"id": 974,
+					"text": " get"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 16677,
+					"text": " tickets"
+				},
+				{
+					"id": 1827,
+					"text": ".”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 1882,
+					"text": "We"
+				},
+				{
+					"id": 1053,
+					"text": " had"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 41985,
+					"text": " carriage"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 13109,
+					"text": " ourselves"
+				},
+				{
+					"id": 5383,
+					"text": " save"
+				},
+				{
+					"id": 573,
+					"text": " for"
+				},
+				{
+					"id": 614,
+					"text": " an"
+				},
+				{
+					"id": 36628,
+					"text": " immense"
+				},
+				{
+					"id": 35977,
+					"text": " litter"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 13009,
+					"text": " papers"
+				},
+				{
+					"id": 837,
+					"text": " which"
+				},
+				{
+					"id": 48213,
+					"text": " Holmes"
+				},
+				{
+					"id": 1053,
+					"text": " had"
+				},
+				{
+					"id": 6111,
+					"text": " brought"
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 1515,
+					"text": " him"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 18018,
+					"text": " Among"
+				},
+				{
+					"id": 1239,
+					"text": " these"
+				},
+				{
+					"id": 668,
+					"text": " he"
+				},
+				{
+					"id": 12202,
+					"text": " rum"
+				},
+				{
+					"id": 236757,
+					"text": "m"
+				},
+				{
+					"id": 4130,
+					"text": "aged"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 1676,
+					"text": " read"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 20312,
+					"text": " intervals"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 5433,
+					"text": " note"
+				},
+				{
+					"id": 236772,
+					"text": "-"
+				},
+				{
+					"id": 54247,
+					"text": "taking"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 35207,
+					"text": " meditation"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 3097,
+					"text": " until"
+				},
+				{
+					"id": 692,
+					"text": " we"
+				},
+				{
+					"id": 964,
+					"text": " were"
+				},
+				{
+					"id": 3068,
+					"text": " past"
+				},
+				{
+					"id": 22033,
+					"text": " Reading"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 4298,
+					"text": " Then"
+				},
+				{
+					"id": 668,
+					"text": " he"
+				},
+				{
+					"id": 15937,
+					"text": " suddenly"
+				},
+				{
+					"id": 25829,
+					"text": " rolled"
+				},
+				{
+					"id": 1091,
+					"text": " them"
+				},
+				{
+					"id": 784,
+					"text": " all"
+				},
+				{
+					"id": 1131,
+					"text": " into"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 82703,
+					"text": " gigantic"
+				},
+				{
+					"id": 4299,
+					"text": " ball"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 72112,
+					"text": " tossed"
+				},
+				{
+					"id": 1091,
+					"text": " them"
+				},
+				{
+					"id": 872,
+					"text": " up"
+				},
+				{
+					"id": 8990,
+					"text": " onto"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 25883,
+					"text": " rack"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 19845,
+					"text": "Have"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 6827,
+					"text": " heard"
+				},
+				{
+					"id": 4658,
+					"text": " anything"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 1624,
+					"text": " case"
+				},
+				{
+					"id": 9377,
+					"text": "?”"
+				},
+				{
+					"id": 668,
+					"text": " he"
+				},
+				{
+					"id": 4733,
+					"text": " asked"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 4348,
+					"text": "Not"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 3658,
+					"text": " word"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 735,
+					"text": " have"
+				},
+				{
+					"id": 711,
+					"text": " not"
+				},
+				{
+					"id": 3472,
+					"text": " seen"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 3627,
+					"text": " paper"
+				},
+				{
+					"id": 573,
+					"text": " for"
+				},
+				{
+					"id": 1070,
+					"text": " some"
+				},
+				{
+					"id": 2668,
+					"text": " days"
+				},
+				{
+					"id": 1827,
+					"text": ".”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 818,
+					"text": "The"
+				},
+				{
+					"id": 5860,
+					"text": " London"
+				},
+				{
+					"id": 2686,
+					"text": " press"
+				},
+				{
+					"id": 815,
+					"text": " has"
+				},
+				{
+					"id": 711,
+					"text": " not"
+				},
+				{
+					"id": 1053,
+					"text": " had"
+				},
+				{
+					"id": 1401,
+					"text": " very"
+				},
+				{
+					"id": 2587,
+					"text": " full"
+				},
+				{
+					"id": 10789,
+					"text": " accounts"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 735,
+					"text": " have"
+				},
+				{
+					"id": 1164,
+					"text": " just"
+				},
+				{
+					"id": 1010,
+					"text": " been"
+				},
+				{
+					"id": 3182,
+					"text": " looking"
+				},
+				{
+					"id": 1343,
+					"text": " through"
+				},
+				{
+					"id": 784,
+					"text": " all"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 4803,
+					"text": " recent"
+				},
+				{
+					"id": 13009,
+					"text": " papers"
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 1900,
+					"text": " order"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 7588,
+					"text": " master"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 65873,
+					"text": " particulars"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 1030,
+					"text": " It"
+				},
+				{
+					"id": 5072,
+					"text": " seems"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 699,
+					"text": " from"
+				},
+				{
+					"id": 1144,
+					"text": " what"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 9385,
+					"text": " gather"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 577,
+					"text": " be"
+				},
+				{
+					"id": 886,
+					"text": " one"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 1724,
+					"text": " those"
+				},
+				{
+					"id": 3606,
+					"text": " simple"
+				},
+				{
+					"id": 3636,
+					"text": " cases"
+				},
+				{
+					"id": 837,
+					"text": " which"
+				},
+				{
+					"id": 659,
+					"text": " are"
+				},
+				{
+					"id": 834,
+					"text": " so"
+				},
+				{
+					"id": 8573,
+					"text": " extremely"
+				},
+				{
+					"id": 3909,
+					"text": " difficult"
+				},
+				{
+					"id": 1827,
+					"text": ".”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 6372,
+					"text": "That"
+				},
+				{
+					"id": 12054,
+					"text": " sounds"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 2268,
+					"text": " little"
+				},
+				{
+					"id": 171903,
+					"text": " paradoxical"
+				},
+				{
+					"id": 1827,
+					"text": ".”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 4573,
+					"text": "But"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 563,
+					"text": " is"
+				},
+				{
+					"id": 85739,
+					"text": " profoundly"
+				},
+				{
+					"id": 1847,
+					"text": " true"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 7330,
+					"text": " Sing"
+				},
+				{
+					"id": 98188,
+					"text": "ularity"
+				},
+				{
+					"id": 563,
+					"text": " is"
+				},
+				{
+					"id": 4180,
+					"text": " almost"
+				},
+				{
+					"id": 60796,
+					"text": " invariably"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 43996,
+					"text": " clue"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 669,
+					"text": " The"
+				},
+				{
+					"id": 919,
+					"text": " more"
+				},
+				{
+					"id": 4926,
+					"text": " feature"
+				},
+				{
+					"id": 1933,
+					"text": "less"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 101131,
+					"text": " commonplace"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 12158,
+					"text": " crime"
+				},
+				{
+					"id": 563,
+					"text": " is"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 919,
+					"text": " more"
+				},
+				{
+					"id": 3909,
+					"text": " difficult"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 563,
+					"text": " is"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 3437,
+					"text": " bring"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 2033,
+					"text": " home"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 799,
+					"text": " In"
+				},
+				{
+					"id": 672,
+					"text": " this"
+				},
+				{
+					"id": 1624,
+					"text": " case"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 3685,
+					"text": " however"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 901,
+					"text": " they"
+				},
+				{
+					"id": 735,
+					"text": " have"
+				},
+				{
+					"id": 6697,
+					"text": " established"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 1401,
+					"text": " very"
+				},
+				{
+					"id": 6205,
+					"text": " serious"
+				},
+				{
+					"id": 1624,
+					"text": " case"
+				},
+				{
+					"id": 2342,
+					"text": " against"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 2369,
+					"text": " son"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 50261,
+					"text": " murdered"
+				},
+				{
+					"id": 880,
+					"text": " man"
+				},
+				{
+					"id": 1827,
+					"text": ".”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 1509,
+					"text": "It"
+				},
+				{
+					"id": 563,
+					"text": " is"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 12951,
+					"text": " murder"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1299,
+					"text": " then"
+				},
+				{
+					"id": 9377,
+					"text": "?”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 13086,
+					"text": "Well"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 563,
+					"text": " is"
+				},
+				{
+					"id": 160039,
+					"text": " conjectured"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 577,
+					"text": " be"
+				},
+				{
+					"id": 834,
+					"text": " so"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 2863,
+					"text": " shall"
+				},
+				{
+					"id": 1769,
+					"text": " take"
+				},
+				{
+					"id": 5017,
+					"text": " nothing"
+				},
+				{
+					"id": 573,
+					"text": " for"
+				},
+				{
+					"id": 13416,
+					"text": " granted"
+				},
+				{
+					"id": 3097,
+					"text": " until"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 735,
+					"text": " have"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 5506,
+					"text": " opportunity"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 3182,
+					"text": " looking"
+				},
+				{
+					"id": 16909,
+					"text": " personally"
+				},
+				{
+					"id": 1131,
+					"text": " into"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 795,
+					"text": " will"
+				},
+				{
+					"id": 8082,
+					"text": " explain"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 1883,
+					"text": " state"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 2432,
+					"text": " things"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 618,
+					"text": " as"
+				},
+				{
+					"id": 2793,
+					"text": " far"
+				},
+				{
+					"id": 618,
+					"text": " as"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 735,
+					"text": " have"
+				},
+				{
+					"id": 1010,
+					"text": " been"
+				},
+				{
+					"id": 2735,
+					"text": " able"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 3050,
+					"text": " understand"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 1401,
+					"text": " very"
+				},
+				{
+					"id": 2321,
+					"text": " few"
+				},
+				{
+					"id": 4171,
+					"text": " words"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 83138,
+					"text": "Bos"
+				}
+			],
+			"file": {
+				"file": "boscombe.f32",
+				"bytes": 3370008,
+				"sha256": "0900a492d27d295f047f658e3f30aeb483eaf9c58a92fc356a2b168a52eda7ed",
+				"tensors": {
+					"rows": {
+						"offset": 0,
+						"length": 10,
+						"shape": [10]
+					},
+					"reach": {
+						"offset": 10,
+						"length": 720,
+						"shape": [18, 4, 10]
+					},
+					"layer.4.x": {
+						"offset": 730,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.4.q": {
+						"offset": 1370,
+						"length": 10240,
+						"shape": [4, 10, 256]
+					},
+					"layer.4.k": {
+						"offset": 11610,
+						"length": 169728,
+						"shape": [1, 663, 256]
+					},
+					"layer.4.v": {
+						"offset": 181338,
+						"length": 169728,
+						"shape": [1, 663, 256]
+					},
+					"layer.4.scores": {
+						"offset": 351066,
+						"length": 26520,
+						"shape": [4, 10, 663]
+					},
+					"layer.4.mask": {
+						"offset": 377586,
+						"length": 6630,
+						"shape": [10, 663]
+					},
+					"layer.4.weights": {
+						"offset": 384216,
+						"length": 26520,
+						"shape": [4, 10, 663]
+					},
+					"layer.4.heads": {
+						"offset": 410736,
+						"length": 10240,
+						"shape": [4, 10, 256]
+					},
+					"layer.4.out": {
+						"offset": 420976,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.5.x": {
+						"offset": 421616,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.5.q": {
+						"offset": 422256,
+						"length": 10240,
+						"shape": [4, 10, 256]
+					},
+					"layer.5.k": {
+						"offset": 432496,
+						"length": 169728,
+						"shape": [1, 663, 256]
+					},
+					"layer.5.v": {
+						"offset": 602224,
+						"length": 169728,
+						"shape": [1, 663, 256]
+					},
+					"layer.5.scores": {
+						"offset": 771952,
+						"length": 26520,
+						"shape": [4, 10, 663]
+					},
+					"layer.5.mask": {
+						"offset": 798472,
+						"length": 6630,
+						"shape": [10, 663]
+					},
+					"layer.5.weights": {
+						"offset": 805102,
+						"length": 26520,
+						"shape": [4, 10, 663]
+					},
+					"layer.5.heads": {
+						"offset": 831622,
+						"length": 10240,
+						"shape": [4, 10, 256]
+					},
+					"layer.5.out": {
+						"offset": 841862,
+						"length": 640,
+						"shape": [10, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "caucus",
+			"title": "Caucus-race (774 tokens)",
+			"prompt": "III. A Caucus-Race and a Long Tale · first 774 tokens, ending “…best thing to get us dry would be a Caucus”",
+			"tokens": [
+				{
+					"id": 2,
+					"text": "<bos>"
+				},
+				{
+					"id": 207534,
+					"text": " Caucus"
+				},
+				{
+					"id": 236772,
+					"text": "-"
+				},
+				{
+					"id": 71565,
+					"text": "Race"
+				},
+				{
+					"id": 1304,
+					"text": " she"
+				},
+				{
+					"id": 1602,
+					"text": " did"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 6299,
+					"text": " dry"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 207534,
+					"text": " Caucus"
+				}
+			],
+			"keyTokens": [
+				{
+					"id": 2,
+					"text": "<bos>"
+				},
+				{
+					"id": 43643,
+					"text": "CHAPTER"
+				},
+				{
+					"id": 8488,
+					"text": " III"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 562,
+					"text": " A"
+				},
+				{
+					"id": 207534,
+					"text": " Caucus"
+				},
+				{
+					"id": 236772,
+					"text": "-"
+				},
+				{
+					"id": 71565,
+					"text": "Race"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 8099,
+					"text": " Long"
+				},
+				{
+					"id": 60623,
+					"text": " Tale"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 7634,
+					"text": "They"
+				},
+				{
+					"id": 964,
+					"text": " were"
+				},
+				{
+					"id": 11161,
+					"text": " indeed"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 67536,
+					"text": " queer"
+				},
+				{
+					"id": 236772,
+					"text": "-"
+				},
+				{
+					"id": 18985,
+					"text": "looking"
+				},
+				{
+					"id": 4598,
+					"text": " party"
+				},
+				{
+					"id": 600,
+					"text": " that"
+				},
+				{
+					"id": 32126,
+					"text": " assembled"
+				},
+				{
+					"id": 580,
+					"text": " on"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 4856,
+					"text": " bank"
+				},
+				{
+					"id": 237028,
+					"text": "—"
+				},
+				{
+					"id": 1437,
+					"text": "the"
+				},
+				{
+					"id": 13923,
+					"text": " birds"
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 2575,
+					"text": " dr"
+				},
+				{
+					"id": 9599,
+					"text": "agg"
+				},
+				{
+					"id": 991,
+					"text": "led"
+				},
+				{
+					"id": 53147,
+					"text": " feathers"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 8075,
+					"text": " animals"
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 910,
+					"text": " their"
+				},
+				{
+					"id": 13969,
+					"text": " fur"
+				},
+				{
+					"id": 136900,
+					"text": " clinging"
+				},
+				{
+					"id": 3107,
+					"text": " close"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 1091,
+					"text": " them"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 784,
+					"text": " all"
+				},
+				{
+					"id": 105179,
+					"text": " dripping"
+				},
+				{
+					"id": 11474,
+					"text": " wet"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 4071,
+					"text": " cross"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 34186,
+					"text": " uncomfortable"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 818,
+					"text": "The"
+				},
+				{
+					"id": 1171,
+					"text": " first"
+				},
+				{
+					"id": 2934,
+					"text": " question"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 3003,
+					"text": " course"
+				},
+				{
+					"id": 691,
+					"text": " was"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1217,
+					"text": " how"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 974,
+					"text": " get"
+				},
+				{
+					"id": 6299,
+					"text": " dry"
+				},
+				{
+					"id": 1570,
+					"text": " again"
+				},
+				{
+					"id": 236787,
+					"text": ":"
+				},
+				{
+					"id": 901,
+					"text": " they"
+				},
+				{
+					"id": 1053,
+					"text": " had"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 22388,
+					"text": " consultation"
+				},
+				{
+					"id": 1003,
+					"text": " about"
+				},
+				{
+					"id": 672,
+					"text": " this"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 1308,
+					"text": " after"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 2321,
+					"text": " few"
+				},
+				{
+					"id": 4310,
+					"text": " minutes"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 10012,
+					"text": " seemed"
+				},
+				{
+					"id": 4346,
+					"text": " quite"
+				},
+				{
+					"id": 3756,
+					"text": " natural"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 32858,
+					"text": " Alice"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 1586,
+					"text": " find"
+				},
+				{
+					"id": 13442,
+					"text": " herself"
+				},
+				{
+					"id": 6931,
+					"text": " talking"
+				},
+				{
+					"id": 47448,
+					"text": " famili"
+				},
+				{
+					"id": 2018,
+					"text": "arly"
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 1091,
+					"text": " them"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 618,
+					"text": " as"
+				},
+				{
+					"id": 768,
+					"text": " if"
+				},
+				{
+					"id": 1304,
+					"text": " she"
+				},
+				{
+					"id": 1053,
+					"text": " had"
+				},
+				{
+					"id": 3224,
+					"text": " known"
+				},
+				{
+					"id": 1091,
+					"text": " them"
+				},
+				{
+					"id": 784,
+					"text": " all"
+				},
+				{
+					"id": 1116,
+					"text": " her"
+				},
+				{
+					"id": 1972,
+					"text": " life"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 18136,
+					"text": " Indeed"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1304,
+					"text": " she"
+				},
+				{
+					"id": 1053,
+					"text": " had"
+				},
+				{
+					"id": 4346,
+					"text": " quite"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 1440,
+					"text": " long"
+				},
+				{
+					"id": 8485,
+					"text": " argument"
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 639,
+					"text": " L"
+				},
+				{
+					"id": 933,
+					"text": "ory"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1015,
+					"text": " who"
+				},
+				{
+					"id": 657,
+					"text": " at"
+				},
+				{
+					"id": 1774,
+					"text": " last"
+				},
+				{
+					"id": 6812,
+					"text": " turned"
+				},
+				{
+					"id": 11617,
+					"text": " sul"
+				},
+				{
+					"id": 4221,
+					"text": "ky"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 1093,
+					"text": " would"
+				},
+				{
+					"id": 1186,
+					"text": " only"
+				},
+				{
+					"id": 1879,
+					"text": " say"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 236777,
+					"text": "I"
+				},
+				{
+					"id": 1006,
+					"text": " am"
+				},
+				{
+					"id": 9862,
+					"text": " older"
+				},
+				{
+					"id": 1082,
+					"text": " than"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 1921,
+					"text": " must"
+				},
+				{
+					"id": 1281,
+					"text": " know"
+				},
+				{
+					"id": 2480,
+					"text": " better"
+				},
+				{
+					"id": 236793,
+					"text": ";"
+				},
+				{
+					"id": 236919,
+					"text": "”"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 672,
+					"text": " this"
+				},
+				{
+					"id": 32858,
+					"text": " Alice"
+				},
+				{
+					"id": 1093,
+					"text": " would"
+				},
+				{
+					"id": 711,
+					"text": " not"
+				},
+				{
+					"id": 2174,
+					"text": " allow"
+				},
+				{
+					"id": 2180,
+					"text": " without"
+				},
+				{
+					"id": 14111,
+					"text": " knowing"
+				},
+				{
+					"id": 1217,
+					"text": " how"
+				},
+				{
+					"id": 2255,
+					"text": " old"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 691,
+					"text": " was"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 618,
+					"text": " as"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 639,
+					"text": " L"
+				},
+				{
+					"id": 933,
+					"text": "ory"
+				},
+				{
+					"id": 30706,
+					"text": " positively"
+				},
+				{
+					"id": 19153,
+					"text": " refused"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 3442,
+					"text": " tell"
+				},
+				{
+					"id": 1061,
+					"text": " its"
+				},
+				{
+					"id": 3911,
+					"text": " age"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 993,
+					"text": " there"
+				},
+				{
+					"id": 691,
+					"text": " was"
+				},
+				{
+					"id": 951,
+					"text": " no"
+				},
+				{
+					"id": 919,
+					"text": " more"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 577,
+					"text": " be"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 3834,
+					"text": "At"
+				},
+				{
+					"id": 1774,
+					"text": " last"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 41625,
+					"text": " Mouse"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1015,
+					"text": " who"
+				},
+				{
+					"id": 10012,
+					"text": " seemed"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 577,
+					"text": " be"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 1589,
+					"text": " person"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 9747,
+					"text": " authority"
+				},
+				{
+					"id": 3571,
+					"text": " among"
+				},
+				{
+					"id": 1091,
+					"text": " them"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 2760,
+					"text": " called"
+				},
+				{
+					"id": 855,
+					"text": " out"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 80163,
+					"text": "Sit"
+				},
+				{
+					"id": 1679,
+					"text": " down"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 784,
+					"text": " all"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 10763,
+					"text": " listen"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 786,
+					"text": " me"
+				},
+				{
+					"id": 236888,
+					"text": "!"
+				},
+				{
+					"id": 2222,
+					"text": " _"
+				},
+				{
+					"id": 236777,
+					"text": "I"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 859,
+					"text": "ll"
+				},
+				{
+					"id": 236779,
+					"text": "_"
+				},
+				{
+					"id": 4949,
+					"text": " soon"
+				},
+				{
+					"id": 1386,
+					"text": " make"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 6299,
+					"text": " dry"
+				},
+				{
+					"id": 3487,
+					"text": " enough"
+				},
+				{
+					"id": 13348,
+					"text": "!”"
+				},
+				{
+					"id": 2195,
+					"text": " They"
+				},
+				{
+					"id": 784,
+					"text": " all"
+				},
+				{
+					"id": 2838,
+					"text": " sat"
+				},
+				{
+					"id": 1679,
+					"text": " down"
+				},
+				{
+					"id": 657,
+					"text": " at"
+				},
+				{
+					"id": 3622,
+					"text": " once"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 2455,
+					"text": " large"
+				},
+				{
+					"id": 7610,
+					"text": " ring"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 41625,
+					"text": " Mouse"
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 6029,
+					"text": " middle"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 32858,
+					"text": " Alice"
+				},
+				{
+					"id": 7953,
+					"text": " kept"
+				},
+				{
+					"id": 1116,
+					"text": " her"
+				},
+				{
+					"id": 6114,
+					"text": " eyes"
+				},
+				{
+					"id": 143428,
+					"text": " anxiously"
+				},
+				{
+					"id": 6530,
+					"text": " fixed"
+				},
+				{
+					"id": 580,
+					"text": " on"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 573,
+					"text": " for"
+				},
+				{
+					"id": 1304,
+					"text": " she"
+				},
+				{
+					"id": 6345,
+					"text": " felt"
+				},
+				{
+					"id": 2889,
+					"text": " sure"
+				},
+				{
+					"id": 1304,
+					"text": " she"
+				},
+				{
+					"id": 1093,
+					"text": " would"
+				},
+				{
+					"id": 4682,
+					"text": " catch"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 4287,
+					"text": " bad"
+				},
+				{
+					"id": 7445,
+					"text": " cold"
+				},
+				{
+					"id": 768,
+					"text": " if"
+				},
+				{
+					"id": 1304,
+					"text": " she"
+				},
+				{
+					"id": 1602,
+					"text": " did"
+				},
+				{
+					"id": 711,
+					"text": " not"
+				},
+				{
+					"id": 974,
+					"text": " get"
+				},
+				{
+					"id": 6299,
+					"text": " dry"
+				},
+				{
+					"id": 1401,
+					"text": " very"
+				},
+				{
+					"id": 4949,
+					"text": " soon"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 236776,
+					"text": "A"
+				},
+				{
+					"id": 12427,
+					"text": "hem"
+				},
+				{
+					"id": 13348,
+					"text": "!”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 41625,
+					"text": " Mouse"
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 614,
+					"text": " an"
+				},
+				{
+					"id": 2132,
+					"text": " important"
+				},
+				{
+					"id": 2634,
+					"text": " air"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 733,
+					"text": "are"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 784,
+					"text": " all"
+				},
+				{
+					"id": 5508,
+					"text": " ready"
+				},
+				{
+					"id": 236881,
+					"text": "?"
+				},
+				{
+					"id": 1174,
+					"text": " This"
+				},
+				{
+					"id": 563,
+					"text": " is"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 3101,
+					"text": " dri"
+				},
+				{
+					"id": 598,
+					"text": "est"
+				},
+				{
+					"id": 3210,
+					"text": " thing"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 1281,
+					"text": " know"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 103738,
+					"text": " Silence"
+				},
+				{
+					"id": 784,
+					"text": " all"
+				},
+				{
+					"id": 4886,
+					"text": " round"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 768,
+					"text": " if"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 5091,
+					"text": " please"
+				},
+				{
+					"id": 236888,
+					"text": "!"
+				},
+				{
+					"id": 2141,
+					"text": " ‘"
+				},
+				{
+					"id": 34848,
+					"text": "William"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 146360,
+					"text": " Conquer"
+				},
+				{
+					"id": 504,
+					"text": "or"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 5769,
+					"text": " whose"
+				},
+				{
+					"id": 4400,
+					"text": " cause"
+				},
+				{
+					"id": 691,
+					"text": " was"
+				},
+				{
+					"id": 88858,
+					"text": " favoured"
+				},
+				{
+					"id": 684,
+					"text": " by"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 85907,
+					"text": " pope"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 691,
+					"text": " was"
+				},
+				{
+					"id": 4949,
+					"text": " soon"
+				},
+				{
+					"id": 13450,
+					"text": " submitted"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 684,
+					"text": " by"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 5422,
+					"text": " English"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1015,
+					"text": " who"
+				},
+				{
+					"id": 5048,
+					"text": " wanted"
+				},
+				{
+					"id": 5670,
+					"text": " leaders"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 1053,
+					"text": " had"
+				},
+				{
+					"id": 1010,
+					"text": " been"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 5226,
+					"text": " late"
+				},
+				{
+					"id": 1623,
+					"text": " much"
+				},
+				{
+					"id": 53969,
+					"text": " accustomed"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 199115,
+					"text": " usurp"
+				},
+				{
+					"id": 567,
+					"text": "ation"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 69393,
+					"text": " conquest"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 67881,
+					"text": " Edwin"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 5945,
+					"text": " Mor"
+				},
+				{
+					"id": 4554,
+					"text": "car"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 175987,
+					"text": " earl"
+				},
+				{
+					"id": 236751,
+					"text": "s"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 24006,
+					"text": " Merc"
+				},
+				{
+					"id": 722,
+					"text": "ia"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 4695,
+					"text": " North"
+				},
+				{
+					"id": 139689,
+					"text": "umbria"
+				},
+				{
+					"id": 237028,
+					"text": "—"
+				},
+				{
+					"id": 228444,
+					"text": "’”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 236836,
+					"text": "U"
+				},
+				{
+					"id": 860,
+					"text": "gh"
+				},
+				{
+					"id": 13348,
+					"text": "!”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 639,
+					"text": " L"
+				},
+				{
+					"id": 933,
+					"text": "ory"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 704,
+					"text": " sh"
+				},
+				{
+					"id": 2281,
+					"text": "iver"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 236777,
+					"text": "I"
+				},
+				{
+					"id": 2829,
+					"text": " beg"
+				},
+				{
+					"id": 822,
+					"text": " your"
+				},
+				{
+					"id": 73831,
+					"text": " pardon"
+				},
+				{
+					"id": 13348,
+					"text": "!”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 41625,
+					"text": " Mouse"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 214724,
+					"text": " frowning"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 840,
+					"text": " but"
+				},
+				{
+					"id": 1401,
+					"text": " very"
+				},
+				{
+					"id": 124954,
+					"text": " politely"
+				},
+				{
+					"id": 236787,
+					"text": ":"
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 15562,
+					"text": "Did"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 8988,
+					"text": " speak"
+				},
+				{
+					"id": 9377,
+					"text": "?”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 4348,
+					"text": "Not"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 13348,
+					"text": "!”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 639,
+					"text": " L"
+				},
+				{
+					"id": 933,
+					"text": "ory"
+				},
+				{
+					"id": 133858,
+					"text": " hastily"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 236777,
+					"text": "I"
+				},
+				{
+					"id": 3305,
+					"text": " thought"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 1602,
+					"text": " did"
+				},
+				{
+					"id": 2130,
+					"text": ",”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 41625,
+					"text": " Mouse"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 237028,
+					"text": "—"
+				},
+				{
+					"id": 236777,
+					"text": "I"
+				},
+				{
+					"id": 7162,
+					"text": " proceed"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 2141,
+					"text": " ‘"
+				},
+				{
+					"id": 126515,
+					"text": "Edwin"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 5945,
+					"text": " Mor"
+				},
+				{
+					"id": 4554,
+					"text": "car"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 175987,
+					"text": " earl"
+				},
+				{
+					"id": 236751,
+					"text": "s"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 24006,
+					"text": " Merc"
+				},
+				{
+					"id": 722,
+					"text": "ia"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 4695,
+					"text": " North"
+				},
+				{
+					"id": 139689,
+					"text": "umbria"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 16200,
+					"text": " declared"
+				},
+				{
+					"id": 573,
+					"text": " for"
+				},
+				{
+					"id": 1515,
+					"text": " him"
+				},
+				{
+					"id": 236787,
+					"text": ":"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 1581,
+					"text": " even"
+				},
+				{
+					"id": 842,
+					"text": " St"
+				},
+				{
+					"id": 554,
+					"text": "ig"
+				},
+				{
+					"id": 624,
+					"text": "and"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 78670,
+					"text": " patriotic"
+				},
+				{
+					"id": 231474,
+					"text": " archbishop"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 77255,
+					"text": " Canterbury"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1765,
+					"text": " found"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 50712,
+					"text": " advisable"
+				},
+				{
+					"id": 237028,
+					"text": "—"
+				},
+				{
+					"id": 228444,
+					"text": "’”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 11099,
+					"text": "Found"
+				},
+				{
+					"id": 2222,
+					"text": " _"
+				},
+				{
+					"id": 14070,
+					"text": "what"
+				},
+				{
+					"id": 236779,
+					"text": "_"
+				},
+				{
+					"id": 9377,
+					"text": "?”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 47696,
+					"text": " Duck"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 11099,
+					"text": "Found"
+				},
+				{
+					"id": 2222,
+					"text": " _"
+				},
+				{
+					"id": 509,
+					"text": "it"
+				},
+				{
+					"id": 236779,
+					"text": "_"
+				},
+				{
+					"id": 2130,
+					"text": ",”"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 41625,
+					"text": " Mouse"
+				},
+				{
+					"id": 24406,
+					"text": " replied"
+				},
+				{
+					"id": 4319,
+					"text": " rather"
+				},
+				{
+					"id": 4071,
+					"text": " cross"
+				},
+				{
+					"id": 586,
+					"text": "ly"
+				},
+				{
+					"id": 236787,
+					"text": ":"
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 1340,
+					"text": "of"
+				},
+				{
+					"id": 3003,
+					"text": " course"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 1281,
+					"text": " know"
+				},
+				{
+					"id": 1144,
+					"text": " what"
+				},
+				{
+					"id": 2141,
+					"text": " ‘"
+				},
+				{
+					"id": 509,
+					"text": "it"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 2820,
+					"text": " means"
+				},
+				{
+					"id": 1827,
+					"text": ".”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 236777,
+					"text": "I"
+				},
+				{
+					"id": 1281,
+					"text": " know"
+				},
+				{
+					"id": 1144,
+					"text": " what"
+				},
+				{
+					"id": 2141,
+					"text": " ‘"
+				},
+				{
+					"id": 509,
+					"text": "it"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 2820,
+					"text": " means"
+				},
+				{
+					"id": 1388,
+					"text": " well"
+				},
+				{
+					"id": 3487,
+					"text": " enough"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1056,
+					"text": " when"
+				},
+				{
+					"id": 2222,
+					"text": " _"
+				},
+				{
+					"id": 236777,
+					"text": "I"
+				},
+				{
+					"id": 236779,
+					"text": "_"
+				},
+				{
+					"id": 1586,
+					"text": " find"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 3210,
+					"text": " thing"
+				},
+				{
+					"id": 2130,
+					"text": ",”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 47696,
+					"text": " Duck"
+				},
+				{
+					"id": 236787,
+					"text": ":"
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 509,
+					"text": "it"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 236751,
+					"text": "s"
+				},
+				{
+					"id": 6816,
+					"text": " generally"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 43277,
+					"text": " frog"
+				},
+				{
+					"id": 653,
+					"text": " or"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 36228,
+					"text": " worm"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 669,
+					"text": " The"
+				},
+				{
+					"id": 2934,
+					"text": " question"
+				},
+				{
+					"id": 563,
+					"text": " is"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1144,
+					"text": " what"
+				},
+				{
+					"id": 1602,
+					"text": " did"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 231474,
+					"text": " archbishop"
+				},
+				{
+					"id": 1586,
+					"text": " find"
+				},
+				{
+					"id": 9377,
+					"text": "?”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 818,
+					"text": "The"
+				},
+				{
+					"id": 41625,
+					"text": " Mouse"
+				},
+				{
+					"id": 1602,
+					"text": " did"
+				},
+				{
+					"id": 711,
+					"text": " not"
+				},
+				{
+					"id": 6303,
+					"text": " notice"
+				},
+				{
+					"id": 672,
+					"text": " this"
+				},
+				{
+					"id": 2934,
+					"text": " question"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 840,
+					"text": " but"
+				},
+				{
+					"id": 127149,
+					"text": " hurriedly"
+				},
+				{
+					"id": 3939,
+					"text": " went"
+				},
+				{
+					"id": 580,
+					"text": " on"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 190740,
+					"text": " “‘"
+				},
+				{
+					"id": 237028,
+					"text": "—"
+				},
+				{
+					"id": 13395,
+					"text": "found"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 50712,
+					"text": " advisable"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 817,
+					"text": " go"
+				},
+				{
+					"id": 607,
+					"text": " with"
+				},
+				{
+					"id": 63836,
+					"text": " Edgar"
+				},
+				{
+					"id": 234681,
+					"text": " Athe"
+				},
+				{
+					"id": 2395,
+					"text": "ling"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 2874,
+					"text": " meet"
+				},
+				{
+					"id": 8966,
+					"text": " William"
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 2729,
+					"text": " offer"
+				},
+				{
+					"id": 1515,
+					"text": " him"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 18130,
+					"text": " crown"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 8966,
+					"text": " William"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 236751,
+					"text": "s"
+				},
+				{
+					"id": 4714,
+					"text": " conduct"
+				},
+				{
+					"id": 657,
+					"text": " at"
+				},
+				{
+					"id": 1171,
+					"text": " first"
+				},
+				{
+					"id": 691,
+					"text": " was"
+				},
+				{
+					"id": 21037,
+					"text": " moderate"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 2024,
+					"text": " But"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 35331,
+					"text": " insol"
+				},
+				{
+					"id": 819,
+					"text": "ence"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 914,
+					"text": " his"
+				},
+				{
+					"id": 17509,
+					"text": " Norm"
+				},
+				{
+					"id": 743,
+					"text": "ans"
+				},
+				{
+					"id": 237028,
+					"text": "—"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 2088,
+					"text": " How"
+				},
+				{
+					"id": 659,
+					"text": " are"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 3978,
+					"text": " getting"
+				},
+				{
+					"id": 580,
+					"text": " on"
+				},
+				{
+					"id": 1492,
+					"text": " now"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1041,
+					"text": " my"
+				},
+				{
+					"id": 23348,
+					"text": " dear"
+				},
+				{
+					"id": 9377,
+					"text": "?”"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 7245,
+					"text": " continued"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 13805,
+					"text": " turning"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 32858,
+					"text": " Alice"
+				},
+				{
+					"id": 618,
+					"text": " as"
+				},
+				{
+					"id": 625,
+					"text": " it"
+				},
+				{
+					"id": 13804,
+					"text": " spoke"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 2205,
+					"text": "As"
+				},
+				{
+					"id": 11474,
+					"text": " wet"
+				},
+				{
+					"id": 618,
+					"text": " as"
+				},
+				{
+					"id": 3785,
+					"text": " ever"
+				},
+				{
+					"id": 2130,
+					"text": ",”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 32858,
+					"text": " Alice"
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 103409,
+					"text": " melancholy"
+				},
+				{
+					"id": 15737,
+					"text": " tone"
+				},
+				{
+					"id": 236787,
+					"text": ":"
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 509,
+					"text": "it"
+				},
+				{
+					"id": 4038,
+					"text": " doesn"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 236745,
+					"text": "t"
+				},
+				{
+					"id": 4483,
+					"text": " seem"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 6299,
+					"text": " dry"
+				},
+				{
+					"id": 786,
+					"text": " me"
+				},
+				{
+					"id": 657,
+					"text": " at"
+				},
+				{
+					"id": 784,
+					"text": " all"
+				},
+				{
+					"id": 1827,
+					"text": ".”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 902,
+					"text": "In"
+				},
+				{
+					"id": 600,
+					"text": " that"
+				},
+				{
+					"id": 1624,
+					"text": " case"
+				},
+				{
+					"id": 2130,
+					"text": ",”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 622,
+					"text": " D"
+				},
+				{
+					"id": 7244,
+					"text": "odo"
+				},
+				{
+					"id": 151450,
+					"text": " solemnly"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 15213,
+					"text": " rising"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 1061,
+					"text": " its"
+				},
+				{
+					"id": 6172,
+					"text": " feet"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 236777,
+					"text": "I"
+				},
+				{
+					"id": 2827,
+					"text": " move"
+				},
+				{
+					"id": 600,
+					"text": " that"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 5395,
+					"text": " meeting"
+				},
+				{
+					"id": 212626,
+					"text": " adjourn"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 573,
+					"text": " for"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 13258,
+					"text": " immediate"
+				},
+				{
+					"id": 22109,
+					"text": " adoption"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 919,
+					"text": " more"
+				},
+				{
+					"id": 36342,
+					"text": " energetic"
+				},
+				{
+					"id": 39854,
+					"text": " remedies"
+				},
+				{
+					"id": 95746,
+					"text": "—”"
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 130171,
+					"text": "Speak"
+				},
+				{
+					"id": 5422,
+					"text": " English"
+				},
+				{
+					"id": 13348,
+					"text": "!”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 645,
+					"text": " E"
+				},
+				{
+					"id": 582,
+					"text": "ag"
+				},
+				{
+					"id": 1184,
+					"text": "let"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 236777,
+					"text": "I"
+				},
+				{
+					"id": 1537,
+					"text": " don"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 236745,
+					"text": "t"
+				},
+				{
+					"id": 1281,
+					"text": " know"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 6590,
+					"text": " meaning"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 3746,
+					"text": " half"
+				},
+				{
+					"id": 1724,
+					"text": " those"
+				},
+				{
+					"id": 1440,
+					"text": " long"
+				},
+				{
+					"id": 4171,
+					"text": " words"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 532,
+					"text": " and"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 1144,
+					"text": " what"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 236751,
+					"text": "s"
+				},
+				{
+					"id": 919,
+					"text": " more"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 1537,
+					"text": " don"
+				},
+				{
+					"id": 236858,
+					"text": "’"
+				},
+				{
+					"id": 236745,
+					"text": "t"
+				},
+				{
+					"id": 4646,
+					"text": " believe"
+				},
+				{
+					"id": 611,
+					"text": " you"
+				},
+				{
+					"id": 776,
+					"text": " do"
+				},
+				{
+					"id": 3477,
+					"text": " either"
+				},
+				{
+					"id": 13348,
+					"text": "!”"
+				},
+				{
+					"id": 1452,
+					"text": " And"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 645,
+					"text": " E"
+				},
+				{
+					"id": 582,
+					"text": "ag"
+				},
+				{
+					"id": 1184,
+					"text": "let"
+				},
+				{
+					"id": 20590,
+					"text": " bent"
+				},
+				{
+					"id": 1679,
+					"text": " down"
+				},
+				{
+					"id": 1061,
+					"text": " its"
+				},
+				{
+					"id": 2228,
+					"text": " head"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 16239,
+					"text": " hide"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 14819,
+					"text": " smile"
+				},
+				{
+					"id": 236787,
+					"text": ":"
+				},
+				{
+					"id": 1070,
+					"text": " some"
+				},
+				{
+					"id": 529,
+					"text": " of"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 1032,
+					"text": " other"
+				},
+				{
+					"id": 13923,
+					"text": " birds"
+				},
+				{
+					"id": 494,
+					"text": " t"
+				},
+				{
+					"id": 4268,
+					"text": "itter"
+				},
+				{
+					"id": 524,
+					"text": "ed"
+				},
+				{
+					"id": 5340,
+					"text": " aud"
+				},
+				{
+					"id": 6965,
+					"text": "ibly"
+				},
+				{
+					"id": 236761,
+					"text": "."
+				},
+				{
+					"id": 108,
+					"text": "\n\n"
+				},
+				{
+					"id": 236913,
+					"text": "“"
+				},
+				{
+					"id": 3689,
+					"text": "What"
+				},
+				{
+					"id": 564,
+					"text": " I"
+				},
+				{
+					"id": 691,
+					"text": " was"
+				},
+				{
+					"id": 1771,
+					"text": " going"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 1879,
+					"text": " say"
+				},
+				{
+					"id": 2130,
+					"text": ",”"
+				},
+				{
+					"id": 1176,
+					"text": " said"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 622,
+					"text": " D"
+				},
+				{
+					"id": 7244,
+					"text": "odo"
+				},
+				{
+					"id": 528,
+					"text": " in"
+				},
+				{
+					"id": 614,
+					"text": " an"
+				},
+				{
+					"id": 86636,
+					"text": " offended"
+				},
+				{
+					"id": 15737,
+					"text": " tone"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 999,
+					"text": " “"
+				},
+				{
+					"id": 9849,
+					"text": "was"
+				},
+				{
+					"id": 236764,
+					"text": ","
+				},
+				{
+					"id": 600,
+					"text": " that"
+				},
+				{
+					"id": 506,
+					"text": " the"
+				},
+				{
+					"id": 1791,
+					"text": " best"
+				},
+				{
+					"id": 3210,
+					"text": " thing"
+				},
+				{
+					"id": 531,
+					"text": " to"
+				},
+				{
+					"id": 974,
+					"text": " get"
+				},
+				{
+					"id": 775,
+					"text": " us"
+				},
+				{
+					"id": 6299,
+					"text": " dry"
+				},
+				{
+					"id": 1093,
+					"text": " would"
+				},
+				{
+					"id": 577,
+					"text": " be"
+				},
+				{
+					"id": 496,
+					"text": " a"
+				},
+				{
+					"id": 207534,
+					"text": " Caucus"
+				}
+			],
+			"file": {
+				"file": "caucus.f32",
+				"bytes": 3904584,
+				"sha256": "d359903ae7b6eb1d82015d78b62c6d35c78abbcef332b721ebff1d6d0d0e3d72",
+				"tensors": {
+					"rows": {
+						"offset": 0,
+						"length": 10,
+						"shape": [10]
+					},
+					"reach": {
+						"offset": 10,
+						"length": 720,
+						"shape": [18, 4, 10]
+					},
+					"layer.4.x": {
+						"offset": 730,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.4.q": {
+						"offset": 1370,
+						"length": 10240,
+						"shape": [4, 10, 256]
+					},
+					"layer.4.k": {
+						"offset": 11610,
+						"length": 198144,
+						"shape": [1, 774, 256]
+					},
+					"layer.4.v": {
+						"offset": 209754,
+						"length": 198144,
+						"shape": [1, 774, 256]
+					},
+					"layer.4.scores": {
+						"offset": 407898,
+						"length": 30960,
+						"shape": [4, 10, 774]
+					},
+					"layer.4.mask": {
+						"offset": 438858,
+						"length": 7740,
+						"shape": [10, 774]
+					},
+					"layer.4.weights": {
+						"offset": 446598,
+						"length": 30960,
+						"shape": [4, 10, 774]
+					},
+					"layer.4.heads": {
+						"offset": 477558,
+						"length": 10240,
+						"shape": [4, 10, 256]
+					},
+					"layer.4.out": {
+						"offset": 487798,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.5.x": {
+						"offset": 488438,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.5.q": {
+						"offset": 489078,
+						"length": 10240,
+						"shape": [4, 10, 256]
+					},
+					"layer.5.k": {
+						"offset": 499318,
+						"length": 198144,
+						"shape": [1, 774, 256]
+					},
+					"layer.5.v": {
+						"offset": 697462,
+						"length": 198144,
+						"shape": [1, 774, 256]
+					},
+					"layer.5.scores": {
+						"offset": 895606,
+						"length": 30960,
+						"shape": [4, 10, 774]
+					},
+					"layer.5.mask": {
+						"offset": 926566,
+						"length": 7740,
+						"shape": [10, 774]
+					},
+					"layer.5.weights": {
+						"offset": 934306,
+						"length": 30960,
+						"shape": [4, 10, 774]
+					},
+					"layer.5.heads": {
+						"offset": 965266,
+						"length": 10240,
+						"shape": [4, 10, 256]
+					},
+					"layer.5.out": {
+						"offset": 975506,
+						"length": 640,
+						"shape": [10, 64]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_sliding_window.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "cpu",
+		"dtype": "float32",
+		"attention": "eager",
+		"modelingSha256": "b92013d0558381b76b0f74d2b30890cd3aaa9daa58a269d7a12b5a5c5a8e9eb7",
+		"weightsSha256": "abb58eb73aece5163624090d5383c59cbcdb9e9539ec84cb864f74386c4b21d5",
+		"texts": {
+			"boscombe": {
+				"source": "Arthur Conan Doyle, The Adventures of Sherlock Holmes (1892), public domain",
+				"file": "static/traces/local-global/boscombe.txt",
+				"sha256": "5e2ed55f8a9a04827cb751c28d4fd4bed0e5f23bdc1644c5dc3dec8cea12467c",
+				"tokens": 663
+			},
+			"caucus": {
+				"source": "Lewis Carroll, Alice’s Adventures in Wonderland (1865), public domain",
+				"file": "static/traces/local-global/caucus.txt",
+				"sha256": "6cdc612f5eebf45fe4ee30511ae0b571b23fca6ca5366b9d300a9577071dadfb",
+				"tokens": 774
+			}
+		},
+		"x": "input to attention, after input_layernorm",
+		"q": "after QK-norm and RoPE",
+		"k": "after QK-norm and RoPE; the one key head the four query heads share",
+		"out": "output of o_proj, before post_attention_layernorm and the residual add"
+	},
+	"validation": {
+		"maxHookedVsUnhookedLogitError": 0.0,
+		"maskRuleMismatches": 0.0,
+		"maxLocalReachBeyondWindow": 0.0,
+		"maxMaskedWeight": 0.0,
+		"maxQKRecomputeError": 8.08e-5,
+		"maxVRecomputeError": 8.68e-6,
+		"maxWeightsRecomputeError": 0.0,
+		"maxHeadsRecomputeError": 0.0,
+		"maxOutRecomputeError": 0.0,
+		"maxRowSumError": 1.25e-6
+	},
+	"extras": {
+		"rows": "[R] position in the passage of each shown query row; tokens are those rows, keyTokens the whole passage",
+		"reach": "[blocks = 18, H, R] attention each block puts on keys at least 512 behind each shown row (0 in every local block)",
+		"layer.*.mask": "[R, T] 1 where the shown query may see the key under the mask the model received",
+		"layer.*.scores": "[H, R, T] q·k / 16 at the shown rows, 0 where masked"
+	}
+}

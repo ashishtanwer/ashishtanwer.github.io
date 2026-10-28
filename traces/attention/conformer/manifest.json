@@ -1,0 +1,2321 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "conformer",
+	"source": "model",
+	"model": {
+		"id": "facebook/wav2vec2-conformer-rope-large-960h-ft",
+		"name": "Wav2Vec2-Conformer large (RoPE, 960 h)",
+		"revision": "6b36ef01c6443c67ae7ed0822876d091ab50e4aa",
+		"url": "https://huggingface.co/facebook/wav2vec2-conformer-rope-large-960h-ft/tree/6b36ef01c6443c67ae7ed0822876d091ab50e4aa",
+		"license": "apache-2.0",
+		"numLayers": 24,
+		"hiddenSize": 1024,
+		"attentionHeads": 16,
+		"keyValueHeads": 16,
+		"headDim": 64,
+		"kernelSize": 31,
+		"channelsShown": 16,
+		"frames": 101,
+		"frameSeconds": 0.02,
+		"window": 24,
+		"positions": "rotary embeddings, applied to the block input before the query and key projections",
+		"mask": "none; every frame attends to every frame, and the convolution is centred"
+	},
+	"layers": [2, 5, 8, 11, 14, 17, 20, 23],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "where-is",
+			"title": "WHERE IS",
+			"prompt": "“WHERE IS MY BROTHER NOW” · frames 29–52 (0.58–1.06 s) of 101",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 18,
+					"text": "W"
+				},
+				{
+					"id": 11,
+					"text": "H"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 5,
+					"text": "E"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 13,
+					"text": "R"
+				},
+				{
+					"id": 13,
+					"text": "R"
+				},
+				{
+					"id": 5,
+					"text": "E"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 4,
+					"text": "␣"
+				},
+				{
+					"id": 4,
+					"text": "␣"
+				},
+				{
+					"id": 10,
+					"text": "I"
+				},
+				{
+					"id": 10,
+					"text": "I"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 12,
+					"text": "S"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 4,
+					"text": "␣"
+				},
+				{
+					"id": 4,
+					"text": "␣"
+				},
+				{
+					"id": 17,
+					"text": "M"
+				},
+				{
+					"id": 17,
+					"text": "M"
+				}
+			],
+			"file": {
+				"file": "where-is.f32",
+				"bytes": 1331200,
+				"sha256": "4f75274cc8c8c8534c13a467b7d2ca1ec9333e69dc592291e86fac31f502dc99",
+				"tensors": {
+					"layer.2.x": {
+						"offset": 0,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.pointwise": {
+						"offset": 1536,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.glu": {
+						"offset": 3072,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.v": {
+						"offset": 4608,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.2.weights": {
+						"offset": 4992,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.2.edge": {
+						"offset": 14208,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.2.heads": {
+						"offset": 14592,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.2.kernel": {
+						"offset": 14976,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.2.channels": {
+						"offset": 15472,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.2.batchNorm": {
+						"offset": 15488,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.swish": {
+						"offset": 17024,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.out": {
+						"offset": 18560,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.attn.x": {
+						"offset": 20096,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.attn.scores": {
+						"offset": 21632,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.2.attn.weights": {
+						"offset": 30848,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.2.attn.out": {
+						"offset": 40064,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.x": {
+						"offset": 41600,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.pointwise": {
+						"offset": 43136,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.glu": {
+						"offset": 44672,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.v": {
+						"offset": 46208,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.5.weights": {
+						"offset": 46592,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.5.edge": {
+						"offset": 55808,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.5.heads": {
+						"offset": 56192,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.5.kernel": {
+						"offset": 56576,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.5.channels": {
+						"offset": 57072,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.5.batchNorm": {
+						"offset": 57088,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.swish": {
+						"offset": 58624,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.out": {
+						"offset": 60160,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.attn.x": {
+						"offset": 61696,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.attn.scores": {
+						"offset": 63232,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.5.attn.weights": {
+						"offset": 72448,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.5.attn.out": {
+						"offset": 81664,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.x": {
+						"offset": 83200,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.pointwise": {
+						"offset": 84736,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.glu": {
+						"offset": 86272,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.v": {
+						"offset": 87808,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.8.weights": {
+						"offset": 88192,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.8.edge": {
+						"offset": 97408,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.8.heads": {
+						"offset": 97792,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.8.kernel": {
+						"offset": 98176,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.8.channels": {
+						"offset": 98672,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.8.batchNorm": {
+						"offset": 98688,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.swish": {
+						"offset": 100224,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.out": {
+						"offset": 101760,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.attn.x": {
+						"offset": 103296,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.attn.scores": {
+						"offset": 104832,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.8.attn.weights": {
+						"offset": 114048,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.8.attn.out": {
+						"offset": 123264,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.x": {
+						"offset": 124800,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.pointwise": {
+						"offset": 126336,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.glu": {
+						"offset": 127872,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.v": {
+						"offset": 129408,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.11.weights": {
+						"offset": 129792,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.11.edge": {
+						"offset": 139008,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.11.heads": {
+						"offset": 139392,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.11.kernel": {
+						"offset": 139776,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.11.channels": {
+						"offset": 140272,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.11.batchNorm": {
+						"offset": 140288,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.swish": {
+						"offset": 141824,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.out": {
+						"offset": 143360,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.attn.x": {
+						"offset": 144896,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.attn.scores": {
+						"offset": 146432,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.11.attn.weights": {
+						"offset": 155648,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.11.attn.out": {
+						"offset": 164864,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.x": {
+						"offset": 166400,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.pointwise": {
+						"offset": 167936,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.glu": {
+						"offset": 169472,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.v": {
+						"offset": 171008,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.14.weights": {
+						"offset": 171392,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.14.edge": {
+						"offset": 180608,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.14.heads": {
+						"offset": 180992,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.14.kernel": {
+						"offset": 181376,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.14.channels": {
+						"offset": 181872,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.14.batchNorm": {
+						"offset": 181888,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.swish": {
+						"offset": 183424,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.out": {
+						"offset": 184960,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.attn.x": {
+						"offset": 186496,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.attn.scores": {
+						"offset": 188032,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.14.attn.weights": {
+						"offset": 197248,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.14.attn.out": {
+						"offset": 206464,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.x": {
+						"offset": 208000,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.pointwise": {
+						"offset": 209536,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.glu": {
+						"offset": 211072,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.v": {
+						"offset": 212608,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.17.weights": {
+						"offset": 212992,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.17.edge": {
+						"offset": 222208,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.17.heads": {
+						"offset": 222592,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.17.kernel": {
+						"offset": 222976,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.17.channels": {
+						"offset": 223472,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.17.batchNorm": {
+						"offset": 223488,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.swish": {
+						"offset": 225024,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.out": {
+						"offset": 226560,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.attn.x": {
+						"offset": 228096,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.attn.scores": {
+						"offset": 229632,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.17.attn.weights": {
+						"offset": 238848,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.17.attn.out": {
+						"offset": 248064,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.x": {
+						"offset": 249600,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.pointwise": {
+						"offset": 251136,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.glu": {
+						"offset": 252672,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.v": {
+						"offset": 254208,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.20.weights": {
+						"offset": 254592,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.20.edge": {
+						"offset": 263808,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.20.heads": {
+						"offset": 264192,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.20.kernel": {
+						"offset": 264576,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.20.channels": {
+						"offset": 265072,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.20.batchNorm": {
+						"offset": 265088,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.swish": {
+						"offset": 266624,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.out": {
+						"offset": 268160,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.attn.x": {
+						"offset": 269696,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.attn.scores": {
+						"offset": 271232,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.20.attn.weights": {
+						"offset": 280448,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.20.attn.out": {
+						"offset": 289664,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.x": {
+						"offset": 291200,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.pointwise": {
+						"offset": 292736,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.glu": {
+						"offset": 294272,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.v": {
+						"offset": 295808,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.23.weights": {
+						"offset": 296192,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.23.edge": {
+						"offset": 305408,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.23.heads": {
+						"offset": 305792,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.23.kernel": {
+						"offset": 306176,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.23.channels": {
+						"offset": 306672,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.23.batchNorm": {
+						"offset": 306688,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.swish": {
+						"offset": 308224,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.out": {
+						"offset": 309760,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.attn.x": {
+						"offset": 311296,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.attn.scores": {
+						"offset": 312832,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.23.attn.weights": {
+						"offset": 322048,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.23.attn.out": {
+						"offset": 331264,
+						"length": 1536,
+						"shape": [24, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "brother",
+			"title": "MY BROTHER",
+			"prompt": "“WHERE IS MY BROTHER NOW” · frames 48–71 (0.96–1.44 s) of 101",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 4,
+					"text": "␣"
+				},
+				{
+					"id": 4,
+					"text": "␣"
+				},
+				{
+					"id": 17,
+					"text": "M"
+				},
+				{
+					"id": 17,
+					"text": "M"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 22,
+					"text": "Y"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 4,
+					"text": "␣"
+				},
+				{
+					"id": 4,
+					"text": "␣"
+				},
+				{
+					"id": 24,
+					"text": "B"
+				},
+				{
+					"id": 13,
+					"text": "R"
+				},
+				{
+					"id": 13,
+					"text": "R"
+				},
+				{
+					"id": 8,
+					"text": "O"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 6,
+					"text": "T"
+				},
+				{
+					"id": 11,
+					"text": "H"
+				},
+				{
+					"id": 5,
+					"text": "E"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 13,
+					"text": "R"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				}
+			],
+			"file": {
+				"file": "brother.f32",
+				"bytes": 1331200,
+				"sha256": "59bd9ec42c26fc01f5f4b8d798aa904ab29e8c14b79409b09bab646cf107e2f4",
+				"tensors": {
+					"layer.2.x": {
+						"offset": 0,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.pointwise": {
+						"offset": 1536,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.glu": {
+						"offset": 3072,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.v": {
+						"offset": 4608,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.2.weights": {
+						"offset": 4992,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.2.edge": {
+						"offset": 14208,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.2.heads": {
+						"offset": 14592,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.2.kernel": {
+						"offset": 14976,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.2.channels": {
+						"offset": 15472,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.2.batchNorm": {
+						"offset": 15488,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.swish": {
+						"offset": 17024,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.out": {
+						"offset": 18560,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.attn.x": {
+						"offset": 20096,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.attn.scores": {
+						"offset": 21632,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.2.attn.weights": {
+						"offset": 30848,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.2.attn.out": {
+						"offset": 40064,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.x": {
+						"offset": 41600,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.pointwise": {
+						"offset": 43136,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.glu": {
+						"offset": 44672,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.v": {
+						"offset": 46208,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.5.weights": {
+						"offset": 46592,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.5.edge": {
+						"offset": 55808,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.5.heads": {
+						"offset": 56192,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.5.kernel": {
+						"offset": 56576,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.5.channels": {
+						"offset": 57072,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.5.batchNorm": {
+						"offset": 57088,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.swish": {
+						"offset": 58624,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.out": {
+						"offset": 60160,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.attn.x": {
+						"offset": 61696,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.attn.scores": {
+						"offset": 63232,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.5.attn.weights": {
+						"offset": 72448,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.5.attn.out": {
+						"offset": 81664,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.x": {
+						"offset": 83200,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.pointwise": {
+						"offset": 84736,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.glu": {
+						"offset": 86272,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.v": {
+						"offset": 87808,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.8.weights": {
+						"offset": 88192,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.8.edge": {
+						"offset": 97408,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.8.heads": {
+						"offset": 97792,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.8.kernel": {
+						"offset": 98176,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.8.channels": {
+						"offset": 98672,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.8.batchNorm": {
+						"offset": 98688,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.swish": {
+						"offset": 100224,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.out": {
+						"offset": 101760,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.attn.x": {
+						"offset": 103296,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.attn.scores": {
+						"offset": 104832,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.8.attn.weights": {
+						"offset": 114048,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.8.attn.out": {
+						"offset": 123264,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.x": {
+						"offset": 124800,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.pointwise": {
+						"offset": 126336,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.glu": {
+						"offset": 127872,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.v": {
+						"offset": 129408,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.11.weights": {
+						"offset": 129792,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.11.edge": {
+						"offset": 139008,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.11.heads": {
+						"offset": 139392,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.11.kernel": {
+						"offset": 139776,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.11.channels": {
+						"offset": 140272,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.11.batchNorm": {
+						"offset": 140288,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.swish": {
+						"offset": 141824,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.out": {
+						"offset": 143360,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.attn.x": {
+						"offset": 144896,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.attn.scores": {
+						"offset": 146432,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.11.attn.weights": {
+						"offset": 155648,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.11.attn.out": {
+						"offset": 164864,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.x": {
+						"offset": 166400,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.pointwise": {
+						"offset": 167936,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.glu": {
+						"offset": 169472,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.v": {
+						"offset": 171008,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.14.weights": {
+						"offset": 171392,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.14.edge": {
+						"offset": 180608,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.14.heads": {
+						"offset": 180992,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.14.kernel": {
+						"offset": 181376,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.14.channels": {
+						"offset": 181872,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.14.batchNorm": {
+						"offset": 181888,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.swish": {
+						"offset": 183424,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.out": {
+						"offset": 184960,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.attn.x": {
+						"offset": 186496,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.attn.scores": {
+						"offset": 188032,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.14.attn.weights": {
+						"offset": 197248,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.14.attn.out": {
+						"offset": 206464,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.x": {
+						"offset": 208000,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.pointwise": {
+						"offset": 209536,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.glu": {
+						"offset": 211072,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.v": {
+						"offset": 212608,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.17.weights": {
+						"offset": 212992,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.17.edge": {
+						"offset": 222208,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.17.heads": {
+						"offset": 222592,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.17.kernel": {
+						"offset": 222976,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.17.channels": {
+						"offset": 223472,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.17.batchNorm": {
+						"offset": 223488,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.swish": {
+						"offset": 225024,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.out": {
+						"offset": 226560,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.attn.x": {
+						"offset": 228096,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.attn.scores": {
+						"offset": 229632,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.17.attn.weights": {
+						"offset": 238848,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.17.attn.out": {
+						"offset": 248064,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.x": {
+						"offset": 249600,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.pointwise": {
+						"offset": 251136,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.glu": {
+						"offset": 252672,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.v": {
+						"offset": 254208,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.20.weights": {
+						"offset": 254592,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.20.edge": {
+						"offset": 263808,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.20.heads": {
+						"offset": 264192,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.20.kernel": {
+						"offset": 264576,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.20.channels": {
+						"offset": 265072,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.20.batchNorm": {
+						"offset": 265088,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.swish": {
+						"offset": 266624,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.out": {
+						"offset": 268160,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.attn.x": {
+						"offset": 269696,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.attn.scores": {
+						"offset": 271232,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.20.attn.weights": {
+						"offset": 280448,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.20.attn.out": {
+						"offset": 289664,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.x": {
+						"offset": 291200,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.pointwise": {
+						"offset": 292736,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.glu": {
+						"offset": 294272,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.v": {
+						"offset": 295808,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.23.weights": {
+						"offset": 296192,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.23.edge": {
+						"offset": 305408,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.23.heads": {
+						"offset": 305792,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.23.kernel": {
+						"offset": 306176,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.23.channels": {
+						"offset": 306672,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.23.batchNorm": {
+						"offset": 306688,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.swish": {
+						"offset": 308224,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.out": {
+						"offset": 309760,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.attn.x": {
+						"offset": 311296,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.attn.scores": {
+						"offset": 312832,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.23.attn.weights": {
+						"offset": 322048,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.23.attn.out": {
+						"offset": 331264,
+						"length": 1536,
+						"shape": [24, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "now",
+			"title": "NOW",
+			"prompt": "“WHERE IS MY BROTHER NOW” · frames 66–89 (1.32–1.80 s) of 101",
+			"tokens": [
+				{
+					"id": 6,
+					"text": "T"
+				},
+				{
+					"id": 11,
+					"text": "H"
+				},
+				{
+					"id": 5,
+					"text": "E"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 13,
+					"text": "R"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 4,
+					"text": "␣"
+				},
+				{
+					"id": 4,
+					"text": "␣"
+				},
+				{
+					"id": 4,
+					"text": "␣"
+				},
+				{
+					"id": 9,
+					"text": "N"
+				},
+				{
+					"id": 9,
+					"text": "N"
+				},
+				{
+					"id": 8,
+					"text": "O"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 18,
+					"text": "W"
+				},
+				{
+					"id": 18,
+					"text": "W"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				},
+				{
+					"id": 0,
+					"text": "·"
+				}
+			],
+			"file": {
+				"file": "now.f32",
+				"bytes": 1331200,
+				"sha256": "69efddf7f6fbd15595ef2dc587a594ff9dd277b0fabb2fa22169b41b3ac90144",
+				"tensors": {
+					"layer.2.x": {
+						"offset": 0,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.pointwise": {
+						"offset": 1536,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.glu": {
+						"offset": 3072,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.v": {
+						"offset": 4608,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.2.weights": {
+						"offset": 4992,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.2.edge": {
+						"offset": 14208,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.2.heads": {
+						"offset": 14592,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.2.kernel": {
+						"offset": 14976,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.2.channels": {
+						"offset": 15472,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.2.batchNorm": {
+						"offset": 15488,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.swish": {
+						"offset": 17024,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.out": {
+						"offset": 18560,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.attn.x": {
+						"offset": 20096,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.2.attn.scores": {
+						"offset": 21632,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.2.attn.weights": {
+						"offset": 30848,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.2.attn.out": {
+						"offset": 40064,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.x": {
+						"offset": 41600,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.pointwise": {
+						"offset": 43136,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.glu": {
+						"offset": 44672,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.v": {
+						"offset": 46208,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.5.weights": {
+						"offset": 46592,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.5.edge": {
+						"offset": 55808,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.5.heads": {
+						"offset": 56192,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.5.kernel": {
+						"offset": 56576,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.5.channels": {
+						"offset": 57072,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.5.batchNorm": {
+						"offset": 57088,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.swish": {
+						"offset": 58624,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.out": {
+						"offset": 60160,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.attn.x": {
+						"offset": 61696,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.5.attn.scores": {
+						"offset": 63232,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.5.attn.weights": {
+						"offset": 72448,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.5.attn.out": {
+						"offset": 81664,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.x": {
+						"offset": 83200,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.pointwise": {
+						"offset": 84736,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.glu": {
+						"offset": 86272,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.v": {
+						"offset": 87808,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.8.weights": {
+						"offset": 88192,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.8.edge": {
+						"offset": 97408,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.8.heads": {
+						"offset": 97792,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.8.kernel": {
+						"offset": 98176,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.8.channels": {
+						"offset": 98672,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.8.batchNorm": {
+						"offset": 98688,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.swish": {
+						"offset": 100224,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.out": {
+						"offset": 101760,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.attn.x": {
+						"offset": 103296,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.8.attn.scores": {
+						"offset": 104832,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.8.attn.weights": {
+						"offset": 114048,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.8.attn.out": {
+						"offset": 123264,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.x": {
+						"offset": 124800,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.pointwise": {
+						"offset": 126336,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.glu": {
+						"offset": 127872,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.v": {
+						"offset": 129408,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.11.weights": {
+						"offset": 129792,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.11.edge": {
+						"offset": 139008,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.11.heads": {
+						"offset": 139392,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.11.kernel": {
+						"offset": 139776,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.11.channels": {
+						"offset": 140272,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.11.batchNorm": {
+						"offset": 140288,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.swish": {
+						"offset": 141824,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.out": {
+						"offset": 143360,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.attn.x": {
+						"offset": 144896,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.11.attn.scores": {
+						"offset": 146432,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.11.attn.weights": {
+						"offset": 155648,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.11.attn.out": {
+						"offset": 164864,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.x": {
+						"offset": 166400,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.pointwise": {
+						"offset": 167936,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.glu": {
+						"offset": 169472,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.v": {
+						"offset": 171008,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.14.weights": {
+						"offset": 171392,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.14.edge": {
+						"offset": 180608,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.14.heads": {
+						"offset": 180992,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.14.kernel": {
+						"offset": 181376,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.14.channels": {
+						"offset": 181872,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.14.batchNorm": {
+						"offset": 181888,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.swish": {
+						"offset": 183424,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.out": {
+						"offset": 184960,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.attn.x": {
+						"offset": 186496,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.14.attn.scores": {
+						"offset": 188032,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.14.attn.weights": {
+						"offset": 197248,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.14.attn.out": {
+						"offset": 206464,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.x": {
+						"offset": 208000,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.pointwise": {
+						"offset": 209536,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.glu": {
+						"offset": 211072,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.v": {
+						"offset": 212608,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.17.weights": {
+						"offset": 212992,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.17.edge": {
+						"offset": 222208,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.17.heads": {
+						"offset": 222592,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.17.kernel": {
+						"offset": 222976,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.17.channels": {
+						"offset": 223472,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.17.batchNorm": {
+						"offset": 223488,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.swish": {
+						"offset": 225024,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.out": {
+						"offset": 226560,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.attn.x": {
+						"offset": 228096,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.17.attn.scores": {
+						"offset": 229632,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.17.attn.weights": {
+						"offset": 238848,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.17.attn.out": {
+						"offset": 248064,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.x": {
+						"offset": 249600,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.pointwise": {
+						"offset": 251136,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.glu": {
+						"offset": 252672,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.v": {
+						"offset": 254208,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.20.weights": {
+						"offset": 254592,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.20.edge": {
+						"offset": 263808,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.20.heads": {
+						"offset": 264192,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.20.kernel": {
+						"offset": 264576,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.20.channels": {
+						"offset": 265072,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.20.batchNorm": {
+						"offset": 265088,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.swish": {
+						"offset": 266624,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.out": {
+						"offset": 268160,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.attn.x": {
+						"offset": 269696,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.20.attn.scores": {
+						"offset": 271232,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.20.attn.weights": {
+						"offset": 280448,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.20.attn.out": {
+						"offset": 289664,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.x": {
+						"offset": 291200,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.pointwise": {
+						"offset": 292736,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.glu": {
+						"offset": 294272,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.v": {
+						"offset": 295808,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.23.weights": {
+						"offset": 296192,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.23.edge": {
+						"offset": 305408,
+						"length": 384,
+						"shape": [16, 24]
+					},
+					"layer.23.heads": {
+						"offset": 305792,
+						"length": 384,
+						"shape": [16, 24, 1]
+					},
+					"layer.23.kernel": {
+						"offset": 306176,
+						"length": 496,
+						"shape": [16, 31]
+					},
+					"layer.23.channels": {
+						"offset": 306672,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.23.batchNorm": {
+						"offset": 306688,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.swish": {
+						"offset": 308224,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.out": {
+						"offset": 309760,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.attn.x": {
+						"offset": 311296,
+						"length": 1536,
+						"shape": [24, 64]
+					},
+					"layer.23.attn.scores": {
+						"offset": 312832,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.23.attn.weights": {
+						"offset": 322048,
+						"length": 9216,
+						"shape": [16, 24, 24]
+					},
+					"layer.23.attn.out": {
+						"offset": 331264,
+						"length": 1536,
+						"shape": [24, 64]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_conformer.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "cpu",
+		"dtype": "float32",
+		"modelingSha256": "791d19879014102501be3760f0a3d7ecf9d7335333f662af8e69da27f0125a1a",
+		"input": "LibriSpeech dev-clean 1272-135031-0012 (CC BY 4.0), static/architectures/speech-librispeech-1272-135031-0012.flac",
+		"inputSha256": "2da8a3d5a915be58a29cae9520c94e96395619f1dd3a0968486c9d5154b77b12",
+		"transcript": "WHERE IS MY BROTHER NOW",
+		"tokens": "each frame’s CTC argmax: a letter, · for the blank, ␣ for the word break",
+		"x": "conv module input after its LayerNorm",
+		"out": "conv module output (pointwise_conv2), before the residual add"
+	},
+	"validation": {
+		"maxQkRecomputeError": 0.0,
+		"maxAttnWeightsRecomputeError": 0.0,
+		"maxAttnHeadsRecomputeError": 0.0,
+		"maxAttnOutRecomputeError": 0.0,
+		"maxConvRecomputeError": 5.72e-6,
+		"maxGluRecomputeError": 0.0,
+		"maxBatchNormRecomputeError": 9.54e-7,
+		"maxSwishRecomputeError": 1.43e-6,
+		"maxModuleRecomputeError": 0.0,
+		"maxWindowRecomputeError": 3.81e-6
+	},
+	"extras": {
+		"weights": "per kept channel: the depthwise conv’s 24 × 24 block of its banded Toeplitz matrix over the window",
+		"v": "GLU output of the kept channels: what the depthwise conv mixes",
+		"heads": "depthwise conv output of the kept channels (recorded)",
+		"edge": "per kept channel and row: what taps reaching frames outside the window add; weights @ v + edge = heads",
+		"kernel": "the kept channels’ 31 depthwise taps",
+		"channels": "which of the 1024 channels are kept: the 16 with the largest kernel L2 norm",
+		"pointwise": "pointwise_conv1 output, first P of 2048 (value half)",
+		"glu": "GLU output, first P of 1024",
+		"batchNorm": "BatchNorm output, first P",
+		"swish": "Swish output, first P",
+		"attn.x": "self-attention input after its LayerNorm, first P",
+		"attn.scores": "the block’s self-attention logits, window rows and columns",
+		"attn.weights": "its softmax weights over the window; each row’s remaining weight falls on the other frames",
+		"attn.out": "self-attention output (linear_out), first P"
+	}
+}

@@ -1,0 +1,1793 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "sparse",
+	"source": "model",
+	"model": {
+		"id": "google/bigbird-roberta-base",
+		"name": "BigBird-RoBERTa base",
+		"revision": "5a145f7852cba9bd431386a58137bf8a29903b90",
+		"url": "https://huggingface.co/google/bigbird-roberta-base/tree/5a145f7852cba9bd431386a58137bf8a29903b90",
+		"license": "apache-2.0",
+		"numLayers": 12,
+		"hiddenSize": 768,
+		"attentionHeads": 12,
+		"keyValueHeads": 12,
+		"headDim": 64,
+		"scale": 0.125,
+		"sequenceLength": 1024,
+		"blockSize": 64,
+		"blocks": 16,
+		"randomBlocks": 3,
+		"windowBlocks": 3,
+		"globalBlocks": [0, 15],
+		"positions": "learned absolute embeddings, added before layer 1",
+		"mask": "block sparse: global, window and random key blocks; bidirectional",
+		"sources": {
+			"alice": "Lewis Carroll, Alice’s Adventures in Wonderland (1865), chapter I; Project Gutenberg eBook #11, public domain",
+			"holmes": "Arthur Conan Doyle, The Adventures of Sherlock Holmes (1892), “A Scandal in Bohemia”; Project Gutenberg eBook #1661, public domain"
+		}
+	},
+	"layers": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "alice",
+			"title": "Alice · Down the Rabbit-Hole",
+			"prompt": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, <unk> and what is the use of a book, <unk> thought Alice <unk> without pictures or conversations? <unk> So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her. There was nothing so very remarkable in that; nor did Alice think it so very much out of the way to hear the Rabbit say to itself, <unk> Oh dear! Oh dear! I shall be late! <unk> (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually took a watch out of its waistcoat-pocket, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge. In another moment down went Alice after it, never once considering how in the world she was to get out again. The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice had not a moment to think about stopping herself before she found herself falling down a very deep well. Either the well was very deep, or she fell very slowly, for she had plenty of time as she went down to look about her and to wonder what was going to happen next. First, she tried to look down and make out what she was coming to, but it was too dark to see anything; then she looked at the sides of the well, and noticed that they were filled with cupboards and book-shelves; here and there she saw maps and pictures hung upon pegs. She took down a jar from one of the shelves as she passed; it was labelled <unk> ORANGE MARMALADE <unk> , but to her great disappointment it was empty: she did not like to drop the jar for fear of killing somebody underneath, so managed to put it into one of the cupboards as she fell past it. <unk> Well! <unk> thought Alice to herself, <unk> after such a fall as this, I shall think nothing of tumbling down stairs! How brave they <unk> ll all think me at home! Why, I wouldn <unk> t say anything about it, even if I fell off the top of the house! <unk> (Which was very likely true.) Down, down, down. Would the fall never come to an end? <unk> I wonder how many miles I <unk> ve fallen by this time? <unk> she said aloud. <unk> I must be getting somewhere near the centre of the earth. Let me see: that would be four thousand miles down, I think <unk> (for, you see, Alice had learnt several things of this sort in her lessons in the schoolroom, and though this was not a very good opportunity for showing off her knowledge, as there was no one to listen to her, still it was good practice to say it over) <unk> yes, that <unk> s about the right distance <unk> but then I wonder what Latitude or Longitude I <unk> ve got to? <unk> (Alice had no idea what Latitude was, or Longitude either, but thought they were nice grand words to say.) Presently she began again. <unk> I wonder if I shall fall right through the earth! How funny it <unk> ll seem to come out among the people that walk with their heads downward! The Antipathies, I think <unk> (she was rather glad there was no one listening, this time, as it didn <unk> t sound at all the right word) <unk> but I shall have to ask them what the name of the country is, you know. Please, Ma <unk> am, is this New Zealand or Australia? <unk> (and she tried to curtsey as she spoke <unk> fancy curtseying as you <unk> re falling through the air! Do you think you could manage it?) <unk> And what an ignorant little girl she <unk> ll think me for asking! No, it <unk> ll never do to ask: perhaps I shall see it written up somewhere. <unk> Down, down, down. There was nothing else to do, so Alice soon began talking again. <unk> Dinah <unk> ll miss me very much to-night, I should think! <unk> (Dinah was the cat.) <unk> I hope they <unk> ll remember her saucer of milk at tea",
+			"tokens": [
+				{
+					"id": 1853,
+					"text": " once"
+				},
+				{
+					"id": 3125,
+					"text": " hot"
+				},
+				{
+					"id": 982,
+					"text": " much"
+				},
+				{
+					"id": 2443,
+					"text": " watch"
+				},
+				{
+					"id": 2074,
+					"text": " across"
+				},
+				{
+					"id": 889,
+					"text": " then"
+				},
+				{
+					"id": 1407,
+					"text": " next"
+				},
+				{
+					"id": 1476,
+					"text": " She"
+				},
+				{
+					"id": 3315,
+					"text": " fell"
+				},
+				{
+					"id": 2257,
+					"text": " house"
+				},
+				{
+					"id": 662,
+					"text": " would"
+				},
+				{
+					"id": 726,
+					"text": " over"
+				},
+				{
+					"id": 4341,
+					"text": " wonder"
+				},
+				{
+					"id": 2337,
+					"text": " shall"
+				},
+				{
+					"id": 993,
+					"text": " think"
+				},
+				{
+					"id": 2152,
+					"text": " miss"
+				}
+			],
+			"file": {
+				"file": "alice.f32",
+				"bytes": 3489856,
+				"sha256": "8fa5016d5a1e62232e96d20478785b5cc7f3a4ef640aab230300306aad5d23d9",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.0.q": {
+						"offset": 1024,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.0.k": {
+						"offset": 13312,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.0.v": {
+						"offset": 25600,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.0.scores": {
+						"offset": 37888,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.mask": {
+						"offset": 40960,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.weights": {
+						"offset": 44032,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.heads": {
+						"offset": 47104,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.0.out": {
+						"offset": 59392,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.0.blockKind": {
+						"offset": 60416,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.blockCount": {
+						"offset": 63488,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.blockWeights": {
+						"offset": 66560,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.blockMass": {
+						"offset": 69632,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.x": {
+						"offset": 72704,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.1.q": {
+						"offset": 73728,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.1.k": {
+						"offset": 86016,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.1.v": {
+						"offset": 98304,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.1.scores": {
+						"offset": 110592,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.mask": {
+						"offset": 113664,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.weights": {
+						"offset": 116736,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.heads": {
+						"offset": 119808,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.1.out": {
+						"offset": 132096,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.1.blockKind": {
+						"offset": 133120,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.blockCount": {
+						"offset": 136192,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.blockWeights": {
+						"offset": 139264,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.blockMass": {
+						"offset": 142336,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.x": {
+						"offset": 145408,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.2.q": {
+						"offset": 146432,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.2.k": {
+						"offset": 158720,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.2.v": {
+						"offset": 171008,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.2.scores": {
+						"offset": 183296,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.mask": {
+						"offset": 186368,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.weights": {
+						"offset": 189440,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.heads": {
+						"offset": 192512,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.2.out": {
+						"offset": 204800,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.2.blockKind": {
+						"offset": 205824,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.blockCount": {
+						"offset": 208896,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.blockWeights": {
+						"offset": 211968,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.blockMass": {
+						"offset": 215040,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.x": {
+						"offset": 218112,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.3.q": {
+						"offset": 219136,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.3.k": {
+						"offset": 231424,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.3.v": {
+						"offset": 243712,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.3.scores": {
+						"offset": 256000,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.mask": {
+						"offset": 259072,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.weights": {
+						"offset": 262144,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.heads": {
+						"offset": 265216,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.3.out": {
+						"offset": 277504,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.3.blockKind": {
+						"offset": 278528,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.blockCount": {
+						"offset": 281600,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.blockWeights": {
+						"offset": 284672,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.blockMass": {
+						"offset": 287744,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.x": {
+						"offset": 290816,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.4.q": {
+						"offset": 291840,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.4.k": {
+						"offset": 304128,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.4.v": {
+						"offset": 316416,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.4.scores": {
+						"offset": 328704,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.mask": {
+						"offset": 331776,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.weights": {
+						"offset": 334848,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.heads": {
+						"offset": 337920,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.4.out": {
+						"offset": 350208,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.4.blockKind": {
+						"offset": 351232,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.blockCount": {
+						"offset": 354304,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.blockWeights": {
+						"offset": 357376,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.blockMass": {
+						"offset": 360448,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.x": {
+						"offset": 363520,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.5.q": {
+						"offset": 364544,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.5.k": {
+						"offset": 376832,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.5.v": {
+						"offset": 389120,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.5.scores": {
+						"offset": 401408,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.mask": {
+						"offset": 404480,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.weights": {
+						"offset": 407552,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.heads": {
+						"offset": 410624,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.5.out": {
+						"offset": 422912,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.5.blockKind": {
+						"offset": 423936,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.blockCount": {
+						"offset": 427008,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.blockWeights": {
+						"offset": 430080,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.blockMass": {
+						"offset": 433152,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.x": {
+						"offset": 436224,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.6.q": {
+						"offset": 437248,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.6.k": {
+						"offset": 449536,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.6.v": {
+						"offset": 461824,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.6.scores": {
+						"offset": 474112,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.mask": {
+						"offset": 477184,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.weights": {
+						"offset": 480256,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.heads": {
+						"offset": 483328,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.6.out": {
+						"offset": 495616,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.6.blockKind": {
+						"offset": 496640,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.blockCount": {
+						"offset": 499712,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.blockWeights": {
+						"offset": 502784,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.blockMass": {
+						"offset": 505856,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.x": {
+						"offset": 508928,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.7.q": {
+						"offset": 509952,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.7.k": {
+						"offset": 522240,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.7.v": {
+						"offset": 534528,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.7.scores": {
+						"offset": 546816,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.mask": {
+						"offset": 549888,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.weights": {
+						"offset": 552960,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.heads": {
+						"offset": 556032,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.7.out": {
+						"offset": 568320,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.7.blockKind": {
+						"offset": 569344,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.blockCount": {
+						"offset": 572416,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.blockWeights": {
+						"offset": 575488,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.blockMass": {
+						"offset": 578560,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.x": {
+						"offset": 581632,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.8.q": {
+						"offset": 582656,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.8.k": {
+						"offset": 594944,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.8.v": {
+						"offset": 607232,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.8.scores": {
+						"offset": 619520,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.mask": {
+						"offset": 622592,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.weights": {
+						"offset": 625664,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.heads": {
+						"offset": 628736,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.8.out": {
+						"offset": 641024,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.8.blockKind": {
+						"offset": 642048,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.blockCount": {
+						"offset": 645120,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.blockWeights": {
+						"offset": 648192,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.blockMass": {
+						"offset": 651264,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.x": {
+						"offset": 654336,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.9.q": {
+						"offset": 655360,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.9.k": {
+						"offset": 667648,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.9.v": {
+						"offset": 679936,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.9.scores": {
+						"offset": 692224,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.mask": {
+						"offset": 695296,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.weights": {
+						"offset": 698368,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.heads": {
+						"offset": 701440,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.9.out": {
+						"offset": 713728,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.9.blockKind": {
+						"offset": 714752,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.blockCount": {
+						"offset": 717824,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.blockWeights": {
+						"offset": 720896,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.blockMass": {
+						"offset": 723968,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.x": {
+						"offset": 727040,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.10.q": {
+						"offset": 728064,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.10.k": {
+						"offset": 740352,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.10.v": {
+						"offset": 752640,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.10.scores": {
+						"offset": 764928,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.mask": {
+						"offset": 768000,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.weights": {
+						"offset": 771072,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.heads": {
+						"offset": 774144,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.10.out": {
+						"offset": 786432,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.10.blockKind": {
+						"offset": 787456,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.blockCount": {
+						"offset": 790528,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.blockWeights": {
+						"offset": 793600,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.blockMass": {
+						"offset": 796672,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.x": {
+						"offset": 799744,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.11.q": {
+						"offset": 800768,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.11.k": {
+						"offset": 813056,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.11.v": {
+						"offset": 825344,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.11.scores": {
+						"offset": 837632,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.mask": {
+						"offset": 840704,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.weights": {
+						"offset": 843776,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.heads": {
+						"offset": 846848,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.11.out": {
+						"offset": 859136,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.11.blockKind": {
+						"offset": 860160,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.blockCount": {
+						"offset": 863232,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.blockWeights": {
+						"offset": 866304,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.blockMass": {
+						"offset": 869376,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"positions": {
+						"offset": 872448,
+						"length": 16,
+						"shape": [16]
+					}
+				}
+			}
+		},
+		{
+			"id": "holmes",
+			"title": "Holmes · A Scandal in Bohemia",
+			"prompt": "To Sherlock Holmes she is always the woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in a false position. He never spoke of the softer passions, save with a gibe and a sneer. They were admirable things for the observer <unk> excellent for drawing the veil from men <unk> s motives and actions. But for the trained reasoner to admit such intrusions into his own delicate and finely adjusted temperament was to introduce a distracting factor which might throw a doubt upon all his mental results. Grit in a sensitive instrument, or a crack in one of his own high-power lenses, would not be more disturbing than a strong emotion in a nature such as his. And yet there was but one woman to him, and that woman was the late Irene Adler, of dubious and questionable memory. I had seen little of Holmes lately. My marriage had drifted us away from each other. My own complete happiness, and the home-centred interests which rise up around the man who first finds himself master of his own establishment, were sufficient to absorb all my attention, while Holmes, who loathed every form of society with his whole Bohemian soul, remained in our lodgings in Baker Street, buried among his old books, and alternating from week to week between cocaine and ambition, the drowsiness of the drug, and the fierce energy of his own keen nature. He was still, as ever, deeply attracted by the study of crime, and occupied his immense faculties and extraordinary powers of observation in following out those clues, and clearing up those mysteries which had been abandoned as hopeless by the official police. From time to time I heard some vague account of his doings: of his summons to Odessa in the case of the Trepoff murder, of his clearing up of the singular tragedy of the Atkinson brothers at Trincomalee, and finally of the mission which he had accomplished so delicately and successfully for the reigning family of Holland. Beyond these signs of his activity, however, which I merely shared with all the readers of the daily press, I knew little of my former friend and companion. One night <unk> it was on the twentieth of March, 1888 <unk> I was returning from a journey to a patient (for I had now returned to civil practice), when my way led me through Baker Street. As I passed the well-remembered door, which must always be associated in my mind with my wooing, and with the dark incidents of the Study in Scarlet, I was seized with a keen desire to see Holmes again, and to know how he was employing his extraordinary powers. His rooms were brilliantly lit, and, even as I looked up, I saw his tall, spare figure pass twice in a dark silhouette against the blind. He was pacing the room swiftly, eagerly, with his head sunk upon his chest and his hands clasped behind him. To me, who knew his every mood and habit, his attitude and manner told their own story. He was at work again. He had risen out of his drug-created dreams and was hot upon the scent of some new problem. I rang the bell and was shown up to the chamber which had formerly been in part my own. His manner was not effusive. It seldom was; but he was glad, I think, to see me. With hardly a word spoken, but with a kindly eye, he waved me to an armchair, threw across his case of cigars, and indicated a spirit case and a gasogene in the corner. Then he stood before the fire and looked me over in his singular introspective fashion. <unk> Wedlock suits you, <unk> he remarked. <unk> I think, Watson, that you have put on seven and a half pounds since I saw you. <unk>  <unk> Seven! <unk> I answered. <unk> Indeed, I should have thought a little more. Just a trifle more, I fancy, Watson. And in practice again, I observe. You did not tell me that you intended to go into harness. <unk>  <unk> Then, how do you know? <unk>  <unk> I see it, I deduce it. How do I know that you have been getting yourself very wet lately, and that you have a most clumsy and careless servant girl? <unk>  <unk> My dear Holmes, <unk> said I, <unk> this is too much. You would certainly have been burned, had you lived a few centuries ago. It is true that I had a country walk on Thursday and came home in a dreadful mess, but as I have changed my clothes I can <unk> t imagine how you deduce it.",
+			"tokens": [
+				{
+					"id": 3052,
+					"text": " eyes"
+				},
+				{
+					"id": 2919,
+					"text": " perfect"
+				},
+				{
+					"id": 988,
+					"text": " But"
+				},
+				{
+					"id": 2014,
+					"text": " strong"
+				},
+				{
+					"id": 5454,
+					"text": " interests"
+				},
+				{
+					"id": 1386,
+					"text": " week"
+				},
+				{
+					"id": 10059,
+					"text": " abandoned"
+				},
+				{
+					"id": 13114,
+					"text": " accomplished"
+				},
+				{
+					"id": 5928,
+					"text": " patient"
+				},
+				{
+					"id": 867,
+					"text": " see"
+				},
+				{
+					"id": 566,
+					"text": " his"
+				},
+				{
+					"id": 363,
+					"text": " the"
+				},
+				{
+					"id": 4538,
+					"text": " spirit"
+				},
+				{
+					"id": 9474,
+					"text": " answered"
+				},
+				{
+					"id": 4749,
+					"text": " ded"
+				},
+				{
+					"id": 2185,
+					"text": " ago"
+				}
+			],
+			"file": {
+				"file": "holmes.f32",
+				"bytes": 3489856,
+				"sha256": "9429707667efa07b7e7fd31ac243b27a7a86890990cb44c5e3661f07c235b9d2",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.0.q": {
+						"offset": 1024,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.0.k": {
+						"offset": 13312,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.0.v": {
+						"offset": 25600,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.0.scores": {
+						"offset": 37888,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.mask": {
+						"offset": 40960,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.weights": {
+						"offset": 44032,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.heads": {
+						"offset": 47104,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.0.out": {
+						"offset": 59392,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.0.blockKind": {
+						"offset": 60416,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.blockCount": {
+						"offset": 63488,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.blockWeights": {
+						"offset": 66560,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.0.blockMass": {
+						"offset": 69632,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.x": {
+						"offset": 72704,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.1.q": {
+						"offset": 73728,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.1.k": {
+						"offset": 86016,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.1.v": {
+						"offset": 98304,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.1.scores": {
+						"offset": 110592,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.mask": {
+						"offset": 113664,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.weights": {
+						"offset": 116736,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.heads": {
+						"offset": 119808,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.1.out": {
+						"offset": 132096,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.1.blockKind": {
+						"offset": 133120,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.blockCount": {
+						"offset": 136192,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.blockWeights": {
+						"offset": 139264,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.1.blockMass": {
+						"offset": 142336,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.x": {
+						"offset": 145408,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.2.q": {
+						"offset": 146432,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.2.k": {
+						"offset": 158720,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.2.v": {
+						"offset": 171008,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.2.scores": {
+						"offset": 183296,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.mask": {
+						"offset": 186368,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.weights": {
+						"offset": 189440,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.heads": {
+						"offset": 192512,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.2.out": {
+						"offset": 204800,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.2.blockKind": {
+						"offset": 205824,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.blockCount": {
+						"offset": 208896,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.blockWeights": {
+						"offset": 211968,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.2.blockMass": {
+						"offset": 215040,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.x": {
+						"offset": 218112,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.3.q": {
+						"offset": 219136,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.3.k": {
+						"offset": 231424,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.3.v": {
+						"offset": 243712,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.3.scores": {
+						"offset": 256000,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.mask": {
+						"offset": 259072,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.weights": {
+						"offset": 262144,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.heads": {
+						"offset": 265216,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.3.out": {
+						"offset": 277504,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.3.blockKind": {
+						"offset": 278528,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.blockCount": {
+						"offset": 281600,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.blockWeights": {
+						"offset": 284672,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.3.blockMass": {
+						"offset": 287744,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.x": {
+						"offset": 290816,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.4.q": {
+						"offset": 291840,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.4.k": {
+						"offset": 304128,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.4.v": {
+						"offset": 316416,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.4.scores": {
+						"offset": 328704,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.mask": {
+						"offset": 331776,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.weights": {
+						"offset": 334848,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.heads": {
+						"offset": 337920,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.4.out": {
+						"offset": 350208,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.4.blockKind": {
+						"offset": 351232,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.blockCount": {
+						"offset": 354304,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.blockWeights": {
+						"offset": 357376,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.4.blockMass": {
+						"offset": 360448,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.x": {
+						"offset": 363520,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.5.q": {
+						"offset": 364544,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.5.k": {
+						"offset": 376832,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.5.v": {
+						"offset": 389120,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.5.scores": {
+						"offset": 401408,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.mask": {
+						"offset": 404480,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.weights": {
+						"offset": 407552,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.heads": {
+						"offset": 410624,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.5.out": {
+						"offset": 422912,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.5.blockKind": {
+						"offset": 423936,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.blockCount": {
+						"offset": 427008,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.blockWeights": {
+						"offset": 430080,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.5.blockMass": {
+						"offset": 433152,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.x": {
+						"offset": 436224,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.6.q": {
+						"offset": 437248,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.6.k": {
+						"offset": 449536,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.6.v": {
+						"offset": 461824,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.6.scores": {
+						"offset": 474112,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.mask": {
+						"offset": 477184,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.weights": {
+						"offset": 480256,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.heads": {
+						"offset": 483328,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.6.out": {
+						"offset": 495616,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.6.blockKind": {
+						"offset": 496640,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.blockCount": {
+						"offset": 499712,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.blockWeights": {
+						"offset": 502784,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.6.blockMass": {
+						"offset": 505856,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.x": {
+						"offset": 508928,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.7.q": {
+						"offset": 509952,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.7.k": {
+						"offset": 522240,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.7.v": {
+						"offset": 534528,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.7.scores": {
+						"offset": 546816,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.mask": {
+						"offset": 549888,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.weights": {
+						"offset": 552960,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.heads": {
+						"offset": 556032,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.7.out": {
+						"offset": 568320,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.7.blockKind": {
+						"offset": 569344,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.blockCount": {
+						"offset": 572416,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.blockWeights": {
+						"offset": 575488,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.7.blockMass": {
+						"offset": 578560,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.x": {
+						"offset": 581632,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.8.q": {
+						"offset": 582656,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.8.k": {
+						"offset": 594944,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.8.v": {
+						"offset": 607232,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.8.scores": {
+						"offset": 619520,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.mask": {
+						"offset": 622592,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.weights": {
+						"offset": 625664,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.heads": {
+						"offset": 628736,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.8.out": {
+						"offset": 641024,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.8.blockKind": {
+						"offset": 642048,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.blockCount": {
+						"offset": 645120,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.blockWeights": {
+						"offset": 648192,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.8.blockMass": {
+						"offset": 651264,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.x": {
+						"offset": 654336,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.9.q": {
+						"offset": 655360,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.9.k": {
+						"offset": 667648,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.9.v": {
+						"offset": 679936,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.9.scores": {
+						"offset": 692224,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.mask": {
+						"offset": 695296,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.weights": {
+						"offset": 698368,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.heads": {
+						"offset": 701440,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.9.out": {
+						"offset": 713728,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.9.blockKind": {
+						"offset": 714752,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.blockCount": {
+						"offset": 717824,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.blockWeights": {
+						"offset": 720896,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.9.blockMass": {
+						"offset": 723968,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.x": {
+						"offset": 727040,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.10.q": {
+						"offset": 728064,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.10.k": {
+						"offset": 740352,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.10.v": {
+						"offset": 752640,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.10.scores": {
+						"offset": 764928,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.mask": {
+						"offset": 768000,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.weights": {
+						"offset": 771072,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.heads": {
+						"offset": 774144,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.10.out": {
+						"offset": 786432,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.10.blockKind": {
+						"offset": 787456,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.blockCount": {
+						"offset": 790528,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.blockWeights": {
+						"offset": 793600,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.10.blockMass": {
+						"offset": 796672,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.x": {
+						"offset": 799744,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.11.q": {
+						"offset": 800768,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.11.k": {
+						"offset": 813056,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.11.v": {
+						"offset": 825344,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.11.scores": {
+						"offset": 837632,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.mask": {
+						"offset": 840704,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.weights": {
+						"offset": 843776,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.heads": {
+						"offset": 846848,
+						"length": 12288,
+						"shape": [12, 16, 64]
+					},
+					"layer.11.out": {
+						"offset": 859136,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.11.blockKind": {
+						"offset": 860160,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.blockCount": {
+						"offset": 863232,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.blockWeights": {
+						"offset": 866304,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"layer.11.blockMass": {
+						"offset": 869376,
+						"length": 3072,
+						"shape": [12, 16, 16]
+					},
+					"positions": {
+						"offset": 872448,
+						"length": 16,
+						"shape": [16]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_sparse.py",
+		"passages": "scripts/attention/sparse_passages.json (underscores marking italics removed)",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"sentencepiece": "0.2.2",
+		"device": "cpu",
+		"dtype": "float32; the effective weights in float64",
+		"attention": "block_sparse",
+		"weightsSha256": "1d079993d1bb36e3ac26de793f85b6bdfd25b170e8af4acee23e48b7fa2a31e6",
+		"modelingSha256": "c827cdaa578963e37980703d4a93b729cc8b5d43503c1e9fb17fd9cb9d726fdf",
+		"randomBlocks": "transformers skips the random draw in eval mode (every slot becomes block 0). The block-sparse modules run with their training flag set, so the blocks are drawn as the original BigBird draws them, numpy seed = layer index; those modules have no dropout and the rest of the model is in eval mode.",
+		"repeatedBlocks": "On the 1,024-token plan a random block can be the last block, which is already global; its keys then enter the softmax twice and the weights count both copies. Rows affected (all layers and heads, of 2304 block rows): {'alice': 435, 'holmes': 435}",
+		"shownRows": "one token per 64-token block: the first whole word at offset 24 or later in the block",
+		"x": "input to the attention sublayer (BERT-style post-norm: the previous layer output)",
+		"out": "attention.output.dense(heads), before the residual add and LayerNorm"
+	},
+	"validation": {
+		"maxWeightRowSumError": 1.11e-15,
+		"maxHeadsRecomputeError": 8.92e-6,
+		"maxOutRecomputeError": 0.0,
+		"maxTransformersWeightOutsidePattern": 0.0,
+		"maxWeightsVsTransformersError": 2.62e-6
+	},
+	"extras": {
+		"positions": "[S] the real sequence position of each shown row (S = 16, one per block)",
+		"mask": "[H, S, S] 1 where the shown query reads the shown key; it differs per head (random blocks)",
+		"blockKind": "[H, 16, 16] for every query block × key block, bits: 1 window, 2 global, 4 random",
+		"blockCount": "[H, 16, 16] how many times the query block gathers the key block (0, 1 or 2)",
+		"blockMass": "[H, 16, 16] attention a query block puts on a key block, summed over the key block and averaged over the 64 queries, from all 1,024 rows",
+		"blockWeights": "[H, S, 16] weight each drawn query puts on each key block (its 64 keys summed); each row sums to 1. The head card draws this block-level matrix"
+	}
+}
