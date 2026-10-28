@@ -1,0 +1,1202 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "mqa",
+	"source": "model",
+	"model": {
+		"id": "bigcode/gpt_bigcode-santacoder",
+		"name": "SantaCoder (1.1B)",
+		"revision": "291931872cae83498cf984b16319f47f5e9e7a07",
+		"url": "https://huggingface.co/bigcode/gpt_bigcode-santacoder/tree/291931872cae83498cf984b16319f47f5e9e7a07",
+		"license": "bigcode-openrail-m",
+		"numLayers": 24,
+		"hiddenSize": 2048,
+		"attentionHeads": 16,
+		"keyValueHeads": 1,
+		"headDim": 128,
+		"scale": 0.08838834764831843,
+		"positions": "learned absolute embeddings, added before block 1",
+		"mask": "causal"
+	},
+	"layers": [0, 3, 6, 9, 12, 15, 18, 21],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "arguments",
+			"title": "Function arguments",
+			"prompt": "def area(width, height): return width *",
+			"tokens": [
+				{
+					"id": 563,
+					"text": "def"
+				},
+				{
+					"id": 6427,
+					"text": " area"
+				},
+				{
+					"id": 7,
+					"text": "("
+				},
+				{
+					"id": 1677,
+					"text": "width"
+				},
+				{
+					"id": 11,
+					"text": ","
+				},
+				{
+					"id": 2299,
+					"text": " height"
+				},
+				{
+					"id": 399,
+					"text": "):"
+				},
+				{
+					"id": 363,
+					"text": " return"
+				},
+				{
+					"id": 2071,
+					"text": " width"
+				},
+				{
+					"id": 296,
+					"text": " *"
+				}
+			],
+			"file": {
+				"file": "arguments.f32",
+				"bytes": 1536000,
+				"sha256": "052071988581deccf1f0558fd7b5e55209b8c696db593bcd731f736c76838dcd",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.0.q": {
+						"offset": 640,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.0.k": {
+						"offset": 21120,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.0.v": {
+						"offset": 22400,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.0.scores": {
+						"offset": 23680,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.0.weights": {
+						"offset": 25280,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.0.heads": {
+						"offset": 26880,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.0.out": {
+						"offset": 47360,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.3.x": {
+						"offset": 48000,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.3.q": {
+						"offset": 48640,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.3.k": {
+						"offset": 69120,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.3.v": {
+						"offset": 70400,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.3.scores": {
+						"offset": 71680,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.3.weights": {
+						"offset": 73280,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.3.heads": {
+						"offset": 74880,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.3.out": {
+						"offset": 95360,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.6.x": {
+						"offset": 96000,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.6.q": {
+						"offset": 96640,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.6.k": {
+						"offset": 117120,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.6.v": {
+						"offset": 118400,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.6.scores": {
+						"offset": 119680,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.6.weights": {
+						"offset": 121280,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.6.heads": {
+						"offset": 122880,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.6.out": {
+						"offset": 143360,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.9.x": {
+						"offset": 144000,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.9.q": {
+						"offset": 144640,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.9.k": {
+						"offset": 165120,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.9.v": {
+						"offset": 166400,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.9.scores": {
+						"offset": 167680,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.9.weights": {
+						"offset": 169280,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.9.heads": {
+						"offset": 170880,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.9.out": {
+						"offset": 191360,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.12.x": {
+						"offset": 192000,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.12.q": {
+						"offset": 192640,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.12.k": {
+						"offset": 213120,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.12.v": {
+						"offset": 214400,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.12.scores": {
+						"offset": 215680,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.12.weights": {
+						"offset": 217280,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.12.heads": {
+						"offset": 218880,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.12.out": {
+						"offset": 239360,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.15.x": {
+						"offset": 240000,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.15.q": {
+						"offset": 240640,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.15.k": {
+						"offset": 261120,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.15.v": {
+						"offset": 262400,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.15.scores": {
+						"offset": 263680,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.15.weights": {
+						"offset": 265280,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.15.heads": {
+						"offset": 266880,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.15.out": {
+						"offset": 287360,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.18.x": {
+						"offset": 288000,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.18.q": {
+						"offset": 288640,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.18.k": {
+						"offset": 309120,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.18.v": {
+						"offset": 310400,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.18.scores": {
+						"offset": 311680,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.18.weights": {
+						"offset": 313280,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.18.heads": {
+						"offset": 314880,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.18.out": {
+						"offset": 335360,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.21.x": {
+						"offset": 336000,
+						"length": 640,
+						"shape": [10, 64]
+					},
+					"layer.21.q": {
+						"offset": 336640,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.21.k": {
+						"offset": 357120,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.21.v": {
+						"offset": 358400,
+						"length": 1280,
+						"shape": [1, 10, 128]
+					},
+					"layer.21.scores": {
+						"offset": 359680,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.21.weights": {
+						"offset": 361280,
+						"length": 1600,
+						"shape": [16, 10, 10]
+					},
+					"layer.21.heads": {
+						"offset": 362880,
+						"length": 20480,
+						"shape": [16, 10, 128]
+					},
+					"layer.21.out": {
+						"offset": 383360,
+						"length": 640,
+						"shape": [10, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "comprehension",
+			"title": "Comprehension variable",
+			"prompt": "names = [user.name for user in users if user.",
+			"tokens": [
+				{
+					"id": 2028,
+					"text": "names"
+				},
+				{
+					"id": 256,
+					"text": " ="
+				},
+				{
+					"id": 436,
+					"text": " ["
+				},
+				{
+					"id": 789,
+					"text": "user"
+				},
+				{
+					"id": 13,
+					"text": "."
+				},
+				{
+					"id": 433,
+					"text": "name"
+				},
+				{
+					"id": 408,
+					"text": " for"
+				},
+				{
+					"id": 931,
+					"text": " user"
+				},
+				{
+					"id": 319,
+					"text": " in"
+				},
+				{
+					"id": 4658,
+					"text": " users"
+				},
+				{
+					"id": 356,
+					"text": " if"
+				},
+				{
+					"id": 931,
+					"text": " user"
+				},
+				{
+					"id": 13,
+					"text": "."
+				}
+			],
+			"file": {
+				"file": "comprehension.f32",
+				"bytes": 2036736,
+				"sha256": "a85e97430da3aca23ac41709a07f6faf57b5f4e8146bbbd9e7204f92f889c9b9",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.0.q": {
+						"offset": 832,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.0.k": {
+						"offset": 27456,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.0.v": {
+						"offset": 29120,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.0.scores": {
+						"offset": 30784,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.0.weights": {
+						"offset": 33488,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.0.heads": {
+						"offset": 36192,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.0.out": {
+						"offset": 62816,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.3.x": {
+						"offset": 63648,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.3.q": {
+						"offset": 64480,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.3.k": {
+						"offset": 91104,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.3.v": {
+						"offset": 92768,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.3.scores": {
+						"offset": 94432,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.3.weights": {
+						"offset": 97136,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.3.heads": {
+						"offset": 99840,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.3.out": {
+						"offset": 126464,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.6.x": {
+						"offset": 127296,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.6.q": {
+						"offset": 128128,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.6.k": {
+						"offset": 154752,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.6.v": {
+						"offset": 156416,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.6.scores": {
+						"offset": 158080,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.6.weights": {
+						"offset": 160784,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.6.heads": {
+						"offset": 163488,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.6.out": {
+						"offset": 190112,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.9.x": {
+						"offset": 190944,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.9.q": {
+						"offset": 191776,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.9.k": {
+						"offset": 218400,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.9.v": {
+						"offset": 220064,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.9.scores": {
+						"offset": 221728,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.9.weights": {
+						"offset": 224432,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.9.heads": {
+						"offset": 227136,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.9.out": {
+						"offset": 253760,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.12.x": {
+						"offset": 254592,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.12.q": {
+						"offset": 255424,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.12.k": {
+						"offset": 282048,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.12.v": {
+						"offset": 283712,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.12.scores": {
+						"offset": 285376,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.12.weights": {
+						"offset": 288080,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.12.heads": {
+						"offset": 290784,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.12.out": {
+						"offset": 317408,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.15.x": {
+						"offset": 318240,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.15.q": {
+						"offset": 319072,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.15.k": {
+						"offset": 345696,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.15.v": {
+						"offset": 347360,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.15.scores": {
+						"offset": 349024,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.15.weights": {
+						"offset": 351728,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.15.heads": {
+						"offset": 354432,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.15.out": {
+						"offset": 381056,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.18.x": {
+						"offset": 381888,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.18.q": {
+						"offset": 382720,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.18.k": {
+						"offset": 409344,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.18.v": {
+						"offset": 411008,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.18.scores": {
+						"offset": 412672,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.18.weights": {
+						"offset": 415376,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.18.heads": {
+						"offset": 418080,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.18.out": {
+						"offset": 444704,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.21.x": {
+						"offset": 445536,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.21.q": {
+						"offset": 446368,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.21.k": {
+						"offset": 472992,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.21.v": {
+						"offset": 474656,
+						"length": 1664,
+						"shape": [1, 13, 128]
+					},
+					"layer.21.scores": {
+						"offset": 476320,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.21.weights": {
+						"offset": 479024,
+						"length": 2704,
+						"shape": [16, 13, 13]
+					},
+					"layer.21.heads": {
+						"offset": 481728,
+						"length": 26624,
+						"shape": [16, 13, 128]
+					},
+					"layer.21.out": {
+						"offset": 508352,
+						"length": 832,
+						"shape": [13, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "callback",
+			"title": "JavaScript callback",
+			"prompt": "const total = items.reduce((sum, item) => sum + item.",
+			"tokens": [
+				{
+					"id": 940,
+					"text": "const"
+				},
+				{
+					"id": 2564,
+					"text": " total"
+				},
+				{
+					"id": 256,
+					"text": " ="
+				},
+				{
+					"id": 3191,
+					"text": " items"
+				},
+				{
+					"id": 13,
+					"text": "."
+				},
+				{
+					"id": 5651,
+					"text": "reduce"
+				},
+				{
+					"id": 1059,
+					"text": "(("
+				},
+				{
+					"id": 1433,
+					"text": "sum"
+				},
+				{
+					"id": 11,
+					"text": ","
+				},
+				{
+					"id": 1252,
+					"text": " item"
+				},
+				{
+					"id": 8,
+					"text": ")"
+				},
+				{
+					"id": 718,
+					"text": " =>"
+				},
+				{
+					"id": 2963,
+					"text": " sum"
+				},
+				{
+					"id": 385,
+					"text": " +"
+				},
+				{
+					"id": 1252,
+					"text": " item"
+				},
+				{
+					"id": 13,
+					"text": "."
+				}
+			],
+			"file": {
+				"file": "callback.f32",
+				"bytes": 2555904,
+				"sha256": "6fc91911251224f78b6c3c89ddc53d2ffa20a5567e57b90edee3973373e91d78",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.0.q": {
+						"offset": 1024,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.0.k": {
+						"offset": 33792,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.0.v": {
+						"offset": 35840,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.0.scores": {
+						"offset": 37888,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.0.weights": {
+						"offset": 41984,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.0.heads": {
+						"offset": 46080,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.0.out": {
+						"offset": 78848,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.3.x": {
+						"offset": 79872,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.3.q": {
+						"offset": 80896,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.3.k": {
+						"offset": 113664,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.3.v": {
+						"offset": 115712,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.3.scores": {
+						"offset": 117760,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.3.weights": {
+						"offset": 121856,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.3.heads": {
+						"offset": 125952,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.3.out": {
+						"offset": 158720,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.6.x": {
+						"offset": 159744,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.6.q": {
+						"offset": 160768,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.6.k": {
+						"offset": 193536,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.6.v": {
+						"offset": 195584,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.6.scores": {
+						"offset": 197632,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.6.weights": {
+						"offset": 201728,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.6.heads": {
+						"offset": 205824,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.6.out": {
+						"offset": 238592,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.9.x": {
+						"offset": 239616,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.9.q": {
+						"offset": 240640,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.9.k": {
+						"offset": 273408,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.9.v": {
+						"offset": 275456,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.9.scores": {
+						"offset": 277504,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.9.weights": {
+						"offset": 281600,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.9.heads": {
+						"offset": 285696,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.9.out": {
+						"offset": 318464,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.12.x": {
+						"offset": 319488,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.12.q": {
+						"offset": 320512,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.12.k": {
+						"offset": 353280,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.12.v": {
+						"offset": 355328,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.12.scores": {
+						"offset": 357376,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.12.weights": {
+						"offset": 361472,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.12.heads": {
+						"offset": 365568,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.12.out": {
+						"offset": 398336,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.15.x": {
+						"offset": 399360,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.15.q": {
+						"offset": 400384,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.15.k": {
+						"offset": 433152,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.15.v": {
+						"offset": 435200,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.15.scores": {
+						"offset": 437248,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.15.weights": {
+						"offset": 441344,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.15.heads": {
+						"offset": 445440,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.15.out": {
+						"offset": 478208,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.18.x": {
+						"offset": 479232,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.18.q": {
+						"offset": 480256,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.18.k": {
+						"offset": 513024,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.18.v": {
+						"offset": 515072,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.18.scores": {
+						"offset": 517120,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.18.weights": {
+						"offset": 521216,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.18.heads": {
+						"offset": 525312,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.18.out": {
+						"offset": 558080,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.21.x": {
+						"offset": 559104,
+						"length": 1024,
+						"shape": [16, 64]
+					},
+					"layer.21.q": {
+						"offset": 560128,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.21.k": {
+						"offset": 592896,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.21.v": {
+						"offset": 594944,
+						"length": 2048,
+						"shape": [1, 16, 128]
+					},
+					"layer.21.scores": {
+						"offset": 596992,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.21.weights": {
+						"offset": 601088,
+						"length": 4096,
+						"shape": [16, 16, 16]
+					},
+					"layer.21.heads": {
+						"offset": 605184,
+						"length": 32768,
+						"shape": [16, 16, 128]
+					},
+					"layer.21.out": {
+						"offset": 637952,
+						"length": 1024,
+						"shape": [16, 64]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_mqa.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "cpu",
+		"dtype": "float32",
+		"attention": "eager",
+		"modelingSha256": "92e62ecba294d5b8a690904788cb152428e51fac418ff49d99d1e9ebfe92cabb",
+		"x": "input to attention, after ln_1",
+		"k": "c_attn's single key head, [1, T, 128], read by all 16 query heads",
+		"v": "c_attn's single value head, [1, T, 128], read by all 16 query heads",
+		"out": "output of c_proj, before the residual add"
+	},
+	"validation": {
+		"maxWeightsRecomputeError": 0.0,
+		"maxHeadsRecomputeError": 0.0,
+		"maxOutRecomputeError": 0.0
+	},
+	"extras": {}
+}

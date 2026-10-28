@@ -1,0 +1,216 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "mla",
+	"source": "model",
+	"model": {
+		"id": "deepseek-ai/DeepSeek-V2-Lite",
+		"name": "DeepSeek-V2-Lite (16B, 2.4B active)",
+		"revision": "604d5664dddd88a0433dbae533b7fe9472482de0",
+		"url": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite/tree/604d5664dddd88a0433dbae533b7fe9472482de0",
+		"license": "DeepSeek Model License",
+		"numLayers": 27,
+		"hiddenSize": 2048,
+		"attentionHeads": 16,
+		"keyValueHeads": 16,
+		"headDim": 192,
+		"contentDim": 128,
+		"rotaryDim": 64,
+		"valueDim": 128,
+		"latentDim": 512,
+		"cachePerToken": 576,
+		"queryLatent": null,
+		"scale": 0.1147213867929261,
+		"scaleNote": "1/√192 × YaRN mscale² (0.1 · 0.707 · ln 40 + 1)²",
+		"ropeTheta": 10000,
+		"ropeScaling": {
+			"beta_fast": 32,
+			"beta_slow": 1,
+			"factor": 40,
+			"mscale": 0.707,
+			"mscale_all_dim": 0.707,
+			"original_max_position_embeddings": 4096,
+			"type": "yarn"
+		},
+		"positions": "YaRN RoPE on a 64-D slice of each query and on one 64-D key shared by every head",
+		"mask": "causal"
+	},
+	"layers": [2],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "deepseek-fact",
+			"title": "A familiar fact",
+			"prompt": "The capital of France is",
+			"tokens": [
+				{
+					"id": 100000,
+					"text": "<BOS>"
+				},
+				{
+					"id": 549,
+					"text": "The"
+				},
+				{
+					"id": 6077,
+					"text": " capital"
+				},
+				{
+					"id": 280,
+					"text": " of"
+				},
+				{
+					"id": 7239,
+					"text": " France"
+				},
+				{
+					"id": 317,
+					"text": " is"
+				}
+			],
+			"file": {
+				"file": "deepseek-fact.f32",
+				"bytes": 271872,
+				"sha256": "91f88c955d3dfec5b06b9bfc0bf45b4e19ff1d9c4ed7d23d881671ff89eeeb57",
+				"tensors": {
+					"layer.2.x": {
+						"offset": 0,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.2.q": {
+						"offset": 384,
+						"length": 18432,
+						"shape": [16, 6, 192]
+					},
+					"layer.2.k": {
+						"offset": 18816,
+						"length": 18432,
+						"shape": [16, 6, 192]
+					},
+					"layer.2.v": {
+						"offset": 37248,
+						"length": 12288,
+						"shape": [16, 6, 128]
+					},
+					"layer.2.scores": {
+						"offset": 49536,
+						"length": 576,
+						"shape": [16, 6, 6]
+					},
+					"layer.2.weights": {
+						"offset": 50112,
+						"length": 576,
+						"shape": [16, 6, 6]
+					},
+					"layer.2.heads": {
+						"offset": 50688,
+						"length": 12288,
+						"shape": [16, 6, 128]
+					},
+					"layer.2.out": {
+						"offset": 62976,
+						"length": 384,
+						"shape": [6, 64]
+					},
+					"layer.2.latent": {
+						"offset": 63360,
+						"length": 3072,
+						"shape": [6, 512]
+					},
+					"layer.2.kRope": {
+						"offset": 66432,
+						"length": 384,
+						"shape": [1, 6, 64]
+					},
+					"layer.2.scoresContent": {
+						"offset": 66816,
+						"length": 576,
+						"shape": [16, 6, 6]
+					},
+					"layer.2.scoresRope": {
+						"offset": 67392,
+						"length": 576,
+						"shape": [16, 6, 6]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_mla.py",
+		"converted": "one layer of an existing full-model recording; the model was not re-run",
+		"sources": {
+			"static/traces/deepseek-mla.json": "7f266fb8da1a0f738a627c4fe5244965cb929a1ad01924c7d2627f8f8bf7d792",
+			"static/traces/attention-operations-deepseek-fact.json": "2dac0cfd5a22075c95e208d74760b769bf9ea3292b2131655b2c2ee4e9073548"
+		},
+		"originalCapture": {
+			"script": "scripts/full_mla_capture.py",
+			"scriptSha256": "6ec5dd992648f7534fc29564de16f879449aaa0b8a20d524f1af6c2a5ca69f32",
+			"timestamp": "2026-10-17T02:50:53.526292+00:00",
+			"packages": {
+				"torch": "2.6.0",
+				"transformers": "4.51.3"
+			},
+			"device": "cpu",
+			"dtype": "float32 computation from original bfloat16 checkpoint tensors"
+		},
+		"checkWeights": {
+			"model.layers.2.self_attn.q_proj.weight": {
+				"shape": [3072, 2048],
+				"dtype": "BF16",
+				"sha256": "e8a69efd73ece671f526cfbb5cae10cd7e5d3444c91a46f7889a3920a168f03f",
+				"byteRange": [3327848176, 3340431087]
+			},
+			"model.layers.2.self_attn.kv_a_proj_with_mqa.weight": {
+				"shape": [576, 2048],
+				"dtype": "BF16",
+				"sha256": "78aab0105e733be79edc75c6e901c94731ddcb1956607c0375c20fe954fd632a",
+				"byteRange": [3312905968, 3315265263]
+			},
+			"model.layers.2.self_attn.kv_a_layernorm.weight": {
+				"shape": [512],
+				"dtype": "BF16",
+				"sha256": "fb649692e4de4a9761fcacf0fc4bc4224246038b8d7830eb980c3bbfa07c840a",
+				"byteRange": [3312904944, 3312905967]
+			},
+			"model.layers.2.self_attn.kv_b_proj.weight": {
+				"shape": [4096, 512],
+				"dtype": "BF16",
+				"sha256": "db24f415bf07a138a99cbaf02feb9d542d1319189edb13ea1c808ad0265b15ca",
+				"byteRange": [3315265264, 3319459567]
+			},
+			"model.layers.2.self_attn.o_proj.weight": {
+				"shape": [2048, 2048],
+				"dtype": "BF16",
+				"sha256": "e2c91ece508fbf5310ef11d6f454bdd42ce3d9364069f5fce49a69043b590508",
+				"byteRange": [3319459568, 3327848175]
+			}
+		},
+		"x": "input to attention, after input_layernorm (RMSNorm)",
+		"q": "128 content dimensions, then the 64 rotary dimensions after YaRN RoPE",
+		"k": "each head's 128-D content key from the latent (W↑K), then the shared 64-D rotary key",
+		"v": "each head's 128-D value from the latent (W↑V)",
+		"out": "output of o_proj, before the residual add",
+		"rotaryLayout": "Official DeepSeek interleaved rotary projection coordinates are reordered into first/second halves before rotation; queryBefore/keyBefore are after this reorder."
+	},
+	"validation": {
+		"maxLatentRecomputeError": 0.0,
+		"maxRotaryKeyRecomputeError": 0.0,
+		"maxLatentNormRecomputeError": 0.0,
+		"maxUpKeyRecomputeError": 0.0,
+		"maxUpValueRecomputeError": 0.0,
+		"maxQueryRecomputeError": 0.0,
+		"maxRopeRecomputeError": 0.0,
+		"maxScoresRecomputeError": 4.77e-6,
+		"maxWeightsRecomputeError": 0.0,
+		"maxHeadsRecomputeError": 0.0,
+		"maxOutRecomputeError": 0.0
+	},
+	"extras": {
+		"latent": "c_KV: the 512-D latent after its RMSNorm, [T, 512]; with kRope, all the cache keeps per token",
+		"kRope": "the 64-D rotary key after RoPE, [1, T, 64]; every head uses this one key",
+		"scoresContent": "q_C · k_C × scale per head, [H, T, T], 0 where masked",
+		"scoresRope": "q_R · k_R × scale per head, [H, T, T], 0 where masked; scores = scoresContent + scoresRope"
+	}
+}
