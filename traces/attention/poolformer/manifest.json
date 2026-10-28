@@ -1,0 +1,1088 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "poolformer",
+	"source": "model",
+	"model": {
+		"id": "sail/poolformer_s12",
+		"name": "PoolFormer-S12",
+		"revision": "01bcf57546aceaccba581172497434bb0b377749",
+		"url": "https://huggingface.co/sail/poolformer_s12/tree/01bcf57546aceaccba581172497434bb0b377749",
+		"license": "apache-2.0",
+		"numLayers": 12,
+		"hiddenSize": 512,
+		"attentionHeads": 1,
+		"keyValueHeads": 1,
+		"headDim": 512,
+		"stage": 4,
+		"stages": 4,
+		"depths": [2, 2, 6, 2],
+		"hiddenSizes": [64, 128, 320, 512],
+		"grid": [7, 7],
+		"poolSize": 3,
+		"mixer": "3 × 3 average pooling (padding not counted) minus the identity, the same for every channel",
+		"weightsSha256": "6f4ed7c93b7e91b6439f334f874c90fb8817acb05d7af11a38bc1ade78670d8b"
+	},
+	"layers": [10, 11],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "cat",
+			"title": "Cat",
+			"prompt": "Closeup photo of a cat · 224 × 224 · top-1 Egyptian cat (46%)",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "0,0"
+				},
+				{
+					"id": 1,
+					"text": "0,1"
+				},
+				{
+					"id": 2,
+					"text": "0,2"
+				},
+				{
+					"id": 3,
+					"text": "0,3"
+				},
+				{
+					"id": 4,
+					"text": "0,4"
+				},
+				{
+					"id": 5,
+					"text": "0,5"
+				},
+				{
+					"id": 6,
+					"text": "0,6"
+				},
+				{
+					"id": 7,
+					"text": "1,0"
+				},
+				{
+					"id": 8,
+					"text": "1,1"
+				},
+				{
+					"id": 9,
+					"text": "1,2"
+				},
+				{
+					"id": 10,
+					"text": "1,3"
+				},
+				{
+					"id": 11,
+					"text": "1,4"
+				},
+				{
+					"id": 12,
+					"text": "1,5"
+				},
+				{
+					"id": 13,
+					"text": "1,6"
+				},
+				{
+					"id": 14,
+					"text": "2,0"
+				},
+				{
+					"id": 15,
+					"text": "2,1"
+				},
+				{
+					"id": 16,
+					"text": "2,2"
+				},
+				{
+					"id": 17,
+					"text": "2,3"
+				},
+				{
+					"id": 18,
+					"text": "2,4"
+				},
+				{
+					"id": 19,
+					"text": "2,5"
+				},
+				{
+					"id": 20,
+					"text": "2,6"
+				},
+				{
+					"id": 21,
+					"text": "3,0"
+				},
+				{
+					"id": 22,
+					"text": "3,1"
+				},
+				{
+					"id": 23,
+					"text": "3,2"
+				},
+				{
+					"id": 24,
+					"text": "3,3"
+				},
+				{
+					"id": 25,
+					"text": "3,4"
+				},
+				{
+					"id": 26,
+					"text": "3,5"
+				},
+				{
+					"id": 27,
+					"text": "3,6"
+				},
+				{
+					"id": 28,
+					"text": "4,0"
+				},
+				{
+					"id": 29,
+					"text": "4,1"
+				},
+				{
+					"id": 30,
+					"text": "4,2"
+				},
+				{
+					"id": 31,
+					"text": "4,3"
+				},
+				{
+					"id": 32,
+					"text": "4,4"
+				},
+				{
+					"id": 33,
+					"text": "4,5"
+				},
+				{
+					"id": 34,
+					"text": "4,6"
+				},
+				{
+					"id": 35,
+					"text": "5,0"
+				},
+				{
+					"id": 36,
+					"text": "5,1"
+				},
+				{
+					"id": 37,
+					"text": "5,2"
+				},
+				{
+					"id": 38,
+					"text": "5,3"
+				},
+				{
+					"id": 39,
+					"text": "5,4"
+				},
+				{
+					"id": 40,
+					"text": "5,5"
+				},
+				{
+					"id": 41,
+					"text": "5,6"
+				},
+				{
+					"id": 42,
+					"text": "6,0"
+				},
+				{
+					"id": 43,
+					"text": "6,1"
+				},
+				{
+					"id": 44,
+					"text": "6,2"
+				},
+				{
+					"id": 45,
+					"text": "6,3"
+				},
+				{
+					"id": 46,
+					"text": "6,4"
+				},
+				{
+					"id": 47,
+					"text": "6,5"
+				},
+				{
+					"id": 48,
+					"text": "6,6"
+				}
+			],
+			"file": {
+				"file": "cat.f32",
+				"bytes": 69896,
+				"sha256": "0465111f9777928876d9b9fa2ca933f38c9c0fe53d5e68212621f0c880edbc50",
+				"tensors": {
+					"layer.10.x": {
+						"offset": 0,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.10.weights": {
+						"offset": 3136,
+						"length": 2401,
+						"shape": [1, 49, 49]
+					},
+					"layer.10.out": {
+						"offset": 5537,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.10.gamma": {
+						"offset": 8673,
+						"length": 64,
+						"shape": [64]
+					},
+					"layer.11.x": {
+						"offset": 8737,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.11.weights": {
+						"offset": 11873,
+						"length": 2401,
+						"shape": [1, 49, 49]
+					},
+					"layer.11.out": {
+						"offset": 14274,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.11.gamma": {
+						"offset": 17410,
+						"length": 64,
+						"shape": [64]
+					}
+				}
+			}
+		},
+		{
+			"id": "beagle",
+			"title": "Beagle",
+			"prompt": "Photo of a beagle · 224 × 224 · top-1 beagle (56%)",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "0,0"
+				},
+				{
+					"id": 1,
+					"text": "0,1"
+				},
+				{
+					"id": 2,
+					"text": "0,2"
+				},
+				{
+					"id": 3,
+					"text": "0,3"
+				},
+				{
+					"id": 4,
+					"text": "0,4"
+				},
+				{
+					"id": 5,
+					"text": "0,5"
+				},
+				{
+					"id": 6,
+					"text": "0,6"
+				},
+				{
+					"id": 7,
+					"text": "1,0"
+				},
+				{
+					"id": 8,
+					"text": "1,1"
+				},
+				{
+					"id": 9,
+					"text": "1,2"
+				},
+				{
+					"id": 10,
+					"text": "1,3"
+				},
+				{
+					"id": 11,
+					"text": "1,4"
+				},
+				{
+					"id": 12,
+					"text": "1,5"
+				},
+				{
+					"id": 13,
+					"text": "1,6"
+				},
+				{
+					"id": 14,
+					"text": "2,0"
+				},
+				{
+					"id": 15,
+					"text": "2,1"
+				},
+				{
+					"id": 16,
+					"text": "2,2"
+				},
+				{
+					"id": 17,
+					"text": "2,3"
+				},
+				{
+					"id": 18,
+					"text": "2,4"
+				},
+				{
+					"id": 19,
+					"text": "2,5"
+				},
+				{
+					"id": 20,
+					"text": "2,6"
+				},
+				{
+					"id": 21,
+					"text": "3,0"
+				},
+				{
+					"id": 22,
+					"text": "3,1"
+				},
+				{
+					"id": 23,
+					"text": "3,2"
+				},
+				{
+					"id": 24,
+					"text": "3,3"
+				},
+				{
+					"id": 25,
+					"text": "3,4"
+				},
+				{
+					"id": 26,
+					"text": "3,5"
+				},
+				{
+					"id": 27,
+					"text": "3,6"
+				},
+				{
+					"id": 28,
+					"text": "4,0"
+				},
+				{
+					"id": 29,
+					"text": "4,1"
+				},
+				{
+					"id": 30,
+					"text": "4,2"
+				},
+				{
+					"id": 31,
+					"text": "4,3"
+				},
+				{
+					"id": 32,
+					"text": "4,4"
+				},
+				{
+					"id": 33,
+					"text": "4,5"
+				},
+				{
+					"id": 34,
+					"text": "4,6"
+				},
+				{
+					"id": 35,
+					"text": "5,0"
+				},
+				{
+					"id": 36,
+					"text": "5,1"
+				},
+				{
+					"id": 37,
+					"text": "5,2"
+				},
+				{
+					"id": 38,
+					"text": "5,3"
+				},
+				{
+					"id": 39,
+					"text": "5,4"
+				},
+				{
+					"id": 40,
+					"text": "5,5"
+				},
+				{
+					"id": 41,
+					"text": "5,6"
+				},
+				{
+					"id": 42,
+					"text": "6,0"
+				},
+				{
+					"id": 43,
+					"text": "6,1"
+				},
+				{
+					"id": 44,
+					"text": "6,2"
+				},
+				{
+					"id": 45,
+					"text": "6,3"
+				},
+				{
+					"id": 46,
+					"text": "6,4"
+				},
+				{
+					"id": 47,
+					"text": "6,5"
+				},
+				{
+					"id": 48,
+					"text": "6,6"
+				}
+			],
+			"file": {
+				"file": "beagle.f32",
+				"bytes": 69896,
+				"sha256": "dcaddea07bf01e33aeb758aa103964f952ea6ea213f115532ded55f9b5a1d90a",
+				"tensors": {
+					"layer.10.x": {
+						"offset": 0,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.10.weights": {
+						"offset": 3136,
+						"length": 2401,
+						"shape": [1, 49, 49]
+					},
+					"layer.10.out": {
+						"offset": 5537,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.10.gamma": {
+						"offset": 8673,
+						"length": 64,
+						"shape": [64]
+					},
+					"layer.11.x": {
+						"offset": 8737,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.11.weights": {
+						"offset": 11873,
+						"length": 2401,
+						"shape": [1, 49, 49]
+					},
+					"layer.11.out": {
+						"offset": 14274,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.11.gamma": {
+						"offset": 17410,
+						"length": 64,
+						"shape": [64]
+					}
+				}
+			}
+		},
+		{
+			"id": "astronaut",
+			"title": "Astronaut",
+			"prompt": "Bruce McCandless II during EVA, 1984 · 224 × 224 · top-1 puck (44%)",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "0,0"
+				},
+				{
+					"id": 1,
+					"text": "0,1"
+				},
+				{
+					"id": 2,
+					"text": "0,2"
+				},
+				{
+					"id": 3,
+					"text": "0,3"
+				},
+				{
+					"id": 4,
+					"text": "0,4"
+				},
+				{
+					"id": 5,
+					"text": "0,5"
+				},
+				{
+					"id": 6,
+					"text": "0,6"
+				},
+				{
+					"id": 7,
+					"text": "1,0"
+				},
+				{
+					"id": 8,
+					"text": "1,1"
+				},
+				{
+					"id": 9,
+					"text": "1,2"
+				},
+				{
+					"id": 10,
+					"text": "1,3"
+				},
+				{
+					"id": 11,
+					"text": "1,4"
+				},
+				{
+					"id": 12,
+					"text": "1,5"
+				},
+				{
+					"id": 13,
+					"text": "1,6"
+				},
+				{
+					"id": 14,
+					"text": "2,0"
+				},
+				{
+					"id": 15,
+					"text": "2,1"
+				},
+				{
+					"id": 16,
+					"text": "2,2"
+				},
+				{
+					"id": 17,
+					"text": "2,3"
+				},
+				{
+					"id": 18,
+					"text": "2,4"
+				},
+				{
+					"id": 19,
+					"text": "2,5"
+				},
+				{
+					"id": 20,
+					"text": "2,6"
+				},
+				{
+					"id": 21,
+					"text": "3,0"
+				},
+				{
+					"id": 22,
+					"text": "3,1"
+				},
+				{
+					"id": 23,
+					"text": "3,2"
+				},
+				{
+					"id": 24,
+					"text": "3,3"
+				},
+				{
+					"id": 25,
+					"text": "3,4"
+				},
+				{
+					"id": 26,
+					"text": "3,5"
+				},
+				{
+					"id": 27,
+					"text": "3,6"
+				},
+				{
+					"id": 28,
+					"text": "4,0"
+				},
+				{
+					"id": 29,
+					"text": "4,1"
+				},
+				{
+					"id": 30,
+					"text": "4,2"
+				},
+				{
+					"id": 31,
+					"text": "4,3"
+				},
+				{
+					"id": 32,
+					"text": "4,4"
+				},
+				{
+					"id": 33,
+					"text": "4,5"
+				},
+				{
+					"id": 34,
+					"text": "4,6"
+				},
+				{
+					"id": 35,
+					"text": "5,0"
+				},
+				{
+					"id": 36,
+					"text": "5,1"
+				},
+				{
+					"id": 37,
+					"text": "5,2"
+				},
+				{
+					"id": 38,
+					"text": "5,3"
+				},
+				{
+					"id": 39,
+					"text": "5,4"
+				},
+				{
+					"id": 40,
+					"text": "5,5"
+				},
+				{
+					"id": 41,
+					"text": "5,6"
+				},
+				{
+					"id": 42,
+					"text": "6,0"
+				},
+				{
+					"id": 43,
+					"text": "6,1"
+				},
+				{
+					"id": 44,
+					"text": "6,2"
+				},
+				{
+					"id": 45,
+					"text": "6,3"
+				},
+				{
+					"id": 46,
+					"text": "6,4"
+				},
+				{
+					"id": 47,
+					"text": "6,5"
+				},
+				{
+					"id": 48,
+					"text": "6,6"
+				}
+			],
+			"file": {
+				"file": "astronaut.f32",
+				"bytes": 69896,
+				"sha256": "92df17ffe49bb34d8d0cbb838a3f4166acfb1a8f9b74f6af84bfec8df2e467b6",
+				"tensors": {
+					"layer.10.x": {
+						"offset": 0,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.10.weights": {
+						"offset": 3136,
+						"length": 2401,
+						"shape": [1, 49, 49]
+					},
+					"layer.10.out": {
+						"offset": 5537,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.10.gamma": {
+						"offset": 8673,
+						"length": 64,
+						"shape": [64]
+					},
+					"layer.11.x": {
+						"offset": 8737,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.11.weights": {
+						"offset": 11873,
+						"length": 2401,
+						"shape": [1, 49, 49]
+					},
+					"layer.11.out": {
+						"offset": 14274,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.11.gamma": {
+						"offset": 17410,
+						"length": 64,
+						"shape": [64]
+					}
+				}
+			}
+		},
+		{
+			"id": "shapes",
+			"title": "Colored shapes",
+			"prompt": "Red circle, blue square and green triangle · 224 × 224 · top-1 envelope (13%)",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "0,0"
+				},
+				{
+					"id": 1,
+					"text": "0,1"
+				},
+				{
+					"id": 2,
+					"text": "0,2"
+				},
+				{
+					"id": 3,
+					"text": "0,3"
+				},
+				{
+					"id": 4,
+					"text": "0,4"
+				},
+				{
+					"id": 5,
+					"text": "0,5"
+				},
+				{
+					"id": 6,
+					"text": "0,6"
+				},
+				{
+					"id": 7,
+					"text": "1,0"
+				},
+				{
+					"id": 8,
+					"text": "1,1"
+				},
+				{
+					"id": 9,
+					"text": "1,2"
+				},
+				{
+					"id": 10,
+					"text": "1,3"
+				},
+				{
+					"id": 11,
+					"text": "1,4"
+				},
+				{
+					"id": 12,
+					"text": "1,5"
+				},
+				{
+					"id": 13,
+					"text": "1,6"
+				},
+				{
+					"id": 14,
+					"text": "2,0"
+				},
+				{
+					"id": 15,
+					"text": "2,1"
+				},
+				{
+					"id": 16,
+					"text": "2,2"
+				},
+				{
+					"id": 17,
+					"text": "2,3"
+				},
+				{
+					"id": 18,
+					"text": "2,4"
+				},
+				{
+					"id": 19,
+					"text": "2,5"
+				},
+				{
+					"id": 20,
+					"text": "2,6"
+				},
+				{
+					"id": 21,
+					"text": "3,0"
+				},
+				{
+					"id": 22,
+					"text": "3,1"
+				},
+				{
+					"id": 23,
+					"text": "3,2"
+				},
+				{
+					"id": 24,
+					"text": "3,3"
+				},
+				{
+					"id": 25,
+					"text": "3,4"
+				},
+				{
+					"id": 26,
+					"text": "3,5"
+				},
+				{
+					"id": 27,
+					"text": "3,6"
+				},
+				{
+					"id": 28,
+					"text": "4,0"
+				},
+				{
+					"id": 29,
+					"text": "4,1"
+				},
+				{
+					"id": 30,
+					"text": "4,2"
+				},
+				{
+					"id": 31,
+					"text": "4,3"
+				},
+				{
+					"id": 32,
+					"text": "4,4"
+				},
+				{
+					"id": 33,
+					"text": "4,5"
+				},
+				{
+					"id": 34,
+					"text": "4,6"
+				},
+				{
+					"id": 35,
+					"text": "5,0"
+				},
+				{
+					"id": 36,
+					"text": "5,1"
+				},
+				{
+					"id": 37,
+					"text": "5,2"
+				},
+				{
+					"id": 38,
+					"text": "5,3"
+				},
+				{
+					"id": 39,
+					"text": "5,4"
+				},
+				{
+					"id": 40,
+					"text": "5,5"
+				},
+				{
+					"id": 41,
+					"text": "5,6"
+				},
+				{
+					"id": 42,
+					"text": "6,0"
+				},
+				{
+					"id": 43,
+					"text": "6,1"
+				},
+				{
+					"id": 44,
+					"text": "6,2"
+				},
+				{
+					"id": 45,
+					"text": "6,3"
+				},
+				{
+					"id": 46,
+					"text": "6,4"
+				},
+				{
+					"id": 47,
+					"text": "6,5"
+				},
+				{
+					"id": 48,
+					"text": "6,6"
+				}
+			],
+			"file": {
+				"file": "shapes.f32",
+				"bytes": 69896,
+				"sha256": "754d6980f804a607c303de504bde99427ae78631855aa6e4a45fd86225b54a2a",
+				"tensors": {
+					"layer.10.x": {
+						"offset": 0,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.10.weights": {
+						"offset": 3136,
+						"length": 2401,
+						"shape": [1, 49, 49]
+					},
+					"layer.10.out": {
+						"offset": 5537,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.10.gamma": {
+						"offset": 8673,
+						"length": 64,
+						"shape": [64]
+					},
+					"layer.11.x": {
+						"offset": 8737,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.11.weights": {
+						"offset": 11873,
+						"length": 2401,
+						"shape": [1, 49, 49]
+					},
+					"layer.11.out": {
+						"offset": 14274,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.11.gamma": {
+						"offset": 17410,
+						"length": 64,
+						"shape": [64]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_poolformer.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "cpu",
+		"dtype": "float32 (the matrix check runs in float64)",
+		"modelingSha256": "c7c632d3e8e2872ff8bbd3343d658185e12435b77a13739e4b33ad7dbc2c57da",
+		"preprocessing": "the 224 × 224 image as drawn, normalized with the processor’s ImageNet mean and std; its crop_pct resize is off",
+		"tokens": "stage-4 grid cells in row-major order, labelled \"row,column\"",
+		"x": "input to the pooling mixer: the block input after before_norm (GroupNorm, one group)",
+		"out": "output of PoolFormerPooling (pool − identity), before layer_scale_1 and the residual",
+		"images": {
+			"cat": {
+				"src": "architectures/clip-cat.jpg",
+				"alt": "Closeup photo of a cat",
+				"sha256": "0219c77a595053a6f1a38c38925dc066ff7c2698af87cb0d58a105626b754834",
+				"top1": {
+					"label": "Egyptian cat",
+					"probability": 0.4642
+				}
+			},
+			"beagle": {
+				"src": "architectures/clip-dog.jpg",
+				"alt": "Photo of a beagle",
+				"sha256": "1ac84a834a2754c24ee7c894f36734f67ea6d7cf031cac966dc066f255224df1",
+				"top1": {
+					"label": "beagle",
+					"probability": 0.5585
+				}
+			},
+			"astronaut": {
+				"src": "architectures/clip-astronaut.jpg",
+				"alt": "Bruce McCandless II during EVA, 1984",
+				"sha256": "6afb9d1787bff95be7d8017a1f6e98a859d6b91d241944ec9d1a0eecaddc6e2c",
+				"top1": {
+					"label": "puck, hockey puck",
+					"probability": 0.4366
+				}
+			},
+			"shapes": {
+				"src": "architectures/vit-shapes.png",
+				"alt": "Red circle, blue square and green triangle",
+				"sha256": "1ec780ac27bc80bd3a2e5d8c24d43721a11aac2b3329e9aac1a7b31b51aefc88",
+				"top1": {
+					"label": "envelope",
+					"probability": 0.1262
+				}
+			}
+		}
+	},
+	"validation": {
+		"maxMixRecomputeError": 2.71e-5,
+		"maxResidualRecomputeError": 7.3e-5,
+		"maxAbsRowSum": 1.67e-16
+	},
+	"extras": {
+		"gamma": "layer_scale_1 of the first 64 channels: each channel of the mixer output is scaled by it before the residual add"
+	}
+}

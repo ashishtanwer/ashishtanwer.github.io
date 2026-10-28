@@ -1,0 +1,449 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "flash",
+	"source": "model",
+	"model": {
+		"id": "openai-community/gpt2",
+		"name": "GPT-2 small (124M)",
+		"revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+		"url": "https://huggingface.co/openai-community/gpt2/tree/607a30d783dfa663caf39e06633721c8d4cfcd7e",
+		"license": "mit",
+		"numLayers": 12,
+		"hiddenSize": 768,
+		"attentionHeads": 12,
+		"keyValueHeads": 12,
+		"headDim": 64,
+		"scale": 0.125,
+		"positions": "learned absolute embeddings, added before block 1",
+		"mask": "causal",
+		"blockRows": 4,
+		"blockCols": 4,
+		"algorithm": "FlashAttention-2 forward: tiles of Br query rows × Bc keys, online softmax, causal tiles skipped"
+	},
+	"layers": [5],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "coreference",
+			"title": "Coreference",
+			"prompt": "The animal didn't cross the street because it was too tired",
+			"tokens": [
+				{
+					"id": 464,
+					"text": "The"
+				},
+				{
+					"id": 5044,
+					"text": " animal"
+				},
+				{
+					"id": 1422,
+					"text": " didn"
+				},
+				{
+					"id": 470,
+					"text": "'t"
+				},
+				{
+					"id": 3272,
+					"text": " cross"
+				},
+				{
+					"id": 262,
+					"text": " the"
+				},
+				{
+					"id": 4675,
+					"text": " street"
+				},
+				{
+					"id": 780,
+					"text": " because"
+				},
+				{
+					"id": 340,
+					"text": " it"
+				},
+				{
+					"id": 373,
+					"text": " was"
+				},
+				{
+					"id": 1165,
+					"text": " too"
+				},
+				{
+					"id": 10032,
+					"text": " tired"
+				}
+			],
+			"file": {
+				"file": "coreference.f32",
+				"bytes": 318912,
+				"sha256": "07a97520a9096be06ea43316291681fc250d3b7a3586f964f39a73d16a29f8e7",
+				"tensors": {
+					"layer.5.x": {
+						"offset": 0,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.5.q": {
+						"offset": 768,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.5.k": {
+						"offset": 9984,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.5.v": {
+						"offset": 19200,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.5.scores": {
+						"offset": 28416,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.5.weights": {
+						"offset": 30144,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.5.heads": {
+						"offset": 31872,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.5.standard": {
+						"offset": 41088,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.5.flash.m": {
+						"offset": 50304,
+						"length": 432,
+						"shape": [12, 12, 3]
+					},
+					"layer.5.flash.l": {
+						"offset": 50736,
+						"length": 432,
+						"shape": [12, 12, 3]
+					},
+					"layer.5.flash.acc": {
+						"offset": 51168,
+						"length": 27648,
+						"shape": [12, 12, 3, 64]
+					},
+					"layer.5.flash.lse": {
+						"offset": 78816,
+						"length": 144,
+						"shape": [12, 12]
+					},
+					"layer.5.out": {
+						"offset": 78960,
+						"length": 768,
+						"shape": [12, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "induction",
+			"title": "Repeated phrase",
+			"prompt": "The quick brown fox jumps over the lazy dog. The quick brown",
+			"tokens": [
+				{
+					"id": 464,
+					"text": "The"
+				},
+				{
+					"id": 2068,
+					"text": " quick"
+				},
+				{
+					"id": 7586,
+					"text": " brown"
+				},
+				{
+					"id": 21831,
+					"text": " fox"
+				},
+				{
+					"id": 18045,
+					"text": " jumps"
+				},
+				{
+					"id": 625,
+					"text": " over"
+				},
+				{
+					"id": 262,
+					"text": " the"
+				},
+				{
+					"id": 16931,
+					"text": " lazy"
+				},
+				{
+					"id": 3290,
+					"text": " dog"
+				},
+				{
+					"id": 13,
+					"text": "."
+				},
+				{
+					"id": 383,
+					"text": " The"
+				},
+				{
+					"id": 2068,
+					"text": " quick"
+				},
+				{
+					"id": 7586,
+					"text": " brown"
+				}
+			],
+			"file": {
+				"file": "induction.f32",
+				"bytes": 387920,
+				"sha256": "4b279320c9abf1a70b6b9a64db9b464275ad7922a9a1c1235fd6e0198c473c57",
+				"tensors": {
+					"layer.5.x": {
+						"offset": 0,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.5.q": {
+						"offset": 832,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.5.k": {
+						"offset": 10816,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.5.v": {
+						"offset": 20800,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.5.scores": {
+						"offset": 30784,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.5.weights": {
+						"offset": 32812,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.5.heads": {
+						"offset": 34840,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.5.standard": {
+						"offset": 44824,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.5.flash.m": {
+						"offset": 54808,
+						"length": 624,
+						"shape": [12, 13, 4]
+					},
+					"layer.5.flash.l": {
+						"offset": 55432,
+						"length": 624,
+						"shape": [12, 13, 4]
+					},
+					"layer.5.flash.acc": {
+						"offset": 56056,
+						"length": 39936,
+						"shape": [12, 13, 4, 64]
+					},
+					"layer.5.flash.lse": {
+						"offset": 95992,
+						"length": 156,
+						"shape": [12, 13]
+					},
+					"layer.5.out": {
+						"offset": 96148,
+						"length": 832,
+						"shape": [13, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "names",
+			"title": "Two names",
+			"prompt": "When Mary and John went to the store, John gave a drink to",
+			"tokens": [
+				{
+					"id": 2215,
+					"text": "When"
+				},
+				{
+					"id": 5335,
+					"text": " Mary"
+				},
+				{
+					"id": 290,
+					"text": " and"
+				},
+				{
+					"id": 1757,
+					"text": " John"
+				},
+				{
+					"id": 1816,
+					"text": " went"
+				},
+				{
+					"id": 284,
+					"text": " to"
+				},
+				{
+					"id": 262,
+					"text": " the"
+				},
+				{
+					"id": 3650,
+					"text": " store"
+				},
+				{
+					"id": 11,
+					"text": ","
+				},
+				{
+					"id": 1757,
+					"text": " John"
+				},
+				{
+					"id": 2921,
+					"text": " gave"
+				},
+				{
+					"id": 257,
+					"text": " a"
+				},
+				{
+					"id": 4144,
+					"text": " drink"
+				},
+				{
+					"id": 284,
+					"text": " to"
+				}
+			],
+			"file": {
+				"file": "names.f32",
+				"bytes": 419104,
+				"sha256": "a9521c973ec5ac0a15b17f102af31237587c0192abbe6fb35a7a68f7257c1b44",
+				"tensors": {
+					"layer.5.x": {
+						"offset": 0,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.5.q": {
+						"offset": 896,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.5.k": {
+						"offset": 11648,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.5.v": {
+						"offset": 22400,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.5.scores": {
+						"offset": 33152,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.5.weights": {
+						"offset": 35504,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.5.heads": {
+						"offset": 37856,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.5.standard": {
+						"offset": 48608,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.5.flash.m": {
+						"offset": 59360,
+						"length": 672,
+						"shape": [12, 14, 4]
+					},
+					"layer.5.flash.l": {
+						"offset": 60032,
+						"length": 672,
+						"shape": [12, 14, 4]
+					},
+					"layer.5.flash.acc": {
+						"offset": 60704,
+						"length": 43008,
+						"shape": [12, 14, 4, 64]
+					},
+					"layer.5.flash.lse": {
+						"offset": 103712,
+						"length": 168,
+						"shape": [12, 14]
+					},
+					"layer.5.out": {
+						"offset": 103880,
+						"length": 896,
+						"shape": [14, 64]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_flash.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "cpu",
+		"dtype": "float32",
+		"attention": "eager (the model), then the tiled loop on its Q, K, V",
+		"modelingSha256": "b591253d7acadd39635bbf6f9f6fd0a97d6be5d7cf901074e2d959ff3e478e80",
+		"x": "input to attention, after ln_1",
+		"out": "c_proj of the tiled output, before the residual add"
+	},
+	"validation": {
+		"maxWeightsError": 0.0,
+		"maxFlashVsStandardError": 9.54e-7,
+		"maxFlashVsSdpaError": 7.15e-7,
+		"maxFlashVsModelError": 9.54e-7,
+		"maxLseError": 7.15e-7,
+		"maxOutError": 2.86e-6,
+		"maxFlashVsStandardFloat64Error": 2.22e-15
+	},
+	"extras": {
+		"heads": "[H, T, d] the tiled loop’s output O = Õ / ℓ",
+		"standard": "[H, T, d] softmax(QKᵀ/√d)·V with the T × T matrix materialized",
+		"flash.m": "[H, T, tiles] running row max after each key tile",
+		"flash.l": "[H, T, tiles] running softmax denominator ℓ after each key tile",
+		"flash.acc": "[H, T, tiles, d] unnormalized output Õ after each key tile",
+		"flash.lse": "[H, T] m + log ℓ, what the kernel keeps for the backward pass"
+	}
+}

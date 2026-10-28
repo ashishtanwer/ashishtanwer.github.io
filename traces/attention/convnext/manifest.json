@@ -1,0 +1,1291 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "convnext",
+	"source": "model",
+	"model": {
+		"id": "facebook/convnext-tiny-224",
+		"name": "ConvNeXt-T",
+		"revision": "6166b7613034066690a621d8bf25ffdf181a34f0",
+		"url": "https://huggingface.co/facebook/convnext-tiny-224/tree/6166b7613034066690a621d8bf25ffdf181a34f0",
+		"license": "apache-2.0",
+		"numLayers": 18,
+		"hiddenSize": 768,
+		"attentionHeads": 768,
+		"keyValueHeads": 768,
+		"headDim": 1,
+		"stage": 4,
+		"stages": 4,
+		"depths": [3, 3, 9, 3],
+		"hiddenSizes": [96, 192, 384, 768],
+		"grid": [7, 7],
+		"kernelSize": 7,
+		"shownChannels": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+		"mixer": "depthwise 7 × 7 convolution, zero padding 3, one kernel and bias per channel",
+		"weightsSha256": "1fe15b2eba9e355de14c4e244e6365bf61ffef84da7d3442c0afbb2d8564f477"
+	},
+	"layers": [15, 16, 17],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "cat",
+			"title": "Cat",
+			"prompt": "Closeup photo of a cat · 224 × 224 · top-1 Egyptian cat (89%)",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "0,0"
+				},
+				{
+					"id": 1,
+					"text": "0,1"
+				},
+				{
+					"id": 2,
+					"text": "0,2"
+				},
+				{
+					"id": 3,
+					"text": "0,3"
+				},
+				{
+					"id": 4,
+					"text": "0,4"
+				},
+				{
+					"id": 5,
+					"text": "0,5"
+				},
+				{
+					"id": 6,
+					"text": "0,6"
+				},
+				{
+					"id": 7,
+					"text": "1,0"
+				},
+				{
+					"id": 8,
+					"text": "1,1"
+				},
+				{
+					"id": 9,
+					"text": "1,2"
+				},
+				{
+					"id": 10,
+					"text": "1,3"
+				},
+				{
+					"id": 11,
+					"text": "1,4"
+				},
+				{
+					"id": 12,
+					"text": "1,5"
+				},
+				{
+					"id": 13,
+					"text": "1,6"
+				},
+				{
+					"id": 14,
+					"text": "2,0"
+				},
+				{
+					"id": 15,
+					"text": "2,1"
+				},
+				{
+					"id": 16,
+					"text": "2,2"
+				},
+				{
+					"id": 17,
+					"text": "2,3"
+				},
+				{
+					"id": 18,
+					"text": "2,4"
+				},
+				{
+					"id": 19,
+					"text": "2,5"
+				},
+				{
+					"id": 20,
+					"text": "2,6"
+				},
+				{
+					"id": 21,
+					"text": "3,0"
+				},
+				{
+					"id": 22,
+					"text": "3,1"
+				},
+				{
+					"id": 23,
+					"text": "3,2"
+				},
+				{
+					"id": 24,
+					"text": "3,3"
+				},
+				{
+					"id": 25,
+					"text": "3,4"
+				},
+				{
+					"id": 26,
+					"text": "3,5"
+				},
+				{
+					"id": 27,
+					"text": "3,6"
+				},
+				{
+					"id": 28,
+					"text": "4,0"
+				},
+				{
+					"id": 29,
+					"text": "4,1"
+				},
+				{
+					"id": 30,
+					"text": "4,2"
+				},
+				{
+					"id": 31,
+					"text": "4,3"
+				},
+				{
+					"id": 32,
+					"text": "4,4"
+				},
+				{
+					"id": 33,
+					"text": "4,5"
+				},
+				{
+					"id": 34,
+					"text": "4,6"
+				},
+				{
+					"id": 35,
+					"text": "5,0"
+				},
+				{
+					"id": 36,
+					"text": "5,1"
+				},
+				{
+					"id": 37,
+					"text": "5,2"
+				},
+				{
+					"id": 38,
+					"text": "5,3"
+				},
+				{
+					"id": 39,
+					"text": "5,4"
+				},
+				{
+					"id": 40,
+					"text": "5,5"
+				},
+				{
+					"id": 41,
+					"text": "5,6"
+				},
+				{
+					"id": 42,
+					"text": "6,0"
+				},
+				{
+					"id": 43,
+					"text": "6,1"
+				},
+				{
+					"id": 44,
+					"text": "6,2"
+				},
+				{
+					"id": 45,
+					"text": "6,3"
+				},
+				{
+					"id": 46,
+					"text": "6,4"
+				},
+				{
+					"id": 47,
+					"text": "6,5"
+				},
+				{
+					"id": 48,
+					"text": "6,6"
+				}
+			],
+			"file": {
+				"file": "cat.f32",
+				"bytes": 555264,
+				"sha256": "b9d5d12cbf83cc9b89627d04556e4f70f9b7a4df200a63d7edd4fdb40bb5830b",
+				"tensors": {
+					"layer.15.x": {
+						"offset": 0,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.15.v": {
+						"offset": 3136,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.15.weights": {
+						"offset": 3920,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.15.heads": {
+						"offset": 42336,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.15.out": {
+						"offset": 43120,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.15.bias": {
+						"offset": 46256,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.16.x": {
+						"offset": 46272,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.16.v": {
+						"offset": 49408,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.16.weights": {
+						"offset": 50192,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.16.heads": {
+						"offset": 88608,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.16.out": {
+						"offset": 89392,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.16.bias": {
+						"offset": 92528,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.17.x": {
+						"offset": 92544,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.17.v": {
+						"offset": 95680,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.17.weights": {
+						"offset": 96464,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.17.heads": {
+						"offset": 134880,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.17.out": {
+						"offset": 135664,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.17.bias": {
+						"offset": 138800,
+						"length": 16,
+						"shape": [16]
+					}
+				}
+			}
+		},
+		{
+			"id": "beagle",
+			"title": "Beagle",
+			"prompt": "Photo of a beagle · 224 × 224 · top-1 beagle (91%)",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "0,0"
+				},
+				{
+					"id": 1,
+					"text": "0,1"
+				},
+				{
+					"id": 2,
+					"text": "0,2"
+				},
+				{
+					"id": 3,
+					"text": "0,3"
+				},
+				{
+					"id": 4,
+					"text": "0,4"
+				},
+				{
+					"id": 5,
+					"text": "0,5"
+				},
+				{
+					"id": 6,
+					"text": "0,6"
+				},
+				{
+					"id": 7,
+					"text": "1,0"
+				},
+				{
+					"id": 8,
+					"text": "1,1"
+				},
+				{
+					"id": 9,
+					"text": "1,2"
+				},
+				{
+					"id": 10,
+					"text": "1,3"
+				},
+				{
+					"id": 11,
+					"text": "1,4"
+				},
+				{
+					"id": 12,
+					"text": "1,5"
+				},
+				{
+					"id": 13,
+					"text": "1,6"
+				},
+				{
+					"id": 14,
+					"text": "2,0"
+				},
+				{
+					"id": 15,
+					"text": "2,1"
+				},
+				{
+					"id": 16,
+					"text": "2,2"
+				},
+				{
+					"id": 17,
+					"text": "2,3"
+				},
+				{
+					"id": 18,
+					"text": "2,4"
+				},
+				{
+					"id": 19,
+					"text": "2,5"
+				},
+				{
+					"id": 20,
+					"text": "2,6"
+				},
+				{
+					"id": 21,
+					"text": "3,0"
+				},
+				{
+					"id": 22,
+					"text": "3,1"
+				},
+				{
+					"id": 23,
+					"text": "3,2"
+				},
+				{
+					"id": 24,
+					"text": "3,3"
+				},
+				{
+					"id": 25,
+					"text": "3,4"
+				},
+				{
+					"id": 26,
+					"text": "3,5"
+				},
+				{
+					"id": 27,
+					"text": "3,6"
+				},
+				{
+					"id": 28,
+					"text": "4,0"
+				},
+				{
+					"id": 29,
+					"text": "4,1"
+				},
+				{
+					"id": 30,
+					"text": "4,2"
+				},
+				{
+					"id": 31,
+					"text": "4,3"
+				},
+				{
+					"id": 32,
+					"text": "4,4"
+				},
+				{
+					"id": 33,
+					"text": "4,5"
+				},
+				{
+					"id": 34,
+					"text": "4,6"
+				},
+				{
+					"id": 35,
+					"text": "5,0"
+				},
+				{
+					"id": 36,
+					"text": "5,1"
+				},
+				{
+					"id": 37,
+					"text": "5,2"
+				},
+				{
+					"id": 38,
+					"text": "5,3"
+				},
+				{
+					"id": 39,
+					"text": "5,4"
+				},
+				{
+					"id": 40,
+					"text": "5,5"
+				},
+				{
+					"id": 41,
+					"text": "5,6"
+				},
+				{
+					"id": 42,
+					"text": "6,0"
+				},
+				{
+					"id": 43,
+					"text": "6,1"
+				},
+				{
+					"id": 44,
+					"text": "6,2"
+				},
+				{
+					"id": 45,
+					"text": "6,3"
+				},
+				{
+					"id": 46,
+					"text": "6,4"
+				},
+				{
+					"id": 47,
+					"text": "6,5"
+				},
+				{
+					"id": 48,
+					"text": "6,6"
+				}
+			],
+			"file": {
+				"file": "beagle.f32",
+				"bytes": 555264,
+				"sha256": "2c8c5df8e89b917231fdfcc5108df2fe79a26e6ec276ca90ec30df6f7b56d702",
+				"tensors": {
+					"layer.15.x": {
+						"offset": 0,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.15.v": {
+						"offset": 3136,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.15.weights": {
+						"offset": 3920,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.15.heads": {
+						"offset": 42336,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.15.out": {
+						"offset": 43120,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.15.bias": {
+						"offset": 46256,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.16.x": {
+						"offset": 46272,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.16.v": {
+						"offset": 49408,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.16.weights": {
+						"offset": 50192,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.16.heads": {
+						"offset": 88608,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.16.out": {
+						"offset": 89392,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.16.bias": {
+						"offset": 92528,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.17.x": {
+						"offset": 92544,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.17.v": {
+						"offset": 95680,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.17.weights": {
+						"offset": 96464,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.17.heads": {
+						"offset": 134880,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.17.out": {
+						"offset": 135664,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.17.bias": {
+						"offset": 138800,
+						"length": 16,
+						"shape": [16]
+					}
+				}
+			}
+		},
+		{
+			"id": "astronaut",
+			"title": "Astronaut",
+			"prompt": "Bruce McCandless II during EVA, 1984 · 224 × 224 · top-1 space shuttle (99%)",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "0,0"
+				},
+				{
+					"id": 1,
+					"text": "0,1"
+				},
+				{
+					"id": 2,
+					"text": "0,2"
+				},
+				{
+					"id": 3,
+					"text": "0,3"
+				},
+				{
+					"id": 4,
+					"text": "0,4"
+				},
+				{
+					"id": 5,
+					"text": "0,5"
+				},
+				{
+					"id": 6,
+					"text": "0,6"
+				},
+				{
+					"id": 7,
+					"text": "1,0"
+				},
+				{
+					"id": 8,
+					"text": "1,1"
+				},
+				{
+					"id": 9,
+					"text": "1,2"
+				},
+				{
+					"id": 10,
+					"text": "1,3"
+				},
+				{
+					"id": 11,
+					"text": "1,4"
+				},
+				{
+					"id": 12,
+					"text": "1,5"
+				},
+				{
+					"id": 13,
+					"text": "1,6"
+				},
+				{
+					"id": 14,
+					"text": "2,0"
+				},
+				{
+					"id": 15,
+					"text": "2,1"
+				},
+				{
+					"id": 16,
+					"text": "2,2"
+				},
+				{
+					"id": 17,
+					"text": "2,3"
+				},
+				{
+					"id": 18,
+					"text": "2,4"
+				},
+				{
+					"id": 19,
+					"text": "2,5"
+				},
+				{
+					"id": 20,
+					"text": "2,6"
+				},
+				{
+					"id": 21,
+					"text": "3,0"
+				},
+				{
+					"id": 22,
+					"text": "3,1"
+				},
+				{
+					"id": 23,
+					"text": "3,2"
+				},
+				{
+					"id": 24,
+					"text": "3,3"
+				},
+				{
+					"id": 25,
+					"text": "3,4"
+				},
+				{
+					"id": 26,
+					"text": "3,5"
+				},
+				{
+					"id": 27,
+					"text": "3,6"
+				},
+				{
+					"id": 28,
+					"text": "4,0"
+				},
+				{
+					"id": 29,
+					"text": "4,1"
+				},
+				{
+					"id": 30,
+					"text": "4,2"
+				},
+				{
+					"id": 31,
+					"text": "4,3"
+				},
+				{
+					"id": 32,
+					"text": "4,4"
+				},
+				{
+					"id": 33,
+					"text": "4,5"
+				},
+				{
+					"id": 34,
+					"text": "4,6"
+				},
+				{
+					"id": 35,
+					"text": "5,0"
+				},
+				{
+					"id": 36,
+					"text": "5,1"
+				},
+				{
+					"id": 37,
+					"text": "5,2"
+				},
+				{
+					"id": 38,
+					"text": "5,3"
+				},
+				{
+					"id": 39,
+					"text": "5,4"
+				},
+				{
+					"id": 40,
+					"text": "5,5"
+				},
+				{
+					"id": 41,
+					"text": "5,6"
+				},
+				{
+					"id": 42,
+					"text": "6,0"
+				},
+				{
+					"id": 43,
+					"text": "6,1"
+				},
+				{
+					"id": 44,
+					"text": "6,2"
+				},
+				{
+					"id": 45,
+					"text": "6,3"
+				},
+				{
+					"id": 46,
+					"text": "6,4"
+				},
+				{
+					"id": 47,
+					"text": "6,5"
+				},
+				{
+					"id": 48,
+					"text": "6,6"
+				}
+			],
+			"file": {
+				"file": "astronaut.f32",
+				"bytes": 555264,
+				"sha256": "7d3a526f27010fbd0feebddd43a9d8b23d342e7607dd7c3b4d5311096ab1ddf9",
+				"tensors": {
+					"layer.15.x": {
+						"offset": 0,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.15.v": {
+						"offset": 3136,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.15.weights": {
+						"offset": 3920,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.15.heads": {
+						"offset": 42336,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.15.out": {
+						"offset": 43120,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.15.bias": {
+						"offset": 46256,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.16.x": {
+						"offset": 46272,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.16.v": {
+						"offset": 49408,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.16.weights": {
+						"offset": 50192,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.16.heads": {
+						"offset": 88608,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.16.out": {
+						"offset": 89392,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.16.bias": {
+						"offset": 92528,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.17.x": {
+						"offset": 92544,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.17.v": {
+						"offset": 95680,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.17.weights": {
+						"offset": 96464,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.17.heads": {
+						"offset": 134880,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.17.out": {
+						"offset": 135664,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.17.bias": {
+						"offset": 138800,
+						"length": 16,
+						"shape": [16]
+					}
+				}
+			}
+		},
+		{
+			"id": "shapes",
+			"title": "Colored shapes",
+			"prompt": "Red circle, blue square and green triangle · 224 × 224 · top-1 ping-pong ball (30%)",
+			"tokens": [
+				{
+					"id": 0,
+					"text": "0,0"
+				},
+				{
+					"id": 1,
+					"text": "0,1"
+				},
+				{
+					"id": 2,
+					"text": "0,2"
+				},
+				{
+					"id": 3,
+					"text": "0,3"
+				},
+				{
+					"id": 4,
+					"text": "0,4"
+				},
+				{
+					"id": 5,
+					"text": "0,5"
+				},
+				{
+					"id": 6,
+					"text": "0,6"
+				},
+				{
+					"id": 7,
+					"text": "1,0"
+				},
+				{
+					"id": 8,
+					"text": "1,1"
+				},
+				{
+					"id": 9,
+					"text": "1,2"
+				},
+				{
+					"id": 10,
+					"text": "1,3"
+				},
+				{
+					"id": 11,
+					"text": "1,4"
+				},
+				{
+					"id": 12,
+					"text": "1,5"
+				},
+				{
+					"id": 13,
+					"text": "1,6"
+				},
+				{
+					"id": 14,
+					"text": "2,0"
+				},
+				{
+					"id": 15,
+					"text": "2,1"
+				},
+				{
+					"id": 16,
+					"text": "2,2"
+				},
+				{
+					"id": 17,
+					"text": "2,3"
+				},
+				{
+					"id": 18,
+					"text": "2,4"
+				},
+				{
+					"id": 19,
+					"text": "2,5"
+				},
+				{
+					"id": 20,
+					"text": "2,6"
+				},
+				{
+					"id": 21,
+					"text": "3,0"
+				},
+				{
+					"id": 22,
+					"text": "3,1"
+				},
+				{
+					"id": 23,
+					"text": "3,2"
+				},
+				{
+					"id": 24,
+					"text": "3,3"
+				},
+				{
+					"id": 25,
+					"text": "3,4"
+				},
+				{
+					"id": 26,
+					"text": "3,5"
+				},
+				{
+					"id": 27,
+					"text": "3,6"
+				},
+				{
+					"id": 28,
+					"text": "4,0"
+				},
+				{
+					"id": 29,
+					"text": "4,1"
+				},
+				{
+					"id": 30,
+					"text": "4,2"
+				},
+				{
+					"id": 31,
+					"text": "4,3"
+				},
+				{
+					"id": 32,
+					"text": "4,4"
+				},
+				{
+					"id": 33,
+					"text": "4,5"
+				},
+				{
+					"id": 34,
+					"text": "4,6"
+				},
+				{
+					"id": 35,
+					"text": "5,0"
+				},
+				{
+					"id": 36,
+					"text": "5,1"
+				},
+				{
+					"id": 37,
+					"text": "5,2"
+				},
+				{
+					"id": 38,
+					"text": "5,3"
+				},
+				{
+					"id": 39,
+					"text": "5,4"
+				},
+				{
+					"id": 40,
+					"text": "5,5"
+				},
+				{
+					"id": 41,
+					"text": "5,6"
+				},
+				{
+					"id": 42,
+					"text": "6,0"
+				},
+				{
+					"id": 43,
+					"text": "6,1"
+				},
+				{
+					"id": 44,
+					"text": "6,2"
+				},
+				{
+					"id": 45,
+					"text": "6,3"
+				},
+				{
+					"id": 46,
+					"text": "6,4"
+				},
+				{
+					"id": 47,
+					"text": "6,5"
+				},
+				{
+					"id": 48,
+					"text": "6,6"
+				}
+			],
+			"file": {
+				"file": "shapes.f32",
+				"bytes": 555264,
+				"sha256": "85d021fcfd88c5c211ec1e82486bca4bef96a4e58218737b2e89ac02bc83eb8f",
+				"tensors": {
+					"layer.15.x": {
+						"offset": 0,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.15.v": {
+						"offset": 3136,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.15.weights": {
+						"offset": 3920,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.15.heads": {
+						"offset": 42336,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.15.out": {
+						"offset": 43120,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.15.bias": {
+						"offset": 46256,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.16.x": {
+						"offset": 46272,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.16.v": {
+						"offset": 49408,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.16.weights": {
+						"offset": 50192,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.16.heads": {
+						"offset": 88608,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.16.out": {
+						"offset": 89392,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.16.bias": {
+						"offset": 92528,
+						"length": 16,
+						"shape": [16]
+					},
+					"layer.17.x": {
+						"offset": 92544,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.17.v": {
+						"offset": 95680,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.17.weights": {
+						"offset": 96464,
+						"length": 38416,
+						"shape": [16, 49, 49]
+					},
+					"layer.17.heads": {
+						"offset": 134880,
+						"length": 784,
+						"shape": [16, 49, 1]
+					},
+					"layer.17.out": {
+						"offset": 135664,
+						"length": 3136,
+						"shape": [49, 64]
+					},
+					"layer.17.bias": {
+						"offset": 138800,
+						"length": 16,
+						"shape": [16]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_convnext.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "cpu",
+		"dtype": "float32 (the matrix check runs in float64)",
+		"modelingSha256": "2fc52fdabf1bc322edd4f02d4c89dda85297e79d92e2d1bbae88813b5eb44b74",
+		"preprocessing": "the 224 × 224 image as drawn, normalized with the processor’s ImageNet mean and std; its crop_pct resize is off",
+		"tokens": "stage-4 grid cells in row-major order, labelled \"row,column\"",
+		"x": "input to the depthwise convolution: the block input (ConvNeXt has no norm before it)",
+		"out": "output of dwconv, bias included, before the LayerNorm, MLP, layer scale and residual",
+		"checkedChannels": 768,
+		"images": {
+			"cat": {
+				"src": "architectures/clip-cat.jpg",
+				"alt": "Closeup photo of a cat",
+				"sha256": "0219c77a595053a6f1a38c38925dc066ff7c2698af87cb0d58a105626b754834",
+				"top1": {
+					"label": "Egyptian cat",
+					"probability": 0.89
+				}
+			},
+			"beagle": {
+				"src": "architectures/clip-dog.jpg",
+				"alt": "Photo of a beagle",
+				"sha256": "1ac84a834a2754c24ee7c894f36734f67ea6d7cf031cac966dc066f255224df1",
+				"top1": {
+					"label": "beagle",
+					"probability": 0.9143
+				}
+			},
+			"astronaut": {
+				"src": "architectures/clip-astronaut.jpg",
+				"alt": "Bruce McCandless II during EVA, 1984",
+				"sha256": "6afb9d1787bff95be7d8017a1f6e98a859d6b91d241944ec9d1a0eecaddc6e2c",
+				"top1": {
+					"label": "space shuttle",
+					"probability": 0.9866
+				}
+			},
+			"shapes": {
+				"src": "architectures/vit-shapes.png",
+				"alt": "Red circle, blue square and green triangle",
+				"sha256": "1ec780ac27bc80bd3a2e5d8c24d43721a11aac2b3329e9aac1a7b31b51aefc88",
+				"top1": {
+					"label": "ping-pong ball",
+					"probability": 0.2978
+				}
+			}
+		}
+	},
+	"validation": {
+		"maxMixRecomputeError": 5.65e-6,
+		"maxLayoutRecomputeError": 0.0
+	},
+	"extras": {
+		"v": "input tokens of the first 16 channels, (channels, 49, 1): what each channel matrix mixes",
+		"heads": "recorded dwconv output of the first 16 channels, (channels, 49, 1): weights @ v + bias",
+		"bias": "dwconv bias of the first 16 channels"
+	}
+}

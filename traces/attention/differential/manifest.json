@@ -1,0 +1,983 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "differential",
+	"source": "formula",
+	"model": {
+		"id": "openai-community/gpt2",
+		"name": "GPT-2 small (124M)",
+		"revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+		"url": "https://huggingface.co/openai-community/gpt2/tree/607a30d783dfa663caf39e06633721c8d4cfcd7e",
+		"license": "mit",
+		"numLayers": 12,
+		"hiddenSize": 768,
+		"attentionHeads": 12,
+		"keyValueHeads": 12,
+		"headDim": 64,
+		"halfDim": 32,
+		"scale": 0.17677669529663687,
+		"positions": "learned absolute embeddings, added before block 1 (no rotary)",
+		"mask": "causal",
+		"formula": "softmax(Q₁K₁ᵀ/√d) − λ·softmax(Q₂K₂ᵀ/√d), then RMSNorm and × (1 − λ_init)",
+		"lambda": {
+			"choice": "λ_q1, λ_k1, λ_q2, λ_k2 = 0, so λ = exp(0) − exp(0) + λ_init = λ_init",
+			"init": "0.8 − 0.6·exp(−0.3·l), l the 0-based layer index",
+			"values": {
+				"0": 0.2,
+				"1": 0.355509,
+				"3": 0.556058,
+				"5": 0.666122,
+				"8": 0.745569,
+				"11": 0.77787
+			}
+		},
+		"normWeight": "RMSNorm gain = 1 (its initial value; a trained model learns it)",
+		"reference": "microsoft/unilm Diff-Transformer/multihead_diffattn.py @ b3783e7"
+	},
+	"layers": [0, 1, 3, 5, 8, 11],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "coreference",
+			"title": "Coreference",
+			"prompt": "The animal didn't cross the street because it was too tired",
+			"tokens": [
+				{
+					"id": 464,
+					"text": "The"
+				},
+				{
+					"id": 5044,
+					"text": " animal"
+				},
+				{
+					"id": 1422,
+					"text": " didn"
+				},
+				{
+					"id": 470,
+					"text": "'t"
+				},
+				{
+					"id": 3272,
+					"text": " cross"
+				},
+				{
+					"id": 262,
+					"text": " the"
+				},
+				{
+					"id": 4675,
+					"text": " street"
+				},
+				{
+					"id": 780,
+					"text": " because"
+				},
+				{
+					"id": 340,
+					"text": " it"
+				},
+				{
+					"id": 373,
+					"text": " was"
+				},
+				{
+					"id": 1165,
+					"text": " too"
+				},
+				{
+					"id": 10032,
+					"text": " tired"
+				}
+			],
+			"file": {
+				"file": "coreference.f32",
+				"bytes": 1110528,
+				"sha256": "204365f68c4faf7a56bb38f6020487545cbca487875a1cc6d1aabb7a6bd884ac",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.0.q": {
+						"offset": 768,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.0.k": {
+						"offset": 9984,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.0.v": {
+						"offset": 19200,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.0.scores": {
+						"offset": 28416,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.0.maps": {
+						"offset": 31872,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.0.weights": {
+						"offset": 35328,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.0.heads": {
+						"offset": 37056,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.1.x": {
+						"offset": 46272,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.1.q": {
+						"offset": 47040,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.1.k": {
+						"offset": 56256,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.1.v": {
+						"offset": 65472,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.1.scores": {
+						"offset": 74688,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.1.maps": {
+						"offset": 78144,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.1.weights": {
+						"offset": 81600,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.1.heads": {
+						"offset": 83328,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.3.x": {
+						"offset": 92544,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.3.q": {
+						"offset": 93312,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.3.k": {
+						"offset": 102528,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.3.v": {
+						"offset": 111744,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.3.scores": {
+						"offset": 120960,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.3.maps": {
+						"offset": 124416,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.3.weights": {
+						"offset": 127872,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.3.heads": {
+						"offset": 129600,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.5.x": {
+						"offset": 138816,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.5.q": {
+						"offset": 139584,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.5.k": {
+						"offset": 148800,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.5.v": {
+						"offset": 158016,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.5.scores": {
+						"offset": 167232,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.5.maps": {
+						"offset": 170688,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.5.weights": {
+						"offset": 174144,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.5.heads": {
+						"offset": 175872,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.8.x": {
+						"offset": 185088,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.8.q": {
+						"offset": 185856,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.8.k": {
+						"offset": 195072,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.8.v": {
+						"offset": 204288,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.8.scores": {
+						"offset": 213504,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.8.maps": {
+						"offset": 216960,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.8.weights": {
+						"offset": 220416,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.8.heads": {
+						"offset": 222144,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.11.x": {
+						"offset": 231360,
+						"length": 768,
+						"shape": [12, 64]
+					},
+					"layer.11.q": {
+						"offset": 232128,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.11.k": {
+						"offset": 241344,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.11.v": {
+						"offset": 250560,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					},
+					"layer.11.scores": {
+						"offset": 259776,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.11.maps": {
+						"offset": 263232,
+						"length": 3456,
+						"shape": [12, 2, 12, 12]
+					},
+					"layer.11.weights": {
+						"offset": 266688,
+						"length": 1728,
+						"shape": [12, 12, 12]
+					},
+					"layer.11.heads": {
+						"offset": 268416,
+						"length": 9216,
+						"shape": [12, 12, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "induction",
+			"title": "Repeated phrase",
+			"prompt": "The quick brown fox jumps over the lazy dog. The quick brown",
+			"tokens": [
+				{
+					"id": 464,
+					"text": "The"
+				},
+				{
+					"id": 2068,
+					"text": " quick"
+				},
+				{
+					"id": 7586,
+					"text": " brown"
+				},
+				{
+					"id": 21831,
+					"text": " fox"
+				},
+				{
+					"id": 18045,
+					"text": " jumps"
+				},
+				{
+					"id": 625,
+					"text": " over"
+				},
+				{
+					"id": 262,
+					"text": " the"
+				},
+				{
+					"id": 16931,
+					"text": " lazy"
+				},
+				{
+					"id": 3290,
+					"text": " dog"
+				},
+				{
+					"id": 13,
+					"text": "."
+				},
+				{
+					"id": 383,
+					"text": " The"
+				},
+				{
+					"id": 2068,
+					"text": " quick"
+				},
+				{
+					"id": 7586,
+					"text": " brown"
+				}
+			],
+			"file": {
+				"file": "induction.f32",
+				"bytes": 1221792,
+				"sha256": "d1f5302136b4c758af3679ad92b10880c6e26603416c6e4798626b4b741eaeb9",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.0.q": {
+						"offset": 832,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.0.k": {
+						"offset": 10816,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.0.v": {
+						"offset": 20800,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.0.scores": {
+						"offset": 30784,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.0.maps": {
+						"offset": 34840,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.0.weights": {
+						"offset": 38896,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.0.heads": {
+						"offset": 40924,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.1.x": {
+						"offset": 50908,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.1.q": {
+						"offset": 51740,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.1.k": {
+						"offset": 61724,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.1.v": {
+						"offset": 71708,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.1.scores": {
+						"offset": 81692,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.1.maps": {
+						"offset": 85748,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.1.weights": {
+						"offset": 89804,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.1.heads": {
+						"offset": 91832,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.3.x": {
+						"offset": 101816,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.3.q": {
+						"offset": 102648,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.3.k": {
+						"offset": 112632,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.3.v": {
+						"offset": 122616,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.3.scores": {
+						"offset": 132600,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.3.maps": {
+						"offset": 136656,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.3.weights": {
+						"offset": 140712,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.3.heads": {
+						"offset": 142740,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.5.x": {
+						"offset": 152724,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.5.q": {
+						"offset": 153556,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.5.k": {
+						"offset": 163540,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.5.v": {
+						"offset": 173524,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.5.scores": {
+						"offset": 183508,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.5.maps": {
+						"offset": 187564,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.5.weights": {
+						"offset": 191620,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.5.heads": {
+						"offset": 193648,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.8.x": {
+						"offset": 203632,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.8.q": {
+						"offset": 204464,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.8.k": {
+						"offset": 214448,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.8.v": {
+						"offset": 224432,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.8.scores": {
+						"offset": 234416,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.8.maps": {
+						"offset": 238472,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.8.weights": {
+						"offset": 242528,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.8.heads": {
+						"offset": 244556,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.11.x": {
+						"offset": 254540,
+						"length": 832,
+						"shape": [13, 64]
+					},
+					"layer.11.q": {
+						"offset": 255372,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.11.k": {
+						"offset": 265356,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.11.v": {
+						"offset": 275340,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					},
+					"layer.11.scores": {
+						"offset": 285324,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.11.maps": {
+						"offset": 289380,
+						"length": 4056,
+						"shape": [12, 2, 13, 13]
+					},
+					"layer.11.weights": {
+						"offset": 293436,
+						"length": 2028,
+						"shape": [12, 13, 13]
+					},
+					"layer.11.heads": {
+						"offset": 295464,
+						"length": 9984,
+						"shape": [12, 13, 64]
+					}
+				}
+			}
+		},
+		{
+			"id": "names",
+			"title": "Two names",
+			"prompt": "When Mary and John went to the store, John gave a drink to",
+			"tokens": [
+				{
+					"id": 2215,
+					"text": "When"
+				},
+				{
+					"id": 5335,
+					"text": " Mary"
+				},
+				{
+					"id": 290,
+					"text": " and"
+				},
+				{
+					"id": 1757,
+					"text": " John"
+				},
+				{
+					"id": 1816,
+					"text": " went"
+				},
+				{
+					"id": 284,
+					"text": " to"
+				},
+				{
+					"id": 262,
+					"text": " the"
+				},
+				{
+					"id": 3650,
+					"text": " store"
+				},
+				{
+					"id": 11,
+					"text": ","
+				},
+				{
+					"id": 1757,
+					"text": " John"
+				},
+				{
+					"id": 2921,
+					"text": " gave"
+				},
+				{
+					"id": 257,
+					"text": " a"
+				},
+				{
+					"id": 4144,
+					"text": " drink"
+				},
+				{
+					"id": 284,
+					"text": " to"
+				}
+			],
+			"file": {
+				"file": "names.f32",
+				"bytes": 1335936,
+				"sha256": "10c370175bbff510431364ba2e548db778354c3a350a6ca9ab1c64b457735846",
+				"tensors": {
+					"layer.0.x": {
+						"offset": 0,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.0.q": {
+						"offset": 896,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.0.k": {
+						"offset": 11648,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.0.v": {
+						"offset": 22400,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.0.scores": {
+						"offset": 33152,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.0.maps": {
+						"offset": 37856,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.0.weights": {
+						"offset": 42560,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.0.heads": {
+						"offset": 44912,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.1.x": {
+						"offset": 55664,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.1.q": {
+						"offset": 56560,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.1.k": {
+						"offset": 67312,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.1.v": {
+						"offset": 78064,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.1.scores": {
+						"offset": 88816,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.1.maps": {
+						"offset": 93520,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.1.weights": {
+						"offset": 98224,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.1.heads": {
+						"offset": 100576,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.3.x": {
+						"offset": 111328,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.3.q": {
+						"offset": 112224,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.3.k": {
+						"offset": 122976,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.3.v": {
+						"offset": 133728,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.3.scores": {
+						"offset": 144480,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.3.maps": {
+						"offset": 149184,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.3.weights": {
+						"offset": 153888,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.3.heads": {
+						"offset": 156240,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.5.x": {
+						"offset": 166992,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.5.q": {
+						"offset": 167888,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.5.k": {
+						"offset": 178640,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.5.v": {
+						"offset": 189392,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.5.scores": {
+						"offset": 200144,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.5.maps": {
+						"offset": 204848,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.5.weights": {
+						"offset": 209552,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.5.heads": {
+						"offset": 211904,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.8.x": {
+						"offset": 222656,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.8.q": {
+						"offset": 223552,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.8.k": {
+						"offset": 234304,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.8.v": {
+						"offset": 245056,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.8.scores": {
+						"offset": 255808,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.8.maps": {
+						"offset": 260512,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.8.weights": {
+						"offset": 265216,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.8.heads": {
+						"offset": 267568,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.11.x": {
+						"offset": 278320,
+						"length": 896,
+						"shape": [14, 64]
+					},
+					"layer.11.q": {
+						"offset": 279216,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.11.k": {
+						"offset": 289968,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.11.v": {
+						"offset": 300720,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					},
+					"layer.11.scores": {
+						"offset": 311472,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.11.maps": {
+						"offset": 316176,
+						"length": 4704,
+						"shape": [12, 2, 14, 14]
+					},
+					"layer.11.weights": {
+						"offset": 320880,
+						"length": 2352,
+						"shape": [12, 14, 14]
+					},
+					"layer.11.heads": {
+						"offset": 323232,
+						"length": 10752,
+						"shape": [12, 14, 64]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_differential.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "cpu",
+		"dtype": "float32",
+		"attention": "eager (GPT-2), then the differential formula on its Q, K, V",
+		"modelingSha256": "b591253d7acadd39635bbf6f9f6fd0a97d6be5d7cf901074e2d959ff3e478e80",
+		"x": "GPT-2 attention input, after ln_1",
+		"real": "x, q, k, v (GPT-2 small)",
+		"computed": "scores, maps, weights, heads (the formula, with the named λ and RMSNorm gain)"
+	},
+	"validation": {
+		"maxMapsError": 8.94e-7,
+		"maxWeightsError": 8.94e-7,
+		"maxHeadsError": 4.05e-6,
+		"maxRowSumsError": 2.98e-7
+	},
+	"extras": {
+		"scores": "[H, 2, T, T] Q₁K₁ᵀ/√d and Q₂K₂ᵀ/√d, d = 32 (0 where masked)",
+		"maps": "[H, 2, T, T] the two causal softmaxes",
+		"weights": "[H, T, T] maps[0] − λ·maps[1], signed; each row sums to 1 − λ",
+		"heads": "[H, T, 64] RMSNorm(weights · V) · (1 − λ_init); no output projection"
+	}
+}
