@@ -1,0 +1,2310 @@
+{
+	"schemaVersion": 1,
+	"kind": "diffusion-mmdit",
+	"variant": "flux",
+	"source": "model",
+	"model": {
+		"id": "black-forest-labs/FLUX.1-schnell",
+		"name": "FLUX.1-schnell",
+		"revision": "741f7c3ce8b383c54771c7003378a50191e9efe9",
+		"url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell/tree/741f7c3ce8b383c54771c7003378a50191e9efe9",
+		"license": "apache-2.0",
+		"licenseUrl": "https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/LICENSE.md",
+		"paper": "https://arxiv.org/abs/2403.12015",
+		"hiddenSize": 3072,
+		"attentionHeads": 24,
+		"headDim": 128,
+		"numLayers": 19,
+		"numSingleLayers": 38,
+		"patchSize": 2,
+		"latentChannels": 16,
+		"vaeScaleFactor": 8,
+		"vaeScalingFactor": 0.3611,
+		"vaeShiftFactor": 0.1159,
+		"order": "text-image",
+		"qkNorm": "rms_norm",
+		"rope": {
+			"axes": [
+				16,
+				56,
+				56
+			],
+			"theta": 10000
+		},
+		"textEncoders": [
+			{
+				"role": "CLIP-L",
+				"id": "black-forest-labs/FLUX.1-schnell/text_encoder",
+				"pooled": 768,
+				"states": "pooled output only"
+			},
+			{
+				"role": "T5-XXL",
+				"id": "black-forest-labs/FLUX.1-schnell/text_encoder_2",
+				"hidden": 4096,
+				"tokens": 256,
+				"states": "last layer"
+			}
+		],
+		"parameters": {
+			"transformer": 11891178560,
+			"text_encoder": 123060480,
+			"text_encoder_2": 4762310656,
+			"vae": 83819683,
+			"recordedBlocks": 535318336
+		}
+	},
+	"prompt": {
+		"text": "a beagle in a yard",
+		"negative": null
+	},
+	"sampling": {
+		"pipeline": "FluxImg2ImgPipeline input (strength 0.5)",
+		"scheduler": "FlowMatchEulerDiscreteScheduler",
+		"shift": 1.0,
+		"steps": 4,
+		"guidanceScale": 0,
+		"seed": 0,
+		"generator": "torch.Generator(\"cpu\")",
+		"size": 256,
+		"latentSize": 32,
+		"sigmas": [
+			1.0,
+			0.75,
+			0.5,
+			0.25,
+			0.0
+		],
+		"timesteps": [
+			1000.0,
+			750.0,
+			500.0,
+			250.0
+		],
+		"detailStep": 2,
+		"image": {
+			"file": "input.png",
+			"source": "static/architectures/sam-beagle.jpg",
+			"credit": {
+				"author": "Jon Sullivan",
+				"license": "Public domain",
+				"page": "https://commons.wikimedia.org/wiki/File:Dog_beagle.jpg"
+			},
+			"encode": "mean of the VAE latent distribution"
+		}
+	},
+	"tokens": {
+		"order": "text-image",
+		"image": {
+			"rows": 16,
+			"cols": 16
+		},
+		"text": [
+			{
+				"segment": "t5",
+				"id": 3,
+				"text": "▁",
+				"pad": false
+			},
+			{
+				"segment": "t5",
+				"id": 9,
+				"text": "a",
+				"pad": false
+			},
+			{
+				"segment": "t5",
+				"id": 36,
+				"text": "be",
+				"pad": false
+			},
+			{
+				"segment": "t5",
+				"id": 9,
+				"text": "a",
+				"pad": false
+			},
+			{
+				"segment": "t5",
+				"id": 3537,
+				"text": "gle",
+				"pad": false
+			},
+			{
+				"segment": "t5",
+				"id": 16,
+				"text": "in",
+				"pad": false
+			},
+			{
+				"segment": "t5",
+				"id": 3,
+				"text": "▁",
+				"pad": false
+			},
+			{
+				"segment": "t5",
+				"id": 9,
+				"text": "a",
+				"pad": false
+			},
+			{
+				"segment": "t5",
+				"id": 6178,
+				"text": "yard",
+				"pad": false
+			},
+			{
+				"segment": "t5",
+				"id": 1,
+				"text": "</s>",
+				"pad": false
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			},
+			{
+				"segment": "t5",
+				"id": 0,
+				"text": "<pad>",
+				"pad": true
+			}
+		],
+		"shown": [
+			{
+				"stream": "text",
+				"index": 0,
+				"segment": "t5",
+				"label": "▁",
+				"pad": false,
+				"count": 1,
+				"attention": 0
+			},
+			{
+				"stream": "text",
+				"index": 1,
+				"segment": "t5",
+				"label": "a",
+				"pad": false,
+				"count": 1,
+				"attention": 1
+			},
+			{
+				"stream": "text",
+				"index": 2,
+				"segment": "t5",
+				"label": "be",
+				"pad": false,
+				"count": 1,
+				"attention": 2
+			},
+			{
+				"stream": "text",
+				"index": 3,
+				"segment": "t5",
+				"label": "a",
+				"pad": false,
+				"count": 1,
+				"attention": 3
+			},
+			{
+				"stream": "text",
+				"index": 4,
+				"segment": "t5",
+				"label": "gle",
+				"pad": false,
+				"count": 1,
+				"attention": 4
+			},
+			{
+				"stream": "text",
+				"index": 5,
+				"segment": "t5",
+				"label": "in",
+				"pad": false,
+				"count": 1,
+				"attention": 5
+			},
+			{
+				"stream": "text",
+				"index": 6,
+				"segment": "t5",
+				"label": "▁",
+				"pad": false,
+				"count": 1,
+				"attention": 6
+			},
+			{
+				"stream": "text",
+				"index": 7,
+				"segment": "t5",
+				"label": "a",
+				"pad": false,
+				"count": 1,
+				"attention": 7
+			},
+			{
+				"stream": "text",
+				"index": 8,
+				"segment": "t5",
+				"label": "yard",
+				"pad": false,
+				"count": 1,
+				"attention": 8
+			},
+			{
+				"stream": "text",
+				"index": 9,
+				"segment": "t5",
+				"label": "</s>",
+				"pad": false,
+				"count": 1,
+				"attention": 9
+			},
+			{
+				"stream": "text",
+				"index": 10,
+				"segment": "t5",
+				"label": "pad 1/246",
+				"pad": true,
+				"count": 246,
+				"attention": 10
+			},
+			{
+				"stream": "image",
+				"index": 102,
+				"label": "r6 c6",
+				"attention": 358
+			},
+			{
+				"stream": "image",
+				"index": 103,
+				"label": "r6 c7",
+				"attention": 359
+			},
+			{
+				"stream": "image",
+				"index": 104,
+				"label": "r6 c8",
+				"attention": 360
+			},
+			{
+				"stream": "image",
+				"index": 118,
+				"label": "r7 c6",
+				"attention": 374
+			},
+			{
+				"stream": "image",
+				"index": 119,
+				"label": "r7 c7",
+				"attention": 375
+			},
+			{
+				"stream": "image",
+				"index": 120,
+				"label": "r7 c8",
+				"attention": 376
+			},
+			{
+				"stream": "image",
+				"index": 134,
+				"label": "r8 c6",
+				"attention": 390
+			},
+			{
+				"stream": "image",
+				"index": 135,
+				"label": "r8 c7",
+				"attention": 391
+			},
+			{
+				"stream": "image",
+				"index": 136,
+				"label": "r8 c8",
+				"attention": 392
+			}
+		],
+		"segments": [
+			{
+				"id": "t5",
+				"label": "T5-XXL",
+				"start": 0,
+				"length": 256
+			}
+		]
+	},
+	"images": {
+		"input": "input.png",
+		"path": {
+			"file": "path.png",
+			"frames": 5,
+			"columns": 5,
+			"tile": 96
+		}
+	},
+	"validation": {
+		"loop.sigmasVsPytorch": 0.0,
+		"loop.scaleNoiseIsLine": 0.0,
+		"patchEmbedding.packVsPytorch": 0.0,
+		"rope.pytorchAngles": 0.0,
+		"conditioning.cIsTimePlusText": 2e-05,
+		"conditioning.contextIsDoubleInput": 0.0,
+		"double.adaLnImage": 0.0,
+		"double.adaLnText": 0.0,
+		"double.attentionImage": 6e-07,
+		"double.attentionText": 6.48e-07,
+		"double.softmaxRowSum": 7.15e-07,
+		"pytorch.double.image": 3.57e-07,
+		"pytorch.double.text": 2.11e-07,
+		"single.inputIsDoubleOutput": 0.0,
+		"single.adaLn": 0.0,
+		"single.attention": 1.71e-06,
+		"single.recompute": 3.08e-07,
+		"pytorch.single.image": 3.39e-07,
+		"pytorch.single.text": 3.08e-07,
+		"vae.roundTrip": 0.299
+	},
+	"capture": {
+		"script": "scripts/diffusion/record_flux.py",
+		"scriptSha256": "08cb762a4c78cf4f772d8805ac78cad784ed55a3d370c6c437644332ab4b1cef",
+		"helperSha256": "8267ebfc31046b68b9196aee95f5f818cdf5aa7a6e77dc687ee8e1fd83e7c1c5",
+		"repoCommit": "39dad2c6f65a8ccb96be7efb0e34f77c04af5435",
+		"device": "cpu",
+		"dtype": "float32",
+		"python": "3.12.12",
+		"torch": "2.14.1",
+		"diffusers": "0.42.0",
+		"transformers": "5.21.0",
+		"seconds": 7,
+		"fetchedTensors": 62,
+		"fetchedSha256": "41c08a02b11e005ff641f27bd75133dec743913f51c53b7359d689f032118d94"
+	},
+	"notes": {
+		"singleInput": "Single block 1 reads double block 1’s output here; in the full model it reads double block 19’s. The 18 blocks between are not downloaded.",
+		"loop": "No velocity is recorded: only two of the 57 blocks run. The path shows the flow-matching line the four steps walk."
+	},
+	"heads": 24,
+	"files": {
+		"conditioning": {
+			"file": "conditioning.f32",
+			"bytes": 136448,
+			"sha256": "a1f69a9ea5edfad067ef6b824b058f298a1bfbc72a691fc629f61fe2db2955b9",
+			"tensors": {
+				"t5": {
+					"offset": 0,
+					"length": 16384,
+					"shape": [
+						256,
+						64
+					]
+				},
+				"pooled": {
+					"offset": 16384,
+					"length": 768,
+					"shape": [
+						768
+					]
+				},
+				"context": {
+					"offset": 17152,
+					"length": 16384,
+					"shape": [
+						256,
+						64
+					]
+				},
+				"timeEmbedding": {
+					"offset": 33536,
+					"length": 256,
+					"shape": [
+						4,
+						64
+					]
+				},
+				"pooledEmbedding": {
+					"offset": 33792,
+					"length": 64,
+					"shape": [
+						64
+					]
+				},
+				"c": {
+					"offset": 33856,
+					"length": 256,
+					"shape": [
+						4,
+						64
+					]
+				}
+			}
+		},
+		"loop": {
+			"file": "loop.f32",
+			"bytes": 131092,
+			"sha256": "6dcc70a49abae6f590ecab8a106f045f69d09cb9922ba6beb6b149cdbea714f5",
+			"tensors": {
+				"sigmas": {
+					"offset": 0,
+					"length": 5,
+					"shape": [
+						5
+					]
+				},
+				"x0": {
+					"offset": 5,
+					"length": 16384,
+					"shape": [
+						16,
+						32,
+						32
+					]
+				},
+				"eps": {
+					"offset": 16389,
+					"length": 16384,
+					"shape": [
+						16,
+						32,
+						32
+					]
+				}
+			}
+		},
+		"blocks": [
+			{
+				"id": "double-0",
+				"kind": "joint",
+				"layer": 0,
+				"title": "Double-stream block 1 of 19",
+				"input": "its real input: the embedded noisy latent and T5 tokens",
+				"step": 2,
+				"sigma": 0.5,
+				"timestep": 500.0,
+				"file": {
+					"file": "double-0.f32",
+					"bytes": 2787840,
+					"sha256": "21320db526a7c6f302d76d1a1bdc8be64b22f3cf0dbebe9681f7dc7411720c62",
+					"tensors": {
+						"layer.0.x": {
+							"offset": 0,
+							"length": 1280,
+							"shape": [
+								20,
+								64
+							]
+						},
+						"layer.0.in": {
+							"offset": 1280,
+							"length": 1280,
+							"shape": [
+								20,
+								64
+							]
+						},
+						"layer.0.out": {
+							"offset": 2560,
+							"length": 1280,
+							"shape": [
+								20,
+								64
+							]
+						},
+						"layer.0.attn": {
+							"offset": 3840,
+							"length": 1280,
+							"shape": [
+								20,
+								64
+							]
+						},
+						"layer.0.qRaw": {
+							"offset": 5120,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.0.kRaw": {
+							"offset": 66560,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.0.qNormed": {
+							"offset": 128000,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.0.kNormed": {
+							"offset": 189440,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.0.q": {
+							"offset": 250880,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.0.k": {
+							"offset": 312320,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.0.v": {
+							"offset": 373760,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.0.scores": {
+							"offset": 435200,
+							"length": 9600,
+							"shape": [
+								24,
+								20,
+								20
+							]
+						},
+						"layer.0.weights": {
+							"offset": 444800,
+							"length": 245760,
+							"shape": [
+								24,
+								20,
+								512
+							]
+						},
+						"layer.0.cos": {
+							"offset": 690560,
+							"length": 2560,
+							"shape": [
+								20,
+								128
+							]
+						},
+						"layer.0.sin": {
+							"offset": 693120,
+							"length": 2560,
+							"shape": [
+								20,
+								128
+							]
+						},
+						"layer.0.adaImage": {
+							"offset": 695680,
+							"length": 384,
+							"shape": [
+								6,
+								64
+							]
+						},
+						"layer.0.adaText": {
+							"offset": 696064,
+							"length": 384,
+							"shape": [
+								6,
+								64
+							]
+						},
+						"layer.0.normQImage": {
+							"offset": 696448,
+							"length": 128,
+							"shape": [
+								128
+							]
+						},
+						"layer.0.normKImage": {
+							"offset": 696576,
+							"length": 128,
+							"shape": [
+								128
+							]
+						},
+						"layer.0.normQText": {
+							"offset": 696704,
+							"length": 128,
+							"shape": [
+								128
+							]
+						},
+						"layer.0.normKText": {
+							"offset": 696832,
+							"length": 128,
+							"shape": [
+								128
+							]
+						}
+					}
+				}
+			},
+			{
+				"id": "single-0",
+				"kind": "single",
+				"layer": 1,
+				"title": "Single-stream block 1 of 38",
+				"input": "double block 1’s output, standing in for double block 19’s",
+				"step": 2,
+				"sigma": 0.5,
+				"timestep": 500.0,
+				"file": {
+					"file": "single-0.f32",
+					"bytes": 2789632,
+					"sha256": "6324e0415129b28c91216cd1340735bff1c81be630ee7a55c7f59fb81e0ae2f4",
+					"tensors": {
+						"layer.1.x": {
+							"offset": 0,
+							"length": 1280,
+							"shape": [
+								20,
+								64
+							]
+						},
+						"layer.1.in": {
+							"offset": 1280,
+							"length": 1280,
+							"shape": [
+								20,
+								64
+							]
+						},
+						"layer.1.out": {
+							"offset": 2560,
+							"length": 1280,
+							"shape": [
+								20,
+								64
+							]
+						},
+						"layer.1.attn": {
+							"offset": 3840,
+							"length": 1280,
+							"shape": [
+								20,
+								64
+							]
+						},
+						"layer.1.mlp": {
+							"offset": 5120,
+							"length": 1280,
+							"shape": [
+								20,
+								64
+							]
+						},
+						"layer.1.qRaw": {
+							"offset": 6400,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.1.kRaw": {
+							"offset": 67840,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.1.qNormed": {
+							"offset": 129280,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.1.kNormed": {
+							"offset": 190720,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.1.q": {
+							"offset": 252160,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.1.k": {
+							"offset": 313600,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.1.v": {
+							"offset": 375040,
+							"length": 61440,
+							"shape": [
+								24,
+								20,
+								128
+							]
+						},
+						"layer.1.scores": {
+							"offset": 436480,
+							"length": 9600,
+							"shape": [
+								24,
+								20,
+								20
+							]
+						},
+						"layer.1.weights": {
+							"offset": 446080,
+							"length": 245760,
+							"shape": [
+								24,
+								20,
+								512
+							]
+						},
+						"layer.1.cos": {
+							"offset": 691840,
+							"length": 2560,
+							"shape": [
+								20,
+								128
+							]
+						},
+						"layer.1.sin": {
+							"offset": 694400,
+							"length": 2560,
+							"shape": [
+								20,
+								128
+							]
+						},
+						"layer.1.ada": {
+							"offset": 696960,
+							"length": 192,
+							"shape": [
+								3,
+								64
+							]
+						},
+						"layer.1.normQ": {
+							"offset": 697152,
+							"length": 128,
+							"shape": [
+								128
+							]
+						},
+						"layer.1.normK": {
+							"offset": 697280,
+							"length": 128,
+							"shape": [
+								128
+							]
+						}
+					}
+				}
+			}
+		]
+	}
+}
