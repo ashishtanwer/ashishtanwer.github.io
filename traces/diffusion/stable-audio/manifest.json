@@ -1,0 +1,10 @@
+{
+	"schemaVersion": 1,
+	"kind": "pending",
+	"model": {
+		"id": "stabilityai/stable-audio-open-1.0",
+		"revision": "f21265c1e2710b3bd2386596943f0007f55f802e"
+	},
+	"reason": "Gated model: recording needs a Hugging Face login whose account accepted the license, and torchsde in the venv.",
+	"recorder": "scripts/diffusion/record_stable_audio.py"
+}
