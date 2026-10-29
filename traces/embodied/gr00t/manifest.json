@@ -1,0 +1,896 @@
+{
+	"schemaVersion": 1,
+	"kind": "embodied-gr00t",
+	"tab": "gr00t",
+	"model": {
+		"id": "nvidia/GR00T-N1.5-3B",
+		"name": "GR00T N1.5 3B",
+		"revision": "869830fc749c35f34771aa5209f923ac57e4564e",
+		"url": "https://huggingface.co/nvidia/GR00T-N1.5-3B/tree/869830fc749c35f34771aa5209f923ac57e4564e",
+		"license": "NVIDIA License (non-commercial: research or evaluation only)",
+		"licenseUrl": "https://huggingface.co/nvidia/GR00T-N1.5-3B/blob/869830fc749c35f34771aa5209f923ac57e4564e/LICENSE",
+		"code": "https://github.com/NVIDIA/Isaac-GR00T/tree/4af2b622892f7dcb5aae5a3fb70bcb02dc217b96",
+		"paper": "https://arxiv.org/abs/2503.14734",
+		"parameters": {
+			"total": 2724163520,
+			"vision": 427680704,
+			"connector": 2361344,
+			"llm": 914674688,
+			"adapter": 201437184,
+			"dit": 550386688,
+			"embodiment": 315360256
+		},
+		"vision": {
+			"name": "SigLIP (Eagle 2.5)",
+			"layers": 27,
+			"width": 1152,
+			"heads": 16,
+			"patch": 14,
+			"imageSize": 224,
+			"grid": 16
+		},
+		"llm": {
+			"name": "Qwen3-1.7B",
+			"layers": 28,
+			"kept": 12,
+			"width": 2048,
+			"heads": 16,
+			"kvHeads": 8,
+			"headDim": 128
+		},
+		"adapter": {
+			"layers": 4,
+			"width": 2048,
+			"heads": 32
+		},
+		"dit": {
+			"layers": 16,
+			"width": 1536,
+			"heads": 32,
+			"headDim": 48,
+			"output": 1024,
+			"crossEvery": 2
+		},
+		"flow": {
+			"steps": 4,
+			"buckets": 1000,
+			"horizon": 16,
+			"maxAction": 32,
+			"maxState": 64,
+			"futureTokens": 32
+		},
+		"embodiments": {
+			"slots": 32,
+			"trained": {
+				"gr1": 24,
+				"oxe_droid": 17,
+				"agibot_genie1": 26,
+				"new_embodiment": 31
+			},
+			"selected": 24
+		},
+		"slotMatrices": [
+			"state encoder W₁",
+			"state encoder W₂",
+			"action encoder W₁",
+			"action encoder W₂",
+			"action encoder W₃",
+			"action decoder W₁",
+			"action decoder W₂"
+		]
+	},
+	"episode": {
+		"dataset": "Isaac-GR00T demo_data/robot_sim.PickNPlace (GR1 arms only, simulation)",
+		"datasetUrl": "https://github.com/NVIDIA/Isaac-GR00T/tree/4af2b622892f7dcb5aae5a3fb70bcb02dc217b96/demo_data/robot_sim.PickNPlace",
+		"episode": 0,
+		"instruction": "pick the pear from the counter and place it in the plate",
+		"steps": 416,
+		"hz": 20,
+		"embodiment": "gr1",
+		"dataConfig": "fourier_gr1_arms_only",
+		"joints": [
+			"left arm · shoulder pitch",
+			"left arm · shoulder roll",
+			"left arm · shoulder yaw",
+			"left arm · elbow pitch",
+			"left arm · wrist yaw",
+			"left arm · wrist roll",
+			"left arm · wrist pitch",
+			"right arm · shoulder pitch",
+			"right arm · shoulder roll",
+			"right arm · shoulder yaw",
+			"right arm · elbow pitch",
+			"right arm · wrist yaw",
+			"right arm · wrist roll",
+			"right arm · wrist pitch",
+			"left hand · little",
+			"left hand · ring",
+			"left hand · middle",
+			"left hand · index",
+			"left hand · thumb rotation",
+			"left hand · thumb bending",
+			"right hand · little",
+			"right hand · ring",
+			"right hand · middle",
+			"right hand · index",
+			"right hand · thumb rotation",
+			"right hand · thumb bending"
+		],
+		"keys": ["left_arm", "right_arm", "left_hand", "right_hand"],
+		"mode": "open loop: every 16th recorded observation in, a 16-step chunk out, against the 16 recorded actions",
+		"starts": [
+			0, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 256, 272, 288, 304,
+			320, 336, 352, 368, 384, 400
+		],
+		"focus": 6,
+		"seeds": [
+			0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25
+		],
+		"seconds": [
+			3.667444944381714, 0.24178099632263184, 0.22390198707580566, 0.22438406944274902,
+			0.22618603706359863, 0.23658275604248047, 0.42872118949890137, 0.2247638702392578,
+			0.2347731590270996, 0.219559907913208, 0.2275218963623047, 0.22279810905456543,
+			0.22324895858764648, 0.2275688648223877, 0.22790098190307617, 0.22200965881347656,
+			0.22550201416015625, 0.22644877433776855, 0.219818115234375, 0.2251882553100586,
+			0.2266077995300293, 0.22797417640686035, 0.22794795036315918, 0.2308790683746338,
+			0.22270679473876953, 0.22538185119628906
+		],
+		"mse": {
+			"all": 1.7489164323592077,
+			"arms": 0.042454747857490926,
+			"byPart": {
+				"left_arm": 0.02096311934743654,
+				"right_arm": 0.06394637636754534,
+				"left_hand": 4.48011268622483,
+				"right_hand": 2.9994641089975898
+			}
+		}
+	},
+	"prompt": {
+		"tokens": [
+			"<|im_start|>",
+			"system",
+			"Ċ",
+			"You",
+			"Ġare",
+			"Ġa",
+			"Ġhelpful",
+			"Ġassistant",
+			".",
+			"<|im_end|>",
+			"Ċ",
+			"<|im_start|>",
+			"user",
+			"Ċ",
+			"<",
+			"image",
+			"Ġ",
+			"1",
+			">",
+			"<img>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"<IMG_CONTEXT>",
+			"</img>",
+			"['",
+			"pick",
+			"Ġthe",
+			"Ġpear",
+			"Ġfrom",
+			"Ġthe",
+			"Ġcounter",
+			"Ġand",
+			"Ġplace",
+			"Ġit",
+			"Ġin",
+			"Ġthe",
+			"Ġplate",
+			"']",
+			"<|im_end|>",
+			"Ċ",
+			"<|im_start|>",
+			"assistant",
+			"Ċ"
+		],
+		"image": [20, 276],
+		"before": 20,
+		"after": [
+			276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294,
+			295
+		],
+		"chat": "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\n<image 1><img><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT><IMG_CONTEXT></img>['pick the pear from the counter and place it in the plate']<|im_end|>\n<|im_start|>assistant\n"
+	},
+	"dit": {
+		"rows": [
+			"state",
+			"a1",
+			"a2",
+			"a3",
+			"a4",
+			"a5",
+			"a6",
+			"a7",
+			"a8",
+			"a9",
+			"a10",
+			"a11",
+			"a12",
+			"a13",
+			"a14",
+			"a15",
+			"a16"
+		],
+		"rowIndex": [0, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48],
+		"tokens": [
+			"state",
+			"f1",
+			"f2",
+			"f3",
+			"f4",
+			"f5",
+			"f6",
+			"f7",
+			"f8",
+			"f9",
+			"f10",
+			"f11",
+			"f12",
+			"f13",
+			"f14",
+			"f15",
+			"f16",
+			"f17",
+			"f18",
+			"f19",
+			"f20",
+			"f21",
+			"f22",
+			"f23",
+			"f24",
+			"f25",
+			"f26",
+			"f27",
+			"f28",
+			"f29",
+			"f30",
+			"f31",
+			"f32",
+			"a1",
+			"a2",
+			"a3",
+			"a4",
+			"a5",
+			"a6",
+			"a7",
+			"a8",
+			"a9",
+			"a10",
+			"a11",
+			"a12",
+			"a13",
+			"a14",
+			"a15",
+			"a16"
+		],
+		"timesteps": [0, 250, 500, 750],
+		"times": [0.0, 0.25, 0.5, 0.75]
+	},
+	"images": {
+		"frames": {
+			"file": "frames.webp",
+			"sha256": "b2fc73c51862fada398743c54030c13b9f5394fd70c813a5a82471ff6989505a",
+			"frames": 104,
+			"width": 112,
+			"height": 112,
+			"every": 4,
+			"note": "tile k is the camera frame the policy reads at step 4k (video frame 4k + 1)"
+		},
+		"input": {
+			"file": "input.webp",
+			"sha256": "cb6fb1511e514a03b2d7f2a297c0f80dfb441d6cb28d26b5e7777896ea5844a4",
+			"width": 224,
+			"height": 224
+		}
+	},
+	"episodeFile": {
+		"file": "episode.f32",
+		"sha256": "47bf29ef362d6fe1da4c30ce85bcb47ac855e567762a65d65cc2f9224643cd34",
+		"bytes": 662584,
+		"tensors": {
+			"state": {
+				"offset": 0,
+				"length": 10816,
+				"shape": [416, 26]
+			},
+			"action": {
+				"offset": 10816,
+				"length": 10816,
+				"shape": [416, 26]
+			},
+			"chunks": {
+				"offset": 21632,
+				"length": 10816,
+				"shape": [26, 16, 26]
+			},
+			"flow": {
+				"offset": 32448,
+				"length": 66560,
+				"shape": [26, 5, 16, 32]
+			},
+			"velocity": {
+				"offset": 99008,
+				"length": 53248,
+				"shape": [26, 4, 16, 32]
+			},
+			"noise": {
+				"offset": 152256,
+				"length": 13312,
+				"shape": [26, 16, 32]
+			},
+			"low": {
+				"offset": 165568,
+				"length": 26,
+				"shape": [26]
+			},
+			"high": {
+				"offset": 165594,
+				"length": 26,
+				"shape": [26]
+			},
+			"chunkMse": {
+				"offset": 165620,
+				"length": 26,
+				"shape": [26]
+			}
+		}
+	},
+	"focusFile": {
+		"file": "focus.f32",
+		"sha256": "d7dff8b2bf9378bba4bce9273a14914da62025da1ed93ec0bd69655beccb02e2",
+		"bytes": 4310424,
+		"tensors": {
+			"vitRms": {
+				"offset": 0,
+				"length": 7168,
+				"shape": [28, 256]
+			},
+			"patchTokens": {
+				"offset": 7168,
+				"length": 16384,
+				"shape": [256, 64]
+			},
+			"llmRms": {
+				"offset": 23552,
+				"length": 3848,
+				"shape": [13, 296]
+			},
+			"features": {
+				"offset": 27400,
+				"length": 18944,
+				"shape": [296, 64]
+			},
+			"featureNorms": {
+				"offset": 46344,
+				"length": 296,
+				"shape": [296]
+			},
+			"llmWeights": {
+				"offset": 46640,
+				"length": 94720,
+				"shape": [16, 20, 296]
+			},
+			"llmScores": {
+				"offset": 141360,
+				"length": 6400,
+				"shape": [16, 20, 20]
+			},
+			"llmMass": {
+				"offset": 147760,
+				"length": 720,
+				"shape": [12, 20, 3]
+			},
+			"adapterRms": {
+				"offset": 148480,
+				"length": 1480,
+				"shape": [5, 296]
+			},
+			"adapted": {
+				"offset": 149960,
+				"length": 18944,
+				"shape": [296, 64]
+			},
+			"wordsIn": {
+				"offset": 168904,
+				"length": 1280,
+				"shape": [20, 64]
+			},
+			"sinusoid": {
+				"offset": 170184,
+				"length": 1024,
+				"shape": [4, 256]
+			},
+			"temb": {
+				"offset": 171208,
+				"length": 256,
+				"shape": [4, 64]
+			},
+			"adaRms": {
+				"offset": 171464,
+				"length": 128,
+				"shape": [4, 16, 2]
+			},
+			"scale1": {
+				"offset": 171592,
+				"length": 256,
+				"shape": [4, 64]
+			},
+			"shift1": {
+				"offset": 171848,
+				"length": 256,
+				"shape": [4, 64]
+			},
+			"scale2": {
+				"offset": 172104,
+				"length": 256,
+				"shape": [4, 64]
+			},
+			"shift2": {
+				"offset": 172360,
+				"length": 256,
+				"shape": [4, 64]
+			},
+			"outShift": {
+				"offset": 172616,
+				"length": 256,
+				"shape": [4, 64]
+			},
+			"outScale": {
+				"offset": 172872,
+				"length": 256,
+				"shape": [4, 64]
+			},
+			"blockRms": {
+				"offset": 173128,
+				"length": 3332,
+				"shape": [4, 17, 49]
+			},
+			"input1": {
+				"offset": 176460,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"adaln1": {
+				"offset": 180812,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"attn1": {
+				"offset": 185164,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"mid1": {
+				"offset": 189516,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"ffHidden1": {
+				"offset": 193868,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"output1": {
+				"offset": 198220,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"adaln2": {
+				"offset": 202572,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"attn2": {
+				"offset": 206924,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"mid2": {
+				"offset": 211276,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"ffHidden2": {
+				"offset": 215628,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"output2": {
+				"offset": 219980,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"crossWeights": {
+				"offset": 224332,
+				"length": 644096,
+				"shape": [4, 32, 17, 296]
+			},
+			"crossScores": {
+				"offset": 868428,
+				"length": 43520,
+				"shape": [4, 32, 17, 20]
+			},
+			"selfWeights": {
+				"offset": 911948,
+				"length": 106624,
+				"shape": [4, 32, 17, 49]
+			},
+			"selfScores": {
+				"offset": 1018572,
+				"length": 36992,
+				"shape": [4, 32, 17, 17]
+			},
+			"crossMass": {
+				"offset": 1055564,
+				"length": 1632,
+				"shape": [4, 8, 17, 3]
+			},
+			"ditOutput": {
+				"offset": 1057196,
+				"length": 4352,
+				"shape": [4, 17, 64]
+			},
+			"stateJoints": {
+				"offset": 1061548,
+				"length": 26,
+				"shape": [26]
+			},
+			"stateInput": {
+				"offset": 1061574,
+				"length": 64,
+				"shape": [64]
+			},
+			"stateHidden": {
+				"offset": 1061638,
+				"length": 64,
+				"shape": [64]
+			},
+			"stateToken": {
+				"offset": 1061702,
+				"length": 64,
+				"shape": [64]
+			},
+			"actionW1": {
+				"offset": 1061766,
+				"length": 4096,
+				"shape": [4, 16, 64]
+			},
+			"tau": {
+				"offset": 1065862,
+				"length": 256,
+				"shape": [4, 64]
+			},
+			"actionToken": {
+				"offset": 1066118,
+				"length": 4096,
+				"shape": [4, 16, 64]
+			},
+			"positions": {
+				"offset": 1070214,
+				"length": 1024,
+				"shape": [16, 64]
+			},
+			"decoderHidden": {
+				"offset": 1071238,
+				"length": 4096,
+				"shape": [4, 16, 64]
+			},
+			"future": {
+				"offset": 1075334,
+				"length": 2048,
+				"shape": [32, 64]
+			},
+			"slots": {
+				"offset": 1077382,
+				"length": 224,
+				"shape": [7, 32]
+			}
+		}
+	},
+	"validation": {
+		"flowEulerUpdate": 0.0,
+		"unnormalizedChunk": 4.172325134277344e-7,
+		"recordedActionsMatchParquet": 1.1868211524657113e-7,
+		"recordedStateMatchesParquet": 1.1389194476407738e-7,
+		"stateSinCos": 9.93961071782401e-8,
+		"statePaddingZero": 0.0,
+		"featuresAreFinalNormOfLayer12": 0.0,
+		"finalNormRebuild": 9.367896410594767e-6,
+		"patchTokensSpliced": 0.0,
+		"crossRebuild": 5.841281302210177e-6,
+		"selfRebuild": 2.051765513932935e-6,
+		"crossBlocksRebuild": 8.502289919221084e-6,
+		"llmAttentionRebuild": 1.094898014519785e-5,
+		"adaLnRebuild": 5.640309432841661e-7,
+		"block1Residual": 2.888590097427368e-5,
+		"focusFrameMatchesVideo": 0.0,
+		"parity.sdpaRerun.features": 0.0,
+		"parity.sdpaRerun.chunk": 0.0,
+		"parity.eagerSameDevice.features": 0.0013103485107421875,
+		"parity.eagerSameDevice.chunk": 6.183981895446777e-7,
+		"parity.eagerCpu.features": 0.0019054412841796875,
+		"parity.eagerCpu.chunk": 1.7881393432617188e-6,
+		"parity.bfloat16.features": 6.369165658950806,
+		"parity.bfloat16.chunk": 0.015489578247070312,
+		"parity.rerunWithoutHooks": 0.0,
+		"parity.featureScale": 91.12855529785156,
+		"openLoopMse": 1.7489164323592077,
+		"openLoopMseArms": 0.042454747857490926
+	},
+	"capture": {
+		"device": "mps",
+		"dtype": "float32 (bfloat16 checkpoint, upcast)",
+		"attention": "sdpa",
+		"versions": {
+			"torch": "2.14.1",
+			"transformers": "4.51.3",
+			"diffusers": "0.33.1",
+			"numpy": "1.26.4"
+		},
+		"recorded": "2026-10-29T19:46:45+00:00",
+		"script": "scripts/embodied/record_gr00t.py",
+		"patches": "scripts/embodied/gr00t_mac.py"
+	}
+}
