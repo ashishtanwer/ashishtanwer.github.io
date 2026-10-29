@@ -1,0 +1,603 @@
+{
+ "schemaVersion": 1,
+ "kind": "cosmos",
+ "model": {
+  "id": "nvidia/Cosmos-Predict2-2B-Video2World",
+  "name": "Cosmos-Predict2 2B Video2World",
+  "revision": "f50c09f5d8ab133a90cac3f4886a6471e9ba3f18",
+  "url": "https://huggingface.co/nvidia/Cosmos-Predict2-2B-Video2World",
+  "license": "NVIDIA Open Model License",
+  "licenseUrl": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+  "numLayers": 28,
+  "hiddenSize": 2048,
+  "attentionHeads": 16,
+  "attentionHeadSize": 128,
+  "intermediateSize": 8192,
+  "adalnLora": 256,
+  "textDim": 1024,
+  "textEncoder": "T5-11B encoder (google t5 v1.1 xxl), 24 blocks",
+  "textTokens": 512,
+  "latentChannels": 16,
+  "tokenGrid": [
+   4,
+   22,
+   40
+  ],
+  "patch": [
+   1,
+   2,
+   2
+  ],
+  "ropeScale": [
+   1.0,
+   3.0,
+   3.0
+  ],
+  "vae": "Wan 2.1 VAE (AutoencoderKLWan): 8 × 8 pixels and 4 frames per latent pixel",
+  "blocksRecorded": [
+   1,
+   14,
+   28
+  ],
+  "parameters": 1956413440
+ },
+ "sampling": {
+  "steps": 35,
+  "guidance": 7.0,
+  "fps": 16,
+  "seed": 1,
+  "height": 352,
+  "width": 640,
+  "frames": 13,
+  "givenLatentFrames": 1,
+  "sigmas": [
+   80.0,
+   68.00509643554688,
+   57.58598327636719,
+   48.56623077392578,
+   40.78557205200195,
+   34.098785400390625,
+   28.374584197998047,
+   23.494613647460938,
+   19.352453231811523,
+   15.85269832611084,
+   12.910082817077637,
+   10.448640823364258,
+   8.400935173034668,
+   6.707308292388916,
+   5.315194606781006,
+   4.178465843200684,
+   3.256821632385254,
+   2.51521897315979,
+   1.92333984375,
+   1.4550960063934326,
+   1.0881706476211548,
+   0.803593099117279,
+   0.5853481292724609,
+   0.42001572251319885,
+   0.29644227027893066,
+   0.20544038712978363,
+   0.13951647281646729,
+   0.09262494742870331,
+   0.059947311878204346,
+   0.037694983184337616,
+   0.02293451875448227,
+   0.013433818705379963,
+   0.007528020069003105,
+   0.004003689158707857,
+   0.0020000000949949026,
+   0.0020000000949949026
+  ],
+  "t": [
+   0.9876543283462524,
+   0.9855083227157593,
+   0.9829310774803162,
+   0.979824960231781,
+   0.9760683178901672,
+   0.9715089797973633,
+   0.96595698595047,
+   0.9591746926307678,
+   0.9508658647537231,
+   0.9406622648239136,
+   0.9281097054481506,
+   0.912653386592865,
+   0.8936275839805603,
+   0.8702530264854431,
+   0.8416517376899719,
+   0.8068926334381104,
+   0.7650829553604126,
+   0.7155227065086365,
+   0.6579254865646362,
+   0.5926839709281921,
+   0.5211119651794434,
+   0.44555118680000305,
+   0.3692237138748169,
+   0.2957824468612671,
+   0.2286582887172699,
+   0.17042766511440277,
+   0.12243480235338211,
+   0.08477286994457245,
+   0.056556880474090576,
+   0.036325689405202866,
+   0.02242031879723072,
+   0.013255743309855461,
+   0.007471771910786629,
+   0.003987723961472511,
+   0.001996008213609457
+  ],
+  "sigmaGiven": 0.0001,
+  "detailSteps": [
+   0,
+   17,
+   34
+  ],
+  "previewSteps": [
+   0,
+   5,
+   10,
+   17,
+   25,
+   34
+  ],
+  "precision": "float32 on the CPU; T5 in bfloat16 (the release runs bfloat16 on CUDA)",
+  "note": "the pipeline's docstring example at 640 × 352 and 13 frames instead of 1280 × 704 and 93"
+ },
+ "prompt": "A close-up shot captures a vibrant yellow scrubber vigorously working on a grimy plate, its bristles moving in circular motions to lift stubborn grease and food residue. The dish, once covered in remnants of a hearty meal, gradually reveals its original glossy surface. Suds form and bubble around the scrubber, creating a satisfying visual of cleanliness in progress. The sound of scrubbing fills the air, accompanied by the gentle clinking of the dish against the sink. As the scrubber continues its task, the dish transforms, gleaming under the bright kitchen lights, symbolizing the triumph of cleanliness over mess.",
+ "negativePrompt": "The video captures a series of frames showing ugly scenes, static with no motion, motion blur, over-saturation, shaky footage, low resolution, grainy texture, pixelated images, poorly lit areas, underexposed and overexposed scenes, poor color balance, washed out colors, choppy sequences, jerky movements, low frame rate, artifacting, color banding, unnatural transitions, outdated special effects, fake elements, unconvincing visuals, poorly edited content, jump cuts, visual noise, and flickering. Overall, the video is of poor quality.",
+ "promptTokens": [
+  "▁A",
+  "▁close",
+  "-",
+  "up",
+  "▁shot",
+  "▁capture",
+  "s",
+  "▁",
+  "a",
+  "▁vibrant",
+  "▁yellow",
+  "▁scrub",
+  "ber",
+  "▁vigorous",
+  "ly",
+  "▁working",
+  "▁on",
+  "▁",
+  "a",
+  "▁grim",
+  "y",
+  "▁plate",
+  ",",
+  "▁its",
+  "▁br",
+  "ist",
+  "les",
+  "▁moving",
+  "▁in",
+  "▁circular",
+  "▁motion",
+  "s",
+  "▁to",
+  "▁lift",
+  "▁stubborn",
+  "▁grease",
+  "▁and",
+  "▁food",
+  "▁residue",
+  ".",
+  "▁The",
+  "▁dish",
+  ",",
+  "▁once",
+  "▁covered",
+  "▁in",
+  "▁remnant",
+  "s",
+  "▁of",
+  "▁",
+  "a",
+  "▁heart",
+  "y",
+  "▁meal",
+  ",",
+  "▁gradually",
+  "▁",
+  "reveals",
+  "▁its",
+  "▁original",
+  "▁glossy",
+  "▁surface",
+  ".",
+  "▁Sud",
+  "s",
+  "▁form",
+  "▁and",
+  "▁bubble",
+  "▁around",
+  "▁the",
+  "▁scrub",
+  "ber",
+  ",",
+  "▁creating",
+  "▁",
+  "a",
+  "▁satisfying",
+  "▁visual",
+  "▁of",
+  "▁cleanliness",
+  "▁in",
+  "▁progress",
+  ".",
+  "▁The",
+  "▁sound",
+  "▁of",
+  "▁",
+  "s",
+  "c",
+  "rubbing",
+  "▁fill",
+  "s",
+  "▁the",
+  "▁air",
+  ",",
+  "▁",
+  "accompanied",
+  "▁by",
+  "▁the",
+  "▁gentle",
+  "▁",
+  "clin",
+  "king",
+  "▁of",
+  "▁the",
+  "▁dish",
+  "▁against",
+  "▁the",
+  "▁sink",
+  ".",
+  "▁As",
+  "▁the",
+  "▁scrub",
+  "ber",
+  "▁continues",
+  "▁its",
+  "▁task",
+  ",",
+  "▁the",
+  "▁dish",
+  "▁transform",
+  "s",
+  ",",
+  "▁",
+  "gle",
+  "am",
+  "ing",
+  "▁under",
+  "▁the",
+  "▁bright",
+  "▁kitchen",
+  "▁lights",
+  ",",
+  "▁symbol",
+  "izing",
+  "▁the",
+  "▁triumph",
+  "▁of",
+  "▁cleanliness",
+  "▁over",
+  "▁mess",
+  ".",
+  "</s>"
+ ],
+ "realTokens": 143,
+ "guardrail": {
+  "package": "cosmos_guardrail 0.3.2: nvidia/Cosmos-1.0-Guardrail (blocklist, RetinaFace) + Qwen/Qwen3Guard-Gen-0.6B",
+  "text": {
+   "prompt": true,
+   "negative": true
+  },
+  "video": "the pipeline's check_video_safety on the decoded frames (RetinaFace face blur)"
+ },
+ "input": {
+  "image": {
+   "file": "input.webp",
+   "sha256": "d84c59bb7e3bd26eb091b1df7ccfaf7468eb011a0a71892443bcc449cd2c7cae",
+   "frames": 1,
+   "width": 240,
+   "height": 132
+  },
+  "url": "https://huggingface.co/datasets/huggingface/documentation-images/resolve/8d04c5b37984c76e594293aab2d610490dae8ec4/diffusers/yellow-scrubber.png",
+  "sha256": "c3f23a6d28ce10a407a8bcd12b675564a3ad5eacae5c3eadba9af45b021b8d97"
+ },
+ "positions": [
+  {
+   "row": 11,
+   "col": 20,
+   "label": "scrubber"
+  },
+  {
+   "row": 6,
+   "col": 8,
+   "label": "plate rim"
+  },
+  {
+   "row": 18,
+   "col": 30,
+   "label": "sink"
+  }
+ ],
+ "stages": [
+  "block input",
+  "after self-attention",
+  "after text cross-attention",
+  "block output"
+ ],
+ "previewDims": 8,
+ "frames": {
+  "file": "frames.webp",
+  "sha256": "4bd08aea2375abf25ae8fbd58287007726dce272795ca5e23c20873c6f9276f5",
+  "frames": 13,
+  "width": 240,
+  "height": 132
+ },
+ "steps": {
+  "file": "steps.webp",
+  "sha256": "811b64643de71fa55db8f25993799fa4aeea2c5b5889bbcdb81ac2ad101d1034",
+  "frames": 24,
+  "width": 120,
+  "height": 66
+ },
+ "details": [
+  {
+   "file": "steps/00.f32",
+   "sha256": "19e1c5e47cd2b44da5a9aa907b8a8838b6f9c13d77ac614498cb37ea6f148564",
+   "bytes": 293376,
+   "tensors": {
+    "selfMass": {
+     "offset": 0,
+     "length": 768,
+     "shape": [
+      3,
+      16,
+      4,
+      4
+     ]
+    },
+    "givenMap": {
+     "offset": 768,
+     "length": 42240,
+     "shape": [
+      3,
+      16,
+      880
+     ]
+    },
+    "crossWeights": {
+     "offset": 43008,
+     "length": 27648,
+     "shape": [
+      3,
+      16,
+      4,
+      144
+     ]
+    },
+    "preview": {
+     "offset": 70656,
+     "length": 384,
+     "shape": [
+      3,
+      4,
+      4,
+      8
+     ]
+    },
+    "blockShares": {
+     "offset": 71040,
+     "length": 2304,
+     "shape": [
+      3,
+      3,
+      16,
+      4,
+      4
+     ]
+    }
+   }
+  },
+  {
+   "file": "steps/17.f32",
+   "sha256": "2222b921d09bb84cef590cd8f85f484e9d0590f272a81288f59adff6b0a6ad7e",
+   "bytes": 293376,
+   "tensors": {
+    "selfMass": {
+     "offset": 0,
+     "length": 768,
+     "shape": [
+      3,
+      16,
+      4,
+      4
+     ]
+    },
+    "givenMap": {
+     "offset": 768,
+     "length": 42240,
+     "shape": [
+      3,
+      16,
+      880
+     ]
+    },
+    "crossWeights": {
+     "offset": 43008,
+     "length": 27648,
+     "shape": [
+      3,
+      16,
+      4,
+      144
+     ]
+    },
+    "preview": {
+     "offset": 70656,
+     "length": 384,
+     "shape": [
+      3,
+      4,
+      4,
+      8
+     ]
+    },
+    "blockShares": {
+     "offset": 71040,
+     "length": 2304,
+     "shape": [
+      3,
+      3,
+      16,
+      4,
+      4
+     ]
+    }
+   }
+  },
+  {
+   "file": "steps/34.f32",
+   "sha256": "9b79821ba94dedc982fd199d3578260e1c2c30f295f6ab5404483777f9c2039d",
+   "bytes": 293376,
+   "tensors": {
+    "selfMass": {
+     "offset": 0,
+     "length": 768,
+     "shape": [
+      3,
+      16,
+      4,
+      4
+     ]
+    },
+    "givenMap": {
+     "offset": 768,
+     "length": 42240,
+     "shape": [
+      3,
+      16,
+      880
+     ]
+    },
+    "crossWeights": {
+     "offset": 43008,
+     "length": 27648,
+     "shape": [
+      3,
+      16,
+      4,
+      144
+     ]
+    },
+    "preview": {
+     "offset": 70656,
+     "length": 384,
+     "shape": [
+      3,
+      4,
+      4,
+      8
+     ]
+    },
+    "blockShares": {
+     "offset": 71040,
+     "length": 2304,
+     "shape": [
+      3,
+      3,
+      16,
+      4,
+      4
+     ]
+    }
+   }
+  }
+ ],
+ "common": {
+  "file": "common.f32",
+  "sha256": "7e9ab3866b58cf01b2b823a9ab65b61676054d3ee9011cc9dd06b4654f7a8cb7",
+  "bytes": 228604,
+  "tensors": {
+   "givenLatent": {
+    "offset": 0,
+    "length": 56320,
+    "shape": [
+     16,
+     44,
+     80
+    ]
+   },
+   "sigmas": {
+    "offset": 56320,
+    "length": 36,
+    "shape": [
+     36
+    ]
+   },
+   "promptNorms": {
+    "offset": 56356,
+    "length": 143,
+    "shape": [
+     143
+    ]
+   },
+   "negativeNorms": {
+    "offset": 56499,
+    "length": 512,
+    "shape": [
+     512
+    ]
+   },
+   "x0Std": {
+    "offset": 57011,
+    "length": 140,
+    "shape": [
+     35,
+     4
+    ]
+   }
+  }
+ },
+ "bytes": 1262166,
+ "validation": {
+  "blockOneVsReference": 0.0,
+  "checkedModelVsTransformer": 0.0,
+  "crossAttentionRowsVsSdpa": 1.1920928955078125e-07,
+  "decodedFinalVsPipelineOutput": 0.00784313678741455,
+  "eulerChainVsPipeline": 3.0517578125e-05,
+  "karrasSigmasVsScheduler": 0.0,
+  "selfAttentionRowsVsSdpa": 3.159046173095703e-06
+ },
+ "capture": {
+  "timestamp": "2026-10-29T05:12:39.269199+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "torchvision": "0.29.1",
+   "diffusers": "0.42.0",
+   "transformers": "5.21.0",
+   "cosmos_guardrail": "0.3.2",
+   "numpy": "2.5.4",
+   "Pillow": "13.0.0"
+  },
+  "script": "scripts/diffusion/record_cosmos.py",
+  "scriptSha256": "bbf06692fa8aa75a2c8fa6a1ab61dc6516a593a2ecfcae2069175f7866404475",
+  "weightsSha256": {
+   "transformer/diffusion_pytorch_model.safetensors": "ab10dfce8402f8bdeffb303932daadec10384bb35f62bb7e4695d5161732d6a3",
+   "vae/diffusion_pytorch_model.safetensors": "d6e524b3fffede1787a74e81b30976dce5400c4439ba64222168e607ed19e793",
+   "text_encoder/model-00001-of-00002.safetensors": "d90c625c136567ef62dc13d7fde0d54393a2b08e7400b3594d38c6a9ba12f897",
+   "text_encoder/model-00002-of-00002.safetensors": "30dea2006604226b944972536b9fc1ae40e3ef39b844140641cc450af5490158"
+  },
+  "seconds": 1445,
+  "notes": "One Cosmos2VideoToWorldPipeline call with the guardrail; hooks only observe. x̂₀ of every step is rebuilt from the recorded transformer outputs and must reproduce the pipeline's latents step by step. Block 1 is re-run with pytorch/diffusion_cosmos.py's blocks from its captured input; attention weights come from its q and k and must reproduce its SDPA output. The checked model is also run once against the transformer."
+ }
+}
