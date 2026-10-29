@@ -1,0 +1,717 @@
+{
+ "schemaVersion": 1,
+ "kind": "token-world-model",
+ "tab": "iris",
+ "model": {
+  "id": "eloialonso/iris",
+  "name": "IRIS \u00b7 Breakout",
+  "revision": "c0539e99adf924d44be0f19b12de00639daa5550",
+  "file": "pretrained_models/Breakout.pt",
+  "url": "https://huggingface.co/eloialonso/iris/blob/c0539e99adf924d44be0f19b12de00639daa5550/pretrained_models/Breakout.pt",
+  "code": "https://github.com/eloialonso/iris/tree/24326aaaa283c527f42b89b44cfdecf2665a7a16",
+  "codeCommit": "24326aaaa283c527f42b89b44cfdecf2665a7a16",
+  "license": "GPL-3.0 (code); the checkpoint repo states no license",
+  "licenseUrl": "https://github.com/eloialonso/iris/blob/24326aaaa283c527f42b89b44cfdecf2665a7a16/LICENSE",
+  "paper": "https://arxiv.org/abs/2209.00588",
+  "parameters": {
+   "tokenizer": 4027523,
+   "worldModel": 8447493,
+   "actorCritic": 3217957
+  },
+  "vocab": 512,
+  "codeDim": 512,
+  "grid": [
+   4,
+   4
+  ],
+  "frameTokens": 16,
+  "tokensPerBlock": 17,
+  "maxBlocks": 20,
+  "layers": 10,
+  "heads": 4,
+  "width": 256,
+  "actions": 4,
+  "imageSize": 64
+ },
+ "env": {
+  "id": "BreakoutNoFrameskip-v4",
+  "seed": 0,
+  "policySeed": 0,
+  "actions": [
+   "NOOP",
+   "FIRE",
+   "RIGHT",
+   "LEFT"
+  ],
+  "frameSkip": 4,
+  "noopMax": 1,
+  "size": 64,
+  "temperature": 0.5,
+  "steps": 1000,
+  "return": 29.0,
+  "gameOver": false,
+  "policy": "the checkpoint's actor-critic on the tokenizer's reconstruction of each frame, sampled at temperature 0.5 (IRIS's test collection)"
+ },
+ "window": {
+  "start": 583,
+  "first": 563,
+  "last": 603,
+  "burnIn": 20,
+  "horizon": 20,
+  "actions": [
+   1,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1,
+   3,
+   3,
+   2,
+   2,
+   3,
+   1,
+   2
+  ],
+  "rewards": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   1.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "lives": [
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
+   4
+  ],
+  "ends": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1
+  ],
+  "fed": [
+   3,
+   3,
+   3,
+   3,
+   1,
+   1,
+   3,
+   3,
+   3,
+   3,
+   3,
+   1,
+   1,
+   3,
+   3,
+   2,
+   2,
+   3,
+   1,
+   2
+  ],
+  "imagineSeed": 0,
+  "note": "frames first \u2026 last are real; step t of imagination feeds the action taken at real frame start + t, and imagined frame start + t + 1 is compared with the real one."
+ },
+ "sprites": {
+  "real": {
+   "file": "real.png",
+   "sha256": "3c4ab17082b5a8e64af7e249e31b7cd704cca6a24a469759f60fe1ddb01ffbea",
+   "frames": 41,
+   "width": 64,
+   "height": 64
+  },
+  "recon": {
+   "file": "recon.png",
+   "sha256": "6189a21b09ffe0dcb8682eaa3808e3ba6187354c4662a3a3de2c2e6e16f8b87a",
+   "frames": 41,
+   "width": 64,
+   "height": 64
+  },
+  "dream": {
+   "file": "dream.png",
+   "sha256": "b9d5279c7efb5b8a84454e65eb50af4bc3e1a00cbef164f39616425469587b50",
+   "frames": 20,
+   "width": 64,
+   "height": 64
+  }
+ },
+ "tokens": {
+  "file": "tokens.f32",
+  "sha256": "b750a0f802f3afd1c534fd96f43c8da17cc7850749b0e380d171083dbcffe810",
+  "bytes": 372196,
+  "tensors": {
+   "real": {
+    "offset": 0,
+    "length": 656,
+    "shape": [
+     41,
+     16
+    ]
+   },
+   "nearIds": {
+    "offset": 656,
+    "length": 3280,
+    "shape": [
+     41,
+     16,
+     5
+    ]
+   },
+   "nearDistances": {
+    "offset": 3936,
+    "length": 3280,
+    "shape": [
+     41,
+     16,
+     5
+    ]
+   },
+   "z": {
+    "offset": 7216,
+    "length": 41984,
+    "shape": [
+     41,
+     16,
+     64
+    ]
+   },
+   "zq": {
+    "offset": 49200,
+    "length": 41984,
+    "shape": [
+     41,
+     16,
+     64
+    ]
+   },
+   "zNorm": {
+    "offset": 91184,
+    "length": 656,
+    "shape": [
+     41,
+     16
+    ]
+   },
+   "zqNorm": {
+    "offset": 91840,
+    "length": 656,
+    "shape": [
+     41,
+     16
+    ]
+   },
+   "usage": {
+    "offset": 92496,
+    "length": 512,
+    "shape": [
+     512
+    ]
+   },
+   "reconMae": {
+    "offset": 93008,
+    "length": 41,
+    "shape": [
+     41
+    ]
+   }
+  }
+ },
+ "wm": {
+  "file": "wm.f32",
+  "sha256": "79887a58138d3fcaec0853f53865327a3b40a9ac65204d260ac4b9821f7688bc",
+  "bytes": 45952,
+  "tensors": {
+   "dream": {
+    "offset": 0,
+    "length": 304,
+    "shape": [
+     19,
+     16
+    ]
+   },
+   "topIds": {
+    "offset": 304,
+    "length": 2432,
+    "shape": [
+     19,
+     16,
+     8
+    ]
+   },
+   "topP": {
+    "offset": 2736,
+    "length": 2432,
+    "shape": [
+     19,
+     16,
+     8
+    ]
+   },
+   "pSampled": {
+    "offset": 5168,
+    "length": 304,
+    "shape": [
+     19,
+     16
+    ]
+   },
+   "pReal": {
+    "offset": 5472,
+    "length": 304,
+    "shape": [
+     19,
+     16
+    ]
+   },
+   "entropy": {
+    "offset": 5776,
+    "length": 304,
+    "shape": [
+     19,
+     16
+    ]
+   },
+   "reward": {
+    "offset": 6080,
+    "length": 60,
+    "shape": [
+     20,
+     3
+    ]
+   },
+   "end": {
+    "offset": 6140,
+    "length": 40,
+    "shape": [
+     20,
+     2
+    ]
+   },
+   "rewardSample": {
+    "offset": 6180,
+    "length": 20,
+    "shape": [
+     20
+    ]
+   },
+   "endSample": {
+    "offset": 6200,
+    "length": 20,
+    "shape": [
+     20
+    ]
+   },
+   "tfPReal": {
+    "offset": 6220,
+    "length": 304,
+    "shape": [
+     19,
+     16
+    ]
+   },
+   "tfTopIds": {
+    "offset": 6524,
+    "length": 2432,
+    "shape": [
+     19,
+     16,
+     8
+    ]
+   },
+   "tfTopP": {
+    "offset": 8956,
+    "length": 2432,
+    "shape": [
+     19,
+     16,
+     8
+    ]
+   },
+   "tfReward": {
+    "offset": 11388,
+    "length": 60,
+    "shape": [
+     20,
+     3
+    ]
+   },
+   "tfEnd": {
+    "offset": 11448,
+    "length": 40,
+    "shape": [
+     20,
+     2
+    ]
+   }
+  }
+ },
+ "attention": {
+  "file": "attention.f32",
+  "sha256": "d3d90a653430183911401d6825c94ba406ed35afbf413a9b10eff7e80e4c547f",
+  "bytes": 4352000,
+  "tensors": {
+   "weights": {
+    "offset": 0,
+    "length": 1088000,
+    "shape": [
+     20,
+     16,
+     10,
+     340
+    ]
+   }
+  }
+ },
+ "ac": {
+  "file": "ac.f32",
+  "sha256": "72e2c8d74a4cb2ccacb7b2f243354dbb0658a8f06eb22549d50e5e8b6b74234d",
+  "bytes": 2084,
+  "tensors": {
+   "realProbs": {
+    "offset": 0,
+    "length": 164,
+    "shape": [
+     41,
+     4
+    ]
+   },
+   "realValues": {
+    "offset": 164,
+    "length": 41,
+    "shape": [
+     41
+    ]
+   },
+   "burnProbs": {
+    "offset": 205,
+    "length": 80,
+    "shape": [
+     20,
+     4
+    ]
+   },
+   "burnValues": {
+    "offset": 285,
+    "length": 20,
+    "shape": [
+     20
+    ]
+   },
+   "probs": {
+    "offset": 305,
+    "length": 80,
+    "shape": [
+     20,
+     4
+    ]
+   },
+   "values": {
+    "offset": 385,
+    "length": 20,
+    "shape": [
+     20
+    ]
+   },
+   "rewards": {
+    "offset": 405,
+    "length": 20,
+    "shape": [
+     20
+    ]
+   },
+   "ends": {
+    "offset": 425,
+    "length": 20,
+    "shape": [
+     20
+    ]
+   },
+   "returns": {
+    "offset": 445,
+    "length": 19,
+    "shape": [
+     19
+    ]
+   },
+   "advantages": {
+    "offset": 464,
+    "length": 19,
+    "shape": [
+     19
+    ]
+   },
+   "logProb": {
+    "offset": 483,
+    "length": 19,
+    "shape": [
+     19
+    ]
+   },
+   "entropy": {
+    "offset": 502,
+    "length": 19,
+    "shape": [
+     19
+    ]
+   }
+  }
+ },
+ "metrics": {
+  "teacherForcedLosses": {
+   "loss_obs": 1.6201962232589722,
+   "loss_rewards": 0.00046012699021957815,
+   "loss_ends": 0.13221867382526398
+  },
+  "imaginationLosses": {
+   "loss_actions": 0.26836007833480835,
+   "loss_values": 0.07795681059360504,
+   "loss_entropy": -0.0005116932443343103
+  },
+  "tokenAgreement": [
+   0.625,
+   0.4375,
+   0.4375,
+   0.5625,
+   0.25,
+   0.3125,
+   0.375,
+   0.3125,
+   0.4375,
+   0.4375,
+   0.4375,
+   0.375,
+   0.3125,
+   0.375,
+   0.375,
+   0.25,
+   0.375,
+   0.4375,
+   0.4375
+  ],
+  "teacherForcedArgmaxAgreement": [
+   0.625,
+   0.5625,
+   0.6875,
+   0.625,
+   0.5625,
+   0.75,
+   0.6875,
+   0.625,
+   0.625,
+   0.5625,
+   0.8125,
+   0.8125,
+   0.75,
+   0.8125,
+   0.8125,
+   0.8125,
+   0.625,
+   0.8125,
+   0.6875
+  ],
+  "dreamMse": [
+   0.001321309246122837,
+   0.0016013509593904018,
+   0.001477266545407474,
+   0.0016882541822269559,
+   0.0013616645010188222,
+   0.0012128010857850313,
+   0.0011493227211758494,
+   0.0019610861781984568,
+   0.0012315500061959028,
+   0.001308406121097505,
+   0.0017070621252059937,
+   0.001402699388563633,
+   0.0013905033702030778,
+   0.001910062856040895,
+   0.001260994584299624,
+   0.0017897064099088311,
+   0.0018319388618692756,
+   0.0016795272240415215,
+   0.0016375263221561909
+  ],
+  "codebookUsed": 310,
+  "framesTokenized": 1001
+ },
+ "validation": {
+  "windowTokensMatchGameTokens": 0.0,
+  "reconFromTokensVsEncodeDecodeMaxError": 0.0,
+  "dreamFramesVsDecodedTokensMaxError": 3.42492963753549e-07,
+  "attentionRebuildMaxError": 0.0,
+  "attentionRowSumMaxError": 1.7881393432617188e-07,
+  "sampledTokensVsHeadArgminMismatches": 0.0,
+  "teacherForcedObsLossVsComputeLoss": 2.398529552749551e-08,
+  "teacherForcedRewardLossVsComputeLoss": 7.51217621864763e-09,
+  "teacherForcedEndLossVsComputeLoss": 2.6794300944654736e-09,
+  "lossActionsVsComputeLoss": 0.0,
+  "lossValuesVsComputeLoss": 0.0,
+  "lossEntropyVsComputeLoss": 0.0,
+  "burnInPlusImaginationCalls": 0.0,
+  "rerunTokensEqual": 0.0,
+  "imaginedRewardsVsStepOutputs": 0.0,
+  "pytorchBlocksValuesVsReferenceMaxError": 3.337860107421875e-06,
+  "pytorchBlocksLogitsVsReferenceMaxError": 9.5367431640625e-06,
+  "pytorchBlocksRewardsVsReferenceMaxError": 0.0,
+  "pytorchBlocksFramesVsReferenceMaxError": 4.845857620239258e-05
+ },
+ "capture": {
+  "timestamp": "2026-10-29T18:35:37.341290+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "numpy": "2.5.4",
+   "gymnasium": "0.29.1",
+   "ale-py": "0.9.0",
+   "einops": "0.8.2",
+   "pillow": "13.0.0",
+   "huggingface-hub": "2.4.0"
+  },
+  "script": "scripts/embodied/record_iris.py",
+  "scriptSha256": "cb17126055036b3d5991bec274568ad5ca7c2f16b5bfd48f190624d1d709db29",
+  "helperSha256": "1921f488b76f0e89df82174b7ba9b4258c5273a1680881ade6b7e45751d2bbf6",
+  "codeCommit": "24326aaaa283c527f42b89b44cfdecf2665a7a16",
+  "checkpointSha256": "169e3669b7d1901990b4ebce35ff8f3355610fae393e6a587fd62c40faf790f4",
+  "notes": "IRIS's own Tokenizer, WorldModel (compute_loss), WorldModelEnv and ActorCritic (imagine, compute_loss); wrappers and hooks only observe, and an unhooked rerun samples the same tokens. Actions in imagination are the agent's real ones (FedActions replaces only the policy's sampling). Attention is rebuilt from each call's input and KV cache and checked against the module's output; stored as the mean of the 4 heads. pytorchBlocks* run pytorch/embodied_iris.py with the checkpoint's weights on the same frames, actions and seed."
+ }
+}
