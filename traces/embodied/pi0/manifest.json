@@ -1,0 +1,432 @@
+{
+	"schemaVersion": 1,
+	"kind": "embodied-flow-vla",
+	"tab": "pi0",
+	"model": {
+		"id": "lerobot/pi0_libero_finetuned_v044",
+		"name": "π0 (LIBERO)",
+		"base": "lerobot/pi0_base",
+		"revision": "main",
+		"url": "https://huggingface.co/lerobot/pi0_libero_finetuned_v044",
+		"license": "Gemma Terms of Use",
+		"licenseUrl": "https://ai.google.dev/gemma/terms",
+		"paper": "https://arxiv.org/abs/2410.24164",
+		"code": "https://github.com/Physical-Intelligence/openpi",
+		"parameters": 4028019472,
+		"parametersUsed": 3238048528,
+		"dtype": "bfloat16",
+		"vlm": "PaliGemma 3B (SigLIP So400m/14 + Gemma 2B)",
+		"layers": 18,
+		"width": 2048,
+		"expertWidth": 1024,
+		"heads": 8,
+		"kvHeads": 1,
+		"headDim": 256,
+		"imageSize": 224,
+		"patch": 14,
+		"visionWidth": 1152,
+		"chunk": 50,
+		"steps": 10,
+		"maxLength": 48
+	},
+	"env": {
+		"suite": "libero_spatial",
+		"task": 0,
+		"init": 0,
+		"instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+		"controlHz": 20,
+		"cameras": ["front camera", "wrist camera", "empty slot"],
+		"actions": ["x", "y", "z", "rx", "ry", "rz", "grip"],
+		"actionTitles": [
+			"end-effector Δx",
+			"end-effector Δy",
+			"end-effector Δz",
+			"rotation about x (axis-angle Δ)",
+			"rotation about y (axis-angle Δ)",
+			"rotation about z (axis-angle Δ)",
+			"gripper (−1 open, +1 closed)"
+		],
+		"state": ["x", "y", "z", "ax", "ay", "az", "finger₁", "finger₂"],
+		"dataset": "HuggingFaceVLA/libero"
+	},
+	"prompt": {
+		"tokens": [
+			"<bos>",
+			"pick",
+			" up",
+			" the",
+			" black",
+			" bowl",
+			" between",
+			" the",
+			" plate",
+			" and",
+			" the",
+			" rame",
+			"kin",
+			" and",
+			" place",
+			" it",
+			" on",
+			" the",
+			" plate",
+			"↵"
+		],
+		"padded": 48,
+		"imageTokens": 256,
+		"cameraSlots": 3,
+		"prefix": 816
+	},
+	"episode": {
+		"steps": 67,
+		"success": true,
+		"chunks": [
+			{
+				"step": 0,
+				"latencyMs": 987.5,
+				"executed": 50
+			},
+			{
+				"step": 50,
+				"latencyMs": 1031.4,
+				"executed": 17
+			}
+		],
+		"noiseSeeds": [2000, 2001]
+	},
+	"blocks": {
+		"rows": ["front", "wrist", "empty", "words", "state", "a₁", "a₂", "a₃", "a₄", "a₅…a₄₉", "a₅₀"],
+		"cols": ["front", "wrist", "empty", "words", "state", "a₁", "a₂", "a₃", "a₄", "a₅…a₄₉", "a₅₀"],
+		"depthSteps": [0, 5, 9]
+	},
+	"fast": {
+		"repo": "physical-intelligence/fast",
+		"ids": [
+			369, 377, 384, 291, 1801, 422, 414, 363, 673, 300, 351, 487, 344, 272, 462, 266, 334, 335,
+			409, 370, 300, 770, 298, 1576, 1133, 292, 1031, 1233, 311, 1591, 328, 289, 401, 587, 1774,
+			296, 420, 280, 401, 294, 1047, 302, 602, 516, 673, 290, 558, 403, 401, 753, 289, 293, 324,
+			327, 291, 1084, 375, 290, 340, 453, 272, 278, 358, 803, 310, 451, 767, 297, 1906, 297, 316,
+			794, 286, 479, 279, 801, 1602, 416, 360, 558, 258, 794, 286, 293, 416, 360, 292, 951, 853,
+			951, 413, 413, 951, 413, 413, 951, 931, 840, 931, 416, 416, 931, 416, 416, 931, 951
+		],
+		"spans": [
+			[0, 1],
+			[1, 2],
+			[2, 3],
+			[3, 4],
+			[4, 6],
+			[6, 7],
+			[7, 8],
+			[8, 9],
+			[9, 11],
+			[11, 12],
+			[12, 13],
+			[13, 14],
+			[14, 15],
+			[15, 16],
+			[16, 17],
+			[17, 18],
+			[18, 19],
+			[19, 20],
+			[20, 21],
+			[21, 22],
+			[22, 23],
+			[23, 25],
+			[25, 26],
+			[26, 28],
+			[28, 30],
+			[30, 32],
+			[32, 34],
+			[34, 36],
+			[36, 38],
+			[38, 41],
+			[41, 42],
+			[42, 43],
+			[43, 45],
+			[45, 48],
+			[48, 50],
+			[50, 52],
+			[52, 55],
+			[55, 56],
+			[56, 58],
+			[58, 59],
+			[59, 62],
+			[62, 63],
+			[63, 66],
+			[66, 69],
+			[69, 71],
+			[71, 73],
+			[73, 76],
+			[76, 78],
+			[78, 80],
+			[80, 83],
+			[83, 84],
+			[84, 86],
+			[86, 88],
+			[88, 90],
+			[90, 91],
+			[91, 97],
+			[97, 99],
+			[99, 101],
+			[101, 104],
+			[104, 106],
+			[106, 107],
+			[107, 110],
+			[110, 112],
+			[112, 117],
+			[117, 119],
+			[119, 122],
+			[122, 126],
+			[126, 128],
+			[128, 133],
+			[133, 135],
+			[135, 138],
+			[138, 141],
+			[141, 145],
+			[145, 149],
+			[149, 152],
+			[152, 155],
+			[155, 161],
+			[161, 168],
+			[168, 173],
+			[173, 176],
+			[176, 180],
+			[180, 183],
+			[183, 187],
+			[187, 189],
+			[189, 196],
+			[196, 201],
+			[201, 203],
+			[203, 210],
+			[210, 224],
+			[224, 231],
+			[231, 238],
+			[238, 245],
+			[245, 252],
+			[252, 259],
+			[259, 266],
+			[266, 273],
+			[273, 280],
+			[280, 294],
+			[294, 301],
+			[301, 308],
+			[308, 315],
+			[315, 322],
+			[322, 329],
+			[329, 336],
+			[336, 343],
+			[343, 350]
+		],
+		"scale": 10,
+		"minToken": -354,
+		"vocab": 2048,
+		"chunk": 0,
+		"numbers": 350,
+		"zeros": 201,
+		"reconstruction": 0.07163393497467041
+	},
+	"sprites": {
+		"front": [
+			{
+				"file": "frames/front-0.webp",
+				"sha256": "bbe42643daa828644e061634d188314a4955574587922cae8576f26bf87bdef0",
+				"frames": 68,
+				"width": 96,
+				"height": 96
+			}
+		],
+		"wrist": [
+			{
+				"file": "frames/wrist-0.webp",
+				"sha256": "9357afd064e3b01ddd0396b0860f661a37e5f62b8cdf0bb969e7c10274e88793",
+				"frames": 68,
+				"width": 96,
+				"height": 96
+			}
+		]
+	},
+	"inputs": [
+		[
+			{
+				"file": "inputs/chunk0-front.webp",
+				"sha256": "ebde7c93708fd96d078766546de894743975335e2b2be9c59e92671ff1f9e57f",
+				"width": 224,
+				"height": 224
+			},
+			{
+				"file": "inputs/chunk0-wrist.webp",
+				"sha256": "fb99ef49a9765b6665a384bd3d980431d643881dc5235ddacc71d92bf9d69e97",
+				"width": 224,
+				"height": 224
+			}
+		],
+		[
+			{
+				"file": "inputs/chunk1-front.webp",
+				"sha256": "76954ad8507a1152bd5113fc75464c7950d491d0b246319883df01769adfce65",
+				"width": 224,
+				"height": 224
+			},
+			{
+				"file": "inputs/chunk1-wrist.webp",
+				"sha256": "0f45e696ae1ab6cf2f2782305d77013ea41f09eaedf9119433e883d37b9b065f",
+				"width": 224,
+				"height": 224
+			}
+		]
+	],
+	"episodeFile": {
+		"file": "episode.f32",
+		"sha256": "69eae00c66e7fb7b706b1f55916fbcacc29638a5af472030a5db13df4d5513b3",
+		"bytes": 4020,
+		"tensors": {
+			"state": {
+				"offset": 0,
+				"length": 536,
+				"shape": [67, 8]
+			},
+			"action": {
+				"offset": 536,
+				"length": 469,
+				"shape": [67, 7]
+			}
+		}
+	},
+	"chunkFile": {
+		"file": "chunks.f32",
+		"sha256": "8340383e9286d8329b431b3693aa693aeb5625c5950d6c960f2742ad5f99e270",
+		"bytes": 143520,
+		"tensors": {
+			"xt": {
+				"offset": 0,
+				"length": 7700,
+				"shape": [2, 11, 50, 7]
+			},
+			"vt": {
+				"offset": 7700,
+				"length": 7000,
+				"shape": [2, 10, 50, 7]
+			},
+			"chunk_env": {
+				"offset": 14700,
+				"length": 700,
+				"shape": [2, 50, 7]
+			},
+			"sinusoid": {
+				"offset": 15400,
+				"length": 20480,
+				"shape": [2, 10, 1024]
+			}
+		}
+	},
+	"depthFile": {
+		"file": "depth.f32",
+		"sha256": "00003e7a117e6cbb97485cf94ae0c8d737a105e6b30687a5ececd944bfe2e6cc",
+		"bytes": 2872416,
+		"tensors": {
+			"patch_rms": {
+				"offset": 0,
+				"length": 1536,
+				"shape": [2, 3, 256]
+			},
+			"token_rms": {
+				"offset": 1536,
+				"length": 1536,
+				"shape": [2, 3, 256]
+			},
+			"look": {
+				"offset": 3072,
+				"length": 184320,
+				"shape": [2, 10, 18, 512]
+			},
+			"words": {
+				"offset": 187392,
+				"length": 7200,
+				"shape": [2, 10, 18, 20]
+			},
+			"state_look": {
+				"offset": 194592,
+				"length": 184320,
+				"shape": [2, 10, 18, 512]
+			},
+			"state_words": {
+				"offset": 378912,
+				"length": 7200,
+				"shape": [2, 10, 18, 20]
+			},
+			"blocks": {
+				"offset": 386112,
+				"length": 43560,
+				"shape": [2, 10, 18, 11, 11]
+			},
+			"action_action": {
+				"offset": 429672,
+				"length": 270000,
+				"shape": [2, 3, 18, 50, 50]
+			},
+			"word_look": {
+				"offset": 699672,
+				"length": 18432,
+				"shape": [2, 18, 512]
+			}
+		}
+	},
+	"fastFile": {
+		"file": "fast.f32",
+		"sha256": "e51b17caa504c04be54a64130ec4cacf194b935bd8dd61cf903a06955df39a38",
+		"bytes": 5656,
+		"tensors": {
+			"normalized": {
+				"offset": 0,
+				"length": 350,
+				"shape": [50, 7]
+			},
+			"coefficients": {
+				"offset": 350,
+				"length": 350,
+				"shape": [50, 7]
+			},
+			"rounded": {
+				"offset": 700,
+				"length": 350,
+				"shape": [50, 7]
+			},
+			"decoded": {
+				"offset": 1050,
+				"length": 350,
+				"shape": [50, 7]
+			},
+			"q01": {
+				"offset": 1400,
+				"length": 7,
+				"shape": [7]
+			},
+			"q99": {
+				"offset": 1407,
+				"length": 7,
+				"shape": [7]
+			}
+		}
+	},
+	"validation": {
+		"tracedVsExecutedChunk": 0.0,
+		"eulerUpdate": 1.1920928955078125e-7,
+		"executedVsChunk": 0.0,
+		"attentionRebuild": 0.0,
+		"prefixImageTokens": 0.0,
+		"fastDrawerVsPublished": 0.0
+	},
+	"capture": {
+		"device": "mps",
+		"dtype": "bfloat16",
+		"versions": {
+			"torch": "2.11.0",
+			"transformers": "5.5.4",
+			"lerobot": "0.6.1",
+			"mujoco": "3.8.1",
+			"python": "3.12.12"
+		},
+		"recorded": "2026-10-29T18:56:08+00:00",
+		"script": "scripts/embodied/record_pi0.py"
+	}
+}
