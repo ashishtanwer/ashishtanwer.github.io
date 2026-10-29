@@ -1,0 +1,1365 @@
+{
+	"kind": "embodied-latent-wm",
+	"tab": "tdmpc2",
+	"model": {
+		"id": "nicklashansen/tdmpc2/dmcontrol/walker-run-1.pt",
+		"name": "TD-MPC2 \u00b7 walker-run (5 M)",
+		"revision": "8fb2a82efb3bae96941da440128fe1332e4394fd",
+		"url": "https://huggingface.co/nicklashansen/tdmpc2",
+		"code": "https://github.com/nicklashansen/tdmpc2/tree/332f19e4aba4bffe2dc736f45ea7f7bdc585903a",
+		"codeCommit": "332f19e4aba4bffe2dc736f45ea7f7bdc585903a",
+		"checkpoint": "dmcontrol/walker-run-1.pt",
+		"checkpointSha256": "7e825a2210ede7085a71f98893fe3f89a1acb9eedf234a7c43815c68ecc0150c",
+		"license": "MIT",
+		"licenseUrl": "https://huggingface.co/nicklashansen/tdmpc2",
+		"paper": "https://arxiv.org/abs/2310.16828",
+		"parameters": 4960618
+	},
+	"config": {
+		"horizon": 3,
+		"num_samples": 512,
+		"num_elites": 64,
+		"num_pi_trajs": 24,
+		"iterations": 6,
+		"temperature": 0.5,
+		"min_std": 0.05,
+		"max_std": 2,
+		"num_bins": 101,
+		"vmin": -10,
+		"vmax": 10,
+		"bin_size": 0.2,
+		"latent_dim": 512,
+		"simnorm_dim": 8,
+		"enc_dim": 256,
+		"mlp_dim": 512,
+		"num_q": 5,
+		"num_enc_layers": 2,
+		"episode_length": 500,
+		"action_dim": 6,
+		"log_std_min": -10,
+		"log_std_max": 2,
+		"discount": 0.99
+	},
+	"env": {
+		"suite": "DeepMind Control",
+		"domain": "walker",
+		"task": "run",
+		"seed": 1,
+		"actionRepeat": 2,
+		"obsNames": [
+			"orientations[0]",
+			"orientations[1]",
+			"orientations[2]",
+			"orientations[3]",
+			"orientations[4]",
+			"orientations[5]",
+			"orientations[6]",
+			"orientations[7]",
+			"orientations[8]",
+			"orientations[9]",
+			"orientations[10]",
+			"orientations[11]",
+			"orientations[12]",
+			"orientations[13]",
+			"height",
+			"velocity[0]",
+			"velocity[1]",
+			"velocity[2]",
+			"velocity[3]",
+			"velocity[4]",
+			"velocity[5]",
+			"velocity[6]",
+			"velocity[7]",
+			"velocity[8]"
+		],
+		"actuators": [
+			"right_hip",
+			"right_knee",
+			"right_ankle",
+			"left_hip",
+			"left_knee",
+			"left_ankle"
+		],
+		"actionNames": [
+			"right hip",
+			"right knee",
+			"right ankle",
+			"left hip",
+			"left knee",
+			"left ankle"
+		],
+		"camera": 0,
+		"frameNote": "rendered for the page only; TD-MPC2 observes the 24 state numbers"
+	},
+	"episode": {
+		"steps": 500,
+		"return": 895.1498256623745,
+		"evalMode": true,
+		"openLoop": 8,
+		"pcaExplained": [
+			0.1820914840291118,
+			0.1590479034086737
+		],
+		"chosen": [
+			143,
+			88,
+			384,
+			266,
+			278,
+			222,
+			459,
+			496,
+			253,
+			312,
+			387,
+			29,
+			363,
+			477,
+			269,
+			405,
+			123,
+			249,
+			250,
+			139,
+			117,
+			81,
+			208,
+			361,
+			116,
+			20,
+			468,
+			476,
+			32,
+			474,
+			321,
+			399,
+			96,
+			108,
+			416,
+			116,
+			19,
+			330,
+			471,
+			217,
+			387,
+			374,
+			90,
+			8,
+			145,
+			38,
+			389,
+			407,
+			456,
+			452,
+			331,
+			16,
+			126,
+			7,
+			249,
+			456,
+			346,
+			208,
+			291,
+			353,
+			15,
+			8,
+			470,
+			346,
+			14,
+			5,
+			443,
+			9,
+			177,
+			9,
+			15,
+			167,
+			410,
+			304,
+			493,
+			382,
+			22,
+			448,
+			318,
+			0,
+			132,
+			302,
+			21,
+			255,
+			442,
+			11,
+			6,
+			458,
+			409,
+			303,
+			5,
+			159,
+			78,
+			95,
+			465,
+			269,
+			68,
+			280,
+			21,
+			15,
+			506,
+			413,
+			77,
+			378,
+			467,
+			191,
+			356,
+			14,
+			102,
+			11,
+			20,
+			488,
+			502,
+			9,
+			143,
+			58,
+			359,
+			134,
+			77,
+			141,
+			283,
+			13,
+			9,
+			245,
+			337,
+			219,
+			225,
+			179,
+			160,
+			225,
+			240,
+			11,
+			23,
+			148,
+			84,
+			376,
+			2,
+			14,
+			15,
+			434,
+			212,
+			158,
+			335,
+			51,
+			422,
+			504,
+			20,
+			238,
+			201,
+			344,
+			162,
+			10,
+			496,
+			30,
+			164,
+			255,
+			119,
+			224,
+			305,
+			509,
+			79,
+			323,
+			295,
+			405,
+			153,
+			17,
+			24,
+			255,
+			276,
+			334,
+			374,
+			39,
+			89,
+			139,
+			278,
+			155,
+			503,
+			203,
+			177,
+			361,
+			490,
+			234,
+			408,
+			259,
+			378,
+			2,
+			403,
+			72,
+			444,
+			217,
+			480,
+			62,
+			19,
+			47,
+			457,
+			251,
+			165,
+			378,
+			8,
+			21,
+			314,
+			475,
+			246,
+			3,
+			64,
+			2,
+			48,
+			92,
+			107,
+			23,
+			10,
+			459,
+			396,
+			222,
+			266,
+			358,
+			159,
+			456,
+			81,
+			390,
+			314,
+			442,
+			436,
+			15,
+			14,
+			200,
+			493,
+			400,
+			387,
+			20,
+			139,
+			243,
+			166,
+			121,
+			373,
+			503,
+			202,
+			150,
+			185,
+			427,
+			6,
+			72,
+			44,
+			352,
+			177,
+			171,
+			14,
+			185,
+			374,
+			348,
+			91,
+			17,
+			443,
+			505,
+			211,
+			487,
+			133,
+			201,
+			496,
+			43,
+			80,
+			157,
+			9,
+			343,
+			17,
+			18,
+			212,
+			65,
+			301,
+			18,
+			19,
+			20,
+			116,
+			184,
+			67,
+			491,
+			252,
+			112,
+			15,
+			323,
+			176,
+			88,
+			91,
+			355,
+			507,
+			21,
+			401,
+			397,
+			5,
+			211,
+			358,
+			480,
+			265,
+			432,
+			35,
+			414,
+			507,
+			90,
+			390,
+			6,
+			0,
+			365,
+			96,
+			407,
+			406,
+			5,
+			424,
+			506,
+			14,
+			373,
+			216,
+			365,
+			506,
+			177,
+			247,
+			176,
+			118,
+			14,
+			287,
+			18,
+			491,
+			287,
+			405,
+			16,
+			94,
+			116,
+			33,
+			168,
+			465,
+			51,
+			274,
+			105,
+			263,
+			143,
+			280,
+			215,
+			313,
+			18,
+			15,
+			150,
+			0,
+			354,
+			15,
+			480,
+			388,
+			475,
+			309,
+			177,
+			3,
+			162,
+			65,
+			225,
+			481,
+			71,
+			13,
+			317,
+			7,
+			294,
+			82,
+			197,
+			220,
+			2,
+			195,
+			415,
+			175,
+			2,
+			306,
+			328,
+			16,
+			283,
+			368,
+			4,
+			5,
+			12,
+			483,
+			224,
+			273,
+			192,
+			255,
+			230,
+			44,
+			244,
+			44,
+			11,
+			332,
+			354,
+			500,
+			443,
+			506,
+			12,
+			504,
+			4,
+			2,
+			307,
+			98,
+			461,
+			155,
+			12,
+			459,
+			192,
+			462,
+			478,
+			5,
+			363,
+			47,
+			322,
+			509,
+			95,
+			330,
+			157,
+			158,
+			385,
+			450,
+			473,
+			15,
+			241,
+			212,
+			126,
+			414,
+			5,
+			225,
+			13,
+			15,
+			61,
+			14,
+			18,
+			155,
+			351,
+			351,
+			133,
+			15,
+			67,
+			7,
+			120,
+			444,
+			119,
+			400,
+			16,
+			6,
+			355,
+			322,
+			268,
+			12,
+			350,
+			152,
+			191,
+			397,
+			199,
+			381,
+			320,
+			75,
+			110,
+			7,
+			315,
+			359,
+			0,
+			79,
+			467,
+			430,
+			475,
+			1,
+			3,
+			317,
+			0,
+			318,
+			15,
+			439,
+			386,
+			315,
+			365,
+			436,
+			241,
+			405,
+			375,
+			218,
+			110,
+			385,
+			17,
+			17,
+			308,
+			359,
+			317,
+			12,
+			263,
+			385,
+			376,
+			5,
+			426,
+			230,
+			190,
+			32,
+			388,
+			13,
+			123,
+			87,
+			7,
+			238,
+			16,
+			220,
+			112
+		]
+	},
+	"planSteps": [
+		0,
+		1,
+		60,
+		200,
+		380
+	],
+	"sprite": {
+		"file": "frames.jpg",
+		"sha256": "a631e00d3c9f2e58bbbc81c00730bdaaa3334733a779ebbcce9557aadb4a6f8a",
+		"frames": 501,
+		"width": 96,
+		"height": 96
+	},
+	"tensors": {
+		"episode": {
+			"file": "episode.f32",
+			"sha256": "898a047b8c8f28357dcf6f38361e08ea8c91e9fd9ab216b188368e81a81f82c8",
+			"bytes": 3463624,
+			"tensors": {
+				"obs": {
+					"offset": 0,
+					"length": 12000,
+					"shape": [
+						500,
+						24
+					]
+				},
+				"z": {
+					"offset": 12000,
+					"length": 256000,
+					"shape": [
+						500,
+						512
+					]
+				},
+				"zLast": {
+					"offset": 268000,
+					"length": 512,
+					"shape": [
+						512
+					]
+				},
+				"zNextPred": {
+					"offset": 268512,
+					"length": 256000,
+					"shape": [
+						500,
+						512
+					]
+				},
+				"action": {
+					"offset": 524512,
+					"length": 3000,
+					"shape": [
+						500,
+						6
+					]
+				},
+				"reward": {
+					"offset": 527512,
+					"length": 500,
+					"shape": [
+						500
+					]
+				},
+				"rewardPred": {
+					"offset": 528012,
+					"length": 500,
+					"shape": [
+						500
+					]
+				},
+				"rewardProbs": {
+					"offset": 528512,
+					"length": 50500,
+					"shape": [
+						500,
+						101
+					]
+				},
+				"qHeads": {
+					"offset": 579012,
+					"length": 2500,
+					"shape": [
+						500,
+						5
+					]
+				},
+				"qProbs": {
+					"offset": 581512,
+					"length": 252500,
+					"shape": [
+						500,
+						5,
+						101
+					]
+				},
+				"piMean": {
+					"offset": 834012,
+					"length": 3000,
+					"shape": [
+						500,
+						6
+					]
+				},
+				"piStd": {
+					"offset": 837012,
+					"length": 3000,
+					"shape": [
+						500,
+						6
+					]
+				},
+				"planMean": {
+					"offset": 840012,
+					"length": 3000,
+					"shape": [
+						500,
+						6
+					]
+				},
+				"planValue": {
+					"offset": 843012,
+					"length": 500,
+					"shape": [
+						500
+					]
+				},
+				"eliteRank": {
+					"offset": 843512,
+					"length": 500,
+					"shape": [
+						500
+					]
+				},
+				"dynMse": {
+					"offset": 844012,
+					"length": 500,
+					"shape": [
+						500
+					]
+				},
+				"dynCos": {
+					"offset": 844512,
+					"length": 500,
+					"shape": [
+						500
+					]
+				},
+				"openErr": {
+					"offset": 845012,
+					"length": 4437,
+					"shape": [
+						493,
+						9
+					]
+				},
+				"openReward": {
+					"offset": 849449,
+					"length": 3944,
+					"shape": [
+						493,
+						8
+					]
+				},
+				"proj": {
+					"offset": 853393,
+					"length": 1002,
+					"shape": [
+						501,
+						2
+					]
+				},
+				"projNextPred": {
+					"offset": 854395,
+					"length": 1000,
+					"shape": [
+						500,
+						2
+					]
+				},
+				"openProj": {
+					"offset": 855395,
+					"length": 8874,
+					"shape": [
+						493,
+						9,
+						2
+					]
+				},
+				"bins": {
+					"offset": 864269,
+					"length": 101,
+					"shape": [
+						101
+					]
+				},
+				"pcaComponents": {
+					"offset": 864370,
+					"length": 1024,
+					"shape": [
+						2,
+						512
+					]
+				},
+				"pcaMean": {
+					"offset": 865394,
+					"length": 512,
+					"shape": [
+						512
+					]
+				}
+			}
+		},
+		"plans": {
+			"file": "plans.f32",
+			"sha256": "4e361f682a2fb90e94aa7c8fbca12a9b05b8f0d534157b2946c7501315cf676c",
+			"bytes": 1940640,
+			"tensors": {
+				"0.actions": {
+					"offset": 0,
+					"length": 55296,
+					"shape": [
+						6,
+						3,
+						512,
+						6
+					]
+				},
+				"0.value": {
+					"offset": 55296,
+					"length": 3072,
+					"shape": [
+						6,
+						512
+					]
+				},
+				"0.rewards": {
+					"offset": 58368,
+					"length": 9216,
+					"shape": [
+						6,
+						3,
+						512
+					]
+				},
+				"0.q": {
+					"offset": 67584,
+					"length": 3072,
+					"shape": [
+						6,
+						512
+					]
+				},
+				"0.qidx": {
+					"offset": 70656,
+					"length": 12,
+					"shape": [
+						6,
+						2
+					]
+				},
+				"0.proj": {
+					"offset": 70668,
+					"length": 24576,
+					"shape": [
+						6,
+						4,
+						512,
+						2
+					]
+				},
+				"0.elites": {
+					"offset": 95244,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"0.score": {
+					"offset": 95628,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"0.mean": {
+					"offset": 96012,
+					"length": 126,
+					"shape": [
+						7,
+						3,
+						6
+					]
+				},
+				"0.std": {
+					"offset": 96138,
+					"length": 126,
+					"shape": [
+						7,
+						3,
+						6
+					]
+				},
+				"0.hidden": {
+					"offset": 96264,
+					"length": 256,
+					"shape": [
+						256
+					]
+				},
+				"0.pre": {
+					"offset": 96520,
+					"length": 512,
+					"shape": [
+						512
+					]
+				},
+				"1.actions": {
+					"offset": 97032,
+					"length": 55296,
+					"shape": [
+						6,
+						3,
+						512,
+						6
+					]
+				},
+				"1.value": {
+					"offset": 152328,
+					"length": 3072,
+					"shape": [
+						6,
+						512
+					]
+				},
+				"1.rewards": {
+					"offset": 155400,
+					"length": 9216,
+					"shape": [
+						6,
+						3,
+						512
+					]
+				},
+				"1.q": {
+					"offset": 164616,
+					"length": 3072,
+					"shape": [
+						6,
+						512
+					]
+				},
+				"1.qidx": {
+					"offset": 167688,
+					"length": 12,
+					"shape": [
+						6,
+						2
+					]
+				},
+				"1.proj": {
+					"offset": 167700,
+					"length": 24576,
+					"shape": [
+						6,
+						4,
+						512,
+						2
+					]
+				},
+				"1.elites": {
+					"offset": 192276,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"1.score": {
+					"offset": 192660,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"1.mean": {
+					"offset": 193044,
+					"length": 126,
+					"shape": [
+						7,
+						3,
+						6
+					]
+				},
+				"1.std": {
+					"offset": 193170,
+					"length": 126,
+					"shape": [
+						7,
+						3,
+						6
+					]
+				},
+				"1.hidden": {
+					"offset": 193296,
+					"length": 256,
+					"shape": [
+						256
+					]
+				},
+				"1.pre": {
+					"offset": 193552,
+					"length": 512,
+					"shape": [
+						512
+					]
+				},
+				"2.actions": {
+					"offset": 194064,
+					"length": 55296,
+					"shape": [
+						6,
+						3,
+						512,
+						6
+					]
+				},
+				"2.value": {
+					"offset": 249360,
+					"length": 3072,
+					"shape": [
+						6,
+						512
+					]
+				},
+				"2.rewards": {
+					"offset": 252432,
+					"length": 9216,
+					"shape": [
+						6,
+						3,
+						512
+					]
+				},
+				"2.q": {
+					"offset": 261648,
+					"length": 3072,
+					"shape": [
+						6,
+						512
+					]
+				},
+				"2.qidx": {
+					"offset": 264720,
+					"length": 12,
+					"shape": [
+						6,
+						2
+					]
+				},
+				"2.proj": {
+					"offset": 264732,
+					"length": 24576,
+					"shape": [
+						6,
+						4,
+						512,
+						2
+					]
+				},
+				"2.elites": {
+					"offset": 289308,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"2.score": {
+					"offset": 289692,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"2.mean": {
+					"offset": 290076,
+					"length": 126,
+					"shape": [
+						7,
+						3,
+						6
+					]
+				},
+				"2.std": {
+					"offset": 290202,
+					"length": 126,
+					"shape": [
+						7,
+						3,
+						6
+					]
+				},
+				"2.hidden": {
+					"offset": 290328,
+					"length": 256,
+					"shape": [
+						256
+					]
+				},
+				"2.pre": {
+					"offset": 290584,
+					"length": 512,
+					"shape": [
+						512
+					]
+				},
+				"3.actions": {
+					"offset": 291096,
+					"length": 55296,
+					"shape": [
+						6,
+						3,
+						512,
+						6
+					]
+				},
+				"3.value": {
+					"offset": 346392,
+					"length": 3072,
+					"shape": [
+						6,
+						512
+					]
+				},
+				"3.rewards": {
+					"offset": 349464,
+					"length": 9216,
+					"shape": [
+						6,
+						3,
+						512
+					]
+				},
+				"3.q": {
+					"offset": 358680,
+					"length": 3072,
+					"shape": [
+						6,
+						512
+					]
+				},
+				"3.qidx": {
+					"offset": 361752,
+					"length": 12,
+					"shape": [
+						6,
+						2
+					]
+				},
+				"3.proj": {
+					"offset": 361764,
+					"length": 24576,
+					"shape": [
+						6,
+						4,
+						512,
+						2
+					]
+				},
+				"3.elites": {
+					"offset": 386340,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"3.score": {
+					"offset": 386724,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"3.mean": {
+					"offset": 387108,
+					"length": 126,
+					"shape": [
+						7,
+						3,
+						6
+					]
+				},
+				"3.std": {
+					"offset": 387234,
+					"length": 126,
+					"shape": [
+						7,
+						3,
+						6
+					]
+				},
+				"3.hidden": {
+					"offset": 387360,
+					"length": 256,
+					"shape": [
+						256
+					]
+				},
+				"3.pre": {
+					"offset": 387616,
+					"length": 512,
+					"shape": [
+						512
+					]
+				},
+				"4.actions": {
+					"offset": 388128,
+					"length": 55296,
+					"shape": [
+						6,
+						3,
+						512,
+						6
+					]
+				},
+				"4.value": {
+					"offset": 443424,
+					"length": 3072,
+					"shape": [
+						6,
+						512
+					]
+				},
+				"4.rewards": {
+					"offset": 446496,
+					"length": 9216,
+					"shape": [
+						6,
+						3,
+						512
+					]
+				},
+				"4.q": {
+					"offset": 455712,
+					"length": 3072,
+					"shape": [
+						6,
+						512
+					]
+				},
+				"4.qidx": {
+					"offset": 458784,
+					"length": 12,
+					"shape": [
+						6,
+						2
+					]
+				},
+				"4.proj": {
+					"offset": 458796,
+					"length": 24576,
+					"shape": [
+						6,
+						4,
+						512,
+						2
+					]
+				},
+				"4.elites": {
+					"offset": 483372,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"4.score": {
+					"offset": 483756,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"4.mean": {
+					"offset": 484140,
+					"length": 126,
+					"shape": [
+						7,
+						3,
+						6
+					]
+				},
+				"4.std": {
+					"offset": 484266,
+					"length": 126,
+					"shape": [
+						7,
+						3,
+						6
+					]
+				},
+				"4.hidden": {
+					"offset": 484392,
+					"length": 256,
+					"shape": [
+						256
+					]
+				},
+				"4.pre": {
+					"offset": 484648,
+					"length": 512,
+					"shape": [
+						512
+					]
+				}
+			}
+		}
+	},
+	"validation": {
+		"simnormGroupSumMaxErr": 2.384185791015625e-07,
+		"simnormSoftmaxMaxErr": 2.384185791015625e-07,
+		"plannerTracedValueMaxErr": 0.0,
+		"plannerRefitMeanMaxErr": 2.3483809385993482e-07,
+		"executedActionIsElite": 1.0,
+		"piTrajectoriesFirst": 24.0,
+		"openLoopFirstStepMatchesOneStep": 3.2741809263825417e-09,
+		"rewardHeadMeanAbsErr": 0.0026761284470558167,
+		"dynamicsOneStepMse": 4.928910857415758e-05,
+		"dynamicsOneStepCosine": 0.9992978572845459,
+		"plan0SamplesInBox": 1.0,
+		"plan1SamplesInBox": 1.0,
+		"plan60SamplesInBox": 1.0,
+		"plan200SamplesInBox": 1.0,
+		"plan380SamplesInBox": 1.0
+	},
+	"capture": {
+		"date": "2026-10-29",
+		"device": "cpu",
+		"platform": "macOS-15.5-arm64-arm-64bit",
+		"python": "3.11.14",
+		"versions": {
+			"torch": "2.7.1",
+			"dm-control": "1.0.16",
+			"mujoco": "3.1.2",
+			"tensordict": "0.8.3",
+			"numpy": "1.24.4"
+		},
+		"script": "scripts/embodied/record_tdmpc2.py"
+	}
+}
