@@ -1,0 +1,474 @@
+{
+ "schemaVersion": 1,
+ "kind": "token-world-model",
+ "tab": "cosmos-ar",
+ "model": {
+  "id": "nvidia/Cosmos-Predict1-4B",
+  "name": "Cosmos-Predict1-4B (autoregressive, base)",
+  "revision": "2b337af4960bca9b9ee687ec4eef0c20d0d9753c",
+  "file": "model.pt",
+  "url": "https://huggingface.co/nvidia/Cosmos-Predict1-4B/blob/2b337af4960bca9b9ee687ec4eef0c20d0d9753c/model.pt",
+  "tokenizer": "nvidia/Cosmos-Tokenize1-DV8x16x16-720p",
+  "tokenizerRevision": "017d82884b28491c191f9ea9107d1a6dcc20e725",
+  "guardrail": "nvidia/Cosmos-Guardrail1",
+  "guardrailRevision": "d6d4bfa899a71454a700907664f3e88f503950cf",
+  "code": "https://github.com/nvidia-cosmos/cosmos-predict1/tree/724daa1b2df5ec96bdf111bb947479d2216b3b08",
+  "codeCommit": "724daa1b2df5ec96bdf111bb947479d2216b3b08",
+  "license": "NVIDIA Open Model License (weights); Apache-2.0 (code and the sample video)",
+  "licenseUrl": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/",
+  "paper": "https://arxiv.org/abs/2501.03575",
+  "layers": 16,
+  "width": 4096,
+  "heads": 32,
+  "kvHeads": 8,
+  "headDim": 128,
+  "ffn": 14336,
+  "vocab": 64000,
+  "ropeTheta": 500000,
+  "ropeSplit": {
+   "t": 44,
+   "h": 42,
+   "w": 42
+  },
+  "qkNorm": true,
+  "maxSeqLen": 12800,
+  "levels": [
+   8,
+   8,
+   8,
+   5,
+   5,
+   5
+  ],
+  "compression": [
+   8,
+   16,
+   16
+  ],
+  "latent": [
+   5,
+   40,
+   64
+  ],
+  "frames": 33,
+  "height": 640,
+  "width_px": 1024,
+  "textConditioning": false
+ },
+ "video": {
+  "file": "assets/autoregressive/input.mp4",
+  "sha256": "19be3e7ba8fbd017b7f7a92d856f488f63cf9285fe96842262cb17276dd40faa",
+  "url": "https://github.com/nvidia-cosmos/cosmos-predict1/blob/724daa1b2df5ec96bdf111bb947479d2216b3b08/assets/autoregressive/input.mp4",
+  "license": "Apache-2.0 (the cosmos-predict1 repository)",
+  "fps": 30,
+  "start": 0,
+  "promptFrames": 9,
+  "frames": 33,
+  "description": "a dashcam drive on a highway at dusk"
+ },
+ "sampling": {
+  "seed": 0,
+  "topP": 0.8,
+  "temperature": 1.0,
+  "givenLatentFrames": 2,
+  "promptTokens": 5120,
+  "generatedTokens": 7680,
+  "top": 8,
+  "note": "generate(echo=True) from the first 2 latent frames of the padded prompt video; compile_sampling=False (no CUDA graphs on MPS)"
+ },
+ "probes": [
+  {
+   "t": 2,
+   "row": 33,
+   "col": 15,
+   "label": "the white car",
+   "position": 7247,
+   "step": 2127
+  },
+  {
+   "t": 3,
+   "row": 14,
+   "col": 36,
+   "label": "the street lamp",
+   "position": 8612,
+   "step": 3492
+  },
+  {
+   "t": 4,
+   "row": 23,
+   "col": 30,
+   "label": "the overhead sign",
+   "position": 11742,
+   "step": 6622
+  },
+  {
+   "t": 4,
+   "row": 36,
+   "col": 37,
+   "label": "the lane line",
+   "position": 12581,
+   "step": 7461
+  }
+ ],
+ "sprites": {
+  "real": {
+   "file": "real.webp",
+   "sha256": "fd02a543f8ed2e3f7e40427b9d86ecb15f36ee5a93f94a8b5bc9fb0ca2e27d33",
+   "frames": 33,
+   "width": 256,
+   "height": 160
+  },
+  "recon": {
+   "file": "recon.webp",
+   "sha256": "b30bf875b3dff74bac7f6e6e8da5f039a31cb85bc5669b557ab5f3383e0e299a",
+   "frames": 33,
+   "width": 256,
+   "height": 160
+  },
+  "generated": {
+   "file": "gen.webp",
+   "sha256": "de0534f1cf71e625b9c94eb77dd0b4ce8694c7ef6a81c1ca86ff73a1fc452187",
+   "frames": 24,
+   "width": 256,
+   "height": 160
+  }
+ },
+ "tokens": {
+  "file": "tokens.f32",
+  "sha256": "515ecca8c267c39581e030585198e575cd0b4be2603380ea2c334a1789284380",
+  "bytes": 737280,
+  "tensors": {
+   "real": {
+    "offset": 0,
+    "length": 12800,
+    "shape": [
+     5,
+     40,
+     64
+    ]
+   },
+   "generated": {
+    "offset": 12800,
+    "length": 12800,
+    "shape": [
+     5,
+     40,
+     64
+    ]
+   },
+   "prompt": {
+    "offset": 25600,
+    "length": 5120,
+    "shape": [
+     2,
+     40,
+     64
+    ]
+   },
+   "z": {
+    "offset": 30720,
+    "length": 76800,
+    "shape": [
+     5,
+     40,
+     64,
+     6
+    ]
+   },
+   "bounded": {
+    "offset": 107520,
+    "length": 76800,
+    "shape": [
+     5,
+     40,
+     64,
+     6
+    ]
+   }
+  }
+ },
+ "steps": {
+  "file": "steps.f32",
+  "sha256": "ac62195a8f9a5696c6a6b0689e0d2cfeac0ed651b109029d3c10cd80466cea08",
+  "bytes": 645120,
+  "tensors": {
+   "topIds": {
+    "offset": 0,
+    "length": 61440,
+    "shape": [
+     7680,
+     8
+    ]
+   },
+   "topP": {
+    "offset": 61440,
+    "length": 61440,
+    "shape": [
+     7680,
+     8
+    ]
+   },
+   "chosenP": {
+    "offset": 122880,
+    "length": 7680,
+    "shape": [
+     7680
+    ]
+   },
+   "rank": {
+    "offset": 130560,
+    "length": 7680,
+    "shape": [
+     7680
+    ]
+   },
+   "nucleus": {
+    "offset": 138240,
+    "length": 7680,
+    "shape": [
+     7680
+    ]
+   },
+   "nucleusMass": {
+    "offset": 145920,
+    "length": 7680,
+    "shape": [
+     7680
+    ]
+   },
+   "entropy": {
+    "offset": 153600,
+    "length": 7680,
+    "shape": [
+     7680
+    ]
+   }
+  }
+ },
+ "forced": {
+  "file": "forced.f32",
+  "sha256": "f856b5ffed19287dc9258dda2e51021e9a9316ba37ddf8b6f8e05365431a8256",
+  "bytes": 307200,
+  "tensors": {
+   "p": {
+    "offset": 0,
+    "length": 12800,
+    "shape": [
+     12800
+    ]
+   },
+   "rank": {
+    "offset": 12800,
+    "length": 12800,
+    "shape": [
+     12800
+    ]
+   },
+   "entropy": {
+    "offset": 25600,
+    "length": 12800,
+    "shape": [
+     12800
+    ]
+   },
+   "topId": {
+    "offset": 38400,
+    "length": 12800,
+    "shape": [
+     12800
+    ]
+   },
+   "topP": {
+    "offset": 51200,
+    "length": 12800,
+    "shape": [
+     12800
+    ]
+   },
+   "nucleus": {
+    "offset": 64000,
+    "length": 12800,
+    "shape": [
+     12800
+    ]
+   }
+  }
+ },
+ "attention": {
+  "file": "attention.f32",
+  "sha256": "66b67acfc25f7a9e0ec39c628473b489f65344b933f3668fbda8ce920d892dfa",
+  "bytes": 2571648,
+  "tensors": {
+   "probe0": {
+    "offset": 0,
+    "length": 115952,
+    "shape": [
+     16,
+     7247
+    ]
+   },
+   "probe1": {
+    "offset": 115952,
+    "length": 137792,
+    "shape": [
+     16,
+     8612
+    ]
+   },
+   "probe2": {
+    "offset": 253744,
+    "length": 187872,
+    "shape": [
+     16,
+     11742
+    ]
+   },
+   "probe3": {
+    "offset": 441616,
+    "length": 201296,
+    "shape": [
+     16,
+     12581
+    ]
+   }
+  }
+ },
+ "metrics": {
+  "tokenAgreement": [
+   1.0,
+   1.0,
+   0.01171875,
+   0.0042968750931322575,
+   0.0062500000931322575
+  ],
+  "psnrRecon": [
+   34.53981522309234,
+   34.373025762024405,
+   34.1885923657152,
+   33.93299010547888,
+   33.914530232547314,
+   33.91935273158933,
+   34.04813155743015,
+   34.393811462014774,
+   33.71174624495508,
+   33.56378290163082,
+   33.42423712849185,
+   33.005855756181774,
+   32.767937923990836,
+   32.782749674824785,
+   33.82431145041201,
+   34.47284072271997,
+   33.747550812023505,
+   33.69260410188451,
+   33.519392440654826,
+   33.24337072155484,
+   33.113782377590354,
+   33.29412773416001,
+   33.75891319315353,
+   34.84091135456799,
+   34.34190414073526,
+   34.11568835236614,
+   33.752749731377975,
+   33.93361520272964,
+   34.01547342887993,
+   34.13866887491091,
+   34.403753077464174,
+   34.770244392115146,
+   34.42673670874355
+  ],
+  "psnrGenerated": [
+   33.1544820651052,
+   32.360940527768804,
+   31.843895975709913,
+   31.155390359299453,
+   30.788989853298396,
+   30.182569301252904,
+   30.01467279791864,
+   29.301830549087935,
+   28.97750538196305,
+   28.693025520279708,
+   28.3395737292161,
+   27.99438366955591,
+   27.633339726067312,
+   27.14552953304989,
+   26.975674968326892,
+   26.695668754164572,
+   26.207013473930942,
+   25.848910512092385,
+   25.723861645631956,
+   25.87763830473989,
+   26.28629981742217,
+   26.597222112646257,
+   26.646801893733997,
+   26.664846518724843
+  ],
+  "forcedNllPerLatentFrame": [
+   11.758960723876953,
+   6.020155429840088,
+   5.853606224060059,
+   4.996954917907715,
+   5.437591075897217
+  ],
+  "generatedEntropyPerLatentFrame": [
+   4.731055736541748,
+   3.9983763694763184,
+   3.719066619873047
+  ],
+  "forcedRealInNucleus": 0.7245878577232361,
+  "forcedTop1": 0.044612862169742584,
+  "seconds": {
+   "tokenize": 83.23559498786926,
+   "load": 24.52871608734131,
+   "generate": 1149.2849950790405,
+   "forced": 43.49575972557068
+  }
+ },
+ "validation": {
+  "promptTokensVsRealTokensMismatches": 0,
+  "fsqDigitsVsTokenIdsMismatches": 0,
+  "echoedPromptVsPromptTokensMismatches": 0,
+  "stepsRecorded": 7680,
+  "sampledProbabilityVsCandidateAtRankMismatches": 0,
+  "sampledMissingFromTopCandidatesUntied": 0,
+  "sampledInTopCandidates": 0.5720052123069763,
+  "sampledOutsideNucleus": 0,
+  "nucleusMassMin": 0.80078125,
+  "attentionRowSumMaxError": 1.1920928955078125e-07,
+  "attentionLengthsMatchQueries": true,
+  "forcedProbabilityRange": [
+   5.41900864459155e-11,
+   0.984234631061554
+  ],
+  "splitDecoderVsTorchScriptForwardMaxError": 0.0,
+  "decodedPromptFramesVsReconstructionMaxError": 0,
+  "guardrailInputSafe": true,
+  "guardrailOutputSafe": true,
+  "guardrailBlurredPixels": {
+   "gen": 0,
+   "real": 2009,
+   "recon": 0
+  }
+ },
+ "capture": {
+  "timestamp": "2026-10-29T23:13:28.488388+00:00",
+  "device": "mps",
+  "dtype": "bfloat16",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "torchvision": "0.29.1",
+   "numpy": "2.5.4",
+   "transformers": "4.49.0",
+   "einops": "0.8.1",
+   "megatron-core": "0.10.0",
+   "imageio": "2.38.1",
+   "pillow": "13.0.0"
+  },
+  "script": "scripts/embodied/record_cosmos_ar.py",
+  "scriptSha256": "9c4d9b79898ce01ee64d803d4857ffbbfff52c7c68325f705be2a6e39134b548",
+  "helperSha256": "1921f488b76f0e89df82174b7ba9b4258c5273a1680881ade6b7e45751d2bbf6",
+  "codeCommit": "724daa1b2df5ec96bdf111bb947479d2216b3b08",
+  "checkpointSha256": "b6067d892f0095c18cb1b9fdd3524466303f8bb05e92cc6433ec8912b6444912",
+  "notes": "NVIDIA's own code on MPS: the input path, DiscreteMultimodalTokenizer, AutoRegressiveModel.load_ar_model and generate (prefill, decode_n_tokens, sample_top_p) and the video guardrail; sample_top_p and the attention function are wrapped to observe only. Frames on the page are WebP (quality 82) at 256 \u00d7 160, after the guardrail."
+ }
+}

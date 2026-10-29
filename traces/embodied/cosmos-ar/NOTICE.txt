@@ -1,0 +1,12 @@
+The real frames (real.webp) and their tokenizer reconstructions (recon.webp) are frames 0-32 of NVIDIA's
+sample video assets/autoregressive/input.mp4 from github.com/nvidia-cosmos/cosmos-predict1 at commit 724daa1b2df5ec96bdf111bb947479d2216b3b08,
+licensed under the Apache License, Version 2.0 (a copy is in static/traces/licenses/Apache-2.0.txt).
+Source: https://github.com/nvidia-cosmos/cosmos-predict1/blob/724daa1b2df5ec96bdf111bb947479d2216b3b08/assets/autoregressive/input.mp4 (SHA-256 19be3e7ba8fbd017b7f7a92d856f488f63cf9285fe96842262cb17276dd40faa).
+Changes: resized to 256 x 160 and WebP-encoded (quality 82); recon.webp is the frames encoded and decoded by
+nvidia/Cosmos-Tokenize1-DV8x16x16-720p. NVIDIA's video guardrail (safety classifier, then face blur) ran on them
+and on the generated frames: all frames passed; faces were pixelated in 2 real frames.
+
+The generated frames (gen.webp) and every recorded value are outputs of nvidia/Cosmos-Predict1-4B and its tokenizer,
+used under the NVIDIA Open Model License
+(https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/). No model weights are
+included.
