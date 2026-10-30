@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Not found · explain</title>
+<script>
+const old = '/transformer-explainer-site';
+const at = location.pathname;
+if (at === old || at.startsWith(old + '/'))
+  location.replace((at.slice(old.length) || '/') + location.search + location.hash);
+</script></head>
+<body><p>Page not found. <a href="/transformers/">Open explain</a>.</p></body></html>
