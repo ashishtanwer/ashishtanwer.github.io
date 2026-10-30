@@ -1,0 +1,5 @@
+Every recorded value here (token ids, hidden states, head outputs, attention weights) is an output of lmsys/vicuna-7b-v1.3 (revision 236eeeab96f0dc2e463f2bebb7bb49809279c6d6) with the Medusa heads FasterDecoding/medusa-vicuna-7b-v1.3 (revision 82ac200bf7502419cb49a9e0adcbebe3d1d293f1), run by scripts/efficiency/record_medusa.py. No model weights are included.
+
+Medusa: https://github.com/FasterDecoding/Medusa (code under the Apache License 2.0; a copy is in static/traces/licenses/Apache-2.0.txt). The heads' model card states no license.
+
+Vicuna v1.3 is fine-tuned from LLaMA and released by LMSYS under a non-commercial license. LLaMA is licensed under the LLaMA license, Copyright (c) Meta Platforms, Inc. All Rights Reserved. A copy of the LLaMA license is in static/traces/licenses/LLaMA-LICENSE.txt; it allows data the model produces to be shared only for non-commercial research purposes, and these recordings are shared for non-commercial research and education only.
