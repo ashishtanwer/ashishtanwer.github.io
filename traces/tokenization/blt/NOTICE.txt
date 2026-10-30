@@ -1,0 +1,4 @@
+Recorded from Meta's Byte Latent Transformer (facebook/blt-1b and facebook/blt-entropy on Hugging Face),
+Research Materials made available by Meta under the FAIR Noncommercial Research License (FAIR-LICENSE.txt).
+For noncommercial research and education only. Paper: Pagnoni et al., "Byte Latent Transformer: Patches
+Scale Better Than Tokens" (2024), https://arxiv.org/abs/2412.09871.

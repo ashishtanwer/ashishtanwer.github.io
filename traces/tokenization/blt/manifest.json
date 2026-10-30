@@ -1,0 +1,1055 @@
+{
+	"kind": "byte-patcher",
+	"tab": "blt",
+	"model": {
+		"id": "facebook/blt-1b",
+		"name": "BLT 1B",
+		"revision": "8134b32f0b1d25d1248c30e8c7bdfd442d3bb380",
+		"url": "https://huggingface.co/facebook/blt-1b/tree/8134b32f0b1d25d1248c30e8c7bdfd442d3bb380",
+		"license": "FAIR Noncommercial Research License",
+		"licenseUrl": "https://huggingface.co/facebook/blt-1b/blob/main/LICENSE",
+		"paper": "https://arxiv.org/abs/2412.09871",
+		"code": "https://github.com/facebookresearch/blt",
+		"vocab": 260,
+		"offset": 4,
+		"special": {
+			"<boe>": 0,
+			"<s>": 1,
+			"</s>": 2,
+			"<pad>": 3
+		},
+		"dimGlobal": 2048,
+		"layersGlobal": 25,
+		"dimLocal": 1024,
+		"headsLocal": 16,
+		"layersEncoder": 1,
+		"layersDecoder": 9,
+		"crossAttnK": 2,
+		"hashSizes": [3, 4, 5, 6, 7, 8],
+		"hashVocab": 500002,
+		"parameters": {
+			"hashTables": 3072012288,
+			"globalTransformer": 1284608000,
+			"localEncoder": 19406848,
+			"localDecoder": 157852672
+		}
+	},
+	"entropyModel": {
+		"id": "facebook/blt-entropy",
+		"revision": "f2aae511e44e2086b1204bc4ddec6ac6c9651332",
+		"url": "https://huggingface.co/facebook/blt-entropy/tree/f2aae511e44e2086b1204bc4ddec6ac6c9651332",
+		"sha256": "aa45c5ffae9f528329d146a91356d1d06056b71653beddada39781bfcadb521d",
+		"bundledSha256": "69357751c37f17caeb21bcf29d4292f4c927cedcb31aefbc73472bd570cd5428",
+		"parameters": 99512064,
+		"layers": 14,
+		"dim": 768,
+		"heads": 12,
+		"window": 512
+	},
+	"patching": {
+		"mode": "entropy",
+		"threshold": 1.335442066192627,
+		"monotonicity": false,
+		"thresholdAdd": null,
+		"patchSize": 4.5,
+		"maxPatchLength": null,
+		"rule": "positions 0 and 1 start patches; position p + 1 starts one when the entropy at p > threshold"
+	},
+	"gpt2": {
+		"id": "openai-community/gpt2",
+		"revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e"
+	},
+	"tokenizerReference": {
+		"id": "itazap/blt-1b-hf",
+		"revision": "91aa6b8e168046ad91e517d2191e1e974f50cc01",
+		"file": "tokenizer.json"
+	},
+	"inputs": [
+		{
+			"label": "English sentence",
+			"text": "Tokenization turns text into numbers.",
+			"chars": [
+				{
+					"text": "T",
+					"codepoint": 84,
+					"start": 0,
+					"bytes": 1
+				},
+				{
+					"text": "o",
+					"codepoint": 111,
+					"start": 1,
+					"bytes": 1
+				},
+				{
+					"text": "k",
+					"codepoint": 107,
+					"start": 2,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 3,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 4,
+					"bytes": 1
+				},
+				{
+					"text": "i",
+					"codepoint": 105,
+					"start": 5,
+					"bytes": 1
+				},
+				{
+					"text": "z",
+					"codepoint": 122,
+					"start": 6,
+					"bytes": 1
+				},
+				{
+					"text": "a",
+					"codepoint": 97,
+					"start": 7,
+					"bytes": 1
+				},
+				{
+					"text": "t",
+					"codepoint": 116,
+					"start": 8,
+					"bytes": 1
+				},
+				{
+					"text": "i",
+					"codepoint": 105,
+					"start": 9,
+					"bytes": 1
+				},
+				{
+					"text": "o",
+					"codepoint": 111,
+					"start": 10,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 11,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 12,
+					"bytes": 1
+				},
+				{
+					"text": "t",
+					"codepoint": 116,
+					"start": 13,
+					"bytes": 1
+				},
+				{
+					"text": "u",
+					"codepoint": 117,
+					"start": 14,
+					"bytes": 1
+				},
+				{
+					"text": "r",
+					"codepoint": 114,
+					"start": 15,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 16,
+					"bytes": 1
+				},
+				{
+					"text": "s",
+					"codepoint": 115,
+					"start": 17,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 18,
+					"bytes": 1
+				},
+				{
+					"text": "t",
+					"codepoint": 116,
+					"start": 19,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 20,
+					"bytes": 1
+				},
+				{
+					"text": "x",
+					"codepoint": 120,
+					"start": 21,
+					"bytes": 1
+				},
+				{
+					"text": "t",
+					"codepoint": 116,
+					"start": 22,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 23,
+					"bytes": 1
+				},
+				{
+					"text": "i",
+					"codepoint": 105,
+					"start": 24,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 25,
+					"bytes": 1
+				},
+				{
+					"text": "t",
+					"codepoint": 116,
+					"start": 26,
+					"bytes": 1
+				},
+				{
+					"text": "o",
+					"codepoint": 111,
+					"start": 27,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 28,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 29,
+					"bytes": 1
+				},
+				{
+					"text": "u",
+					"codepoint": 117,
+					"start": 30,
+					"bytes": 1
+				},
+				{
+					"text": "m",
+					"codepoint": 109,
+					"start": 31,
+					"bytes": 1
+				},
+				{
+					"text": "b",
+					"codepoint": 98,
+					"start": 32,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 33,
+					"bytes": 1
+				},
+				{
+					"text": "r",
+					"codepoint": 114,
+					"start": 34,
+					"bytes": 1
+				},
+				{
+					"text": "s",
+					"codepoint": 115,
+					"start": 35,
+					"bytes": 1
+				},
+				{
+					"text": ".",
+					"codepoint": 46,
+					"start": 36,
+					"bytes": 1
+				}
+			],
+			"bytes": [
+				84, 111, 107, 101, 110, 105, 122, 97, 116, 105, 111, 110, 32, 116, 117, 114, 110, 115, 32,
+				116, 101, 120, 116, 32, 105, 110, 116, 111, 32, 110, 117, 109, 98, 101, 114, 115, 46
+			],
+			"ids": [
+				1, 88, 115, 111, 105, 114, 109, 126, 101, 120, 109, 115, 114, 36, 120, 121, 118, 114, 119,
+				36, 120, 105, 124, 120, 36, 109, 114, 120, 115, 36, 114, 121, 113, 102, 105, 118, 119, 50
+			],
+			"patchLengths": [1, 1, 1, 2, 1, 8, 1, 5, 2, 3, 5, 1, 7],
+			"patchStarts": [0, 1, 2, 3, 5, 6, 14, 15, 20, 22, 25, 30, 31],
+			"gpt2Tokens": 7,
+			"byt5Ids": 38
+		},
+		{
+			"label": "a long word",
+			"text": "unbelievably",
+			"chars": [
+				{
+					"text": "u",
+					"codepoint": 117,
+					"start": 0,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 1,
+					"bytes": 1
+				},
+				{
+					"text": "b",
+					"codepoint": 98,
+					"start": 2,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 3,
+					"bytes": 1
+				},
+				{
+					"text": "l",
+					"codepoint": 108,
+					"start": 4,
+					"bytes": 1
+				},
+				{
+					"text": "i",
+					"codepoint": 105,
+					"start": 5,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 6,
+					"bytes": 1
+				},
+				{
+					"text": "v",
+					"codepoint": 118,
+					"start": 7,
+					"bytes": 1
+				},
+				{
+					"text": "a",
+					"codepoint": 97,
+					"start": 8,
+					"bytes": 1
+				},
+				{
+					"text": "b",
+					"codepoint": 98,
+					"start": 9,
+					"bytes": 1
+				},
+				{
+					"text": "l",
+					"codepoint": 108,
+					"start": 10,
+					"bytes": 1
+				},
+				{
+					"text": "y",
+					"codepoint": 121,
+					"start": 11,
+					"bytes": 1
+				}
+			],
+			"bytes": [117, 110, 98, 101, 108, 105, 101, 118, 97, 98, 108, 121],
+			"ids": [1, 121, 114, 102, 105, 112, 109, 105, 122, 101, 102, 112, 125],
+			"patchLengths": [1, 2, 1, 1, 8],
+			"patchStarts": [0, 1, 3, 4, 5],
+			"gpt2Tokens": 4,
+			"byt5Ids": 13
+		},
+		{
+			"label": "accents and an emoji",
+			"text": "naïve café 🤖",
+			"chars": [
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 0,
+					"bytes": 1
+				},
+				{
+					"text": "a",
+					"codepoint": 97,
+					"start": 1,
+					"bytes": 1
+				},
+				{
+					"text": "ï",
+					"codepoint": 239,
+					"start": 2,
+					"bytes": 2
+				},
+				{
+					"text": "v",
+					"codepoint": 118,
+					"start": 4,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 5,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 6,
+					"bytes": 1
+				},
+				{
+					"text": "c",
+					"codepoint": 99,
+					"start": 7,
+					"bytes": 1
+				},
+				{
+					"text": "a",
+					"codepoint": 97,
+					"start": 8,
+					"bytes": 1
+				},
+				{
+					"text": "f",
+					"codepoint": 102,
+					"start": 9,
+					"bytes": 1
+				},
+				{
+					"text": "é",
+					"codepoint": 233,
+					"start": 10,
+					"bytes": 2
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 12,
+					"bytes": 1
+				},
+				{
+					"text": "🤖",
+					"codepoint": 129302,
+					"start": 13,
+					"bytes": 4
+				}
+			],
+			"bytes": [110, 97, 195, 175, 118, 101, 32, 99, 97, 102, 195, 169, 32, 240, 159, 164, 150],
+			"ids": [1, 114, 101, 199, 179, 122, 105, 36, 103, 101, 106, 199, 173, 36, 244, 163, 168, 154],
+			"patchLengths": [1, 1, 6, 1, 1, 3, 1, 2, 1, 1, 0],
+			"patchStarts": [0, 1, 2, 8, 9, 10, 13, 14, 16, 17, 18],
+			"gpt2Tokens": 6,
+			"byt5Ids": 18
+		},
+		{
+			"label": "Japanese",
+			"text": "東京は晴れ",
+			"chars": [
+				{
+					"text": "東",
+					"codepoint": 26481,
+					"start": 0,
+					"bytes": 3
+				},
+				{
+					"text": "京",
+					"codepoint": 20140,
+					"start": 3,
+					"bytes": 3
+				},
+				{
+					"text": "は",
+					"codepoint": 12399,
+					"start": 6,
+					"bytes": 3
+				},
+				{
+					"text": "晴",
+					"codepoint": 26228,
+					"start": 9,
+					"bytes": 3
+				},
+				{
+					"text": "れ",
+					"codepoint": 12428,
+					"start": 12,
+					"bytes": 3
+				}
+			],
+			"bytes": [230, 157, 177, 228, 186, 172, 227, 129, 175, 230, 153, 180, 227, 130, 140],
+			"ids": [1, 234, 161, 181, 232, 190, 176, 231, 133, 179, 234, 157, 184, 231, 134, 144],
+			"patchLengths": [1, 1, 1, 4, 2, 1, 1, 1, 1, 2, 1],
+			"patchStarts": [0, 1, 2, 3, 7, 9, 10, 11, 12, 13, 15],
+			"gpt2Tokens": 9,
+			"byt5Ids": 16
+		},
+		{
+			"label": "indented code",
+			"text": "    x = 12345",
+			"chars": [
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 0,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 1,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 2,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 3,
+					"bytes": 1
+				},
+				{
+					"text": "x",
+					"codepoint": 120,
+					"start": 4,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 5,
+					"bytes": 1
+				},
+				{
+					"text": "=",
+					"codepoint": 61,
+					"start": 6,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 7,
+					"bytes": 1
+				},
+				{
+					"text": "1",
+					"codepoint": 49,
+					"start": 8,
+					"bytes": 1
+				},
+				{
+					"text": "2",
+					"codepoint": 50,
+					"start": 9,
+					"bytes": 1
+				},
+				{
+					"text": "3",
+					"codepoint": 51,
+					"start": 10,
+					"bytes": 1
+				},
+				{
+					"text": "4",
+					"codepoint": 52,
+					"start": 11,
+					"bytes": 1
+				},
+				{
+					"text": "5",
+					"codepoint": 53,
+					"start": 12,
+					"bytes": 1
+				}
+			],
+			"bytes": [32, 32, 32, 32, 120, 32, 61, 32, 49, 50, 51, 52, 53],
+			"ids": [1, 36, 36, 36, 36, 124, 36, 65, 36, 53, 54, 55, 56, 57],
+			"patchLengths": [1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2],
+			"patchStarts": [0, 1, 2, 3, 5, 6, 7, 9, 10, 11, 12],
+			"gpt2Tokens": 7,
+			"byt5Ids": 14
+		}
+	],
+	"top": 8,
+	"preview": 64,
+	"entropy": {
+		"file": "entropy.f32",
+		"sha256": "ff3e03c617cd9463a3b79bc37168d9c84a21639e52c91483f90a7f7177ec8350",
+		"bytes": 7504,
+		"tensors": {
+			"entropy.0": {
+				"offset": 0,
+				"length": 38,
+				"shape": [38]
+			},
+			"topIds.0": {
+				"offset": 38,
+				"length": 304,
+				"shape": [38, 8]
+			},
+			"topP.0": {
+				"offset": 342,
+				"length": 304,
+				"shape": [38, 8]
+			},
+			"pNext.0": {
+				"offset": 646,
+				"length": 37,
+				"shape": [37]
+			},
+			"entropyBf16.0": {
+				"offset": 683,
+				"length": 38,
+				"shape": [38]
+			},
+			"entropy.1": {
+				"offset": 721,
+				"length": 13,
+				"shape": [13]
+			},
+			"topIds.1": {
+				"offset": 734,
+				"length": 104,
+				"shape": [13, 8]
+			},
+			"topP.1": {
+				"offset": 838,
+				"length": 104,
+				"shape": [13, 8]
+			},
+			"pNext.1": {
+				"offset": 942,
+				"length": 12,
+				"shape": [12]
+			},
+			"entropyBf16.1": {
+				"offset": 954,
+				"length": 13,
+				"shape": [13]
+			},
+			"entropy.2": {
+				"offset": 967,
+				"length": 18,
+				"shape": [18]
+			},
+			"topIds.2": {
+				"offset": 985,
+				"length": 144,
+				"shape": [18, 8]
+			},
+			"topP.2": {
+				"offset": 1129,
+				"length": 144,
+				"shape": [18, 8]
+			},
+			"pNext.2": {
+				"offset": 1273,
+				"length": 17,
+				"shape": [17]
+			},
+			"entropyBf16.2": {
+				"offset": 1290,
+				"length": 18,
+				"shape": [18]
+			},
+			"entropy.3": {
+				"offset": 1308,
+				"length": 16,
+				"shape": [16]
+			},
+			"topIds.3": {
+				"offset": 1324,
+				"length": 128,
+				"shape": [16, 8]
+			},
+			"topP.3": {
+				"offset": 1452,
+				"length": 128,
+				"shape": [16, 8]
+			},
+			"pNext.3": {
+				"offset": 1580,
+				"length": 15,
+				"shape": [15]
+			},
+			"entropyBf16.3": {
+				"offset": 1595,
+				"length": 16,
+				"shape": [16]
+			},
+			"entropy.4": {
+				"offset": 1611,
+				"length": 14,
+				"shape": [14]
+			},
+			"topIds.4": {
+				"offset": 1625,
+				"length": 112,
+				"shape": [14, 8]
+			},
+			"topP.4": {
+				"offset": 1737,
+				"length": 112,
+				"shape": [14, 8]
+			},
+			"pNext.4": {
+				"offset": 1849,
+				"length": 13,
+				"shape": [13]
+			},
+			"entropyBf16.4": {
+				"offset": 1862,
+				"length": 14,
+				"shape": [14]
+			}
+		}
+	},
+	"encoder": {
+		"file": "encoder.f32",
+		"sha256": "3293c81c564aad37b028ed3628e485b230b80f452ced9660e0a590a29e09eb0d",
+		"bytes": 234740,
+		"tensors": {
+			"hashIds.0": {
+				"offset": 0,
+				"length": 228,
+				"shape": [38, 6]
+			},
+			"hashNorms.0": {
+				"offset": 228,
+				"length": 228,
+				"shape": [38, 6]
+			},
+			"byteNorm.0": {
+				"offset": 456,
+				"length": 38,
+				"shape": [38]
+			},
+			"inputNorm.0": {
+				"offset": 494,
+				"length": 38,
+				"shape": [38]
+			},
+			"input.0": {
+				"offset": 532,
+				"length": 2432,
+				"shape": [38, 64]
+			},
+			"hidden.0": {
+				"offset": 2964,
+				"length": 2432,
+				"shape": [38, 64]
+			},
+			"pooled.0": {
+				"offset": 5396,
+				"length": 832,
+				"shape": [13, 64]
+			},
+			"patch.0": {
+				"offset": 6228,
+				"length": 1664,
+				"shape": [13, 2, 64]
+			},
+			"patchNorm.0": {
+				"offset": 7892,
+				"length": 13,
+				"shape": [13]
+			},
+			"cross.0": {
+				"offset": 7905,
+				"length": 15808,
+				"shape": [13, 2, 16, 38]
+			},
+			"hashIds.1": {
+				"offset": 23713,
+				"length": 78,
+				"shape": [13, 6]
+			},
+			"hashNorms.1": {
+				"offset": 23791,
+				"length": 78,
+				"shape": [13, 6]
+			},
+			"byteNorm.1": {
+				"offset": 23869,
+				"length": 13,
+				"shape": [13]
+			},
+			"inputNorm.1": {
+				"offset": 23882,
+				"length": 13,
+				"shape": [13]
+			},
+			"input.1": {
+				"offset": 23895,
+				"length": 832,
+				"shape": [13, 64]
+			},
+			"hidden.1": {
+				"offset": 24727,
+				"length": 832,
+				"shape": [13, 64]
+			},
+			"pooled.1": {
+				"offset": 25559,
+				"length": 320,
+				"shape": [5, 64]
+			},
+			"patch.1": {
+				"offset": 25879,
+				"length": 640,
+				"shape": [5, 2, 64]
+			},
+			"patchNorm.1": {
+				"offset": 26519,
+				"length": 5,
+				"shape": [5]
+			},
+			"cross.1": {
+				"offset": 26524,
+				"length": 2080,
+				"shape": [5, 2, 16, 13]
+			},
+			"hashIds.2": {
+				"offset": 28604,
+				"length": 108,
+				"shape": [18, 6]
+			},
+			"hashNorms.2": {
+				"offset": 28712,
+				"length": 108,
+				"shape": [18, 6]
+			},
+			"byteNorm.2": {
+				"offset": 28820,
+				"length": 18,
+				"shape": [18]
+			},
+			"inputNorm.2": {
+				"offset": 28838,
+				"length": 18,
+				"shape": [18]
+			},
+			"input.2": {
+				"offset": 28856,
+				"length": 1152,
+				"shape": [18, 64]
+			},
+			"hidden.2": {
+				"offset": 30008,
+				"length": 1152,
+				"shape": [18, 64]
+			},
+			"pooled.2": {
+				"offset": 31160,
+				"length": 704,
+				"shape": [11, 64]
+			},
+			"patch.2": {
+				"offset": 31864,
+				"length": 1408,
+				"shape": [11, 2, 64]
+			},
+			"patchNorm.2": {
+				"offset": 33272,
+				"length": 11,
+				"shape": [11]
+			},
+			"cross.2": {
+				"offset": 33283,
+				"length": 6336,
+				"shape": [11, 2, 16, 18]
+			},
+			"hashIds.3": {
+				"offset": 39619,
+				"length": 96,
+				"shape": [16, 6]
+			},
+			"hashNorms.3": {
+				"offset": 39715,
+				"length": 96,
+				"shape": [16, 6]
+			},
+			"byteNorm.3": {
+				"offset": 39811,
+				"length": 16,
+				"shape": [16]
+			},
+			"inputNorm.3": {
+				"offset": 39827,
+				"length": 16,
+				"shape": [16]
+			},
+			"input.3": {
+				"offset": 39843,
+				"length": 1024,
+				"shape": [16, 64]
+			},
+			"hidden.3": {
+				"offset": 40867,
+				"length": 1024,
+				"shape": [16, 64]
+			},
+			"pooled.3": {
+				"offset": 41891,
+				"length": 704,
+				"shape": [11, 64]
+			},
+			"patch.3": {
+				"offset": 42595,
+				"length": 1408,
+				"shape": [11, 2, 64]
+			},
+			"patchNorm.3": {
+				"offset": 44003,
+				"length": 11,
+				"shape": [11]
+			},
+			"cross.3": {
+				"offset": 44014,
+				"length": 5632,
+				"shape": [11, 2, 16, 16]
+			},
+			"hashIds.4": {
+				"offset": 49646,
+				"length": 84,
+				"shape": [14, 6]
+			},
+			"hashNorms.4": {
+				"offset": 49730,
+				"length": 84,
+				"shape": [14, 6]
+			},
+			"byteNorm.4": {
+				"offset": 49814,
+				"length": 14,
+				"shape": [14]
+			},
+			"inputNorm.4": {
+				"offset": 49828,
+				"length": 14,
+				"shape": [14]
+			},
+			"input.4": {
+				"offset": 49842,
+				"length": 896,
+				"shape": [14, 64]
+			},
+			"hidden.4": {
+				"offset": 50738,
+				"length": 896,
+				"shape": [14, 64]
+			},
+			"pooled.4": {
+				"offset": 51634,
+				"length": 704,
+				"shape": [11, 64]
+			},
+			"patch.4": {
+				"offset": 52338,
+				"length": 1408,
+				"shape": [11, 2, 64]
+			},
+			"patchNorm.4": {
+				"offset": 53746,
+				"length": 11,
+				"shape": [11]
+			},
+			"cross.4": {
+				"offset": 53757,
+				"length": 4928,
+				"shape": [11, 2, 16, 14]
+			}
+		}
+	},
+	"validation": {
+		"entropyCopiesMaxDiff": 0.0,
+		"idsVsTokenizer": 0,
+		"patchesVsRule": 0,
+		"patchLengthSums": 0,
+		"drawerPatchLengths": 0,
+		"drawerEntropyMaxError": 7.62939453125e-6,
+		"drawerPatchMaxError": 3.8743019104003906e-7,
+		"drawerHashIds": 0,
+		"crossRowSums": 1.7881393432617188e-7,
+		"entropyFileVsModel": 0.0
+	},
+	"precision": {
+		"English sentence": {
+			"bf16EntropyMaxDiff": 0.0783,
+			"bf16StartFlips": 0,
+			"smallestMargin": 0.0745
+		},
+		"a long word": {
+			"bf16EntropyMaxDiff": 0.0697,
+			"bf16StartFlips": 0,
+			"smallestMargin": 0.1885
+		},
+		"accents and an emoji": {
+			"bf16EntropyMaxDiff": 0.0697,
+			"bf16StartFlips": 0,
+			"smallestMargin": 0.0515
+		},
+		"Japanese": {
+			"bf16EntropyMaxDiff": 0.0697,
+			"bf16StartFlips": 0,
+			"smallestMargin": 0.0429
+		},
+		"indented code": {
+			"bf16EntropyMaxDiff": 0.0697,
+			"bf16StartFlips": 0,
+			"smallestMargin": 0.0105
+		}
+	},
+	"capture": {
+		"timestamp": "2026-10-30T13:48:07.473994+00:00",
+		"device": "cpu",
+		"dtype": "float32",
+		"python": "3.12.12",
+		"packages": {
+			"torch": "2.14.1",
+			"transformers": "5.21.0",
+			"tokenizers": "0.23.3",
+			"huggingface-hub": "2.4.0",
+			"safetensors": "0.8.0"
+		},
+		"script": "scripts/tokenization/record_blt.py",
+		"scriptSha256": "e72951a2bcdc8192e6477bd02b4481e3272c3012a2331f685f00c9ab2d5d23ed",
+		"helperSha256": "665a805686e18877fe1986eda0d5b069c438c85e2d4c05cb2c37e15568dfd98b"
+	}
+}
