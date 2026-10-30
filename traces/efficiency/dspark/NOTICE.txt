@@ -1,0 +1,3 @@
+Recorded with deepseek-ai/dspark_qwen3_4b_block7 (revision 3457dff1417cb84927f6098a5fcb7cee85c934b7) drafting for Qwen/Qwen3-4B (revision 1cfa9a7208912126459214e8b04321603b3df60c, Apache License 2.0, Copyright (c) Alibaba Cloud / the Qwen team). The DSpark checkpoint repository has no license file; it is released by DeepSpec (https://github.com/deepseek-ai/DeepSpec, MIT License, Copyright (c) 2026 The DeepSpec Authors), whose README lists it as the output of the repository's training configuration.
+
+Every token, probability, confidence, feature and attention weight in this folder was computed by those models on the Mac named in manifest.json; timings are wall-clock measurements on that Mac.
