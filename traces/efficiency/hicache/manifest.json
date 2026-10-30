@@ -1,0 +1,9640 @@
+{
+	"schemaVersion": 1,
+	"kind": "efficiency-serving",
+	"tab": "hicache",
+	"model": {
+		"id": "Qwen/Qwen2.5-0.5B-Instruct",
+		"name": "Qwen2.5-0.5B-Instruct",
+		"revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+		"url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/tree/7ae557604adf67be50417f59c2c2f167def9a775",
+		"license": "apache-2.0",
+		"parameters": 494032768,
+		"numLayers": 24,
+		"hiddenSize": 896,
+		"mlpSize": 4864,
+		"vocab": 151936,
+		"attentionHeads": 14,
+		"keyValueHeads": 2,
+		"headDim": 64,
+		"ropeTheta": 1000000.0,
+		"maxPositions": 32768,
+		"dtype": "bfloat16"
+	},
+	"pageSize": 16,
+	"gpuPages": 14,
+	"hostPages": 28,
+	"pageBytes": 393216,
+	"prefetchThreshold": 32,
+	"selectiveHits": 2,
+	"maxNewTokens": 32,
+	"previewLayer": 11,
+	"tiers": {
+		"gpu": "Apple GPU (MPS), a layer-first pool",
+		"host": "CPU memory, a page-first pool",
+		"storage": "one file per page on the internal SSD, written and read with F_NOCACHE and fsync"
+	},
+	"requests": [
+		{
+			"id": "pool",
+			"group": "hotel",
+			"messages": [
+				{
+					"role": "system",
+					"content": "You are the front-desk assistant of the Harbour View Hotel. Answer guests briefly, using only these facts. Check-in is from 3 pm and check-out is by 11 am. Breakfast is served from 6:30 to 10:30 am in the Lantern Room on the ground floor and is included in all rates. The rooftop pool is open from 7 am to 9 pm; towels are at the pool desk. The gym on level 2 is open 24 hours with your room key. The guest Wi-Fi network is HarbourGuest and the password is tide-lamp-7. Parking is in the garage under the hotel for 25 dollars a night. Late check-out until 1 pm costs 30 dollars and must be booked by 9 am."
+				},
+				{
+					"role": "user",
+					"content": "When is the pool open?"
+				}
+			],
+			"promptTokens": 183,
+			"answer": "The pool is open from 7 am to 9 pm.<|im_end|>"
+		},
+		{
+			"id": "breakfast",
+			"group": "hotel",
+			"messages": [
+				{
+					"role": "system",
+					"content": "You are the front-desk assistant of the Harbour View Hotel. Answer guests briefly, using only these facts. Check-in is from 3 pm and check-out is by 11 am. Breakfast is served from 6:30 to 10:30 am in the Lantern Room on the ground floor and is included in all rates. The rooftop pool is open from 7 am to 9 pm; towels are at the pool desk. The gym on level 2 is open 24 hours with your room key. The guest Wi-Fi network is HarbourGuest and the password is tide-lamp-7. Parking is in the garage under the hotel for 25 dollars a night. Late check-out until 1 pm costs 30 dollars and must be booked by 9 am."
+				},
+				{
+					"role": "user",
+					"content": "Is breakfast included, and where is it?"
+				}
+			],
+			"promptTokens": 186,
+			"answer": "Yes, breakfast is served from 6:30 to 10:30 am in the Lantern Room on the ground floor.<|im_end|>"
+		},
+		{
+			"id": "reverse",
+			"group": "code",
+			"messages": [
+				{
+					"role": "system",
+					"content": "You are a careful Python tutor. Reply with one short code block and one sentence of explanation. Use only the standard library, name variables clearly, and prefer f-strings and pathlib."
+				},
+				{
+					"role": "user",
+					"content": "Reverse a string."
+				}
+			],
+			"promptTokens": 54,
+			"answer": "```python\ndef reverse_string(s):\n    return s[::-1]\n```<|im_end|>"
+		},
+		{
+			"id": "kyoto-1",
+			"group": "chat",
+			"messages": [
+				{
+					"role": "user",
+					"content": "I am visiting Kyoto in April for three days. Suggest one temple to see."
+				}
+			],
+			"promptTokens": 46,
+			"answer": "Kyoto is a city renowned for its beautiful temples and shrines, and April is a great time to visit for a variety of reasons. Here are a few"
+		},
+		{
+			"id": "kyoto-2",
+			"group": "chat",
+			"messages": [
+				{
+					"role": "user",
+					"content": "I am visiting Kyoto in April for three days. Suggest one temple to see."
+				},
+				{
+					"role": "assistant",
+					"content": "Kyoto is a city renowned for its beautiful temples and shrines, and April is a great time to visit for a variety of reasons. Here are a few"
+				},
+				{
+					"role": "user",
+					"content": "How do I get there from Kyoto Station?"
+				}
+			],
+			"promptTokens": 97,
+			"answer": "To get to Kyoto from Kyoto Station, you can take the Kyoto Metro Line 1 or Line 2. Here are the steps to get there:\n\n1."
+		},
+		{
+			"id": "csv",
+			"group": "code",
+			"messages": [
+				{
+					"role": "system",
+					"content": "You are a careful Python tutor. Reply with one short code block and one sentence of explanation. Use only the standard library, name variables clearly, and prefer f-strings and pathlib."
+				},
+				{
+					"role": "user",
+					"content": "Read a CSV file and print each row."
+				}
+			],
+			"promptTokens": 59,
+			"answer": "```python\nimport csv\n\n# Open the CSV file\nwith open('example.csv', mode='r') as file:\n    # Create a CSV reader object"
+		},
+		{
+			"id": "kyoto-3",
+			"group": "chat",
+			"messages": [
+				{
+					"role": "user",
+					"content": "I am visiting Kyoto in April for three days. Suggest one temple to see."
+				},
+				{
+					"role": "assistant",
+					"content": "Kyoto is a city renowned for its beautiful temples and shrines, and April is a great time to visit for a variety of reasons. Here are a few"
+				},
+				{
+					"role": "user",
+					"content": "How do I get there from Kyoto Station?"
+				},
+				{
+					"role": "assistant",
+					"content": "To get to Kyoto from Kyoto Station, you can take the Kyoto Metro Line 1 or Line 2. Here are the steps to get there:\n\n1."
+				},
+				{
+					"role": "user",
+					"content": "Is it crowded in the morning?"
+				}
+			],
+			"promptTokens": 146,
+			"answer": "The morning rush hour can be quite busy in Kyoto, especially during the early hours of the day. However, the city is generally peaceful and quiet during the day"
+		},
+		{
+			"id": "json",
+			"group": "code",
+			"messages": [
+				{
+					"role": "system",
+					"content": "You are a careful Python tutor. Reply with one short code block and one sentence of explanation. Use only the standard library, name variables clearly, and prefer f-strings and pathlib."
+				},
+				{
+					"role": "user",
+					"content": "Write a dictionary to a JSON file."
+				}
+			],
+			"promptTokens": 58,
+			"answer": "```python\nimport json\nimport pathlib\n\n# Define the dictionary\ndata = {\n    \"name\": \"John Doe\",\n    \"age\": 30"
+		},
+		{
+			"id": "tea",
+			"group": "chat",
+			"messages": [
+				{
+					"role": "user",
+					"content": "Suggest a caffeine-free tea for the evening."
+				}
+			],
+			"promptTokens": 39,
+			"answer": "For a caffeine-free tea, you might consider a blend of chamomile and lavender. Chamomile is known for its calming properties, while lavender is often"
+		},
+		{
+			"id": "wifi",
+			"group": "hotel",
+			"messages": [
+				{
+					"role": "system",
+					"content": "You are the front-desk assistant of the Harbour View Hotel. Answer guests briefly, using only these facts. Check-in is from 3 pm and check-out is by 11 am. Breakfast is served from 6:30 to 10:30 am in the Lantern Room on the ground floor and is included in all rates. The rooftop pool is open from 7 am to 9 pm; towels are at the pool desk. The gym on level 2 is open 24 hours with your room key. The guest Wi-Fi network is HarbourGuest and the password is tide-lamp-7. Parking is in the garage under the hotel for 25 dollars a night. Late check-out until 1 pm costs 30 dollars and must be booked by 9 am."
+				},
+				{
+					"role": "user",
+					"content": "What is the Wi-Fi password?"
+				}
+			],
+			"promptTokens": 184,
+			"answer": "The Wi-Fi password for Harbour View Hotel's guest Wi-Fi network is \"tide-lamp-7\".<|im_end|>"
+		},
+		{
+			"id": "checkout",
+			"group": "hotel",
+			"messages": [
+				{
+					"role": "system",
+					"content": "You are the front-desk assistant of the Harbour View Hotel. Answer guests briefly, using only these facts. Check-in is from 3 pm and check-out is by 11 am. Breakfast is served from 6:30 to 10:30 am in the Lantern Room on the ground floor and is included in all rates. The rooftop pool is open from 7 am to 9 pm; towels are at the pool desk. The gym on level 2 is open 24 hours with your room key. The guest Wi-Fi network is HarbourGuest and the password is tide-lamp-7. Parking is in the garage under the hotel for 25 dollars a night. Late check-out until 1 pm costs 30 dollars and must be booked by 9 am."
+				},
+				{
+					"role": "user",
+					"content": "Can I check out late?"
+				}
+			],
+			"promptTokens": 183,
+			"answer": "Yes, you can check out late until 1 pm, but you must book it by 9 am.<|im_end|>"
+		}
+	],
+	"pages": {
+		"write_through": [
+			{
+				"id": 0,
+				"text": "<|im_start|>system\nYou are the front-desk assistant of the Harbour View Hotel."
+			},
+			{
+				"id": 1,
+				"text": " Answer guests briefly, using only these facts. Check-in is from 3 pm"
+			},
+			{
+				"id": 2,
+				"text": " and check-out is by 11 am. Breakfast is served from 6"
+			},
+			{
+				"id": 3,
+				"text": ":30 to 10:30 am in the Lantern Room on"
+			},
+			{
+				"id": 4,
+				"text": " the ground floor and is included in all rates. The rooftop pool is open from"
+			},
+			{
+				"id": 5,
+				"text": " 7 am to 9 pm; towels are at the pool desk. The"
+			},
+			{
+				"id": 6,
+				"text": " gym on level 2 is open 24 hours with your room key."
+			},
+			{
+				"id": 7,
+				"text": " The guest Wi-Fi network is HarbourGuest and the password is tide-lamp-"
+			},
+			{
+				"id": 8,
+				"text": "7. Parking is in the garage under the hotel for 25 dollars a"
+			},
+			{
+				"id": 9,
+				"text": " night. Late check-out until 1 pm costs 30 dollars and must"
+			},
+			{
+				"id": 10,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nWhen is the pool"
+			},
+			{
+				"id": 11,
+				"text": " open?<|im_end|>\n<|im_start|>assistant\nThe pool is open from 7 am to"
+			},
+			{
+				"id": 12,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nIs breakfast included,"
+			},
+			{
+				"id": 13,
+				"text": " and where is it?<|im_end|>\n<|im_start|>assistant\nYes, breakfast is served from"
+			},
+			{
+				"id": 14,
+				"text": " 6:30 to 10:30 am in the Lantern"
+			},
+			{
+				"id": 15,
+				"text": "<|im_start|>system\nYou are a careful Python tutor. Reply with one short code block"
+			},
+			{
+				"id": 16,
+				"text": " and one sentence of explanation. Use only the standard library, name variables clearly,"
+			},
+			{
+				"id": 17,
+				"text": " and prefer f-strings and pathlib.<|im_end|>\n<|im_start|>user\nReverse a string"
+			},
+			{
+				"id": 18,
+				"text": ".<|im_end|>\n<|im_start|>assistant\n```python\ndef reverse_string(s):\n    return"
+			},
+			{
+				"id": 19,
+				"text": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a"
+			},
+			{
+				"id": 20,
+				"text": " helpful assistant.<|im_end|>\n<|im_start|>user\nI am visiting Kyoto in April for three"
+			},
+			{
+				"id": 21,
+				"text": " days. Suggest one temple to see.<|im_end|>\n<|im_start|>assistant\nKyoto"
+			},
+			{
+				"id": 22,
+				"text": " is a city renowned for its beautiful temples and shrines, and April is a"
+			},
+			{
+				"id": 23,
+				"text": " great time to visit for a variety of reasons. Here are a few<|im_end|>\n"
+			},
+			{
+				"id": 24,
+				"text": "<|im_start|>user\nHow do I get there from Kyoto Station?<|im_end|>\n<|im_start|>assistant"
+			},
+			{
+				"id": 25,
+				"text": "\nTo get to Kyoto from Kyoto Station, you can take the Kyoto Metro Line"
+			},
+			{
+				"id": 26,
+				"text": " 1 or Line 2. Here are the steps to get there:\n\n1"
+			},
+			{
+				"id": 27,
+				"text": " and prefer f-strings and pathlib.<|im_end|>\n<|im_start|>user\nRead a CSV"
+			},
+			{
+				"id": 28,
+				"text": " file and print each row.<|im_end|>\n<|im_start|>assistant\n```python\nimport csv"
+			},
+			{
+				"id": 29,
+				"text": "\n\n# Open the CSV file\nwith open('example.csv', mode='r"
+			},
+			{
+				"id": 30,
+				"text": ".<|im_end|>\n<|im_start|>user\nIs it crowded in the morning?<|im_end|>\n<|im_start|>"
+			},
+			{
+				"id": 31,
+				"text": "assistant\nThe morning rush hour can be quite busy in Kyoto, especially during the"
+			},
+			{
+				"id": 32,
+				"text": " early hours of the day. However, the city is generally peaceful and quiet during"
+			},
+			{
+				"id": 33,
+				"text": " and prefer f-strings and pathlib.<|im_end|>\n<|im_start|>user\nWrite a dictionary"
+			},
+			{
+				"id": 34,
+				"text": " to a JSON file.<|im_end|>\n<|im_start|>assistant\n```python\nimport json\n"
+			},
+			{
+				"id": 35,
+				"text": "import pathlib\n\n# Define the dictionary\ndata = {\n    \"name\": \""
+			},
+			{
+				"id": 36,
+				"text": " helpful assistant.<|im_end|>\n<|im_start|>user\nSuggest a caffeine-free tea for the"
+			},
+			{
+				"id": 37,
+				"text": " evening.<|im_end|>\n<|im_start|>assistant\nFor a caffeine-free tea, you might consider"
+			},
+			{
+				"id": 38,
+				"text": " a blend of chamomile and lavender. Chamomile is known for its"
+			},
+			{
+				"id": 39,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nWhat is the Wi"
+			},
+			{
+				"id": 40,
+				"text": "-Fi password?<|im_end|>\n<|im_start|>assistant\nThe Wi-Fi password for Harbour View Hotel"
+			},
+			{
+				"id": 41,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nCan I check out"
+			},
+			{
+				"id": 42,
+				"text": " late?<|im_end|>\n<|im_start|>assistant\nYes, you can check out late until "
+			}
+		],
+		"write_through_selective": [
+			{
+				"id": 0,
+				"text": "<|im_start|>system\nYou are the front-desk assistant of the Harbour View Hotel."
+			},
+			{
+				"id": 1,
+				"text": " Answer guests briefly, using only these facts. Check-in is from 3 pm"
+			},
+			{
+				"id": 2,
+				"text": " and check-out is by 11 am. Breakfast is served from 6"
+			},
+			{
+				"id": 3,
+				"text": ":30 to 10:30 am in the Lantern Room on"
+			},
+			{
+				"id": 4,
+				"text": " the ground floor and is included in all rates. The rooftop pool is open from"
+			},
+			{
+				"id": 5,
+				"text": " 7 am to 9 pm; towels are at the pool desk. The"
+			},
+			{
+				"id": 6,
+				"text": " gym on level 2 is open 24 hours with your room key."
+			},
+			{
+				"id": 7,
+				"text": " The guest Wi-Fi network is HarbourGuest and the password is tide-lamp-"
+			},
+			{
+				"id": 8,
+				"text": "7. Parking is in the garage under the hotel for 25 dollars a"
+			},
+			{
+				"id": 9,
+				"text": " night. Late check-out until 1 pm costs 30 dollars and must"
+			},
+			{
+				"id": 10,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nWhen is the pool"
+			},
+			{
+				"id": 11,
+				"text": " open?<|im_end|>\n<|im_start|>assistant\nThe pool is open from 7 am to"
+			},
+			{
+				"id": 12,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nIs breakfast included,"
+			},
+			{
+				"id": 13,
+				"text": " and where is it?<|im_end|>\n<|im_start|>assistant\nYes, breakfast is served from"
+			},
+			{
+				"id": 14,
+				"text": " 6:30 to 10:30 am in the Lantern"
+			},
+			{
+				"id": 15,
+				"text": "<|im_start|>system\nYou are a careful Python tutor. Reply with one short code block"
+			},
+			{
+				"id": 16,
+				"text": " and one sentence of explanation. Use only the standard library, name variables clearly,"
+			},
+			{
+				"id": 17,
+				"text": " and prefer f-strings and pathlib.<|im_end|>\n<|im_start|>user\nReverse a string"
+			},
+			{
+				"id": 18,
+				"text": ".<|im_end|>\n<|im_start|>assistant\n```python\ndef reverse_string(s):\n    return"
+			},
+			{
+				"id": 19,
+				"text": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a"
+			},
+			{
+				"id": 20,
+				"text": " helpful assistant.<|im_end|>\n<|im_start|>user\nI am visiting Kyoto in April for three"
+			},
+			{
+				"id": 21,
+				"text": " days. Suggest one temple to see.<|im_end|>\n<|im_start|>assistant\nKyoto"
+			},
+			{
+				"id": 22,
+				"text": " is a city renowned for its beautiful temples and shrines, and April is a"
+			},
+			{
+				"id": 23,
+				"text": " great time to visit for a variety of reasons. Here are a few<|im_end|>\n"
+			},
+			{
+				"id": 24,
+				"text": "<|im_start|>user\nHow do I get there from Kyoto Station?<|im_end|>\n<|im_start|>assistant"
+			},
+			{
+				"id": 25,
+				"text": "\nTo get to Kyoto from Kyoto Station, you can take the Kyoto Metro Line"
+			},
+			{
+				"id": 26,
+				"text": " 1 or Line 2. Here are the steps to get there:\n\n1"
+			},
+			{
+				"id": 27,
+				"text": " and prefer f-strings and pathlib.<|im_end|>\n<|im_start|>user\nRead a CSV"
+			},
+			{
+				"id": 28,
+				"text": " file and print each row.<|im_end|>\n<|im_start|>assistant\n```python\nimport csv"
+			},
+			{
+				"id": 29,
+				"text": "\n\n# Open the CSV file\nwith open('example.csv', mode='r"
+			},
+			{
+				"id": 30,
+				"text": ".<|im_end|>\n<|im_start|>user\nIs it crowded in the morning?<|im_end|>\n<|im_start|>"
+			},
+			{
+				"id": 31,
+				"text": "assistant\nThe morning rush hour can be quite busy in Kyoto, especially during the"
+			},
+			{
+				"id": 32,
+				"text": " early hours of the day. However, the city is generally peaceful and quiet during"
+			},
+			{
+				"id": 33,
+				"text": " and prefer f-strings and pathlib.<|im_end|>\n<|im_start|>user\nWrite a dictionary"
+			},
+			{
+				"id": 34,
+				"text": " to a JSON file.<|im_end|>\n<|im_start|>assistant\n```python\nimport json\n"
+			},
+			{
+				"id": 35,
+				"text": "import pathlib\n\n# Define the dictionary\ndata = {\n    \"name\": \""
+			},
+			{
+				"id": 36,
+				"text": " helpful assistant.<|im_end|>\n<|im_start|>user\nSuggest a caffeine-free tea for the"
+			},
+			{
+				"id": 37,
+				"text": " evening.<|im_end|>\n<|im_start|>assistant\nFor a caffeine-free tea, you might consider"
+			},
+			{
+				"id": 38,
+				"text": " a blend of chamomile and lavender. Chamomile is known for its"
+			},
+			{
+				"id": 39,
+				"text": "<|im_start|>system\nYou are the front-desk assistant of the Harbour View Hotel."
+			},
+			{
+				"id": 40,
+				"text": " Answer guests briefly, using only these facts. Check-in is from 3 pm"
+			},
+			{
+				"id": 41,
+				"text": " and check-out is by 11 am. Breakfast is served from 6"
+			},
+			{
+				"id": 42,
+				"text": ":30 to 10:30 am in the Lantern Room on"
+			},
+			{
+				"id": 43,
+				"text": " the ground floor and is included in all rates. The rooftop pool is open from"
+			},
+			{
+				"id": 44,
+				"text": " 7 am to 9 pm; towels are at the pool desk. The"
+			},
+			{
+				"id": 45,
+				"text": " gym on level 2 is open 24 hours with your room key."
+			},
+			{
+				"id": 46,
+				"text": " The guest Wi-Fi network is HarbourGuest and the password is tide-lamp-"
+			},
+			{
+				"id": 47,
+				"text": "7. Parking is in the garage under the hotel for 25 dollars a"
+			},
+			{
+				"id": 48,
+				"text": " night. Late check-out until 1 pm costs 30 dollars and must"
+			},
+			{
+				"id": 49,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nWhat is the Wi"
+			},
+			{
+				"id": 50,
+				"text": "-Fi password?<|im_end|>\n<|im_start|>assistant\nThe Wi-Fi password for Harbour View Hotel"
+			},
+			{
+				"id": 51,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nCan I check out"
+			},
+			{
+				"id": 52,
+				"text": " late?<|im_end|>\n<|im_start|>assistant\nYes, you can check out late until "
+			}
+		],
+		"write_back": [
+			{
+				"id": 0,
+				"text": "<|im_start|>system\nYou are the front-desk assistant of the Harbour View Hotel."
+			},
+			{
+				"id": 1,
+				"text": " Answer guests briefly, using only these facts. Check-in is from 3 pm"
+			},
+			{
+				"id": 2,
+				"text": " and check-out is by 11 am. Breakfast is served from 6"
+			},
+			{
+				"id": 3,
+				"text": ":30 to 10:30 am in the Lantern Room on"
+			},
+			{
+				"id": 4,
+				"text": " the ground floor and is included in all rates. The rooftop pool is open from"
+			},
+			{
+				"id": 5,
+				"text": " 7 am to 9 pm; towels are at the pool desk. The"
+			},
+			{
+				"id": 6,
+				"text": " gym on level 2 is open 24 hours with your room key."
+			},
+			{
+				"id": 7,
+				"text": " The guest Wi-Fi network is HarbourGuest and the password is tide-lamp-"
+			},
+			{
+				"id": 8,
+				"text": "7. Parking is in the garage under the hotel for 25 dollars a"
+			},
+			{
+				"id": 9,
+				"text": " night. Late check-out until 1 pm costs 30 dollars and must"
+			},
+			{
+				"id": 10,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nWhen is the pool"
+			},
+			{
+				"id": 11,
+				"text": " open?<|im_end|>\n<|im_start|>assistant\nThe pool is open from 7 am to"
+			},
+			{
+				"id": 12,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nIs breakfast included,"
+			},
+			{
+				"id": 13,
+				"text": " and where is it?<|im_end|>\n<|im_start|>assistant\nYes, breakfast is served from"
+			},
+			{
+				"id": 14,
+				"text": " 6:30 to 10:30 am in the Lantern"
+			},
+			{
+				"id": 15,
+				"text": "<|im_start|>system\nYou are a careful Python tutor. Reply with one short code block"
+			},
+			{
+				"id": 16,
+				"text": " and one sentence of explanation. Use only the standard library, name variables clearly,"
+			},
+			{
+				"id": 17,
+				"text": " and prefer f-strings and pathlib.<|im_end|>\n<|im_start|>user\nReverse a string"
+			},
+			{
+				"id": 18,
+				"text": ".<|im_end|>\n<|im_start|>assistant\n```python\ndef reverse_string(s):\n    return"
+			},
+			{
+				"id": 19,
+				"text": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a"
+			},
+			{
+				"id": 20,
+				"text": " helpful assistant.<|im_end|>\n<|im_start|>user\nI am visiting Kyoto in April for three"
+			},
+			{
+				"id": 21,
+				"text": " days. Suggest one temple to see.<|im_end|>\n<|im_start|>assistant\nKyoto"
+			},
+			{
+				"id": 22,
+				"text": " is a city renowned for its beautiful temples and shrines, and April is a"
+			},
+			{
+				"id": 23,
+				"text": " great time to visit for a variety of reasons. Here are a few<|im_end|>\n"
+			},
+			{
+				"id": 24,
+				"text": "<|im_start|>user\nHow do I get there from Kyoto Station?<|im_end|>\n<|im_start|>assistant"
+			},
+			{
+				"id": 25,
+				"text": "\nTo get to Kyoto from Kyoto Station, you can take the Kyoto Metro Line"
+			},
+			{
+				"id": 26,
+				"text": " 1 or Line 2. Here are the steps to get there:\n\n1"
+			},
+			{
+				"id": 27,
+				"text": " and prefer f-strings and pathlib.<|im_end|>\n<|im_start|>user\nRead a CSV"
+			},
+			{
+				"id": 28,
+				"text": " file and print each row.<|im_end|>\n<|im_start|>assistant\n```python\nimport csv"
+			},
+			{
+				"id": 29,
+				"text": "\n\n# Open the CSV file\nwith open('example.csv', mode='r"
+			},
+			{
+				"id": 30,
+				"text": ".<|im_end|>\n<|im_start|>user\nIs it crowded in the morning?<|im_end|>\n<|im_start|>"
+			},
+			{
+				"id": 31,
+				"text": "assistant\nThe morning rush hour can be quite busy in Kyoto, especially during the"
+			},
+			{
+				"id": 32,
+				"text": " early hours of the day. However, the city is generally peaceful and quiet during"
+			},
+			{
+				"id": 33,
+				"text": " and prefer f-strings and pathlib.<|im_end|>\n<|im_start|>user\nWrite a dictionary"
+			},
+			{
+				"id": 34,
+				"text": " to a JSON file.<|im_end|>\n<|im_start|>assistant\n```python\nimport json\n"
+			},
+			{
+				"id": 35,
+				"text": "import pathlib\n\n# Define the dictionary\ndata = {\n    \"name\": \""
+			},
+			{
+				"id": 36,
+				"text": " helpful assistant.<|im_end|>\n<|im_start|>user\nSuggest a caffeine-free tea for the"
+			},
+			{
+				"id": 37,
+				"text": " evening.<|im_end|>\n<|im_start|>assistant\nFor a caffeine-free tea, you might consider"
+			},
+			{
+				"id": 38,
+				"text": " a blend of chamomile and lavender. Chamomile is known for its"
+			},
+			{
+				"id": 39,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nWhat is the Wi"
+			},
+			{
+				"id": 40,
+				"text": "-Fi password?<|im_end|>\n<|im_start|>assistant\nThe Wi-Fi password for Harbour View Hotel"
+			},
+			{
+				"id": 41,
+				"text": " be booked by 9 am.<|im_end|>\n<|im_start|>user\nCan I check out"
+			},
+			{
+				"id": 42,
+				"text": " late?<|im_end|>\n<|im_start|>assistant\nYes, you can check out late until "
+			}
+		]
+	},
+	"runs": {
+		"write_through": {
+			"requests": [
+				{
+					"id": "pool",
+					"promptTokens": 183,
+					"answer": [
+						785,
+						7314,
+						374,
+						1787,
+						504,
+						220,
+						22,
+						1079,
+						311,
+						220,
+						24,
+						8836,
+						13,
+						151645
+					],
+					"match": [],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 0,
+					"computedTokens": 183,
+					"loadSeconds": 2e-06,
+					"prefillSeconds": 0.037204,
+					"uncachedPrefillSeconds": 0.036738,
+					"firstLogitsMaxError": 0.0,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "write gpu",
+							"node": 1,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"bytes": 4718592,
+							"seconds": 0.001459
+						},
+						{
+							"kind": "gpu→host",
+							"node": 1,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"bytes": 4718592,
+							"seconds": 0.000649
+						},
+						{
+							"kind": "host→storage",
+							"node": 1,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"bytes": 4718592,
+							"seconds": 0.002229
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"host": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							]
+						}
+					],
+					"gpuFree": 2,
+					"hostFree": 16,
+					"storagePages": 12
+				},
+				{
+					"id": "breakfast",
+					"promptTokens": 186,
+					"answer": [
+						9454,
+						11,
+						17496,
+						374,
+						10223,
+						504,
+						220,
+						21,
+						25,
+						18,
+						15,
+						311,
+						220,
+						16,
+						15,
+						25,
+						18,
+						15,
+						1079,
+						304,
+						279,
+						67492,
+						10420,
+						389,
+						279,
+						4910,
+						6422,
+						13,
+						151645
+					],
+					"match": [
+						{
+							"node": 2,
+							"tokens": 160,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 160,
+					"computedTokens": 26,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.017796,
+					"uncachedPrefillSeconds": 0.03716,
+					"firstLogitsMaxError": 3.62396240234375e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 1,
+							"pages": [
+								10,
+								11
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 1179648,
+							"seconds": 0.000774
+						},
+						{
+							"kind": "gpu→host",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 1179648,
+							"seconds": 0.000448
+						},
+						{
+							"kind": "host→storage",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 1179648,
+							"seconds": 0.000829
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								10,
+								11
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"host": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": [
+								12,
+								13,
+								10
+							],
+							"host": [
+								12,
+								13,
+								14
+							]
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 13,
+					"storagePages": 15
+				},
+				{
+					"id": "reverse",
+					"promptTokens": 54,
+					"answer": [
+						73594,
+						12669,
+						198,
+						750,
+						9931,
+						3904,
+						1141,
+						982,
+						262,
+						470,
+						274,
+						62154,
+						16,
+						921,
+						73594,
+						151645
+					],
+					"match": [],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 0,
+					"computedTokens": 54,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.020705,
+					"uncachedPrefillSeconds": 0.02036,
+					"firstLogitsMaxError": 0.0,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 4,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"bytes": 1572864,
+							"seconds": 0.000559
+						},
+						{
+							"kind": "gpu→host",
+							"node": 4,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"bytes": 1572864,
+							"seconds": 0.000325
+						},
+						{
+							"kind": "host→storage",
+							"node": 4,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"bytes": 1572864,
+							"seconds": 0.001068
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								10,
+								11
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"host": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 4,
+							"parent": 0,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": [
+								11,
+								12,
+								13,
+								10
+							],
+							"host": [
+								15,
+								16,
+								17,
+								18
+							]
+						}
+					],
+					"gpuFree": 0,
+					"hostFree": 9,
+					"storagePages": 19
+				},
+				{
+					"id": "kyoto-1",
+					"promptTokens": 46,
+					"answer": [
+						77118,
+						2072,
+						374,
+						264,
+						3283,
+						35948,
+						369,
+						1181,
+						6233,
+						56897,
+						323,
+						14035,
+						1543,
+						11,
+						323,
+						5813,
+						374,
+						264,
+						2244,
+						882,
+						311,
+						3947,
+						369,
+						264,
+						8045,
+						315,
+						7966,
+						13,
+						5692,
+						525,
+						264,
+						2421
+					],
+					"match": [],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 0,
+					"computedTokens": 46,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.01955,
+					"uncachedPrefillSeconds": 0.019491,
+					"firstLogitsMaxError": 0.0,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 2,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 5,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"bytes": 1572864,
+							"seconds": 0.000614
+						},
+						{
+							"kind": "gpu→host",
+							"node": 5,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"bytes": 1572864,
+							"seconds": 0.000378
+						},
+						{
+							"kind": "host→storage",
+							"node": 5,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"bytes": 1572864,
+							"seconds": 0.018894
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								10,
+								11
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 4,
+							"parent": 0,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": [
+								11,
+								12,
+								13,
+								10
+							],
+							"host": [
+								15,
+								16,
+								17,
+								18
+							]
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 4,
+							"hits": 0,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": [
+								19,
+								20,
+								21,
+								22
+							]
+						}
+					],
+					"gpuFree": 6,
+					"hostFree": 5,
+					"storagePages": 23
+				},
+				{
+					"id": "kyoto-2",
+					"promptTokens": 97,
+					"answer": [
+						1249,
+						633,
+						311,
+						81022,
+						504,
+						81022,
+						16629,
+						11,
+						498,
+						646,
+						1896,
+						279,
+						81022,
+						20957,
+						7083,
+						220,
+						16,
+						476,
+						7083,
+						220,
+						17,
+						13,
+						5692,
+						525,
+						279,
+						7354,
+						311,
+						633,
+						1052,
+						1447,
+						16,
+						13
+					],
+					"match": [
+						{
+							"node": 5,
+							"tokens": 64,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 64,
+					"computedTokens": 33,
+					"loadSeconds": 2e-06,
+					"prefillSeconds": 0.019153,
+					"uncachedPrefillSeconds": 0.027257,
+					"firstLogitsMaxError": 4.38690185546875e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "write gpu",
+							"node": 6,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"bytes": 1572864,
+							"seconds": 0.000604
+						},
+						{
+							"kind": "gpu→host",
+							"node": 6,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"bytes": 1572864,
+							"seconds": 0.000252
+						},
+						{
+							"kind": "host→storage",
+							"node": 6,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"bytes": 1572864,
+							"seconds": 0.000979
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								10,
+								11
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 4,
+							"parent": 0,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": [
+								11,
+								12,
+								13,
+								10
+							],
+							"host": [
+								15,
+								16,
+								17,
+								18
+							]
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 5,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": [
+								19,
+								20,
+								21,
+								22
+							]
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 5,
+							"hits": 0,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": [
+								23,
+								24,
+								25,
+								26
+							]
+						}
+					],
+					"gpuFree": 2,
+					"hostFree": 1,
+					"storagePages": 27
+				},
+				{
+					"id": "csv",
+					"promptTokens": 59,
+					"answer": [
+						73594,
+						12669,
+						198,
+						474,
+						13147,
+						271,
+						2,
+						5264,
+						279,
+						27445,
+						1034,
+						198,
+						4197,
+						1787,
+						492,
+						8687,
+						11219,
+						516,
+						3856,
+						1131,
+						81,
+						863,
+						438,
+						1034,
+						510,
+						262,
+						671,
+						4230,
+						264,
+						27445,
+						6604,
+						1633
+					],
+					"match": [
+						{
+							"node": 7,
+							"tokens": 32,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 32,
+					"computedTokens": 27,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.01785,
+					"uncachedPrefillSeconds": 0.021618,
+					"firstLogitsMaxError": 6.842613220214844e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 4,
+							"pages": [
+								17,
+								18
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 1179648,
+							"seconds": 0.000624
+						},
+						{
+							"kind": "evict host",
+							"node": 1,
+							"pages": [
+								10,
+								11
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "gpu→host",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 1179648,
+							"seconds": 0.000317
+						},
+						{
+							"kind": "host→storage",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 1179648,
+							"seconds": 0.001181
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								17,
+								18
+							]
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 5,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": [
+								19,
+								20,
+								21,
+								22
+							]
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 5,
+							"hits": 0,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": [
+								23,
+								24,
+								25,
+								26
+							]
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 6,
+							"hits": 1,
+							"gpu": [
+								11,
+								12
+							],
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": [
+								8,
+								9,
+								13
+							],
+							"host": [
+								27,
+								10,
+								11
+							]
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 0,
+					"storagePages": 30
+				},
+				{
+					"id": "kyoto-3",
+					"promptTokens": 146,
+					"answer": [
+						785,
+						6556,
+						12973,
+						6460,
+						646,
+						387,
+						5008,
+						13028,
+						304,
+						81022,
+						11,
+						5310,
+						2337,
+						279,
+						4124,
+						4115,
+						315,
+						279,
+						1899,
+						13,
+						4354,
+						11,
+						279,
+						3283,
+						374,
+						8789,
+						25650,
+						323,
+						11340,
+						2337,
+						279,
+						1899
+					],
+					"match": [
+						{
+							"node": 5,
+							"tokens": 64,
+							"tier": "gpu"
+						},
+						{
+							"node": 6,
+							"tokens": 64,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 128,
+					"computedTokens": 18,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.017624,
+					"uncachedPrefillSeconds": 0.03421,
+					"firstLogitsMaxError": 3.4809112548828125e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 1179648,
+							"seconds": 0.000683
+						},
+						{
+							"kind": "evict host",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "gpu→host",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 1179648,
+							"seconds": 0.000271
+						},
+						{
+							"kind": "host→storage",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 1179648,
+							"seconds": 0.001207
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								17,
+								18
+							]
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": [
+								19,
+								20,
+								21,
+								22
+							]
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": [
+								23,
+								24,
+								25,
+								26
+							]
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 6,
+							"hits": 1,
+							"gpu": [
+								11,
+								12
+							],
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								27,
+								10,
+								11
+							]
+						},
+						{
+							"id": 9,
+							"parent": 6,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 0,
+							"gpu": [
+								10,
+								8,
+								9
+							],
+							"host": [
+								12,
+								13,
+								14
+							]
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 0,
+					"storagePages": 33
+				},
+				{
+					"id": "json",
+					"promptTokens": 58,
+					"answer": [
+						73594,
+						12669,
+						198,
+						474,
+						2951,
+						198,
+						474,
+						53159,
+						271,
+						2,
+						18614,
+						279,
+						10997,
+						198,
+						691,
+						284,
+						341,
+						262,
+						330,
+						606,
+						788,
+						330,
+						13079,
+						49628,
+						756,
+						262,
+						330,
+						424,
+						788,
+						220,
+						18,
+						15
+					],
+					"match": [
+						{
+							"node": 7,
+							"tokens": 32,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 32,
+					"computedTokens": 26,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.017801,
+					"uncachedPrefillSeconds": 0.021034,
+					"firstLogitsMaxError": 6.008148193359375e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 10,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"bytes": 1179648,
+							"seconds": 0.000866
+						},
+						{
+							"kind": "evict host",
+							"node": 2,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "gpu→host",
+							"node": 10,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"bytes": 1179648,
+							"seconds": 0.000283
+						},
+						{
+							"kind": "host→storage",
+							"node": 10,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"bytes": 1179648,
+							"seconds": 0.000951
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								17,
+								18
+							]
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": [
+								19,
+								20,
+								21,
+								22
+							]
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": [
+								23,
+								24,
+								25,
+								26
+							]
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": [
+								11,
+								12
+							],
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								27,
+								10,
+								11
+							]
+						},
+						{
+							"id": 9,
+							"parent": 6,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 10,
+							"parent": 7,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 0,
+							"gpu": [
+								13,
+								10,
+								8
+							],
+							"host": [
+								0,
+								1,
+								2
+							]
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 7,
+					"storagePages": 36
+				},
+				{
+					"id": "tea",
+					"promptTokens": 39,
+					"answer": [
+						2461,
+						264,
+						48650,
+						12577,
+						15243,
+						11,
+						498,
+						2578,
+						2908,
+						264,
+						20334,
+						315,
+						33709,
+						316,
+						457,
+						323,
+						80360,
+						13,
+						41783,
+						316,
+						457,
+						374,
+						3881,
+						369,
+						1181,
+						77629,
+						5888,
+						11,
+						1393,
+						80360,
+						374,
+						3545
+					],
+					"match": [
+						{
+							"node": 11,
+							"tokens": 16,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 16,
+					"computedTokens": 23,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.018127,
+					"uncachedPrefillSeconds": 0.019662,
+					"firstLogitsMaxError": 3.9577484130859375e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 6,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 12,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"bytes": 1179648,
+							"seconds": 0.000808
+						},
+						{
+							"kind": "gpu→host",
+							"node": 12,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"bytes": 1179648,
+							"seconds": 0.000231
+						},
+						{
+							"kind": "host→storage",
+							"node": 12,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"bytes": 1179648,
+							"seconds": 0.00075
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								17,
+								18
+							]
+						},
+						{
+							"id": 5,
+							"parent": 11,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": [
+								1,
+								2,
+								3
+							],
+							"host": [
+								20,
+								21,
+								22
+							]
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								23,
+								24,
+								25,
+								26
+							]
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": [
+								11,
+								12
+							],
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								27,
+								10,
+								11
+							]
+						},
+						{
+							"id": 9,
+							"parent": 6,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 10,
+							"parent": 7,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 0,
+							"gpu": [
+								13,
+								10,
+								8
+							],
+							"host": [
+								0,
+								1,
+								2
+							]
+						},
+						{
+							"id": 11,
+							"parent": 0,
+							"pages": [
+								19
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 9,
+							"hits": 3,
+							"gpu": [
+								0
+							],
+							"host": [
+								19
+							]
+						},
+						{
+							"id": 12,
+							"parent": 11,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 9,
+							"hits": 0,
+							"gpu": [
+								9,
+								4,
+								5
+							],
+							"host": [
+								3,
+								4,
+								5
+							]
+						}
+					],
+					"gpuFree": 2,
+					"hostFree": 4,
+					"storagePages": 39
+				},
+				{
+					"id": "wifi",
+					"promptTokens": 184,
+					"answer": [
+						785,
+						17220,
+						26299,
+						3552,
+						369,
+						62007,
+						2738,
+						14552,
+						594,
+						8640,
+						17220,
+						26299,
+						3922,
+						374,
+						330,
+						83,
+						577,
+						2852,
+						1121,
+						12,
+						22,
+						3263,
+						151645
+					],
+					"match": [
+						{
+							"node": 2,
+							"tokens": 160,
+							"tier": "storage"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 160,
+					"computedTokens": 24,
+					"loadSeconds": 0.013172,
+					"prefillSeconds": 0.018068,
+					"uncachedPrefillSeconds": 0.037138,
+					"firstLogitsMaxError": 4.9591064453125e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict host",
+							"node": 4,
+							"pages": [
+								17,
+								18
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "evict host",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "evict host",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "storage→host",
+							"node": 2,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"bytes": 3932160,
+							"seconds": 0.005462
+						},
+						{
+							"kind": "evict gpu",
+							"node": 5,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "evict gpu",
+							"node": 10,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "evict gpu",
+							"node": 7,
+							"pages": [
+								15,
+								16
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "host→gpu",
+							"node": 2,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"bytes": 3932160,
+							"seconds": 0.000735
+						},
+						{
+							"kind": "evict gpu",
+							"node": 12,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 13,
+							"pages": [
+								39,
+								40
+							],
+							"bytes": 786432,
+							"seconds": 0.0005
+						},
+						{
+							"kind": "gpu→host",
+							"node": 13,
+							"pages": [
+								39,
+								40
+							],
+							"bytes": 786432,
+							"seconds": 0.000683
+						},
+						{
+							"kind": "host→storage",
+							"node": 13,
+							"pages": [
+								39,
+								40
+							],
+							"bytes": 786432,
+							"seconds": 0.000568
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 10,
+							"hits": 2,
+							"gpu": [
+								6,
+								7,
+								1,
+								2,
+								3,
+								13,
+								10,
+								8,
+								11,
+								12
+							],
+							"host": [
+								6,
+								7,
+								8,
+								9,
+								17,
+								18,
+								27,
+								10,
+								11,
+								12
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 11,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								20,
+								21,
+								22
+							]
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								23,
+								24,
+								25,
+								26
+							]
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 9,
+							"parent": 6,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 7,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 10,
+							"parent": 7,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								0,
+								1,
+								2
+							]
+						},
+						{
+							"id": 11,
+							"parent": 0,
+							"pages": [
+								19
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 9,
+							"hits": 3,
+							"gpu": [
+								0
+							],
+							"host": [
+								19
+							]
+						},
+						{
+							"id": 12,
+							"parent": 11,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 9,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								3,
+								4,
+								5
+							]
+						},
+						{
+							"id": 13,
+							"parent": 2,
+							"pages": [
+								39,
+								40
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 10,
+							"hits": 0,
+							"gpu": [
+								9,
+								4
+							],
+							"host": [
+								13,
+								14
+							]
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 0,
+					"storagePages": 41
+				},
+				{
+					"id": "checkout",
+					"promptTokens": 183,
+					"answer": [
+						9454,
+						11,
+						498,
+						646,
+						1779,
+						700,
+						3309,
+						3080,
+						220,
+						16,
+						8836,
+						11,
+						714,
+						498,
+						1969,
+						2311,
+						432,
+						553,
+						220,
+						24,
+						1079,
+						13,
+						151645
+					],
+					"match": [
+						{
+							"node": 2,
+							"tokens": 160,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 160,
+					"computedTokens": 23,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.018106,
+					"uncachedPrefillSeconds": 0.037047,
+					"firstLogitsMaxError": 4.0531158447265625e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 11,
+							"pages": [
+								19
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 14,
+							"pages": [
+								41,
+								42
+							],
+							"bytes": 786432,
+							"seconds": 0.000492
+						},
+						{
+							"kind": "evict host",
+							"node": 6,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "gpu→host",
+							"node": 14,
+							"pages": [
+								41,
+								42
+							],
+							"bytes": 786432,
+							"seconds": 0.000248
+						},
+						{
+							"kind": "host→storage",
+							"node": 14,
+							"pages": [
+								41,
+								42
+							],
+							"bytes": 786432,
+							"seconds": 0.000502
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 11,
+							"hits": 3,
+							"gpu": [
+								6,
+								7,
+								1,
+								2,
+								3,
+								13,
+								10,
+								8,
+								11,
+								12
+							],
+							"host": [
+								6,
+								7,
+								8,
+								9,
+								17,
+								18,
+								27,
+								10,
+								11,
+								12
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 11,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								20,
+								21,
+								22
+							]
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 9,
+							"parent": 6,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 7,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 10,
+							"parent": 7,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								0,
+								1,
+								2
+							]
+						},
+						{
+							"id": 11,
+							"parent": 0,
+							"pages": [
+								19
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 9,
+							"hits": 3,
+							"gpu": null,
+							"host": [
+								19
+							]
+						},
+						{
+							"id": 12,
+							"parent": 11,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 9,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								3,
+								4,
+								5
+							]
+						},
+						{
+							"id": 13,
+							"parent": 2,
+							"pages": [
+								39,
+								40
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 10,
+							"hits": 0,
+							"gpu": [
+								9,
+								4
+							],
+							"host": [
+								13,
+								14
+							]
+						},
+						{
+							"id": 14,
+							"parent": 2,
+							"pages": [
+								41,
+								42
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 11,
+							"hits": 0,
+							"gpu": [
+								5,
+								0
+							],
+							"host": [
+								23,
+								24
+							]
+						}
+					],
+					"gpuFree": 0,
+					"hostFree": 2,
+					"storagePages": 43
+				}
+			],
+			"integrityFailures": 0,
+			"bytesByKind": {
+				"write gpu": 16908288,
+				"gpu→host": 16908288,
+				"host→storage": 16908288,
+				"evict gpu": 0,
+				"evict host": 0,
+				"storage→host": 3932160,
+				"host→gpu": 3932160
+			},
+			"cachedTokens": 752,
+			"computedTokens": 483
+		},
+		"write_through_selective": {
+			"requests": [
+				{
+					"id": "pool",
+					"promptTokens": 183,
+					"answer": [
+						785,
+						7314,
+						374,
+						1787,
+						504,
+						220,
+						22,
+						1079,
+						311,
+						220,
+						24,
+						8836,
+						13,
+						151645
+					],
+					"match": [],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 0,
+					"computedTokens": 183,
+					"loadSeconds": 2e-06,
+					"prefillSeconds": 0.037037,
+					"uncachedPrefillSeconds": 0.036738,
+					"firstLogitsMaxError": 0.0,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "write gpu",
+							"node": 1,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"bytes": 4718592,
+							"seconds": 0.001454
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 2,
+					"hostFree": 28,
+					"storagePages": 0
+				},
+				{
+					"id": "breakfast",
+					"promptTokens": 186,
+					"answer": [
+						9454,
+						11,
+						17496,
+						374,
+						10223,
+						504,
+						220,
+						21,
+						25,
+						18,
+						15,
+						311,
+						220,
+						16,
+						15,
+						25,
+						18,
+						15,
+						1079,
+						304,
+						279,
+						67492,
+						10420,
+						389,
+						279,
+						4910,
+						6422,
+						13,
+						151645
+					],
+					"match": [
+						{
+							"node": 2,
+							"tokens": 160,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 160,
+					"computedTokens": 26,
+					"loadSeconds": 2e-06,
+					"prefillSeconds": 0.018288,
+					"uncachedPrefillSeconds": 0.03716,
+					"firstLogitsMaxError": 3.62396240234375e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 1,
+							"pages": [
+								10,
+								11
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": false
+						},
+						{
+							"kind": "write gpu",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 1179648,
+							"seconds": 0.000746
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"host": null
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": [
+								12,
+								13,
+								10
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 28,
+					"storagePages": 0
+				},
+				{
+					"id": "reverse",
+					"promptTokens": 54,
+					"answer": [
+						73594,
+						12669,
+						198,
+						750,
+						9931,
+						3904,
+						1141,
+						982,
+						262,
+						470,
+						274,
+						62154,
+						16,
+						921,
+						73594,
+						151645
+					],
+					"match": [],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 0,
+					"computedTokens": 54,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.020535,
+					"uncachedPrefillSeconds": 0.02036,
+					"firstLogitsMaxError": 0.0,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": false
+						},
+						{
+							"kind": "write gpu",
+							"node": 4,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"bytes": 1572864,
+							"seconds": 0.000639
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"host": null
+						},
+						{
+							"id": 4,
+							"parent": 0,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": [
+								11,
+								12,
+								13,
+								10
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 0,
+					"hostFree": 28,
+					"storagePages": 0
+				},
+				{
+					"id": "kyoto-1",
+					"promptTokens": 46,
+					"answer": [
+						77118,
+						2072,
+						374,
+						264,
+						3283,
+						35948,
+						369,
+						1181,
+						6233,
+						56897,
+						323,
+						14035,
+						1543,
+						11,
+						323,
+						5813,
+						374,
+						264,
+						2244,
+						882,
+						311,
+						3947,
+						369,
+						264,
+						8045,
+						315,
+						7966,
+						13,
+						5692,
+						525,
+						264,
+						2421
+					],
+					"match": [],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 0,
+					"computedTokens": 46,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.0194,
+					"uncachedPrefillSeconds": 0.019491,
+					"firstLogitsMaxError": 0.0,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 2,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": false
+						},
+						{
+							"kind": "write gpu",
+							"node": 5,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"bytes": 1572864,
+							"seconds": 0.000797
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 4,
+							"parent": 0,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": [
+								11,
+								12,
+								13,
+								10
+							],
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 4,
+							"hits": 0,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 6,
+					"hostFree": 28,
+					"storagePages": 0
+				},
+				{
+					"id": "kyoto-2",
+					"promptTokens": 97,
+					"answer": [
+						1249,
+						633,
+						311,
+						81022,
+						504,
+						81022,
+						16629,
+						11,
+						498,
+						646,
+						1896,
+						279,
+						81022,
+						20957,
+						7083,
+						220,
+						16,
+						476,
+						7083,
+						220,
+						17,
+						13,
+						5692,
+						525,
+						279,
+						7354,
+						311,
+						633,
+						1052,
+						1447,
+						16,
+						13
+					],
+					"match": [
+						{
+							"node": 5,
+							"tokens": 64,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 64,
+					"computedTokens": 33,
+					"loadSeconds": 2e-06,
+					"prefillSeconds": 0.021541,
+					"uncachedPrefillSeconds": 0.027257,
+					"firstLogitsMaxError": 4.38690185546875e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "write gpu",
+							"node": 6,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"bytes": 1572864,
+							"seconds": 0.000673
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 4,
+							"parent": 0,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": [
+								11,
+								12,
+								13,
+								10
+							],
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 5,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": null
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 5,
+							"hits": 0,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 2,
+					"hostFree": 28,
+					"storagePages": 0
+				},
+				{
+					"id": "csv",
+					"promptTokens": 59,
+					"answer": [
+						73594,
+						12669,
+						198,
+						474,
+						13147,
+						271,
+						2,
+						5264,
+						279,
+						27445,
+						1034,
+						198,
+						4197,
+						1787,
+						492,
+						8687,
+						11219,
+						516,
+						3856,
+						1131,
+						81,
+						863,
+						438,
+						1034,
+						510,
+						262,
+						671,
+						4230,
+						264,
+						27445,
+						6604,
+						1633
+					],
+					"match": [
+						{
+							"node": 7,
+							"tokens": 32,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 32,
+					"computedTokens": 27,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.019069,
+					"uncachedPrefillSeconds": 0.021618,
+					"firstLogitsMaxError": 6.842613220214844e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 4,
+							"pages": [
+								17,
+								18
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": false
+						},
+						{
+							"kind": "write gpu",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 1179648,
+							"seconds": 0.000581
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 5,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": null
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 5,
+							"hits": 0,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": null
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 6,
+							"hits": 1,
+							"gpu": [
+								11,
+								12
+							],
+							"host": null
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": [
+								8,
+								9,
+								13
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 28,
+					"storagePages": 0
+				},
+				{
+					"id": "kyoto-3",
+					"promptTokens": 146,
+					"answer": [
+						785,
+						6556,
+						12973,
+						6460,
+						646,
+						387,
+						5008,
+						13028,
+						304,
+						81022,
+						11,
+						5310,
+						2337,
+						279,
+						4124,
+						4115,
+						315,
+						279,
+						1899,
+						13,
+						4354,
+						11,
+						279,
+						3283,
+						374,
+						8789,
+						25650,
+						323,
+						11340,
+						2337,
+						279,
+						1899
+					],
+					"match": [
+						{
+							"node": 5,
+							"tokens": 64,
+							"tier": "gpu"
+						},
+						{
+							"node": 6,
+							"tokens": 64,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 128,
+					"computedTokens": 18,
+					"loadSeconds": 0.00468,
+					"prefillSeconds": 0.018532,
+					"uncachedPrefillSeconds": 0.03421,
+					"firstLogitsMaxError": 3.4809112548828125e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "gpu→host",
+							"node": 5,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"bytes": 1572864,
+							"seconds": 0.000322
+						},
+						{
+							"kind": "host→storage",
+							"node": 5,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"bytes": 1572864,
+							"seconds": 0.003733
+						},
+						{
+							"kind": "evict gpu",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": false
+						},
+						{
+							"kind": "write gpu",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 1179648,
+							"seconds": 0.000563
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": [
+								0,
+								1,
+								2,
+								3
+							]
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": null
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 6,
+							"hits": 1,
+							"gpu": [
+								11,
+								12
+							],
+							"host": null
+						},
+						{
+							"id": 9,
+							"parent": 6,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 7,
+							"hits": 0,
+							"gpu": [
+								10,
+								8,
+								9
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 24,
+					"storagePages": 4
+				},
+				{
+					"id": "json",
+					"promptTokens": 58,
+					"answer": [
+						73594,
+						12669,
+						198,
+						474,
+						2951,
+						198,
+						474,
+						53159,
+						271,
+						2,
+						18614,
+						279,
+						10997,
+						198,
+						691,
+						284,
+						341,
+						262,
+						330,
+						606,
+						788,
+						330,
+						13079,
+						49628,
+						756,
+						262,
+						330,
+						424,
+						788,
+						220,
+						18,
+						15
+					],
+					"match": [
+						{
+							"node": 7,
+							"tokens": 32,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 32,
+					"computedTokens": 26,
+					"loadSeconds": 0.001599,
+					"prefillSeconds": 0.018375,
+					"uncachedPrefillSeconds": 0.021034,
+					"firstLogitsMaxError": 6.008148193359375e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "gpu→host",
+							"node": 7,
+							"pages": [
+								15,
+								16
+							],
+							"bytes": 786432,
+							"seconds": 0.000201
+						},
+						{
+							"kind": "host→storage",
+							"node": 7,
+							"pages": [
+								15,
+								16
+							],
+							"bytes": 786432,
+							"seconds": 0.000924
+						},
+						{
+							"kind": "evict gpu",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": false
+						},
+						{
+							"kind": "write gpu",
+							"node": 10,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"bytes": 1179648,
+							"seconds": 0.000581
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": [
+								0,
+								1,
+								2,
+								3
+							]
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": null
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": [
+								11,
+								12
+							],
+							"host": [
+								4,
+								5
+							]
+						},
+						{
+							"id": 10,
+							"parent": 7,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 8,
+							"hits": 0,
+							"gpu": [
+								13,
+								10,
+								8
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 22,
+					"storagePages": 6
+				},
+				{
+					"id": "tea",
+					"promptTokens": 39,
+					"answer": [
+						2461,
+						264,
+						48650,
+						12577,
+						15243,
+						11,
+						498,
+						2578,
+						2908,
+						264,
+						20334,
+						315,
+						33709,
+						316,
+						457,
+						323,
+						80360,
+						13,
+						41783,
+						316,
+						457,
+						374,
+						3881,
+						369,
+						1181,
+						77629,
+						5888,
+						11,
+						1393,
+						80360,
+						374,
+						3545
+					],
+					"match": [
+						{
+							"node": 11,
+							"tokens": 16,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 16,
+					"computedTokens": 23,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.019382,
+					"uncachedPrefillSeconds": 0.019662,
+					"firstLogitsMaxError": 3.9577484130859375e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 6,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": false
+						},
+						{
+							"kind": "write gpu",
+							"node": 12,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"bytes": 1179648,
+							"seconds": 0.000666
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 11,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": [
+								1,
+								2,
+								3
+							],
+							"host": [
+								1,
+								2,
+								3
+							]
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": [
+								11,
+								12
+							],
+							"host": [
+								4,
+								5
+							]
+						},
+						{
+							"id": 10,
+							"parent": 7,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 8,
+							"hits": 0,
+							"gpu": [
+								13,
+								10,
+								8
+							],
+							"host": null
+						},
+						{
+							"id": 11,
+							"parent": 0,
+							"pages": [
+								19
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 9,
+							"hits": 3,
+							"gpu": [
+								0
+							],
+							"host": [
+								0
+							]
+						},
+						{
+							"id": 12,
+							"parent": 11,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 9,
+							"hits": 0,
+							"gpu": [
+								9,
+								4,
+								5
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 2,
+					"hostFree": 22,
+					"storagePages": 6
+				},
+				{
+					"id": "wifi",
+					"promptTokens": 184,
+					"answer": [
+						785,
+						17220,
+						26299,
+						3552,
+						369,
+						62007,
+						2738,
+						14552,
+						594,
+						8640,
+						17220,
+						26299,
+						3922,
+						374,
+						330,
+						83,
+						577,
+						2852,
+						1121,
+						12,
+						22,
+						3263,
+						151645
+					],
+					"match": [],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 0,
+					"computedTokens": 184,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.037429,
+					"uncachedPrefillSeconds": 0.037138,
+					"firstLogitsMaxError": 0.0,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 5,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "evict gpu",
+							"node": 10,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": false
+						},
+						{
+							"kind": "evict gpu",
+							"node": 7,
+							"pages": [
+								15,
+								16
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "evict gpu",
+							"node": 12,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": false
+						},
+						{
+							"kind": "write gpu",
+							"node": 13,
+							"pages": [
+								39,
+								40,
+								41,
+								42,
+								43,
+								44,
+								45,
+								46,
+								47,
+								48,
+								49,
+								50
+							],
+							"bytes": 4718592,
+							"seconds": 0.001662
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 11,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								1,
+								2,
+								3
+							]
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								4,
+								5
+							]
+						},
+						{
+							"id": 11,
+							"parent": 0,
+							"pages": [
+								19
+							],
+							"tiers": [
+								true,
+								true,
+								true
+							],
+							"last": 9,
+							"hits": 3,
+							"gpu": [
+								0
+							],
+							"host": [
+								0
+							]
+						},
+						{
+							"id": 13,
+							"parent": 0,
+							"pages": [
+								39,
+								40,
+								41,
+								42,
+								43,
+								44,
+								45,
+								46,
+								47,
+								48,
+								49,
+								50
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 10,
+							"hits": 0,
+							"gpu": [
+								6,
+								7,
+								1,
+								2,
+								3,
+								13,
+								10,
+								8,
+								11,
+								12,
+								9,
+								4
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 22,
+					"storagePages": 6
+				},
+				{
+					"id": "checkout",
+					"promptTokens": 183,
+					"answer": [
+						9454,
+						11,
+						498,
+						646,
+						1779,
+						700,
+						3309,
+						3080,
+						220,
+						16,
+						8836,
+						11,
+						714,
+						498,
+						1969,
+						2311,
+						432,
+						553,
+						220,
+						24,
+						1079,
+						13,
+						151645
+					],
+					"match": [
+						{
+							"node": 14,
+							"tokens": 160,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 160,
+					"computedTokens": 23,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.018828,
+					"uncachedPrefillSeconds": 0.037047,
+					"firstLogitsMaxError": 4.0531158447265625e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "evict gpu",
+							"node": 11,
+							"pages": [
+								19
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 15,
+							"pages": [
+								51,
+								52
+							],
+							"bytes": 786432,
+							"seconds": 0.000644
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 11,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								1,
+								2,
+								3
+							]
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								4,
+								5
+							]
+						},
+						{
+							"id": 11,
+							"parent": 0,
+							"pages": [
+								19
+							],
+							"tiers": [
+								false,
+								true,
+								true
+							],
+							"last": 9,
+							"hits": 3,
+							"gpu": null,
+							"host": [
+								0
+							]
+						},
+						{
+							"id": 13,
+							"parent": 14,
+							"pages": [
+								49,
+								50
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 10,
+							"hits": 0,
+							"gpu": [
+								9,
+								4
+							],
+							"host": null
+						},
+						{
+							"id": 14,
+							"parent": 0,
+							"pages": [
+								39,
+								40,
+								41,
+								42,
+								43,
+								44,
+								45,
+								46,
+								47,
+								48
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 11,
+							"hits": 1,
+							"gpu": [
+								6,
+								7,
+								1,
+								2,
+								3,
+								13,
+								10,
+								8,
+								11,
+								12
+							],
+							"host": null
+						},
+						{
+							"id": 15,
+							"parent": 14,
+							"pages": [
+								51,
+								52
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 11,
+							"hits": 0,
+							"gpu": [
+								5,
+								0
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 0,
+					"hostFree": 22,
+					"storagePages": 6
+				}
+			],
+			"integrityFailures": 0,
+			"bytesByKind": {
+				"write gpu": 20840448,
+				"evict gpu": 0,
+				"gpu→host": 2359296,
+				"host→storage": 2359296
+			},
+			"cachedTokens": 592,
+			"computedTokens": 643
+		},
+		"write_back": {
+			"requests": [
+				{
+					"id": "pool",
+					"promptTokens": 183,
+					"answer": [
+						785,
+						7314,
+						374,
+						1787,
+						504,
+						220,
+						22,
+						1079,
+						311,
+						220,
+						24,
+						8836,
+						13,
+						151645
+					],
+					"match": [],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 0,
+					"computedTokens": 183,
+					"loadSeconds": 6e-06,
+					"prefillSeconds": 0.037161,
+					"uncachedPrefillSeconds": 0.036738,
+					"firstLogitsMaxError": 0.0,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "write gpu",
+							"node": 1,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"bytes": 4718592,
+							"seconds": 0.001548
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 2,
+					"hostFree": 28,
+					"storagePages": 0
+				},
+				{
+					"id": "breakfast",
+					"promptTokens": 186,
+					"answer": [
+						9454,
+						11,
+						17496,
+						374,
+						10223,
+						504,
+						220,
+						21,
+						25,
+						18,
+						15,
+						311,
+						220,
+						16,
+						15,
+						25,
+						18,
+						15,
+						1079,
+						304,
+						279,
+						67492,
+						10420,
+						389,
+						279,
+						4910,
+						6422,
+						13,
+						151645
+					],
+					"match": [
+						{
+							"node": 2,
+							"tokens": 160,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 160,
+					"computedTokens": 26,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.018734,
+					"uncachedPrefillSeconds": 0.03716,
+					"firstLogitsMaxError": 3.62396240234375e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "gpu→host",
+							"node": 1,
+							"pages": [
+								10,
+								11
+							],
+							"bytes": 786432,
+							"seconds": 0.000321
+						},
+						{
+							"kind": "evict gpu",
+							"node": 1,
+							"pages": [
+								10,
+								11
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 1179648,
+							"seconds": 0.000798
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								0,
+								1
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"host": null
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": [
+								12,
+								13,
+								10
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 26,
+					"storagePages": 0
+				},
+				{
+					"id": "reverse",
+					"promptTokens": 54,
+					"answer": [
+						73594,
+						12669,
+						198,
+						750,
+						9931,
+						3904,
+						1141,
+						982,
+						262,
+						470,
+						274,
+						62154,
+						16,
+						921,
+						73594,
+						151645
+					],
+					"match": [],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 0,
+					"computedTokens": 54,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.021434,
+					"uncachedPrefillSeconds": 0.02036,
+					"firstLogitsMaxError": 0.0,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "gpu→host",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 1179648,
+							"seconds": 0.000353
+						},
+						{
+							"kind": "evict gpu",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 4,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"bytes": 1572864,
+							"seconds": 0.000565
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								0,
+								1
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"host": null
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								2,
+								3,
+								4
+							]
+						},
+						{
+							"id": 4,
+							"parent": 0,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": [
+								11,
+								12,
+								13,
+								10
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 0,
+					"hostFree": 23,
+					"storagePages": 0
+				},
+				{
+					"id": "kyoto-1",
+					"promptTokens": 46,
+					"answer": [
+						77118,
+						2072,
+						374,
+						264,
+						3283,
+						35948,
+						369,
+						1181,
+						6233,
+						56897,
+						323,
+						14035,
+						1543,
+						11,
+						323,
+						5813,
+						374,
+						264,
+						2244,
+						882,
+						311,
+						3947,
+						369,
+						264,
+						8045,
+						315,
+						7966,
+						13,
+						5692,
+						525,
+						264,
+						2421
+					],
+					"match": [],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 0,
+					"computedTokens": 46,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.020344,
+					"uncachedPrefillSeconds": 0.019491,
+					"firstLogitsMaxError": 0.0,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "gpu→host",
+							"node": 2,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"bytes": 3932160,
+							"seconds": 0.000598
+						},
+						{
+							"kind": "evict gpu",
+							"node": 2,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 5,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"bytes": 1572864,
+							"seconds": 0.000968
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								0,
+								1
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								2,
+								3,
+								4
+							]
+						},
+						{
+							"id": 4,
+							"parent": 0,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": [
+								11,
+								12,
+								13,
+								10
+							],
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 4,
+							"hits": 0,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 6,
+					"hostFree": 13,
+					"storagePages": 0
+				},
+				{
+					"id": "kyoto-2",
+					"promptTokens": 97,
+					"answer": [
+						1249,
+						633,
+						311,
+						81022,
+						504,
+						81022,
+						16629,
+						11,
+						498,
+						646,
+						1896,
+						279,
+						81022,
+						20957,
+						7083,
+						220,
+						16,
+						476,
+						7083,
+						220,
+						17,
+						13,
+						5692,
+						525,
+						279,
+						7354,
+						311,
+						633,
+						1052,
+						1447,
+						16,
+						13
+					],
+					"match": [
+						{
+							"node": 5,
+							"tokens": 64,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 64,
+					"computedTokens": 33,
+					"loadSeconds": 2e-06,
+					"prefillSeconds": 0.022767,
+					"uncachedPrefillSeconds": 0.027257,
+					"firstLogitsMaxError": 4.38690185546875e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "write gpu",
+							"node": 6,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"bytes": 1572864,
+							"seconds": 0.00077
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								0,
+								1
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								2,
+								3,
+								4
+							]
+						},
+						{
+							"id": 4,
+							"parent": 0,
+							"pages": [
+								15,
+								16,
+								17,
+								18
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": [
+								11,
+								12,
+								13,
+								10
+							],
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 5,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": null
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 5,
+							"hits": 0,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 2,
+					"hostFree": 13,
+					"storagePages": 0
+				},
+				{
+					"id": "csv",
+					"promptTokens": 59,
+					"answer": [
+						73594,
+						12669,
+						198,
+						474,
+						13147,
+						271,
+						2,
+						5264,
+						279,
+						27445,
+						1034,
+						198,
+						4197,
+						1787,
+						492,
+						8687,
+						11219,
+						516,
+						3856,
+						1131,
+						81,
+						863,
+						438,
+						1034,
+						510,
+						262,
+						671,
+						4230,
+						264,
+						27445,
+						6604,
+						1633
+					],
+					"match": [
+						{
+							"node": 7,
+							"tokens": 32,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 32,
+					"computedTokens": 27,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.019665,
+					"uncachedPrefillSeconds": 0.021618,
+					"firstLogitsMaxError": 6.842613220214844e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "gpu→host",
+							"node": 4,
+							"pages": [
+								17,
+								18
+							],
+							"bytes": 786432,
+							"seconds": 0.000384
+						},
+						{
+							"kind": "evict gpu",
+							"node": 4,
+							"pages": [
+								17,
+								18
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 1179648,
+							"seconds": 0.000799
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								0,
+								1
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								2,
+								3,
+								4
+							]
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 5,
+							"hits": 1,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": null
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 5,
+							"hits": 0,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": null
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 6,
+							"hits": 1,
+							"gpu": [
+								11,
+								12
+							],
+							"host": null
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": [
+								8,
+								9,
+								13
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 11,
+					"storagePages": 0
+				},
+				{
+					"id": "kyoto-3",
+					"promptTokens": 146,
+					"answer": [
+						785,
+						6556,
+						12973,
+						6460,
+						646,
+						387,
+						5008,
+						13028,
+						304,
+						81022,
+						11,
+						5310,
+						2337,
+						279,
+						4124,
+						4115,
+						315,
+						279,
+						1899,
+						13,
+						4354,
+						11,
+						279,
+						3283,
+						374,
+						8789,
+						25650,
+						323,
+						11340,
+						2337,
+						279,
+						1899
+					],
+					"match": [
+						{
+							"node": 5,
+							"tokens": 64,
+							"tier": "gpu"
+						},
+						{
+							"node": 6,
+							"tokens": 64,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 128,
+					"computedTokens": 18,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.018347,
+					"uncachedPrefillSeconds": 0.03421,
+					"firstLogitsMaxError": 3.4809112548828125e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "gpu→host",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 1179648,
+							"seconds": 0.000282
+						},
+						{
+							"kind": "evict gpu",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 1179648,
+							"seconds": 0.000672
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								0,
+								1
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								2,
+								3,
+								4
+							]
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": null
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": null
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 6,
+							"hits": 1,
+							"gpu": [
+								11,
+								12
+							],
+							"host": null
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								17,
+								18,
+								19
+							]
+						},
+						{
+							"id": 9,
+							"parent": 6,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 7,
+							"hits": 0,
+							"gpu": [
+								10,
+								8,
+								9
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 8,
+					"storagePages": 0
+				},
+				{
+					"id": "json",
+					"promptTokens": 58,
+					"answer": [
+						73594,
+						12669,
+						198,
+						474,
+						2951,
+						198,
+						474,
+						53159,
+						271,
+						2,
+						18614,
+						279,
+						10997,
+						198,
+						691,
+						284,
+						341,
+						262,
+						330,
+						606,
+						788,
+						330,
+						13079,
+						49628,
+						756,
+						262,
+						330,
+						424,
+						788,
+						220,
+						18,
+						15
+					],
+					"match": [
+						{
+							"node": 7,
+							"tokens": 32,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 32,
+					"computedTokens": 26,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.019512,
+					"uncachedPrefillSeconds": 0.021034,
+					"firstLogitsMaxError": 6.008148193359375e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "gpu→host",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 1179648,
+							"seconds": 0.000217
+						},
+						{
+							"kind": "evict gpu",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 10,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"bytes": 1179648,
+							"seconds": 0.000576
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								0,
+								1
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								2,
+								3,
+								4
+							]
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 5,
+							"parent": 0,
+							"pages": [
+								19,
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": [
+								0,
+								1,
+								2,
+								3
+							],
+							"host": null
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": [
+								4,
+								5,
+								6,
+								7
+							],
+							"host": null
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": [
+								11,
+								12
+							],
+							"host": null
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								17,
+								18,
+								19
+							]
+						},
+						{
+							"id": 9,
+							"parent": 6,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 7,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								20,
+								21,
+								22
+							]
+						},
+						{
+							"id": 10,
+							"parent": 7,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 8,
+							"hits": 0,
+							"gpu": [
+								13,
+								10,
+								8
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 5,
+					"storagePages": 0
+				},
+				{
+					"id": "tea",
+					"promptTokens": 39,
+					"answer": [
+						2461,
+						264,
+						48650,
+						12577,
+						15243,
+						11,
+						498,
+						2578,
+						2908,
+						264,
+						20334,
+						315,
+						33709,
+						316,
+						457,
+						323,
+						80360,
+						13,
+						41783,
+						316,
+						457,
+						374,
+						3881,
+						369,
+						1181,
+						77629,
+						5888,
+						11,
+						1393,
+						80360,
+						374,
+						3545
+					],
+					"match": [
+						{
+							"node": 11,
+							"tokens": 16,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 16,
+					"computedTokens": 23,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.019734,
+					"uncachedPrefillSeconds": 0.019662,
+					"firstLogitsMaxError": 3.9577484130859375e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "gpu→host",
+							"node": 6,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"bytes": 1572864,
+							"seconds": 0.000354
+						},
+						{
+							"kind": "evict gpu",
+							"node": 6,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 12,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"bytes": 1179648,
+							"seconds": 0.000676
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								0,
+								1
+							]
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								2,
+								3,
+								4
+							]
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 5,
+							"parent": 11,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": [
+								1,
+								2,
+								3
+							],
+							"host": null
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								23,
+								24,
+								25,
+								26
+							]
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": [
+								11,
+								12
+							],
+							"host": null
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								17,
+								18,
+								19
+							]
+						},
+						{
+							"id": 9,
+							"parent": 6,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 7,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								20,
+								21,
+								22
+							]
+						},
+						{
+							"id": 10,
+							"parent": 7,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 8,
+							"hits": 0,
+							"gpu": [
+								13,
+								10,
+								8
+							],
+							"host": null
+						},
+						{
+							"id": 11,
+							"parent": 0,
+							"pages": [
+								19
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 9,
+							"hits": 3,
+							"gpu": [
+								0
+							],
+							"host": null
+						},
+						{
+							"id": 12,
+							"parent": 11,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 9,
+							"hits": 0,
+							"gpu": [
+								9,
+								4,
+								5
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 2,
+					"hostFree": 1,
+					"storagePages": 0
+				},
+				{
+					"id": "wifi",
+					"promptTokens": 184,
+					"answer": [
+						785,
+						17220,
+						26299,
+						3552,
+						369,
+						62007,
+						2738,
+						14552,
+						594,
+						8640,
+						17220,
+						26299,
+						3922,
+						374,
+						330,
+						83,
+						577,
+						2852,
+						1121,
+						12,
+						22,
+						3263,
+						151645
+					],
+					"match": [
+						{
+							"node": 2,
+							"tokens": 160,
+							"tier": "host"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 160,
+					"computedTokens": 24,
+					"loadSeconds": 0.016201,
+					"prefillSeconds": 0.019905,
+					"uncachedPrefillSeconds": 0.037138,
+					"firstLogitsMaxError": 4.9591064453125e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "host→storage",
+							"node": 1,
+							"pages": [
+								10,
+								11
+							],
+							"bytes": 786432,
+							"seconds": 0.001505
+						},
+						{
+							"kind": "evict host",
+							"node": 1,
+							"pages": [
+								10,
+								11
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "gpu→host",
+							"node": 5,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"bytes": 1179648,
+							"seconds": 0.000241
+						},
+						{
+							"kind": "evict gpu",
+							"node": 5,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "host→storage",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 1179648,
+							"seconds": 0.001155
+						},
+						{
+							"kind": "evict host",
+							"node": 3,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "gpu→host",
+							"node": 10,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"bytes": 1179648,
+							"seconds": 0.000263
+						},
+						{
+							"kind": "evict gpu",
+							"node": 10,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "host→storage",
+							"node": 4,
+							"pages": [
+								17,
+								18
+							],
+							"bytes": 786432,
+							"seconds": 0.003784
+						},
+						{
+							"kind": "evict host",
+							"node": 4,
+							"pages": [
+								17,
+								18
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "gpu→host",
+							"node": 7,
+							"pages": [
+								15,
+								16
+							],
+							"bytes": 786432,
+							"seconds": 0.000217
+						},
+						{
+							"kind": "evict gpu",
+							"node": 7,
+							"pages": [
+								15,
+								16
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "host→gpu",
+							"node": 2,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"bytes": 3932160,
+							"seconds": 0.000925
+						},
+						{
+							"kind": "host→storage",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 1179648,
+							"seconds": 0.001963
+						},
+						{
+							"kind": "evict host",
+							"node": 8,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "gpu→host",
+							"node": 12,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"bytes": 1179648,
+							"seconds": 0.000271
+						},
+						{
+							"kind": "evict gpu",
+							"node": 12,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 13,
+							"pages": [
+								39,
+								40
+							],
+							"bytes": 786432,
+							"seconds": 0.000513
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								true,
+								true,
+								false
+							],
+							"last": 10,
+							"hits": 2,
+							"gpu": [
+								6,
+								7,
+								1,
+								2,
+								3,
+								13,
+								10,
+								8,
+								11,
+								12
+							],
+							"host": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 11,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								27,
+								0,
+								1
+							]
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								23,
+								24,
+								25,
+								26
+							]
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 9,
+							"parent": 6,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 7,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								20,
+								21,
+								22
+							]
+						},
+						{
+							"id": 10,
+							"parent": 7,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 8,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								2,
+								3,
+								4
+							]
+						},
+						{
+							"id": 11,
+							"parent": 0,
+							"pages": [
+								19
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 9,
+							"hits": 3,
+							"gpu": [
+								0
+							],
+							"host": null
+						},
+						{
+							"id": 12,
+							"parent": 11,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 9,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								17,
+								18,
+								19
+							]
+						},
+						{
+							"id": 13,
+							"parent": 2,
+							"pages": [
+								39,
+								40
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 10,
+							"hits": 0,
+							"gpu": [
+								9,
+								4
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 1,
+					"hostFree": 0,
+					"storagePages": 10
+				},
+				{
+					"id": "checkout",
+					"promptTokens": 183,
+					"answer": [
+						9454,
+						11,
+						498,
+						646,
+						1779,
+						700,
+						3309,
+						3080,
+						220,
+						16,
+						8836,
+						11,
+						714,
+						498,
+						1969,
+						2311,
+						432,
+						553,
+						220,
+						24,
+						1079,
+						13,
+						151645
+					],
+					"match": [
+						{
+							"node": 2,
+							"tokens": 160,
+							"tier": "gpu"
+						}
+					],
+					"recomputedStorageHit": 0,
+					"cachedTokens": 160,
+					"computedTokens": 23,
+					"loadSeconds": 1e-06,
+					"prefillSeconds": 0.019363,
+					"uncachedPrefillSeconds": 0.037047,
+					"firstLogitsMaxError": 4.0531158447265625e-05,
+					"answerMatchesUncached": true,
+					"events": [
+						{
+							"kind": "host→storage",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 1179648,
+							"seconds": 0.001489
+						},
+						{
+							"kind": "evict host",
+							"node": 9,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "gpu→host",
+							"node": 11,
+							"pages": [
+								19
+							],
+							"bytes": 393216,
+							"seconds": 0.000303
+						},
+						{
+							"kind": "evict gpu",
+							"node": 11,
+							"pages": [
+								19
+							],
+							"bytes": 0,
+							"seconds": 0.0,
+							"kept": true
+						},
+						{
+							"kind": "write gpu",
+							"node": 14,
+							"pages": [
+								41,
+								42
+							],
+							"bytes": 786432,
+							"seconds": 0.000918
+						}
+					],
+					"tree": [
+						{
+							"id": 0,
+							"parent": null,
+							"pages": [],
+							"tiers": [
+								false,
+								false,
+								false
+							],
+							"last": 0,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 1,
+							"parent": 2,
+							"pages": [
+								10,
+								11
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 1,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 2,
+							"parent": 0,
+							"pages": [
+								0,
+								1,
+								2,
+								3,
+								4,
+								5,
+								6,
+								7,
+								8,
+								9
+							],
+							"tiers": [
+								true,
+								true,
+								false
+							],
+							"last": 11,
+							"hits": 3,
+							"gpu": [
+								6,
+								7,
+								1,
+								2,
+								3,
+								13,
+								10,
+								8,
+								11,
+								12
+							],
+							"host": [
+								5,
+								6,
+								7,
+								8,
+								9,
+								10,
+								11,
+								12,
+								13,
+								14
+							]
+						},
+						{
+							"id": 3,
+							"parent": 2,
+							"pages": [
+								12,
+								13,
+								14
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 2,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 4,
+							"parent": 7,
+							"pages": [
+								17,
+								18
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 3,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 5,
+							"parent": 11,
+							"pages": [
+								20,
+								21,
+								22
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 7,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								27,
+								0,
+								1
+							]
+						},
+						{
+							"id": 6,
+							"parent": 5,
+							"pages": [
+								23,
+								24,
+								25,
+								26
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 7,
+							"hits": 1,
+							"gpu": null,
+							"host": [
+								23,
+								24,
+								25,
+								26
+							]
+						},
+						{
+							"id": 7,
+							"parent": 0,
+							"pages": [
+								15,
+								16
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 8,
+							"hits": 2,
+							"gpu": null,
+							"host": [
+								15,
+								16
+							]
+						},
+						{
+							"id": 8,
+							"parent": 7,
+							"pages": [
+								27,
+								28,
+								29
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 6,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 9,
+							"parent": 6,
+							"pages": [
+								30,
+								31,
+								32
+							],
+							"tiers": [
+								false,
+								false,
+								true
+							],
+							"last": 7,
+							"hits": 0,
+							"gpu": null,
+							"host": null
+						},
+						{
+							"id": 10,
+							"parent": 7,
+							"pages": [
+								33,
+								34,
+								35
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 8,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								2,
+								3,
+								4
+							]
+						},
+						{
+							"id": 11,
+							"parent": 0,
+							"pages": [
+								19
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 9,
+							"hits": 3,
+							"gpu": null,
+							"host": [
+								20
+							]
+						},
+						{
+							"id": 12,
+							"parent": 11,
+							"pages": [
+								36,
+								37,
+								38
+							],
+							"tiers": [
+								false,
+								true,
+								false
+							],
+							"last": 9,
+							"hits": 0,
+							"gpu": null,
+							"host": [
+								17,
+								18,
+								19
+							]
+						},
+						{
+							"id": 13,
+							"parent": 2,
+							"pages": [
+								39,
+								40
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 10,
+							"hits": 0,
+							"gpu": [
+								9,
+								4
+							],
+							"host": null
+						},
+						{
+							"id": 14,
+							"parent": 2,
+							"pages": [
+								41,
+								42
+							],
+							"tiers": [
+								true,
+								false,
+								false
+							],
+							"last": 11,
+							"hits": 0,
+							"gpu": [
+								5,
+								0
+							],
+							"host": null
+						}
+					],
+					"gpuFree": 0,
+					"hostFree": 2,
+					"storagePages": 13
+				}
+			],
+			"integrityFailures": 0,
+			"bytesByKind": {
+				"write gpu": 16908288,
+				"gpu→host": 15335424,
+				"evict gpu": 0,
+				"host→storage": 5111808,
+				"evict host": 0,
+				"host→gpu": 3932160
+			},
+			"cachedTokens": 752,
+			"computedTokens": 483
+		}
+	},
+	"files": {
+		"pages": {
+			"file": "pages.f32",
+			"sha256": "078efeb2a435b3572c4e94536fefe2421eadde3c8a3239d90bd1c10f5e7d6c7f",
+			"bytes": 569344,
+			"tensors": {
+				"write_through.pageKeys": {
+					"offset": 0,
+					"length": 44032,
+					"shape": [
+						43,
+						16,
+						64
+					]
+				},
+				"write_through_selective.pageKeys": {
+					"offset": 44032,
+					"length": 54272,
+					"shape": [
+						53,
+						16,
+						64
+					]
+				},
+				"write_back.pageKeys": {
+					"offset": 98304,
+					"length": 44032,
+					"shape": [
+						43,
+						16,
+						64
+					]
+				}
+			}
+		}
+	},
+	"capture": {
+		"timestamp": "2026-10-30T13:48:41.675795+00:00",
+		"device": "mps",
+		"dtype": "float32",
+		"attention": "eager, written out in scripts/efficiency/kv_trace.py",
+		"machine": "Apple M4 Max",
+		"python": "3.12.12",
+		"packages": {
+			"torch": "2.14.1",
+			"transformers": "4.57.6",
+			"numpy": "2.5.4"
+		},
+		"modelingSha256": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb",
+		"script": "scripts/efficiency/record_hicache.py",
+		"scriptSha256": "20b173f48905d1965f5195d5f05a9eca6de0277f678d42470a18f5bdc97d0e2d",
+		"helperSha256": "c4a888b05821455835b2e8fe34089e6bf227011d70e7cf6326aa0ef44e8a238f",
+		"timing": "wall clock on this Mac, torch.mps.synchronize around GPU work; every timed GPU operation and prefill runs once untimed first (MPS builds its kernels per shape); one timed run each, not averaged"
+	},
+	"validation": {
+		"cachedVsUncachedFirstLogitsMaxError": 6.84e-05,
+		"answersMatchUncached": true,
+		"pageIntegrityFailures": 0
+	}
+}

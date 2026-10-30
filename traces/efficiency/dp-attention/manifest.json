@@ -1,0 +1,1250 @@
+{
+	"schemaVersion": 1,
+	"kind": "efficiency-serving",
+	"tab": "dp-attention",
+	"model": {
+		"id": "deepseek-ai/DeepSeek-V2-Lite",
+		"name": "DeepSeek-V2-Lite (16B, 2.4B active)",
+		"revision": "604d5664dddd88a0433dbae533b7fe9472482de0",
+		"url": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite/tree/604d5664dddd88a0433dbae533b7fe9472482de0",
+		"license": "DeepSeek Model License",
+		"licenseUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Lite/blob/604d5664dddd88a0433dbae533b7fe9472482de0/LICENSE",
+		"numLayers": 27,
+		"layer": 1,
+		"hiddenSize": 2048,
+		"attentionHeads": 16,
+		"latentDim": 512,
+		"ropeDim": 64,
+		"contentDim": 128,
+		"valueDim": 128,
+		"routedExperts": 64,
+		"sharedExperts": 2,
+		"expertsPerToken": 6,
+		"expertWidth": 1408,
+		"softmaxScale": 0.1147213867929261,
+		"dtype": "bfloat16"
+	},
+	"ranks": 4,
+	"requests": [
+		{
+			"index": 0,
+			"prompt": "The capital of France is",
+			"tokens": [
+				{
+					"id": 100000,
+					"text": "<｜begin▁of▁sentence｜>"
+				},
+				{
+					"id": 549,
+					"text": "The"
+				},
+				{
+					"id": 6077,
+					"text": " capital"
+				},
+				{
+					"id": 280,
+					"text": " of"
+				},
+				{
+					"id": 7239,
+					"text": " France"
+				},
+				{
+					"id": 317,
+					"text": " is"
+				}
+			],
+			"dpRank": 0,
+			"offset": 0
+		},
+		{
+			"index": 1,
+			"prompt": "def fibonacci(n):\n    if n < 2:\n        return n\n    return",
+			"tokens": [
+				{
+					"id": 100000,
+					"text": "<｜begin▁of▁sentence｜>"
+				},
+				{
+					"id": 1558,
+					"text": "def"
+				},
+				{
+					"id": 12577,
+					"text": " fib"
+				},
+				{
+					"id": 86007,
+					"text": "onacci"
+				},
+				{
+					"id": 7,
+					"text": "("
+				},
+				{
+					"id": 77,
+					"text": "n"
+				},
+				{
+					"id": 1780,
+					"text": "):"
+				},
+				{
+					"id": 185,
+					"text": "\n"
+				},
+				{
+					"id": 300,
+					"text": "   "
+				},
+				{
+					"id": 565,
+					"text": " if"
+				},
+				{
+					"id": 291,
+					"text": " n"
+				},
+				{
+					"id": 459,
+					"text": " <"
+				},
+				{
+					"id": 207,
+					"text": " "
+				},
+				{
+					"id": 17,
+					"text": "2"
+				},
+				{
+					"id": 25,
+					"text": ":"
+				},
+				{
+					"id": 185,
+					"text": "\n"
+				},
+				{
+					"id": 391,
+					"text": "       "
+				},
+				{
+					"id": 972,
+					"text": " return"
+				},
+				{
+					"id": 291,
+					"text": " n"
+				},
+				{
+					"id": 185,
+					"text": "\n"
+				},
+				{
+					"id": 300,
+					"text": "   "
+				},
+				{
+					"id": 972,
+					"text": " return"
+				}
+			],
+			"dpRank": 1,
+			"offset": 6
+		},
+		{
+			"index": 2,
+			"prompt": "Water boils at 100 degrees Celsius at sea level, but on a high mountain it boils at",
+			"tokens": [
+				{
+					"id": 100000,
+					"text": "<｜begin▁of▁sentence｜>"
+				},
+				{
+					"id": 29889,
+					"text": "Water"
+				},
+				{
+					"id": 70092,
+					"text": " boils"
+				},
+				{
+					"id": 430,
+					"text": " at"
+				},
+				{
+					"id": 207,
+					"text": " "
+				},
+				{
+					"id": 16,
+					"text": "1"
+				},
+				{
+					"id": 15,
+					"text": "0"
+				},
+				{
+					"id": 15,
+					"text": "0"
+				},
+				{
+					"id": 9944,
+					"text": " degrees"
+				},
+				{
+					"id": 77537,
+					"text": " Celsius"
+				},
+				{
+					"id": 430,
+					"text": " at"
+				},
+				{
+					"id": 5532,
+					"text": " sea"
+				},
+				{
+					"id": 2258,
+					"text": " level"
+				},
+				{
+					"id": 11,
+					"text": ","
+				},
+				{
+					"id": 548,
+					"text": " but"
+				},
+				{
+					"id": 331,
+					"text": " on"
+				},
+				{
+					"id": 245,
+					"text": " a"
+				},
+				{
+					"id": 1461,
+					"text": " high"
+				},
+				{
+					"id": 11072,
+					"text": " mountain"
+				},
+				{
+					"id": 359,
+					"text": " it"
+				},
+				{
+					"id": 70092,
+					"text": " boils"
+				},
+				{
+					"id": 430,
+					"text": " at"
+				}
+			],
+			"dpRank": 2,
+			"offset": 28
+		},
+		{
+			"index": 3,
+			"prompt": "The three primary colors of light are",
+			"tokens": [
+				{
+					"id": 100000,
+					"text": "<｜begin▁of▁sentence｜>"
+				},
+				{
+					"id": 549,
+					"text": "The"
+				},
+				{
+					"id": 1853,
+					"text": " three"
+				},
+				{
+					"id": 6663,
+					"text": " primary"
+				},
+				{
+					"id": 8247,
+					"text": " colors"
+				},
+				{
+					"id": 280,
+					"text": " of"
+				},
+				{
+					"id": 2156,
+					"text": " light"
+				},
+				{
+					"id": 418,
+					"text": " are"
+				}
+			],
+			"dpRank": 3,
+			"offset": 50
+		},
+		{
+			"index": 4,
+			"prompt": "To convert kilometres to miles, multiply by",
+			"tokens": [
+				{
+					"id": 100000,
+					"text": "<｜begin▁of▁sentence｜>"
+				},
+				{
+					"id": 1898,
+					"text": "To"
+				},
+				{
+					"id": 5447,
+					"text": " convert"
+				},
+				{
+					"id": 61277,
+					"text": " kilometres"
+				},
+				{
+					"id": 276,
+					"text": " to"
+				},
+				{
+					"id": 6593,
+					"text": " miles"
+				},
+				{
+					"id": 11,
+					"text": ","
+				},
+				{
+					"id": 36419,
+					"text": " multiply"
+				},
+				{
+					"id": 457,
+					"text": " by"
+				}
+			],
+			"dpRank": 0,
+			"offset": 58
+		},
+		{
+			"index": 5,
+			"prompt": "In July 1969, the first two people to walk on the Moon were",
+			"tokens": [
+				{
+					"id": 100000,
+					"text": "<｜begin▁of▁sentence｜>"
+				},
+				{
+					"id": 774,
+					"text": "In"
+				},
+				{
+					"id": 6904,
+					"text": " July"
+				},
+				{
+					"id": 207,
+					"text": " "
+				},
+				{
+					"id": 16,
+					"text": "1"
+				},
+				{
+					"id": 24,
+					"text": "9"
+				},
+				{
+					"id": 21,
+					"text": "6"
+				},
+				{
+					"id": 24,
+					"text": "9"
+				},
+				{
+					"id": 11,
+					"text": ","
+				},
+				{
+					"id": 254,
+					"text": " the"
+				},
+				{
+					"id": 1022,
+					"text": " first"
+				},
+				{
+					"id": 984,
+					"text": " two"
+				},
+				{
+					"id": 1245,
+					"text": " people"
+				},
+				{
+					"id": 276,
+					"text": " to"
+				},
+				{
+					"id": 3667,
+					"text": " walk"
+				},
+				{
+					"id": 331,
+					"text": " on"
+				},
+				{
+					"id": 254,
+					"text": " the"
+				},
+				{
+					"id": 20992,
+					"text": " Moon"
+				},
+				{
+					"id": 778,
+					"text": " were"
+				}
+			],
+			"dpRank": 1,
+			"offset": 67
+		},
+		{
+			"index": 6,
+			"prompt": "A haiku about autumn leaves:\n",
+			"tokens": [
+				{
+					"id": 100000,
+					"text": "<｜begin▁of▁sentence｜>"
+				},
+				{
+					"id": 32,
+					"text": "A"
+				},
+				{
+					"id": 422,
+					"text": " ha"
+				},
+				{
+					"id": 54179,
+					"text": "iku"
+				},
+				{
+					"id": 786,
+					"text": " about"
+				},
+				{
+					"id": 25731,
+					"text": " autumn"
+				},
+				{
+					"id": 8242,
+					"text": " leaves"
+				},
+				{
+					"id": 25,
+					"text": ":"
+				},
+				{
+					"id": 185,
+					"text": "\n"
+				}
+			],
+			"dpRank": 2,
+			"offset": 86
+		},
+		{
+			"index": 7,
+			"prompt": "Photosynthesis turns sunlight, water and carbon dioxide into",
+			"tokens": [
+				{
+					"id": 100000,
+					"text": "<｜begin▁of▁sentence｜>"
+				},
+				{
+					"id": 49099,
+					"text": "Photos"
+				},
+				{
+					"id": 46756,
+					"text": "ynthesis"
+				},
+				{
+					"id": 9236,
+					"text": " turns"
+				},
+				{
+					"id": 29626,
+					"text": " sunlight"
+				},
+				{
+					"id": 11,
+					"text": ","
+				},
+				{
+					"id": 2354,
+					"text": " water"
+				},
+				{
+					"id": 285,
+					"text": " and"
+				},
+				{
+					"id": 13930,
+					"text": " carbon"
+				},
+				{
+					"id": 54188,
+					"text": " dioxide"
+				},
+				{
+					"id": 881,
+					"text": " into"
+				}
+			],
+			"dpRank": 3,
+			"offset": 95
+		}
+	],
+	"tokens": 106,
+	"memory": {
+		"latentPerToken": 1152,
+		"tp": {
+			"kvPerRank": [
+				122112,
+				122112,
+				122112,
+				122112
+			],
+			"attentionWeightsPerRank": 8651776,
+			"moeWeightsPerRank": 285736960,
+			"tokensPerRank": [
+				106,
+				106,
+				106,
+				106
+			],
+			"headsPerRank": 4
+		},
+		"dp": {
+			"kvPerRank": [
+				17280,
+				47232,
+				35712,
+				21888
+			],
+			"attentionWeightsPerRank": 27526144,
+			"moeWeightsPerRank": 285736960,
+			"tokensPerRank": [
+				15,
+				41,
+				31,
+				19
+			],
+			"headsPerRank": 16
+		}
+	},
+	"communication": {
+		"algorithm": "ring collectives; bytes each rank sends (= receives); bfloat16 activations",
+		"tp": [
+			{
+				"op": "all-reduce",
+				"after": "attention (o_proj partial sums)",
+				"payload": 434176,
+				"perRank": 651264
+			},
+			{
+				"op": "all-reduce",
+				"after": "MoE (expert and shared-column partial sums)",
+				"payload": 434176,
+				"perRank": 651264
+			}
+		],
+		"dp": [
+			{
+				"op": "all-gather",
+				"after": "attention, before the MoE",
+				"payload": 671744,
+				"perRank": 503808,
+				"padding": 58
+			},
+			{
+				"op": "reduce-scatter",
+				"after": "the MoE, back to each rank's tokens",
+				"payload": 671744,
+				"perRank": 503808,
+				"padding": 58
+			}
+		]
+	},
+	"files": {
+		"layer": {
+			"file": "layer.f32",
+			"sha256": "110853030ceca802b619ae54aa74e1fefad34fbf2a3ca48a58bfd4dbc900ab43",
+			"bytes": 630920,
+			"tensors": {
+				"request.0.latent": {
+					"offset": 0,
+					"length": 3072,
+					"shape": [
+						6,
+						512
+					]
+				},
+				"request.0.ropeKey": {
+					"offset": 3072,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"request.0.weights": {
+					"offset": 3456,
+					"length": 576,
+					"shape": [
+						16,
+						6,
+						6
+					]
+				},
+				"request.0.out": {
+					"offset": 4032,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"request.0.tpPartial": {
+					"offset": 4416,
+					"length": 1536,
+					"shape": [
+						4,
+						6,
+						64
+					]
+				},
+				"request.0.experts": {
+					"offset": 5952,
+					"length": 36,
+					"shape": [
+						6,
+						6
+					]
+				},
+				"request.0.expertWeights": {
+					"offset": 5988,
+					"length": 36,
+					"shape": [
+						6,
+						6
+					]
+				},
+				"request.0.moePart": {
+					"offset": 6024,
+					"length": 1536,
+					"shape": [
+						4,
+						6,
+						64
+					]
+				},
+				"request.0.moe": {
+					"offset": 7560,
+					"length": 384,
+					"shape": [
+						6,
+						64
+					]
+				},
+				"request.1.latent": {
+					"offset": 7944,
+					"length": 11264,
+					"shape": [
+						22,
+						512
+					]
+				},
+				"request.1.ropeKey": {
+					"offset": 19208,
+					"length": 1408,
+					"shape": [
+						22,
+						64
+					]
+				},
+				"request.1.weights": {
+					"offset": 20616,
+					"length": 7744,
+					"shape": [
+						16,
+						22,
+						22
+					]
+				},
+				"request.1.out": {
+					"offset": 28360,
+					"length": 1408,
+					"shape": [
+						22,
+						64
+					]
+				},
+				"request.1.tpPartial": {
+					"offset": 29768,
+					"length": 5632,
+					"shape": [
+						4,
+						22,
+						64
+					]
+				},
+				"request.1.experts": {
+					"offset": 35400,
+					"length": 132,
+					"shape": [
+						22,
+						6
+					]
+				},
+				"request.1.expertWeights": {
+					"offset": 35532,
+					"length": 132,
+					"shape": [
+						22,
+						6
+					]
+				},
+				"request.1.moePart": {
+					"offset": 35664,
+					"length": 5632,
+					"shape": [
+						4,
+						22,
+						64
+					]
+				},
+				"request.1.moe": {
+					"offset": 41296,
+					"length": 1408,
+					"shape": [
+						22,
+						64
+					]
+				},
+				"request.2.latent": {
+					"offset": 42704,
+					"length": 11264,
+					"shape": [
+						22,
+						512
+					]
+				},
+				"request.2.ropeKey": {
+					"offset": 53968,
+					"length": 1408,
+					"shape": [
+						22,
+						64
+					]
+				},
+				"request.2.weights": {
+					"offset": 55376,
+					"length": 7744,
+					"shape": [
+						16,
+						22,
+						22
+					]
+				},
+				"request.2.out": {
+					"offset": 63120,
+					"length": 1408,
+					"shape": [
+						22,
+						64
+					]
+				},
+				"request.2.tpPartial": {
+					"offset": 64528,
+					"length": 5632,
+					"shape": [
+						4,
+						22,
+						64
+					]
+				},
+				"request.2.experts": {
+					"offset": 70160,
+					"length": 132,
+					"shape": [
+						22,
+						6
+					]
+				},
+				"request.2.expertWeights": {
+					"offset": 70292,
+					"length": 132,
+					"shape": [
+						22,
+						6
+					]
+				},
+				"request.2.moePart": {
+					"offset": 70424,
+					"length": 5632,
+					"shape": [
+						4,
+						22,
+						64
+					]
+				},
+				"request.2.moe": {
+					"offset": 76056,
+					"length": 1408,
+					"shape": [
+						22,
+						64
+					]
+				},
+				"request.3.latent": {
+					"offset": 77464,
+					"length": 4096,
+					"shape": [
+						8,
+						512
+					]
+				},
+				"request.3.ropeKey": {
+					"offset": 81560,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"request.3.weights": {
+					"offset": 82072,
+					"length": 1024,
+					"shape": [
+						16,
+						8,
+						8
+					]
+				},
+				"request.3.out": {
+					"offset": 83096,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"request.3.tpPartial": {
+					"offset": 83608,
+					"length": 2048,
+					"shape": [
+						4,
+						8,
+						64
+					]
+				},
+				"request.3.experts": {
+					"offset": 85656,
+					"length": 48,
+					"shape": [
+						8,
+						6
+					]
+				},
+				"request.3.expertWeights": {
+					"offset": 85704,
+					"length": 48,
+					"shape": [
+						8,
+						6
+					]
+				},
+				"request.3.moePart": {
+					"offset": 85752,
+					"length": 2048,
+					"shape": [
+						4,
+						8,
+						64
+					]
+				},
+				"request.3.moe": {
+					"offset": 87800,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"request.4.latent": {
+					"offset": 88312,
+					"length": 4608,
+					"shape": [
+						9,
+						512
+					]
+				},
+				"request.4.ropeKey": {
+					"offset": 92920,
+					"length": 576,
+					"shape": [
+						9,
+						64
+					]
+				},
+				"request.4.weights": {
+					"offset": 93496,
+					"length": 1296,
+					"shape": [
+						16,
+						9,
+						9
+					]
+				},
+				"request.4.out": {
+					"offset": 94792,
+					"length": 576,
+					"shape": [
+						9,
+						64
+					]
+				},
+				"request.4.tpPartial": {
+					"offset": 95368,
+					"length": 2304,
+					"shape": [
+						4,
+						9,
+						64
+					]
+				},
+				"request.4.experts": {
+					"offset": 97672,
+					"length": 54,
+					"shape": [
+						9,
+						6
+					]
+				},
+				"request.4.expertWeights": {
+					"offset": 97726,
+					"length": 54,
+					"shape": [
+						9,
+						6
+					]
+				},
+				"request.4.moePart": {
+					"offset": 97780,
+					"length": 2304,
+					"shape": [
+						4,
+						9,
+						64
+					]
+				},
+				"request.4.moe": {
+					"offset": 100084,
+					"length": 576,
+					"shape": [
+						9,
+						64
+					]
+				},
+				"request.5.latent": {
+					"offset": 100660,
+					"length": 9728,
+					"shape": [
+						19,
+						512
+					]
+				},
+				"request.5.ropeKey": {
+					"offset": 110388,
+					"length": 1216,
+					"shape": [
+						19,
+						64
+					]
+				},
+				"request.5.weights": {
+					"offset": 111604,
+					"length": 5776,
+					"shape": [
+						16,
+						19,
+						19
+					]
+				},
+				"request.5.out": {
+					"offset": 117380,
+					"length": 1216,
+					"shape": [
+						19,
+						64
+					]
+				},
+				"request.5.tpPartial": {
+					"offset": 118596,
+					"length": 4864,
+					"shape": [
+						4,
+						19,
+						64
+					]
+				},
+				"request.5.experts": {
+					"offset": 123460,
+					"length": 114,
+					"shape": [
+						19,
+						6
+					]
+				},
+				"request.5.expertWeights": {
+					"offset": 123574,
+					"length": 114,
+					"shape": [
+						19,
+						6
+					]
+				},
+				"request.5.moePart": {
+					"offset": 123688,
+					"length": 4864,
+					"shape": [
+						4,
+						19,
+						64
+					]
+				},
+				"request.5.moe": {
+					"offset": 128552,
+					"length": 1216,
+					"shape": [
+						19,
+						64
+					]
+				},
+				"request.6.latent": {
+					"offset": 129768,
+					"length": 4608,
+					"shape": [
+						9,
+						512
+					]
+				},
+				"request.6.ropeKey": {
+					"offset": 134376,
+					"length": 576,
+					"shape": [
+						9,
+						64
+					]
+				},
+				"request.6.weights": {
+					"offset": 134952,
+					"length": 1296,
+					"shape": [
+						16,
+						9,
+						9
+					]
+				},
+				"request.6.out": {
+					"offset": 136248,
+					"length": 576,
+					"shape": [
+						9,
+						64
+					]
+				},
+				"request.6.tpPartial": {
+					"offset": 136824,
+					"length": 2304,
+					"shape": [
+						4,
+						9,
+						64
+					]
+				},
+				"request.6.experts": {
+					"offset": 139128,
+					"length": 54,
+					"shape": [
+						9,
+						6
+					]
+				},
+				"request.6.expertWeights": {
+					"offset": 139182,
+					"length": 54,
+					"shape": [
+						9,
+						6
+					]
+				},
+				"request.6.moePart": {
+					"offset": 139236,
+					"length": 2304,
+					"shape": [
+						4,
+						9,
+						64
+					]
+				},
+				"request.6.moe": {
+					"offset": 141540,
+					"length": 576,
+					"shape": [
+						9,
+						64
+					]
+				},
+				"request.7.latent": {
+					"offset": 142116,
+					"length": 5632,
+					"shape": [
+						11,
+						512
+					]
+				},
+				"request.7.ropeKey": {
+					"offset": 147748,
+					"length": 704,
+					"shape": [
+						11,
+						64
+					]
+				},
+				"request.7.weights": {
+					"offset": 148452,
+					"length": 1936,
+					"shape": [
+						16,
+						11,
+						11
+					]
+				},
+				"request.7.out": {
+					"offset": 150388,
+					"length": 704,
+					"shape": [
+						11,
+						64
+					]
+				},
+				"request.7.tpPartial": {
+					"offset": 151092,
+					"length": 2816,
+					"shape": [
+						4,
+						11,
+						64
+					]
+				},
+				"request.7.experts": {
+					"offset": 153908,
+					"length": 66,
+					"shape": [
+						11,
+						6
+					]
+				},
+				"request.7.expertWeights": {
+					"offset": 153974,
+					"length": 66,
+					"shape": [
+						11,
+						6
+					]
+				},
+				"request.7.moePart": {
+					"offset": 154040,
+					"length": 2816,
+					"shape": [
+						4,
+						11,
+						64
+					]
+				},
+				"request.7.moe": {
+					"offset": 156856,
+					"length": 704,
+					"shape": [
+						11,
+						64
+					]
+				},
+				"expertLoad": {
+					"offset": 157560,
+					"length": 64,
+					"shape": [
+						64
+					]
+				},
+				"outNorm": {
+					"offset": 157624,
+					"length": 106,
+					"shape": [
+						106
+					]
+				}
+			}
+		}
+	},
+	"capture": {
+		"timestamp": "2026-10-30T10:05:26.894181+00:00",
+		"device": "cpu",
+		"dtype": "float32",
+		"attention": "eager, written out in scripts/efficiency/kv_trace.py",
+		"machine": "Apple M4 Max",
+		"python": "3.12.12",
+		"packages": {
+			"torch": "2.14.1",
+			"transformers": "4.57.6",
+			"numpy": "2.5.4"
+		},
+		"modelingSha256": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb",
+		"script": "scripts/efficiency/record_dp_attention.py",
+		"scriptSha256": "947f5f0a253cd8538cff6b0a388b5b4fcdd6726413b70ad22d95b7dca867d416",
+		"helperSha256": "c4a888b05821455835b2e8fe34089e6bf227011d70e7cf6326aa0ef44e8a238f",
+		"fetchScript": "scripts/efficiency/dp_attention_fetch.py",
+		"fetchSha256": "235920c3e7ec94593a5fa698db10bc5119f55b95930d0abc788f9c028bc7c53c",
+		"simulation": "the four ranks run one after another in this process on the CPU; nothing is timed",
+		"weights": "byte ranges of the pinned checkpoint (bfloat16), computed in float32",
+		"weightsSha256": "29e083f27ea52072ef941da11f84739680799245a1105d3c289435ca889414e2",
+		"mlaCapture": "static/traces/deepseek-mla.json and attention-operations-deepseek-fact.json (DeepSeek's own code)"
+	},
+	"validation": {
+		"tpHeadWeights": 0.0,
+		"tpAttentionVsFull": 5.96e-07,
+		"tpLatentVsFull": 0.0,
+		"dpAttentionVsFull": 0.0,
+		"moeExpertParallelVsTransformers": 9.54e-07,
+		"captureLatent": 9.54e-07,
+		"captureRopeKey": 7.63e-06,
+		"captureAttentionInput": 3.81e-06,
+		"captureAttentionWeights": 7.15e-07,
+		"captureAttentionOutput": 2.5e-07,
+		"captureRoutingWeights": 1.56e-07,
+		"captureMoeOutput": 1.08e-07,
+		"captureRoutingMatches": true
+	}
+}

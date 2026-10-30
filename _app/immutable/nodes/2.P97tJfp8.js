@@ -1,1 +1,0 @@
-import{r as e}from"../chunks/Bj1c-QfV.js";import{b as r}from"../chunks/LyPyNBvN.js";const o=!0,t=()=>e(308,`${r}/transformers/`),n=Object.freeze(Object.defineProperty({__proto__:null,load:t,prerender:o},Symbol.toStringTag,{value:"Module"}));export{n as universal};
