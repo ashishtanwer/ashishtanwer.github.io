@@ -1,0 +1,1735 @@
+{
+ "kind": "sparsity",
+ "tab": "wanda",
+ "model": {
+  "id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "name": "Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+  "license": "Apache-2.0",
+  "licenseUrl": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/blob/main/LICENSE",
+  "layers": 24,
+  "hidden": 896,
+  "intermediate": 4864,
+  "heads": 14,
+  "kvHeads": 2,
+  "parameters": 494032768,
+  "linearWeights": 357826560,
+  "tiedEmbedding": true
+ },
+ "method": {
+  "name": "Wanda",
+  "paper": "https://arxiv.org/abs/2306.11695",
+  "code": "https://github.com/locuslab/wanda/tree/8e8fc87b4a2f9955baa7e76e64d5fce7fa8724a6",
+  "license": "MIT"
+ },
+ "calibration": {
+  "repo": "allenai/c4",
+  "revision": "1588ec454efa1a09f29cd18ddd04fe05fc8653a2",
+  "file": "en/c4-train.00000-of-01024.json.gz",
+  "license": "ODC-BY 1.0",
+  "url": "https://huggingface.co/datasets/allenai/c4",
+  "sequences": 128,
+  "tokens": 2048,
+  "seed": 0,
+  "tokensSha256": "9a19999b8ae46425deee1b72059cc151c6526ee3b5cd54c6605c5d59eaa269c7",
+  "picks": [
+   [
+    220500,
+    82
+   ],
+   [
+    212302,
+    621
+   ],
+   [
+    106536,
+    818
+   ],
+   [
+    286906,
+    601
+   ],
+   [
+    174344,
+    436
+   ],
+   [
+    285336,
+    871
+   ],
+   [
+    183654,
+    111
+   ],
+   [
+    325623,
+    67
+   ],
+   [
+    219271,
+    1356
+   ],
+   [
+    255467,
+    1149
+   ],
+   [
+    104079,
+    1238
+   ],
+   [
+    207983,
+    2570
+   ],
+   [
+    325340,
+    292
+   ],
+   [
+    250643,
+    245
+   ],
+   [
+    275678,
+    462
+   ],
+   [
+    168728,
+    36
+   ],
+   [
+    263417,
+    68
+   ],
+   [
+    85875,
+    2625
+   ],
+   [
+    10605,
+    4
+   ],
+   [
+    65181,
+    174
+   ],
+   [
+    81871,
+    62
+   ],
+   [
+    260927,
+    778
+   ],
+   [
+    53494,
+    1528
+   ],
+   [
+    36939,
+    50
+   ],
+   [
+    274234,
+    3445
+   ],
+   [
+    258327,
+    246
+   ],
+   [
+    350752,
+    809
+   ],
+   [
+    77332,
+    1073
+   ],
+   [
+    321129,
+    709
+   ],
+   [
+    114328,
+    291
+   ],
+   [
+    289995,
+    1033
+   ],
+   [
+    342236,
+    333
+   ],
+   [
+    180445,
+    687
+   ],
+   [
+    124455,
+    90
+   ],
+   [
+    20997,
+    2068
+   ],
+   [
+    178389,
+    771
+   ],
+   [
+    295323,
+    1573
+   ],
+   [
+    47515,
+    2515
+   ],
+   [
+    85412,
+    32
+   ],
+   [
+    272424,
+    178
+   ],
+   [
+    139242,
+    412
+   ],
+   [
+    92781,
+    656
+   ],
+   [
+    343517,
+    276
+   ],
+   [
+    204218,
+    26
+   ],
+   [
+    187983,
+    100
+   ],
+   [
+    77434,
+    2509
+   ],
+   [
+    267519,
+    887
+   ],
+   [
+    144638,
+    453
+   ],
+   [
+    329569,
+    732
+   ],
+   [
+    187151,
+    678
+   ],
+   [
+    2578,
+    597
+   ],
+   [
+    339400,
+    209
+   ],
+   [
+    5497,
+    945
+   ],
+   [
+    266334,
+    688
+   ],
+   [
+    175389,
+    7
+   ],
+   [
+    71727,
+    2402
+   ],
+   [
+    159784,
+    146
+   ],
+   [
+    121440,
+    2358
+   ],
+   [
+    335936,
+    137
+   ],
+   [
+    167529,
+    206
+   ],
+   [
+    220815,
+    2080
+   ],
+   [
+    178161,
+    263
+   ],
+   [
+    195369,
+    1141
+   ],
+   [
+    283427,
+    215
+   ],
+   [
+    321841,
+    14
+   ],
+   [
+    309451,
+    2161
+   ],
+   [
+    138499,
+    3148
+   ],
+   [
+    31250,
+    43
+   ],
+   [
+    82817,
+    2205
+   ],
+   [
+    73409,
+    33
+   ],
+   [
+    140798,
+    103
+   ],
+   [
+    76177,
+    381
+   ],
+   [
+    11028,
+    1478
+   ],
+   [
+    207772,
+    264
+   ],
+   [
+    346818,
+    137
+   ],
+   [
+    206070,
+    3371
+   ],
+   [
+    60471,
+    0
+   ],
+   [
+    201883,
+    3943
+   ],
+   [
+    228175,
+    249
+   ],
+   [
+    20839,
+    749
+   ],
+   [
+    90914,
+    39
+   ],
+   [
+    165320,
+    1
+   ],
+   [
+    308330,
+    400
+   ],
+   [
+    302767,
+    2766
+   ],
+   [
+    98956,
+    102
+   ],
+   [
+    282405,
+    75
+   ],
+   [
+    205765,
+    33
+   ],
+   [
+    265666,
+    1379
+   ],
+   [
+    181075,
+    787
+   ],
+   [
+    46324,
+    1884
+   ],
+   [
+    125866,
+    292
+   ],
+   [
+    150887,
+    19
+   ],
+   [
+    325380,
+    363
+   ],
+   [
+    3944,
+    1092
+   ],
+   [
+    56086,
+    214
+   ],
+   [
+    201794,
+    131
+   ],
+   [
+    319121,
+    1018
+   ],
+   [
+    131052,
+    732
+   ],
+   [
+    89348,
+    1234
+   ],
+   [
+    75732,
+    3
+   ],
+   [
+    233082,
+    2712
+   ],
+   [
+    329716,
+    1915
+   ],
+   [
+    12175,
+    23
+   ],
+   [
+    272111,
+    6634
+   ],
+   [
+    162719,
+    134
+   ],
+   [
+    35553,
+    61
+   ],
+   [
+    306975,
+    285
+   ],
+   [
+    53409,
+    70
+   ],
+   [
+    195303,
+    5979
+   ],
+   [
+    42334,
+    641
+   ],
+   [
+    169946,
+    287
+   ],
+   [
+    135163,
+    429
+   ],
+   [
+    206611,
+    0
+   ],
+   [
+    355637,
+    273
+   ],
+   [
+    22351,
+    264
+   ],
+   [
+    61358,
+    68
+   ],
+   [
+    224848,
+    3123
+   ],
+   [
+    112551,
+    517
+   ],
+   [
+    11302,
+    848
+   ],
+   [
+    249064,
+    6
+   ],
+   [
+    89000,
+    54
+   ],
+   [
+    328556,
+    2860
+   ],
+   [
+    261881,
+    231
+   ],
+   [
+    91223,
+    898
+   ],
+   [
+    28815,
+    1315
+   ],
+   [
+    172853,
+    272
+   ],
+   [
+    188272,
+    374
+   ],
+   [
+    68289,
+    728
+   ]
+  ]
+ },
+ "evaluation": {
+  "repo": "Salesforce/wikitext",
+  "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "file": "wikitext-2-raw-v1/test-00000-of-00001.parquet",
+  "license": "CC BY-SA 3.0",
+  "url": "https://huggingface.co/datasets/Salesforce/wikitext",
+  "windows": 146,
+  "tokens": 299078,
+  "seqlen": 2048
+ },
+ "featured": {
+  "layer": 0,
+  "matrix": "self_attn.k_proj",
+  "rows": 128,
+  "cols": 896,
+  "outliers": [
+   56,
+   490,
+   674,
+   538,
+   53
+  ],
+  "crop": [
+   48,
+   80
+  ],
+  "nsamples": 128,
+  "errors": {
+   "magnitude.50": 0.004749350715428591,
+   "magnitude.2:4": 0.0241899024695158,
+   "wanda.50": 0.002599898958578706,
+   "wanda.2:4": 0.007289857603609562
+  }
+ },
+ "targets": [
+  "50",
+  "2:4"
+ ],
+ "methods": [
+  "magnitude",
+  "wanda"
+ ],
+ "runs": {
+  "dense": {
+   "perplexity": 14.242513656616211,
+   "continuation": " It is named after Sir Ernest Shackleton, the first Antarctic explorer to reach the South Pole in 1914"
+  },
+  "magnitude-50": {
+   "perplexity": 582.05322265625,
+   "continuation": " The \"s\" in the \"s\" of the \"n\" of the \"g\" of the \"b\"",
+   "sparsity": 0.5011209117623913,
+   "pruneSeconds": 393.4221642090124,
+   "methodSeconds": {
+    "magnitude": 32.331150166894076
+   }
+  },
+  "magnitude-2-4": {
+   "perplexity": 18521.611328125,
+   "continuation": " or or or or or or or                 ",
+   "sparsity": 0.5,
+   "pruneSeconds": 303.2168177079875,
+   "methodSeconds": {
+    "magnitude": 9.417978538011084
+   }
+  },
+  "wanda-50": {
+   "perplexity": 26.773597717285156,
+   "continuation": " The crater is named after the crater's impact on the crater's surface. The crater is named after the crater's impact",
+   "sparsity": 0.5,
+   "pruneSeconds": 598.3247444580047,
+   "methodSeconds": {
+    "magnitude": 45.756245925033,
+    "wanda": 16.213411050048308
+   }
+  },
+  "wanda-2-4": {
+   "perplexity": 89.90736389160156,
+   "continuation": " The crater is a large, but the crater is a small, but the crater is a large. The crater is a",
+   "sparsity": 0.5,
+   "pruneSeconds": 133.29587708400504,
+   "methodSeconds": {
+    "magnitude": 5.01807204191573,
+    "wanda": 4.895660128924646
+   }
+  }
+ },
+ "snippet": {
+  "text": "Shackleton is an impact crater that lies at the south pole of the Moon. The peaks along the crater's rim are exposed to almost continual sunlight, while the interior is perpetually in shadow (a Crater of eternal darkness). The low-temperature interior of this crater functions as a cold trap that may capture and freeze volatiles shed during comet impacts on the Moon.",
+  "source": "Held-out text: the first three sentences of the \"Shackleton (crater)\" article in WikiText-2's test split (CC BY-SA 3.0, from Wikipedia), with the dataset's tokenization spaces removed.",
+  "tokens": [
+   "Sh",
+   "ack",
+   "leton",
+   " is",
+   " an",
+   " impact",
+   " crater",
+   " that",
+   " lies",
+   " at",
+   " the",
+   " south",
+   " pole",
+   " of",
+   " the",
+   " Moon",
+   ".",
+   " The",
+   " peaks",
+   " along",
+   " the",
+   " crater",
+   "'s",
+   " rim",
+   " are",
+   " exposed",
+   " to",
+   " almost",
+   " continual",
+   " sunlight",
+   ",",
+   " while",
+   " the",
+   " interior",
+   " is",
+   " perpet",
+   "ually",
+   " in",
+   " shadow",
+   " (",
+   "a",
+   " Cr",
+   "ater",
+   " of",
+   " eternal",
+   " darkness",
+   ").",
+   " The",
+   " low",
+   "-",
+   "temperature",
+   " interior",
+   " of",
+   " this",
+   " crater",
+   " functions",
+   " as",
+   " a",
+   " cold",
+   " trap",
+   " that",
+   " may",
+   " capture",
+   " and",
+   " freeze",
+   " vol",
+   "at",
+   "iles",
+   " shed",
+   " during",
+   " comet",
+   " impacts",
+   " on",
+   " the",
+   " Moon",
+   "."
+  ],
+  "ids": [
+   2016,
+   473,
+   15616,
+   374,
+   458,
+   5421,
+   74707,
+   429,
+   15448,
+   518,
+   279,
+   9806,
+   25026,
+   315,
+   279,
+   17330,
+   13,
+   576,
+   38935,
+   3156,
+   279,
+   74707,
+   594,
+   30130,
+   525,
+   14900,
+   311,
+   4558,
+   76875,
+   39020,
+   11,
+   1393,
+   279,
+   14791,
+   374,
+   21585,
+   1832,
+   304,
+   12455,
+   320,
+   64,
+   4553,
+   962,
+   315,
+   34725,
+   26298,
+   568,
+   576,
+   3347,
+   12,
+   34558,
+   14791,
+   315,
+   419,
+   74707,
+   5746,
+   438,
+   264,
+   9255,
+   22862,
+   429,
+   1231,
+   12322,
+   323,
+   29930,
+   4400,
+   266,
+   3658,
+   24354,
+   2337,
+   69986,
+   24905,
+   389,
+   279,
+   17330,
+   13
+  ],
+  "prompt": "Shackleton is an impact crater that lies at the south pole of the Moon.",
+  "promptTokens": 17
+ },
+ "vocab": {
+  "524": "ang",
+  "16731": "/T",
+  "5218": "ANG",
+  "7266": "rian",
+  "9535": "spec",
+  "41788": "aji",
+  "7539": "ONG",
+  "81197": "araoh",
+  "15616": "leton",
+  "642": "les",
+  "68": "e",
+  "832": "led",
+  "3179": "ley",
+  "78": "o",
+  "1536": "ler",
+  "594": "'s",
+  "748": "’s",
+  "11": ",",
+  "374": " is",
+  "323": " and",
+  "572": " was",
+  "25": ":",
+  "16328": " Museum",
+  "264": " a",
+  "279": " the",
+  "825": " one",
+  "458": " an",
+  "3881": " known",
+  "304": " in",
+  "311": " to",
+  "220": " ",
+  "3693": " American",
+  "13369": " Australian",
+  "6364": " English",
+  "17623": " Irish",
+  "9489": " independent",
+  "26277": " iconic",
+  "81722": " Argentine",
+  "74707": " crater",
+  "1560": " cr",
+  "6946": " rock",
+  "31405": "-driven",
+  "10895": " injury",
+  "2747": " site",
+  "45956": "-resistant",
+  "12577": "-free",
+  "389": " on",
+  "7407": " located",
+  "14122": " formed",
+  "429": " that",
+  "315": " of",
+  "7586": " forms",
+  "15448": " lies",
+  "702": " has",
+  "5610": " contains",
+  "15423": " marks",
+  "2878": " within",
+  "518": " at",
+  "1948": " between",
+  "3143": " near",
+  "911": " about",
+  "1181": " its",
+  "13187": " approximately",
+  "9396": " sea",
+  "2331": " base",
+  "18070": " southern",
+  "18172": " northern",
+  "23149": " eastern",
+  "18494": " western",
+  "6821": " edge",
+  "835": " end",
+  "4126": " center",
+  "25026": " pole",
+  "37602": "-west",
+  "39507": "-east",
+  "30130": " rim",
+  "24660": " polar",
+  "14226": " extreme",
+  "13": ".",
+  "320": " (",
+  "624": ".\n",
+  "71687": " Antarctica",
+  "1532": " New",
+  "21048": " Mars",
+  "49426": " Terra",
+  "9237": " Earth",
+  "79741": " Antarctic",
+  "20482": " Ross",
+  "17788": " moon",
+  "4882": " South",
+  "31743": " continent",
+  "16244": " Southern",
+  "9853": " ice",
+  "382": ".\n\n",
+  "1084": " It",
+  "576": " The",
+  "11445": " Its",
+  "41767": " Located",
+  "1096": " This",
+  "3555": " What",
+  "758": " In",
+  "362": " A",
+  "829": " name",
+  "85423": " Shack",
+  "7329": " surface",
+  "5421": " impact",
+  "3082": " area",
+  "7772": " largest",
+  "3728": " location",
+  "525": " are",
+  "3403": " above",
+  "419": " this",
+  "432": " it",
+  "448": " with",
+  "1817": " each",
+  "9806": " south",
+  "6422": " floor",
+  "7002": " wall",
+  "14285": " walls",
+  "21101": " outline",
+  "74926": " circumference",
+  "46342": " perimeter",
+  "614": " have",
+  "1033": " were",
+  "10000": " rise",
+  "5545": " reach",
+  "646": " can",
+  "23415": " composed",
+  "6941": " named",
+  "9434": " visible",
+  "4152": " due",
+  "1576": " because",
+  "39020": " sunlight",
+  "12941": " solar",
+  "56711": " lunar",
+  "18894": " intense",
+  "1550": " high",
+  "4583": " complete",
+  "902": " no",
+  "2790": " total",
+  "6783": " constant",
+  "2118": " direct",
+  "678": " all",
+  "2480": " full",
+  "14338": " exposure",
+  "85462": " bombard",
+  "36132": " ultr",
+  "56997": " erosion",
+  "52021": " daylight",
+  "2337": " during",
+  "504": " from",
+  "6814": " throughout",
+  "1393": " while",
+  "892": " which",
+  "3259": " making",
+  "714": " but",
+  "10693": " allowing",
+  "773": " so",
+  "19853": " whereas",
+  "1846": " those",
+  "1429": " most",
+  "1753": " much",
+  "5671": " areas",
+  "8622": " central",
+  "14590": " surrounding",
+  "85397": " valleys",
+  "8458": " remains",
+  "6587": " completely",
+  "9761": " covered",
+  "6319": " dark",
+  "30759": " permanently",
+  "26918": " buried",
+  "13771": " largely",
+  "7009": " nearly",
+  "1602": " very",
+  "1832": "ually",
+  "745": "ally",
+  "4402": "ently",
+  "12852": "uated",
+  "7698": "rate",
+  "13307": "iously",
+  "21931": "rating",
+  "50985": "uates",
+  "12455": " shadow",
+  "91766": " shaded",
+  "19690": " frozen",
+  "9255": " cold",
+  "26298": " darkness",
+  "65593": " perpetual",
+  "15330": " permanent",
+  "4060": "see",
+  "300": "as",
+  "1782": "the",
+  "11683": "except",
+  "22029": "Figure",
+  "23646": "due",
+  "269": "or",
+  "64": "a",
+  "24844": " phenomenon",
+  "1102": " result",
+  "1882": " process",
+  "28674": " consequence",
+  "4565": " feature",
+  "2097": " fact",
+  "962": "ater",
+  "590": "ust",
+  "11535": "aters",
+  "23535": "aton",
+  "395": "ass",
+  "361": "ue",
+  "850": "ator",
+  "2200": "ux",
+  "24298": " Shadow",
+  "11678": " Lake",
+  "28858": " Interior",
+  "8": ")",
+  "10392": " Ret",
+  "15911": " Death",
+  "53696": " Darkness",
+  "19939": " Ice",
+  "68088": " Silence",
+  "28580": " Impact",
+  "3729": " night",
+  "12406": " winter",
+  "92622": " twilight",
+  "1899": " day",
+  "7324": " summer",
+  "568": ").",
+  "4292": ").\n",
+  "3593": ").\n\n",
+  "701": "),",
+  "476": " or",
+  "9211": " Because",
+  "14791": " interior",
+  "28948": " summit",
+  "24869": " terrain",
+  "23249": " gravity",
+  "8166": "lands",
+  "9315": " temperature",
+  "19879": " temperatures",
+  "26163": " elevation",
+  "12": "-",
+  "6711": "lying",
+  "34558": "temperature",
+  "14640": "velocity",
+  "84224": "contrast",
+  "1933": "land",
+  "57300": "impact",
+  "16210": "rolling",
+  "4573": " environment",
+  "1417": " Sh",
+  "1493": " these",
+  "13833": " ancient",
+  "5537": " region",
+  "1231": " may",
+  "438": " as",
+  "1075": " like",
+  "29193": " similarly",
+  "803": " more",
+  "4428": " similar",
+  "2176": " both",
+  "949": " part",
+  "1128": " what",
+  "5810": " natural",
+  "4650": " potential",
+  "330": " \"",
+  "2530": " source",
+  "49585": " freezer",
+  "8628": " heat",
+  "14538": " giant",
+  "22862": " trap",
+  "23387": " oven",
+  "5819": " storage",
+  "28202": " vacuum",
+  "26594": " laboratory",
+  "44412": " reservoir",
+  "369": " for",
+  "26": ";",
+  "44560": " traps",
+  "13598": " keeps",
+  "27934": " prevents",
+  "74898": " preserves",
+  "51844": " retains",
+  "35136": " protects",
+  "31995": " maintains",
+  "9982": " holds",
+  "387": " be",
+  "1492": " help",
+  "3331": " hold",
+  "9583": " eventually",
+  "6644": " contain",
+  "2138": " allow",
+  "1045": " some",
+  "3015": " water",
+  "705": " up",
+  "15797": " dust",
+  "3553": " store",
+  "14060": " retain",
+  "21129": " preserve",
+  "29930": " freeze",
+  "6016": " protect",
+  "77448": " conserve",
+  "894": " any",
+  "3460": " large",
+  "700": " out",
+  "266": "at",
+  "40472": "uble",
+  "3005": "itional",
+  "85": "v",
+  "4814": "can",
+  "9010": "atile",
+  "349": "ate",
+  "66": "c",
+  "3658": "iles",
+  "321": "il",
+  "457": "ile",
+  "8669": "ils",
+  "4298": "ilities",
+  "2181": "iled",
+  "3921": "ili",
+  "483": "ill",
+  "1741": " such",
+  "553": " by",
+  "1119": " into",
+  "8630": " onto",
+  "41042": " meteor",
+  "47353": " collisions",
+  "49584": " melting",
+  "24905": " impacts",
+  "33906": " encounters",
+  "21051": " visits",
+  "21880": " interactions",
+  "1008": " other",
+  "14046": " nearby",
+  "77581": " Pluto",
+  "17330": " Moon",
+  "3041": " far",
+  "2619": " There",
+  "4354": " However",
+  "100091": "主义",
+  "50735": "ulan",
+  "114535": "调剂",
+  "119069": "箔",
+  "104068": "枪",
+  "277": "ar",
+  "82847": "英",
+  "100550": "晶",
+  "271": "\n\n",
+  "198": "\n",
+  "537": " not",
+  "2989": " important",
+  "3946": " official",
+  "650": " un",
+  "582": " we",
+  "686": " will",
+  "1212": " under",
+  "1101": " just",
+  "806": " his",
+  "1059": " her",
+  "1290": " right",
+  "1331": "-s",
+  "1039": " our",
+  "862": " their",
+  "364": " '",
+  "358": " I",
+  "6771": " Let",
+  "2014": " To",
+  "2938": " That",
+  "1172": " only",
+  "1378": " two",
+  "350": " T",
+  "328": " S",
+  "601": " us",
+  "975": " work",
+  "2393": " success",
+  "6513": " growth",
+  "2272": " life",
+  "2670": " including",
+  "7015": " sun",
+  "1931": " real",
+  "20434": "uum",
+  "10721": "rum",
+  "17606": "rat",
+  "316": "om",
+  "3132": "ively",
+  "15869": "ак",
+  "4287": " empty",
+  "882": " time",
+  "1055": "of",
+  "437": "and",
+  "16": "1",
+  "82": "s",
+  "4197": "with",
+  "1661": " good",
+  "2421": " few",
+  "501": " new",
+  "3409": " word",
+  "65552": "apo",
+  "391": "ap",
+  "3427": "isc",
+  "285": "is",
+  "352": "ay",
+  "523": "ave",
+  "312": " re",
+  "4940": " Of",
+  "1913": " On",
+  "2783": " cost",
+  "49680": "riding",
+  "824": "fo",
+  "4640": "rot",
+  "58242": "technology",
+  "509": "oc",
+  "1632": " well",
+  "421": " if",
+  "1273": " test",
+  "4586": " general",
+  "3753": " house",
+  "1969": " must",
+  "2990": " lead",
+  "2297": " change",
+  "680": "ition",
+  "546": "are",
+  "5930": "itions",
+  "2963": "ilt",
+  "10524": "ila",
+  "1737": "-d",
+  "33163": "ilk",
+  "67": "d",
+  "1042": " year",
+  "3200": " season",
+  "386": " M",
+  "2016": "Sh",
+  "25656": "Trim",
+  "21": "6",
+  "57191": "或",
+  "1141": "(s",
+  "50": "S",
+  "3357": "Ph",
+  "100631": "或者",
+  "76313": "展",
+  "82144": " Bail",
+  "119250": "溧",
+  "1143": "Ch",
+  "75": "l",
+  "14992": "lah",
+  "9835": "lu",
+  "907": "_l",
+  "2333": "(l",
+  "4260": "la",
+  "8878": "full",
+  "654": "ll",
+  "326": " l",
+  "659": " .",
+  "272": " c",
+  "527": "’",
+  "6": "'",
+  "1187": " la",
+  "274": " s",
+  "2987": " either",
+  "444": " L",
+  "1752": " For",
+  "656": " self",
+  "4741": " former",
+  "2477": " non",
+  "356": " C",
+  "730": " K",
+  "1537": " last",
+  "265": "re",
+  "2712": "ken",
+  "124009": "ما",
+  "4102": " ",
+  "100693": "胡",
+  "291": "ed",
+  "273": "le",
+  "301": "el",
+  "1431": " now",
+  "3110": " example",
+  "2310": " old",
+  "8168": " factor",
+  "1262": "ful",
+  "1717": "less",
+  "7952": " appears",
+  "3156": " along",
+  "3245": " least",
+  "1909": " top",
+  "5622": " bottom",
+  "18732": " boundary",
+  "3562": "most",
+  "3108": " side",
+  "30184": " shore",
+  "9393": " earth",
+  "11580": " planet",
+  "3639": " United",
+  "36418": " Arctic",
+  "1260": " He",
+  "13648": " coast",
+  "1555": " line",
+  "3579": " face",
+  "4994": " appear",
+  "1352": " form",
+  "10246": " lie",
+  "3100": " light",
+  "1449": " every",
+  "4297": " everything",
+  "9104": " weather",
+  "28492": " winds",
+  "807": " they",
+  "3800": " others",
+  "1052": " there",
+  "2732": " rest",
+  "38935": " peaks",
+  "5479": " parts",
+  "14900": " exposed",
+  "4558": " almost",
+  "928": "ual",
+  "268": "en",
+  "4002": "uation",
+  "74548": " illuminated",
+  "27501": " shade",
+  "88": "y",
+  "258": "in",
+  "6534": " situation",
+  "597": "yst",
+  "370": "ab",
+  "4553": " Cr",
+  "24446": " Solar",
+  "51395": " sunshine",
+  "6138": ".)",
+  "2456": " effect",
+  "3501": " points",
+  "7262": " pressure",
+  "1459": " point",
+  "10143": " zone",
+  "16566": " atmosphere",
+  "11051": " medium",
+  "13098": " isol",
+  "7802": " affect",
+  "5240": " cause",
+  "3410": " provide",
+  "10173": " influence",
+  "916": " over",
+  "2095": "utes",
+  "47679": "leys",
+  "275": "it",
+  "278": "al",
+  "5742": "ims",
+  "1007": " off",
+  "42218": " freezing",
+  "12681": "-like",
+  "35150": " Apollo",
+  "1634": " As",
+  "4220": " These",
+  "69171": ">Description",
+  "113": "�",
+  "672": "aw",
+  "72030": "/API",
+  "7082": "API",
+  "637": "aram",
+  "12589": "aya",
+  "6489": " international",
+  "1787": " open",
+  "13245": " exciting",
+  "5980": "-based",
+  "4910": " ground",
+  "9131": " corner",
+  "11552": " tip",
+  "715": " \n",
+  "4710": " \n\n",
+  "2585": " How",
+  "10200": " north",
+  "11067": " sides",
+  "2598": " called",
+  "1083": " also",
+  "26431": " surfaces",
+  "10008": " mostly",
+  "9906": " bright",
+  "39698": " sunny",
+  "9058": " dry",
+  "9033": "that",
+  "1705": "ffect",
+  "7130": " partial",
+  "11191": "acked",
+  "39210": "iman",
+  "8985": "acking",
+  "34512": " shadows",
+  "398": "ly",
+  "2188": " level",
+  "5866": " levels",
+  "22792": "peak",
+  "11183": "ridge",
+  "2090": "ness",
+  "4682": " conditions",
+  "9023": " critical",
+  "9977": " climate",
+  "3643": " makes",
+  "1558": " does",
+  "28999": " melt",
+  "7453": "ocity",
+  "1754": "uc",
+  "2565": "ta",
+  "558": "ice"
+ },
+ "matrix": {
+  "file": "matrix.f32",
+  "sha256": "bffb7009ee7f586fdc4135ca479ee168d7ca89bd1ea7decdd7a065bb9dfda9f6",
+  "bytes": 577024,
+  "tensors": {
+   "W": {
+    "offset": 0,
+    "length": 114688,
+    "shape": [
+     128,
+     896
+    ]
+   },
+   "scalerRow": {
+    "offset": 114688,
+    "length": 896,
+    "shape": [
+     896
+    ]
+   },
+   "kept.magnitude.50": {
+    "offset": 115584,
+    "length": 7168,
+    "shape": [
+     128,
+     56
+    ]
+   },
+   "kept.magnitude.2:4": {
+    "offset": 122752,
+    "length": 7168,
+    "shape": [
+     128,
+     56
+    ]
+   },
+   "kept.wanda.50": {
+    "offset": 129920,
+    "length": 7168,
+    "shape": [
+     128,
+     56
+    ]
+   },
+   "kept.wanda.2:4": {
+    "offset": 137088,
+    "length": 7168,
+    "shape": [
+     128,
+     56
+    ]
+   }
+  }
+ },
+ "layers": {
+  "file": "layers.f32",
+  "sha256": "0b7c08d0a1543bb615ec82df7875af067c05840f10e42e7fa6ca0e6dcf7afb32",
+  "bytes": 4032,
+  "tensors": {
+   "errors.magnitude-50": {
+    "offset": 0,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   },
+   "errors.magnitude-2-4": {
+    "offset": 168,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   },
+   "errors.wanda-50": {
+    "offset": 336,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   },
+   "sameInputs.magnitude.50": {
+    "offset": 504,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   },
+   "errors.wanda-2-4": {
+    "offset": 672,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   },
+   "sameInputs.magnitude.2:4": {
+    "offset": 840,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   }
+  }
+ },
+ "outputs": {
+  "file": "outputs.f32",
+  "sha256": "b61ac2643730ae170ec768358d503e5a3a41c8baff49e33f02459e541b3cb2f7",
+  "bytes": 25820,
+  "tensors": {
+   "topIds.dense": {
+    "offset": 0,
+    "length": 608,
+    "shape": [
+     76,
+     8
+    ]
+   },
+   "topP.dense": {
+    "offset": 608,
+    "length": 608,
+    "shape": [
+     76,
+     8
+    ]
+   },
+   "nll.dense": {
+    "offset": 1216,
+    "length": 75,
+    "shape": [
+     75
+    ]
+   },
+   "topIds.magnitude-50": {
+    "offset": 1291,
+    "length": 608,
+    "shape": [
+     76,
+     8
+    ]
+   },
+   "topP.magnitude-50": {
+    "offset": 1899,
+    "length": 608,
+    "shape": [
+     76,
+     8
+    ]
+   },
+   "nll.magnitude-50": {
+    "offset": 2507,
+    "length": 75,
+    "shape": [
+     75
+    ]
+   },
+   "topIds.magnitude-2-4": {
+    "offset": 2582,
+    "length": 608,
+    "shape": [
+     76,
+     8
+    ]
+   },
+   "topP.magnitude-2-4": {
+    "offset": 3190,
+    "length": 608,
+    "shape": [
+     76,
+     8
+    ]
+   },
+   "nll.magnitude-2-4": {
+    "offset": 3798,
+    "length": 75,
+    "shape": [
+     75
+    ]
+   },
+   "topIds.wanda-50": {
+    "offset": 3873,
+    "length": 608,
+    "shape": [
+     76,
+     8
+    ]
+   },
+   "topP.wanda-50": {
+    "offset": 4481,
+    "length": 608,
+    "shape": [
+     76,
+     8
+    ]
+   },
+   "nll.wanda-50": {
+    "offset": 5089,
+    "length": 75,
+    "shape": [
+     75
+    ]
+   },
+   "topIds.wanda-2-4": {
+    "offset": 5164,
+    "length": 608,
+    "shape": [
+     76,
+     8
+    ]
+   },
+   "topP.wanda-2-4": {
+    "offset": 5772,
+    "length": 608,
+    "shape": [
+     76,
+     8
+    ]
+   },
+   "nll.wanda-2-4": {
+    "offset": 6380,
+    "length": 75,
+    "shape": [
+     75
+    ]
+   }
+  }
+ },
+ "validation": {
+  "calibrationSameInAllRuns": true,
+  "evalWindowsSameInAllRuns": true,
+  "featuredWeightsSameInAllRuns": true,
+  "featuredStatsMaxDiffAcrossRuns": 0.0,
+  "prunedEqualsMasked.magnitude.50": 0.0,
+  "keptFraction.magnitude.50": 0.4986572265625,
+  "prunedEqualsMasked.magnitude.2:4": 0.0,
+  "groupsNotKeeping2.magnitude": 0,
+  "keptFraction.magnitude.2:4": 0.5,
+  "prunedEqualsMasked.wanda.50": 0.0,
+  "keptFraction.wanda.50": 0.5,
+  "prunedEqualsMasked.wanda.2:4": 0.0,
+  "groupsNotKeeping2.wanda": 0,
+  "keptFraction.wanda.2:4": 0.5,
+  "wandaRowsNotHalf": 0,
+  "featuredMagnitudeErrorAcrossRuns.50": 0.0,
+  "featuredMagnitudeErrorAcrossRuns.2:4": 0.0,
+  "snippetTopkVsNllMaxError": 1.1102230246251565e-16
+ },
+ "capture": {
+  "script": "scripts/efficiency/record_wanda.py",
+  "scriptSha256": "f21dcc02a6c471c3847a0df90b2e2bd4e9ea8138bdc34a92e25e83d226953eeb",
+  "tabHelperSha256": "a8bbd43795bfa6a96297efeeebd31177e0900b75650c781069ae78ec95a045b6",
+  "runs": {
+   "dense": {
+    "timestamp": "2026-10-30T07:59:07.555793+00:00",
+    "device": "mps",
+    "dtype": "float32",
+    "chip": "Apple M4 Max",
+    "python": "3.12.12",
+    "packages": {
+     "torch": "2.14.1",
+     "transformers": "4.57.6",
+     "huggingface_hub": "0.36.2"
+    },
+    "helper": "scripts/efficiency/sparsity_trace.py",
+    "helperSha256": "04f694e02f78dc3ee61fd21ac1dea68d3e19012fe44aafd08f3b23d5b97cdacc",
+    "reference": "github.com/locuslab/wanda @ 8e8fc87 · github.com/IST-DASLab/sparsegpt @ 147d215"
+   },
+   "magnitude-50": {
+    "timestamp": "2026-10-30T08:42:14.880927+00:00",
+    "device": "mps",
+    "dtype": "float32",
+    "chip": "Apple M4 Max",
+    "python": "3.12.12",
+    "packages": {
+     "torch": "2.14.1",
+     "transformers": "4.57.6",
+     "huggingface_hub": "0.36.2"
+    },
+    "helper": "scripts/efficiency/sparsity_trace.py",
+    "helperSha256": "04f694e02f78dc3ee61fd21ac1dea68d3e19012fe44aafd08f3b23d5b97cdacc",
+    "reference": "github.com/locuslab/wanda @ 8e8fc87 · github.com/IST-DASLab/sparsegpt @ 147d215"
+   },
+   "magnitude-2-4": {
+    "timestamp": "2026-10-30T08:57:27.949750+00:00",
+    "device": "mps",
+    "dtype": "float32",
+    "chip": "Apple M4 Max",
+    "python": "3.12.12",
+    "packages": {
+     "torch": "2.14.1",
+     "transformers": "4.57.6",
+     "huggingface_hub": "0.36.2"
+    },
+    "helper": "scripts/efficiency/sparsity_trace.py",
+    "helperSha256": "04f694e02f78dc3ee61fd21ac1dea68d3e19012fe44aafd08f3b23d5b97cdacc",
+    "reference": "github.com/locuslab/wanda @ 8e8fc87 · github.com/IST-DASLab/sparsegpt @ 147d215"
+   },
+   "wanda-50": {
+    "timestamp": "2026-10-30T09:05:38.746617+00:00",
+    "device": "mps",
+    "dtype": "float32",
+    "chip": "Apple M4 Max",
+    "python": "3.12.12",
+    "packages": {
+     "torch": "2.14.1",
+     "transformers": "4.57.6",
+     "huggingface_hub": "0.36.2"
+    },
+    "helper": "scripts/efficiency/sparsity_trace.py",
+    "helperSha256": "04f694e02f78dc3ee61fd21ac1dea68d3e19012fe44aafd08f3b23d5b97cdacc",
+    "reference": "github.com/locuslab/wanda @ 8e8fc87 · github.com/IST-DASLab/sparsegpt @ 147d215"
+   },
+   "wanda-2-4": {
+    "timestamp": "2026-10-30T09:37:39.305095+00:00",
+    "device": "mps",
+    "dtype": "float32",
+    "chip": "Apple M4 Max",
+    "python": "3.12.12",
+    "packages": {
+     "torch": "2.14.1",
+     "transformers": "4.57.6",
+     "huggingface_hub": "0.36.2"
+    },
+    "helper": "scripts/efficiency/sparsity_trace.py",
+    "helperSha256": "04f694e02f78dc3ee61fd21ac1dea68d3e19012fe44aafd08f3b23d5b97cdacc",
+    "reference": "github.com/locuslab/wanda @ 8e8fc87 · github.com/IST-DASLab/sparsegpt @ 147d215"
+   }
+  }
+ }
+}
