@@ -1,0 +1,1080 @@
+{
+ "kind": "post-training",
+ "tab": "distilbert",
+ "schemaVersion": 1,
+ "teacher": {
+  "id": "google-bert/bert-base-uncased",
+  "revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+  "url": "https://huggingface.co/google-bert/bert-base-uncased",
+  "license": "Apache-2.0",
+  "parameters": 109514298,
+  "layers": 12,
+  "width": 768,
+  "heads": 12
+ },
+ "student": {
+  "id": "distilbert/distilbert-base-uncased",
+  "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "url": "https://huggingface.co/distilbert/distilbert-base-uncased",
+  "license": "Apache-2.0",
+  "parameters": 66985530,
+  "layers": 6,
+  "width": 768,
+  "heads": 12
+ },
+ "vocabSize": 30522,
+ "dataset": {
+  "id": "Salesforce/wikitext",
+  "revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "file": "wikitext-2-raw-v1/test-00000-of-00001.parquet",
+  "split": "test",
+  "license": "CC-BY-SA-3.0",
+  "url": "https://huggingface.co/datasets/Salesforce/wikitext"
+ },
+ "sentences": [
+  {
+   "line": 3,
+   "raw": "Robert Boulter is an English film , television and theatre actor . ",
+   "text": "Robert Boulter is an English film, television and theatre actor.",
+   "masked": "Robert Boulter is an English film, television and theatre [MASK].",
+   "word": "actor",
+   "label": 3364,
+   "ids": [
+    101,
+    2728,
+    8945,
+    11314,
+    2121,
+    2003,
+    2019,
+    2394,
+    2143,
+    1010,
+    2547,
+    1998,
+    3004,
+    103,
+    1012,
+    102
+   ],
+   "maskPosition": 13,
+   "losses": {
+    "ceAllTokens": 0.11479008942842484,
+    "ceAtMask": 0.33802648828028525,
+    "mlm": 0.16053076088428497,
+    "cos": 0.06750990450382233,
+    "total": 0.9625219106674194,
+    "teacherMlm": 0.24547189474105835
+   },
+   "validation": {
+    "ceAllVsKlRows": 2.0456670353302675e-05,
+    "cosVsOneMinusCos": 1.3140534438349505e-08,
+    "mlmVsLogSoftmax": 1.6315459458515758e-05
+   }
+  },
+  {
+   "line": 266,
+   "raw": "After retiring from football he settled in Buffalo and became a sports broadcaster . ",
+   "text": "After retiring from football he settled in Buffalo and became a sports broadcaster.",
+   "masked": "After retiring from [MASK] he settled in Buffalo and became a sports broadcaster.",
+   "word": "football",
+   "label": 2374,
+   "ids": [
+    101,
+    2044,
+    9150,
+    2013,
+    103,
+    2002,
+    3876,
+    1999,
+    6901,
+    1998,
+    2150,
+    1037,
+    2998,
+    11995,
+    1012,
+    102
+   ],
+   "maskPosition": 4,
+   "losses": {
+    "ceAllTokens": 0.2761949896812439,
+    "ceAtMask": 0.3738937644728359,
+    "mlm": 1.9901036024093628,
+    "cos": 0.07567901909351349,
+    "total": 5.436861038208008,
+    "teacherMlm": 1.3804348707199097
+   },
+   "validation": {
+    "ceAllVsKlRows": 5.8334385081293405e-06,
+    "cosVsOneMinusCos": 1.7093463935968778e-08,
+    "mlmVsLogSoftmax": 6.926733304268851e-06
+   }
+  },
+  {
+   "line": 309,
+   "raw": "The hurricane destroyed four churches and 37 houses , leaving 100 people homeless . ",
+   "text": "The hurricane destroyed four churches and 37 houses, leaving 100 people homeless.",
+   "masked": "The hurricane destroyed four churches and 37 houses, leaving 100 people [MASK].",
+   "word": "homeless",
+   "label": 11573,
+   "ids": [
+    101,
+    1996,
+    7064,
+    3908,
+    2176,
+    5231,
+    1998,
+    4261,
+    3506,
+    1010,
+    2975,
+    2531,
+    2111,
+    103,
+    1012,
+    102
+   ],
+   "maskPosition": 13,
+   "losses": {
+    "ceAllTokens": 0.3116545081138611,
+    "ceAtMask": 0.5178963671079632,
+    "mlm": 0.04983929172158241,
+    "cos": 0.07846037298440933,
+    "total": 1.7364115715026855,
+    "teacherMlm": 0.08812648802995682
+   },
+   "validation": {
+    "ceAllVsKlRows": 1.128959186014189e-05,
+    "cosVsOneMinusCos": 2.0904257089227052e-08,
+    "mlmVsLogSoftmax": 5.901920886522416e-06
+   }
+  },
+  {
+   "line": 130,
+   "raw": "Instrumentation includes guitar strings , piano lines and vocals . ",
+   "text": "Instrumentation includes guitar strings, piano lines and vocals.",
+   "masked": "Instrumentation includes guitar strings, [MASK] lines and vocals.",
+   "word": "piano",
+   "label": 3682,
+   "ids": [
+    101,
+    16015,
+    2950,
+    2858,
+    7817,
+    1010,
+    103,
+    3210,
+    1998,
+    2955,
+    1012,
+    102
+   ],
+   "maskPosition": 6,
+   "losses": {
+    "ceAllTokens": 0.40411052107810974,
+    "ceAtMask": 0.47398375118165054,
+    "mlm": 3.2109873294830322,
+    "cos": 0.08672365546226501,
+    "total": 8.529251098632812,
+    "teacherMlm": 3.8332924842834473
+   },
+   "validation": {
+    "ceAllVsKlRows": 8.684204142184182e-06,
+    "cosVsOneMinusCos": 1.4684537794074082e-08,
+    "mlmVsLogSoftmax": 3.237429778968348e-05
+   }
+  },
+  {
+   "line": 312,
+   "raw": "Winds also tore the roof off an ice plant . ",
+   "text": "Winds also tore the roof off an ice plant.",
+   "masked": "Winds also tore the [MASK] off an ice plant.",
+   "word": "roof",
+   "label": 4412,
+   "ids": [
+    101,
+    7266,
+    2036,
+    9538,
+    1996,
+    103,
+    2125,
+    2019,
+    3256,
+    3269,
+    1012,
+    102
+   ],
+   "maskPosition": 5,
+   "losses": {
+    "ceAllTokens": 0.8393678665161133,
+    "ceAtMask": 1.277009304520457,
+    "mlm": 2.958733558654785,
+    "cos": 0.12489310652017593,
+    "total": 10.2391996383667,
+    "teacherMlm": 0.43554162979125977
+   },
+   "validation": {
+    "ceAllVsKlRows": 7.90531290773e-06,
+    "cosVsOneMinusCos": 4.8914336192584784e-08,
+    "mlmVsLogSoftmax": 5.127226270218443e-07
+   }
+  }
+ ],
+ "mapping": {
+  "init": [
+   0,
+   2,
+   4,
+   7,
+   9,
+   11
+  ],
+  "source": "github.com/huggingface/transformers v4.30.0 examples/research_projects/distillation/scripts/extract_distilbert.py",
+  "paper": "Sanh et al. 2019, DistilBERT (arXiv:1910.01108): \"taking one layer out of two\"",
+  "kinds": [
+   "q",
+   "k",
+   "v",
+   "out",
+   "ffnIn",
+   "ffnOut"
+  ],
+  "closestTeacherLayer": [
+   0,
+   2,
+   4,
+   7,
+   9,
+   11
+  ],
+  "embeddings": {
+   "word": 0.9562789232105633,
+   "position": 0.9999999999999138
+  }
+ },
+ "distillation": {
+  "temperature": 2.0,
+  "alpha": {
+   "ce": 5.0,
+   "mlm": 2.0,
+   "cos": 1.0
+  },
+  "temperatures": [
+   1.0,
+   1.5,
+   2.0,
+   3.0,
+   4.0,
+   6.0,
+   8.0
+  ],
+  "source": "examples/research_projects/distillation: distiller.py (losses), README.md (train.py command)",
+  "ceOver": "every token of the sentence (distiller.py without --restrict_ce_to_mask)",
+  "batch": {
+   "ce": 0.36338841915130615,
+   "mlm": 1.674041748046875,
+   "cos": 0.08452486246824265,
+   "total": 5.2495503425598145,
+   "tokens": 72
+  }
+ },
+ "topK": 8,
+ "vocab": {
+  "101": "[CLS]",
+  "102": "[SEP]",
+  "103": "[MASK]",
+  "999": "!",
+  "1000": "\"",
+  "1004": "&",
+  "1005": "'",
+  "1006": "(",
+  "1007": ")",
+  "1010": ",",
+  "1011": "-",
+  "1012": ".",
+  "1013": "/",
+  "1018": "4",
+  "1025": ";",
+  "1029": "?",
+  "1037": "a",
+  "1038": "b",
+  "1055": "s",
+  "1996": "the",
+  "1997": "of",
+  "1998": "and",
+  "1999": "in",
+  "2000": "to",
+  "2001": "was",
+  "2002": "he",
+  "2003": "is",
+  "2004": "as",
+  "2005": "for",
+  "2006": "on",
+  "2007": "with",
+  "2008": "that",
+  "2009": "it",
+  "2010": "his",
+  "2011": "by",
+  "2012": "at",
+  "2013": "from",
+  "2014": "her",
+  "2015": "##s",
+  "2016": "she",
+  "2019": "an",
+  "2020": "were",
+  "2021": "but",
+  "2023": "this",
+  "2024": "are",
+  "2027": "they",
+  "2028": "one",
+  "2029": "which",
+  "2030": "or",
+  "2032": "him",
+  "2035": "all",
+  "2036": "also",
+  "2038": "has",
+  "2040": "who",
+  "2041": "out",
+  "2044": "after",
+  "2046": "into",
+  "2047": "new",
+  "2048": "two",
+  "2049": "its",
+  "2058": "over",
+  "2059": "then",
+  "2061": "so",
+  "2063": "##e",
+  "2070": "some",
+  "2073": "where",
+  "2075": "##ing",
+  "2081": "made",
+  "2093": "three",
+  "2099": "##r",
+  "2101": "later",
+  "2106": "did",
+  "2111": "people",
+  "2116": "many",
+  "2119": "both",
+  "2121": "##er",
+  "2125": "off",
+  "2133": "...",
+  "2137": "american",
+  "2143": "film",
+  "2150": "became",
+  "2160": "house",
+  "2164": "including",
+  "2165": "took",
+  "2176": "four",
+  "2178": "another",
+  "2183": "going",
+  "2184": "10",
+  "2186": "series",
+  "2187": "left",
+  "2195": "several",
+  "2198": "john",
+  "2206": "following",
+  "2208": "game",
+  "2211": "began",
+  "2240": "line",
+  "2257": "august",
+  "2259": "york",
+  "2274": "five",
+  "2276": "station",
+  "2277": "church",
+  "2311": "building",
+  "2327": "top",
+  "2329": "british",
+  "2333": "moved",
+  "2369": "behind",
+  "2374": "football",
+  "2379": "near",
+  "2386": "##man",
+  "2394": "english",
+  "2399": "games",
+  "2416": "six",
+  "2421": "include",
+  "2423": "25",
+  "2443": "included",
+  "2468": "become",
+  "2472": "director",
+  "2476": "career",
+  "2479": "island",
+  "2483": "##is",
+  "2500": "others",
+  "2503": "inside",
+  "2506": "continued",
+  "2513": "returned",
+  "2531": "100",
+  "2534": "hall",
+  "2537": "production",
+  "2545": "##ers",
+  "2547": "television",
+  "2557": "radio",
+  "2563": "england",
+  "2582": "further",
+  "2585": "david",
+  "2588": "upon",
+  "2599": "lead",
+  "2603": "23",
+  "2648": "outside",
+  "2652": "playing",
+  "2694": "tv",
+  "2697": "lake",
+  "2702": "ten",
+  "2710": "canada",
+  "2711": "person",
+  "2726": "thomas",
+  "2728": "robert",
+  "2730": "killed",
+  "2739": "news",
+  "2754": "stage",
+  "2757": "dead",
+  "2774": "songs",
+  "2809": "eight",
+  "2815": "remained",
+  "2816": "schools",
+  "2827": "australian",
+  "2836": "performance",
+  "2838": "features",
+  "2858": "guitar",
+  "2863": "##ma",
+  "2906": "##ar",
+  "2911": "ship",
+  "2937": "##ian",
+  "2945": "families",
+  "2950": "includes",
+  "2953": "##or",
+  "2955": "vocals",
+  "2957": "richard",
+  "2958": "bridge",
+  "2973": "lived",
+  "2975": "leaving",
+  "2998": "sports",
+  "3004": "theatre",
+  "3013": "cut",
+  "3031": "onto",
+  "3033": "parts",
+  "3059": "italian",
+  "3082": "heavy",
+  "3121": "buildings",
+  "3131": "unit",
+  "3135": "producer",
+  "3152": "films",
+  "3162": "tracks",
+  "3176": "additional",
+  "3185": "movie",
+  "3210": "lines",
+  "3213": "writer",
+  "3256": "ice",
+  "3263": "200",
+  "3268": "lives",
+  "3269": "plant",
+  "3321": "bass",
+  "3352": "becoming",
+  "3364": "actor",
+  "3394": "retired",
+  "3397": "contains",
+  "3448": "virginia",
+  "3455": "basketball",
+  "3475": "isn",
+  "3486": "35",
+  "3493": "irish",
+  "3494": "characters",
+  "3506": "houses",
+  "3516": "florida",
+  "3598": "baseball",
+  "3612": "wind",
+  "3628": "trees",
+  "3631": "broke",
+  "3633": "individuals",
+  "3678": "##ner",
+  "3682": "piano",
+  "3689": "drama",
+  "3714": "broken",
+  "3743": "broadcast",
+  "3774": "consists",
+  "3794": "featuring",
+  "3802": "et",
+  "3846": "drums",
+  "3871": "garden",
+  "3873": "hockey",
+  "3876": "settled",
+  "3883": "actress",
+  "3888": "farm",
+  "3898": "screen",
+  "3901": "residents",
+  "3908": "destroyed",
+  "3941": "equipment",
+  "3960": "bob",
+  "3998": "300",
+  "4029": "36",
+  "4035": "bbc",
+  "4040": "storm",
+  "4053": "damage",
+  "4090": "34",
+  "4150": "becomes",
+  "4165": "sounds",
+  "4229": "38",
+  "4258": "theater",
+  "4261": "37",
+  "4264": "plants",
+  "4278": "400",
+  "4279": "communities",
+  "4288": "killing",
+  "4294": "architecture",
+  "4361": "toronto",
+  "4368": "sport",
+  "4370": "stayed",
+  "4394": "missing",
+  "4412": "roof",
+  "4464": "39",
+  "4543": "composer",
+  "4581": "lyrics",
+  "4586": "snow",
+  "4606": "plus",
+  "4633": "weather",
+  "4700": "47",
+  "4713": "factory",
+  "4715": "soccer",
+  "4731": "villages",
+  "4786": "causing",
+  "4823": "singing",
+  "4843": "wrestling",
+  "4865": "towns",
+  "4930": "struck",
+  "4971": "mill",
+  "4988": "journalist",
+  "5014": "homes",
+  "5018": "150",
+  "5062": "broadcasting",
+  "5075": "retirement",
+  "5092": "##bo",
+  "5150": "backing",
+  "5164": "string",
+  "5229": "injured",
+  "5231": "churches",
+  "5287": "spoken",
+  "5296": "burned",
+  "5313": "##ul",
+  "5381": "persons",
+  "5554": "vocal",
+  "5591": "damaged",
+  "5659": "forty",
+  "5671": "harris",
+  "5685": "##and",
+  "5693": "instruments",
+  "5773": "louisiana",
+  "5858": "oklahoma",
+  "5863": "robin",
+  "5988": "cinema",
+  "5990": "guitarist",
+  "6173": "bobby",
+  "6178": "cap",
+  "6215": "destruction",
+  "6232": "critic",
+  "6333": "percussion",
+  "6396": "ny",
+  "6482": "athletics",
+  "6487": "rob",
+  "6490": "acoustic",
+  "6512": "arrangement",
+  "6573": "knocked",
+  "6602": "instrument",
+  "6738": "hull",
+  "6784": "##ud",
+  "6901": "buffalo",
+  "6943": "drum",
+  "7002": "demolished",
+  "7010": "craig",
+  "7064": "hurricane",
+  "7260": "swept",
+  "7266": "winds",
+  "7283": "reportedly",
+  "7334": "guitars",
+  "7336": "involves",
+  "7415": "hood",
+  "7419": "sporting",
+  "7565": "arrangements",
+  "7567": "trapped",
+  "7708": "frozen",
+  "7748": "coaching",
+  "7817": "strings",
+  "7819": "anglo",
+  "7869": "##ere",
+  "7943": "resumed",
+  "7987": "br",
+  "8101": "shakespeare",
+  "8135": "christians",
+  "8168": "samples",
+  "8183": "jo",
+  "8266": "artwork",
+  "8362": "boxing",
+  "8436": "temples",
+  "8670": "ba",
+  "8682": "blew",
+  "8871": "washed",
+  "8900": "theatrical",
+  "8945": "bo",
+  "8949": "severely",
+  "9019": "keyboard",
+  "9150": "retiring",
+  "9157": "ripped",
+  "9272": "civilians",
+  "9451": "flooding",
+  "9538": "tore",
+  "9587": "mo",
+  "9846": "destroying",
+  "9868": "ruined",
+  "10044": "presenter",
+  "10080": "skating",
+  "10541": "rochester",
+  "10622": "wyoming",
+  "10870": "georges",
+  "10955": "sings",
+  "11036": "retire",
+  "11093": "winnipeg",
+  "11167": "screenwriter",
+  "11314": "##ult",
+  "11352": "tornado",
+  "11385": "debris",
+  "11573": "homeless",
+  "11609": "cyclone",
+  "11858": "itv",
+  "11876": "lid",
+  "11915": "seas",
+  "11995": "broadcaster",
+  "12096": "##rst",
+  "12127": "filmmaker",
+  "12268": "commentator",
+  "12374": "incorporates",
+  "12559": "lamb",
+  "12642": "storms",
+  "12735": "##lines",
+  "12936": "displaced",
+  "12946": "axe",
+  "13117": "pipeline",
+  "13374": "erie",
+  "13564": "synthesizer",
+  "13580": "icy",
+  "13668": "##wl",
+  "13879": "devastated",
+  "13974": "encompasses",
+  "14554": "gale",
+  "14731": "currents",
+  "15196": "cables",
+  "15262": "ada",
+  "15393": "typhoon",
+  "15577": "stranded",
+  "15666": "##houses",
+  "15753": "roofs",
+  "15859": "##uli",
+  "16015": "instrumentation",
+  "16671": "##unt",
+  "17035": "hurricanes",
+  "17094": "bahamas",
+  "17187": "melodic",
+  "18480": "wrecked",
+  "18706": "broadcasters",
+  "19267": "tsunami",
+  "19966": "##ust",
+  "21285": "##uld",
+  "21737": "##urne",
+  "22205": "accompaniment",
+  "22285": "bison",
+  "22668": "tornadoes",
+  "24434": "##37",
+  "24466": "filmmaking",
+  "25490": "##caster",
+  "26677": "##wt",
+  "27478": "vocalists",
+  "28594": "harmonies",
+  "28819": "##ound",
+  "29253": "instrumentalist",
+  "29536": "vo"
+ },
+ "files": [
+  {
+   "file": "sentence-0.f32",
+   "sha256": "bc99fee2902263c9baa22b094464df7636b6466f7d82146ef872191c33be8b9b",
+   "bytes": 246736,
+   "tensors": {
+    "tLogits": {
+     "offset": 0,
+     "length": 30522,
+     "shape": [
+      30522
+     ]
+    },
+    "sLogits": {
+     "offset": 30522,
+     "length": 30522,
+     "shape": [
+      30522
+     ]
+    },
+    "kl": {
+     "offset": 61044,
+     "length": 112,
+     "shape": [
+      7,
+      16
+     ]
+    },
+    "cos": {
+     "offset": 61156,
+     "length": 16,
+     "shape": [
+      16
+     ]
+    },
+    "tTopIds": {
+     "offset": 61172,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    },
+    "tTopP": {
+     "offset": 61300,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    },
+    "sTopIds": {
+     "offset": 61428,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    },
+    "sTopP": {
+     "offset": 61556,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "file": "sentence-1.f32",
+   "sha256": "3f2544bdf68983dccb3dc83c8fe080a10e3c7499e58c8016d163c6f790903b15",
+   "bytes": 246736,
+   "tensors": {
+    "tLogits": {
+     "offset": 0,
+     "length": 30522,
+     "shape": [
+      30522
+     ]
+    },
+    "sLogits": {
+     "offset": 30522,
+     "length": 30522,
+     "shape": [
+      30522
+     ]
+    },
+    "kl": {
+     "offset": 61044,
+     "length": 112,
+     "shape": [
+      7,
+      16
+     ]
+    },
+    "cos": {
+     "offset": 61156,
+     "length": 16,
+     "shape": [
+      16
+     ]
+    },
+    "tTopIds": {
+     "offset": 61172,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    },
+    "tTopP": {
+     "offset": 61300,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    },
+    "sTopIds": {
+     "offset": 61428,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    },
+    "sTopP": {
+     "offset": 61556,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "file": "sentence-2.f32",
+   "sha256": "0fa63ad9f5509d4aa7b28ecc7e19fbe306cf213a5b2b37c7814e11c2e7a68497",
+   "bytes": 246736,
+   "tensors": {
+    "tLogits": {
+     "offset": 0,
+     "length": 30522,
+     "shape": [
+      30522
+     ]
+    },
+    "sLogits": {
+     "offset": 30522,
+     "length": 30522,
+     "shape": [
+      30522
+     ]
+    },
+    "kl": {
+     "offset": 61044,
+     "length": 112,
+     "shape": [
+      7,
+      16
+     ]
+    },
+    "cos": {
+     "offset": 61156,
+     "length": 16,
+     "shape": [
+      16
+     ]
+    },
+    "tTopIds": {
+     "offset": 61172,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    },
+    "tTopP": {
+     "offset": 61300,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    },
+    "sTopIds": {
+     "offset": 61428,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    },
+    "sTopP": {
+     "offset": 61556,
+     "length": 128,
+     "shape": [
+      16,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "file": "sentence-3.f32",
+   "sha256": "cf0d0de29e4ca1e752b591df8e63fb84464784b6db63312342fca6dd77658a5f",
+   "bytes": 246096,
+   "tensors": {
+    "tLogits": {
+     "offset": 0,
+     "length": 30522,
+     "shape": [
+      30522
+     ]
+    },
+    "sLogits": {
+     "offset": 30522,
+     "length": 30522,
+     "shape": [
+      30522
+     ]
+    },
+    "kl": {
+     "offset": 61044,
+     "length": 84,
+     "shape": [
+      7,
+      12
+     ]
+    },
+    "cos": {
+     "offset": 61128,
+     "length": 12,
+     "shape": [
+      12
+     ]
+    },
+    "tTopIds": {
+     "offset": 61140,
+     "length": 96,
+     "shape": [
+      12,
+      8
+     ]
+    },
+    "tTopP": {
+     "offset": 61236,
+     "length": 96,
+     "shape": [
+      12,
+      8
+     ]
+    },
+    "sTopIds": {
+     "offset": 61332,
+     "length": 96,
+     "shape": [
+      12,
+      8
+     ]
+    },
+    "sTopP": {
+     "offset": 61428,
+     "length": 96,
+     "shape": [
+      12,
+      8
+     ]
+    }
+   }
+  },
+  {
+   "file": "sentence-4.f32",
+   "sha256": "a44c902780cc5cb2c83da673bfc25f47959396b1c9b2ff41ff785fa790e85950",
+   "bytes": 246096,
+   "tensors": {
+    "tLogits": {
+     "offset": 0,
+     "length": 30522,
+     "shape": [
+      30522
+     ]
+    },
+    "sLogits": {
+     "offset": 30522,
+     "length": 30522,
+     "shape": [
+      30522
+     ]
+    },
+    "kl": {
+     "offset": 61044,
+     "length": 84,
+     "shape": [
+      7,
+      12
+     ]
+    },
+    "cos": {
+     "offset": 61128,
+     "length": 12,
+     "shape": [
+      12
+     ]
+    },
+    "tTopIds": {
+     "offset": 61140,
+     "length": 96,
+     "shape": [
+      12,
+      8
+     ]
+    },
+    "tTopP": {
+     "offset": 61236,
+     "length": 96,
+     "shape": [
+      12,
+      8
+     ]
+    },
+    "sTopIds": {
+     "offset": 61332,
+     "length": 96,
+     "shape": [
+      12,
+      8
+     ]
+    },
+    "sTopP": {
+     "offset": 61428,
+     "length": 96,
+     "shape": [
+      12,
+      8
+     ]
+    }
+   }
+  }
+ ],
+ "layers": {
+  "file": "layers.f32",
+  "sha256": "27476098fd61231641cd03270996ebc2f75567fd2090f4ffe1bad71e36f0fed9",
+  "bytes": 2092,
+  "tensors": {
+   "weightSim": {
+    "offset": 0,
+    "length": 432,
+    "shape": [
+     6,
+     6,
+     12
+    ]
+   },
+   "hiddenSim": {
+    "offset": 432,
+    "length": 91,
+    "shape": [
+     7,
+     13
+    ]
+   }
+  }
+ },
+ "capture": {
+  "timestamp": "2026-10-30T08:39:33.060184+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "transformers": "4.57.6",
+   "huggingface-hub": "0.36.2"
+  },
+  "script": "scripts/post-training/record_distilbert.py",
+  "scriptSha256": "49b5e3f23976164002967d03e509322eb1cdea92d876ef45b89303913dc4808d",
+  "helperSha256": "4dfc6e82742641afcd278b9cfbe3ae8bb93f2ab903ee1029945f8e7ffb5f7398"
+ }
+}

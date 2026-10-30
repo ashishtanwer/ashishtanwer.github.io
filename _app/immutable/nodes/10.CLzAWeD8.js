@@ -1,1 +1,0 @@
-import"../chunks/SSWQsodg.js";import"../chunks/DBA_ymLH.js";import{E as t}from"../chunks/C6I7M2zx.js";const o=!0,r="always",p=Object.freeze(Object.defineProperty({__proto__:null,prerender:o,trailingSlash:r},Symbol.toStringTag,{value:"Module"}));function l(e){t(e,{variant:"act"})}export{l as component,p as universal};
