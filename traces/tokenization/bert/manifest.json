@@ -1,0 +1,2095 @@
+{
+ "schemaVersion": 1,
+ "kind": "text-tokenizer",
+ "tab": "bert",
+ "model": {
+  "id": "google-bert/bert-base-uncased",
+  "name": "BERT base uncased tokenizer",
+  "revision": "86b5e0934494bd15c9632b12f734a8a67f723594",
+  "url": "https://huggingface.co/google-bert/bert-base-uncased/tree/86b5e0934494bd15c9632b12f734a8a67f723594",
+  "license": "Apache-2.0",
+  "licenseUrl": "https://huggingface.co/google-bert/bert-base-uncased/blob/86b5e0934494bd15c9632b12f734a8a67f723594/LICENSE",
+  "paper": "https://arxiv.org/abs/1810.04805",
+  "code": "https://github.com/google-research/bert/blob/master/tokenization.py",
+  "files": {
+   "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+   "tokenizer.json": "ce64fce797c24f68df90b40a3f74f579b336a493db14bd583fd520ea0d8c9a98",
+   "config.json": "7160e1553ad2ca51d8c1cb066be533db31826e12d173824c1bb0cb1a4f187d20"
+  },
+  "vocabSize": 30522,
+  "special": {
+   "[PAD]": 0,
+   "[UNK]": 100,
+   "[CLS]": 101,
+   "[SEP]": 102,
+   "[MASK]": 103
+  },
+  "maxCharsPerWord": 100,
+  "continuing": 5828,
+  "embedding": {
+   "name": "word_embeddings",
+   "rows": 30522,
+   "width": 768
+  }
+ },
+ "inputs": [
+  {
+   "text": "Tokenization turns text into numbers.",
+   "chars": [
+    {
+     "c": "T",
+     "out": "t",
+     "notes": [
+      "lower-cased"
+     ]
+    },
+    {
+     "c": "o",
+     "out": "o",
+     "notes": []
+    },
+    {
+     "c": "k",
+     "out": "k",
+     "notes": []
+    },
+    {
+     "c": "e",
+     "out": "e",
+     "notes": []
+    },
+    {
+     "c": "n",
+     "out": "n",
+     "notes": []
+    },
+    {
+     "c": "i",
+     "out": "i",
+     "notes": []
+    },
+    {
+     "c": "z",
+     "out": "z",
+     "notes": []
+    },
+    {
+     "c": "a",
+     "out": "a",
+     "notes": []
+    },
+    {
+     "c": "t",
+     "out": "t",
+     "notes": []
+    },
+    {
+     "c": "i",
+     "out": "i",
+     "notes": []
+    },
+    {
+     "c": "o",
+     "out": "o",
+     "notes": []
+    },
+    {
+     "c": "n",
+     "out": "n",
+     "notes": []
+    },
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": "t",
+     "out": "t",
+     "notes": []
+    },
+    {
+     "c": "u",
+     "out": "u",
+     "notes": []
+    },
+    {
+     "c": "r",
+     "out": "r",
+     "notes": []
+    },
+    {
+     "c": "n",
+     "out": "n",
+     "notes": []
+    },
+    {
+     "c": "s",
+     "out": "s",
+     "notes": []
+    },
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": "t",
+     "out": "t",
+     "notes": []
+    },
+    {
+     "c": "e",
+     "out": "e",
+     "notes": []
+    },
+    {
+     "c": "x",
+     "out": "x",
+     "notes": []
+    },
+    {
+     "c": "t",
+     "out": "t",
+     "notes": []
+    },
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": "i",
+     "out": "i",
+     "notes": []
+    },
+    {
+     "c": "n",
+     "out": "n",
+     "notes": []
+    },
+    {
+     "c": "t",
+     "out": "t",
+     "notes": []
+    },
+    {
+     "c": "o",
+     "out": "o",
+     "notes": []
+    },
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": "n",
+     "out": "n",
+     "notes": []
+    },
+    {
+     "c": "u",
+     "out": "u",
+     "notes": []
+    },
+    {
+     "c": "m",
+     "out": "m",
+     "notes": []
+    },
+    {
+     "c": "b",
+     "out": "b",
+     "notes": []
+    },
+    {
+     "c": "e",
+     "out": "e",
+     "notes": []
+    },
+    {
+     "c": "r",
+     "out": "r",
+     "notes": []
+    },
+    {
+     "c": "s",
+     "out": "s",
+     "notes": []
+    },
+    {
+     "c": ".",
+     "out": ".",
+     "notes": []
+    }
+   ],
+   "normalized": "tokenization turns text into numbers.",
+   "words": [
+    {
+     "text": "tokenization",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 12,
+       "piece": "tokenization",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 11,
+       "piece": "tokenizatio",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 10,
+       "piece": "tokenizati",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 9,
+       "piece": "tokenizat",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 8,
+       "piece": "tokeniza",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 7,
+       "piece": "tokeniz",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 6,
+       "piece": "tokeni",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 5,
+       "piece": "token",
+       "found": true
+      },
+      {
+       "start": 5,
+       "end": 12,
+       "piece": "##ization",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "token",
+      "##ization"
+     ],
+     "unk": false
+    },
+    {
+     "text": "turns",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 5,
+       "piece": "turns",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "turns"
+     ],
+     "unk": false
+    },
+    {
+     "text": "text",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 4,
+       "piece": "text",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "text"
+     ],
+     "unk": false
+    },
+    {
+     "text": "into",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 4,
+       "piece": "into",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "into"
+     ],
+     "unk": false
+    },
+    {
+     "text": "numbers",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 7,
+       "piece": "numbers",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "numbers"
+     ],
+     "unk": false
+    },
+    {
+     "text": ".",
+     "punctuation": true,
+     "tries": [
+      {
+       "start": 0,
+       "end": 1,
+       "piece": ".",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "."
+     ],
+     "unk": false
+    }
+   ],
+   "tokens": [
+    {
+     "id": 101,
+     "piece": "[CLS]",
+     "word": null,
+     "special": true,
+     "neighbours": [
+      [
+       99,
+       "[unused98]"
+      ],
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ],
+      [
+       103,
+       "[MASK]"
+      ]
+     ]
+    },
+    {
+     "id": 19204,
+     "piece": "token",
+     "word": 0,
+     "special": false,
+     "neighbours": [
+      [
+       19202,
+       "bounds"
+      ],
+      [
+       19203,
+       "smacked"
+      ],
+      [
+       19204,
+       "token"
+      ],
+      [
+       19205,
+       "##bei"
+      ],
+      [
+       19206,
+       "lectured"
+      ]
+     ]
+    },
+    {
+     "id": 3989,
+     "piece": "##ization",
+     "word": 0,
+     "special": false,
+     "neighbours": [
+      [
+       3987,
+       "naval"
+      ],
+      [
+       3988,
+       "initial"
+      ],
+      [
+       3989,
+       "##ization"
+      ],
+      [
+       3990,
+       "whispered"
+      ],
+      [
+       3991,
+       "median"
+      ]
+     ]
+    },
+    {
+     "id": 4332,
+     "piece": "turns",
+     "word": 1,
+     "special": false,
+     "neighbours": [
+      [
+       4330,
+       "bell"
+      ],
+      [
+       4331,
+       "politics"
+      ],
+      [
+       4332,
+       "turns"
+      ],
+      [
+       4333,
+       "silent"
+      ],
+      [
+       4334,
+       "rail"
+      ]
+     ]
+    },
+    {
+     "id": 3793,
+     "piece": "text",
+     "word": 2,
+     "special": false,
+     "neighbours": [
+      [
+       3791,
+       "needs"
+      ],
+      [
+       3792,
+       "carolina"
+      ],
+      [
+       3793,
+       "text"
+      ],
+      [
+       3794,
+       "featuring"
+      ],
+      [
+       3795,
+       "global"
+      ]
+     ]
+    },
+    {
+     "id": 2046,
+     "piece": "into",
+     "word": 3,
+     "special": false,
+     "neighbours": [
+      [
+       2044,
+       "after"
+      ],
+      [
+       2045,
+       "there"
+      ],
+      [
+       2046,
+       "into"
+      ],
+      [
+       2047,
+       "new"
+      ],
+      [
+       2048,
+       "two"
+      ]
+     ]
+    },
+    {
+     "id": 3616,
+     "piece": "numbers",
+     "word": 4,
+     "special": false,
+     "neighbours": [
+      [
+       3614,
+       "ring"
+      ],
+      [
+       3615,
+       "referred"
+      ],
+      [
+       3616,
+       "numbers"
+      ],
+      [
+       3617,
+       "digital"
+      ],
+      [
+       3618,
+       "greater"
+      ]
+     ]
+    },
+    {
+     "id": 1012,
+     "piece": ".",
+     "word": 5,
+     "special": false,
+     "neighbours": [
+      [
+       1010,
+       ","
+      ],
+      [
+       1011,
+       "-"
+      ],
+      [
+       1012,
+       "."
+      ],
+      [
+       1013,
+       "/"
+      ],
+      [
+       1014,
+       "0"
+      ]
+     ]
+    },
+    {
+     "id": 102,
+     "piece": "[SEP]",
+     "word": null,
+     "special": true,
+     "neighbours": [
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ],
+      [
+       103,
+       "[MASK]"
+      ],
+      [
+       104,
+       "[unused99]"
+      ]
+     ]
+    }
+   ],
+   "ids": [
+    101,
+    19204,
+    3989,
+    4332,
+    3793,
+    2046,
+    3616,
+    1012,
+    102
+   ],
+   "decoded": "tokenization turns text into numbers.",
+   "exact": false,
+   "released": {
+    "fast": true,
+    "original": true,
+    "decode": true
+   }
+  },
+  {
+   "text": "unbelievably",
+   "chars": [
+    {
+     "c": "u",
+     "out": "u",
+     "notes": []
+    },
+    {
+     "c": "n",
+     "out": "n",
+     "notes": []
+    },
+    {
+     "c": "b",
+     "out": "b",
+     "notes": []
+    },
+    {
+     "c": "e",
+     "out": "e",
+     "notes": []
+    },
+    {
+     "c": "l",
+     "out": "l",
+     "notes": []
+    },
+    {
+     "c": "i",
+     "out": "i",
+     "notes": []
+    },
+    {
+     "c": "e",
+     "out": "e",
+     "notes": []
+    },
+    {
+     "c": "v",
+     "out": "v",
+     "notes": []
+    },
+    {
+     "c": "a",
+     "out": "a",
+     "notes": []
+    },
+    {
+     "c": "b",
+     "out": "b",
+     "notes": []
+    },
+    {
+     "c": "l",
+     "out": "l",
+     "notes": []
+    },
+    {
+     "c": "y",
+     "out": "y",
+     "notes": []
+    }
+   ],
+   "normalized": "unbelievably",
+   "words": [
+    {
+     "text": "unbelievably",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 12,
+       "piece": "unbelievably",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 11,
+       "piece": "unbelievabl",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 10,
+       "piece": "unbelievab",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 9,
+       "piece": "unbelieva",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 8,
+       "piece": "unbeliev",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 7,
+       "piece": "unbelie",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 6,
+       "piece": "unbeli",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 5,
+       "piece": "unbel",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 4,
+       "piece": "unbe",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 3,
+       "piece": "unb",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 2,
+       "piece": "un",
+       "found": true
+      },
+      {
+       "start": 2,
+       "end": 12,
+       "piece": "##believably",
+       "found": false
+      },
+      {
+       "start": 2,
+       "end": 11,
+       "piece": "##believabl",
+       "found": false
+      },
+      {
+       "start": 2,
+       "end": 10,
+       "piece": "##believab",
+       "found": false
+      },
+      {
+       "start": 2,
+       "end": 9,
+       "piece": "##believa",
+       "found": false
+      },
+      {
+       "start": 2,
+       "end": 8,
+       "piece": "##believ",
+       "found": false
+      },
+      {
+       "start": 2,
+       "end": 7,
+       "piece": "##belie",
+       "found": false
+      },
+      {
+       "start": 2,
+       "end": 6,
+       "piece": "##beli",
+       "found": false
+      },
+      {
+       "start": 2,
+       "end": 5,
+       "piece": "##bel",
+       "found": true
+      },
+      {
+       "start": 5,
+       "end": 12,
+       "piece": "##ievably",
+       "found": false
+      },
+      {
+       "start": 5,
+       "end": 11,
+       "piece": "##ievabl",
+       "found": false
+      },
+      {
+       "start": 5,
+       "end": 10,
+       "piece": "##ievab",
+       "found": false
+      },
+      {
+       "start": 5,
+       "end": 9,
+       "piece": "##ieva",
+       "found": false
+      },
+      {
+       "start": 5,
+       "end": 8,
+       "piece": "##iev",
+       "found": false
+      },
+      {
+       "start": 5,
+       "end": 7,
+       "piece": "##ie",
+       "found": true
+      },
+      {
+       "start": 7,
+       "end": 12,
+       "piece": "##vably",
+       "found": false
+      },
+      {
+       "start": 7,
+       "end": 11,
+       "piece": "##vabl",
+       "found": false
+      },
+      {
+       "start": 7,
+       "end": 10,
+       "piece": "##vab",
+       "found": false
+      },
+      {
+       "start": 7,
+       "end": 9,
+       "piece": "##va",
+       "found": true
+      },
+      {
+       "start": 9,
+       "end": 12,
+       "piece": "##bly",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "un",
+      "##bel",
+      "##ie",
+      "##va",
+      "##bly"
+     ],
+     "unk": false
+    }
+   ],
+   "tokens": [
+    {
+     "id": 101,
+     "piece": "[CLS]",
+     "word": null,
+     "special": true,
+     "neighbours": [
+      [
+       99,
+       "[unused98]"
+      ],
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ],
+      [
+       103,
+       "[MASK]"
+      ]
+     ]
+    },
+    {
+     "id": 4895,
+     "piece": "un",
+     "word": 0,
+     "special": false,
+     "neighbours": [
+      [
+       4893,
+       "artillery"
+      ],
+      [
+       4894,
+       "strike"
+      ],
+      [
+       4895,
+       "un"
+      ],
+      [
+       4896,
+       "institutions"
+      ],
+      [
+       4897,
+       "roll"
+      ]
+     ]
+    },
+    {
+     "id": 8671,
+     "piece": "##bel",
+     "word": 0,
+     "special": false,
+     "neighbours": [
+      [
+       8669,
+       "revealing"
+      ],
+      [
+       8670,
+       "ba"
+      ],
+      [
+       8671,
+       "##bel"
+      ],
+      [
+       8672,
+       "trevor"
+      ],
+      [
+       8673,
+       "mercy"
+      ]
+     ]
+    },
+    {
+     "id": 2666,
+     "piece": "##ie",
+     "word": 0,
+     "special": false,
+     "neighbours": [
+      [
+       2664,
+       "yet"
+      ],
+      [
+       2665,
+       "green"
+      ],
+      [
+       2666,
+       "##ie"
+      ],
+      [
+       2667,
+       "trying"
+      ],
+      [
+       2668,
+       "blood"
+      ]
+     ]
+    },
+    {
+     "id": 3567,
+     "piece": "##va",
+     "word": 0,
+     "special": false,
+     "neighbours": [
+      [
+       3565,
+       "super"
+      ],
+      [
+       3566,
+       "mom"
+      ],
+      [
+       3567,
+       "##va"
+      ],
+      [
+       3568,
+       "therefore"
+      ],
+      [
+       3569,
+       "supported"
+      ]
+     ]
+    },
+    {
+     "id": 6321,
+     "piece": "##bly",
+     "word": 0,
+     "special": false,
+     "neighbours": [
+      [
+       6319,
+       "resident"
+      ],
+      [
+       6320,
+       "vincent"
+      ],
+      [
+       6321,
+       "##bly"
+      ],
+      [
+       6322,
+       "experiences"
+      ],
+      [
+       6323,
+       "diamond"
+      ]
+     ]
+    },
+    {
+     "id": 102,
+     "piece": "[SEP]",
+     "word": null,
+     "special": true,
+     "neighbours": [
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ],
+      [
+       103,
+       "[MASK]"
+      ],
+      [
+       104,
+       "[unused99]"
+      ]
+     ]
+    }
+   ],
+   "ids": [
+    101,
+    4895,
+    8671,
+    2666,
+    3567,
+    6321,
+    102
+   ],
+   "decoded": "unbelievably",
+   "exact": true,
+   "released": {
+    "fast": true,
+    "original": true,
+    "decode": true
+   }
+  },
+  {
+   "text": "naïve café 🤖",
+   "chars": [
+    {
+     "c": "n",
+     "out": "n",
+     "notes": []
+    },
+    {
+     "c": "a",
+     "out": "a",
+     "notes": []
+    },
+    {
+     "c": "ï",
+     "out": "i",
+     "notes": [
+      "accent stripped"
+     ]
+    },
+    {
+     "c": "v",
+     "out": "v",
+     "notes": []
+    },
+    {
+     "c": "e",
+     "out": "e",
+     "notes": []
+    },
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": "c",
+     "out": "c",
+     "notes": []
+    },
+    {
+     "c": "a",
+     "out": "a",
+     "notes": []
+    },
+    {
+     "c": "f",
+     "out": "f",
+     "notes": []
+    },
+    {
+     "c": "é",
+     "out": "e",
+     "notes": [
+      "accent stripped"
+     ]
+    },
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": "🤖",
+     "out": "🤖",
+     "notes": []
+    }
+   ],
+   "normalized": "naive cafe 🤖",
+   "words": [
+    {
+     "text": "naive",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 5,
+       "piece": "naive",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "naive"
+     ],
+     "unk": false
+    },
+    {
+     "text": "cafe",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 4,
+       "piece": "cafe",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "cafe"
+     ],
+     "unk": false
+    },
+    {
+     "text": "🤖",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 1,
+       "piece": "🤖",
+       "found": false
+      }
+     ],
+     "pieces": [
+      "[UNK]"
+     ],
+     "unk": true
+    }
+   ],
+   "tokens": [
+    {
+     "id": 101,
+     "piece": "[CLS]",
+     "word": null,
+     "special": true,
+     "neighbours": [
+      [
+       99,
+       "[unused98]"
+      ],
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ],
+      [
+       103,
+       "[MASK]"
+      ]
+     ]
+    },
+    {
+     "id": 15743,
+     "piece": "naive",
+     "word": 0,
+     "special": false,
+     "neighbours": [
+      [
+       15741,
+       "unprecedented"
+      ],
+      [
+       15742,
+       "bunker"
+      ],
+      [
+       15743,
+       "naive"
+      ],
+      [
+       15744,
+       "specialists"
+      ],
+      [
+       15745,
+       "ark"
+      ]
+     ]
+    },
+    {
+     "id": 7668,
+     "piece": "cafe",
+     "word": 1,
+     "special": false,
+     "neighbours": [
+      [
+       7666,
+       "##nts"
+      ],
+      [
+       7667,
+       "assessment"
+      ],
+      [
+       7668,
+       "cafe"
+      ],
+      [
+       7669,
+       "difficulty"
+      ],
+      [
+       7670,
+       "demands"
+      ]
+     ]
+    },
+    {
+     "id": 100,
+     "piece": "[UNK]",
+     "word": 2,
+     "special": true,
+     "neighbours": [
+      [
+       98,
+       "[unused97]"
+      ],
+      [
+       99,
+       "[unused98]"
+      ],
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ]
+     ]
+    },
+    {
+     "id": 102,
+     "piece": "[SEP]",
+     "word": null,
+     "special": true,
+     "neighbours": [
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ],
+      [
+       103,
+       "[MASK]"
+      ],
+      [
+       104,
+       "[unused99]"
+      ]
+     ]
+    }
+   ],
+   "ids": [
+    101,
+    15743,
+    7668,
+    100,
+    102
+   ],
+   "decoded": "naive cafe",
+   "exact": false,
+   "released": {
+    "fast": true,
+    "original": true,
+    "decode": true
+   }
+  },
+  {
+   "text": "東京は晴れ",
+   "chars": [
+    {
+     "c": "東",
+     "out": " 東 ",
+     "notes": [
+      "Chinese character spaced out"
+     ]
+    },
+    {
+     "c": "京",
+     "out": " 京 ",
+     "notes": [
+      "Chinese character spaced out"
+     ]
+    },
+    {
+     "c": "は",
+     "out": "は",
+     "notes": []
+    },
+    {
+     "c": "晴",
+     "out": " 晴 ",
+     "notes": [
+      "Chinese character spaced out"
+     ]
+    },
+    {
+     "c": "れ",
+     "out": "れ",
+     "notes": []
+    }
+   ],
+   "normalized": " 東  京 は 晴 れ",
+   "words": [
+    {
+     "text": "東",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 1,
+       "piece": "東",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "東"
+     ],
+     "unk": false
+    },
+    {
+     "text": "京",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 1,
+       "piece": "京",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "京"
+     ],
+     "unk": false
+    },
+    {
+     "text": "は",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 1,
+       "piece": "は",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "は"
+     ],
+     "unk": false
+    },
+    {
+     "text": "晴",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 1,
+       "piece": "晴",
+       "found": false
+      }
+     ],
+     "pieces": [
+      "[UNK]"
+     ],
+     "unk": true
+    },
+    {
+     "text": "れ",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 1,
+       "piece": "れ",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "れ"
+     ],
+     "unk": false
+    }
+   ],
+   "tokens": [
+    {
+     "id": 101,
+     "piece": "[CLS]",
+     "word": null,
+     "special": true,
+     "neighbours": [
+      [
+       99,
+       "[unused98]"
+      ],
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ],
+      [
+       103,
+       "[MASK]"
+      ]
+     ]
+    },
+    {
+     "id": 1879,
+     "piece": "東",
+     "word": 0,
+     "special": false,
+     "neighbours": [
+      [
+       1877,
+       "李"
+      ],
+      [
+       1878,
+       "村"
+      ],
+      [
+       1879,
+       "東"
+      ],
+      [
+       1880,
+       "松"
+      ],
+      [
+       1881,
+       "林"
+      ]
+     ]
+    },
+    {
+     "id": 1755,
+     "piece": "京",
+     "word": 1,
+     "special": false,
+     "neighbours": [
+      [
+       1753,
+       "五"
+      ],
+      [
+       1754,
+       "井"
+      ],
+      [
+       1755,
+       "京"
+      ],
+      [
+       1756,
+       "人"
+      ],
+      [
+       1757,
+       "亻"
+      ]
+     ]
+    },
+    {
+     "id": 1672,
+     "piece": "は",
+     "word": 2,
+     "special": false,
+     "neighbours": [
+      [
+       1670,
+       "ね"
+      ],
+      [
+       1671,
+       "の"
+      ],
+      [
+       1672,
+       "は"
+      ],
+      [
+       1673,
+       "ひ"
+      ],
+      [
+       1674,
+       "ふ"
+      ]
+     ]
+    },
+    {
+     "id": 100,
+     "piece": "[UNK]",
+     "word": 3,
+     "special": true,
+     "neighbours": [
+      [
+       98,
+       "[unused97]"
+      ],
+      [
+       99,
+       "[unused98]"
+      ],
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ]
+     ]
+    },
+    {
+     "id": 1688,
+     "piece": "れ",
+     "word": 4,
+     "special": false,
+     "neighbours": [
+      [
+       1686,
+       "り"
+      ],
+      [
+       1687,
+       "る"
+      ],
+      [
+       1688,
+       "れ"
+      ],
+      [
+       1689,
+       "ろ"
+      ],
+      [
+       1690,
+       "を"
+      ]
+     ]
+    },
+    {
+     "id": 102,
+     "piece": "[SEP]",
+     "word": null,
+     "special": true,
+     "neighbours": [
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ],
+      [
+       103,
+       "[MASK]"
+      ],
+      [
+       104,
+       "[unused99]"
+      ]
+     ]
+    }
+   ],
+   "ids": [
+    101,
+    1879,
+    1755,
+    1672,
+    100,
+    1688,
+    102
+   ],
+   "decoded": "東 京 は れ",
+   "exact": false,
+   "released": {
+    "fast": true,
+    "original": true,
+    "decode": true
+   }
+  },
+  {
+   "text": "    x = 12345",
+   "chars": [
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": "x",
+     "out": "x",
+     "notes": []
+    },
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": "=",
+     "out": "=",
+     "notes": []
+    },
+    {
+     "c": " ",
+     "out": " ",
+     "notes": []
+    },
+    {
+     "c": "1",
+     "out": "1",
+     "notes": []
+    },
+    {
+     "c": "2",
+     "out": "2",
+     "notes": []
+    },
+    {
+     "c": "3",
+     "out": "3",
+     "notes": []
+    },
+    {
+     "c": "4",
+     "out": "4",
+     "notes": []
+    },
+    {
+     "c": "5",
+     "out": "5",
+     "notes": []
+    }
+   ],
+   "normalized": "    x = 12345",
+   "words": [
+    {
+     "text": "x",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 1,
+       "piece": "x",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "x"
+     ],
+     "unk": false
+    },
+    {
+     "text": "=",
+     "punctuation": true,
+     "tries": [
+      {
+       "start": 0,
+       "end": 1,
+       "piece": "=",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "="
+     ],
+     "unk": false
+    },
+    {
+     "text": "12345",
+     "punctuation": false,
+     "tries": [
+      {
+       "start": 0,
+       "end": 5,
+       "piece": "12345",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 4,
+       "piece": "1234",
+       "found": false
+      },
+      {
+       "start": 0,
+       "end": 3,
+       "piece": "123",
+       "found": true
+      },
+      {
+       "start": 3,
+       "end": 5,
+       "piece": "##45",
+       "found": true
+      }
+     ],
+     "pieces": [
+      "123",
+      "##45"
+     ],
+     "unk": false
+    }
+   ],
+   "tokens": [
+    {
+     "id": 101,
+     "piece": "[CLS]",
+     "word": null,
+     "special": true,
+     "neighbours": [
+      [
+       99,
+       "[unused98]"
+      ],
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ],
+      [
+       103,
+       "[MASK]"
+      ]
+     ]
+    },
+    {
+     "id": 1060,
+     "piece": "x",
+     "word": 0,
+     "special": false,
+     "neighbours": [
+      [
+       1058,
+       "v"
+      ],
+      [
+       1059,
+       "w"
+      ],
+      [
+       1060,
+       "x"
+      ],
+      [
+       1061,
+       "y"
+      ],
+      [
+       1062,
+       "z"
+      ]
+     ]
+    },
+    {
+     "id": 1027,
+     "piece": "=",
+     "word": 1,
+     "special": false,
+     "neighbours": [
+      [
+       1025,
+       ";"
+      ],
+      [
+       1026,
+       "<"
+      ],
+      [
+       1027,
+       "="
+      ],
+      [
+       1028,
+       ">"
+      ],
+      [
+       1029,
+       "?"
+      ]
+     ]
+    },
+    {
+     "id": 13138,
+     "piece": "123",
+     "word": 2,
+     "special": false,
+     "neighbours": [
+      [
+       13136,
+       "tensions"
+      ],
+      [
+       13137,
+       "straw"
+      ],
+      [
+       13138,
+       "123"
+      ],
+      [
+       13139,
+       "frequencies"
+      ],
+      [
+       13140,
+       "1804"
+      ]
+     ]
+    },
+    {
+     "id": 19961,
+     "piece": "##45",
+     "word": 2,
+     "special": false,
+     "neighbours": [
+      [
+       19959,
+       "lacy"
+      ],
+      [
+       19960,
+       "med"
+      ],
+      [
+       19961,
+       "##45"
+      ],
+      [
+       19962,
+       "syn"
+      ],
+      [
+       19963,
+       "decks"
+      ]
+     ]
+    },
+    {
+     "id": 102,
+     "piece": "[SEP]",
+     "word": null,
+     "special": true,
+     "neighbours": [
+      [
+       100,
+       "[UNK]"
+      ],
+      [
+       101,
+       "[CLS]"
+      ],
+      [
+       102,
+       "[SEP]"
+      ],
+      [
+       103,
+       "[MASK]"
+      ],
+      [
+       104,
+       "[unused99]"
+      ]
+     ]
+    }
+   ],
+   "ids": [
+    101,
+    1060,
+    1027,
+    13138,
+    19961,
+    102
+   ],
+   "decoded": "x = 12345",
+   "exact": false,
+   "released": {
+    "fast": true,
+    "original": true,
+    "decode": true
+   }
+  }
+ ],
+ "strings": {
+  "count": 325,
+  "tokens": 4470,
+  "unk": 40,
+  "withUnk": 27,
+  "exactRoundTrips": 39,
+  "note": "the five inputs plus the extra strings the drawer's checks run"
+ },
+ "validation": {
+  "charStepsVsNormalize": 0,
+  "tryChainErrors": 0,
+  "piecesVsEncode": 0,
+  "inputIdsVsFast": 0,
+  "inputIdsVsOriginal": 0,
+  "inputDecodeVsFast": 0,
+  "stringsIdsVsFast": 0,
+  "stringsIdsVsOriginal": 0
+ },
+ "capture": {
+  "timestamp": "2026-10-30T07:41:56.303315+00:00",
+  "device": "cpu",
+  "python": "3.12.12",
+  "packages": {
+   "tokenizers": "0.22.2",
+   "transformers": "4.57.6",
+   "huggingface-hub": "0.36.2"
+  },
+  "script": "scripts/tokenization/record_bert.py",
+  "scriptSha256": "a682588c4477c3014eed03dda75504825697a2d2c3ff60efcde365acb6fc918d",
+  "helperSha256": "899804b9af0735e60f6f0a2699dca112141c022e3d775a37d7cd9fc991404d31",
+  "reference": "pytorch/tokenization_bert.py",
+  "referenceSha256": "8f1559bd1043fff049da7c9f00dd9d896339daa166795b3741cbf5f1b23777f2",
+  "strings": "pytorch/checks/text_tokenizer_strings.json",
+  "stringsSha256": "9dbb931b1afdb45453b0c0521d8d2c2d5cd0b7bbf3a0d32cfdd8ed19de2e3a6b",
+  "revision": "86b5e0934494bd15c9632b12f734a8a67f723594"
+ }
+}
