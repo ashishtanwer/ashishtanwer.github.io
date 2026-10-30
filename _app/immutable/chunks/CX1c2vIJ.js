@@ -1,0 +1,1 @@
+import{h as o,d as v,v as y,E as f,w as l,x as m,s as p,y as i,z as T,g}from"./pI8skELI.js";import{B as A}from"./DFAianHz.js";function x(d,_,s){var e;o&&(e=g,v());var r=new A(d);y(()=>{var a=_()??null;if(o){var h=l(e),c=h===T,u=a!==null;if(c!==u){var t=m();p(t),r.anchor=t,i(!1),r.ensure(a,a&&(n=>s(n,a))),i(!0);return}}r.ensure(a,a&&(n=>s(n,a)))},f)}export{x as c};

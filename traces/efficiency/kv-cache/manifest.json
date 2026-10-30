@@ -1,0 +1,1793 @@
+{
+	"schemaVersion": 1,
+	"kind": "efficiency-kv",
+	"tab": "kv-cache",
+	"model": {
+		"id": "Qwen/Qwen2.5-0.5B-Instruct",
+		"name": "Qwen2.5-0.5B-Instruct",
+		"revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+		"url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/tree/7ae557604adf67be50417f59c2c2f167def9a775",
+		"license": "apache-2.0",
+		"parameters": 494032768,
+		"numLayers": 24,
+		"hiddenSize": 896,
+		"mlpSize": 4864,
+		"vocab": 151936,
+		"attentionHeads": 14,
+		"keyValueHeads": 2,
+		"headDim": 64,
+		"ropeTheta": 1000000.0,
+		"maxPositions": 32768,
+		"dtype": "bfloat16"
+	},
+	"prompt": {
+		"question": "The password for the guest Wi-Fi is maple-river-42. What is the guest Wi-Fi password?",
+		"template": "Qwen chat template with its default system prompt",
+		"tokens": [
+			{
+				"id": 151644,
+				"text": "<|im_start|>"
+			},
+			{
+				"id": 8948,
+				"text": "system"
+			},
+			{
+				"id": 198,
+				"text": "\n"
+			},
+			{
+				"id": 2610,
+				"text": "You"
+			},
+			{
+				"id": 525,
+				"text": " are"
+			},
+			{
+				"id": 1207,
+				"text": " Q"
+			},
+			{
+				"id": 16948,
+				"text": "wen"
+			},
+			{
+				"id": 11,
+				"text": ","
+			},
+			{
+				"id": 3465,
+				"text": " created"
+			},
+			{
+				"id": 553,
+				"text": " by"
+			},
+			{
+				"id": 54364,
+				"text": " Alibaba"
+			},
+			{
+				"id": 14817,
+				"text": " Cloud"
+			},
+			{
+				"id": 13,
+				"text": "."
+			},
+			{
+				"id": 1446,
+				"text": " You"
+			},
+			{
+				"id": 525,
+				"text": " are"
+			},
+			{
+				"id": 264,
+				"text": " a"
+			},
+			{
+				"id": 10950,
+				"text": " helpful"
+			},
+			{
+				"id": 17847,
+				"text": " assistant"
+			},
+			{
+				"id": 13,
+				"text": "."
+			},
+			{
+				"id": 151645,
+				"text": "<|im_end|>"
+			},
+			{
+				"id": 198,
+				"text": "\n"
+			},
+			{
+				"id": 151644,
+				"text": "<|im_start|>"
+			},
+			{
+				"id": 872,
+				"text": "user"
+			},
+			{
+				"id": 198,
+				"text": "\n"
+			},
+			{
+				"id": 785,
+				"text": "The"
+			},
+			{
+				"id": 3552,
+				"text": " password"
+			},
+			{
+				"id": 369,
+				"text": " for"
+			},
+			{
+				"id": 279,
+				"text": " the"
+			},
+			{
+				"id": 8640,
+				"text": " guest"
+			},
+			{
+				"id": 17220,
+				"text": " Wi"
+			},
+			{
+				"id": 26299,
+				"text": "-Fi"
+			},
+			{
+				"id": 374,
+				"text": " is"
+			},
+			{
+				"id": 54380,
+				"text": " maple"
+			},
+			{
+				"id": 3795,
+				"text": "-r"
+			},
+			{
+				"id": 1524,
+				"text": "iver"
+			},
+			{
+				"id": 12,
+				"text": "-"
+			},
+			{
+				"id": 19,
+				"text": "4"
+			},
+			{
+				"id": 17,
+				"text": "2"
+			},
+			{
+				"id": 13,
+				"text": "."
+			},
+			{
+				"id": 3555,
+				"text": " What"
+			},
+			{
+				"id": 374,
+				"text": " is"
+			},
+			{
+				"id": 279,
+				"text": " the"
+			},
+			{
+				"id": 8640,
+				"text": " guest"
+			},
+			{
+				"id": 17220,
+				"text": " Wi"
+			},
+			{
+				"id": 26299,
+				"text": "-Fi"
+			},
+			{
+				"id": 3552,
+				"text": " password"
+			},
+			{
+				"id": 30,
+				"text": "?"
+			},
+			{
+				"id": 151645,
+				"text": "<|im_end|>"
+			},
+			{
+				"id": 198,
+				"text": "\n"
+			},
+			{
+				"id": 151644,
+				"text": "<|im_start|>"
+			},
+			{
+				"id": 77091,
+				"text": "assistant"
+			},
+			{
+				"id": 198,
+				"text": "\n"
+			}
+		]
+	},
+	"answer": {
+		"tokens": [
+			{
+				"id": 785,
+				"text": "The"
+			},
+			{
+				"id": 3552,
+				"text": " password"
+			},
+			{
+				"id": 369,
+				"text": " for"
+			},
+			{
+				"id": 279,
+				"text": " the"
+			},
+			{
+				"id": 8640,
+				"text": " guest"
+			},
+			{
+				"id": 17220,
+				"text": " Wi"
+			},
+			{
+				"id": 26299,
+				"text": "-Fi"
+			},
+			{
+				"id": 374,
+				"text": " is"
+			},
+			{
+				"id": 330,
+				"text": " \""
+			},
+			{
+				"id": 2186,
+				"text": "map"
+			},
+			{
+				"id": 273,
+				"text": "le"
+			},
+			{
+				"id": 3795,
+				"text": "-r"
+			},
+			{
+				"id": 1524,
+				"text": "iver"
+			},
+			{
+				"id": 12,
+				"text": "-"
+			},
+			{
+				"id": 19,
+				"text": "4"
+			},
+			{
+				"id": 17,
+				"text": "2"
+			},
+			{
+				"id": 3263,
+				"text": "\"."
+			},
+			{
+				"id": 151645,
+				"text": "<|im_end|>"
+			}
+		],
+		"text": "The password for the guest Wi-Fi is \"maple-river-42\".<|im_end|>",
+		"decoding": "greedy, no repetition penalty"
+	},
+	"steps": [
+		{
+			"step": 0,
+			"kind": "prefill",
+			"fed": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51
+			],
+			"length": 52,
+			"top": [
+				{
+					"id": 785,
+					"text": "The",
+					"p": 0.737122
+				},
+				{
+					"id": 40,
+					"text": "I",
+					"p": 0.0500068
+				},
+				{
+					"id": 28715,
+					"text": "Based",
+					"p": 0.0271529
+				},
+				{
+					"id": 2132,
+					"text": "It",
+					"p": 0.0247914
+				},
+				{
+					"id": 1249,
+					"text": "To",
+					"p": 0.0174298
+				},
+				{
+					"id": 2227,
+					"text": "Map",
+					"p": 0.0169204
+				},
+				{
+					"id": 1,
+					"text": "\"",
+					"p": 0.0136014
+				},
+				{
+					"id": 4498,
+					"text": "When",
+					"p": 0.0106684
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 37213962240,
+					"attention": 232587264,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 37213962240,
+					"attention": 232587264,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.12149,
+				"recompute": 0.109557
+			},
+			"bytesMeasured": 638976,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 1,
+			"kind": "decode",
+			"fed": [
+				52
+			],
+			"length": 53,
+			"top": [
+				{
+					"id": 3552,
+					"text": " password",
+					"p": 0.519816
+				},
+				{
+					"id": 8640,
+					"text": " guest",
+					"p": 0.429886
+				},
+				{
+					"id": 2661,
+					"text": " given",
+					"p": 0.00404591
+				},
+				{
+					"id": 330,
+					"text": " \"",
+					"p": 0.00374341
+				},
+				{
+					"id": 4396,
+					"text": " correct",
+					"p": 0.00312621
+				},
+				{
+					"id": 3897,
+					"text": " provided",
+					"p": 0.00231732
+				},
+				{
+					"id": 17220,
+					"text": " Wi",
+					"p": 0.00179249
+				},
+				{
+					"id": 3409,
+					"text": " word",
+					"p": 0.00166143
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 4558848,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 37929615360,
+					"attention": 241618944,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.028681,
+				"recompute": 0.123366
+			},
+			"bytesMeasured": 651264,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 2,
+			"kind": "decode",
+			"fed": [
+				53
+			],
+			"length": 54,
+			"top": [
+				{
+					"id": 369,
+					"text": " for",
+					"p": 0.938669
+				},
+				{
+					"id": 498,
+					"text": " you",
+					"p": 0.0191719
+				},
+				{
+					"id": 330,
+					"text": " \"",
+					"p": 0.0110585
+				},
+				{
+					"id": 3897,
+					"text": " provided",
+					"p": 0.00938076
+				},
+				{
+					"id": 311,
+					"text": " to",
+					"p": 0.0091344
+				},
+				{
+					"id": 2661,
+					"text": " given",
+					"p": 0.0017987
+				},
+				{
+					"id": 315,
+					"text": " of",
+					"p": 0.00110459
+				},
+				{
+					"id": 1483,
+					"text": " used",
+					"p": 0.00108619
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 4644864,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 38645268480,
+					"attention": 250822656,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.033383,
+				"recompute": 0.128364
+			},
+			"bytesMeasured": 663552,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 3,
+			"kind": "decode",
+			"fed": [
+				54
+			],
+			"length": 55,
+			"top": [
+				{
+					"id": 279,
+					"text": " the",
+					"p": 0.932442
+				},
+				{
+					"id": 43470,
+					"text": " Maple",
+					"p": 0.0362916
+				},
+				{
+					"id": 264,
+					"text": " a",
+					"p": 0.0105503
+				},
+				{
+					"id": 697,
+					"text": " your",
+					"p": 0.010134
+				},
+				{
+					"id": 330,
+					"text": " \"",
+					"p": 0.00435778
+				},
+				{
+					"id": 8640,
+					"text": " guest",
+					"p": 0.00100291
+				},
+				{
+					"id": 54380,
+					"text": " maple",
+					"p": 0.000719363
+				},
+				{
+					"id": 419,
+					"text": " this",
+					"p": 0.000522131
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 4730880,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 39360921600,
+					"attention": 260198400,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.027182,
+				"recompute": 0.111344
+			},
+			"bytesMeasured": 675840,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 4,
+			"kind": "decode",
+			"fed": [
+				55
+			],
+			"length": 56,
+			"top": [
+				{
+					"id": 8640,
+					"text": " guest",
+					"p": 0.983842
+				},
+				{
+					"id": 330,
+					"text": " \"",
+					"p": 0.00503161
+				},
+				{
+					"id": 26215,
+					"text": " Guest",
+					"p": 0.00212277
+				},
+				{
+					"id": 43470,
+					"text": " Maple",
+					"p": 0.0014401
+				},
+				{
+					"id": 17220,
+					"text": " Wi",
+					"p": 0.00131412
+				},
+				{
+					"id": 3468,
+					"text": " host",
+					"p": 0.000655257
+				},
+				{
+					"id": 14709,
+					"text": " guests",
+					"p": 0.000171302
+				},
+				{
+					"id": 3552,
+					"text": " password",
+					"p": 0.000166156
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 4816896,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 40076574720,
+					"attention": 269746176,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.028269,
+				"recompute": 0.10814
+			},
+			"bytesMeasured": 688128,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 5,
+			"kind": "decode",
+			"fed": [
+				56
+			],
+			"length": 57,
+			"top": [
+				{
+					"id": 17220,
+					"text": " Wi",
+					"p": 0.99712
+				},
+				{
+					"id": 33307,
+					"text": " WiFi",
+					"p": 0.00140966
+				},
+				{
+					"id": 20739,
+					"text": " wireless",
+					"p": 0.000192012
+				},
+				{
+					"id": 320,
+					"text": " (",
+					"p": 0.00015053
+				},
+				{
+					"id": 594,
+					"text": "'s",
+					"p": 0.00014293
+				},
+				{
+					"id": 3922,
+					"text": " network",
+					"p": 0.000106883
+				},
+				{
+					"id": 330,
+					"text": " \"",
+					"p": 0.000104412
+				},
+				{
+					"id": 41923,
+					"text": " WI",
+					"p": 9.92898e-05
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 4902912,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 40792227840,
+					"attention": 279465984,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.024951,
+				"recompute": 0.109495
+			},
+			"bytesMeasured": 700416,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 6,
+			"kind": "decode",
+			"fed": [
+				57
+			],
+			"length": 58,
+			"top": [
+				{
+					"id": 26299,
+					"text": "-Fi",
+					"p": 0.999842
+				},
+				{
+					"id": 36631,
+					"text": "-fi",
+					"p": 8.19466e-05
+				},
+				{
+					"id": 7276,
+					"text": "-F",
+					"p": 4.35735e-05
+				},
+				{
+					"id": 19426,
+					"text": "FI",
+					"p": 1.80841e-05
+				},
+				{
+					"id": 12,
+					"text": "-",
+					"p": 1.00747e-05
+				},
+				{
+					"id": 22715,
+					"text": "Fi",
+					"p": 2.20356e-06
+				},
+				{
+					"id": 39871,
+					"text": " Fi",
+					"p": 5.27556e-07
+				},
+				{
+					"id": 21477,
+					"text": "-I",
+					"p": 1.04394e-07
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 4988928,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 41507880960,
+					"attention": 289357824,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.026973,
+				"recompute": 0.11032
+			},
+			"bytesMeasured": 712704,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 7,
+			"kind": "decode",
+			"fed": [
+				58
+			],
+			"length": 59,
+			"top": [
+				{
+					"id": 374,
+					"text": " is",
+					"p": 0.753696
+				},
+				{
+					"id": 11,
+					"text": ",",
+					"p": 0.0574417
+				},
+				{
+					"id": 3922,
+					"text": " network",
+					"p": 0.0557306
+				},
+				{
+					"id": 320,
+					"text": " (",
+					"p": 0.0132989
+				},
+				{
+					"id": 304,
+					"text": " in",
+					"p": 0.0112766
+				},
+				{
+					"id": 389,
+					"text": " on",
+					"p": 0.00909103
+				},
+				{
+					"id": 498,
+					"text": " you",
+					"p": 0.00783144
+				},
+				{
+					"id": 2473,
+					"text": " service",
+					"p": 0.00684234
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 5074944,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 42223534080,
+					"attention": 299421696,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.027874,
+				"recompute": 0.112123
+			},
+			"bytesMeasured": 724992,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 8,
+			"kind": "decode",
+			"fed": [
+				59
+			],
+			"length": 60,
+			"top": [
+				{
+					"id": 330,
+					"text": " \"",
+					"p": 0.652237
+				},
+				{
+					"id": 3070,
+					"text": " **",
+					"p": 0.152701
+				},
+				{
+					"id": 12824,
+					"text": " indeed",
+					"p": 0.0399263
+				},
+				{
+					"id": 4363,
+					"text": " likely",
+					"p": 0.0181584
+				},
+				{
+					"id": 537,
+					"text": " not",
+					"p": 0.0143732
+				},
+				{
+					"id": 54380,
+					"text": " maple",
+					"p": 0.0127592
+				},
+				{
+					"id": 43470,
+					"text": " Maple",
+					"p": 0.010688
+				},
+				{
+					"id": 1447,
+					"text": ":\n\n",
+					"p": 0.0106427
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 5160960,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 42939187200,
+					"attention": 309657600,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.029223,
+				"recompute": 0.121294
+			},
+			"bytesMeasured": 737280,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 9,
+			"kind": "decode",
+			"fed": [
+				60
+			],
+			"length": 61,
+			"top": [
+				{
+					"id": 2186,
+					"text": "map",
+					"p": 0.907137
+				},
+				{
+					"id": 2227,
+					"text": "Map",
+					"p": 0.0714467
+				},
+				{
+					"id": 16557,
+					"text": "mount",
+					"p": 0.00196588
+				},
+				{
+					"id": 81,
+					"text": "r",
+					"p": 0.00146838
+				},
+				{
+					"id": 76,
+					"text": "m",
+					"p": 0.00127662
+				},
+				{
+					"id": 54380,
+					"text": " maple",
+					"p": 0.000805021
+				},
+				{
+					"id": 5469,
+					"text": "river",
+					"p": 0.000611771
+				},
+				{
+					"id": 273,
+					"text": "le",
+					"p": 0.000576861
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 5246976,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 43654840320,
+					"attention": 320065536,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.028,
+				"recompute": 0.116087
+			},
+			"bytesMeasured": 749568,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 10,
+			"kind": "decode",
+			"fed": [
+				61
+			],
+			"length": 62,
+			"top": [
+				{
+					"id": 273,
+					"text": "le",
+					"p": 0.999702
+				},
+				{
+					"id": 62967,
+					"text": "lep",
+					"p": 8.01451e-05
+				},
+				{
+					"id": 642,
+					"text": "les",
+					"p": 6.90073e-05
+				},
+				{
+					"id": 832,
+					"text": "led",
+					"p": 3.25328e-05
+				},
+				{
+					"id": 867,
+					"text": "LE",
+					"p": 2.11335e-05
+				},
+				{
+					"id": 3433,
+					"text": "lem",
+					"p": 1.56768e-05
+				},
+				{
+					"id": 1149,
+					"text": "let",
+					"p": 1.32575e-05
+				},
+				{
+					"id": 301,
+					"text": "el",
+					"p": 1.16508e-05
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 5332992,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 44370493440,
+					"attention": 330645504,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.022444,
+				"recompute": 0.096909
+			},
+			"bytesMeasured": 761856,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 11,
+			"kind": "decode",
+			"fed": [
+				62
+			],
+			"length": 63,
+			"top": [
+				{
+					"id": 3795,
+					"text": "-r",
+					"p": 0.994791
+				},
+				{
+					"id": 12,
+					"text": "-",
+					"p": 0.00184402
+				},
+				{
+					"id": 1710,
+					"text": "_r",
+					"p": 0.000904168
+				},
+				{
+					"id": 1,
+					"text": "\"",
+					"p": 0.00049621
+				},
+				{
+					"id": 5469,
+					"text": "river",
+					"p": 0.000234733
+				},
+				{
+					"id": 51934,
+					"text": "-ro",
+					"p": 0.000159766
+				},
+				{
+					"id": 75738,
+					"text": "\\_",
+					"p": 0.000138824
+				},
+				{
+					"id": 3263,
+					"text": "\".",
+					"p": 0.000132545
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 5419008,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 45086146560,
+					"attention": 341397504,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.022582,
+				"recompute": 0.095416
+			},
+			"bytesMeasured": 774144,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 12,
+			"kind": "decode",
+			"fed": [
+				63
+			],
+			"length": 64,
+			"top": [
+				{
+					"id": 1524,
+					"text": "iver",
+					"p": 0.999693
+				},
+				{
+					"id": 1945,
+					"text": "ivers",
+					"p": 0.000149138
+				},
+				{
+					"id": 18793,
+					"text": "IVER",
+					"p": 0.000138802
+				},
+				{
+					"id": 344,
+					"text": "iv",
+					"p": 1.35136e-05
+				},
+				{
+					"id": 533,
+					"text": "ive",
+					"p": 1.54806e-06
+				},
+				{
+					"id": 466,
+					"text": "ain",
+					"p": 8.13465e-07
+				},
+				{
+					"id": 483,
+					"text": "ill",
+					"p": 3.96368e-07
+				},
+				{
+					"id": 604,
+					"text": "ail",
+					"p": 3.10653e-07
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 5505024,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 45801799680,
+					"attention": 352321536,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.028553,
+				"recompute": 0.120109
+			},
+			"bytesMeasured": 786432,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"step": 13,
+			"kind": "decode",
+			"fed": [
+				64
+			],
+			"length": 65,
+			"top": [
+				{
+					"id": 12,
+					"text": "-",
+					"p": 0.998551
+				},
+				{
+					"id": 19,
+					"text": "4",
+					"p": 0.000507414
+				},
+				{
+					"id": 3263,
+					"text": "\".",
+					"p": 0.000479746
+				},
+				{
+					"id": 27651,
+					"text": "-\"",
+					"p": 0.000205926
+				},
+				{
+					"id": 11436,
+					"text": "\".\n\n",
+					"p": 5.37757e-05
+				},
+				{
+					"id": 1,
+					"text": "\"",
+					"p": 4.76792e-05
+				},
+				{
+					"id": 497,
+					"text": "\",",
+					"p": 2.72128e-05
+				},
+				{
+					"id": 73918,
+					"text": "-\",",
+					"p": 1.32648e-05
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 5591040,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 46517452800,
+					"attention": 363417600,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.038574,
+				"recompute": 0.18601
+			},
+			"bytesMeasured": 798720,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"step": 14,
+			"kind": "decode",
+			"fed": [
+				65
+			],
+			"length": 66,
+			"top": [
+				{
+					"id": 19,
+					"text": "4",
+					"p": 0.999927
+				},
+				{
+					"id": 16,
+					"text": "1",
+					"p": 1.37301e-05
+				},
+				{
+					"id": 17,
+					"text": "2",
+					"p": 9.12374e-06
+				},
+				{
+					"id": 15,
+					"text": "0",
+					"p": 8.7979e-06
+				},
+				{
+					"id": 20,
+					"text": "5",
+					"p": 8.47116e-06
+				},
+				{
+					"id": 18,
+					"text": "3",
+					"p": 8.13194e-06
+				},
+				{
+					"id": 21,
+					"text": "6",
+					"p": 3.76116e-06
+				},
+				{
+					"id": 18516,
+					"text": "xxxx",
+					"p": 2.29399e-06
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 5677056,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 47233105920,
+					"attention": 374685696,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.03409,
+				"recompute": 0.140595
+			},
+			"bytesMeasured": 811008,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"step": 15,
+			"kind": "decode",
+			"fed": [
+				66
+			],
+			"length": 67,
+			"top": [
+				{
+					"id": 17,
+					"text": "2",
+					"p": 0.999995
+				},
+				{
+					"id": 18,
+					"text": "3",
+					"p": 1.11693e-06
+				},
+				{
+					"id": 12,
+					"text": "-",
+					"p": 8.15147e-07
+				},
+				{
+					"id": 13,
+					"text": ".",
+					"p": 5.64914e-07
+				},
+				{
+					"id": 16,
+					"text": "1",
+					"p": 4.7305e-07
+				},
+				{
+					"id": 20,
+					"text": "5",
+					"p": 4.67852e-07
+				},
+				{
+					"id": 3263,
+					"text": "\".",
+					"p": 3.34775e-07
+				},
+				{
+					"id": 22,
+					"text": "7",
+					"p": 2.43188e-07
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 5763072,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 47948759040,
+					"attention": 386125824,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.038896,
+				"recompute": 0.225896
+			},
+			"bytesMeasured": 823296,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"step": 16,
+			"kind": "decode",
+			"fed": [
+				67
+			],
+			"length": 68,
+			"top": [
+				{
+					"id": 3263,
+					"text": "\".",
+					"p": 0.942461
+				},
+				{
+					"id": 1189,
+					"text": ".\"",
+					"p": 0.0197959
+				},
+				{
+					"id": 497,
+					"text": "\",",
+					"p": 0.0133769
+				},
+				{
+					"id": 11436,
+					"text": "\".\n\n",
+					"p": 0.00922001
+				},
+				{
+					"id": 1,
+					"text": "\"",
+					"p": 0.00861502
+				},
+				{
+					"id": 22956,
+					"text": "\".\n",
+					"p": 0.00470681
+				},
+				{
+					"id": 1335,
+					"text": ",\"",
+					"p": 0.000711422
+				},
+				{
+					"id": 2217,
+					"text": ".\"\n\n",
+					"p": 0.000546268
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 5849088,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 48664412160,
+					"attention": 397737984,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.034642,
+				"recompute": 0.148087
+			},
+			"bytesMeasured": 835584,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		},
+		{
+			"step": 17,
+			"kind": "decode",
+			"fed": [
+				68
+			],
+			"length": 69,
+			"top": [
+				{
+					"id": 151645,
+					"text": "<|im_end|>",
+					"p": 0.715156
+				},
+				{
+					"id": 1096,
+					"text": " This",
+					"p": 0.172324
+				},
+				{
+					"id": 1084,
+					"text": " It",
+					"p": 0.0300381
+				},
+				{
+					"id": 576,
+					"text": " The",
+					"p": 0.0141958
+				},
+				{
+					"id": 4354,
+					"text": " However",
+					"p": 0.0138514
+				},
+				{
+					"id": 1416,
+					"text": " If",
+					"p": 0.00539778
+				},
+				{
+					"id": 5209,
+					"text": " Please",
+					"p": 0.00453198
+				},
+				{
+					"id": 358,
+					"text": " I",
+					"p": 0.00427042
+				}
+			],
+			"flops": {
+				"cached": {
+					"linear": 715653120,
+					"attention": 5935104,
+					"lmHead": 272269312
+				},
+				"recompute": {
+					"linear": 49380065280,
+					"attention": 409522176,
+					"lmHead": 272269312
+				}
+			},
+			"seconds": {
+				"cached": 0.030133,
+				"recompute": 0.149825
+			},
+			"bytesMeasured": 847872,
+			"blockTable": [
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	],
+	"memory": {
+		"bytesPerElement": 2,
+		"dtype": "bfloat16",
+		"perTokenPerLayer": 512,
+		"perToken": 12288,
+		"perTokenIfMha": 86016,
+		"weightsBytes": 988065536,
+		"note": "counted from tensor shapes at bfloat16; bytesMeasured sums DynamicCache tensors with the model run in bfloat16",
+		"bf16AnswerMatches": true
+	},
+	"paged": {
+		"blockSize": 16,
+		"poolBlocks": 8,
+		"layout": "[layers][blocks, block_size, kv_heads, head_dim] for K and for V (vLLM)",
+		"allocation": "one free list; a block is taken when the last one fills",
+		"table": [
+			0,
+			1,
+			2,
+			3,
+			4
+		]
+	},
+	"timing": {
+		"machine": "Apple M4 Max",
+		"device": "cpu",
+		"dtype": "float32",
+		"repeats": 7,
+		"statistic": "median",
+		"threads": 10,
+		"cached": "transformers forward of the new token(s) with a DynamicCache, logits for the last position",
+		"recompute": "transformers forward of the whole sequence without a cache, logits for the last position"
+	},
+	"files": {
+		"cache": {
+			"file": "cache.f32",
+			"sha256": "81427c64618c8f560b2840bf4314b3195b566780dc79ba6a996ca8873a0ab502",
+			"bytes": 1695744,
+			"tensors": {
+				"k": {
+					"offset": 0,
+					"length": 211968,
+					"shape": [
+						24,
+						2,
+						69,
+						64
+					]
+				},
+				"v": {
+					"offset": 211968,
+					"length": 211968,
+					"shape": [
+						24,
+						2,
+						69,
+						64
+					]
+				}
+			}
+		},
+		"attention": {
+			"file": "attention.f32",
+			"sha256": "b3ac9eb0a3f8f2e413478041b2b9c99735d7201110eb627fca2c6a43c79203a3",
+			"bytes": 3245760,
+			"tensors": {
+				"weights": {
+					"offset": 0,
+					"length": 811440,
+					"shape": [
+						24,
+						14,
+						2415
+					]
+				}
+			}
+		}
+	},
+	"capture": {
+		"timestamp": "2026-10-30T08:52:30.395312+00:00",
+		"device": "cpu",
+		"dtype": "float32",
+		"attention": "eager, written out in scripts/efficiency/kv_trace.py",
+		"machine": "Apple M4 Max",
+		"python": "3.12.12",
+		"packages": {
+			"torch": "2.14.1",
+			"transformers": "4.57.6",
+			"numpy": "2.5.4"
+		},
+		"modelingSha256": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb",
+		"script": "scripts/efficiency/record_kv_cache.py",
+		"scriptSha256": "551432a735106f7dee09de63a3e2b8818a9f8c5f0b897290cc8625f5d615f8dc",
+		"helperSha256": "c4a888b05821455835b2e8fe34089e6bf227011d70e7cf6326aa0ef44e8a238f"
+	},
+	"validation": {
+		"runnerVsTransformersLogitsMaxError": 2.1e-05,
+		"cachedVsUncachedLogitsMaxError": 7.1e-05,
+		"cachedVsUncachedAttentionMaxError": 4.69e-05,
+		"cacheVsDynamicCacheMaxError": 0.0,
+		"pagedGatherMaxError": 0.0,
+		"attentionRowSumMaxError": 4.17e-07,
+		"flopsVsTorchFlopCounterMaxError": 0,
+		"generateMatchesGreedy": true,
+		"bf16BytesMeasuredEqualCounted": true
+	}
+}
