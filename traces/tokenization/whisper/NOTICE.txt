@@ -1,0 +1,7 @@
+This recording plays and analyses one LibriSpeech utterance.
+Audio: LibriSpeech ASR corpus, dev-clean, utterance 1272-135031-0012 (speaker 1272, chapter 135031)
+Authors: Vassil Panayotov, Guoguo Chen, Daniel Povey and Sanjeev Khudanpur, from LibriVox public-domain audiobooks
+Copy used: hf-internal-testing/librispeech_asr_dummy, revision 5be91486e11a2d616f4ec5db8d3fd248585ac07a
+Corpus: https://www.openslr.org/12
+License: Creative Commons Attribution 4.0 International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/
+Changes: turned into log-mel features and transcribed by openai/whisper-base (Apache-2.0).
