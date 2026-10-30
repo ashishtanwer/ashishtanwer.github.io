@@ -37,7 +37,7 @@
 			"gripper (−1 open, +1 closed)"
 		],
 		"chunkFile": "8340383e9286d8329b431b3693aa693aeb5625c5950d6c960f2742ad5f99e270",
-		"statsFile": "e51b17caa504c04be54a64130ec4cacf194b935bd8dd61cf903a06955df39a38",
+		"statsFile": "6a2615b94187bce1fe27522c740469bc5c8ae86116bcfceebff85e76092df6d2",
 		"normalization": "openpi @ 215abfb: (x − q01) / (q99 − q01 + 1e-6) · 2 − 1, not clamped",
 		"normalizationUrl": "https://github.com/Physical-Intelligence/openpi/blob/215abfb217dbac7d5f1273282331b9b1866c0479/src/openpi/transforms.py"
 	},
@@ -2919,7 +2919,7 @@
 			"transformers": "4.57.6",
 			"tokenizers": "0.22.2"
 		},
-		"recorded": "2026-10-30T07:25:26+00:00",
+		"recorded": "2026-10-30T16:39:33+00:00",
 		"script": "scripts/tokenization/record_fast.py"
 	}
 }
