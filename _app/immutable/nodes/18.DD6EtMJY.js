@@ -1,1 +1,0 @@
-import"../chunks/BGHI4Rfr.js";import"../chunks/DFWWhblk.js";import{W as t}from"../chunks/By6vleBl.js";const o=!0,r="always",p=Object.freeze(Object.defineProperty({__proto__:null,prerender:o,trailingSlash:r},Symbol.toStringTag,{value:"Module"}));function l(e){t(e,{variant:"tdmpc2"})}export{l as component,p as universal};
