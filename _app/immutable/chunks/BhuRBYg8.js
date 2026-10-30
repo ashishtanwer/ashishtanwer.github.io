@@ -1,0 +1,1 @@
+const e=t=>t*137.508%360,o=t=>`hsl(${e(t).toFixed(1)} 62% 88%)`,s=t=>`hsl(${e(t).toFixed(1)} 45% 30%)`,n=t=>({file:t.file,frames:t.frames,columns:t.frames,tileWidth:t.width,tileHeight:t.height}),i=t=>t>=.995?"100%":t>=.1?`${(t*100).toFixed(0)}%`:`${(t*100).toFixed(1)}%`;export{s as a,e as b,i as p,n as r,o as t};

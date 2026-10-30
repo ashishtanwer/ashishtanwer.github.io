@@ -1,0 +1,816 @@
+{
+	"kind": "byte-tokenizer",
+	"tab": "byt5",
+	"model": {
+		"id": "google/byt5-small",
+		"name": "ByT5 small",
+		"revision": "68377bdc18a2ffec8a0533fef03b1c513a4dd49d",
+		"url": "https://huggingface.co/google/byt5-small/tree/68377bdc18a2ffec8a0533fef03b1c513a4dd49d",
+		"license": "Apache-2.0",
+		"licenseUrl": "https://www.apache.org/licenses/LICENSE-2.0",
+		"paper": "https://arxiv.org/abs/2105.13626",
+		"tokenizer": "ByT5Tokenizer",
+		"checkpointSha256": "5c5aaf56299d6f2d4eaadad550a40765198828ead4d74f0a15f91cbe0961931a",
+		"vocab": 384,
+		"offset": 3,
+		"special": {
+			"<pad>": 0,
+			"</s>": 1,
+			"<unk>": 2
+		},
+		"extraIds": [259, 383],
+		"dModel": 1472,
+		"encoderLayers": 12,
+		"decoderLayers": 4,
+		"heads": 6,
+		"dFF": 3584,
+		"embeddingParameters": 565248,
+		"lmHeadSeparate": true
+	},
+	"gpt2": {
+		"id": "openai-community/gpt2",
+		"revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+		"url": "https://huggingface.co/openai-community/gpt2/tree/607a30d783dfa663caf39e06633721c8d4cfcd7e",
+		"license": "MIT",
+		"tokenizer": "GPT2Tokenizer",
+		"vocab": 50257,
+		"dModel": 768,
+		"embeddingParameters": 38597376
+	},
+	"inputs": [
+		{
+			"label": "English sentence",
+			"text": "Tokenization turns text into numbers.",
+			"chars": [
+				{
+					"text": "T",
+					"codepoint": 84,
+					"start": 0,
+					"bytes": 1
+				},
+				{
+					"text": "o",
+					"codepoint": 111,
+					"start": 1,
+					"bytes": 1
+				},
+				{
+					"text": "k",
+					"codepoint": 107,
+					"start": 2,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 3,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 4,
+					"bytes": 1
+				},
+				{
+					"text": "i",
+					"codepoint": 105,
+					"start": 5,
+					"bytes": 1
+				},
+				{
+					"text": "z",
+					"codepoint": 122,
+					"start": 6,
+					"bytes": 1
+				},
+				{
+					"text": "a",
+					"codepoint": 97,
+					"start": 7,
+					"bytes": 1
+				},
+				{
+					"text": "t",
+					"codepoint": 116,
+					"start": 8,
+					"bytes": 1
+				},
+				{
+					"text": "i",
+					"codepoint": 105,
+					"start": 9,
+					"bytes": 1
+				},
+				{
+					"text": "o",
+					"codepoint": 111,
+					"start": 10,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 11,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 12,
+					"bytes": 1
+				},
+				{
+					"text": "t",
+					"codepoint": 116,
+					"start": 13,
+					"bytes": 1
+				},
+				{
+					"text": "u",
+					"codepoint": 117,
+					"start": 14,
+					"bytes": 1
+				},
+				{
+					"text": "r",
+					"codepoint": 114,
+					"start": 15,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 16,
+					"bytes": 1
+				},
+				{
+					"text": "s",
+					"codepoint": 115,
+					"start": 17,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 18,
+					"bytes": 1
+				},
+				{
+					"text": "t",
+					"codepoint": 116,
+					"start": 19,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 20,
+					"bytes": 1
+				},
+				{
+					"text": "x",
+					"codepoint": 120,
+					"start": 21,
+					"bytes": 1
+				},
+				{
+					"text": "t",
+					"codepoint": 116,
+					"start": 22,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 23,
+					"bytes": 1
+				},
+				{
+					"text": "i",
+					"codepoint": 105,
+					"start": 24,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 25,
+					"bytes": 1
+				},
+				{
+					"text": "t",
+					"codepoint": 116,
+					"start": 26,
+					"bytes": 1
+				},
+				{
+					"text": "o",
+					"codepoint": 111,
+					"start": 27,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 28,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 29,
+					"bytes": 1
+				},
+				{
+					"text": "u",
+					"codepoint": 117,
+					"start": 30,
+					"bytes": 1
+				},
+				{
+					"text": "m",
+					"codepoint": 109,
+					"start": 31,
+					"bytes": 1
+				},
+				{
+					"text": "b",
+					"codepoint": 98,
+					"start": 32,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 33,
+					"bytes": 1
+				},
+				{
+					"text": "r",
+					"codepoint": 114,
+					"start": 34,
+					"bytes": 1
+				},
+				{
+					"text": "s",
+					"codepoint": 115,
+					"start": 35,
+					"bytes": 1
+				},
+				{
+					"text": ".",
+					"codepoint": 46,
+					"start": 36,
+					"bytes": 1
+				}
+			],
+			"bytes": [
+				84, 111, 107, 101, 110, 105, 122, 97, 116, 105, 111, 110, 32, 116, 117, 114, 110, 115, 32,
+				116, 101, 120, 116, 32, 105, 110, 116, 111, 32, 110, 117, 109, 98, 101, 114, 115, 46
+			],
+			"ids": [
+				87, 114, 110, 104, 113, 108, 125, 100, 119, 108, 114, 113, 35, 119, 120, 117, 113, 118, 35,
+				119, 104, 123, 119, 35, 108, 113, 119, 114, 35, 113, 120, 112, 101, 104, 117, 118, 49, 1
+			],
+			"tokens": ["</s>"],
+			"decoded": "Tokenization turns text into numbers.",
+			"decodedWithSpecial": "Tokenization turns text into numbers.</s>",
+			"prefixes": [
+				"",
+				"T",
+				"To",
+				"Tok",
+				"Toke",
+				"Token",
+				"Tokeni",
+				"Tokeniz",
+				"Tokeniza",
+				"Tokenizat",
+				"Tokenizati",
+				"Tokenizatio",
+				"Tokenization",
+				"Tokenization ",
+				"Tokenization t",
+				"Tokenization tu",
+				"Tokenization tur",
+				"Tokenization turn",
+				"Tokenization turns",
+				"Tokenization turns ",
+				"Tokenization turns t",
+				"Tokenization turns te",
+				"Tokenization turns tex",
+				"Tokenization turns text",
+				"Tokenization turns text ",
+				"Tokenization turns text i",
+				"Tokenization turns text in",
+				"Tokenization turns text int",
+				"Tokenization turns text into",
+				"Tokenization turns text into ",
+				"Tokenization turns text into n",
+				"Tokenization turns text into nu",
+				"Tokenization turns text into num",
+				"Tokenization turns text into numb",
+				"Tokenization turns text into numbe",
+				"Tokenization turns text into number",
+				"Tokenization turns text into numbers",
+				"Tokenization turns text into numbers."
+			],
+			"gpt2": {
+				"ids": [30642, 1634, 4962, 2420, 656, 3146, 13],
+				"pieces": ["Token", "ization", "Ġturns", "Ġtext", "Ġinto", "Ġnumbers", "."],
+				"spans": [
+					[0, 5],
+					[5, 12],
+					[12, 18],
+					[18, 23],
+					[23, 28],
+					[28, 36],
+					[36, 37]
+				],
+				"alone": ["Token", "ization", " turns", " text", " into", " numbers", "."],
+				"decoded": "Tokenization turns text into numbers."
+			}
+		},
+		{
+			"label": "a long word",
+			"text": "unbelievably",
+			"chars": [
+				{
+					"text": "u",
+					"codepoint": 117,
+					"start": 0,
+					"bytes": 1
+				},
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 1,
+					"bytes": 1
+				},
+				{
+					"text": "b",
+					"codepoint": 98,
+					"start": 2,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 3,
+					"bytes": 1
+				},
+				{
+					"text": "l",
+					"codepoint": 108,
+					"start": 4,
+					"bytes": 1
+				},
+				{
+					"text": "i",
+					"codepoint": 105,
+					"start": 5,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 6,
+					"bytes": 1
+				},
+				{
+					"text": "v",
+					"codepoint": 118,
+					"start": 7,
+					"bytes": 1
+				},
+				{
+					"text": "a",
+					"codepoint": 97,
+					"start": 8,
+					"bytes": 1
+				},
+				{
+					"text": "b",
+					"codepoint": 98,
+					"start": 9,
+					"bytes": 1
+				},
+				{
+					"text": "l",
+					"codepoint": 108,
+					"start": 10,
+					"bytes": 1
+				},
+				{
+					"text": "y",
+					"codepoint": 121,
+					"start": 11,
+					"bytes": 1
+				}
+			],
+			"bytes": [117, 110, 98, 101, 108, 105, 101, 118, 97, 98, 108, 121],
+			"ids": [120, 113, 101, 104, 111, 108, 104, 121, 100, 101, 111, 124, 1],
+			"tokens": ["</s>"],
+			"decoded": "unbelievably",
+			"decodedWithSpecial": "unbelievably</s>",
+			"prefixes": [
+				"",
+				"u",
+				"un",
+				"unb",
+				"unbe",
+				"unbel",
+				"unbeli",
+				"unbelie",
+				"unbeliev",
+				"unbelieva",
+				"unbelievab",
+				"unbelievabl",
+				"unbelievably"
+			],
+			"gpt2": {
+				"ids": [403, 6667, 11203, 1346],
+				"pieces": ["un", "bel", "iev", "ably"],
+				"spans": [
+					[0, 2],
+					[2, 5],
+					[5, 8],
+					[8, 12]
+				],
+				"alone": ["un", "bel", "iev", "ably"],
+				"decoded": "unbelievably"
+			}
+		},
+		{
+			"label": "accents and an emoji",
+			"text": "naïve café 🤖",
+			"chars": [
+				{
+					"text": "n",
+					"codepoint": 110,
+					"start": 0,
+					"bytes": 1
+				},
+				{
+					"text": "a",
+					"codepoint": 97,
+					"start": 1,
+					"bytes": 1
+				},
+				{
+					"text": "ï",
+					"codepoint": 239,
+					"start": 2,
+					"bytes": 2
+				},
+				{
+					"text": "v",
+					"codepoint": 118,
+					"start": 4,
+					"bytes": 1
+				},
+				{
+					"text": "e",
+					"codepoint": 101,
+					"start": 5,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 6,
+					"bytes": 1
+				},
+				{
+					"text": "c",
+					"codepoint": 99,
+					"start": 7,
+					"bytes": 1
+				},
+				{
+					"text": "a",
+					"codepoint": 97,
+					"start": 8,
+					"bytes": 1
+				},
+				{
+					"text": "f",
+					"codepoint": 102,
+					"start": 9,
+					"bytes": 1
+				},
+				{
+					"text": "é",
+					"codepoint": 233,
+					"start": 10,
+					"bytes": 2
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 12,
+					"bytes": 1
+				},
+				{
+					"text": "🤖",
+					"codepoint": 129302,
+					"start": 13,
+					"bytes": 4
+				}
+			],
+			"bytes": [110, 97, 195, 175, 118, 101, 32, 99, 97, 102, 195, 169, 32, 240, 159, 164, 150],
+			"ids": [113, 100, 198, 178, 121, 104, 35, 102, 100, 105, 198, 172, 35, 243, 162, 167, 153, 1],
+			"tokens": ["</s>"],
+			"decoded": "naïve café 🤖",
+			"decodedWithSpecial": "naïve café 🤖</s>",
+			"prefixes": [
+				"",
+				"n",
+				"na",
+				"na",
+				"naï",
+				"naïv",
+				"naïve",
+				"naïve ",
+				"naïve c",
+				"naïve ca",
+				"naïve caf",
+				"naïve caf",
+				"naïve café",
+				"naïve café ",
+				"naïve café ",
+				"naïve café ",
+				"naïve café ",
+				"naïve café 🤖"
+			],
+			"gpt2": {
+				"ids": [2616, 38776, 40304, 12520, 97, 244],
+				"pieces": ["na", "Ã¯ve", "ĠcafÃ©", "ĠðŁ", "¤", "ĸ"],
+				"spans": [
+					[0, 2],
+					[2, 6],
+					[6, 12],
+					[12, 15],
+					[15, 16],
+					[16, 17]
+				],
+				"alone": ["na", "ïve", " café", " �", "�", "�"],
+				"decoded": "naïve café 🤖"
+			}
+		},
+		{
+			"label": "Japanese",
+			"text": "東京は晴れ",
+			"chars": [
+				{
+					"text": "東",
+					"codepoint": 26481,
+					"start": 0,
+					"bytes": 3
+				},
+				{
+					"text": "京",
+					"codepoint": 20140,
+					"start": 3,
+					"bytes": 3
+				},
+				{
+					"text": "は",
+					"codepoint": 12399,
+					"start": 6,
+					"bytes": 3
+				},
+				{
+					"text": "晴",
+					"codepoint": 26228,
+					"start": 9,
+					"bytes": 3
+				},
+				{
+					"text": "れ",
+					"codepoint": 12428,
+					"start": 12,
+					"bytes": 3
+				}
+			],
+			"bytes": [230, 157, 177, 228, 186, 172, 227, 129, 175, 230, 153, 180, 227, 130, 140],
+			"ids": [233, 160, 180, 231, 189, 175, 230, 132, 178, 233, 156, 183, 230, 133, 143, 1],
+			"tokens": ["</s>"],
+			"decoded": "東京は晴れ",
+			"decodedWithSpecial": "東京は晴れ</s>",
+			"prefixes": [
+				"",
+				"",
+				"",
+				"東",
+				"東",
+				"東",
+				"東京",
+				"東京",
+				"東京",
+				"東京は",
+				"東京は",
+				"東京は",
+				"東京は晴",
+				"東京は晴",
+				"東京は晴",
+				"東京は晴れ"
+			],
+			"gpt2": {
+				"ids": [30266, 109, 12859, 105, 31676, 162, 247, 112, 39258],
+				"pieces": ["æĿ", "±", "äº", "¬", "ãģ¯", "æ", "Ļ", "´", "ãĤĮ"],
+				"spans": [
+					[0, 2],
+					[2, 3],
+					[3, 5],
+					[5, 6],
+					[6, 9],
+					[9, 10],
+					[10, 11],
+					[11, 12],
+					[12, 15]
+				],
+				"alone": ["�", "�", "�", "�", "は", "�", "�", "�", "れ"],
+				"decoded": "東京は晴れ"
+			}
+		},
+		{
+			"label": "indented code",
+			"text": "    x = 12345",
+			"chars": [
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 0,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 1,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 2,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 3,
+					"bytes": 1
+				},
+				{
+					"text": "x",
+					"codepoint": 120,
+					"start": 4,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 5,
+					"bytes": 1
+				},
+				{
+					"text": "=",
+					"codepoint": 61,
+					"start": 6,
+					"bytes": 1
+				},
+				{
+					"text": " ",
+					"codepoint": 32,
+					"start": 7,
+					"bytes": 1
+				},
+				{
+					"text": "1",
+					"codepoint": 49,
+					"start": 8,
+					"bytes": 1
+				},
+				{
+					"text": "2",
+					"codepoint": 50,
+					"start": 9,
+					"bytes": 1
+				},
+				{
+					"text": "3",
+					"codepoint": 51,
+					"start": 10,
+					"bytes": 1
+				},
+				{
+					"text": "4",
+					"codepoint": 52,
+					"start": 11,
+					"bytes": 1
+				},
+				{
+					"text": "5",
+					"codepoint": 53,
+					"start": 12,
+					"bytes": 1
+				}
+			],
+			"bytes": [32, 32, 32, 32, 120, 32, 61, 32, 49, 50, 51, 52, 53],
+			"ids": [35, 35, 35, 35, 123, 35, 64, 35, 52, 53, 54, 55, 56, 1],
+			"tokens": ["</s>"],
+			"decoded": "    x = 12345",
+			"decodedWithSpecial": "    x = 12345</s>",
+			"prefixes": [
+				"",
+				" ",
+				"  ",
+				"   ",
+				"    ",
+				"    x",
+				"    x ",
+				"    x =",
+				"    x = ",
+				"    x = 1",
+				"    x = 12",
+				"    x = 123",
+				"    x = 1234",
+				"    x = 12345"
+			],
+			"gpt2": {
+				"ids": [220, 220, 220, 2124, 796, 17031, 2231],
+				"pieces": ["Ġ", "Ġ", "Ġ", "Ġx", "Ġ=", "Ġ123", "45"],
+				"spans": [
+					[0, 1],
+					[1, 2],
+					[2, 3],
+					[3, 5],
+					[5, 7],
+					[7, 11],
+					[11, 13]
+				],
+				"alone": [" ", " ", " ", " x", " =", " 123", "45"],
+				"decoded": "    x = 12345"
+			}
+		}
+	],
+	"embedding": {
+		"file": "embedding.f32",
+		"sha256": "3e0f20044f743555b141191c04fbe99a5d38874ede71f188b24db35f25a97c15",
+		"bytes": 99840,
+		"tensors": {
+			"norms": {
+				"offset": 0,
+				"length": 384,
+				"shape": [384]
+			},
+			"preview": {
+				"offset": 384,
+				"length": 24576,
+				"shape": [384, 64]
+			}
+		}
+	},
+	"rows": {
+		"preview": 64,
+		"initNorm": 38.36665218650175,
+		"untrained": [
+			2, 16, 195, 196, 248, 249, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271,
+			272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290,
+			291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309,
+			310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328,
+			329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347,
+			348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366,
+			367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383
+		],
+		"rule": "rows whose norm is below 2·√d_model; a row drawn from N(0, 1) has norm ≈ √d_model"
+	},
+	"validation": {
+		"idsVsBytesPlus3": 0,
+		"roundTrip": 0,
+		"prefixDecodes": 0,
+		"gpt2BytesVsText": 0,
+		"gpt2RoundTrip": 0,
+		"vocabSizeVsConfig": 0,
+		"encoderEmbedVsShared": 0.0,
+		"decoderEmbedVsShared": 0.0,
+		"embeddingFileVsTable": 0.0
+	},
+	"capture": {
+		"timestamp": "2026-10-30T07:10:17.405214+00:00",
+		"device": "cpu",
+		"dtype": "float32",
+		"python": "3.12.12",
+		"packages": {
+			"torch": "2.14.1",
+			"transformers": "5.21.0",
+			"tokenizers": "0.23.3",
+			"huggingface-hub": "2.4.0"
+		},
+		"script": "scripts/tokenization/record_byt5.py",
+		"scriptSha256": "72820a7c958bab3336583e6d600773fe917173ba4b53a84f10a6d828dc23fc76",
+		"helperSha256": "665a805686e18877fe1986eda0d5b069c438c85e2d4c05cb2c37e15568dfd98b"
+	}
+}
