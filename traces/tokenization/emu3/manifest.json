@@ -1,0 +1,286 @@
+{
+	"schemaVersion": 1,
+	"kind": "tokenization-emu3",
+	"tab": "emu3",
+	"model": {
+		"id": "BAAI/Emu3-VisionTokenizer",
+		"name": "Emu3 vision tokenizer",
+		"revision": "c81f916ad371289e205310a7539255e8a9396488",
+		"url": "https://huggingface.co/BAAI/Emu3-VisionTokenizer/tree/c81f916ad371289e205310a7539255e8a9396488",
+		"license": "Apache-2.0",
+		"paper": "https://arxiv.org/abs/2409.18869",
+		"code": "https://github.com/baaivision/Emu3",
+		"parameters": 270740287,
+		"codebook": 32768,
+		"embedDim": 4,
+		"ch": 256,
+		"chMult": [1, 2, 2, 4],
+		"resBlocks": 2,
+		"frames": 4,
+		"factor": 8,
+		"chat": "BAAI/Emu3-Chat",
+		"chatRevision": "d9cb6ffe11d3f62b73d08d40672c243e77344d51"
+	},
+	"image": {
+		"file": "static/architectures/sam-beagle.jpg",
+		"title": "Dog beagle",
+		"author": "Jon Sullivan",
+		"license": "Public domain",
+		"url": "https://commons.wikimedia.org/wiki/File:Dog_beagle.jpg",
+		"size": [1000, 750],
+		"resized": [752, 1000],
+		"grid": [94, 125],
+		"input": {
+			"file": "input.webp",
+			"sha256": "b664ff63aa0a3d195c0ec7af48e2a034e787d784b486f33166c14ce9bbb017d2",
+			"bytes": 732232,
+			"width": 1000,
+			"height": 752
+		},
+		"recon": {
+			"file": "recon.webp",
+			"sha256": "66b77b0067719e87777c786066e3446c3fb76aa4661b8fffcf5ac338d1ebcfda",
+			"bytes": 827486,
+			"width": 1000,
+			"height": 752
+		},
+		"error": {
+			"file": "error.webp",
+			"sha256": "d7b4e85469772e7aa9bbbaea4839d1d193560abeff7d117a47aa09443c8370c5",
+			"bytes": 1074304,
+			"width": 1000,
+			"height": 752
+		}
+	},
+	"metrics": {
+		"psnr": 25.970062593231795,
+		"meanAbsError": 9.490792109929078,
+		"distinctCodes": 4374,
+		"usage": [
+			[8394, 13],
+			[5763, 12],
+			[11375, 12],
+			[303, 12],
+			[1920, 11],
+			[7967, 11],
+			[5577, 11],
+			[57, 11],
+			[9911, 11],
+			[6131, 10],
+			[8186, 10],
+			[7070, 10]
+		],
+		"meanDistance": 0.0026431879960000515
+	},
+	"sequence": {
+		"prompt": "Please describe the image",
+		"length": 11873,
+		"imageStart": 10,
+		"imageToken": 17,
+		"imageEnd": 11863,
+		"prefix": [
+			{
+				"id": 151849,
+				"text": "<|extra_203|>"
+			},
+			{
+				"id": 2610,
+				"text": "You"
+			},
+			{
+				"id": 525,
+				"text": " are"
+			},
+			{
+				"id": 264,
+				"text": " a"
+			},
+			{
+				"id": 10950,
+				"text": " helpful"
+			},
+			{
+				"id": 17847,
+				"text": " assistant"
+			},
+			{
+				"id": 13,
+				"text": "."
+			},
+			{
+				"id": 13872,
+				"text": " USER"
+			},
+			{
+				"id": 25,
+				"text": ":"
+			},
+			{
+				"id": 220,
+				"text": " "
+			},
+			{
+				"id": 151852,
+				"text": "<|image start|>"
+			},
+			{
+				"id": 24,
+				"text": "9"
+			},
+			{
+				"id": 19,
+				"text": "4"
+			},
+			{
+				"id": 9,
+				"text": "*"
+			},
+			{
+				"id": 16,
+				"text": "1"
+			},
+			{
+				"id": 17,
+				"text": "2"
+			},
+			{
+				"id": 20,
+				"text": "5"
+			},
+			{
+				"id": 151851,
+				"text": "<|image token|>"
+			}
+		],
+		"suffix": [
+			{
+				"id": 151847,
+				"text": "<|extra_201|>"
+			},
+			{
+				"id": 151853,
+				"text": "<|image end|>"
+			},
+			{
+				"id": 5501,
+				"text": "Please"
+			},
+			{
+				"id": 7512,
+				"text": " describe"
+			},
+			{
+				"id": 279,
+				"text": " the"
+			},
+			{
+				"id": 2168,
+				"text": " image"
+			},
+			{
+				"id": 13,
+				"text": "."
+			},
+			{
+				"id": 35560,
+				"text": " ASS"
+			},
+			{
+				"id": 3846,
+				"text": "IST"
+			},
+			{
+				"id": 2821,
+				"text": "ANT"
+			},
+			{
+				"id": 25,
+				"text": ":"
+			}
+		],
+		"visual": 11750,
+		"rowEnds": 94,
+		"visual0": 151854,
+		"special": {
+			"boi": 151852,
+			"img": 151851,
+			"eol": 151846,
+			"eof": 151847,
+			"eoi": 151853
+		}
+	},
+	"dataFile": {
+		"file": "emu3.f32",
+		"sha256": "614da0376fae8ab06ecbafc28b0facaf0d29dba4020e7162d80d7dbdeb437ac5",
+		"bytes": 1652780,
+		"tensors": {
+			"latent": {
+				"offset": 0,
+				"length": 47000,
+				"shape": [4, 94, 125]
+			},
+			"ids": {
+				"offset": 47000,
+				"length": 11750,
+				"shape": [94, 125]
+			},
+			"distance": {
+				"offset": 58750,
+				"length": 11750,
+				"shape": [94, 125]
+			},
+			"topIds": {
+				"offset": 70500,
+				"length": 94000,
+				"shape": [94, 125, 8]
+			},
+			"topDistances": {
+				"offset": 164500,
+				"length": 94000,
+				"shape": [94, 125, 8]
+			},
+			"cellError": {
+				"offset": 258500,
+				"length": 11750,
+				"shape": [94, 125]
+			},
+			"codebook": {
+				"offset": 270250,
+				"length": 131072,
+				"shape": [32768, 4]
+			},
+			"sequence": {
+				"offset": 401322,
+				"length": 11873,
+				"shape": [11873]
+			}
+		}
+	},
+	"validation": {
+		"drawerIdsVsModel": 0.0,
+		"drawerDecodeVsModel": 0.0,
+		"drawerPreprocessVsProcessor": 0.0,
+		"top1VsIds": 0.0,
+		"drawerSequenceVsProcessor": 0.0,
+		"inputRoundTrip": 7.569789886474609e-6,
+		"visualTokens": 0.0,
+		"distanceVsLatent": 1.1224765330553055e-6
+	},
+	"capture": {
+		"device": "mps",
+		"timing": {
+			"encode": 21.518175417000748,
+			"decode": 89.9911288329995
+		},
+		"versions": {
+			"python": "3.12.12",
+			"torch": "2.14.1",
+			"transformers": "4.57.6",
+			"tiktoken": "0.14.0",
+			"numpy": "2.5.4",
+			"PIL": "13.0.0"
+		},
+		"recorded": "2026-10-30T15:07:09+00:00",
+		"script": "scripts/tokenization/record_emu3.py"
+	}
+}
