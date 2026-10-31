@@ -1,0 +1,1081 @@
+{
+ "schemaVersion": 1,
+ "kind": "seq2seq-attention",
+ "tab": "seq2seq-attention",
+ "model": {
+  "id": "before-transformers/bahdanau-gru-tatoeba-en-fr",
+  "name": "GRU encoder–decoder + attention",
+  "revision": "f79255e10d0c9772d9fe1ea177d3735484e3ec92",
+  "url": "https://arxiv.org/abs/1409.0473",
+  "license": "trained locally",
+  "paper": "https://arxiv.org/abs/1409.0473",
+  "trainedLocally": true,
+  "parameters": 5724100,
+  "config": {
+   "src_vocab": 4303,
+   "tgt_vocab": 5700,
+   "embed_dim": 128,
+   "enc_hidden": 128,
+   "dec_hidden": 256,
+   "attn_dim": 128,
+   "max_len": 16
+  }
+ },
+ "dataset": {
+  "name": "Tatoeba English–French sentence pairs",
+  "url": "https://tatoeba.org/en/downloads",
+  "files": {
+   "eng-fra_links.tsv.bz2": {
+    "url": "https://downloads.tatoeba.org/exports/per_language/eng/eng-fra_links.tsv.bz2",
+    "sha256": "71a4c7afb084d68c3bb10692402c31c3c9054ef9ef1330713e7801d8d16b64d6"
+   },
+   "eng_sentences_detailed.tsv.bz2": {
+    "url": "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences_detailed.tsv.bz2",
+    "sha256": "c39d2fab0cc5bc2b798b539134b83abaf5dec723a059ce55496907d08e3e9030"
+   },
+   "fra_sentences_detailed.tsv.bz2": {
+    "url": "https://downloads.tatoeba.org/exports/per_language/fra/fra_sentences_detailed.tsv.bz2",
+    "sha256": "07208a7630b7ec3e51d9cbbcd5112295cdba41de82cf35d41ab8797ae9a5802e"
+   }
+  },
+  "snapshot": "2026-10-24",
+  "license": "CC BY 2.0 FR (Tatoeba); each shown sentence links to its Tatoeba page and author",
+  "filter": "English side starts with I am / he is / she is / you are / we are / they are or their contractions; ≤ 10 English and ≤ 12 French words (PyTorch tutorial filter)",
+  "pairs": 35271,
+  "train": 33485,
+  "heldOut": 1786,
+  "heldOutSentences": 1219,
+  "heldOutShare": 0.05,
+  "tokenizer": "lower-cased, punctuation split off, French elisions (l', j', n') split",
+  "minCount": 2
+ },
+ "run": {
+  "epochs": 12,
+  "batch": 64,
+  "lr": 0.001,
+  "clip": 1.0,
+  "seed": 0,
+  "optimizer": "Adam, constant lr, teacher forcing",
+  "device": "cpu",
+  "seconds": 377.6,
+  "log": [
+   {
+    "epoch": 0,
+    "train": null,
+    "test": 8.663285597854205
+   },
+   {
+    "epoch": 1,
+    "train": 2.518853968336382,
+    "steps": 524,
+    "test": 1.5685146078059764
+   },
+   {
+    "epoch": 2,
+    "train": 1.1880339178192707,
+    "steps": 524,
+    "test": 1.2468723656291616
+   },
+   {
+    "epoch": 3,
+    "train": 0.7984773820365658,
+    "steps": 524,
+    "test": 1.1450232701585783
+   },
+   {
+    "epoch": 4,
+    "train": 0.6098117526933438,
+    "steps": 524,
+    "test": 1.121223853913364
+   },
+   {
+    "epoch": 5,
+    "train": 0.4926163607085024,
+    "steps": 524,
+    "test": 1.1168968624660889
+   },
+   {
+    "epoch": 6,
+    "train": 0.4125551448296045,
+    "steps": 524,
+    "test": 1.115162891988757
+   },
+   {
+    "epoch": 7,
+    "train": 0.3558337513272089,
+    "steps": 524,
+    "test": 1.1307757745858678
+   },
+   {
+    "epoch": 8,
+    "train": 0.3114482217276369,
+    "steps": 524,
+    "test": 1.1517480706880252
+   },
+   {
+    "epoch": 9,
+    "train": 0.28254855080074026,
+    "steps": 524,
+    "test": 1.1791295876188577
+   },
+   {
+    "epoch": 10,
+    "train": 0.2600673417496772,
+    "steps": 524,
+    "test": 1.2081292589288124
+   },
+   {
+    "epoch": 11,
+    "train": 0.24553524236415178,
+    "steps": 524,
+    "test": 1.213621021449789
+   },
+   {
+    "epoch": 12,
+    "train": 0.23507247786997384,
+    "steps": 524,
+    "test": 1.236678389558317
+   }
+  ],
+  "finalTrain": 0.23507247786997384,
+  "finalTest": 1.236678389558317,
+  "exactMatch": 0.25430680885972107,
+  "exactMatchOf": 1219
+ },
+ "examples": [
+  {
+   "source": [
+    "he's",
+    "almost",
+    "as",
+    "tall",
+    "as",
+    "me",
+    "."
+   ],
+   "output": [
+    "il",
+    "est",
+    "presque",
+    "aussi",
+    "grand",
+    "que",
+    "moi",
+    ".",
+    "<eos>"
+   ],
+   "match": true,
+   "references": [
+    {
+     "words": [
+      "il",
+      "est",
+      "presque",
+      "aussi",
+      "grand",
+      "que",
+      "moi",
+      "."
+     ],
+     "text": "Il est presque aussi grand que moi.",
+     "fraId": 13354,
+     "fraUser": "sacredceltic"
+    }
+   ],
+   "english": "He's almost as tall as me.",
+   "engId": 33295,
+   "engUser": "CK",
+   "topWords": [
+    [
+     "il",
+     "cet",
+     "ce",
+     "c'",
+     "lui"
+    ],
+    [
+     "est",
+     "a",
+     "mesure",
+     "presque",
+     "fait"
+    ],
+    [
+     "presque",
+     "pratiquement",
+     "aussi",
+     "encore",
+     "très"
+    ],
+    [
+     "aussi",
+     "presque",
+     "fini",
+     "pratiquement",
+     "bien"
+    ],
+    [
+     "grand",
+     "grande",
+     "grands",
+     "âgé",
+     "et"
+    ],
+    [
+     "que",
+     "qu'",
+     "moi",
+     ".",
+     "pour"
+    ],
+    [
+     "moi",
+     "mon",
+     "je",
+     "toi",
+     "mes"
+    ],
+    [
+     ".",
+     "!",
+     ",",
+     "en",
+     "maintenant"
+    ],
+    [
+     "<eos>",
+     "moi",
+     ".",
+     "donne-moi",
+     "je"
+    ]
+   ],
+   "steps": 9
+  },
+  {
+   "source": [
+    "i'm",
+    "at",
+    "the",
+    "airport",
+    "now",
+    "."
+   ],
+   "output": [
+    "je",
+    "suis",
+    "maintenant",
+    "à",
+    "l'",
+    "aéroport",
+    ".",
+    "<eos>"
+   ],
+   "match": true,
+   "references": [
+    {
+     "words": [
+      "je",
+      "suis",
+      "maintenant",
+      "à",
+      "l'",
+      "aéroport",
+      "."
+     ],
+     "text": "Je suis maintenant à l'aéroport.",
+     "fraId": 6539,
+     "fraUser": "sacredceltic"
+    }
+   ],
+   "english": "I'm at the airport now.",
+   "engId": 257501,
+   "engUser": "CK",
+   "topWords": [
+    [
+     "je",
+     "maintenant",
+     "actuellement",
+     "c'",
+     "ce"
+    ],
+    [
+     "suis",
+     "me",
+     "vais",
+     "m'",
+     "maintenant"
+    ],
+    [
+     "maintenant",
+     "actuellement",
+     "à",
+     "au",
+     "pour"
+    ],
+    [
+     "à",
+     ",",
+     "l'",
+     "actuellement",
+     "la"
+    ],
+    [
+     "l'",
+     "la",
+     "voir",
+     "ce",
+     "le"
+    ],
+    [
+     "aéroport",
+     "autre",
+     "instant",
+     "actuellement",
+     "université"
+    ],
+    [
+     ".",
+     "maintenant",
+     "actuelle",
+     "!",
+     "actuellement"
+    ],
+    [
+     "<eos>",
+     "maintenant",
+     ".",
+     "ce",
+     "c'"
+    ]
+   ],
+   "steps": 8
+  },
+  {
+   "source": [
+    "you",
+    "are",
+    "not",
+    "a",
+    "coward",
+    "."
+   ],
+   "output": [
+    "tu",
+    "n'",
+    "es",
+    "pas",
+    "un",
+    "lâche",
+    ".",
+    "<eos>"
+   ],
+   "match": true,
+   "references": [
+    {
+     "words": [
+      "tu",
+      "n'",
+      "es",
+      "pas",
+      "un",
+      "lâche",
+      "."
+     ],
+     "text": "Tu n'es pas un lâche.",
+     "fraId": 468744,
+     "fraUser": "sacredceltic"
+    },
+    {
+     "words": [
+      "vous",
+      "n'",
+      "êtes",
+      "pas",
+      "un",
+      "lâche",
+      "."
+     ],
+     "text": "Vous n'êtes pas un lâche.",
+     "fraId": 468746,
+     "fraUser": "sacredceltic"
+    }
+   ],
+   "english": "You are not a coward.",
+   "engId": 16281,
+   "engUser": "CK",
+   "topWords": [
+    [
+     "tu",
+     "vous",
+     "t'",
+     "ne",
+     "ça"
+    ],
+    [
+     "n'",
+     "ne",
+     "es",
+     "l'",
+     "te"
+    ],
+    [
+     "es",
+     "est",
+     "y",
+     "êtes",
+     "lâche"
+    ],
+    [
+     "pas",
+     "qu'",
+     "un",
+     "aucun",
+     "plus"
+    ],
+    [
+     "un",
+     "lâche",
+     "une",
+     "<unk>",
+     "mal"
+    ],
+    [
+     "lâche",
+     "<unk>",
+     "couard",
+     "tueur",
+     "bon"
+    ],
+    [
+     ".",
+     ",",
+     "à",
+     "!",
+     "<unk>"
+    ],
+    [
+     "<eos>",
+     "lâche",
+     ".",
+     "et",
+     "<unk>"
+    ]
+   ],
+   "steps": 8
+  },
+  {
+   "source": [
+    "i",
+    "am",
+    "afraid",
+    "of",
+    "bears",
+    "."
+   ],
+   "output": [
+    "j'",
+    "ai",
+    "peur",
+    "des",
+    "ours",
+    ".",
+    "<eos>"
+   ],
+   "match": true,
+   "references": [
+    {
+     "words": [
+      "j'",
+      "ai",
+      "peur",
+      "des",
+      "ours",
+      "."
+     ],
+     "text": "J'ai peur des ours.",
+     "fraId": 1082987,
+     "fraUser": "gillux"
+    }
+   ],
+   "english": "I am afraid of bears.",
+   "engId": 257026,
+   "engUser": "CK",
+   "topWords": [
+    [
+     "j'",
+     "je",
+     "ça",
+     "la",
+     "les"
+    ],
+    [
+     "ai",
+     "en",
+     "aime",
+     "peur",
+     "<unk>"
+    ],
+    [
+     "peur",
+     "la",
+     "bien",
+     "les",
+     "pris"
+    ],
+    [
+     "des",
+     "du",
+     "de",
+     "un",
+     "qu'"
+    ],
+    [
+     "ours",
+     "<unk>",
+     "chiens",
+     "peur",
+     "amis"
+    ],
+    [
+     ".",
+     "<unk>",
+     "et",
+     "!",
+     ","
+    ],
+    [
+     "<eos>",
+     "j'",
+     "et",
+     ".",
+     "donne-moi"
+    ]
+   ],
+   "steps": 7
+  },
+  {
+   "source": [
+    "i'm",
+    "working",
+    "on",
+    "his",
+    "car",
+    "."
+   ],
+   "output": [
+    "je",
+    "travaille",
+    "sur",
+    "le",
+    "wagon",
+    "de",
+    "voiture",
+    ".",
+    "<eos>"
+   ],
+   "match": false,
+   "references": [
+    {
+     "words": [
+      "je",
+      "travaille",
+      "sur",
+      "sa",
+      "voiture",
+      "."
+     ],
+     "text": "Je travaille sur sa voiture.",
+     "fraId": 1291916,
+     "fraUser": "sacredceltic"
+    }
+   ],
+   "english": "I'm working on his car.",
+   "engId": 260649,
+   "engUser": "CK",
+   "topWords": [
+    [
+     "je",
+     "j'",
+     "pour",
+     "elle",
+     "travaille"
+    ],
+    [
+     "travaille",
+     "nettoie",
+     "<unk>",
+     "suis",
+     "vais"
+    ],
+    [
+     "sur",
+     "à",
+     "dans",
+     "pour",
+     "au"
+    ],
+    [
+     "le",
+     "son",
+     "sa",
+     "la",
+     "ses"
+    ],
+    [
+     "wagon",
+     "<unk>",
+     "voiture",
+     "char",
+     "point"
+    ],
+    [
+     "de",
+     ".",
+     "du",
+     "d'",
+     "des"
+    ],
+    [
+     "voiture",
+     "la",
+     "queue",
+     "<unk>",
+     "ses"
+    ],
+    [
+     ".",
+     "du",
+     "la",
+     "<eos>",
+     "de"
+    ],
+    [
+     "<eos>",
+     "ses",
+     ".",
+     "du",
+     "et"
+    ]
+   ],
+   "steps": 9
+  }
+ ],
+ "tensors": {
+  "file": "seq2seq.f32",
+  "sha256": "aa98cb11e06579bfa83ec2daf21266d5416e717c33a51b7997207502ba1267b5",
+  "bytes": 434476,
+  "tensors": {
+   "attn.W_a": {
+    "offset": 0,
+    "length": 32768,
+    "shape": [
+     128,
+     256
+    ]
+   },
+   "attn.b_a": {
+    "offset": 32768,
+    "length": 128,
+    "shape": [
+     128
+    ]
+   },
+   "attn.U_a": {
+    "offset": 32896,
+    "length": 32768,
+    "shape": [
+     128,
+     256
+    ]
+   },
+   "attn.v_a": {
+    "offset": 65664,
+    "length": 128,
+    "shape": [
+     128
+    ]
+   },
+   "ex0.annotations": {
+    "offset": 65792,
+    "length": 1792,
+    "shape": [
+     7,
+     256
+    ]
+   },
+   "ex0.keys": {
+    "offset": 67584,
+    "length": 896,
+    "shape": [
+     7,
+     128
+    ]
+   },
+   "ex0.queries": {
+    "offset": 68480,
+    "length": 1152,
+    "shape": [
+     9,
+     128
+    ]
+   },
+   "ex0.sPrev": {
+    "offset": 69632,
+    "length": 2304,
+    "shape": [
+     9,
+     256
+    ]
+   },
+   "ex0.scores": {
+    "offset": 71936,
+    "length": 63,
+    "shape": [
+     9,
+     7
+    ]
+   },
+   "ex0.alpha": {
+    "offset": 71999,
+    "length": 63,
+    "shape": [
+     9,
+     7
+    ]
+   },
+   "ex0.context": {
+    "offset": 72062,
+    "length": 2304,
+    "shape": [
+     9,
+     256
+    ]
+   },
+   "ex0.topP": {
+    "offset": 74366,
+    "length": 45,
+    "shape": [
+     9,
+     5
+    ]
+   },
+   "ex0.srcEmbed": {
+    "offset": 74411,
+    "length": 896,
+    "shape": [
+     7,
+     128
+    ]
+   },
+   "ex1.annotations": {
+    "offset": 75307,
+    "length": 1536,
+    "shape": [
+     6,
+     256
+    ]
+   },
+   "ex1.keys": {
+    "offset": 76843,
+    "length": 768,
+    "shape": [
+     6,
+     128
+    ]
+   },
+   "ex1.queries": {
+    "offset": 77611,
+    "length": 1024,
+    "shape": [
+     8,
+     128
+    ]
+   },
+   "ex1.sPrev": {
+    "offset": 78635,
+    "length": 2048,
+    "shape": [
+     8,
+     256
+    ]
+   },
+   "ex1.scores": {
+    "offset": 80683,
+    "length": 48,
+    "shape": [
+     8,
+     6
+    ]
+   },
+   "ex1.alpha": {
+    "offset": 80731,
+    "length": 48,
+    "shape": [
+     8,
+     6
+    ]
+   },
+   "ex1.context": {
+    "offset": 80779,
+    "length": 2048,
+    "shape": [
+     8,
+     256
+    ]
+   },
+   "ex1.topP": {
+    "offset": 82827,
+    "length": 40,
+    "shape": [
+     8,
+     5
+    ]
+   },
+   "ex1.srcEmbed": {
+    "offset": 82867,
+    "length": 768,
+    "shape": [
+     6,
+     128
+    ]
+   },
+   "ex2.annotations": {
+    "offset": 83635,
+    "length": 1536,
+    "shape": [
+     6,
+     256
+    ]
+   },
+   "ex2.keys": {
+    "offset": 85171,
+    "length": 768,
+    "shape": [
+     6,
+     128
+    ]
+   },
+   "ex2.queries": {
+    "offset": 85939,
+    "length": 1024,
+    "shape": [
+     8,
+     128
+    ]
+   },
+   "ex2.sPrev": {
+    "offset": 86963,
+    "length": 2048,
+    "shape": [
+     8,
+     256
+    ]
+   },
+   "ex2.scores": {
+    "offset": 89011,
+    "length": 48,
+    "shape": [
+     8,
+     6
+    ]
+   },
+   "ex2.alpha": {
+    "offset": 89059,
+    "length": 48,
+    "shape": [
+     8,
+     6
+    ]
+   },
+   "ex2.context": {
+    "offset": 89107,
+    "length": 2048,
+    "shape": [
+     8,
+     256
+    ]
+   },
+   "ex2.topP": {
+    "offset": 91155,
+    "length": 40,
+    "shape": [
+     8,
+     5
+    ]
+   },
+   "ex2.srcEmbed": {
+    "offset": 91195,
+    "length": 768,
+    "shape": [
+     6,
+     128
+    ]
+   },
+   "ex3.annotations": {
+    "offset": 91963,
+    "length": 1536,
+    "shape": [
+     6,
+     256
+    ]
+   },
+   "ex3.keys": {
+    "offset": 93499,
+    "length": 768,
+    "shape": [
+     6,
+     128
+    ]
+   },
+   "ex3.queries": {
+    "offset": 94267,
+    "length": 896,
+    "shape": [
+     7,
+     128
+    ]
+   },
+   "ex3.sPrev": {
+    "offset": 95163,
+    "length": 1792,
+    "shape": [
+     7,
+     256
+    ]
+   },
+   "ex3.scores": {
+    "offset": 96955,
+    "length": 42,
+    "shape": [
+     7,
+     6
+    ]
+   },
+   "ex3.alpha": {
+    "offset": 96997,
+    "length": 42,
+    "shape": [
+     7,
+     6
+    ]
+   },
+   "ex3.context": {
+    "offset": 97039,
+    "length": 1792,
+    "shape": [
+     7,
+     256
+    ]
+   },
+   "ex3.topP": {
+    "offset": 98831,
+    "length": 35,
+    "shape": [
+     7,
+     5
+    ]
+   },
+   "ex3.srcEmbed": {
+    "offset": 98866,
+    "length": 768,
+    "shape": [
+     6,
+     128
+    ]
+   },
+   "ex4.annotations": {
+    "offset": 99634,
+    "length": 1536,
+    "shape": [
+     6,
+     256
+    ]
+   },
+   "ex4.keys": {
+    "offset": 101170,
+    "length": 768,
+    "shape": [
+     6,
+     128
+    ]
+   },
+   "ex4.queries": {
+    "offset": 101938,
+    "length": 1152,
+    "shape": [
+     9,
+     128
+    ]
+   },
+   "ex4.sPrev": {
+    "offset": 103090,
+    "length": 2304,
+    "shape": [
+     9,
+     256
+    ]
+   },
+   "ex4.scores": {
+    "offset": 105394,
+    "length": 54,
+    "shape": [
+     9,
+     6
+    ]
+   },
+   "ex4.alpha": {
+    "offset": 105448,
+    "length": 54,
+    "shape": [
+     9,
+     6
+    ]
+   },
+   "ex4.context": {
+    "offset": 105502,
+    "length": 2304,
+    "shape": [
+     9,
+     256
+    ]
+   },
+   "ex4.topP": {
+    "offset": 107806,
+    "length": 45,
+    "shape": [
+     9,
+     5
+    ]
+   },
+   "ex4.srcEmbed": {
+    "offset": 107851,
+    "length": 768,
+    "shape": [
+     6,
+     128
+    ]
+   }
+  }
+ },
+ "validation": {
+  "encoderVsTorchGruMaxError": 1.18e-06,
+  "attentionVsModuleMaxError": 1.79e-07,
+  "logitsVsModuleMaxError": 3.81e-06,
+  "alignmentFromStatesMaxError": 4.47e-07,
+  "contextFromWeightsMaxError": 1.19e-07
+ },
+ "capture": {
+  "timestamp": "2026-10-31T00:50:44.785336+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1"
+  },
+  "script": "scripts/before-transformers/record_seq2seq_attention.py",
+  "scriptSha256": "a761afc285f69806ac1de31b6a2eb41b66cedcf614b2caa17ada11fc8fa71e0c",
+  "helperSha256": "b1fb5984cf2d3aafaac61e2f6e6c04a92637b768744f5a1dcea9e54ab1730151",
+  "drawerSha256": "cf6ff2028c39bfdf7283223b377d7c05cac209d42f3f972d5ed575a6bc27b2ed"
+ }
+}

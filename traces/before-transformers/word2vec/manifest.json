@@ -1,0 +1,2507 @@
+{
+ "schemaVersion": 1,
+ "kind": "word2vec",
+ "tab": "word2vec",
+ "model": {
+  "id": "fse/word2vec-google-news-300",
+  "name": "word2vec Google News 300",
+  "revision": "4274c2efa75c99a64e3f83eabfc5b34d1acabe70",
+  "url": "https://huggingface.co/fse/word2vec-google-news-300/tree/4274c2efa75c99a64e3f83eabfc5b34d1acabe70",
+  "license": "Apache-2.0",
+  "licenseUrl": "https://huggingface.co/fse/word2vec-google-news-300/blob/4274c2efa75c99a64e3f83eabfc5b34d1acabe70/README.md",
+  "licenseNote": "fse states Apache-2.0; Google published the vectors with the word2vec project (code.google.com/archive/p/word2vec), licensed Apache License 2.0, with no separate terms for the vectors",
+  "source": "https://code.google.com/archive/p/word2vec/",
+  "paper": "https://arxiv.org/abs/1310.4546",
+  "trainingWords": "about 100 billion words of Google News",
+  "words": 3000000,
+  "dim": 300,
+  "files": {
+   "vocabulary": {
+    "file": "word2vec-google-news-300.model",
+    "bytes": 182007201,
+    "sha256": "ec6c480bb04ce8b40220ab5efa2dc6dd047738a07771b122ac69644261ff9750"
+   },
+   "vectors": {
+    "file": "word2vec-google-news-300.model.vectors.npy",
+    "bytes": 3600000128,
+    "sha256": "f22370268ca0b4fb12567df754f079b4708a189d5f063de19fa19535e91d41de"
+   }
+  },
+  "vocabularyFirst": [
+   "</s>",
+   "in",
+   "for",
+   "that",
+   "is",
+   "on",
+   "##",
+   "The",
+   "with",
+   "said",
+   "was",
+   "the"
+  ]
+ },
+ "words": [
+  "he",
+  "she",
+  "good",
+  "take",
+  "go",
+  "old",
+  "see",
+  "run",
+  "man",
+  "better",
+  "took",
+  "big",
+  "went",
+  "China",
+  "small",
+  "strong",
+  "young",
+  "woman",
+  "saw",
+  "bad",
+  "wife",
+  "mother",
+  "father",
+  "Japan",
+  "happy",
+  "wrote",
+  "Russia",
+  "France",
+  "ran",
+  "computer",
+  "fast",
+  "husband",
+  "girl",
+  "Germany",
+  "walk",
+  "boy",
+  "pleased",
+  "brother",
+  "older",
+  "walked",
+  "excited",
+  "smaller",
+  "doctors",
+  "proud",
+  "River",
+  "worse",
+  "write",
+  "bigger",
+  "Spain",
+  "Italy",
+  "Beijing",
+  "walking",
+  "sister",
+  "doctor",
+  "Italian",
+  "younger",
+  "stronger",
+  "Paris",
+  "faster",
+  "actor",
+  "Turkey",
+  "eat",
+  "PC",
+  "disappointed",
+  "river",
+  "computers",
+  "Tokyo",
+  "Moscow",
+  "Greece",
+  "actress",
+  "coffee",
+  "delighted",
+  "glad",
+  "satisfied",
+  "Poland",
+  "lake",
+  "Rome",
+  "Berlin",
+  "thrilled",
+  "Portugal",
+  "physician",
+  "swimming",
+  "Athens",
+  "king",
+  "Madrid",
+  "nurse",
+  "grandmother",
+  "differently",
+  "scientist",
+  "Milan",
+  "sooner",
+  "laptop",
+  "swim",
+  "researcher",
+  "uncle",
+  "rivers",
+  "ate",
+  "Computer",
+  "Frankfurt",
+  "queen",
+  "aunt",
+  "Munich",
+  "Coffee",
+  "Shakespeare",
+  "swimmers",
+  "canal",
+  "granddaughter",
+  "creek",
+  "niece",
+  "Ankara",
+  "prince",
+  "Warsaw",
+  "Lisbon",
+  "throne",
+  "painter",
+  "swam",
+  "ecstatic",
+  "princess",
+  "ruler",
+  "Swimming",
+  "kings",
+  "biologist",
+  "monarch",
+  "pediatrician",
+  "turtle",
+  "laptop_computer",
+  "waterway",
+  "Cologne",
+  "frog",
+  "frogs",
+  "Einstein",
+  "laptop_computers",
+  "Picasso",
+  "Hamlet",
+  "overjoyed",
+  "Parisian",
+  "espresso",
+  "Tuscany",
+  "lizard",
+  "princes",
+  "coffees",
+  "Macbeth",
+  "riverbank",
+  "tributary",
+  "gynecologist",
+  "William_Shakespeare",
+  "crown_prince",
+  "Shakespearean",
+  "ecologist",
+  "snail",
+  "uglier",
+  "Dusseldorf",
+  "critter",
+  "cappuccino",
+  "downriver",
+  "toad",
+  "coffee_beans",
+  "King_Lear",
+  "dumber",
+  "marine_biologist",
+  "Starbucks_coffee",
+  "riverbed",
+  "sultan",
+  "Twelfth_Night",
+  "swum",
+  "amphibian",
+  "gourmet_coffee",
+  "salamander",
+  "brewed_coffee",
+  "Shakespearian",
+  "bullfrog",
+  "Shakespeare_Hamlet",
+  "Palermo_Sicily",
+  "latté",
+  "Shakepeare",
+  "o_joe",
+  "com_puter",
+  "Prince_Paras",
+  "Grigny_south",
+  "Aricent_combines",
+  "Pantheon_Sorbonne",
+  "Elizabethan_Age",
+  "maker_Dell_DELL.O",
+  "Aeroports_De",
+  "Place_Denfert_Rochereau",
+  "Hopital_Europeen_Georges_Pompidou",
+  "guest_Olivier_Dolige",
+  "technician_Leonard_Luchko",
+  "Lazard_Freres_Banque",
+  "mainframes_minicomputers",
+  "Spyker_D##_Peking"
+ ],
+ "ranks": {
+  "74": 0,
+  "2056": 1,
+  "1050": 2,
+  "602": 3,
+  "298": 4,
+  "0": 5
+ },
+ "queries": [
+  {
+   "word": "king",
+   "rank": 6147,
+   "neighbours": [
+    {
+     "word": "kings",
+     "cos": 0.7138045430183411,
+     "rank": 21050
+    },
+    {
+     "word": "queen",
+     "cos": 0.6510956287384033,
+     "rank": 10291
+    },
+    {
+     "word": "monarch",
+     "cos": 0.6413194537162781,
+     "rank": 23140
+    },
+    {
+     "word": "crown_prince",
+     "cos": 0.6204220056533813,
+     "rank": 55958
+    },
+    {
+     "word": "prince",
+     "cos": 0.6159993410110474,
+     "rank": 15743
+    },
+    {
+     "word": "sultan",
+     "cos": 0.5864824056625366,
+     "rank": 76184
+    },
+    {
+     "word": "ruler",
+     "cos": 0.5797566771507263,
+     "rank": 18005
+    },
+    {
+     "word": "princes",
+     "cos": 0.5646552443504333,
+     "rank": 46388
+    },
+    {
+     "word": "Prince_Paras",
+     "cos": 0.5432944297790527,
+     "rank": 1310338
+    },
+    {
+     "word": "throne",
+     "cos": 0.5422105193138123,
+     "rank": 16322
+    }
+   ]
+  },
+  {
+   "word": "frog",
+   "rank": 26099,
+   "neighbours": [
+    {
+     "word": "frogs",
+     "cos": 0.8018161654472351,
+     "rank": 26663
+    },
+    {
+     "word": "toad",
+     "cos": 0.7049819827079773,
+     "rank": 69899
+    },
+    {
+     "word": "lizard",
+     "cos": 0.6754182577133179,
+     "rank": 44047
+    },
+    {
+     "word": "Aricent_combines",
+     "cos": 0.6699402928352356,
+     "rank": 1853303
+    },
+    {
+     "word": "bullfrog",
+     "cos": 0.6557111144065857,
+     "rank": 211107
+    },
+    {
+     "word": "critter",
+     "cos": 0.6445190906524658,
+     "rank": 63578
+    },
+    {
+     "word": "amphibian",
+     "cos": 0.6414659023284912,
+     "rank": 85625
+    },
+    {
+     "word": "salamander",
+     "cos": 0.6264126300811768,
+     "rank": 104170
+    },
+    {
+     "word": "turtle",
+     "cos": 0.6156665086746216,
+     "rank": 24360
+    },
+    {
+     "word": "snail",
+     "cos": 0.6094340682029724,
+     "rank": 57869
+    }
+   ]
+  },
+  {
+   "word": "happy",
+   "rank": 1049,
+   "neighbours": [
+    {
+     "word": "glad",
+     "cos": 0.7408890724182129,
+     "rank": 4258
+    },
+    {
+     "word": "pleased",
+     "cos": 0.6632170677185059,
+     "rank": 1700
+    },
+    {
+     "word": "ecstatic",
+     "cos": 0.6626912355422974,
+     "rank": 17056
+    },
+    {
+     "word": "overjoyed",
+     "cos": 0.6599286198616028,
+     "rank": 32338
+    },
+    {
+     "word": "thrilled",
+     "cos": 0.6514049768447876,
+     "rank": 5437
+    },
+    {
+     "word": "satisfied",
+     "cos": 0.6437948942184448,
+     "rank": 4940
+    },
+    {
+     "word": "proud",
+     "cos": 0.6360421180725098,
+     "rank": 1913
+    },
+    {
+     "word": "delighted",
+     "cos": 0.627237856388092,
+     "rank": 4204
+    },
+    {
+     "word": "disappointed",
+     "cos": 0.6269949674606323,
+     "rank": 3049
+    },
+    {
+     "word": "excited",
+     "cos": 0.6247665882110596,
+     "rank": 1860
+    }
+   ]
+  },
+  {
+   "word": "coffee",
+   "rank": 4126,
+   "neighbours": [
+    {
+     "word": "coffees",
+     "cos": 0.7212678790092468,
+     "rank": 46592
+    },
+    {
+     "word": "gourmet_coffee",
+     "cos": 0.7057087421417236,
+     "rank": 101542
+    },
+    {
+     "word": "Coffee",
+     "cos": 0.6900455951690674,
+     "rank": 11753
+    },
+    {
+     "word": "o_joe",
+     "cos": 0.6891066431999207,
+     "rank": 955272
+    },
+    {
+     "word": "Starbucks_coffee",
+     "cos": 0.6874972581863403,
+     "rank": 75641
+    },
+    {
+     "word": "coffee_beans",
+     "cos": 0.6749705076217651,
+     "rank": 70683
+    },
+    {
+     "word": "latté",
+     "cos": 0.6641225814819336,
+     "rank": 514405
+    },
+    {
+     "word": "cappuccino",
+     "cos": 0.6625497341156006,
+     "rank": 68914
+    },
+    {
+     "word": "brewed_coffee",
+     "cos": 0.6621608734130859,
+     "rank": 181020
+    },
+    {
+     "word": "espresso",
+     "cos": 0.661682665348053,
+     "rank": 36626
+    }
+   ]
+  },
+  {
+   "word": "river",
+   "rank": 3257,
+   "neighbours": [
+    {
+     "word": "creek",
+     "cos": 0.7994444370269775,
+     "rank": 13870
+    },
+    {
+     "word": "lake",
+     "cos": 0.7919586300849915,
+     "rank": 5140
+    },
+    {
+     "word": "rivers",
+     "cos": 0.7777560949325562,
+     "rank": 8285
+    },
+    {
+     "word": "riverbank",
+     "cos": 0.7283666133880615,
+     "rank": 49569
+    },
+    {
+     "word": "canal",
+     "cos": 0.722176194190979,
+     "rank": 12848
+    },
+    {
+     "word": "River",
+     "cos": 0.7170898914337158,
+     "rank": 1967
+    },
+    {
+     "word": "waterway",
+     "cos": 0.7110065817832947,
+     "rank": 24968
+    },
+    {
+     "word": "tributary",
+     "cos": 0.7063448429107666,
+     "rank": 50429
+    },
+    {
+     "word": "riverbed",
+     "cos": 0.6722352504730225,
+     "rank": 75940
+    },
+    {
+     "word": "downriver",
+     "cos": 0.6608339548110962,
+     "rank": 69594
+    }
+   ]
+  },
+  {
+   "word": "computer",
+   "rank": 1279,
+   "neighbours": [
+    {
+     "word": "computers",
+     "cos": 0.7979379892349243,
+     "rank": 3276
+    },
+    {
+     "word": "laptop",
+     "cos": 0.6640493869781494,
+     "rank": 6916
+    },
+    {
+     "word": "laptop_computer",
+     "cos": 0.6548868417739868,
+     "rank": 24562
+    },
+    {
+     "word": "Computer",
+     "cos": 0.647333562374115,
+     "rank": 9954
+    },
+    {
+     "word": "com_puter",
+     "cos": 0.6082080006599426,
+     "rank": 1094812
+    },
+    {
+     "word": "technician_Leonard_Luchko",
+     "cos": 0.566274881362915,
+     "rank": 2705818
+    },
+    {
+     "word": "mainframes_minicomputers",
+     "cos": 0.5617721080780029,
+     "rank": 2873811
+    },
+    {
+     "word": "laptop_computers",
+     "cos": 0.5585449934005737,
+     "rank": 27466
+    },
+    {
+     "word": "PC",
+     "cos": 0.5539618730545044,
+     "rank": 3046
+    },
+    {
+     "word": "maker_Dell_DELL.O",
+     "cos": 0.5519254207611084,
+     "rank": 2146018
+    }
+   ]
+  },
+  {
+   "word": "Shakespeare",
+   "rank": 11756,
+   "neighbours": [
+    {
+     "word": "William_Shakespeare",
+     "cos": 0.7869808077812195,
+     "rank": 55483
+    },
+    {
+     "word": "Shakespearean",
+     "cos": 0.7731404900550842,
+     "rank": 57120
+    },
+    {
+     "word": "King_Lear",
+     "cos": 0.7269173860549927,
+     "rank": 74344
+    },
+    {
+     "word": "Shakepeare",
+     "cos": 0.7082269191741943,
+     "rank": 792608
+    },
+    {
+     "word": "Shakespearian",
+     "cos": 0.7042752504348755,
+     "rank": 205470
+    },
+    {
+     "word": "Macbeth",
+     "cos": 0.7028621435165405,
+     "rank": 48062
+    },
+    {
+     "word": "Hamlet",
+     "cos": 0.6844542026519775,
+     "rank": 27712
+    },
+    {
+     "word": "Twelfth_Night",
+     "cos": 0.671601414680481,
+     "rank": 82714
+    },
+    {
+     "word": "Shakespeare_Hamlet",
+     "cos": 0.6581019163131714,
+     "rank": 229138
+    },
+    {
+     "word": "Elizabethan_Age",
+     "cos": 0.647981584072113,
+     "rank": 2139141
+    }
+   ]
+  },
+  {
+   "word": "Paris",
+   "rank": 2575,
+   "neighbours": [
+    {
+     "word": "Parisian",
+     "cos": 0.6789354085922241,
+     "rank": 35458
+    },
+    {
+     "word": "Hopital_Europeen_Georges_Pompidou",
+     "cos": 0.6536554098129272,
+     "rank": 2615883
+    },
+    {
+     "word": "Spyker_D##_Peking",
+     "cos": 0.6336592435836792,
+     "rank": 2875131
+    },
+    {
+     "word": "France",
+     "cos": 0.6334909796714783,
+     "rank": 1251
+    },
+    {
+     "word": "Pantheon_Sorbonne",
+     "cos": 0.6312517523765564,
+     "rank": 2106469
+    },
+    {
+     "word": "Aeroports_De",
+     "cos": 0.6218039393424988,
+     "rank": 2396541
+    },
+    {
+     "word": "Grigny_south",
+     "cos": 0.6194689869880676,
+     "rank": 1793572
+    },
+    {
+     "word": "Place_Denfert_Rochereau",
+     "cos": 0.6028153896331787,
+     "rank": 2460409
+    },
+    {
+     "word": "guest_Olivier_Dolige",
+     "cos": 0.6024351119995117,
+     "rank": 2647306
+    },
+    {
+     "word": "Lazard_Freres_Banque",
+     "cos": 0.5998712778091431,
+     "rank": 2834668
+    }
+   ]
+  }
+ ],
+ "analogies": [
+  {
+   "a": "man",
+   "b": "king",
+   "c": "woman",
+   "expected": "queen",
+   "answers": [
+    {
+     "word": "queen",
+     "cos": 0.7118191719055176,
+     "rank": 10291
+    },
+    {
+     "word": "monarch",
+     "cos": 0.6189674139022827,
+     "rank": 23140
+    },
+    {
+     "word": "princess",
+     "cos": 0.5902431011199951,
+     "rank": 17497
+    },
+    {
+     "word": "crown_prince",
+     "cos": 0.5499460697174072,
+     "rank": 55958
+    },
+    {
+     "word": "prince",
+     "cos": 0.5377321243286133,
+     "rank": 15743
+    }
+   ],
+   "withInputs": [
+    {
+     "word": "king",
+     "cos": 0.7992597818374634,
+     "rank": 6147
+    },
+    {
+     "word": "queen",
+     "cos": 0.7118191719055176,
+     "rank": 10291
+    },
+    {
+     "word": "monarch",
+     "cos": 0.6189674139022827,
+     "rank": 23140
+    },
+    {
+     "word": "princess",
+     "cos": 0.5902431011199951,
+     "rank": 17497
+    },
+    {
+     "word": "crown_prince",
+     "cos": 0.5499460697174072,
+     "rank": 55958
+    }
+   ],
+   "expectedRank": 1,
+   "expectedCos": 0.7118191719055176
+  },
+  {
+   "a": "France",
+   "b": "Paris",
+   "c": "Germany",
+   "expected": "Berlin",
+   "answers": [
+    {
+     "word": "Berlin",
+     "cos": 0.7644002437591553,
+     "rank": 5418
+    },
+    {
+     "word": "Frankfurt",
+     "cos": 0.7329738140106201,
+     "rank": 10233
+    },
+    {
+     "word": "Dusseldorf",
+     "cos": 0.7009456753730774,
+     "rank": 60723
+    },
+    {
+     "word": "Munich",
+     "cos": 0.6773864030838013,
+     "rank": 11405
+    },
+    {
+     "word": "Cologne",
+     "cos": 0.6470192670822144,
+     "rank": 25635
+    }
+   ],
+   "withInputs": [
+    {
+     "word": "Berlin",
+     "cos": 0.7644002437591553,
+     "rank": 5418
+    },
+    {
+     "word": "Frankfurt",
+     "cos": 0.7329738140106201,
+     "rank": 10233
+    },
+    {
+     "word": "Dusseldorf",
+     "cos": 0.7009456753730774,
+     "rank": 60723
+    },
+    {
+     "word": "Munich",
+     "cos": 0.6773864030838013,
+     "rank": 11405
+    },
+    {
+     "word": "Germany",
+     "cos": 0.6625336408615112,
+     "rank": 1420
+    }
+   ],
+   "expectedRank": 1,
+   "expectedCos": 0.7644002437591553
+  },
+  {
+   "a": "France",
+   "b": "Paris",
+   "c": "Italy",
+   "expected": "Rome",
+   "answers": [
+    {
+     "word": "Milan",
+     "cos": 0.7222140431404114,
+     "rank": 6892
+    },
+    {
+     "word": "Rome",
+     "cos": 0.7028310298919678,
+     "rank": 5352
+    },
+    {
+     "word": "Palermo_Sicily",
+     "cos": 0.5967570543289185,
+     "rank": 312558
+    },
+    {
+     "word": "Italian",
+     "cos": 0.5911272764205933,
+     "rank": 2507
+    },
+    {
+     "word": "Tuscany",
+     "cos": 0.5632812976837158,
+     "rank": 39793
+    }
+   ],
+   "withInputs": [
+    {
+     "word": "Milan",
+     "cos": 0.7222140431404114,
+     "rank": 6892
+    },
+    {
+     "word": "Rome",
+     "cos": 0.7028310298919678,
+     "rank": 5352
+    },
+    {
+     "word": "Italy",
+     "cos": 0.67326420545578,
+     "rank": 2328
+    },
+    {
+     "word": "Paris",
+     "cos": 0.6551907062530518,
+     "rank": 2575
+    },
+    {
+     "word": "Palermo_Sicily",
+     "cos": 0.5967570543289185,
+     "rank": 312558
+    }
+   ],
+   "expectedRank": 2,
+   "expectedCos": 0.7028310298919678
+  },
+  {
+   "a": "walking",
+   "b": "walked",
+   "c": "swimming",
+   "expected": "swam",
+   "answers": [
+    {
+     "word": "swam",
+     "cos": 0.6925909519195557,
+     "rank": 16621
+    },
+    {
+     "word": "swim",
+     "cos": 0.6725040078163147,
+     "rank": 6920
+    },
+    {
+     "word": "swimmers",
+     "cos": 0.5923449993133545,
+     "rank": 11943
+    },
+    {
+     "word": "swum",
+     "cos": 0.5856610536575317,
+     "rank": 85312
+    },
+    {
+     "word": "Swimming",
+     "cos": 0.5805999636650085,
+     "rank": 21035
+    }
+   ],
+   "withInputs": [
+    {
+     "word": "swimming",
+     "cos": 0.7031431794166565,
+     "rank": 5887
+    },
+    {
+     "word": "swam",
+     "cos": 0.6925909519195557,
+     "rank": 16621
+    },
+    {
+     "word": "swim",
+     "cos": 0.6725040078163147,
+     "rank": 6920
+    },
+    {
+     "word": "swimmers",
+     "cos": 0.5923449993133545,
+     "rank": 11943
+    },
+    {
+     "word": "swum",
+     "cos": 0.5856610536575317,
+     "rank": 85312
+    }
+   ],
+   "expectedRank": 1,
+   "expectedCos": 0.6925909519195557
+  },
+  {
+   "a": "good",
+   "b": "better",
+   "c": "bad",
+   "expected": "worse",
+   "answers": [
+    {
+     "word": "worse",
+     "cos": 0.7288721203804016,
+     "rank": 2058
+    },
+    {
+     "word": "uglier",
+     "cos": 0.5725537538528442,
+     "rank": 58069
+    },
+    {
+     "word": "sooner",
+     "cos": 0.5309501886367798,
+     "rank": 6914
+    },
+    {
+     "word": "dumber",
+     "cos": 0.522783637046814,
+     "rank": 75068
+    },
+    {
+     "word": "differently",
+     "cos": 0.5173395872116089,
+     "rank": 6573
+    }
+   ],
+   "withInputs": [
+    {
+     "word": "better",
+     "cos": 0.7454286217689514,
+     "rank": 254
+    },
+    {
+     "word": "worse",
+     "cos": 0.7288721203804016,
+     "rank": 2058
+    },
+    {
+     "word": "bad",
+     "cos": 0.6471846699714661,
+     "rank": 706
+    },
+    {
+     "word": "uglier",
+     "cos": 0.5725537538528442,
+     "rank": 58069
+    },
+    {
+     "word": "sooner",
+     "cos": 0.5309501886367798,
+     "rank": 6914
+    }
+   ],
+   "expectedRank": 1,
+   "expectedCos": 0.7288721203804016
+  },
+  {
+   "a": "brother",
+   "b": "sister",
+   "c": "uncle",
+   "expected": "aunt",
+   "answers": [
+    {
+     "word": "aunt",
+     "cos": 0.8241428732872009,
+     "rank": 11159
+    },
+    {
+     "word": "niece",
+     "cos": 0.7732532024383545,
+     "rank": 15133
+    },
+    {
+     "word": "mother",
+     "cos": 0.7505147457122803,
+     "rank": 852
+    },
+    {
+     "word": "grandmother",
+     "cos": 0.7434573173522949,
+     "rank": 6547
+    },
+    {
+     "word": "granddaughter",
+     "cos": 0.7073408365249634,
+     "rank": 13055
+    }
+   ],
+   "withInputs": [
+    {
+     "word": "sister",
+     "cos": 0.8318096399307251,
+     "rank": 2407
+    },
+    {
+     "word": "aunt",
+     "cos": 0.8241428732872009,
+     "rank": 11159
+    },
+    {
+     "word": "niece",
+     "cos": 0.7732532024383545,
+     "rank": 15133
+    },
+    {
+     "word": "mother",
+     "cos": 0.7505147457122803,
+     "rank": 852
+    },
+    {
+     "word": "grandmother",
+     "cos": 0.7434573173522949,
+     "rank": 6547
+    }
+   ],
+   "expectedRank": 1,
+   "expectedCos": 0.8241428732872009
+  },
+  {
+   "a": "Einstein",
+   "b": "scientist",
+   "c": "Picasso",
+   "expected": "painter",
+   "answers": [
+    {
+     "word": "painter",
+     "cos": 0.5553721785545349,
+     "rank": 16372
+    },
+    {
+     "word": "biologist",
+     "cos": 0.5007843971252441,
+     "rank": 21943
+    },
+    {
+     "word": "researcher",
+     "cos": 0.4944823682308197,
+     "rank": 6974
+    },
+    {
+     "word": "ecologist",
+     "cos": 0.48325467109680176,
+     "rank": 57562
+    },
+    {
+     "word": "marine_biologist",
+     "cos": 0.4795451760292053,
+     "rank": 75435
+    }
+   ],
+   "withInputs": [
+    {
+     "word": "painter",
+     "cos": 0.5553721785545349,
+     "rank": 16372
+    },
+    {
+     "word": "scientist",
+     "cos": 0.5500154495239258,
+     "rank": 6588
+    },
+    {
+     "word": "biologist",
+     "cos": 0.5007843971252441,
+     "rank": 21943
+    },
+    {
+     "word": "Picasso",
+     "cos": 0.5004366636276245,
+     "rank": 27617
+    },
+    {
+     "word": "researcher",
+     "cos": 0.4944823682308197,
+     "rank": 6974
+    }
+   ],
+   "expectedRank": 1,
+   "expectedCos": 0.5553721785545349
+  },
+  {
+   "a": "man",
+   "b": "doctor",
+   "c": "woman",
+   "expected": "nurse",
+   "answers": [
+    {
+     "word": "gynecologist",
+     "cos": 0.7093891501426697,
+     "rank": 51838
+    },
+    {
+     "word": "nurse",
+     "cos": 0.6477286219596863,
+     "rank": 6397
+    },
+    {
+     "word": "doctors",
+     "cos": 0.6471460461616516,
+     "rank": 1912
+    },
+    {
+     "word": "physician",
+     "cos": 0.6438996195793152,
+     "rank": 5800
+    },
+    {
+     "word": "pediatrician",
+     "cos": 0.6249487996101379,
+     "rank": 23861
+    }
+   ],
+   "withInputs": [
+    {
+     "word": "doctor",
+     "cos": 0.8426865339279175,
+     "rank": 2447
+    },
+    {
+     "word": "gynecologist",
+     "cos": 0.7093891501426697,
+     "rank": 51838
+    },
+    {
+     "word": "nurse",
+     "cos": 0.6477286219596863,
+     "rank": 6397
+    },
+    {
+     "word": "doctors",
+     "cos": 0.6471460461616516,
+     "rank": 1912
+    },
+    {
+     "word": "physician",
+     "cos": 0.6438996195793152,
+     "rank": 5800
+    }
+   ],
+   "expectedRank": 2,
+   "expectedCos": 0.6477286219596863
+  }
+ ],
+ "groups": [
+  {
+   "id": "capitals",
+   "title": "Countries and their capitals",
+   "pairs": [
+    [
+     "China",
+     "Beijing"
+    ],
+    [
+     "Russia",
+     "Moscow"
+    ],
+    [
+     "Japan",
+     "Tokyo"
+    ],
+    [
+     "Turkey",
+     "Ankara"
+    ],
+    [
+     "Poland",
+     "Warsaw"
+    ],
+    [
+     "Germany",
+     "Berlin"
+    ],
+    [
+     "France",
+     "Paris"
+    ],
+    [
+     "Italy",
+     "Rome"
+    ],
+    [
+     "Greece",
+     "Athens"
+    ],
+    [
+     "Spain",
+     "Madrid"
+    ],
+    [
+     "Portugal",
+     "Lisbon"
+    ]
+   ],
+   "words": [
+    "China",
+    "Beijing",
+    "Russia",
+    "Moscow",
+    "Japan",
+    "Tokyo",
+    "Turkey",
+    "Ankara",
+    "Poland",
+    "Warsaw",
+    "Germany",
+    "Berlin",
+    "France",
+    "Paris",
+    "Italy",
+    "Rome",
+    "Greece",
+    "Athens",
+    "Spain",
+    "Madrid",
+    "Portugal",
+    "Lisbon"
+   ],
+   "explained": [
+    0.1697957125504887,
+    0.1453398124667319
+   ]
+  },
+  {
+   "id": "gender",
+   "title": "Male and female",
+   "pairs": [
+    [
+     "man",
+     "woman"
+    ],
+    [
+     "king",
+     "queen"
+    ],
+    [
+     "boy",
+     "girl"
+    ],
+    [
+     "brother",
+     "sister"
+    ],
+    [
+     "uncle",
+     "aunt"
+    ],
+    [
+     "father",
+     "mother"
+    ],
+    [
+     "husband",
+     "wife"
+    ],
+    [
+     "actor",
+     "actress"
+    ],
+    [
+     "he",
+     "she"
+    ]
+   ],
+   "words": [
+    "man",
+    "woman",
+    "king",
+    "queen",
+    "boy",
+    "girl",
+    "brother",
+    "sister",
+    "uncle",
+    "aunt",
+    "father",
+    "mother",
+    "husband",
+    "wife",
+    "actor",
+    "actress",
+    "he",
+    "she"
+   ],
+   "explained": [
+    0.24583369003505937,
+    0.17594728108015012
+   ]
+  },
+  {
+   "id": "tense",
+   "title": "Present and past tense",
+   "pairs": [
+    [
+     "walk",
+     "walked"
+    ],
+    [
+     "swim",
+     "swam"
+    ],
+    [
+     "run",
+     "ran"
+    ],
+    [
+     "go",
+     "went"
+    ],
+    [
+     "eat",
+     "ate"
+    ],
+    [
+     "write",
+     "wrote"
+    ],
+    [
+     "see",
+     "saw"
+    ],
+    [
+     "take",
+     "took"
+    ]
+   ],
+   "words": [
+    "walk",
+    "walked",
+    "swim",
+    "swam",
+    "run",
+    "ran",
+    "go",
+    "went",
+    "eat",
+    "ate",
+    "write",
+    "wrote",
+    "see",
+    "saw",
+    "take",
+    "took"
+   ],
+   "explained": [
+    0.24063885113354916,
+    0.15703373073607982
+   ]
+  },
+  {
+   "id": "comparative",
+   "title": "Adjective and comparative",
+   "pairs": [
+    [
+     "big",
+     "bigger"
+    ],
+    [
+     "small",
+     "smaller"
+    ],
+    [
+     "good",
+     "better"
+    ],
+    [
+     "bad",
+     "worse"
+    ],
+    [
+     "fast",
+     "faster"
+    ],
+    [
+     "old",
+     "older"
+    ],
+    [
+     "young",
+     "younger"
+    ],
+    [
+     "strong",
+     "stronger"
+    ]
+   ],
+   "words": [
+    "big",
+    "bigger",
+    "small",
+    "smaller",
+    "good",
+    "better",
+    "bad",
+    "worse",
+    "fast",
+    "faster",
+    "old",
+    "older",
+    "young",
+    "younger",
+    "strong",
+    "stronger"
+   ],
+   "explained": [
+    0.1965067724341954,
+    0.166719370386379
+   ]
+  }
+ ],
+ "skipgram": {
+  "corpus": {
+   "name": "Tiny Shakespeare",
+   "url": "https://raw.githubusercontent.com/karpathy/char-rnn/6f9487a6fe5b420b7ca9afb0d7c078e37c1d1b4e/data/tinyshakespeare/input.txt",
+   "sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+   "license": "public domain text (Shakespeare's plays); the char-rnn repository is MIT",
+   "words": 194015,
+   "speeches": 7097,
+   "wordsInVocab": 179019,
+   "tokenizer": "lower-cased, words of letters with an optional apostrophe part; speakers' names dropped"
+  },
+  "trainedLocally": true,
+  "settings": {
+   "dim": 50,
+   "window": 5,
+   "negatives": 5,
+   "sample": 0.001,
+   "lr": 0.025,
+   "min_count": 5,
+   "epochs": 10,
+   "seed": 0,
+   "vocab": 3251,
+   "device": "cpu",
+   "dtype": "float32",
+   "init": "input vectors uniform ±0.5/dim, output vectors zero",
+   "lrSchedule": "lr × (1 − epoch / epochs) per epoch, at least lr × 1e-4"
+  },
+  "epochs": [
+   {
+    "epoch": 1,
+    "lr": 0.025,
+    "pairs": 676693,
+    "meanLoss": 2.8542041993990743
+   },
+   {
+    "epoch": 2,
+    "lr": 0.022500000000000003,
+    "pairs": 676654,
+    "meanLoss": 2.575210181700776
+   },
+   {
+    "epoch": 3,
+    "lr": 0.020000000000000004,
+    "pairs": 675258,
+    "meanLoss": 2.5605292873278036
+   },
+   {
+    "epoch": 4,
+    "lr": 0.017499999999999998,
+    "pairs": 675044,
+    "meanLoss": 2.5489386199686606
+   },
+   {
+    "epoch": 5,
+    "lr": 0.015,
+    "pairs": 674921,
+    "meanLoss": 2.541510064877152
+   },
+   {
+    "epoch": 6,
+    "lr": 0.0125,
+    "pairs": 675315,
+    "meanLoss": 2.5339025894484846
+   },
+   {
+    "epoch": 7,
+    "lr": 0.010000000000000002,
+    "pairs": 676445,
+    "meanLoss": 2.5292429325574677
+   },
+   {
+    "epoch": 8,
+    "lr": 0.0075000000000000015,
+    "pairs": 676624,
+    "meanLoss": 2.5275009340009835
+   },
+   {
+    "epoch": 9,
+    "lr": 0.004999999999999999,
+    "pairs": 679847,
+    "meanLoss": 2.527141769371606
+   },
+   {
+    "epoch": 10,
+    "lr": 0.0024999999999999996,
+    "pairs": 676464,
+    "meanLoss": 2.530920418113995
+   }
+  ],
+  "speech": [
+   "ay",
+   "spare",
+   "us",
+   "not",
+   "say",
+   "we",
+   "read",
+   "to",
+   "you",
+   "how",
+   "he",
+   "began",
+   "to",
+   "serve",
+   "his",
+   "country",
+   "how",
+   "long",
+   "and",
+   "what",
+   "stock",
+   "he",
+   "springs",
+   "of",
+   "the",
+   "noble",
+   "house",
+   "o",
+   "the",
+   "from",
+   "whence",
+   "came",
+   "that",
+   "marcius",
+   "daughter's",
+   "son",
+   "who",
+   "after",
+   "great",
+   "here",
+   "was",
+   "king",
+   "of",
+   "the",
+   "same",
+   "house",
+   "and",
+   "were",
+   "that",
+   "our",
+   "beat",
+   "water",
+   "brought",
+   "by",
+   "hither",
+   "and",
+   "twice",
+   "being",
+   "was",
+   "his",
+   "great"
+  ],
+  "speechIndex": 450,
+  "kept": [
+   "ay",
+   "spare",
+   "us",
+   "not",
+   "say",
+   "we",
+   "read",
+   "you",
+   "how",
+   "he",
+   "began",
+   "serve",
+   "his",
+   "country",
+   "how",
+   "long",
+   "what",
+   "stock",
+   "springs",
+   "of",
+   "noble",
+   "house",
+   "o",
+   "whence",
+   "came",
+   "marcius",
+   "daughter's",
+   "son",
+   "who",
+   "after",
+   "great",
+   "here",
+   "was",
+   "king",
+   "same",
+   "house",
+   "and",
+   "were",
+   "beat",
+   "water",
+   "brought",
+   "by",
+   "hither",
+   "twice",
+   "being",
+   "was",
+   "his",
+   "great"
+  ],
+  "keptMask": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   true,
+   false,
+   true,
+   true,
+   false,
+   true,
+   true,
+   true,
+   false,
+   false,
+   true,
+   true,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false,
+   false,
+   true,
+   true,
+   true,
+   true,
+   false,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "position": 33,
+  "reduced": 4,
+  "centre": "king",
+  "pairs": [
+   {
+    "context": "after",
+    "negatives": [
+     "we",
+     "your",
+     "death",
+     "sorrow",
+     "see"
+    ],
+    "lr": 0.0024999999999999996
+   },
+   {
+    "context": "great",
+    "negatives": [
+     "seal",
+     "i",
+     "patience",
+     "then",
+     "wrought"
+    ],
+    "lr": 0.0024999999999999996
+   },
+   {
+    "context": "here",
+    "negatives": [
+     "them",
+     "suspect",
+     "she",
+     "narrow",
+     "humble"
+    ],
+    "lr": 0.0024999999999999996
+   },
+   {
+    "context": "was",
+    "negatives": [
+     "us",
+     "be",
+     "bold",
+     "your",
+     "what's"
+    ],
+    "lr": 0.0024999999999999996
+   },
+   {
+    "context": "same",
+    "negatives": [
+     "master's",
+     "not",
+     "rough",
+     "storms",
+     "else"
+    ],
+    "lr": 0.0024999999999999996
+   },
+   {
+    "context": "house",
+    "negatives": [
+     "incensed",
+     "be",
+     "take",
+     "truth",
+     "excuse"
+    ],
+    "lr": 0.0024999999999999996
+   },
+   {
+    "context": "and",
+    "negatives": [
+     "farewell",
+     "vi",
+     "vile",
+     "where",
+     "means"
+    ],
+    "lr": 0.0024999999999999996
+   },
+   {
+    "context": "were",
+    "negatives": [
+     "gaze",
+     "repent",
+     "brother's",
+     "only",
+     "the"
+    ],
+    "lr": 0.0024999999999999996
+   }
+  ],
+  "counts": {
+   "rough": 23,
+   "i": 4664,
+   "incensed": 6,
+   "sorrow": 72,
+   "we": 866,
+   "great": 165,
+   "vile": 17,
+   "only": 79,
+   "master's": 16,
+   "truth": 65,
+   "bold": 33,
+   "patience": 41,
+   "them": 474,
+   "vi": 27,
+   "after": 89,
+   "then": 573,
+   "else": 110,
+   "was": 528,
+   "seal": 15,
+   "gaze": 8,
+   "death": 308,
+   "here": 509,
+   "wrought": 10,
+   "what's": 83,
+   "same": 37,
+   "narrow": 5,
+   "king": 448,
+   "us": 399,
+   "were": 412,
+   "be": 1705,
+   "brother's": 36,
+   "she": 496,
+   "means": 59,
+   "take": 293,
+   "where": 326,
+   "suspect": 8,
+   "see": 322,
+   "your": 1686,
+   "storms": 6,
+   "and": 5690,
+   "repent": 18,
+   "the": 6285,
+   "house": 140,
+   "farewell": 100,
+   "not": 2015,
+   "humble": 19,
+   "excuse": 17
+  },
+  "keepProbability": {
+   "water": 1.0,
+   "noble": 1.0,
+   "whence": 1.0,
+   "came": 1.0,
+   "that": 0.33327030219244697,
+   "we": 0.6613834508310431,
+   "great": 1.0,
+   "to": 0.227620561976172,
+   "who": 1.0,
+   "he": 0.46481090415091375,
+   "our": 0.7050011390660568,
+   "twice": 1.0,
+   "stock": 1.0,
+   "read": 1.0,
+   "how": 0.9310102733018732,
+   "what": 0.5570824814314493,
+   "springs": 1.0,
+   "after": 1.0,
+   "son": 1.0,
+   "was": 0.9213321135246944,
+   "you": 0.29528075757950156,
+   "country": 1.0,
+   "began": 1.0,
+   "here": 0.9447563979423635,
+   "from": 0.8234002156512936,
+   "same": 1.0,
+   "his": 0.4549754637509579,
+   "us": 1.0,
+   "say": 1.0,
+   "king": 1.0,
+   "were": 1.0,
+   "beat": 1.0,
+   "spare": 1.0,
+   "by": 0.6411816876367948,
+   "ay": 1.0,
+   "serve": 1.0,
+   "marcius": 1.0,
+   "being": 1.0,
+   "of": 0.27567934624197377,
+   "long": 1.0,
+   "and": 0.2088374559698885,
+   "daughter's": 1.0,
+   "hither": 1.0,
+   "the": 0.19725418197707537,
+   "house": 1.0,
+   "o": 0.7928554429580436,
+   "not": 0.386908900774193,
+   "brought": 1.0
+  },
+  "noiseProbability": {
+   "rough": 0.00022380675847233797,
+   "i": 0.012026693037614885,
+   "incensed": 8.169411227655381e-05,
+   "sorrow": 0.0005267162199564072,
+   "we": 0.003401854535820543,
+   "great": 0.0009810480486434202,
+   "vile": 0.00017840787119696055,
+   "only": 0.0005646738012728218,
+   "master's": 0.00017047759387574693,
+   "truth": 0.0004878230729147089,
+   "bold": 0.000293401800771679,
+   "patience": 0.00034527506258243774,
+   "them": 0.0021647665888307973,
+   "vi": 0.00025240627247685694,
+   "after": 0.0006174756345399534,
+   "then": 0.002495705215438799,
+   "else": 0.0007238054251939699,
+   "was": 0.002347214406173432,
+   "seal": 0.00016242234051538053,
+   "gaze": 0.00010136658379279128,
+   "death": 0.0015667162843963547,
+   "wrought": 0.00011983324506918709,
+   "what's": 0.0005859841773112224,
+   "here": 0.0022835769825981767,
+   "same": 0.0003196896772477197,
+   "narrow": 7.1253273825071e-05,
+   "us": 0.00190242257956839,
+   "be": 0.005654192726796921,
+   "were": 0.0019487235436179036,
+   "brother's": 0.00031318733817974883,
+   "she": 0.002239693437520431,
+   "means": 0.00045364520925596344,
+   "take": 0.001509134805269545,
+   "where": 0.0016348974639995315,
+   "suspect": 0.00010136658379279128,
+   "see": 0.0016198292012612537,
+   "your": 0.0056068701433126256,
+   "storms": 8.169411227655381e-05,
+   "and": 0.013960839038154602,
+   "repent": 0.00018622230544606034,
+   "the": 0.015042024151026644,
+   "farewell": 0.0006738718583406653,
+   "house": 0.0008673079891327629,
+   "not": 0.006408901664077039,
+   "humble": 0.00019392889408946414,
+   "excuse": 0.00017840787119696055
+  },
+  "topNoise": [
+   {
+    "word": "the",
+    "p": 0.015042024151026644,
+    "unigram": 0.03510800529552729
+   },
+   {
+    "word": "and",
+    "p": 0.013960839038154602,
+    "unigram": 0.03178433574089901
+   },
+   {
+    "word": "to",
+    "p": 0.012484101768297597,
+    "unigram": 0.027382568330735844
+   },
+   {
+    "word": "i",
+    "p": 0.012026693037614885,
+    "unigram": 0.02605310050888453
+   },
+   {
+    "word": "of",
+    "p": 0.009769433560621934,
+    "unigram": 0.019746507353968015
+   },
+   {
+    "word": "you",
+    "p": 0.008957912491948446,
+    "unigram": 0.01759031164289824
+   },
+   {
+    "word": "my",
+    "p": 0.008895969098035552,
+    "unigram": 0.017428317664605432
+   },
+   {
+    "word": "a",
+    "p": 0.008664002037761336,
+    "unigram": 0.016825029745446016
+   }
+  ],
+  "neighboursBefore": {
+   "king": [
+    {
+     "word": "wouldst",
+     "cos": 0.5216667652130127
+    },
+    {
+     "word": "nought",
+     "cos": 0.46662479639053345
+    },
+    {
+     "word": "food",
+     "cos": 0.4283989667892456
+    },
+    {
+     "word": "instruction",
+     "cos": 0.4130292534828186
+    },
+    {
+     "word": "escape",
+     "cos": 0.4066535532474518
+    },
+    {
+     "word": "white",
+     "cos": 0.39648109674453735
+    }
+   ],
+   "love": [
+    {
+     "word": "tired",
+     "cos": 0.5271067023277283
+    },
+    {
+     "word": "senses",
+     "cos": 0.4625363051891327
+    },
+    {
+     "word": "italy",
+     "cos": 0.45353323221206665
+    },
+    {
+     "word": "minister",
+     "cos": 0.4397295415401459
+    },
+    {
+     "word": "rascal",
+     "cos": 0.418107271194458
+    },
+    {
+     "word": "wolf",
+     "cos": 0.4164353907108307
+    }
+   ],
+   "sword": [
+    {
+     "word": "body's",
+     "cos": 0.4545474946498871
+    },
+    {
+     "word": "public",
+     "cos": 0.4314253628253937
+    },
+    {
+     "word": "throat",
+     "cos": 0.4286515712738037
+    },
+    {
+     "word": "kindly",
+     "cos": 0.42219775915145874
+    },
+    {
+     "word": "field",
+     "cos": 0.4212283194065094
+    },
+    {
+     "word": "quiet",
+     "cos": 0.419103741645813
+    }
+   ],
+   "night": [
+    {
+     "word": "henry",
+     "cos": 0.5686479806900024
+    },
+    {
+     "word": "thank",
+     "cos": 0.550959050655365
+    },
+    {
+     "word": "slanderous",
+     "cos": 0.5407506227493286
+    },
+    {
+     "word": "third",
+     "cos": 0.49387720227241516
+    },
+    {
+     "word": "charge",
+     "cos": 0.4276633560657501
+    },
+    {
+     "word": "resign",
+     "cos": 0.4135247766971588
+    }
+   ],
+   "father": [
+    {
+     "word": "six",
+     "cos": 0.5663708448410034
+    },
+    {
+     "word": "master's",
+     "cos": 0.44295763969421387
+    },
+    {
+     "word": "seas",
+     "cos": 0.41740521788597107
+    },
+    {
+     "word": "grievous",
+     "cos": 0.3923013508319855
+    },
+    {
+     "word": "henceforth",
+     "cos": 0.3859529495239258
+    },
+    {
+     "word": "undone",
+     "cos": 0.3707764446735382
+    }
+   ],
+   "good": [
+    {
+     "word": "journey",
+     "cos": 0.46276137232780457
+    },
+    {
+     "word": "got",
+     "cos": 0.45344021916389465
+    },
+    {
+     "word": "horn",
+     "cos": 0.4357370436191559
+    },
+    {
+     "word": "oath",
+     "cos": 0.4120771884918213
+    },
+    {
+     "word": "dying",
+     "cos": 0.4092281460762024
+    },
+    {
+     "word": "baby",
+     "cos": 0.3902711868286133
+    }
+   ]
+  },
+  "neighboursAfter": {
+   "king": [
+    {
+     "word": "henry",
+     "cos": 0.8129945397377014
+    },
+    {
+     "word": "richard",
+     "cos": 0.759416937828064
+    },
+    {
+     "word": "crown",
+     "cos": 0.7285410165786743
+    },
+    {
+     "word": "duke",
+     "cos": 0.7207497954368591
+    },
+    {
+     "word": "vi",
+     "cos": 0.7171676754951477
+    },
+    {
+     "word": "edward",
+     "cos": 0.7088602185249329
+    }
+   ],
+   "love": [
+    {
+     "word": "hate",
+     "cos": 0.7603151202201843
+    },
+    {
+     "word": "protest",
+     "cos": 0.7541233897209167
+    },
+    {
+     "word": "heart's",
+     "cos": 0.7333441972732544
+    },
+    {
+     "word": "thankful",
+     "cos": 0.7226904630661011
+    },
+    {
+     "word": "frown",
+     "cos": 0.7178419232368469
+    },
+    {
+     "word": "wrong",
+     "cos": 0.7086830139160156
+    }
+   ],
+   "sword": [
+    {
+     "word": "seize",
+     "cos": 0.856711745262146
+    },
+    {
+     "word": "executioner",
+     "cos": 0.8390598893165588
+    },
+    {
+     "word": "swallow",
+     "cos": 0.8388698101043701
+    },
+    {
+     "word": "wrath",
+     "cos": 0.8290225267410278
+    },
+    {
+     "word": "bending",
+     "cos": 0.8282703161239624
+    },
+    {
+     "word": "gently",
+     "cos": 0.8239145874977112
+    }
+   ],
+   "night": [
+    {
+     "word": "day",
+     "cos": 0.766758918762207
+    },
+    {
+     "word": "morning",
+     "cos": 0.7392323017120361
+    },
+    {
+     "word": "wedding",
+     "cos": 0.726555347442627
+    },
+    {
+     "word": "morrow",
+     "cos": 0.7074416279792786
+    },
+    {
+     "word": "bed",
+     "cos": 0.6662983894348145
+    },
+    {
+     "word": "provide",
+     "cos": 0.6651087999343872
+    }
+   ],
+   "father": [
+    {
+     "word": "kinsman",
+     "cos": 0.832139790058136
+    },
+    {
+     "word": "brother",
+     "cos": 0.8166718482971191
+    },
+    {
+     "word": "harry",
+     "cos": 0.8008148670196533
+    },
+    {
+     "word": "son",
+     "cos": 0.8000176548957825
+    },
+    {
+     "word": "youngest",
+     "cos": 0.7726764678955078
+    },
+    {
+     "word": "margaret",
+     "cos": 0.7703662514686584
+    }
+   ],
+   "good": [
+    {
+     "word": "adieu",
+     "cos": 0.7179430723190308
+    },
+    {
+     "word": "william",
+     "cos": 0.7159640192985535
+    },
+    {
+     "word": "joyful",
+     "cos": 0.7009809613227844
+    },
+    {
+     "word": "farewell",
+     "cos": 0.6929291486740112
+    },
+    {
+     "word": "trusty",
+     "cos": 0.6914401650428772
+    },
+    {
+     "word": "condemned",
+     "cos": 0.6909816265106201
+    }
+   ]
+  }
+ },
+ "tensors": {
+  "file": "word2vec.f32",
+  "sha256": "c6ba6ede5ba2c76e011df5480a62b68382e46f3181293af4edc309b01c6d1cd1",
+  "bytes": 271824,
+  "tensors": {
+   "vectors": {
+    "offset": 0,
+    "length": 57300,
+    "shape": [
+     191,
+     300
+    ]
+   },
+   "analogyTargets": {
+    "offset": 57300,
+    "length": 2400,
+    "shape": [
+     8,
+     300
+    ]
+   },
+   "pca.capitals.coords": {
+    "offset": 59700,
+    "length": 44,
+    "shape": [
+     22,
+     2
+    ]
+   },
+   "pca.capitals.directions": {
+    "offset": 59744,
+    "length": 600,
+    "shape": [
+     2,
+     300
+    ]
+   },
+   "pca.gender.coords": {
+    "offset": 60344,
+    "length": 36,
+    "shape": [
+     18,
+     2
+    ]
+   },
+   "pca.gender.directions": {
+    "offset": 60380,
+    "length": 600,
+    "shape": [
+     2,
+     300
+    ]
+   },
+   "pca.tense.coords": {
+    "offset": 60980,
+    "length": 32,
+    "shape": [
+     16,
+     2
+    ]
+   },
+   "pca.tense.directions": {
+    "offset": 61012,
+    "length": 600,
+    "shape": [
+     2,
+     300
+    ]
+   },
+   "pca.comparative.coords": {
+    "offset": 61612,
+    "length": 32,
+    "shape": [
+     16,
+     2
+    ]
+   },
+   "pca.comparative.directions": {
+    "offset": 61644,
+    "length": 600,
+    "shape": [
+     2,
+     300
+    ]
+   },
+   "sg.before.centre": {
+    "offset": 62244,
+    "length": 400,
+    "shape": [
+     8,
+     50
+    ]
+   },
+   "sg.before.context": {
+    "offset": 62644,
+    "length": 400,
+    "shape": [
+     8,
+     50
+    ]
+   },
+   "sg.before.negatives": {
+    "offset": 63044,
+    "length": 2000,
+    "shape": [
+     8,
+     5,
+     50
+    ]
+   },
+   "sg.after.centre": {
+    "offset": 65044,
+    "length": 400,
+    "shape": [
+     8,
+     50
+    ]
+   },
+   "sg.after.context": {
+    "offset": 65444,
+    "length": 400,
+    "shape": [
+     8,
+     50
+    ]
+   },
+   "sg.after.negatives": {
+    "offset": 65844,
+    "length": 2000,
+    "shape": [
+     8,
+     5,
+     50
+    ]
+   },
+   "sg.before.scores": {
+    "offset": 67844,
+    "length": 48,
+    "shape": [
+     8,
+     6
+    ]
+   },
+   "sg.after.scores": {
+    "offset": 67892,
+    "length": 48,
+    "shape": [
+     8,
+     6
+    ]
+   },
+   "sg.losses": {
+    "offset": 67940,
+    "length": 16,
+    "shape": [
+     8,
+     2
+    ]
+   }
+  }
+ },
+ "validation": {
+  "neighbourCosineMaxError": 1.2e-07,
+  "analogyCosineMaxError": 1.15e-07,
+  "pcaProjectionMaxError": 0.0,
+  "skipgramLossMaxError": 0.0,
+  "skipgramStepMaxError": 0.0
+ },
+ "capture": {
+  "timestamp": "2026-10-31T00:24:01.312072+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "numpy": "2.5.4"
+  },
+  "script": "scripts/before-transformers/record_word2vec.py",
+  "scriptSha256": "9d605b5b0ae926b1e8167149943be27b7847ca7cab45e924f531bfa8ddcb2f4d",
+  "helperSha256": "b1fb5984cf2d3aafaac61e2f6e6c04a92637b768744f5a1dcea9e54ab1730151",
+  "drawerSha256": "73648c7a49e9a82b90506b4e5c0c1c5c8a0e8f96f56c2a01513ae5d4436fd42a"
+ }
+}
