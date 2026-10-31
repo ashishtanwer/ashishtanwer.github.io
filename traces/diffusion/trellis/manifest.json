@@ -1,0 +1,488 @@
+{
+	"kind": "diffusion-3d",
+	"tab": "trellis",
+	"model": {
+		"id": "microsoft/TRELLIS-image-large",
+		"name": "TRELLIS",
+		"revision": "25e0d31ffbebe4b5a97464dd851910efc3002d96",
+		"url": "https://huggingface.co/microsoft/TRELLIS-image-large",
+		"code": "https://github.com/microsoft/TRELLIS/tree/193e0502b5cb3eb5997ec457d5340e95d09b158e",
+		"license": "MIT",
+		"licenseUrl": "https://github.com/microsoft/TRELLIS/blob/main/LICENSE",
+		"paper": "https://arxiv.org/abs/2412.01506",
+		"checkpoints": {
+			"structure_flow": "ss_flow_img_dit_L_16l8_fp16",
+			"structure_decoder": "ss_dec_conv3d_16l8_fp16",
+			"latent_flow": "slat_flow_img_dit_L_64l8p2_fp16",
+			"gaussian_decoder": "slat_dec_gs_swin8_B_64l8gs32_fp16"
+		},
+		"imageEncoder": {
+			"id": "facebook/dinov2-with-registers-large",
+			"revision": "e4c89a4e05589de9b3e188688a303d0f3c04d0f3",
+			"license": "Apache-2.0",
+			"parameters": 304372736,
+			"tokens": 1374,
+			"width": 1024,
+			"patches": 37
+		},
+		"parameters": {
+			"structure_flow": 555543560,
+			"structure_decoder": 73671201,
+			"latent_flow": 600432520,
+			"gaussian_decoder": 85369024
+		},
+		"config": {
+			"width": 1024,
+			"heads": 16,
+			"layers": 24,
+			"grid": 16,
+			"channels": 8,
+			"resolution": 64,
+			"ioChannels": 128,
+			"decoderChannels": [
+				512,
+				128,
+				32
+			],
+			"gsWidth": 768,
+			"gsHeads": 12,
+			"gsLayers": 12,
+			"window": 8,
+			"gaussians": 32,
+			"voxelSize": 1.5
+		}
+	},
+	"input": {
+		"photo": "static/architectures/sam-beagle.jpg",
+		"mask": "static/traces/sam/prompt-1-mask-2.png",
+		"box": [
+			269,
+			102,
+			999,
+			747
+		],
+		"crop": [
+			196.0,
+			-13.5,
+			1072.0,
+			862.5
+		],
+		"photoSha256": "8c7bb1b32e0a27d51d5850bbdae97234aa02bdd406a07c3455b16b808df90b2a",
+		"maskSha256": "3fa0a0150bf27263f26b37984b545cac83a10cf1d505bb4ac8bee4a4c93f6ecc"
+	},
+	"sampling": {
+		"seed": 42,
+		"steps": 25,
+		"cfg": 5.0,
+		"cfgInterval": [
+			0.5,
+			1.0
+		],
+		"rescaleT": 3.0,
+		"sigmaMin": 1e-05,
+		"detail": [
+			2,
+			12
+		],
+		"slice": 8
+	},
+	"structure": {
+		"voxels": 10435,
+		"parents": 2373,
+		"cross": {
+			"block": 12,
+			"step": 12,
+			"cells": [
+				1306,
+				1783,
+				2379,
+				2891
+			]
+		}
+	},
+	"gaussians": {
+		"count": 333920,
+		"follow": [
+			0,
+			2087,
+			4174,
+			6260,
+			8347,
+			10434
+		]
+	},
+	"render": {
+		"views": 8,
+		"size": 160,
+		"stepSize": 96,
+		"stepYaw": 135,
+		"pitch": 0.3,
+		"fov": 40,
+		"radius": 2,
+		"background": "white",
+		"kernel": 0.1
+	},
+	"images": {
+		"input": {
+			"file": "input.jpg"
+		},
+		"stage1": {
+			"file": "stage1.jpg",
+			"frames": 25,
+			"columns": 5,
+			"tile": 96
+		},
+		"stage2": {
+			"file": "stage2.jpg",
+			"frames": 25,
+			"columns": 5,
+			"tile": 96
+		},
+		"views": {
+			"file": "views.jpg",
+			"frames": 8,
+			"columns": 8,
+			"tile": 160
+		}
+	},
+	"notRun": [
+		{
+			"part": "TRELLIS’s own code",
+			"why": "its sparse layers need spconv and flash-attn or xformers, CUDA-only; the tab runs plain-PyTorch blocks with the released weights instead, on the CPU in float32 (TRELLIS uses float16 on a GPU)"
+		},
+		{
+			"part": "the mesh decoder",
+			"why": "not run: its FlexiCubes extraction is rendered with nvdiffrast (CUDA-only); the tab shows the Gaussian decoder"
+		},
+		{
+			"part": "the radiance-field decoder",
+			"why": "not run: rendered with diffoctreerast (CUDA-only)"
+		},
+		{
+			"part": "the Gaussian rasterizer",
+			"why": "mip-splatting’s CUDA kernel is replaced by a PyTorch port of its per-pixel rules (pytorch/diffusion_trellis.py, splat)"
+		}
+	],
+	"image": {
+		"file": "image.f32",
+		"sha256": "4efdf61f01975412db8676caa94ebdbe13da81093f57aa48228b5b793b3b838c",
+		"bytes": 43824,
+		"tensors": {
+			"patchPca": {
+				"offset": 0,
+				"length": 4107,
+				"shape": [
+					37,
+					37,
+					3
+				]
+			},
+			"patchNorm": {
+				"offset": 4107,
+				"length": 1369,
+				"shape": [
+					37,
+					37
+				]
+			},
+			"crossWeights": {
+				"offset": 5476,
+				"length": 5476,
+				"shape": [
+					4,
+					37,
+					37
+				]
+			},
+			"crossOther": {
+				"offset": 10952,
+				"length": 4,
+				"shape": [
+					4
+				]
+			}
+		}
+	},
+	"stage1": {
+		"file": "stage1.f32",
+		"sha256": "b707e1836f9e82c2074f9d86fa16589c74e797eb9c2ee907587cac0af0dc9594",
+		"bytes": 729292,
+		"tensors": {
+			"t": {
+				"offset": 0,
+				"length": 26,
+				"shape": [
+					26
+				]
+			},
+			"x": {
+				"offset": 26,
+				"length": 53248,
+				"shape": [
+					26,
+					8,
+					16,
+					16
+				]
+			},
+			"x0": {
+				"offset": 53274,
+				"length": 51200,
+				"shape": [
+					25,
+					8,
+					16,
+					16
+				]
+			},
+			"count": {
+				"offset": 104474,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"detail.0.v": {
+				"offset": 104499,
+				"length": 2048,
+				"shape": [
+					8,
+					16,
+					16
+				]
+			},
+			"detail.0.vImage": {
+				"offset": 106547,
+				"length": 2048,
+				"shape": [
+					8,
+					16,
+					16
+				]
+			},
+			"detail.0.vNull": {
+				"offset": 108595,
+				"length": 2048,
+				"shape": [
+					8,
+					16,
+					16
+				]
+			},
+			"detail.1.v": {
+				"offset": 110643,
+				"length": 2048,
+				"shape": [
+					8,
+					16,
+					16
+				]
+			},
+			"detail.1.vImage": {
+				"offset": 112691,
+				"length": 2048,
+				"shape": [
+					8,
+					16,
+					16
+				]
+			},
+			"detail.1.vNull": {
+				"offset": 114739,
+				"length": 2048,
+				"shape": [
+					8,
+					16,
+					16
+				]
+			},
+			"detail.0.xFull": {
+				"offset": 116787,
+				"length": 32768,
+				"shape": [
+					1,
+					8,
+					16,
+					16,
+					16
+				]
+			},
+			"detail.0.vFull": {
+				"offset": 149555,
+				"length": 32768,
+				"shape": [
+					1,
+					8,
+					16,
+					16,
+					16
+				]
+			}
+		}
+	},
+	"voxels": {
+		"file": "voxels.f32",
+		"sha256": "f5773a76245d84a9f52e399c9cb1f346776cacba6a9ae873d5e0a796f9b6a59f",
+		"bytes": 397380,
+		"tensors": {
+			"coords": {
+				"offset": 0,
+				"length": 31305,
+				"shape": [
+					10435,
+					3
+				]
+			},
+			"slatPca": {
+				"offset": 31305,
+				"length": 31305,
+				"shape": [
+					10435,
+					3
+				]
+			},
+			"meanColour": {
+				"offset": 62610,
+				"length": 31305,
+				"shape": [
+					10435,
+					3
+				]
+			},
+			"follow": {
+				"offset": 93915,
+				"length": 6,
+				"shape": [
+					6
+				]
+			},
+			"followSlat": {
+				"offset": 93921,
+				"length": 48,
+				"shape": [
+					6,
+					8
+				]
+			},
+			"followXyz": {
+				"offset": 93969,
+				"length": 576,
+				"shape": [
+					6,
+					32,
+					3
+				]
+			},
+			"followColour": {
+				"offset": 94545,
+				"length": 576,
+				"shape": [
+					6,
+					32,
+					3
+				]
+			},
+			"followScale": {
+				"offset": 95121,
+				"length": 576,
+				"shape": [
+					6,
+					32,
+					3
+				]
+			},
+			"followRotation": {
+				"offset": 95697,
+				"length": 768,
+				"shape": [
+					6,
+					32,
+					4
+				]
+			},
+			"followOpacity": {
+				"offset": 96465,
+				"length": 192,
+				"shape": [
+					6,
+					32,
+					1
+				]
+			},
+			"followRaw": {
+				"offset": 96657,
+				"length": 2688,
+				"shape": [
+					6,
+					448
+				]
+			}
+		}
+	},
+	"stage2": {
+		"file": "stage2.f32",
+		"sha256": "0e2adefa700ac8c6e51744c076e108f960ecab516f63676d991d1b8c1ce4c14c",
+		"bytes": 368,
+		"tensors": {
+			"t": {
+				"offset": 0,
+				"length": 26,
+				"shape": [
+					26
+				]
+			},
+			"rms": {
+				"offset": 26,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"x0rms": {
+				"offset": 51,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"mean": {
+				"offset": 76,
+				"length": 8,
+				"shape": [
+					8
+				]
+			},
+			"std": {
+				"offset": 84,
+				"length": 8,
+				"shape": [
+					8
+				]
+			}
+		}
+	},
+	"validation": {
+		"positionTable": 5.960464477539063e-08,
+		"offsetTable": 0.0,
+		"guidance": 1.6689300537109375e-06,
+		"x0": 4.329269067682162e-07,
+		"euler": 1.1840628744153037e-07,
+		"crossRows": 9.34533090912737e-08,
+		"slatDenorm": 6.752059107384412e-07,
+		"occupancy": 0.0
+	},
+	"capture": {
+		"script": "scripts/diffusion/record_trellis.py",
+		"scriptSha256": "644177496c8566fe7b736833e87b45b6863d728058b1b7fd0e0e57d103f0c065",
+		"helperSha256": "8267ebfc31046b68b9196aee95f5f818cdf5aa7a6e77dc687ee8e1fd83e7c1c5",
+		"repoCommit": "313b4e8381685185b230a02393263c5f7d12d010",
+		"device": "cpu",
+		"dtype": "float32",
+		"python": "3.12.12",
+		"torch": "2.14.1",
+		"diffusers": "0.42.0",
+		"transformers": "5.21.0",
+		"seconds": 1,
+		"blocksSha256": "250c7dd39853d62957d4e385d46668dae1daff188e2c6580fcfa5f7e791ae10c"
+	}
+}
