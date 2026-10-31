@@ -1,0 +1,1792 @@
+{
+	"schemaVersion": 1,
+	"kind": "kimi-k3-layers",
+	"model": {
+		"id": "moonshotai/Kimi-K3",
+		"name": "Kimi K3",
+		"revision": "f831ab66814297da540d832a5235f8e904f29d06",
+		"url": "https://huggingface.co/moonshotai/Kimi-K3/tree/f831ab66814297da540d832a5235f8e904f29d06",
+		"license": "other (Kimi K3 License, a modified MIT licence)",
+		"licenseUrl": "https://huggingface.co/moonshotai/Kimi-K3/blob/f831ab66814297da540d832a5235f8e904f29d06/LICENSE",
+		"parameters": "2.78T",
+		"checkpointBytes": 1560860324864,
+		"numLayers": 93,
+		"hiddenSize": 7168,
+		"vocabSize": 163840,
+		"contextLength": 1048576,
+		"layerKinds": [
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"kda",
+			"kda",
+			"kda",
+			"mla",
+			"mla"
+		],
+		"kda": {
+			"heads": 96,
+			"headDim": 128,
+			"convKernel": 4,
+			"gateLowerBound": -5.0,
+			"scale": 0.08838834764831845
+		},
+		"mla": {
+			"heads": 96,
+			"qRank": 1536,
+			"kvRank": 512,
+			"nopeDim": 128,
+			"sharedDim": 64,
+			"vDim": 128,
+			"scale": 0.07216878364870322,
+			"rope": false
+		},
+		"moe": {
+			"experts": 896,
+			"topK": 16,
+			"latent": 3584,
+			"expertFfn": 3072,
+			"sharedExperts": 2,
+			"denseFfn": 33792,
+			"denseLayers": 1,
+			"router": "sigmoid; bias picks, renormalized scores weigh",
+			"expertFormat": "MXFP4 (E2M1, E8M0 scale per 32)"
+		},
+		"attnResBlock": 12,
+		"situ": {
+			"beta": 4.0,
+			"linearBeta": 25.0
+		}
+	},
+	"prompt": "Paris is in France. Paris is in",
+	"tokens": [
+		{
+			"id": 113476,
+			"text": "Paris"
+		},
+		{
+			"id": 387,
+			"text": " is"
+		},
+		{
+			"id": 306,
+			"text": " in"
+		},
+		{
+			"id": 15383,
+			"text": " France"
+		},
+		{
+			"id": 13,
+			"text": "."
+		},
+		{
+			"id": 17374,
+			"text": " Paris"
+		},
+		{
+			"id": 387,
+			"text": " is"
+		},
+		{
+			"id": 306,
+			"text": " in"
+		}
+	],
+	"recordedLayers": [
+		0,
+		1,
+		2,
+		3
+	],
+	"previewDims": 64,
+	"convChannels": 8,
+	"common": {
+		"file": "common.f32",
+		"sha256": "3f88e14c6dbf47302c1851e8c7a243ae16ae286b0e9db0b27e72fe22e19fdff1",
+		"bytes": 2080,
+		"tensors": {
+			"embedding": {
+				"offset": 0,
+				"length": 512,
+				"shape": [
+					8,
+					64
+				]
+			},
+			"embeddingNorm": {
+				"offset": 512,
+				"length": 8,
+				"shape": [
+					8
+				]
+			}
+		}
+	},
+	"layers": {
+		"0": {
+			"file": "layer-1.f32",
+			"sha256": "97d4ba900f51903255146e8001b45e8937f5d4a55f25df794fd753d8f9d6bf8f",
+			"bytes": 1811488,
+			"tensors": {
+				"partialIn": {
+					"offset": 0,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"partialInNorm": {
+					"offset": 512,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"attnIn": {
+					"offset": 520,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"attnInNorm": {
+					"offset": 1032,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"x": {
+					"offset": 1040,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"xNorm": {
+					"offset": 1552,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"q": {
+					"offset": 1560,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"k": {
+					"offset": 99864,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"v": {
+					"offset": 198168,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"logAlpha": {
+					"offset": 296472,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"beta": {
+					"offset": 394776,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"aLog": {
+					"offset": 395544,
+					"length": 96,
+					"shape": [
+						96
+					]
+				},
+				"convPre.q": {
+					"offset": 395640,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convWeight.q": {
+					"offset": 401784,
+					"length": 3072,
+					"shape": [
+						96,
+						8,
+						4
+					]
+				},
+				"convPost.q": {
+					"offset": 404856,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convPre.k": {
+					"offset": 411000,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convWeight.k": {
+					"offset": 417144,
+					"length": 3072,
+					"shape": [
+						96,
+						8,
+						4
+					]
+				},
+				"convPost.k": {
+					"offset": 420216,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convPre.v": {
+					"offset": 426360,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convWeight.v": {
+					"offset": 432504,
+					"length": 3072,
+					"shape": [
+						96,
+						8,
+						4
+					]
+				},
+				"convPost.v": {
+					"offset": 435576,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"oNorm": {
+					"offset": 441720,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"gateMean": {
+					"offset": 442488,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"normedNorm": {
+					"offset": 443256,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"stateCheck": {
+					"offset": 444024,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"stateNorm": {
+					"offset": 450168,
+					"length": 96,
+					"shape": [
+						96
+					]
+				},
+				"outNorm": {
+					"offset": 450264,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"out": {
+					"offset": 450272,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpResWeights": {
+					"offset": 450784,
+					"length": 16,
+					"shape": [
+						8,
+						2
+					]
+				},
+				"mlpIn": {
+					"offset": 450800,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpInNorm": {
+					"offset": 451312,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"mlpX": {
+					"offset": 451320,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpOut": {
+					"offset": 451832,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpOutNorm": {
+					"offset": 452344,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"partialOut": {
+					"offset": 452352,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"partialOutNorm": {
+					"offset": 452864,
+					"length": 8,
+					"shape": [
+						8
+					]
+				}
+			}
+		},
+		"1": {
+			"file": "layer-2.f32",
+			"sha256": "e5d4f513e55cd77c76e7cadc32965ce101bf6caadfba1bc1e88c8ae718de77f4",
+			"bytes": 1853664,
+			"tensors": {
+				"attnResWeights": {
+					"offset": 0,
+					"length": 16,
+					"shape": [
+						8,
+						2
+					]
+				},
+				"partialIn": {
+					"offset": 16,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"partialInNorm": {
+					"offset": 528,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"attnIn": {
+					"offset": 536,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"attnInNorm": {
+					"offset": 1048,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"x": {
+					"offset": 1056,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"xNorm": {
+					"offset": 1568,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"q": {
+					"offset": 1576,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"k": {
+					"offset": 99880,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"v": {
+					"offset": 198184,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"logAlpha": {
+					"offset": 296488,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"beta": {
+					"offset": 394792,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"aLog": {
+					"offset": 395560,
+					"length": 96,
+					"shape": [
+						96
+					]
+				},
+				"convPre.q": {
+					"offset": 395656,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convWeight.q": {
+					"offset": 401800,
+					"length": 3072,
+					"shape": [
+						96,
+						8,
+						4
+					]
+				},
+				"convPost.q": {
+					"offset": 404872,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convPre.k": {
+					"offset": 411016,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convWeight.k": {
+					"offset": 417160,
+					"length": 3072,
+					"shape": [
+						96,
+						8,
+						4
+					]
+				},
+				"convPost.k": {
+					"offset": 420232,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convPre.v": {
+					"offset": 426376,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convWeight.v": {
+					"offset": 432520,
+					"length": 3072,
+					"shape": [
+						96,
+						8,
+						4
+					]
+				},
+				"convPost.v": {
+					"offset": 435592,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"oNorm": {
+					"offset": 441736,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"gateMean": {
+					"offset": 442504,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"normedNorm": {
+					"offset": 443272,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"stateCheck": {
+					"offset": 444040,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"stateNorm": {
+					"offset": 450184,
+					"length": 96,
+					"shape": [
+						96
+					]
+				},
+				"outNorm": {
+					"offset": 450280,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"out": {
+					"offset": 450288,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpResWeights": {
+					"offset": 450800,
+					"length": 16,
+					"shape": [
+						8,
+						2
+					]
+				},
+				"mlpIn": {
+					"offset": 450816,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpInNorm": {
+					"offset": 451328,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"mlpX": {
+					"offset": 451336,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"routerScores": {
+					"offset": 451848,
+					"length": 7168,
+					"shape": [
+						8,
+						896
+					]
+				},
+				"routerBias": {
+					"offset": 459016,
+					"length": 896,
+					"shape": [
+						896
+					]
+				},
+				"picked": {
+					"offset": 459912,
+					"length": 128,
+					"shape": [
+						8,
+						16
+					]
+				},
+				"routeWeights": {
+					"offset": 460040,
+					"length": 128,
+					"shape": [
+						8,
+						16
+					]
+				},
+				"latentIn": {
+					"offset": 460168,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"latentInNorm": {
+					"offset": 460680,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"perExpertNorm": {
+					"offset": 460688,
+					"length": 128,
+					"shape": [
+						8,
+						16
+					]
+				},
+				"routedLatent": {
+					"offset": 460816,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"routedLatentNorm": {
+					"offset": 461328,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"routed": {
+					"offset": 461336,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"routedNorm": {
+					"offset": 461848,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"sharedOut": {
+					"offset": 461856,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"sharedOutNorm": {
+					"offset": 462368,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"mlpOut": {
+					"offset": 462376,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpOutNorm": {
+					"offset": 462888,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"partialOut": {
+					"offset": 462896,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"partialOutNorm": {
+					"offset": 463408,
+					"length": 8,
+					"shape": [
+						8
+					]
+				}
+			}
+		},
+		"2": {
+			"file": "layer-3.f32",
+			"sha256": "3d67a05167bb98b1eb76da001abb9c07ac98a2e4753c2118c425e32bfbbd28ca",
+			"bytes": 1853664,
+			"tensors": {
+				"attnResWeights": {
+					"offset": 0,
+					"length": 16,
+					"shape": [
+						8,
+						2
+					]
+				},
+				"partialIn": {
+					"offset": 16,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"partialInNorm": {
+					"offset": 528,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"attnIn": {
+					"offset": 536,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"attnInNorm": {
+					"offset": 1048,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"x": {
+					"offset": 1056,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"xNorm": {
+					"offset": 1568,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"q": {
+					"offset": 1576,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"k": {
+					"offset": 99880,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"v": {
+					"offset": 198184,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"logAlpha": {
+					"offset": 296488,
+					"length": 98304,
+					"shape": [
+						96,
+						8,
+						128
+					]
+				},
+				"beta": {
+					"offset": 394792,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"aLog": {
+					"offset": 395560,
+					"length": 96,
+					"shape": [
+						96
+					]
+				},
+				"convPre.q": {
+					"offset": 395656,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convWeight.q": {
+					"offset": 401800,
+					"length": 3072,
+					"shape": [
+						96,
+						8,
+						4
+					]
+				},
+				"convPost.q": {
+					"offset": 404872,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convPre.k": {
+					"offset": 411016,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convWeight.k": {
+					"offset": 417160,
+					"length": 3072,
+					"shape": [
+						96,
+						8,
+						4
+					]
+				},
+				"convPost.k": {
+					"offset": 420232,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convPre.v": {
+					"offset": 426376,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"convWeight.v": {
+					"offset": 432520,
+					"length": 3072,
+					"shape": [
+						96,
+						8,
+						4
+					]
+				},
+				"convPost.v": {
+					"offset": 435592,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"oNorm": {
+					"offset": 441736,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"gateMean": {
+					"offset": 442504,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"normedNorm": {
+					"offset": 443272,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"stateCheck": {
+					"offset": 444040,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"stateNorm": {
+					"offset": 450184,
+					"length": 96,
+					"shape": [
+						96
+					]
+				},
+				"outNorm": {
+					"offset": 450280,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"out": {
+					"offset": 450288,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpResWeights": {
+					"offset": 450800,
+					"length": 16,
+					"shape": [
+						8,
+						2
+					]
+				},
+				"mlpIn": {
+					"offset": 450816,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpInNorm": {
+					"offset": 451328,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"mlpX": {
+					"offset": 451336,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"routerScores": {
+					"offset": 451848,
+					"length": 7168,
+					"shape": [
+						8,
+						896
+					]
+				},
+				"routerBias": {
+					"offset": 459016,
+					"length": 896,
+					"shape": [
+						896
+					]
+				},
+				"picked": {
+					"offset": 459912,
+					"length": 128,
+					"shape": [
+						8,
+						16
+					]
+				},
+				"routeWeights": {
+					"offset": 460040,
+					"length": 128,
+					"shape": [
+						8,
+						16
+					]
+				},
+				"latentIn": {
+					"offset": 460168,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"latentInNorm": {
+					"offset": 460680,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"perExpertNorm": {
+					"offset": 460688,
+					"length": 128,
+					"shape": [
+						8,
+						16
+					]
+				},
+				"routedLatent": {
+					"offset": 460816,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"routedLatentNorm": {
+					"offset": 461328,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"routed": {
+					"offset": 461336,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"routedNorm": {
+					"offset": 461848,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"sharedOut": {
+					"offset": 461856,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"sharedOutNorm": {
+					"offset": 462368,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"mlpOut": {
+					"offset": 462376,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpOutNorm": {
+					"offset": 462888,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"partialOut": {
+					"offset": 462896,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"partialOutNorm": {
+					"offset": 463408,
+					"length": 8,
+					"shape": [
+						8
+					]
+				}
+			}
+		},
+		"3": {
+			"file": "layer-4.f32",
+			"sha256": "e97825001db8681fd1cfb476cd2d5400e85cab1fb20ece91c61b27f1727a95ef",
+			"bytes": 181728,
+			"tensors": {
+				"attnResWeights": {
+					"offset": 0,
+					"length": 16,
+					"shape": [
+						8,
+						2
+					]
+				},
+				"partialIn": {
+					"offset": 16,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"partialInNorm": {
+					"offset": 528,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"attnIn": {
+					"offset": 536,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"attnInNorm": {
+					"offset": 1048,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"x": {
+					"offset": 1056,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"xNorm": {
+					"offset": 1568,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"latent": {
+					"offset": 1576,
+					"length": 4096,
+					"shape": [
+						8,
+						512
+					]
+				},
+				"shared": {
+					"offset": 5672,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"scores": {
+					"offset": 6184,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"content": {
+					"offset": 12328,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"sharedScores": {
+					"offset": 18472,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"weights": {
+					"offset": 24616,
+					"length": 6144,
+					"shape": [
+						96,
+						8,
+						8
+					]
+				},
+				"headsNorm": {
+					"offset": 30760,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"gateMean": {
+					"offset": 31528,
+					"length": 768,
+					"shape": [
+						96,
+						8
+					]
+				},
+				"outNorm": {
+					"offset": 32296,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"out": {
+					"offset": 32304,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpResWeights": {
+					"offset": 32816,
+					"length": 16,
+					"shape": [
+						8,
+						2
+					]
+				},
+				"mlpIn": {
+					"offset": 32832,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpInNorm": {
+					"offset": 33344,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"mlpX": {
+					"offset": 33352,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"routerScores": {
+					"offset": 33864,
+					"length": 7168,
+					"shape": [
+						8,
+						896
+					]
+				},
+				"routerBias": {
+					"offset": 41032,
+					"length": 896,
+					"shape": [
+						896
+					]
+				},
+				"picked": {
+					"offset": 41928,
+					"length": 128,
+					"shape": [
+						8,
+						16
+					]
+				},
+				"routeWeights": {
+					"offset": 42056,
+					"length": 128,
+					"shape": [
+						8,
+						16
+					]
+				},
+				"latentIn": {
+					"offset": 42184,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"latentInNorm": {
+					"offset": 42696,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"perExpertNorm": {
+					"offset": 42704,
+					"length": 128,
+					"shape": [
+						8,
+						16
+					]
+				},
+				"routedLatent": {
+					"offset": 42832,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"routedLatentNorm": {
+					"offset": 43344,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"routed": {
+					"offset": 43352,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"routedNorm": {
+					"offset": 43864,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"sharedOut": {
+					"offset": 43872,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"sharedOutNorm": {
+					"offset": 44384,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"mlpOut": {
+					"offset": 44392,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"mlpOutNorm": {
+					"offset": 44904,
+					"length": 8,
+					"shape": [
+						8
+					]
+				},
+				"partialOut": {
+					"offset": 44912,
+					"length": 512,
+					"shape": [
+						8,
+						64
+					]
+				},
+				"partialOutNorm": {
+					"offset": 45424,
+					"length": 8,
+					"shape": [
+						8
+					]
+				}
+			}
+		}
+	},
+	"expertsRead": {
+		"1": 86,
+		"2": 81,
+		"3": 67
+	},
+	"capture": {
+		"script": "scripts/architectures/record_kimi_k3.py",
+		"scriptSha256": "9b0adbc68fdd8bf394e76c49e36309842b7f834280bd08584e90a663b5cd3a78",
+		"drawerSha256": "31aeb3207807f37a8e6b25d6a569274a48ec364f651531280d0819d902655d32",
+		"code": "pytorch/kimi_k3.py (the drawer's modules, loaded from the pinned checkpoint's weights)",
+		"torch": "2.14.1",
+		"python": "3.12.12",
+		"device": "cpu",
+		"dtype": "float32 compute on the bfloat16 / float32 / MXFP4 checkpoint tensors; the model itself runs in bfloat16",
+		"run": "layers 1–4 (KDA, KDA, KDA, MLA), each with its attention residuals and its dense MLP (layer 1) or latent MoE (layers 2–4), on the prompt's own token embeddings; only the routed experts the router picks are read",
+		"skipped": "layers 5–93, the output attention residual, the final RMSNorm and the LM head: no logits",
+		"tensorsRead": 1511,
+		"tensorsReadSha256": "8301eff86f26b6a1748f359686ac801f3b1a7c94e6a7ae37a5e42e9319b7bb46",
+		"denseTensorsSha256": {
+			"language_model.model.embed_tokens.weight[113476:113477]": "8dda63df1b5f55dd17dd3dae526cd7d9beae8eef5c3d3694c8922709f8ccd717",
+			"language_model.model.embed_tokens.weight[13:14]": "65a4af7d43797ed4f1fff73b5053c64836e2bca5ee6c2fc4e096b665bb8c3725",
+			"language_model.model.embed_tokens.weight[15383:15384]": "f7429e37ec66c4b1b9d7e7947fff2f2648c35e7a02f4103e57acef3ad372dd3c",
+			"language_model.model.embed_tokens.weight[17374:17375]": "cdd079bbfdd50f42b2e6fe210b21fe7b8e2dc3eced1222700b7e8bc9a9a10f83",
+			"language_model.model.embed_tokens.weight[306:307]": "ddaf262dfac6ef80bb01089083aaa6f274b67b78bfa021320535b8e3c19e7947",
+			"language_model.model.embed_tokens.weight[387:388]": "a3ed8ebaf0691f776377350f141f5d72997a98df953a326f810b4e38555eebdc",
+			"language_model.model.layers.0.input_layernorm.weight": "cae42a3274b32d56979ad9321af9659e7219725531ad676d8057d28fa8d639d2",
+			"language_model.model.layers.0.mlp.down_proj.weight": "07d771143cf4c98bb96ae68be55c1aa9dd01b0f14f6ae11bf6438fecb4a6be5f",
+			"language_model.model.layers.0.mlp.gate_proj.weight": "0447e1eaf4e99677d40fb05420dd6e91710fa36e3ef5e687ca09a03140c9ec82",
+			"language_model.model.layers.0.mlp.up_proj.weight": "fcfbd08a8f23415d3d12d6ade17530f90fbfd4b08cb27799374ff8c889cdbe21",
+			"language_model.model.layers.0.mlp_res_norm.weight": "35177fb420535a1bb7bf3757060de5624b7e4f77f07c2fe60ec8897c7e3afd51",
+			"language_model.model.layers.0.mlp_res_proj.weight": "bc3edaf32ca2a68e5888a1cebaaef69cf4f2c9d6130986d62f90f5be515e24cd",
+			"language_model.model.layers.0.post_attention_layernorm.weight": "a8e85469eeca371397ede84c33245df1f479d4c78a69caa34c4f9c233834c419",
+			"language_model.model.layers.0.self_attention_res_norm.weight": "56d9c47a7112ab89d3eb976fe101bfa2c14350d40256a822ff514f686169359b",
+			"language_model.model.layers.0.self_attention_res_proj.weight": "fa6f47ce3cf7c44a6f07dc0ed4a48695a4beba985c60a3efa83e74fa197981a8",
+			"language_model.model.layers.0.self_attn.A_log": "c8ed0a50f5bde0f66fa1e0ca06a49108bd771fa410f4394b00958615f1d20bf9",
+			"language_model.model.layers.0.self_attn.b_proj.weight": "9d20896111cbd0bf31cd38e6dc48929d63240dcec10bf00b8920ae01f7c398b7",
+			"language_model.model.layers.0.self_attn.dt_bias": "7b89b144b7661a3f86113555fb0f837164fa0ef9e222f47c226335e57d98429f",
+			"language_model.model.layers.0.self_attn.f_a_proj.weight": "d1199e1a037dd32f3816f9da1b9ed61dc8c92c2ca6844fb2abea9f17f6bd601b",
+			"language_model.model.layers.0.self_attn.f_b_proj.weight": "0f93924814a2a5368eb72a853962886091f6baa4594bce78181c4bc5a69e1701",
+			"language_model.model.layers.0.self_attn.g_proj.weight": "9fe86e719bbd6b81d2bbccfe65a10d12203decc70d98f8dcf0771a5fd049475a",
+			"language_model.model.layers.0.self_attn.k_conv1d.weight": "cb5b4c7ce531f0f4b32f97790a9399d270d40dcff0d50372311e2f19eca0faeb",
+			"language_model.model.layers.0.self_attn.k_proj.weight": "3a6a50bca4b36641d330ed4a46bb4de39063a79cdc2064c391da35e050bde337",
+			"language_model.model.layers.0.self_attn.o_norm.weight": "2af6a2ae4cb96c8752df64e5b0544d5d0fbb6fe1553d5c3a3041fcd4cdd55089",
+			"language_model.model.layers.0.self_attn.o_proj.weight": "e3d35b72eb5e36a9cf0b30c8c2ac254c9954b62779db4474df38888b565fe6f8",
+			"language_model.model.layers.0.self_attn.q_conv1d.weight": "c15dfda8d6eb5431af3fd464f2006bc4e37bf8e767308c4e98a2a8b5e519c12b",
+			"language_model.model.layers.0.self_attn.q_proj.weight": "dc6cf4d05891fe16d8a665cdb9e0dcbc3d9f5d1bf7c5ee896ab79adce16c2b4a",
+			"language_model.model.layers.0.self_attn.v_conv1d.weight": "13310a62f4294a5beda75c5db504b0688c5d7b9d7273764f3df03ea207c8a4cd",
+			"language_model.model.layers.0.self_attn.v_proj.weight": "8207857644ebb6355a638bceb47ed00bad3d130343a8e53c47a1e06c27ddf0aa",
+			"language_model.model.layers.1.block_sparse_moe.gate.e_score_correction_bias": "853727cc546c18e82efe23f124519049f001feb3d429123876ba8ec5484e5a1d",
+			"language_model.model.layers.1.block_sparse_moe.gate.weight": "25ebb27dfe797648f0d815f433fb2cf36f5617987bc2208e01d071588e79a957",
+			"language_model.model.layers.1.block_sparse_moe.routed_expert_down_proj.weight": "39bfe48649bd6452944185b32eb6486dbf0552da401c83f5d4f6ef2b3c0a3ca6",
+			"language_model.model.layers.1.block_sparse_moe.routed_expert_norm.weight": "4f9aaa834cd9c0deb04c14e6d1f092f829b5fb91f8f0a1016b460fb57c561a37",
+			"language_model.model.layers.1.block_sparse_moe.routed_expert_up_proj.weight": "89949f7919a90006dd3c5f5da8e063d7ce023e2549c8dc0ce6a93b78fb4ffe76",
+			"language_model.model.layers.1.block_sparse_moe.shared_experts.down_proj.weight": "53bdfc43ad3596241d5dacaf9fb002d40d0480c31ebc32a92ed37733f757bf7b",
+			"language_model.model.layers.1.block_sparse_moe.shared_experts.gate_proj.weight": "a0000660f0bd22d6232b126cc7608843e1a56d81c9073b0585d40c9d6ee3ee86",
+			"language_model.model.layers.1.block_sparse_moe.shared_experts.up_proj.weight": "d07b321c3b5f3e96a2ebfa2057048b09f21b9a756d2203bf07764267dfa34718",
+			"language_model.model.layers.1.input_layernorm.weight": "b03b4cc3e999b997f6d2e0bfe279da0a707d9627b6f064cc6fad2d6c5ffeeab5",
+			"language_model.model.layers.1.mlp_res_norm.weight": "56efb0d43c51d522074e166e19c9b8d91b53937c7b1da33c16835ca461ab78c9",
+			"language_model.model.layers.1.mlp_res_proj.weight": "4d6d1bd3a3be3b716614c72529b9bba5e805cd5694ca793589118dce78d87e95",
+			"language_model.model.layers.1.post_attention_layernorm.weight": "bbe580660dc2d1fa335dd496f734ec813e6d29211398b5cdb05dbbb5aea9f5aa",
+			"language_model.model.layers.1.self_attention_res_norm.weight": "aba77f1cc2dc0bc48c551dbe92f2eab5c6529a91d3daf8977d9ca5896b855831",
+			"language_model.model.layers.1.self_attention_res_proj.weight": "7d098536e4dc4ab87e5007e412dfc4e07171ace2a4e973c28feafa7cf9065be7",
+			"language_model.model.layers.1.self_attn.A_log": "e62123b255be20125cdcdd04bd0af0da3619845ef97cbce72993c4d1b126d072",
+			"language_model.model.layers.1.self_attn.b_proj.weight": "fdd4cfc73077260d39a39aca8cdedec2151910f8d7fcc4a1eb00c254572ff53a",
+			"language_model.model.layers.1.self_attn.dt_bias": "8403106310c52e38079300a2fb573852282eb57771f5fda96ec260b5911c3643",
+			"language_model.model.layers.1.self_attn.f_a_proj.weight": "5355d82e40c1884caf4f701ad33b932720ac7dc9fa36d195675842144118f6cd",
+			"language_model.model.layers.1.self_attn.f_b_proj.weight": "fd3fa0581587ee937371dbfde95e975361c6455a4ef5ca5e8160e4a3e8f81e17",
+			"language_model.model.layers.1.self_attn.g_proj.weight": "81cc0ce780577dc1d1c3144c92324fd64154422fd955906dea44b471207858f2",
+			"language_model.model.layers.1.self_attn.k_conv1d.weight": "c2d79d57af7495ac674deb5d59f30389c2fb20307cc40ca5e9ed69e4f5a17132",
+			"language_model.model.layers.1.self_attn.k_proj.weight": "be45df9cd94c6aee7393e9b5760000ef3e64dc5ca9b0ab64fb2e00dbce84b45b",
+			"language_model.model.layers.1.self_attn.o_norm.weight": "66c6cf56ff55bd2e71ebb90136c3f6236489c9a635507eba49093a9d61e3c7a5",
+			"language_model.model.layers.1.self_attn.o_proj.weight": "0ec14e298cc858bd2c389d32b998e2fe1e35ff798ed64f78bda1722e5034cedf",
+			"language_model.model.layers.1.self_attn.q_conv1d.weight": "2c18b186e8aeb8d804a5b0740dcb7a614778795fa7368e06278da8b26ad6657d",
+			"language_model.model.layers.1.self_attn.q_proj.weight": "a3e64d671c4b0139aef1dfb2eebbd7bd3508fafeafcb24940c548f0982fb474d",
+			"language_model.model.layers.1.self_attn.v_conv1d.weight": "f61a97e1a52d7da0fd0bb8093a399d0b35de958c17dbe44982cf86a725631273",
+			"language_model.model.layers.1.self_attn.v_proj.weight": "2d5e1e8ccd31b81afcf5c3b61107aefbfca59c38cd13442ee717855e5bb0d6bc",
+			"language_model.model.layers.2.block_sparse_moe.gate.e_score_correction_bias": "2b5a6d43e1325124a175da27638ae66326d5e0ffe717c4eed7f3de083acf918e",
+			"language_model.model.layers.2.block_sparse_moe.gate.weight": "c94a6fb824e7dc384518270fc8fa492a681124933eda7408397c998ae29964b3",
+			"language_model.model.layers.2.block_sparse_moe.routed_expert_down_proj.weight": "7c4ab3a565bb120163be78ee9e78115bf1477efdf578f18fa39dbdbc92314c1d",
+			"language_model.model.layers.2.block_sparse_moe.routed_expert_norm.weight": "4934fc4e72527f9448908ec7da7fe76ece2748559324c18e7fb5d9a9a1bb0ce3",
+			"language_model.model.layers.2.block_sparse_moe.routed_expert_up_proj.weight": "398d3d04ce8fa4ef24f489b9719ce05c871728573b995f2bc05f9cef8a51150c",
+			"language_model.model.layers.2.block_sparse_moe.shared_experts.down_proj.weight": "18c078376cdee050477eef710de4041ca190df3aa3a4841211f89e6b74a907de",
+			"language_model.model.layers.2.block_sparse_moe.shared_experts.gate_proj.weight": "08c62f5bb5e76eb54779685852bcb980cae823e33e89de1db7d7f85a4acc0440",
+			"language_model.model.layers.2.block_sparse_moe.shared_experts.up_proj.weight": "8af8d9817026a14e411d62152acf5d4f7e941c6f70bf50ff04a865f7ab9fca56",
+			"language_model.model.layers.2.input_layernorm.weight": "f4fbaea09e930f7f3fb74df81676c6277ab7bacef7717a51e68363f90f04e318",
+			"language_model.model.layers.2.mlp_res_norm.weight": "83b75997a0f146e31b1f82ec2e1a59203c240d32e9368350c87f73e1ae5060e1",
+			"language_model.model.layers.2.mlp_res_proj.weight": "a17895c03e6592fddf87554b26b3b2d90fde694f293a55701ce82b4825f0981a",
+			"language_model.model.layers.2.post_attention_layernorm.weight": "ff402934a8668a3958219502aa7590aada0c888c77bab63250a7f265923e510d",
+			"language_model.model.layers.2.self_attention_res_norm.weight": "1dd03faaef1a139d8e3c2f185a85800aa1866bd38054ca04e10d8694252eaf46",
+			"language_model.model.layers.2.self_attention_res_proj.weight": "65020e627ce373fe76d83291732a3dc0c1816e3933d12cb05907dd17b1b00037",
+			"language_model.model.layers.2.self_attn.A_log": "82ad80992de1d64bf7ba70361b405307eca08d761a9115435b685cd5b41f0544",
+			"language_model.model.layers.2.self_attn.b_proj.weight": "17376133272fca846fcadfdba28226814adcebce25d74b504b23ebf01ea62a64",
+			"language_model.model.layers.2.self_attn.dt_bias": "270d1f11ba8234e6dabbbe479e5950afcfcb4e24c552ff32fd8fb703cd714787",
+			"language_model.model.layers.2.self_attn.f_a_proj.weight": "3acff2fb2736994f7a1ab4c9b58aa453725dc2bd0382800579dab5c5c23e6d05",
+			"language_model.model.layers.2.self_attn.f_b_proj.weight": "593b7fa138a545d0eedc535e4a2d2e2b2f22064b12ef09c815c1d64adaa490a8",
+			"language_model.model.layers.2.self_attn.g_proj.weight": "d865957f4d5c6cf51dbe8eefda072bad7bf973908cb336a0067833319bfa9ad3",
+			"language_model.model.layers.2.self_attn.k_conv1d.weight": "5ba9af3898ec2bdc26ee8618a509b104170e8306fd4b785fa5c4b5e9599d4583",
+			"language_model.model.layers.2.self_attn.k_proj.weight": "5a214eb8f763a4e589d25dc0767848b403827636bcb2378fdfe4d7c07cd33755",
+			"language_model.model.layers.2.self_attn.o_norm.weight": "f8daa7cdc75b1aff22531382f52b035c5f4cbe580f475a7a44395bbd17492964",
+			"language_model.model.layers.2.self_attn.o_proj.weight": "13bad3fe8522ddfe8dbea308e9e0b0db9928eb1eb2d994e6d4bbc28ad61941f4",
+			"language_model.model.layers.2.self_attn.q_conv1d.weight": "dd529eaf80f48160296af926a32c57e938eb9216ceda53eb25b8ec3cb53140ab",
+			"language_model.model.layers.2.self_attn.q_proj.weight": "696280c16544ca977c5ce721ea63b08c0ce381e7f9edd6f60a87791df00420d5",
+			"language_model.model.layers.2.self_attn.v_conv1d.weight": "01615568563b5349d69c27f3f67ba9db1a1d52a10b7dd47c78b9012e92a123e3",
+			"language_model.model.layers.2.self_attn.v_proj.weight": "0a23aaf6ff9cbc23f523412c34753cff893fa5886798d3f9796e834ee2e741b3",
+			"language_model.model.layers.3.block_sparse_moe.gate.e_score_correction_bias": "acea2a1ac7e470bb77b26d4c418559c71349d177997764ede616dbac351aecc1",
+			"language_model.model.layers.3.block_sparse_moe.gate.weight": "d8c2c9ee22ecdc26c76ad5af0c4120c0b8d48e87e602bf735075f9c53fbbe83f",
+			"language_model.model.layers.3.block_sparse_moe.routed_expert_down_proj.weight": "d0d97317291bc6bfd9a23d0314c8f7608ecec0523e28bf5a477ef18fd3b4db3e",
+			"language_model.model.layers.3.block_sparse_moe.routed_expert_norm.weight": "129f8e35cc04b288645c5bfd9b36a89d91dfc71bf7dd3681b1551ef70d47cb8b",
+			"language_model.model.layers.3.block_sparse_moe.routed_expert_up_proj.weight": "951ad7a3afc48950c088033fd0203584493755b0f117876c858f04c062b10b33",
+			"language_model.model.layers.3.block_sparse_moe.shared_experts.down_proj.weight": "a6e52b6c6cadbcd7cf9e32d191e441de97b8eb9ab7d8d530c16c0d873c27ed8b",
+			"language_model.model.layers.3.block_sparse_moe.shared_experts.gate_proj.weight": "25ad37776c331ccb8af5717eab5eef0efa516957490b3ddf0b0d6ac0080946f2",
+			"language_model.model.layers.3.block_sparse_moe.shared_experts.up_proj.weight": "8d788dfb55b58fd91a2fd250a090ef89ddbd3ec00a694c9c13263d5b6de74ff1",
+			"language_model.model.layers.3.input_layernorm.weight": "b1d364f71ce7a7e7b3caa82ea617a0a8c88251370cbb7832d7c594f17c791a8d",
+			"language_model.model.layers.3.mlp_res_norm.weight": "b032b7f2535293c187be802e3b5aaef46664a582d3f20b7acde96e55fa8d26a9",
+			"language_model.model.layers.3.mlp_res_proj.weight": "a418b3c4a1bf4ad7c76f9ef66028c8a7843b25ef055ceb9191e87e5633cc8f81",
+			"language_model.model.layers.3.post_attention_layernorm.weight": "94da3acf06095848c7d8b1031ff61c35f678f0773deb68b2518f84e5ce1bacc5",
+			"language_model.model.layers.3.self_attention_res_norm.weight": "cebcd3c06517b3b55fb9bbabdd445230e8dd7f390c4bbc0a39f592636cc3be95",
+			"language_model.model.layers.3.self_attention_res_proj.weight": "075620e954783ef777dcefe84e275d3635865424102300f371f600b69f967536",
+			"language_model.model.layers.3.self_attn.g_proj.weight": "c4f335faf3454722f48c75f69ee22e92c8fb399f353a80d1895984c3d075aa08",
+			"language_model.model.layers.3.self_attn.kv_a_layernorm.weight": "70ce713f9f943551b6fd6a49c7fee5648fb16b6c4185ebecfca4491be8cad1aa",
+			"language_model.model.layers.3.self_attn.kv_a_proj_with_mqa.weight": "14d45d237c10967b6dab350e6d3bb4701bb57ac46f9acb905397f30ab3a80d49",
+			"language_model.model.layers.3.self_attn.kv_b_proj.weight": "d9fb711d4aa59bc48a371f431e72a4d73a5ef7f1f5a4cb69a1776c17d230a0fc",
+			"language_model.model.layers.3.self_attn.o_proj.weight": "d676298f4da2de1a30142d086be25a1339a899a98fb4e09e3912dfa97885d3ae",
+			"language_model.model.layers.3.self_attn.q_a_layernorm.weight": "eb7f49339bd5103bf6807ed3f89712dbf39421ae5181ebc2d76bd43b0e813d65",
+			"language_model.model.layers.3.self_attn.q_a_proj.weight": "b1066a91aede8403e87921c4b3ccb482cd5d07610d7e0a9e7d4ee400eeb317a1",
+			"language_model.model.layers.3.self_attn.q_b_proj.weight": "747865b478d9011a7e18f80132dc486600f341ab7080718d458fcf65ffacb0ee"
+		},
+		"expertTensorsRead": 1404,
+		"sources": {
+			"config.json": "9710e121a58d03ac92c8d6da287a19541994319afbbe6d6202af001ffd379213",
+			"LICENSE": "20c797ce19af0c17de52c6afb144644768a591c521655f5ebf5712c9850f2887",
+			"modeling_kimi_linear.py": "9e3564c70ac21854ce5a090cc946c5dc76b70d1050ef50840449181a20fff44a",
+			"configuration_kimi_k3.py": "735eb9ebe593e17d231e08e1df7f7be9b5ee0e079f511aa201f9572077b416ae",
+			"tokenization_kimi.py": "f28ea66e2d862a2a5814970b2ce40c2f7d8296ff09aed90a7e7def689b906944",
+			"tiktoken.model": "b6c497a7469b33ced9c38afb1ad6e47f03f5e5dc05f15930799210ec050c5103",
+			"model.safetensors.index.json": "a1c5210650ce71d2d3ae9ec5a101ac4afd3cf4b10091be589853437eb967febd"
+		},
+		"aLogPadding": "the checkpoint stores A_log as 128 values per layer; the last 32 are 0 and fla reads the first 96",
+		"tokenizer": "tiktoken with tokenization_kimi.py's split pattern over tiktoken.model; no BOS, no chat template"
+	},
+	"validation": {
+		"kdaModuleVsSteps": 0.0,
+		"kdaVsFlaRecurrent": 2.98e-08,
+		"kdaVsFlaChunked": 3.73e-08,
+		"kdaStateVsFlaChunked": 2.38e-07,
+		"layerVsDrawer": 2.09e-07,
+		"moeModuleVsSteps": 0.0,
+		"mlaModuleVsSteps": 7.45e-08
+	},
+	"notes": {
+		"x": "attention input after input_layernorm",
+		"q,k": "[H, T, 128] after projection, short convolution, SiLU and L2 normalization",
+		"v": "[H, T, 128] after projection, short convolution and SiLU",
+		"logAlpha": "[H, T, 128] log forget gate, −5·σ(e^A·(f + dt_bias)) ∈ (−5, 0)",
+		"beta": "[H, T] write strength σ(b)",
+		"stateCheck": "[H, 8, 8] corner of each head's final state S (value × key), for tests",
+		"scores": "[H, T, T] MLA q·k/√192 before the causal mask",
+		"latent": "[T, 512] MLA c_KV after kv_a_layernorm",
+		"shared": "[T, 64] MLA key part shared by every head (no RoPE)",
+		"attnResWeights": "[T, n] softmax over [block sums…, current partial sum] read by the attention",
+		"routerScores": "[T, 896] σ(router logits); picked/routeWeights [T, 16]"
+	}
+}
