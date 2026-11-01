@@ -1,0 +1,1651 @@
+{
+ "kind": "gan-run",
+ "tab": "gan",
+ "model": {
+  "id": "mnist-dcgan",
+  "name": "DCGAN (trained here)",
+  "revision": "82ff2eb66df80b66009af1bd3d7b34d46d2c3a22",
+  "url": "https://huggingface.co/datasets/ylecun/mnist",
+  "license": "trained here on MNIST (CC BY-SA 3.0)",
+  "paper": "Goodfellow et al. (2014), Generative adversarial nets; Radford, Metz, Chintala (2016), DCGAN",
+  "paperUrl": "https://arxiv.org/abs/1406.2661",
+  "dcganUrl": "https://arxiv.org/abs/1511.06434",
+  "zDim": 64,
+  "gChannels": [
+   128,
+   64
+  ],
+  "dChannels": [
+   64,
+   128
+  ],
+  "generator": {
+   "parameters": 533889,
+   "layers": [
+    {
+     "name": "up1",
+     "kind": "ConvTranspose2d",
+     "kernel": 7,
+     "stride": 1,
+     "padding": 0,
+     "in": [
+      64,
+      1,
+      1
+     ],
+     "out": [
+      128,
+      7,
+      7
+     ],
+     "then": "BatchNorm, ReLU"
+    },
+    {
+     "name": "up2",
+     "kind": "ConvTranspose2d",
+     "kernel": 4,
+     "stride": 2,
+     "padding": 1,
+     "in": [
+      128,
+      7,
+      7
+     ],
+     "out": [
+      64,
+      14,
+      14
+     ],
+     "then": "BatchNorm, ReLU"
+    },
+    {
+     "name": "up3",
+     "kind": "ConvTranspose2d",
+     "kernel": 4,
+     "stride": 2,
+     "padding": 1,
+     "in": [
+      64,
+      14,
+      14
+     ],
+     "out": [
+      1,
+      28,
+      28
+     ],
+     "then": "tanh"
+    }
+   ]
+  },
+  "discriminator": {
+   "parameters": 138561,
+   "layers": [
+    {
+     "name": "conv1",
+     "kernel": 4,
+     "stride": 2,
+     "padding": 1,
+     "in": [
+      1,
+      28,
+      28
+     ],
+     "out": [
+      64,
+      14,
+      14
+     ],
+     "then": "LeakyReLU 0.2"
+    },
+    {
+     "name": "conv2",
+     "kernel": 4,
+     "stride": 2,
+     "padding": 1,
+     "in": [
+      64,
+      14,
+      14
+     ],
+     "out": [
+      128,
+      7,
+      7
+     ],
+     "then": "LeakyReLU 0.2"
+    },
+    {
+     "name": "conv3",
+     "kernel": 7,
+     "stride": 1,
+     "padding": 0,
+     "in": [
+      128,
+      7,
+      7
+     ],
+     "out": [
+      1,
+      1,
+      1
+     ],
+     "then": "σ → D(x)"
+    }
+   ]
+  },
+  "init": "DCGAN's: convolution weights N(0, 0.02²), batch-norm scales N(1, 0.02²), biases 0"
+ },
+ "dataset": {
+  "id": "ylecun/mnist",
+  "revision": "77f3279092a1c1579b2250db8eafed0ad422088c",
+  "files": [
+   {
+    "file": "mnist/train-00000-of-00001.parquet",
+    "sha256": "f2c01285a9f89399335b00ee4e8d499dc4e46db5e39c74903ce5618d895eb3bf"
+   },
+   {
+    "file": "mnist/test-00000-of-00001.parquet",
+    "sha256": "d49fcf556ce25b002b302e318ce4a11098bbfe5d4499c3f35d7c72297c52374b"
+   }
+  ],
+  "train": 60000,
+  "test": 10000,
+  "source": "MNIST database of handwritten digits, Yann LeCun, Corinna Cortes and Christopher J. C. Burges",
+  "homepage": "http://yann.lecun.com/exdb/mnist/",
+  "license": "CC BY-SA 3.0 (the authors' MNIST page); the Hub copy's card says MIT",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+  "preprocessing": "pixels / 127.5 − 1 (−1 … 1, the range of tanh); labels unused in training"
+ },
+ "run": {
+  "seed": 0,
+  "lr": 0.0002,
+  "betas": [
+   0.5,
+   0.999
+  ],
+  "batchSize": 64,
+  "epochs": 15,
+  "steps": 14055,
+  "stepsPerEpoch": 937,
+  "optimizer": "Adam for each network, constant lr",
+  "loss": "binary cross-entropy; the generator's is non-saturating (−log D(G(z)))",
+  "order": "each step: the discriminator on the batch of real digits and 64 fresh noise vectors' images, then the generator on the same noise through the updated discriminator",
+  "shuffle": "torch.randperm with torch.Generator().manual_seed(seed) every epoch; the noise comes from the same generator (on the CPU)",
+  "device": "mps",
+  "dtype": "float32",
+  "recordedOn": "cpu (from the saved checkpoints)",
+  "seconds": 188.4,
+  "tail": {
+   "lossD": 1.0081788030862808,
+   "lossG": 1.1665393764972687,
+   "realScore": 0.6369662507772446,
+   "fakeScore": 0.36374877142906187
+  }
+ },
+ "checkpoints": [
+  0,
+  50,
+  200,
+  1000,
+  3000,
+  7000,
+  14055
+ ],
+ "grid": {
+  "count": 64,
+  "seed": 1,
+  "rule": "gan.noise(64) from torch.Generator().manual_seed(1), decoded with the generator in eval mode"
+ },
+ "real": {
+  "rule": "the first 64 MNIST test images",
+  "labels": [
+   7,
+   2,
+   1,
+   0,
+   4,
+   1,
+   4,
+   9,
+   5,
+   9,
+   0,
+   6,
+   9,
+   0,
+   1,
+   5,
+   9,
+   7,
+   3,
+   4,
+   9,
+   6,
+   6,
+   5,
+   4,
+   0,
+   7,
+   4,
+   0,
+   1,
+   3,
+   1,
+   3,
+   4,
+   7,
+   2,
+   7,
+   1,
+   2,
+   1,
+   1,
+   7,
+   4,
+   2,
+   3,
+   5,
+   1,
+   2,
+   4,
+   4,
+   6,
+   3,
+   5,
+   5,
+   6,
+   0,
+   4,
+   1,
+   9,
+   5,
+   7,
+   8,
+   9,
+   3
+  ]
+ },
+ "samples": {
+  "count": 10000,
+  "seed": 2,
+  "diversityCount": 1000,
+  "bins": 20,
+  "edges": [
+   0.0,
+   0.05000000074505806,
+   0.10000000149011612,
+   0.15000000596046448,
+   0.20000000298023224,
+   0.25,
+   0.30000001192092896,
+   0.3499999940395355,
+   0.4000000059604645,
+   0.45000001788139343,
+   0.5,
+   0.550000011920929,
+   0.6000000238418579,
+   0.6499999761581421,
+   0.699999988079071,
+   0.75,
+   0.800000011920929,
+   0.8500000238418579,
+   0.8999999761581421,
+   0.949999988079071,
+   1.0
+  ],
+  "checkpoints": [
+   {
+    "step": 0,
+    "histogram": [
+     0,
+     0,
+     0,
+     0,
+     10000,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "confidence": 0.11374311810987217,
+    "confident": 0.0,
+    "diversity": 0.15089400090130906,
+    "meanRealScore": 0.5097354054450989,
+    "meanFakeScore": 0.5001060366630554,
+    "gridClasses": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ]
+   },
+   {
+    "step": 50,
+    "histogram": [
+     136,
+     1,
+     608,
+     10,
+     60,
+     540,
+     2141,
+     6,
+     6492,
+     6
+    ],
+    "confidence": 0.1916926021309043,
+    "confident": 0.0,
+    "diversity": 2.7358560062420056,
+    "meanRealScore": 0.8286934494972229,
+    "meanFakeScore": 0.6420820355415344,
+    "gridClasses": [
+     8,
+     6,
+     6,
+     8,
+     8,
+     8,
+     8,
+     8,
+     6,
+     8,
+     6,
+     5,
+     5,
+     8,
+     8,
+     6,
+     2,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     2,
+     8,
+     6,
+     8,
+     8,
+     8,
+     6,
+     8,
+     6,
+     5,
+     8,
+     6,
+     6,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     0,
+     8,
+     8,
+     6,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     6,
+     8,
+     6,
+     8,
+     8,
+     8,
+     6,
+     0,
+     6
+    ]
+   },
+   {
+    "step": 200,
+    "histogram": [
+     94,
+     3002,
+     473,
+     341,
+     643,
+     2870,
+     820,
+     1228,
+     463,
+     66
+    ],
+    "confidence": 0.7525061895842697,
+    "confident": 0.3497,
+    "diversity": 8.450450458088977,
+    "meanRealScore": 0.5513262748718262,
+    "meanFakeScore": 0.24004140496253967,
+    "gridClasses": [
+     7,
+     5,
+     5,
+     7,
+     1,
+     6,
+     1,
+     7,
+     6,
+     7,
+     1,
+     5,
+     5,
+     3,
+     5,
+     5,
+     6,
+     3,
+     1,
+     1,
+     3,
+     5,
+     1,
+     5,
+     5,
+     5,
+     5,
+     1,
+     1,
+     1,
+     6,
+     1,
+     1,
+     5,
+     1,
+     4,
+     6,
+     7,
+     8,
+     5,
+     5,
+     2,
+     7,
+     5,
+     5,
+     3,
+     6,
+     5,
+     1,
+     1,
+     3,
+     7,
+     8,
+     2,
+     6,
+     7,
+     5,
+     5,
+     1,
+     5,
+     1,
+     2,
+     8,
+     2
+    ]
+   },
+   {
+    "step": 1000,
+    "histogram": [
+     286,
+     284,
+     883,
+     2183,
+     282,
+     1936,
+     199,
+     1104,
+     1580,
+     1263
+    ],
+    "confidence": 0.7629663243964556,
+    "confident": 0.3574,
+    "diversity": 9.786280203384113,
+    "meanRealScore": 0.5822662115097046,
+    "meanFakeScore": 0.6177923083305359,
+    "gridClasses": [
+     8,
+     3,
+     6,
+     5,
+     3,
+     7,
+     3,
+     7,
+     5,
+     8,
+     5,
+     3,
+     9,
+     2,
+     5,
+     1,
+     3,
+     3,
+     7,
+     2,
+     7,
+     4,
+     9,
+     5,
+     0,
+     5,
+     7,
+     2,
+     7,
+     8,
+     5,
+     7,
+     3,
+     5,
+     4,
+     2,
+     7,
+     5,
+     2,
+     5,
+     8,
+     5,
+     7,
+     3,
+     3,
+     3,
+     9,
+     0,
+     8,
+     3,
+     2,
+     8,
+     8,
+     8,
+     8,
+     9,
+     5,
+     5,
+     3,
+     8,
+     7,
+     2,
+     9,
+     2
+    ]
+   },
+   {
+    "step": 3000,
+    "histogram": [
+     834,
+     518,
+     763,
+     1402,
+     434,
+     1379,
+     877,
+     1241,
+     1076,
+     1476
+    ],
+    "confidence": 0.8400638072374129,
+    "confident": 0.5435,
+    "diversity": 9.991613172326192,
+    "meanRealScore": 0.4858974516391754,
+    "meanFakeScore": 0.4390236437320709,
+    "gridClasses": [
+     9,
+     6,
+     6,
+     9,
+     7,
+     5,
+     7,
+     7,
+     5,
+     4,
+     6,
+     2,
+     9,
+     8,
+     8,
+     6,
+     8,
+     8,
+     9,
+     1,
+     3,
+     5,
+     5,
+     5,
+     2,
+     5,
+     2,
+     7,
+     7,
+     9,
+     6,
+     9,
+     2,
+     5,
+     9,
+     9,
+     6,
+     4,
+     8,
+     6,
+     9,
+     5,
+     9,
+     8,
+     8,
+     0,
+     5,
+     0,
+     3,
+     2,
+     8,
+     9,
+     8,
+     2,
+     8,
+     9,
+     5,
+     9,
+     9,
+     4,
+     7,
+     2,
+     9,
+     3
+    ]
+   },
+   {
+    "step": 7000,
+    "histogram": [
+     813,
+     950,
+     898,
+     967,
+     514,
+     1512,
+     897,
+     1109,
+     1028,
+     1312
+    ],
+    "confidence": 0.86463028787272,
+    "confident": 0.6077,
+    "diversity": 10.12525262950262,
+    "meanRealScore": 0.4911547899246216,
+    "meanFakeScore": 0.3448808491230011,
+    "gridClasses": [
+     2,
+     6,
+     6,
+     9,
+     7,
+     6,
+     7,
+     7,
+     5,
+     9,
+     1,
+     6,
+     9,
+     0,
+     8,
+     5,
+     8,
+     8,
+     9,
+     1,
+     3,
+     0,
+     5,
+     5,
+     2,
+     0,
+     2,
+     9,
+     7,
+     9,
+     0,
+     7,
+     3,
+     5,
+     5,
+     6,
+     6,
+     5,
+     8,
+     0,
+     4,
+     0,
+     9,
+     5,
+     8,
+     0,
+     8,
+     6,
+     3,
+     1,
+     2,
+     9,
+     2,
+     2,
+     8,
+     9,
+     5,
+     0,
+     9,
+     4,
+     7,
+     9,
+     4,
+     4
+    ]
+   },
+   {
+    "step": 14055,
+    "histogram": [
+     770,
+     920,
+     929,
+     1105,
+     595,
+     1495,
+     771,
+     1131,
+     1057,
+     1227
+    ],
+    "confidence": 0.8745236485536608,
+    "confident": 0.6362,
+    "diversity": 10.178426947170957,
+    "meanRealScore": 0.5311794877052307,
+    "meanFakeScore": 0.26704880595207214,
+    "gridClasses": [
+     9,
+     5,
+     6,
+     9,
+     1,
+     5,
+     1,
+     7,
+     5,
+     7,
+     1,
+     6,
+     9,
+     5,
+     2,
+     5,
+     3,
+     8,
+     9,
+     1,
+     3,
+     0,
+     5,
+     5,
+     6,
+     0,
+     2,
+     1,
+     2,
+     9,
+     6,
+     7,
+     8,
+     5,
+     5,
+     6,
+     6,
+     6,
+     8,
+     9,
+     4,
+     5,
+     8,
+     5,
+     8,
+     0,
+     4,
+     5,
+     5,
+     2,
+     2,
+     9,
+     2,
+     2,
+     8,
+     9,
+     5,
+     7,
+     2,
+     4,
+     7,
+     6,
+     9,
+     4
+    ]
+   }
+  ],
+  "realHistogram": [
+   957,
+   1134,
+   1035,
+   986,
+   959,
+   969,
+   957,
+   1014,
+   971,
+   1018
+  ],
+  "realLabels": [
+   980,
+   1135,
+   1032,
+   1010,
+   982,
+   892,
+   958,
+   1028,
+   974,
+   1009
+  ],
+  "realConfidence": 0.9815152761596242,
+  "realDiversity": 9.900977714491368,
+  "classifier": {
+   "tab": "cnn",
+   "manifestSha256": "e5ab76a55e913e16c456b1f5b2429179096964777f32d776f7b7ed84d41c269f",
+   "testAccuracy": 0.979,
+   "rule": "argmax of the CNN tab's trained network on (image + 1) / 2"
+  }
+ },
+ "layers": {
+  "count": 6,
+  "rule": "the first 6 grid vectors through the trained generator (eval)"
+ },
+ "disc": {
+  "rule": "the first real test digit and the first grid vector's image through the trained discriminator",
+  "label": 7
+ },
+ "walk": {
+  "from": 0,
+  "to": 2,
+  "steps": 11,
+  "classes": [
+   9,
+   6
+  ],
+  "rule": "the first pair of grid vectors (in order) the CNN reads as different digits, each with p > 0.9; straight line z = (1 − t) z_a + t z_b"
+ },
+ "updates": [
+  {
+   "step": 200,
+   "indices": [
+    27011,
+    25342,
+    17076,
+    8535,
+    16422,
+    5163,
+    47196,
+    39363,
+    27895,
+    15970,
+    22406,
+    43438,
+    53209,
+    26150,
+    24936,
+    41409,
+    20504,
+    48973,
+    3836,
+    48468,
+    59496,
+    52605,
+    54539,
+    4293,
+    41430,
+    4243,
+    47096,
+    31716,
+    6525,
+    20252,
+    43975,
+    39465,
+    50256,
+    3448,
+    25535,
+    13568,
+    53028,
+    5086,
+    45084,
+    36475,
+    251,
+    17893,
+    29488,
+    53181,
+    1269,
+    6711,
+    54855,
+    35336,
+    16707,
+    557,
+    17159,
+    40202,
+    17735,
+    39795,
+    16212,
+    55420,
+    50205,
+    51363,
+    42471,
+    19134,
+    20225,
+    510,
+    22358,
+    22481
+   ],
+   "lossD": 0.9590182900428772,
+   "lossG": 0.6799849271774292,
+   "lossDAfter": 0.985120415687561,
+   "lossGAfter": 0.631158173084259
+  },
+  {
+   "step": 7000,
+   "indices": [
+    43246,
+    47984,
+    46652,
+    12562,
+    6236,
+    18578,
+    41409,
+    27899,
+    15707,
+    42929,
+    4915,
+    41390,
+    41363,
+    3739,
+    22897,
+    42131,
+    32008,
+    33452,
+    7399,
+    2344,
+    44127,
+    15711,
+    38898,
+    9075,
+    17180,
+    15372,
+    37528,
+    53399,
+    17797,
+    33845,
+    6333,
+    13711,
+    54987,
+    7400,
+    6777,
+    14623,
+    40835,
+    12284,
+    30012,
+    57843,
+    25632,
+    12723,
+    28433,
+    33426,
+    29213,
+    34080,
+    54665,
+    28900,
+    34526,
+    7421,
+    46233,
+    55670,
+    59872,
+    58352,
+    52028,
+    31254,
+    35735,
+    3520,
+    7774,
+    48996,
+    2808,
+    26356,
+    16719,
+    32912
+   ],
+   "lossD": 1.1237033605575562,
+   "lossG": 0.8095898628234863,
+   "lossDAfter": 1.087454080581665,
+   "lossGAfter": 0.6924797296524048
+  }
+ ],
+ "data": {
+  "file": "gan.f32",
+  "sha256": "6b8bb0e7f829f9349a326b3df96b51e8a931cb0dce3b64cd1bde940f1a712d4b",
+  "bytes": 4392444,
+  "tensors": {
+   "grid.z": {
+    "offset": 0,
+    "length": 4096,
+    "shape": [
+     64,
+     64
+    ]
+   },
+   "real.x": {
+    "offset": 4096,
+    "length": 50176,
+    "shape": [
+     64,
+     28,
+     28
+    ]
+   },
+   "grid.images": {
+    "offset": 54272,
+    "length": 351232,
+    "shape": [
+     7,
+     64,
+     28,
+     28
+    ]
+   },
+   "grid.logit": {
+    "offset": 405504,
+    "length": 448,
+    "shape": [
+     7,
+     64
+    ]
+   },
+   "real.logit": {
+    "offset": 405952,
+    "length": 448,
+    "shape": [
+     7,
+     64
+    ]
+   },
+   "scoreHist": {
+    "offset": 406400,
+    "length": 280,
+    "shape": [
+     7,
+     2,
+     20
+    ]
+   },
+   "layers.u1": {
+    "offset": 406680,
+    "length": 37632,
+    "shape": [
+     6,
+     128,
+     7,
+     7
+    ]
+   },
+   "layers.a1": {
+    "offset": 444312,
+    "length": 37632,
+    "shape": [
+     6,
+     128,
+     7,
+     7
+    ]
+   },
+   "layers.u2": {
+    "offset": 481944,
+    "length": 75264,
+    "shape": [
+     6,
+     64,
+     14,
+     14
+    ]
+   },
+   "layers.a2": {
+    "offset": 557208,
+    "length": 75264,
+    "shape": [
+     6,
+     64,
+     14,
+     14
+    ]
+   },
+   "layers.u3": {
+    "offset": 632472,
+    "length": 4704,
+    "shape": [
+     6,
+     1,
+     28,
+     28
+    ]
+   },
+   "layers.image": {
+    "offset": 637176,
+    "length": 4704,
+    "shape": [
+     6,
+     1,
+     28,
+     28
+    ]
+   },
+   "disc.x": {
+    "offset": 641880,
+    "length": 1568,
+    "shape": [
+     2,
+     28,
+     28
+    ]
+   },
+   "disc.h1": {
+    "offset": 643448,
+    "length": 25088,
+    "shape": [
+     2,
+     64,
+     14,
+     14
+    ]
+   },
+   "disc.h2": {
+    "offset": 668536,
+    "length": 12544,
+    "shape": [
+     2,
+     128,
+     7,
+     7
+    ]
+   },
+   "disc.logit": {
+    "offset": 681080,
+    "length": 2,
+    "shape": [
+     2
+    ]
+   },
+   "walk.images": {
+    "offset": 681082,
+    "length": 8624,
+    "shape": [
+     11,
+     28,
+     28
+    ]
+   },
+   "walk.logit": {
+    "offset": 689706,
+    "length": 11,
+    "shape": [
+     11
+    ]
+   },
+   "walk.probs": {
+    "offset": 689717,
+    "length": 110,
+    "shape": [
+     11,
+     10
+    ]
+   },
+   "walk.zNorm": {
+    "offset": 689827,
+    "length": 11,
+    "shape": [
+     11
+    ]
+   },
+   "update0.real": {
+    "offset": 689838,
+    "length": 50176,
+    "shape": [
+     64,
+     28,
+     28
+    ]
+   },
+   "update0.z": {
+    "offset": 740014,
+    "length": 4096,
+    "shape": [
+     64,
+     64
+    ]
+   },
+   "update0.fake": {
+    "offset": 744110,
+    "length": 50176,
+    "shape": [
+     64,
+     28,
+     28
+    ]
+   },
+   "update0.fakeAfter": {
+    "offset": 794286,
+    "length": 50176,
+    "shape": [
+     64,
+     28,
+     28
+    ]
+   },
+   "update0.realLogit": {
+    "offset": 844462,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "update0.realLogitAfter": {
+    "offset": 844526,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "update0.fakeLogit": {
+    "offset": 844590,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "update0.fakeLogitAfter": {
+    "offset": 844654,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "update0.fakeAfterLogit": {
+    "offset": 844718,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "update1.real": {
+    "offset": 844782,
+    "length": 50176,
+    "shape": [
+     64,
+     28,
+     28
+    ]
+   },
+   "update1.z": {
+    "offset": 894958,
+    "length": 4096,
+    "shape": [
+     64,
+     64
+    ]
+   },
+   "update1.fake": {
+    "offset": 899054,
+    "length": 50176,
+    "shape": [
+     64,
+     28,
+     28
+    ]
+   },
+   "update1.fakeAfter": {
+    "offset": 949230,
+    "length": 50176,
+    "shape": [
+     64,
+     28,
+     28
+    ]
+   },
+   "update1.realLogit": {
+    "offset": 999406,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "update1.realLogitAfter": {
+    "offset": 999470,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "update1.fakeLogit": {
+    "offset": 999534,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "update1.fakeLogitAfter": {
+    "offset": 999598,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "update1.fakeAfterLogit": {
+    "offset": 999662,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "series.lossD": {
+    "offset": 999726,
+    "length": 14055,
+    "shape": [
+     14055
+    ]
+   },
+   "series.lossG": {
+    "offset": 1013781,
+    "length": 14055,
+    "shape": [
+     14055
+    ]
+   },
+   "series.realScore": {
+    "offset": 1027836,
+    "length": 14055,
+    "shape": [
+     14055
+    ]
+   },
+   "series.fakeScore": {
+    "offset": 1041891,
+    "length": 14055,
+    "shape": [
+     14055
+    ]
+   },
+   "series.fakeScoreAfter": {
+    "offset": 1055946,
+    "length": 14055,
+    "shape": [
+     14055
+    ]
+   },
+   "series.gradD": {
+    "offset": 1070001,
+    "length": 14055,
+    "shape": [
+     14055
+    ]
+   },
+   "series.gradG": {
+    "offset": 1084056,
+    "length": 14055,
+    "shape": [
+     14055
+    ]
+   }
+  }
+ },
+ "weights": {
+  "file": "weights.f32",
+  "sha256": "82ff2eb66df80b66009af1bd3d7b34d46d2c3a22e441eb20d9bfc64b77c1d9dc",
+  "bytes": 2691336,
+  "tensors": {
+   "G.up1.weight": {
+    "offset": 0,
+    "length": 401408,
+    "shape": [
+     64,
+     128,
+     7,
+     7
+    ]
+   },
+   "G.bn1.weight": {
+    "offset": 401408,
+    "length": 128,
+    "shape": [
+     128
+    ]
+   },
+   "G.bn1.bias": {
+    "offset": 401536,
+    "length": 128,
+    "shape": [
+     128
+    ]
+   },
+   "G.bn1.running_mean": {
+    "offset": 401664,
+    "length": 128,
+    "shape": [
+     128
+    ]
+   },
+   "G.bn1.running_var": {
+    "offset": 401792,
+    "length": 128,
+    "shape": [
+     128
+    ]
+   },
+   "G.up2.weight": {
+    "offset": 401920,
+    "length": 131072,
+    "shape": [
+     128,
+     64,
+     4,
+     4
+    ]
+   },
+   "G.bn2.weight": {
+    "offset": 532992,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "G.bn2.bias": {
+    "offset": 533056,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "G.bn2.running_mean": {
+    "offset": 533120,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "G.bn2.running_var": {
+    "offset": 533184,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "G.up3.weight": {
+    "offset": 533248,
+    "length": 1024,
+    "shape": [
+     64,
+     1,
+     4,
+     4
+    ]
+   },
+   "G.up3.bias": {
+    "offset": 534272,
+    "length": 1,
+    "shape": [
+     1
+    ]
+   },
+   "D.conv1.weight": {
+    "offset": 534273,
+    "length": 1024,
+    "shape": [
+     64,
+     1,
+     4,
+     4
+    ]
+   },
+   "D.conv1.bias": {
+    "offset": 535297,
+    "length": 64,
+    "shape": [
+     64
+    ]
+   },
+   "D.conv2.weight": {
+    "offset": 535361,
+    "length": 131072,
+    "shape": [
+     128,
+     64,
+     4,
+     4
+    ]
+   },
+   "D.conv2.bias": {
+    "offset": 666433,
+    "length": 128,
+    "shape": [
+     128
+    ]
+   },
+   "D.conv3.weight": {
+    "offset": 666561,
+    "length": 6272,
+    "shape": [
+     1,
+     128,
+     7,
+     7
+    ]
+   },
+   "D.conv3.bias": {
+    "offset": 672833,
+    "length": 1,
+    "shape": [
+     1
+    ]
+   }
+  }
+ },
+ "validation": {
+  "cnnClassifierVsRecorded": 0.0,
+  "updateVsReference": 4.76837158203125e-07,
+  "convTransposeVsTorch": 5.7220458984375e-06
+ },
+ "capture": {
+  "timestamp": "2026-10-31T03:08:32.626267+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "numpy": "2.5.4",
+   "pyarrow": "26.0.0",
+   "pillow": "13.0.0",
+   "huggingface-hub": "0.36.2"
+  },
+  "script": "scripts/before-transformers/record_gan.py",
+  "scriptSha256": "7b52dea4047c249ad965e4b9674ae9d1418e0a1fc7eadd28c09bf9a3d9b0b5e3",
+  "helperSha256": "cd2eeb77f5cedda0e6f1ff5a7abf9b65e77663e13bbffb6aae5696161f240ab7",
+  "trainingDevice": "mps",
+  "drawer": "pytorch/before_transformers_gan.py",
+  "drawerSha256": "b6d32b73ba4f254a2caf6f167d9e72713c8925c8814ce2995e536de4d9caddf1",
+  "classifierDrawerSha256": "ff8670e0ed4420884ea27b306c887c1279054b75fbb2430413ff79c644592887"
+ }
+}

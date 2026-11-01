@@ -1,0 +1,2498 @@
+{
+ "schemaVersion": 1,
+ "kind": "char-rnn",
+ "tab": "rnn",
+ "model": {
+  "id": "before-transformers/char-rnn-tiny-shakespeare",
+  "name": "Character RNN (Elman, tanh)",
+  "revision": "a024223b2ae26ad77e6fb3336bd280996755835c",
+  "url": "https://github.com/karpathy/char-rnn",
+  "license": "trained locally (weights in this recording)",
+  "paper": "https://onlinelibrary.wiley.com/doi/10.1207/s15516709cog1402_1",
+  "trainedLocally": true,
+  "parameters": 103297,
+  "embedDim": 64,
+  "hidden": 256,
+  "vocab": 65
+ },
+ "dataset": {
+  "name": "Tiny Shakespeare",
+  "url": "https://raw.githubusercontent.com/karpathy/char-rnn/6f9487a6fe5b420b7ca9afb0d7c078e37c1d1b4e/data/tinyshakespeare/input.txt",
+  "sha256": "86c4e6aa9db7c042ec79f339dcb96d42b0075e16b8fc2e86bf0ca57e2dc565ed",
+  "license": "public domain text (Shakespeare's plays); the char-rnn repository is MIT",
+  "chars": 1115394,
+  "trainChars": 1003854,
+  "valChars": 111540,
+  "split": "first 90 % train, last 10 % validation (The Taming of the Shrew)"
+ },
+ "run": {
+  "config": {
+   "vocab_size": 65,
+   "embed_dim": 64,
+   "hidden": 256,
+   "seq_len": 128,
+   "batch": 64,
+   "steps": 4000,
+   "lr": 0.002,
+   "clip": 1.0,
+   "seed": 0
+  },
+  "optimizer": "Adam (β 0.9, 0.999), constant lr",
+  "loss": "cross-entropy on every next character",
+  "sameAsLstm": "the same text, split, validation windows, batches (same generator, same order), optimizer, learning rate, clipping, steps and seed as the LSTM tab; only the recurrent layer differs",
+  "device": "mps",
+  "seconds": 135.5,
+  "log": [
+   {
+    "step": 0,
+    "train": null,
+    "val": 4.169772148132324
+   },
+   {
+    "step": 100,
+    "train": 2.4406674838066102,
+    "val": 2.1193995475769043,
+    "gradNorm": 0.33592745050787925,
+    "clipped": 0.02
+   },
+   {
+    "step": 200,
+    "train": 1.9420633852481841,
+    "val": 1.9398763179779053,
+    "gradNorm": 0.25570283100008967,
+    "clipped": 0.0
+   },
+   {
+    "step": 300,
+    "train": 1.7786562073230743,
+    "val": 1.845395565032959,
+    "gradNorm": 0.2576243095099926,
+    "clipped": 0.0
+   },
+   {
+    "step": 400,
+    "train": 1.686040072441101,
+    "val": 1.7948119640350342,
+    "gradNorm": 0.2757406422495842,
+    "clipped": 0.0
+   },
+   {
+    "step": 500,
+    "train": 1.6272005176544189,
+    "val": 1.757257342338562,
+    "gradNorm": 0.28375107660889626,
+    "clipped": 0.0
+   },
+   {
+    "step": 600,
+    "train": 1.584876058101654,
+    "val": 1.731682538986206,
+    "gradNorm": 0.2781935454905033,
+    "clipped": 0.0
+   },
+   {
+    "step": 700,
+    "train": 1.5548914659023285,
+    "val": 1.7132062911987305,
+    "gradNorm": 0.29134302541613577,
+    "clipped": 0.0
+   },
+   {
+    "step": 800,
+    "train": 1.534237095117569,
+    "val": 1.7072606086730957,
+    "gradNorm": 0.2858446913957596,
+    "clipped": 0.0
+   },
+   {
+    "step": 900,
+    "train": 1.5112784111499786,
+    "val": 1.6934537887573242,
+    "gradNorm": 0.29334443882107736,
+    "clipped": 0.0
+   },
+   {
+    "step": 1000,
+    "train": 1.4941973268985749,
+    "val": 1.6824991703033447,
+    "gradNorm": 0.29303700268268584,
+    "clipped": 0.0
+   },
+   {
+    "step": 1100,
+    "train": 1.4795683300495148,
+    "val": 1.6724975109100342,
+    "gradNorm": 0.28508771628141405,
+    "clipped": 0.0
+   },
+   {
+    "step": 1200,
+    "train": 1.4654008257389068,
+    "val": 1.6688408851623535,
+    "gradNorm": 0.2963045653700829,
+    "clipped": 0.0
+   },
+   {
+    "step": 1300,
+    "train": 1.4554625737667084,
+    "val": 1.6643142700195312,
+    "gradNorm": 0.2940984681248665,
+    "clipped": 0.0
+   },
+   {
+    "step": 1400,
+    "train": 1.4494305014610291,
+    "val": 1.6592700481414795,
+    "gradNorm": 0.3031010654568672,
+    "clipped": 0.0
+   },
+   {
+    "step": 1500,
+    "train": 1.4410428881645203,
+    "val": 1.657378911972046,
+    "gradNorm": 0.29979233026504515,
+    "clipped": 0.0
+   },
+   {
+    "step": 1600,
+    "train": 1.4350792634487153,
+    "val": 1.6510591506958008,
+    "gradNorm": 0.29239002108573914,
+    "clipped": 0.0
+   },
+   {
+    "step": 1700,
+    "train": 1.4263012635707855,
+    "val": 1.638109564781189,
+    "gradNorm": 0.2934264889359474,
+    "clipped": 0.0
+   },
+   {
+    "step": 1800,
+    "train": 1.4237405741214753,
+    "val": 1.64150071144104,
+    "gradNorm": 0.29483766078948975,
+    "clipped": 0.0
+   },
+   {
+    "step": 1900,
+    "train": 1.4194832384586333,
+    "val": 1.639233946800232,
+    "gradNorm": 0.304568812251091,
+    "clipped": 0.0
+   },
+   {
+    "step": 2000,
+    "train": 1.4093009054660797,
+    "val": 1.6334872245788574,
+    "gradNorm": 0.30778702944517133,
+    "clipped": 0.0
+   },
+   {
+    "step": 2100,
+    "train": 1.4057276737689972,
+    "val": 1.63322913646698,
+    "gradNorm": 0.29707673281431196,
+    "clipped": 0.0
+   },
+   {
+    "step": 2200,
+    "train": 1.4042411410808564,
+    "val": 1.635193109512329,
+    "gradNorm": 0.3024361541867256,
+    "clipped": 0.0
+   },
+   {
+    "step": 2300,
+    "train": 1.395150170326233,
+    "val": 1.6282498836517334,
+    "gradNorm": 0.2965660420060158,
+    "clipped": 0.0
+   },
+   {
+    "step": 2400,
+    "train": 1.3920881128311158,
+    "val": 1.6292006969451904,
+    "gradNorm": 0.2976348152756691,
+    "clipped": 0.0
+   },
+   {
+    "step": 2500,
+    "train": 1.3916240167617797,
+    "val": 1.6257960796356201,
+    "gradNorm": 0.29851287364959717,
+    "clipped": 0.0
+   },
+   {
+    "step": 2600,
+    "train": 1.386904888153076,
+    "val": 1.6278960704803467,
+    "gradNorm": 0.2966211313009262,
+    "clipped": 0.0
+   },
+   {
+    "step": 2700,
+    "train": 1.384760901927948,
+    "val": 1.6225249767303467,
+    "gradNorm": 0.30621052235364915,
+    "clipped": 0.0
+   },
+   {
+    "step": 2800,
+    "train": 1.3826127195358275,
+    "val": 1.6265606880187988,
+    "gradNorm": 0.3065834820270538,
+    "clipped": 0.0
+   },
+   {
+    "step": 2900,
+    "train": 1.3769210171699524,
+    "val": 1.6244083642959595,
+    "gradNorm": 0.3019065463542938,
+    "clipped": 0.0
+   },
+   {
+    "step": 3000,
+    "train": 1.3798066437244416,
+    "val": 1.6189358234405518,
+    "gradNorm": 0.31142569839954376,
+    "clipped": 0.0
+   },
+   {
+    "step": 3100,
+    "train": 1.3746737742424011,
+    "val": 1.6219353675842285,
+    "gradNorm": 0.30842251688241956,
+    "clipped": 0.0
+   },
+   {
+    "step": 3200,
+    "train": 1.373804360628128,
+    "val": 1.6176722049713135,
+    "gradNorm": 0.30626393496990206,
+    "clipped": 0.0
+   },
+   {
+    "step": 3300,
+    "train": 1.3704241847991943,
+    "val": 1.620336890220642,
+    "gradNorm": 0.31234152764081957,
+    "clipped": 0.0
+   },
+   {
+    "step": 3400,
+    "train": 1.3697604596614839,
+    "val": 1.6279244422912598,
+    "gradNorm": 0.3027663853764534,
+    "clipped": 0.0
+   },
+   {
+    "step": 3500,
+    "train": 1.3674177610874176,
+    "val": 1.621761441230774,
+    "gradNorm": 0.3097133907675743,
+    "clipped": 0.0
+   },
+   {
+    "step": 3600,
+    "train": 1.3625875639915466,
+    "val": 1.6197445392608643,
+    "gradNorm": 0.3067028725147247,
+    "clipped": 0.0
+   },
+   {
+    "step": 3700,
+    "train": 1.3565976548194885,
+    "val": 1.630326271057129,
+    "gradNorm": 0.30987759560346606,
+    "clipped": 0.0
+   },
+   {
+    "step": 3800,
+    "train": 1.3583338820934296,
+    "val": 1.6190131902694702,
+    "gradNorm": 0.31248438119888305,
+    "clipped": 0.0
+   },
+   {
+    "step": 3900,
+    "train": 1.3531043863296508,
+    "val": 1.62216317653656,
+    "gradNorm": 0.3075935456156731,
+    "clipped": 0.0
+   },
+   {
+    "step": 4000,
+    "train": 1.3600285077095031,
+    "val": 1.6151949167251587,
+    "gradNorm": 0.3074768289923668,
+    "clipped": 0.0
+   }
+  ],
+  "valWindows": 64,
+  "logEvery": 100,
+  "finalTrainLoss": 1.3600285077095031,
+  "finalValLoss": 1.6151949167251587
+ },
+ "lstm": {
+  "manifest": "static/traces/before-transformers/lstm/manifest.json",
+  "manifestSha256": "54358a738b2fade1ec5c8448d1268db55286bde2f08a5b6651311d30284beaa5",
+  "weightsSha256": "11576c0cba31747ce2b39d868a2a4cce90d5ac1fabed2127aee4a89f7448853d",
+  "parameters": 350593,
+  "hidden": 256,
+  "log": [
+   {
+    "step": 0,
+    "train": null,
+    "val": 4.179195404052734
+   },
+   {
+    "step": 100,
+    "train": 2.562571892738342,
+    "val": 2.129999876022339
+   },
+   {
+    "step": 200,
+    "train": 1.949310212135315,
+    "val": 1.919740080833435
+   },
+   {
+    "step": 300,
+    "train": 1.7550585925579072,
+    "val": 1.8140813112258911
+   },
+   {
+    "step": 400,
+    "train": 1.6462259340286254,
+    "val": 1.754868507385254
+   },
+   {
+    "step": 500,
+    "train": 1.5786620569229126,
+    "val": 1.7115534543991089
+   },
+   {
+    "step": 600,
+    "train": 1.528655662536621,
+    "val": 1.6832785606384277
+   },
+   {
+    "step": 700,
+    "train": 1.4923408150672912,
+    "val": 1.656214952468872
+   },
+   {
+    "step": 800,
+    "train": 1.466293179988861,
+    "val": 1.6321829557418823
+   },
+   {
+    "step": 900,
+    "train": 1.4378658866882323,
+    "val": 1.6240440607070923
+   },
+   {
+    "step": 1000,
+    "train": 1.4158719789981842,
+    "val": 1.601402759552002
+   },
+   {
+    "step": 1100,
+    "train": 1.3985700285434723,
+    "val": 1.5911756753921509
+   },
+   {
+    "step": 1200,
+    "train": 1.381270467042923,
+    "val": 1.5863178968429565
+   },
+   {
+    "step": 1300,
+    "train": 1.3662052071094513,
+    "val": 1.5824329853057861
+   },
+   {
+    "step": 1400,
+    "train": 1.3578183805942536,
+    "val": 1.5772041082382202
+   },
+   {
+    "step": 1500,
+    "train": 1.3460672068595887,
+    "val": 1.5706363916397095
+   },
+   {
+    "step": 1600,
+    "train": 1.3382817792892456,
+    "val": 1.5646350383758545
+   },
+   {
+    "step": 1700,
+    "train": 1.3259219741821289,
+    "val": 1.5486624240875244
+   },
+   {
+    "step": 1800,
+    "train": 1.3200206470489502,
+    "val": 1.5531761646270752
+   },
+   {
+    "step": 1900,
+    "train": 1.3132884550094603,
+    "val": 1.5648009777069092
+   },
+   {
+    "step": 2000,
+    "train": 1.300871354341507,
+    "val": 1.5502220392227173
+   },
+   {
+    "step": 2100,
+    "train": 1.2964599549770355,
+    "val": 1.5480616092681885
+   },
+   {
+    "step": 2200,
+    "train": 1.2920880651473998,
+    "val": 1.5504670143127441
+   },
+   {
+    "step": 2300,
+    "train": 1.2811497473716735,
+    "val": 1.5544871091842651
+   },
+   {
+    "step": 2400,
+    "train": 1.2763105070590972,
+    "val": 1.545168399810791
+   },
+   {
+    "step": 2500,
+    "train": 1.2730713748931886,
+    "val": 1.5465550422668457
+   },
+   {
+    "step": 2600,
+    "train": 1.2658607578277588,
+    "val": 1.54959237575531
+   },
+   {
+    "step": 2700,
+    "train": 1.2599633598327638,
+    "val": 1.5414392948150635
+   },
+   {
+    "step": 2800,
+    "train": 1.2562972819805145,
+    "val": 1.5495994091033936
+   },
+   {
+    "step": 2900,
+    "train": 1.2495968878269195,
+    "val": 1.5466105937957764
+   },
+   {
+    "step": 3000,
+    "train": 1.2493103301525117,
+    "val": 1.5554770231246948
+   },
+   {
+    "step": 3100,
+    "train": 1.24367307305336,
+    "val": 1.5546162128448486
+   },
+   {
+    "step": 3200,
+    "train": 1.239165472984314,
+    "val": 1.5512266159057617
+   },
+   {
+    "step": 3300,
+    "train": 1.233969578742981,
+    "val": 1.5496915578842163
+   },
+   {
+    "step": 3400,
+    "train": 1.231340559720993,
+    "val": 1.5530905723571777
+   },
+   {
+    "step": 3500,
+    "train": 1.2266227340698241,
+    "val": 1.5526268482208252
+   },
+   {
+    "step": 3600,
+    "train": 1.2195689523220061,
+    "val": 1.5524482727050781
+   },
+   {
+    "step": 3700,
+    "train": 1.2136485111713409,
+    "val": 1.5514779090881348
+   },
+   {
+    "step": 3800,
+    "train": 1.2130715310573579,
+    "val": 1.5602909326553345
+   },
+   {
+    "step": 3900,
+    "train": 1.2071176362037659,
+    "val": 1.561070203781128
+   },
+   {
+    "step": 4000,
+    "train": 1.2102925038337708,
+    "val": 1.564190149307251
+   }
+  ],
+  "finalValLoss": 1.564190149307251,
+  "finalTrainLoss": 1.2102925038337708,
+  "seconds": 41.3,
+  "device": "mps"
+ },
+ "vocab": [
+  "\n",
+  " ",
+  "!",
+  "$",
+  "&",
+  "'",
+  ",",
+  "-",
+  ".",
+  "3",
+  ":",
+  ";",
+  "?",
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z"
+ ],
+ "sample": {
+  "start": "\n",
+  "length": 320,
+  "temperature": 0.8,
+  "seed": 1,
+  "checkpoints": [
+   0,
+   100,
+   300,
+   1000,
+   2000,
+   4000
+  ]
+ },
+ "samples": [
+  {
+   "step": 0,
+   "text": "\nCuw;suqW\n.&!TNUuuOgl,O,cKavjeXkZyKf cUK.msowgKPXDcvLf;KwVSK;c GvOW$N!raCLIoxZWHXoGF$XgaMFNZwjVFs':TpgrMdgPfZNLyJo&Bd:Dq tVESnRbqQ's:VhYToKSVvErdv$PkOJHRy!kUXud-R$mNcCmOHHSk izwVi'VRLCXNLDvFfZ,w!BprHCn'cWAxvBl,vYXdAQVaf.dC MtewKCzogFD$hIYl;wuYWdk&IHSm!Z3Ze3TwUHcNKlRfUIwSgC3uiCsu3n$PuOcMzRZMB\n,gzGkLnn,bW\n o!oo!kbc;BJ$l?",
+   "val": 4.169772148132324
+  },
+  {
+   "step": 100,
+   "text": "Burwert here the usplen, and and you comens with anvir that in hermoning mion, and wing hee, whes not with the wood dour the sibel's as fot therdvers, he braked--\nHhat my be is the elof thelf thit reand mone at had, wall thater is gevig the ward she ming, thear not, hes, werd suen the his breigut benting onoo my lore p",
+   "val": 2.1193995475769043
+  },
+  {
+   "step": 300,
+   "text": "But,\nSull repestius leady and to you comens with a virtues the hear,\nHearly sporth with her, we shall with the nood dound, this cansins for therevers all be put as homman of is the elving ouft, it reconcellone, had, wark Camear is,\nAnd while that I\nShame, then comlester, their unnot the hast\nTouse not this of my lord p",
+   "val": 1.845395565032959
+  },
+  {
+   "step": 1000,
+   "text": "But, so here is autio, that mean of your mootings of a seace,\nWhen your witon, and longand thee should be stufferord; if there beats as for therevort me all all a man, and brize it else of love it reconcellen to advisans of the Coof all him\nwith she with he watchel, he hates his noble death\nThem kind,\nWhich of the Joll",
+   "val": 1.6824991703033447
+  },
+  {
+   "step": 2000,
+   "text": "\nCAMILLO:\nMy lord, all that me, by my sorrow.\n\nPOMPEL:\nI am their motience.\n\nSICINIUS:\nI have nose me without the proud, the noble sisters at Edwards all in put upon the country in Rome.\n\nLEONTES:\nO, now they shall bear the tersh of Dignired with heaving eyes?\n\nNurse:\nThy fuirse\nFor the duke\nTo tell me his power to lea",
+   "val": 1.6334872245788574
+  },
+  {
+   "step": 4000,
+   "text": "What stay\nsworn upon him.\n\nCAPULET:\nNot I see the crown.\nTell me we sir.\nLook, and longare for thine grace for your death, this canst have ten such such a dealt;\nAnd take my love to this fellow it reconcellen thands had the tersier\nTo have;\nAnd thou mayst thou come, I'll never fender me in a\nmouths, the poor with the p",
+   "val": 1.6151949167251587
+  }
+ ],
+ "examples": [
+  {
+   "text": "BAPTISTA:\nHow now, my friend! why dost thou look so pale?\n",
+   "chars": [
+    "B",
+    "A",
+    "P",
+    "T",
+    "I",
+    "S",
+    "T",
+    "A",
+    ":",
+    "\n",
+    "H",
+    "o",
+    "w",
+    " ",
+    "n",
+    "o",
+    "w",
+    ",",
+    " ",
+    "m",
+    "y",
+    " ",
+    "f",
+    "r",
+    "i",
+    "e",
+    "n",
+    "d",
+    "!",
+    " ",
+    "w",
+    "h",
+    "y",
+    " ",
+    "d",
+    "o",
+    "s",
+    "t",
+    " ",
+    "t",
+    "h",
+    "o",
+    "u",
+    " ",
+    "l",
+    "o",
+    "o",
+    "k",
+    " ",
+    "s",
+    "o",
+    " ",
+    "p",
+    "a",
+    "l",
+    "e",
+    "?",
+    "\n"
+   ],
+   "nextLoss": 1.32478420578072,
+   "lstmNextLoss": 1.0693979807823013,
+   "topIds": [
+    [
+     59,
+     17,
+     27,
+     43,
+     37
+    ],
+    [
+     24,
+     30,
+     20,
+     25,
+     26
+    ],
+    [
+     33,
+     17,
+     39,
+     20,
+     32
+    ],
+    [
+     46,
+     32,
+     17,
+     20,
+     35
+    ],
+    [
+     27,
+     31,
+     19,
+     16,
+     24
+    ],
+    [
+     13,
+     32,
+     20,
+     10,
+     15
+    ],
+    [
+     13,
+     27,
+     17,
+     37,
+     30
+    ],
+    [
+     10,
+     24,
+     30,
+     28,
+     17
+    ],
+    [
+     0,
+     1,
+     10,
+     6,
+     5
+    ],
+    [
+     13,
+     32,
+     21,
+     35,
+     25
+    ],
+    [
+     43,
+     53,
+     39,
+     47,
+     59
+    ],
+    [
+     61,
+     50,
+     52,
+     1,
+     2
+    ],
+    [
+     1,
+     6,
+     2,
+     50,
+     5
+    ],
+    [
+     52,
+     21,
+     61,
+     57,
+     44
+    ],
+    [
+     53,
+     39,
+     43,
+     47,
+     59
+    ],
+    [
+     61,
+     58,
+     1,
+     40,
+     52
+    ],
+    [
+     6,
+     1,
+     2,
+     10,
+     0
+    ],
+    [
+     1,
+     0,
+     7,
+     5,
+     6
+    ],
+    [
+     58,
+     51,
+     21,
+     57,
+     39
+    ],
+    [
+     63,
+     39,
+     53,
+     59,
+     43
+    ],
+    [
+     1,
+     57,
+     0,
+     6,
+     8
+    ],
+    [
+     50,
+     51,
+     57,
+     45,
+     40
+    ],
+    [
+     39,
+     53,
+     56,
+     43,
+     47
+    ],
+    [
+     47,
+     53,
+     43,
+     39,
+     63
+    ],
+    [
+     43,
+     39,
+     41,
+     45,
+     56
+    ],
+    [
+     52,
+     50,
+     56,
+     57,
+     58
+    ],
+    [
+     42,
+     58,
+     45,
+     41,
+     57
+    ],
+    [
+     57,
+     6,
+     1,
+     8,
+     11
+    ],
+    [
+     0,
+     1,
+     5,
+     7,
+     12
+    ],
+    [
+     21,
+     61,
+     39,
+     58,
+     51
+    ],
+    [
+     46,
+     47,
+     43,
+     53,
+     39
+    ],
+    [
+     43,
+     53,
+     39,
+     47,
+     63
+    ],
+    [
+     1,
+     6,
+     8,
+     12,
+     0
+    ],
+    [
+     57,
+     42,
+     51,
+     61,
+     50
+    ],
+    [
+     53,
+     47,
+     39,
+     43,
+     56
+    ],
+    [
+     1,
+     57,
+     58,
+     43,
+     52
+    ],
+    [
+     58,
+     54,
+     47,
+     39,
+     43
+    ],
+    [
+     1,
+     6,
+     8,
+     10,
+     11
+    ],
+    [
+     58,
+     57,
+     61,
+     52,
+     59
+    ],
+    [
+     46,
+     53,
+     56,
+     43,
+     39
+    ],
+    [
+     53,
+     43,
+     47,
+     39,
+     63
+    ],
+    [
+     59,
+     56,
+     58,
+     57,
+     53
+    ],
+    [
+     1,
+     6,
+     0,
+     12,
+     2
+    ],
+    [
+     57,
+     46,
+     58,
+     52,
+     39
+    ],
+    [
+     53,
+     43,
+     47,
+     39,
+     59
+    ],
+    [
+     60,
+     52,
+     53,
+     57,
+     59
+    ],
+    [
+     49,
+     45,
+     56,
+     42,
+     58
+    ],
+    [
+     1,
+     57,
+     43,
+     5,
+     47
+    ],
+    [
+     58,
+     53,
+     59,
+     39,
+     63
+    ],
+    [
+     53,
+     43,
+     46,
+     58,
+     39
+    ],
+    [
+     1,
+     6,
+     8,
+     51,
+     10
+    ],
+    [
+     44,
+     57,
+     51,
+     58,
+     42
+    ],
+    [
+     50,
+     39,
+     56,
+     53,
+     43
+    ],
+    [
+     56,
+     57,
+     50,
+     58,
+     47
+    ],
+    [
+     43,
+     58,
+     59,
+     39,
+     50
+    ],
+    [
+     1,
+     6,
+     57,
+     8,
+     0
+    ],
+    [
+     0,
+     1,
+     5,
+     7,
+     8
+    ],
+    [
+     0,
+     35,
+     32,
+     21,
+     27
+    ]
+   ]
+  },
+  {
+   "text": "KATHARINA:\nAsses are made to bear, and so are you.\n",
+   "chars": [
+    "K",
+    "A",
+    "T",
+    "H",
+    "A",
+    "R",
+    "I",
+    "N",
+    "A",
+    ":",
+    "\n",
+    "A",
+    "s",
+    "s",
+    "e",
+    "s",
+    " ",
+    "a",
+    "r",
+    "e",
+    " ",
+    "m",
+    "a",
+    "d",
+    "e",
+    " ",
+    "t",
+    "o",
+    " ",
+    "b",
+    "e",
+    "a",
+    "r",
+    ",",
+    " ",
+    "a",
+    "n",
+    "d",
+    " ",
+    "s",
+    "o",
+    " ",
+    "a",
+    "r",
+    "e",
+    " ",
+    "y",
+    "o",
+    "u",
+    ".",
+    "\n"
+   ],
+   "nextLoss": 1.5163134823739528,
+   "lstmNextLoss": 1.8215429957781453,
+   "topIds": [
+    [
+     21,
+     17,
+     10,
+     47,
+     24
+    ],
+    [
+     26,
+     1,
+     0,
+     10,
+     52
+    ],
+    [
+     20,
+     10,
+     46,
+     33,
+     27
+    ],
+    [
+     13,
+     17,
+     10,
+     43,
+     1
+    ],
+    [
+     30,
+     26,
+     25,
+     10,
+     37
+    ],
+    [
+     21,
+     16,
+     1,
+     26,
+     19
+    ],
+    [
+     26,
+     1,
+     15,
+     32,
+     27
+    ],
+    [
+     13,
+     19,
+     15,
+     1,
+     21
+    ],
+    [
+     10,
+     25,
+     26,
+     37,
+     1
+    ],
+    [
+     0,
+     1,
+     10,
+     5,
+     6
+    ],
+    [
+     21,
+     13,
+     35,
+     32,
+     26
+    ],
+    [
+     52,
+     63,
+     1,
+     50,
+     57
+    ],
+    [
+     1,
+     57,
+     6,
+     41,
+     49
+    ],
+    [
+     43,
+     47,
+     39,
+     59,
+     1
+    ],
+    [
+     1,
+     50,
+     57,
+     0,
+     6
+    ],
+    [
+     58,
+     57,
+     1,
+     46,
+     54
+    ],
+    [
+     53,
+     58,
+     61,
+     39,
+     46
+    ],
+    [
+     52,
+     45,
+     56,
+     50,
+     57
+    ],
+    [
+     43,
+     51,
+     58,
+     47,
+     56
+    ],
+    [
+     1,
+     0,
+     6,
+     57,
+     8
+    ],
+    [
+     58,
+     57,
+     52,
+     40,
+     51
+    ],
+    [
+     53,
+     39,
+     43,
+     63,
+     59
+    ],
+    [
+     42,
+     52,
+     56,
+     58,
+     47
+    ],
+    [
+     43,
+     39,
+     1,
+     6,
+     47
+    ],
+    [
+     1,
+     0,
+     6,
+     8,
+     57
+    ],
+    [
+     58,
+     51,
+     47,
+     39,
+     63
+    ],
+    [
+     46,
+     53,
+     56,
+     61,
+     39
+    ],
+    [
+     1,
+     53,
+     61,
+     7,
+     5
+    ],
+    [
+     57,
+     58,
+     40,
+     51,
+     42
+    ],
+    [
+     43,
+     39,
+     56,
+     47,
+     53
+    ],
+    [
+     1,
+     45,
+     39,
+     57,
+     42
+    ],
+    [
+     56,
+     58,
+     42,
+     60,
+     59
+    ],
+    [
+     1,
+     6,
+     0,
+     8,
+     5
+    ],
+    [
+     1,
+     0,
+     7,
+     5,
+     6
+    ],
+    [
+     58,
+     39,
+     21,
+     51,
+     61
+    ],
+    [
+     52,
+     57,
+     1,
+     50,
+     58
+    ],
+    [
+     42,
+     1,
+     57,
+     53,
+     63
+    ],
+    [
+     1,
+     6,
+     0,
+     8,
+     2
+    ],
+    [
+     58,
+     46,
+     61,
+     57,
+     21
+    ],
+    [
+     53,
+     58,
+     43,
+     46,
+     39
+    ],
+    [
+     1,
+     6,
+     51,
+     59,
+     8
+    ],
+    [
+     57,
+     51,
+     42,
+     44,
+     58
+    ],
+    [
+     50,
+     52,
+     56,
+     1,
+     42
+    ],
+    [
+     43,
+     51,
+     58,
+     45,
+     41
+    ],
+    [
+     1,
+     6,
+     0,
+     8,
+     11
+    ],
+    [
+     58,
+     39,
+     52,
+     61,
+     51
+    ],
+    [
+     53,
+     43,
+     47,
+     39,
+     59
+    ],
+    [
+     59,
+     43,
+     52,
+     53,
+     57
+    ],
+    [
+     1,
+     56,
+     6,
+     0,
+     8
+    ],
+    [
+     0,
+     1,
+     5,
+     7,
+     6
+    ],
+    [
+     0,
+     35,
+     32,
+     21,
+     14
+    ]
+   ]
+  },
+  {
+   "text": "PETRUCHIO:\nPetruchio is my name; Antonio's son,\n",
+   "chars": [
+    "P",
+    "E",
+    "T",
+    "R",
+    "U",
+    "C",
+    "H",
+    "I",
+    "O",
+    ":",
+    "\n",
+    "P",
+    "e",
+    "t",
+    "r",
+    "u",
+    "c",
+    "h",
+    "i",
+    "o",
+    " ",
+    "i",
+    "s",
+    " ",
+    "m",
+    "y",
+    " ",
+    "n",
+    "a",
+    "m",
+    "e",
+    ";",
+    " ",
+    "A",
+    "n",
+    "t",
+    "o",
+    "n",
+    "i",
+    "o",
+    "'",
+    "s",
+    " ",
+    "s",
+    "o",
+    "n",
+    ",",
+    "\n"
+   ],
+   "nextLoss": 1.5219574241844462,
+   "lstmNextLoss": 1.448438182118983,
+   "topIds": [
+    [
+     56,
+     17,
+     43,
+     13,
+     33
+    ],
+    [
+     37,
+     32,
+     30,
+     24,
+     27
+    ],
+    [
+     17,
+     10,
+     30,
+     15,
+     20
+    ],
+    [
+     33,
+     37,
+     13,
+     16,
+     17
+    ],
+    [
+     15,
+     25,
+     32,
+     23,
+     31
+    ],
+    [
+     20,
+     17,
+     33,
+     32,
+     24
+    ],
+    [
+     17,
+     10,
+     13,
+     21,
+     31
+    ],
+    [
+     27,
+     10,
+     13,
+     16,
+     31
+    ],
+    [
+     10,
+     24,
+     1,
+     6,
+     12
+    ],
+    [
+     0,
+     1,
+     10,
+     7,
+     5
+    ],
+    [
+     35,
+     31,
+     13,
+     25,
+     21
+    ],
+    [
+     56,
+     43,
+     39,
+     50,
+     53
+    ],
+    [
+     39,
+     58,
+     56,
+     57,
+     51
+    ],
+    [
+     56,
+     43,
+     41,
+     47,
+     1
+    ],
+    [
+     59,
+     53,
+     39,
+     43,
+     47
+    ],
+    [
+     41,
+     51,
+     42,
+     57,
+     43
+    ],
+    [
+     46,
+     58,
+     49,
+     47,
+     59
+    ],
+    [
+     47,
+     43,
+     63,
+     53,
+     1
+    ],
+    [
+     53,
+     43,
+     52,
+     39,
+     59
+    ],
+    [
+     6,
+     1,
+     8,
+     52,
+     5
+    ],
+    [
+     58,
+     42,
+     47,
+     39,
+     51
+    ],
+    [
+     57,
+     52,
+     58,
+     5,
+     44
+    ],
+    [
+     1,
+     6,
+     0,
+     8,
+     5
+    ],
+    [
+     58,
+     39,
+     57,
+     52,
+     40
+    ],
+    [
+     39,
+     53,
+     63,
+     43,
+     59
+    ],
+    [
+     1,
+     57,
+     0,
+     6,
+     8
+    ],
+    [
+     50,
+     57,
+     44,
+     51,
+     40
+    ],
+    [
+     39,
+     53,
+     43,
+     59,
+     47
+    ],
+    [
+     51,
+     58,
+     54,
+     47,
+     41
+    ],
+    [
+     43,
+     47,
+     53,
+     51,
+     39
+    ],
+    [
+     1,
+     6,
+     8,
+     0,
+     12
+    ],
+    [
+     0,
+     1,
+     5,
+     7,
+     8
+    ],
+    [
+     39,
+     58,
+     61,
+     46,
+     21
+    ],
+    [
+     52,
+     59,
+     42,
+     1,
+     50
+    ],
+    [
+     58,
+     42,
+     45,
+     1,
+     52
+    ],
+    [
+     1,
+     47,
+     43,
+     53,
+     61
+    ],
+    [
+     1,
+     53,
+     57,
+     50,
+     56
+    ],
+    [
+     1,
+     57,
+     47,
+     5,
+     39
+    ],
+    [
+     43,
+     53,
+     57,
+     52,
+     39
+    ],
+    [
+     59,
+     1,
+     6,
+     52,
+     57
+    ],
+    [
+     57,
+     42,
+     1,
+     44,
+     58
+    ],
+    [
+     1,
+     6,
+     0,
+     58,
+     8
+    ],
+    [
+     58,
+     57,
+     51,
+     50,
+     42
+    ],
+    [
+     53,
+     43,
+     58,
+     59,
+     46
+    ],
+    [
+     51,
+     52,
+     59,
+     56,
+     60
+    ],
+    [
+     6,
+     1,
+     10,
+     57,
+     8
+    ],
+    [
+     1,
+     0,
+     7,
+     5,
+     8
+    ],
+    [
+     13,
+     32,
+     35,
+     27,
+     14
+    ]
+   ]
+  }
+ ],
+ "units": [
+  {
+   "id": "line",
+   "title": "characters since the start of the line",
+   "unit": 68,
+   "r": 0.28976860642433167,
+   "secondR": 0.2607114017009735,
+   "lstmUnit": 205,
+   "lstmR": -0.8943820595741272
+  },
+  {
+   "id": "speaker",
+   "title": "inside a speaker's name (an upper-case line ending in ':')",
+   "unit": 68,
+   "r": -0.6334138512611389,
+   "secondR": 0.5269472599029541,
+   "lstmUnit": 73,
+   "lstmR": -0.655138373374939
+  },
+  {
+   "id": "word",
+   "title": "characters since the last space or line break",
+   "unit": 18,
+   "r": -0.6443177461624146,
+   "secondR": 0.5565812587738037,
+   "lstmUnit": 192,
+   "lstmR": -0.6095230579376221
+  }
+ ],
+ "passage": "?\n\nGREMIO:\nGood morrow, neighbour Baptista.\n\nBAPTISTA:\nGood morrow, neighbour Gremio.\nGod save you, gentlemen!\n\nPETRUCHIO:\nAnd you, good sir! Pray, have you not a daughter\nCall'd Katharina, fair and virtuous?\n\nBAPTISTA:\nI have a daughter, sir, called Katharina.\n\nGREMIO:\nYou are too blunt: go to it orderly.\n\nPETRUCHIO:\nYou wrong me, Signior Gremio: give me leave.\nI am a gentleman of Verona, sir,\nThat, hearing of her beauty and her wit,\nHer affability and bashful modesty,\nHer wondrous qualities and mild behavior,\nAm bold to show myself a forward guest\nWithin your house, to make mine eye the witn",
+ "passageChars": 5000,
+ "gradients": {
+  "rule": "L = −log p(last character | the 128 before it); ‖∂L/∂h_k‖ for each earlier step k, on each of the 64 validation windows (the loss curve's); the curves are their geometric mean",
+  "windows": 64,
+  "length": 128,
+  "checkpoints": [
+   0,
+   100,
+   300,
+   1000,
+   2000,
+   4000
+  ],
+  "shown": {
+   "text": "BAPTISTA:\nI have a daughter, sir, called Katharina.\n\nGREMIO:\nYou are too blunt: go to it orderly.\n\nPETRUCHIO:\nYou wrong me, Signi",
+   "start": 210
+  },
+  "weightNorm": [
+   1.135023832321167,
+   2.619168281555176,
+   3.8610308170318604,
+   5.222536563873291,
+   6.01509952545166,
+   6.9022674560546875
+  ],
+  "saturation": [
+   0.0,
+   0.182220458984375,
+   0.38885498046875,
+   0.563446044921875,
+   0.63348388671875,
+   0.69378662109375
+  ],
+  "summary": [
+   {
+    "name": "rnn0",
+    "last": 0.5724369287490845,
+    "first": 9.999923859676835e-31,
+    "ratio10": 0.0016586099518463016,
+    "ratio50": 2.6558789211926156e-14,
+    "ratio100": 1.7469040355479628e-30,
+    "reach1e3": 10
+   },
+   {
+    "name": "rnn100",
+    "last": 0.6767650842666626,
+    "first": 9.999923859676835e-31,
+    "ratio10": 0.0025711790658533573,
+    "ratio50": 2.0427101850295504e-12,
+    "ratio100": 3.2297691092978394e-28,
+    "reach1e3": 11
+   },
+   {
+    "name": "rnn300",
+    "last": 0.9515846371650696,
+    "first": 6.30964328662628e-30,
+    "ratio10": 0.007849080488085747,
+    "ratio50": 2.579627900178849e-10,
+    "ratio100": 1.2064409847040302e-19,
+    "reach1e3": 14
+   },
+   {
+    "name": "rnn1000",
+    "last": 1.3103899955749512,
+    "first": 4.5321475799132905e-23,
+    "ratio10": 0.019160449504852295,
+    "ratio50": 4.572720424533827e-09,
+    "ratio100": 2.756286900268366e-17,
+    "reach1e3": 17
+   },
+   {
+    "name": "rnn2000",
+    "last": 1.4534342288970947,
+    "first": 2.1594579989053357e-19,
+    "ratio10": 0.02786528877913952,
+    "ratio50": 2.8948836217068674e-08,
+    "ratio100": 1.2768779216677426e-15,
+    "reach1e3": 19
+   },
+   {
+    "name": "rnn4000",
+    "last": 1.5486042499542236,
+    "first": 2.0531105877043878e-16,
+    "ratio10": 0.056706883013248444,
+    "ratio50": 5.936691991337284e-07,
+    "ratio100": 3.31064711235618e-13,
+    "reach1e3": 23
+   },
+   {
+    "name": "lstmH",
+    "last": 1.6814517974853516,
+    "first": 2.4195232981583104e-06,
+    "ratio10": 0.0761934146285057,
+    "ratio50": 0.0006874130922369659,
+    "ratio100": 9.68821859714808e-06,
+    "reach1e3": 45
+   },
+   {
+    "name": "lstmC",
+    "last": 0.791936457157135,
+    "first": 3.8484240576508455e-06,
+    "ratio10": 0.15557393431663513,
+    "ratio50": 0.003441740060225129,
+    "ratio100": 5.068969039712101e-05,
+    "reach1e3": 65
+   }
+  ]
+ },
+ "tensors": {
+  "file": "rnn.f32",
+  "sha256": "068b554a963b6992d69424608313d2b171f2548c0c50a63ff1421c4a3bee152a",
+  "bytes": 1662960,
+  "tensors": {
+   "speech0.x": {
+    "offset": 0,
+    "length": 3712,
+    "shape": [
+     58,
+     64
+    ]
+   },
+   "speech0.fromX": {
+    "offset": 3712,
+    "length": 14848,
+    "shape": [
+     58,
+     256
+    ]
+   },
+   "speech0.fromH": {
+    "offset": 18560,
+    "length": 14848,
+    "shape": [
+     58,
+     256
+    ]
+   },
+   "speech0.h": {
+    "offset": 33408,
+    "length": 14848,
+    "shape": [
+     58,
+     256
+    ]
+   },
+   "speech0.p": {
+    "offset": 48256,
+    "length": 3770,
+    "shape": [
+     58,
+     65
+    ]
+   },
+   "speech0.lstmP": {
+    "offset": 52026,
+    "length": 3770,
+    "shape": [
+     58,
+     65
+    ]
+   },
+   "speech1.x": {
+    "offset": 55796,
+    "length": 3264,
+    "shape": [
+     51,
+     64
+    ]
+   },
+   "speech1.fromX": {
+    "offset": 59060,
+    "length": 13056,
+    "shape": [
+     51,
+     256
+    ]
+   },
+   "speech1.fromH": {
+    "offset": 72116,
+    "length": 13056,
+    "shape": [
+     51,
+     256
+    ]
+   },
+   "speech1.h": {
+    "offset": 85172,
+    "length": 13056,
+    "shape": [
+     51,
+     256
+    ]
+   },
+   "speech1.p": {
+    "offset": 98228,
+    "length": 3315,
+    "shape": [
+     51,
+     65
+    ]
+   },
+   "speech1.lstmP": {
+    "offset": 101543,
+    "length": 3315,
+    "shape": [
+     51,
+     65
+    ]
+   },
+   "speech2.x": {
+    "offset": 104858,
+    "length": 3072,
+    "shape": [
+     48,
+     64
+    ]
+   },
+   "speech2.fromX": {
+    "offset": 107930,
+    "length": 12288,
+    "shape": [
+     48,
+     256
+    ]
+   },
+   "speech2.fromH": {
+    "offset": 120218,
+    "length": 12288,
+    "shape": [
+     48,
+     256
+    ]
+   },
+   "speech2.h": {
+    "offset": 132506,
+    "length": 12288,
+    "shape": [
+     48,
+     256
+    ]
+   },
+   "speech2.p": {
+    "offset": 144794,
+    "length": 3120,
+    "shape": [
+     48,
+     65
+    ]
+   },
+   "speech2.lstmP": {
+    "offset": 147914,
+    "length": 3120,
+    "shape": [
+     48,
+     65
+    ]
+   },
+   "unit.line": {
+    "offset": 151034,
+    "length": 600,
+    "shape": [
+     600
+    ]
+   },
+   "unit.speaker": {
+    "offset": 151634,
+    "length": 600,
+    "shape": [
+     600
+    ]
+   },
+   "unit.word": {
+    "offset": 152234,
+    "length": 600,
+    "shape": [
+     600
+    ]
+   },
+   "grad.rnn0": {
+    "offset": 152834,
+    "length": 8192,
+    "shape": [
+     64,
+     128
+    ]
+   },
+   "shown.jacobian0": {
+    "offset": 161026,
+    "length": 127,
+    "shape": [
+     127
+    ]
+   },
+   "shown.rnnGrad0": {
+    "offset": 161153,
+    "length": 32768,
+    "shape": [
+     128,
+     256
+    ]
+   },
+   "shown.rnnH0": {
+    "offset": 193921,
+    "length": 32768,
+    "shape": [
+     128,
+     256
+    ]
+   },
+   "grad.rnn100": {
+    "offset": 226689,
+    "length": 8192,
+    "shape": [
+     64,
+     128
+    ]
+   },
+   "shown.jacobian100": {
+    "offset": 234881,
+    "length": 127,
+    "shape": [
+     127
+    ]
+   },
+   "grad.rnn300": {
+    "offset": 235008,
+    "length": 8192,
+    "shape": [
+     64,
+     128
+    ]
+   },
+   "shown.jacobian300": {
+    "offset": 243200,
+    "length": 127,
+    "shape": [
+     127
+    ]
+   },
+   "grad.rnn1000": {
+    "offset": 243327,
+    "length": 8192,
+    "shape": [
+     64,
+     128
+    ]
+   },
+   "shown.jacobian1000": {
+    "offset": 251519,
+    "length": 127,
+    "shape": [
+     127
+    ]
+   },
+   "grad.rnn2000": {
+    "offset": 251646,
+    "length": 8192,
+    "shape": [
+     64,
+     128
+    ]
+   },
+   "shown.jacobian2000": {
+    "offset": 259838,
+    "length": 127,
+    "shape": [
+     127
+    ]
+   },
+   "grad.rnn4000": {
+    "offset": 259965,
+    "length": 8192,
+    "shape": [
+     64,
+     128
+    ]
+   },
+   "shown.jacobian4000": {
+    "offset": 268157,
+    "length": 127,
+    "shape": [
+     127
+    ]
+   },
+   "shown.rnnGrad4000": {
+    "offset": 268284,
+    "length": 32768,
+    "shape": [
+     128,
+     256
+    ]
+   },
+   "shown.rnnH4000": {
+    "offset": 301052,
+    "length": 32768,
+    "shape": [
+     128,
+     256
+    ]
+   },
+   "grad.lstmH": {
+    "offset": 333820,
+    "length": 8192,
+    "shape": [
+     64,
+     128
+    ]
+   },
+   "grad.lstmC": {
+    "offset": 342012,
+    "length": 8192,
+    "shape": [
+     64,
+     128
+    ]
+   },
+   "shown.lstmGradH": {
+    "offset": 350204,
+    "length": 32768,
+    "shape": [
+     128,
+     256
+    ]
+   },
+   "shown.lstmGradC": {
+    "offset": 382972,
+    "length": 32768,
+    "shape": [
+     128,
+     256
+    ]
+   }
+  }
+ },
+ "weights": {
+  "file": "weights.f32",
+  "sha256": "a024223b2ae26ad77e6fb3336bd280996755835caf1698d66353ac7a9f63f54b",
+  "bytes": 413188,
+  "tensors": {
+   "embed.weight": {
+    "offset": 0,
+    "length": 4160,
+    "shape": [
+     65,
+     64
+    ]
+   },
+   "rnn.weight_ih_l0": {
+    "offset": 4160,
+    "length": 16384,
+    "shape": [
+     256,
+     64
+    ]
+   },
+   "rnn.weight_hh_l0": {
+    "offset": 20544,
+    "length": 65536,
+    "shape": [
+     256,
+     256
+    ]
+   },
+   "rnn.bias_ih_l0": {
+    "offset": 86080,
+    "length": 256,
+    "shape": [
+     256
+    ]
+   },
+   "rnn.bias_hh_l0": {
+    "offset": 86336,
+    "length": 256,
+    "shape": [
+     256
+    ]
+   },
+   "out.weight": {
+    "offset": 86592,
+    "length": 16640,
+    "shape": [
+     65,
+     256
+    ]
+   },
+   "out.bias": {
+    "offset": 103232,
+    "length": 65,
+    "shape": [
+     65
+    ]
+   }
+  }
+ },
+ "validation": {
+  "unrolledVsTorchRnnMaxError": 1.67e-06,
+  "stepEquationMaxError": 8.58e-06,
+  "bpttVsAutogradMaxError": 1.49e-07,
+  "gradientAboveJacobianBound": 0.0
+ },
+ "capture": {
+  "timestamp": "2026-10-31T02:48:52.263264+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1"
+  },
+  "script": "scripts/before-transformers/record_rnn.py",
+  "scriptSha256": "763cc092eaed0f0a1be496f62c3e014fa50895c5421dca1a6803dda6c7376cec",
+  "helperSha256": "b1fb5984cf2d3aafaac61e2f6e6c04a92637b768744f5a1dcea9e54ab1730151",
+  "trainingDevice": "mps",
+  "drawerSha256": "42f377d18efd49808595242108fdbff8a4a7b9250967b5551b54bb10322a7fbc",
+  "lstmDrawerSha256": "0237e96c58f1f44e2d201e32ba46699023079db89fb3549e87d81b1b8264d18f"
+ }
+}
