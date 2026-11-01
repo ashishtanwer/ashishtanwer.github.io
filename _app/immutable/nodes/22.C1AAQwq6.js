@@ -1,1 +1,0 @@
-import"../chunks/B4oPjWVK.js";import"../chunks/Bc45P1q7.js";import{P as r}from"../chunks/BbwQ4GGi.js";const t=!0,o="always",l=Object.freeze(Object.defineProperty({__proto__:null,prerender:t,trailingSlash:o},Symbol.toStringTag,{value:"Module"}));function p(e){r(e,{variant:"ddp"})}export{p as component,l as universal};
