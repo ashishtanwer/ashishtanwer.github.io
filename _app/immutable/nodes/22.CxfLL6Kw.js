@@ -1,0 +1,1 @@
+import"../chunks/mICcNecB.js";import"../chunks/BPyDT8Ox.js";import{T as t}from"../chunks/CJbEiT8L.js";const o=!0,r="always",p=Object.freeze(Object.defineProperty({__proto__:null,prerender:o,trailingSlash:r},Symbol.toStringTag,{value:"Module"}));function l(e){t(e,{variant:"gpt2"})}export{l as component,p as universal};

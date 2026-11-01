@@ -1,0 +1,1 @@
+import"../chunks/mICcNecB.js";import"../chunks/BPyDT8Ox.js";import{P as t}from"../chunks/C_EXIPUD.js";const o=!0,r="always",s=Object.freeze(Object.defineProperty({__proto__:null,prerender:o,trailingSlash:r},Symbol.toStringTag,{value:"Module"}));function p(e){t(e,{variant:"sft"})}export{p as component,s as universal};
