@@ -1,0 +1,1 @@
+import"../chunks/CkN31MmN.js";import"../chunks/Dt8yKe9y.js";import{A as o}from"../chunks/4n47mOwz.js";const t=!0,r="always",p=Object.freeze(Object.defineProperty({__proto__:null,prerender:t,trailingSlash:r},Symbol.toStringTag,{value:"Module"}));function l(e){o(e,{variant:"wav2vec2"})}export{l as component,p as universal};
