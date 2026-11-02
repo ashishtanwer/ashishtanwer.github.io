@@ -1,0 +1,3757 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-variant",
+	"variant": "yarn",
+	"source": "model",
+	"model": {
+		"id": "Qwen/Qwen2.5-0.5B",
+		"name": "Qwen2.5-0.5B",
+		"revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+		"url": "https://huggingface.co/Qwen/Qwen2.5-0.5B/tree/060db6499f32faf8b98477b0a26969ef7d8b9987",
+		"license": "apache-2.0",
+		"numLayers": 24,
+		"hiddenSize": 896,
+		"attentionHeads": 14,
+		"keyValueHeads": 2,
+		"groupSize": 7,
+		"headDim": 64,
+		"scale": 0.125,
+		"ropeTheta": 1000000.0,
+		"maxPositionEmbeddings": 32768,
+		"ropeScaling": {
+			"type": "yarn",
+			"factor": 4.0,
+			"original_max_position_embeddings": 32768
+		},
+		"ropeScalingSource": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/blob/a09a35458c702b33eeacc393d103063234e8bc28/README.md",
+		"factor": 4.0,
+		"originalContext": 32768,
+		"betaFast": 32,
+		"betaSlow": 1,
+		"rampLow": 11,
+		"rampHigh": 20,
+		"attentionFactor": 1.138629436111989,
+		"positions": "RoPE on queries and keys, pairs (i, i + 32); YaRN rescales the frequencies",
+		"mask": "causal"
+	},
+	"layers": [
+		0,
+		4,
+		9,
+		11,
+		13,
+		15,
+		16,
+		20,
+		23
+	],
+	"previewDims": 64,
+	"examples": [
+		{
+			"id": "passkey-8k",
+			"title": "Pass key · 8K tokens",
+			"prompt": "8,192 tokens, pass key 10 % in: There is an important info hidden inside a lot of irrelevant text. Find it and memorize them. I will quiz you about the important information there.\n[The grass is green.… 3,047 characters]\nThe pass key is 21452. Remember it. 21452 is the pass key.\n[… 27,421 characters]\nWhat is the pass key? The pass key is",
+			"tokens": [
+				{
+					"id": 279,
+					"text": " the"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 30,
+					"text": "?"
+				},
+				{
+					"id": 576,
+					"text": " The"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 374,
+					"text": " is"
+				}
+			],
+			"keyTokens": [
+				{
+					"id": 3862,
+					"text": "There"
+				},
+				{
+					"id": 785,
+					"text": "The"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 374,
+					"text": " is"
+				},
+				{
+					"id": 220,
+					"text": " "
+				},
+				{
+					"id": 17,
+					"text": "2"
+				},
+				{
+					"id": 16,
+					"text": "1"
+				},
+				{
+					"id": 19,
+					"text": "4"
+				},
+				{
+					"id": 20,
+					"text": "5"
+				},
+				{
+					"id": 17,
+					"text": "2"
+				},
+				{
+					"id": 13,
+					"text": "."
+				},
+				{
+					"id": 17,
+					"text": "2"
+				},
+				{
+					"id": 16,
+					"text": "1"
+				},
+				{
+					"id": 19,
+					"text": "4"
+				},
+				{
+					"id": 20,
+					"text": "5"
+				},
+				{
+					"id": 17,
+					"text": "2"
+				},
+				{
+					"id": 279,
+					"text": " the"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 30,
+					"text": "?"
+				},
+				{
+					"id": 576,
+					"text": " The"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 374,
+					"text": " is"
+				}
+			],
+			"file": {
+				"file": "passkey-8k.f32",
+				"bytes": 1546112,
+				"sha256": "5c5b2f50b3a1b12d82ab9696278018e3a19b7de83eed9dcde7196818f57b040a",
+				"tensors": {
+					"rows": {
+						"offset": 0,
+						"length": 8,
+						"shape": [
+							8
+						]
+					},
+					"cols": {
+						"offset": 8,
+						"length": 25,
+						"shape": [
+							25
+						]
+					},
+					"invFreq.rope": {
+						"offset": 33,
+						"length": 32,
+						"shape": [
+							32
+						]
+					},
+					"invFreq.yarn": {
+						"offset": 65,
+						"length": 32,
+						"shape": [
+							32
+						]
+					},
+					"ramp": {
+						"offset": 97,
+						"length": 32,
+						"shape": [
+							32
+						]
+					},
+					"book.edges": {
+						"offset": 129,
+						"length": 257,
+						"shape": [
+							257
+						]
+					},
+					"book.rope": {
+						"offset": 386,
+						"length": 256,
+						"shape": [
+							256
+						]
+					},
+					"book.yarn": {
+						"offset": 642,
+						"length": 256,
+						"shape": [
+							256
+						]
+					},
+					"book.yarn-flat": {
+						"offset": 898,
+						"length": 256,
+						"shape": [
+							256
+						]
+					},
+					"passkey.correct": {
+						"offset": 1154,
+						"length": 30,
+						"shape": [
+							2,
+							3,
+							5
+						]
+					},
+					"rope.mass.info": {
+						"offset": 1184,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.mass.key": {
+						"offset": 1520,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.mass.first": {
+						"offset": 1856,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.entropy": {
+						"offset": 2192,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.strip": {
+						"offset": 2528,
+						"length": 43008,
+						"shape": [
+							24,
+							14,
+							128
+						]
+					},
+					"rope.layer.0.scores": {
+						"offset": 45536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.0.weights": {
+						"offset": 48336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.4.scores": {
+						"offset": 51136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.4.weights": {
+						"offset": 53936,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.9.scores": {
+						"offset": 56736,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.9.weights": {
+						"offset": 59536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.11.scores": {
+						"offset": 62336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.11.weights": {
+						"offset": 65136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.13.scores": {
+						"offset": 67936,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.13.weights": {
+						"offset": 70736,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.15.scores": {
+						"offset": 73536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.15.weights": {
+						"offset": 76336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.16.scores": {
+						"offset": 79136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.16.weights": {
+						"offset": 81936,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.20.scores": {
+						"offset": 84736,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.20.weights": {
+						"offset": 87536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.23.scores": {
+						"offset": 90336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.23.weights": {
+						"offset": 93136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"yarn.mass.info": {
+						"offset": 95936,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.mass.key": {
+						"offset": 96272,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.mass.first": {
+						"offset": 96608,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.entropy": {
+						"offset": 96944,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.strip": {
+						"offset": 97280,
+						"length": 43008,
+						"shape": [
+							24,
+							14,
+							128
+						]
+					},
+					"layer.0.x": {
+						"offset": 140288,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.0.q": {
+						"offset": 140800,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.0.k": {
+						"offset": 147968,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.0.v": {
+						"offset": 151168,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.0.heads": {
+						"offset": 154368,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.0.out": {
+						"offset": 161536,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.0.scores": {
+						"offset": 162048,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.0.weights": {
+						"offset": 164848,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.4.x": {
+						"offset": 167648,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.4.q": {
+						"offset": 168160,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.4.k": {
+						"offset": 175328,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.4.v": {
+						"offset": 178528,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.4.heads": {
+						"offset": 181728,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.4.out": {
+						"offset": 188896,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.4.scores": {
+						"offset": 189408,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.4.weights": {
+						"offset": 192208,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.9.x": {
+						"offset": 195008,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.9.q": {
+						"offset": 195520,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.9.k": {
+						"offset": 202688,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.9.v": {
+						"offset": 205888,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.9.heads": {
+						"offset": 209088,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.9.out": {
+						"offset": 216256,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.9.scores": {
+						"offset": 216768,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.9.weights": {
+						"offset": 219568,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.11.x": {
+						"offset": 222368,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.11.q": {
+						"offset": 222880,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.11.k": {
+						"offset": 230048,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.11.v": {
+						"offset": 233248,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.11.heads": {
+						"offset": 236448,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.11.out": {
+						"offset": 243616,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.11.scores": {
+						"offset": 244128,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.11.weights": {
+						"offset": 246928,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.13.x": {
+						"offset": 249728,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.13.q": {
+						"offset": 250240,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.13.k": {
+						"offset": 257408,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.13.v": {
+						"offset": 260608,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.13.heads": {
+						"offset": 263808,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.13.out": {
+						"offset": 270976,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.13.scores": {
+						"offset": 271488,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.13.weights": {
+						"offset": 274288,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.15.x": {
+						"offset": 277088,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.15.q": {
+						"offset": 277600,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.15.k": {
+						"offset": 284768,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.15.v": {
+						"offset": 287968,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.15.heads": {
+						"offset": 291168,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.15.out": {
+						"offset": 298336,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.15.scores": {
+						"offset": 298848,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.15.weights": {
+						"offset": 301648,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.16.x": {
+						"offset": 304448,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.16.q": {
+						"offset": 304960,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.16.k": {
+						"offset": 312128,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.16.v": {
+						"offset": 315328,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.16.heads": {
+						"offset": 318528,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.16.out": {
+						"offset": 325696,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.16.scores": {
+						"offset": 326208,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.16.weights": {
+						"offset": 329008,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.20.x": {
+						"offset": 331808,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.20.q": {
+						"offset": 332320,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.20.k": {
+						"offset": 339488,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.20.v": {
+						"offset": 342688,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.20.heads": {
+						"offset": 345888,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.20.out": {
+						"offset": 353056,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.20.scores": {
+						"offset": 353568,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.20.weights": {
+						"offset": 356368,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.23.x": {
+						"offset": 359168,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.23.q": {
+						"offset": 359680,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.23.k": {
+						"offset": 366848,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.23.v": {
+						"offset": 370048,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.23.heads": {
+						"offset": 373248,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.23.out": {
+						"offset": 380416,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.23.scores": {
+						"offset": 380928,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.23.weights": {
+						"offset": 383728,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					}
+				}
+			}
+		},
+		{
+			"id": "passkey-32k",
+			"title": "Pass key · 32K tokens",
+			"prompt": "32,768 tokens, pass key 10 % in: There is an important info hidden inside a lot of irrelevant text. Find it and memorize them. I will quiz you about the important information there.\n[The grass is green.… 12,263 characters]\nThe pass key is 16952. Remember it. 16952 is the pass key.\n[… 110,368 characters]\nWhat is the pass key? The pass key is",
+			"tokens": [
+				{
+					"id": 279,
+					"text": " the"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 30,
+					"text": "?"
+				},
+				{
+					"id": 576,
+					"text": " The"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 374,
+					"text": " is"
+				}
+			],
+			"keyTokens": [
+				{
+					"id": 3862,
+					"text": "There"
+				},
+				{
+					"id": 785,
+					"text": "The"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 374,
+					"text": " is"
+				},
+				{
+					"id": 220,
+					"text": " "
+				},
+				{
+					"id": 16,
+					"text": "1"
+				},
+				{
+					"id": 21,
+					"text": "6"
+				},
+				{
+					"id": 24,
+					"text": "9"
+				},
+				{
+					"id": 20,
+					"text": "5"
+				},
+				{
+					"id": 17,
+					"text": "2"
+				},
+				{
+					"id": 13,
+					"text": "."
+				},
+				{
+					"id": 16,
+					"text": "1"
+				},
+				{
+					"id": 21,
+					"text": "6"
+				},
+				{
+					"id": 24,
+					"text": "9"
+				},
+				{
+					"id": 20,
+					"text": "5"
+				},
+				{
+					"id": 17,
+					"text": "2"
+				},
+				{
+					"id": 279,
+					"text": " the"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 30,
+					"text": "?"
+				},
+				{
+					"id": 576,
+					"text": " The"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 374,
+					"text": " is"
+				}
+			],
+			"file": {
+				"file": "passkey-32k.f32",
+				"bytes": 1546112,
+				"sha256": "040c5513c2c5c5921259b5e20eeff692475d6cbfd18ca4bf9760bedbfc0b51af",
+				"tensors": {
+					"rows": {
+						"offset": 0,
+						"length": 8,
+						"shape": [
+							8
+						]
+					},
+					"cols": {
+						"offset": 8,
+						"length": 25,
+						"shape": [
+							25
+						]
+					},
+					"invFreq.rope": {
+						"offset": 33,
+						"length": 32,
+						"shape": [
+							32
+						]
+					},
+					"invFreq.yarn": {
+						"offset": 65,
+						"length": 32,
+						"shape": [
+							32
+						]
+					},
+					"ramp": {
+						"offset": 97,
+						"length": 32,
+						"shape": [
+							32
+						]
+					},
+					"book.edges": {
+						"offset": 129,
+						"length": 257,
+						"shape": [
+							257
+						]
+					},
+					"book.rope": {
+						"offset": 386,
+						"length": 256,
+						"shape": [
+							256
+						]
+					},
+					"book.yarn": {
+						"offset": 642,
+						"length": 256,
+						"shape": [
+							256
+						]
+					},
+					"book.yarn-flat": {
+						"offset": 898,
+						"length": 256,
+						"shape": [
+							256
+						]
+					},
+					"passkey.correct": {
+						"offset": 1154,
+						"length": 30,
+						"shape": [
+							2,
+							3,
+							5
+						]
+					},
+					"rope.mass.info": {
+						"offset": 1184,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.mass.key": {
+						"offset": 1520,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.mass.first": {
+						"offset": 1856,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.entropy": {
+						"offset": 2192,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.strip": {
+						"offset": 2528,
+						"length": 43008,
+						"shape": [
+							24,
+							14,
+							128
+						]
+					},
+					"rope.layer.0.scores": {
+						"offset": 45536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.0.weights": {
+						"offset": 48336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.4.scores": {
+						"offset": 51136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.4.weights": {
+						"offset": 53936,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.9.scores": {
+						"offset": 56736,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.9.weights": {
+						"offset": 59536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.11.scores": {
+						"offset": 62336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.11.weights": {
+						"offset": 65136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.13.scores": {
+						"offset": 67936,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.13.weights": {
+						"offset": 70736,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.15.scores": {
+						"offset": 73536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.15.weights": {
+						"offset": 76336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.16.scores": {
+						"offset": 79136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.16.weights": {
+						"offset": 81936,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.20.scores": {
+						"offset": 84736,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.20.weights": {
+						"offset": 87536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.23.scores": {
+						"offset": 90336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.23.weights": {
+						"offset": 93136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"yarn.mass.info": {
+						"offset": 95936,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.mass.key": {
+						"offset": 96272,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.mass.first": {
+						"offset": 96608,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.entropy": {
+						"offset": 96944,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.strip": {
+						"offset": 97280,
+						"length": 43008,
+						"shape": [
+							24,
+							14,
+							128
+						]
+					},
+					"layer.0.x": {
+						"offset": 140288,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.0.q": {
+						"offset": 140800,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.0.k": {
+						"offset": 147968,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.0.v": {
+						"offset": 151168,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.0.heads": {
+						"offset": 154368,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.0.out": {
+						"offset": 161536,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.0.scores": {
+						"offset": 162048,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.0.weights": {
+						"offset": 164848,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.4.x": {
+						"offset": 167648,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.4.q": {
+						"offset": 168160,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.4.k": {
+						"offset": 175328,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.4.v": {
+						"offset": 178528,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.4.heads": {
+						"offset": 181728,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.4.out": {
+						"offset": 188896,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.4.scores": {
+						"offset": 189408,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.4.weights": {
+						"offset": 192208,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.9.x": {
+						"offset": 195008,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.9.q": {
+						"offset": 195520,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.9.k": {
+						"offset": 202688,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.9.v": {
+						"offset": 205888,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.9.heads": {
+						"offset": 209088,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.9.out": {
+						"offset": 216256,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.9.scores": {
+						"offset": 216768,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.9.weights": {
+						"offset": 219568,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.11.x": {
+						"offset": 222368,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.11.q": {
+						"offset": 222880,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.11.k": {
+						"offset": 230048,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.11.v": {
+						"offset": 233248,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.11.heads": {
+						"offset": 236448,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.11.out": {
+						"offset": 243616,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.11.scores": {
+						"offset": 244128,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.11.weights": {
+						"offset": 246928,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.13.x": {
+						"offset": 249728,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.13.q": {
+						"offset": 250240,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.13.k": {
+						"offset": 257408,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.13.v": {
+						"offset": 260608,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.13.heads": {
+						"offset": 263808,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.13.out": {
+						"offset": 270976,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.13.scores": {
+						"offset": 271488,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.13.weights": {
+						"offset": 274288,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.15.x": {
+						"offset": 277088,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.15.q": {
+						"offset": 277600,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.15.k": {
+						"offset": 284768,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.15.v": {
+						"offset": 287968,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.15.heads": {
+						"offset": 291168,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.15.out": {
+						"offset": 298336,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.15.scores": {
+						"offset": 298848,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.15.weights": {
+						"offset": 301648,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.16.x": {
+						"offset": 304448,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.16.q": {
+						"offset": 304960,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.16.k": {
+						"offset": 312128,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.16.v": {
+						"offset": 315328,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.16.heads": {
+						"offset": 318528,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.16.out": {
+						"offset": 325696,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.16.scores": {
+						"offset": 326208,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.16.weights": {
+						"offset": 329008,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.20.x": {
+						"offset": 331808,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.20.q": {
+						"offset": 332320,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.20.k": {
+						"offset": 339488,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.20.v": {
+						"offset": 342688,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.20.heads": {
+						"offset": 345888,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.20.out": {
+						"offset": 353056,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.20.scores": {
+						"offset": 353568,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.20.weights": {
+						"offset": 356368,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.23.x": {
+						"offset": 359168,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.23.q": {
+						"offset": 359680,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.23.k": {
+						"offset": 366848,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.23.v": {
+						"offset": 370048,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.23.heads": {
+						"offset": 373248,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.23.out": {
+						"offset": 380416,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.23.scores": {
+						"offset": 380928,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.23.weights": {
+						"offset": 383728,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					}
+				}
+			}
+		},
+		{
+			"id": "passkey-64k",
+			"title": "Pass key · 64K tokens",
+			"prompt": "65,536 tokens, pass key 10 % in: There is an important info hidden inside a lot of irrelevant text. Find it and memorize them. I will quiz you about the important information there.\n[The grass is green.… 24,550 characters]\nThe pass key is 36043. Remember it. 36043 is the pass key.\n[… 220,954 characters]\nWhat is the pass key? The pass key is",
+			"tokens": [
+				{
+					"id": 279,
+					"text": " the"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 30,
+					"text": "?"
+				},
+				{
+					"id": 576,
+					"text": " The"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 374,
+					"text": " is"
+				}
+			],
+			"keyTokens": [
+				{
+					"id": 3862,
+					"text": "There"
+				},
+				{
+					"id": 785,
+					"text": "The"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 374,
+					"text": " is"
+				},
+				{
+					"id": 220,
+					"text": " "
+				},
+				{
+					"id": 18,
+					"text": "3"
+				},
+				{
+					"id": 21,
+					"text": "6"
+				},
+				{
+					"id": 15,
+					"text": "0"
+				},
+				{
+					"id": 19,
+					"text": "4"
+				},
+				{
+					"id": 18,
+					"text": "3"
+				},
+				{
+					"id": 13,
+					"text": "."
+				},
+				{
+					"id": 18,
+					"text": "3"
+				},
+				{
+					"id": 21,
+					"text": "6"
+				},
+				{
+					"id": 15,
+					"text": "0"
+				},
+				{
+					"id": 19,
+					"text": "4"
+				},
+				{
+					"id": 18,
+					"text": "3"
+				},
+				{
+					"id": 279,
+					"text": " the"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 30,
+					"text": "?"
+				},
+				{
+					"id": 576,
+					"text": " The"
+				},
+				{
+					"id": 1494,
+					"text": " pass"
+				},
+				{
+					"id": 1376,
+					"text": " key"
+				},
+				{
+					"id": 374,
+					"text": " is"
+				}
+			],
+			"file": {
+				"file": "passkey-64k.f32",
+				"bytes": 1546112,
+				"sha256": "0cfbd1a03ec23a05fe92658b1c9f8fa1b56bf2ca1782a0dd82a3cc74173a0d55",
+				"tensors": {
+					"rows": {
+						"offset": 0,
+						"length": 8,
+						"shape": [
+							8
+						]
+					},
+					"cols": {
+						"offset": 8,
+						"length": 25,
+						"shape": [
+							25
+						]
+					},
+					"invFreq.rope": {
+						"offset": 33,
+						"length": 32,
+						"shape": [
+							32
+						]
+					},
+					"invFreq.yarn": {
+						"offset": 65,
+						"length": 32,
+						"shape": [
+							32
+						]
+					},
+					"ramp": {
+						"offset": 97,
+						"length": 32,
+						"shape": [
+							32
+						]
+					},
+					"book.edges": {
+						"offset": 129,
+						"length": 257,
+						"shape": [
+							257
+						]
+					},
+					"book.rope": {
+						"offset": 386,
+						"length": 256,
+						"shape": [
+							256
+						]
+					},
+					"book.yarn": {
+						"offset": 642,
+						"length": 256,
+						"shape": [
+							256
+						]
+					},
+					"book.yarn-flat": {
+						"offset": 898,
+						"length": 256,
+						"shape": [
+							256
+						]
+					},
+					"passkey.correct": {
+						"offset": 1154,
+						"length": 30,
+						"shape": [
+							2,
+							3,
+							5
+						]
+					},
+					"rope.mass.info": {
+						"offset": 1184,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.mass.key": {
+						"offset": 1520,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.mass.first": {
+						"offset": 1856,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.entropy": {
+						"offset": 2192,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"rope.strip": {
+						"offset": 2528,
+						"length": 43008,
+						"shape": [
+							24,
+							14,
+							128
+						]
+					},
+					"rope.layer.0.scores": {
+						"offset": 45536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.0.weights": {
+						"offset": 48336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.4.scores": {
+						"offset": 51136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.4.weights": {
+						"offset": 53936,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.9.scores": {
+						"offset": 56736,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.9.weights": {
+						"offset": 59536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.11.scores": {
+						"offset": 62336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.11.weights": {
+						"offset": 65136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.13.scores": {
+						"offset": 67936,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.13.weights": {
+						"offset": 70736,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.15.scores": {
+						"offset": 73536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.15.weights": {
+						"offset": 76336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.16.scores": {
+						"offset": 79136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.16.weights": {
+						"offset": 81936,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.20.scores": {
+						"offset": 84736,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.20.weights": {
+						"offset": 87536,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.23.scores": {
+						"offset": 90336,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"rope.layer.23.weights": {
+						"offset": 93136,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"yarn.mass.info": {
+						"offset": 95936,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.mass.key": {
+						"offset": 96272,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.mass.first": {
+						"offset": 96608,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.entropy": {
+						"offset": 96944,
+						"length": 336,
+						"shape": [
+							24,
+							14
+						]
+					},
+					"yarn.strip": {
+						"offset": 97280,
+						"length": 43008,
+						"shape": [
+							24,
+							14,
+							128
+						]
+					},
+					"layer.0.x": {
+						"offset": 140288,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.0.q": {
+						"offset": 140800,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.0.k": {
+						"offset": 147968,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.0.v": {
+						"offset": 151168,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.0.heads": {
+						"offset": 154368,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.0.out": {
+						"offset": 161536,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.0.scores": {
+						"offset": 162048,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.0.weights": {
+						"offset": 164848,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.4.x": {
+						"offset": 167648,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.4.q": {
+						"offset": 168160,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.4.k": {
+						"offset": 175328,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.4.v": {
+						"offset": 178528,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.4.heads": {
+						"offset": 181728,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.4.out": {
+						"offset": 188896,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.4.scores": {
+						"offset": 189408,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.4.weights": {
+						"offset": 192208,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.9.x": {
+						"offset": 195008,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.9.q": {
+						"offset": 195520,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.9.k": {
+						"offset": 202688,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.9.v": {
+						"offset": 205888,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.9.heads": {
+						"offset": 209088,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.9.out": {
+						"offset": 216256,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.9.scores": {
+						"offset": 216768,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.9.weights": {
+						"offset": 219568,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.11.x": {
+						"offset": 222368,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.11.q": {
+						"offset": 222880,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.11.k": {
+						"offset": 230048,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.11.v": {
+						"offset": 233248,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.11.heads": {
+						"offset": 236448,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.11.out": {
+						"offset": 243616,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.11.scores": {
+						"offset": 244128,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.11.weights": {
+						"offset": 246928,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.13.x": {
+						"offset": 249728,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.13.q": {
+						"offset": 250240,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.13.k": {
+						"offset": 257408,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.13.v": {
+						"offset": 260608,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.13.heads": {
+						"offset": 263808,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.13.out": {
+						"offset": 270976,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.13.scores": {
+						"offset": 271488,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.13.weights": {
+						"offset": 274288,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.15.x": {
+						"offset": 277088,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.15.q": {
+						"offset": 277600,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.15.k": {
+						"offset": 284768,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.15.v": {
+						"offset": 287968,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.15.heads": {
+						"offset": 291168,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.15.out": {
+						"offset": 298336,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.15.scores": {
+						"offset": 298848,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.15.weights": {
+						"offset": 301648,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.16.x": {
+						"offset": 304448,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.16.q": {
+						"offset": 304960,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.16.k": {
+						"offset": 312128,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.16.v": {
+						"offset": 315328,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.16.heads": {
+						"offset": 318528,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.16.out": {
+						"offset": 325696,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.16.scores": {
+						"offset": 326208,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.16.weights": {
+						"offset": 329008,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.20.x": {
+						"offset": 331808,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.20.q": {
+						"offset": 332320,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.20.k": {
+						"offset": 339488,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.20.v": {
+						"offset": 342688,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.20.heads": {
+						"offset": 345888,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.20.out": {
+						"offset": 353056,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.20.scores": {
+						"offset": 353568,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.20.weights": {
+						"offset": 356368,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.23.x": {
+						"offset": 359168,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.23.q": {
+						"offset": 359680,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.23.k": {
+						"offset": 366848,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.23.v": {
+						"offset": 370048,
+						"length": 3200,
+						"shape": [
+							2,
+							25,
+							64
+						]
+					},
+					"layer.23.heads": {
+						"offset": 373248,
+						"length": 7168,
+						"shape": [
+							14,
+							8,
+							64
+						]
+					},
+					"layer.23.out": {
+						"offset": 380416,
+						"length": 512,
+						"shape": [
+							8,
+							64
+						]
+					},
+					"layer.23.scores": {
+						"offset": 380928,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					},
+					"layer.23.weights": {
+						"offset": 383728,
+						"length": 2800,
+						"shape": [
+							14,
+							8,
+							25
+						]
+					}
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_yarn.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "mps",
+		"dtype": "float32",
+		"attention": "torch scaled_dot_product_attention in chunks of 1,024 query rows, layer by layer",
+		"modelingSha256": "a59fa06524227361fb401baf4d177124a27aec146bc01ec931235a9abbab17cb",
+		"settings": {
+			"rope": "the model’s config.json, no rope_scaling (RoPE base 10⁶, trained to 32,768)",
+			"yarn": "rope_scaling as Qwen documents it, through transformers’ Qwen2RotaryEmbedding",
+			"yarn-flat": "the same with attention_factor 1.0 (no temperature); book only"
+		},
+		"passkeyPrompt": {
+			"task": "There is an important info hidden inside a lot of irrelevant text. Find it and memorize them. I will quiz you about the important information there.",
+			"garbage": "The grass is green. The sky is blue. The sun is yellow. Here we go. There and back again.",
+			"info": "The pass key is {key}. Remember it. {key} is the pass key.",
+			"question": "What is the pass key? The pass key is",
+			"source": "Mohtashami & Jaggi, Landmark Attention (arXiv 2305.16300), run_test.py; lines joined with newlines, garbage cut to a number of characters, pass key random in 1 … 50,000 (seeded per length and depth)"
+		},
+		"lengths": [
+			8192,
+			32768,
+			65536
+		],
+		"depths": [
+			0.1,
+			0.3,
+			0.5,
+			0.7,
+			0.9
+		],
+		"shownDepth": 0.1,
+		"newTokens": 8,
+		"decoding": "greedy, with the loop’s own KV cache",
+		"passkey": {
+			"8192": {
+				"0.1": {
+					"rope": {
+						"tokens": 8192,
+						"key": 21452,
+						"text": " 21452.<|endoftext|>",
+						"answer": "21452",
+						"correct": true,
+						"seconds": 5.1,
+						"peakGiB": 3.58
+					},
+					"yarn": {
+						"tokens": 8192,
+						"key": 21452,
+						"text": " 21452.<|endoftext|>",
+						"answer": "21452",
+						"correct": true,
+						"seconds": 4.7,
+						"peakGiB": 3.58
+					}
+				},
+				"0.3": {
+					"rope": {
+						"tokens": 8192,
+						"key": 20355,
+						"text": " 20355. Remember",
+						"answer": "20355",
+						"correct": true,
+						"seconds": 4.3,
+						"peakGiB": 3.58
+					},
+					"yarn": {
+						"tokens": 8192,
+						"key": 20355,
+						"text": " 20355.<|endoftext|>",
+						"answer": "20355",
+						"correct": true,
+						"seconds": 4.3,
+						"peakGiB": 3.58
+					}
+				},
+				"0.5": {
+					"rope": {
+						"tokens": 8192,
+						"key": 141,
+						"text": " 141. Remember it.",
+						"answer": "141",
+						"correct": true,
+						"seconds": 5.8,
+						"peakGiB": 3.58
+					},
+					"yarn": {
+						"tokens": 8192,
+						"key": 141,
+						"text": " 141.<|endoftext|>Human:",
+						"answer": "141",
+						"correct": true,
+						"seconds": 5.4,
+						"peakGiB": 3.58
+					}
+				},
+				"0.7": {
+					"rope": {
+						"tokens": 8192,
+						"key": 2973,
+						"text": " 2973. Remember it",
+						"answer": "2973",
+						"correct": true,
+						"seconds": 5.0,
+						"peakGiB": 3.58
+					},
+					"yarn": {
+						"tokens": 8192,
+						"key": 2973,
+						"text": " 2973.<|endoftext|>Human",
+						"answer": "2973",
+						"correct": true,
+						"seconds": 5.0,
+						"peakGiB": 3.58
+					}
+				},
+				"0.9": {
+					"rope": {
+						"tokens": 8192,
+						"key": 3394,
+						"text": " 3394.<|endoftext|>Human",
+						"answer": "3394",
+						"correct": true,
+						"seconds": 5.4,
+						"peakGiB": 3.58
+					},
+					"yarn": {
+						"tokens": 8192,
+						"key": 3394,
+						"text": " 3394.<|endoftext|>Human",
+						"answer": "3394",
+						"correct": true,
+						"seconds": 4.5,
+						"peakGiB": 3.58
+					}
+				}
+			},
+			"32768": {
+				"0.1": {
+					"rope": {
+						"tokens": 32768,
+						"key": 16952,
+						"text": " 16952.<|endoftext|>",
+						"answer": "16952",
+						"correct": true,
+						"seconds": 35.5,
+						"peakGiB": 7.61
+					},
+					"yarn": {
+						"tokens": 32768,
+						"key": 16952,
+						"text": " 16952.<|endoftext|>",
+						"answer": "16952",
+						"correct": true,
+						"seconds": 37.6,
+						"peakGiB": 7.61
+					}
+				},
+				"0.3": {
+					"rope": {
+						"tokens": 32768,
+						"key": 11328,
+						"text": " 11328.<|endoftext|>",
+						"answer": "11328",
+						"correct": true,
+						"seconds": 41.4,
+						"peakGiB": 7.61
+					},
+					"yarn": {
+						"tokens": 32768,
+						"key": 11328,
+						"text": " 11328.<|endoftext|>",
+						"answer": "11328",
+						"correct": true,
+						"seconds": 33.8,
+						"peakGiB": 7.58
+					}
+				},
+				"0.5": {
+					"rope": {
+						"tokens": 32768,
+						"key": 37128,
+						"text": " 37128.<|endoftext|>",
+						"answer": "37128",
+						"correct": true,
+						"seconds": 35.1,
+						"peakGiB": 7.61
+					},
+					"yarn": {
+						"tokens": 32768,
+						"key": 37128,
+						"text": " 37128.<|endoftext|>",
+						"answer": "37128",
+						"correct": true,
+						"seconds": 30.1,
+						"peakGiB": 7.61
+					}
+				},
+				"0.7": {
+					"rope": {
+						"tokens": 32768,
+						"key": 10333,
+						"text": " 10333. Remember",
+						"answer": "10333",
+						"correct": true,
+						"seconds": 31.1,
+						"peakGiB": 7.61
+					},
+					"yarn": {
+						"tokens": 32768,
+						"key": 10333,
+						"text": " 10333.<|endoftext|>",
+						"answer": "10333",
+						"correct": true,
+						"seconds": 29.7,
+						"peakGiB": 7.61
+					}
+				},
+				"0.9": {
+					"rope": {
+						"tokens": 32768,
+						"key": 41561,
+						"text": " 41561.<|endoftext|>",
+						"answer": "41561",
+						"correct": true,
+						"seconds": 32.2,
+						"peakGiB": 7.61
+					},
+					"yarn": {
+						"tokens": 32768,
+						"key": 41561,
+						"text": " 41561.<|endoftext|>",
+						"answer": "41561",
+						"correct": true,
+						"seconds": 31.4,
+						"peakGiB": 7.61
+					}
+				}
+			},
+			"65536": {
+				"0.1": {
+					"rope": {
+						"tokens": 65536,
+						"key": 36043,
+						"text": " \"green\".<|endoftext|>Human: Here and",
+						"answer": null,
+						"correct": false,
+						"seconds": 119.2,
+						"peakGiB": 15.64
+					},
+					"yarn": {
+						"tokens": 65536,
+						"key": 36043,
+						"text": " 36043.<|endoftext|>",
+						"answer": "36043",
+						"correct": true,
+						"seconds": 108.2,
+						"peakGiB": 15.64
+					}
+				},
+				"0.3": {
+					"rope": {
+						"tokens": 65536,
+						"key": 2379,
+						"text": " 2379.<|endoftext|>Human",
+						"answer": "2379",
+						"correct": true,
+						"seconds": 102.0,
+						"peakGiB": 16.64
+					},
+					"yarn": {
+						"tokens": 65536,
+						"key": 2379,
+						"text": " 2379.<|endoftext|>Human",
+						"answer": "2379",
+						"correct": true,
+						"seconds": 110.1,
+						"peakGiB": 15.64
+					}
+				},
+				"0.5": {
+					"rope": {
+						"tokens": 65536,
+						"key": 47868,
+						"text": " 47868. Remember",
+						"answer": "47868",
+						"correct": true,
+						"seconds": 112.3,
+						"peakGiB": 15.64
+					},
+					"yarn": {
+						"tokens": 65536,
+						"key": 47868,
+						"text": " 47868.<|endoftext|>",
+						"answer": "47868",
+						"correct": true,
+						"seconds": 113.3,
+						"peakGiB": 16.64
+					}
+				},
+				"0.7": {
+					"rope": {
+						"tokens": 65536,
+						"key": 40318,
+						"text": " 40318. Remember",
+						"answer": "40318",
+						"correct": true,
+						"seconds": 103.7,
+						"peakGiB": 16.64
+					},
+					"yarn": {
+						"tokens": 65536,
+						"key": 40318,
+						"text": " 40318.<|endoftext|>",
+						"answer": "40318",
+						"correct": true,
+						"seconds": 97.0,
+						"peakGiB": 15.64
+					}
+				},
+				"0.9": {
+					"rope": {
+						"tokens": 65536,
+						"key": 16874,
+						"text": " 16874. Remember",
+						"answer": "16874",
+						"correct": true,
+						"seconds": 103.2,
+						"peakGiB": 16.64
+					},
+					"yarn": {
+						"tokens": 65536,
+						"key": 16874,
+						"text": " 16874.<|endoftext|>",
+						"answer": "16874",
+						"correct": true,
+						"seconds": 101.0,
+						"peakGiB": 16.64
+					}
+				}
+			}
+		},
+		"book": {
+			"source": "Arthur Conan Doyle, The Adventures of Sherlock Holmes (1892), Project Gutenberg eBook #1661, public domain",
+			"url": "https://www.gutenberg.org/cache/epub/1661/pg1661.txt",
+			"sha256": "922e2a12ccb43a4c9544c260b2166c6ad2097aeb5957faeee113f173bb857cd0",
+			"tokens": 65536,
+			"cut": "the text between the Project Gutenberg START and END markers, stripped",
+			"start": "To Sherlock Holmes she is always",
+			"seconds": {
+				"rope": 102.5,
+				"yarn": 113.3,
+				"yarn-flat": 129.1
+			},
+			"peakGiB": {
+				"rope": 16.23,
+				"yarn": 16.23,
+				"yarn-flat": 15.23
+			},
+			"meanNll": {
+				"rope": {
+					"1-4096": 2.8947033882141113,
+					"4096-32768": 2.725414276123047,
+					"32768-65536": 2.763373851776123
+				},
+				"yarn": {
+					"1-4096": 2.9447062015533447,
+					"4096-32768": 2.8034465312957764,
+					"32768-65536": 2.804189682006836
+				},
+				"yarn-flat": {
+					"1-4096": 2.905963659286499,
+					"4096-32768": 2.768494129180908,
+					"32768-65536": 2.7775778770446777
+				}
+			}
+		},
+		"rows": "the last 8 prompt tokens (the question)",
+		"cols": "token 0, the pass-key sentence up to its first full stop, the key’s digits where the sentence repeats them, and the rows (masses and strips use every key)",
+		"x": "input to attention after input_layernorm, first 64 of 896, at the rows",
+		"out": "o_proj output at the rows, first 64 of 896"
+	},
+	"validation": {
+		"check.rope.cpu.logits": 0.0,
+		"check.rope.cpu.nll": 0.0,
+		"check.rope.cpu.rotaryScaling": 0.0,
+		"check.rope.cpu.invFreq": 0.0,
+		"check.rope.cpu.decodeMismatches": 0.0,
+		"check.rope.mps.logits": 0.000167,
+		"check.rope.mps.nll": 9.06e-05,
+		"check.rope.mps.rotaryScaling": 0.0,
+		"check.rope.mps.invFreq": 0.0,
+		"check.yarn.cpu.logits": 0.0,
+		"check.yarn.cpu.nll": 0.0,
+		"check.yarn.cpu.rotaryScaling": 0.0,
+		"check.yarn.cpu.invFreq": 0.0,
+		"check.yarn.cpu.decodeMismatches": 0.0,
+		"check.yarn.mps.logits": 0.000268,
+		"check.yarn.mps.nll": 5.67e-05,
+		"check.yarn.mps.rotaryScaling": 0.0,
+		"check.yarn.mps.invFreq": 0.0,
+		"maxYarnRampError": 1.16e-10,
+		"maxShownHeadsRelativeError": 0.000364,
+		"maxShownRowSumError": 7.15e-07
+	},
+	"extras": {
+		"rows": "[R] prompt position of each shown query row (the tokens)",
+		"cols": "[K] prompt position of each shown key column (the keyTokens)",
+		"layer.*": "the YaRN run at depth 0.1, shown rows × shown columns; the weights are the softmax over every key, so a row of shown weights sums to less than 1",
+		"rope.layer.*.scores": "[H, R, K] the same prompt with the model’s own RoPE",
+		"rope.layer.*.weights": "[H, R, K] the same prompt with the model’s own RoPE",
+		"<setting>.mass.info": "[L, H] attention of the last prompt token on the pass-key sentence",
+		"<setting>.mass.key": "[L, H] attention of the last prompt token on the pass key’s digits",
+		"<setting>.mass.first": "[L, H] attention of the last prompt token on token 0",
+		"<setting>.entropy": "[L, H] entropy (nats) of the last prompt token’s attention over all keys",
+		"<setting>.strip": "[L, H, 128] the last prompt token’s attention summed over 128 equal bins of positions",
+		"invFreq.rope": "[32] θ_i of the model’s RoPE",
+		"invFreq.yarn": "[32] θ_i after YaRN (transformers’ _compute_yarn_parameters)",
+		"ramp": "[32] YaRN’s ramp γ_i: 0 keeps θ_i, 1 divides it by the factor",
+		"book.edges": "[257] position bins of the book loss",
+		"book.<setting>": "[256] mean next-token loss (nats) per bin, rope / yarn / yarn-flat",
+		"passkey.correct": "[2, lengths, depths] 1 where greedy decoding gave the pass key; rope, then yarn"
+	}
+}
