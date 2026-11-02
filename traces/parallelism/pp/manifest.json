@@ -1,0 +1,9352 @@
+{
+ "kind": "parallelism-run",
+ "tab": "pp",
+ "model": {
+  "id": "openai-community/gpt2",
+  "name": "GPT-2 (124M)",
+  "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "url": "https://huggingface.co/openai-community/gpt2/tree/607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "license": "MIT",
+  "parameters": 124439808,
+  "numLayers": 12,
+  "hiddenSize": 768,
+  "mlpSize": 3072,
+  "attentionHeads": 12,
+  "headDim": 64,
+  "vocab": 50257,
+  "context": 1024,
+  "dtype": "float32"
+ },
+ "dataset": {
+  "id": "rajpurkar/squad",
+  "revision": "7b6d24c440a36b6815f21b70d25016731768db1f",
+  "split": "validation",
+  "article": "Apollo_program",
+  "license": "CC BY-SA 4.0",
+  "url": "https://huggingface.co/datasets/rajpurkar/squad/tree/7b6d24c440a36b6815f21b70d25016731768db1f",
+  "tokens": 1024
+ },
+ "microBatches": 8,
+ "microTokens": 128,
+ "sequences": [
+  "The Apollo program, also known as Project Apollo, was the third United States human spaceflight program carried out by the National Aeronautics and Space Administration (NASA), which accomplished landing the first humans on the Moon from 1969 to 1972. First conceived during Dwight D. Eisenhower's administration as a three-man spacecraft to follow the one-man Project Mercury which put the first Americans in space, Apollo was later dedicated to President John F. Kennedy's national goal of \"landing a man on the Moon and returning him safely to the Earth\" by the end of the 1960s, which he proposed in a May 25, 1961, address",
+  " to Congress. Project Mercury was followed by the two-man Project Gemini (1962\u201366). The first manned flight of Apollo was in 1968.\n\nApollo ran from 1961 to 1972, and was supported by the two-man Gemini program which ran concurrently with it from 1962 to 1966. Gemini missions developed some of the space travel techniques that were necessary for the success of the Apollo missions. Apollo used Saturn family rockets as launch vehicles. Apollo/Saturn vehicles were also used for an Apollo Applications Program, which consisted of Skylab, a space station that supported three manned missions in 1973\u201374, and the Apollo\u2013Soy",
+  "uz Test Project, a joint Earth orbit mission with the Soviet Union in 1975.\n\nThe Apollo program succeeded in achieving its goal of manned lunar landing, despite the major setback of a 1967 Apollo 1 cabin fire that killed the entire crew during a prelaunch test. After the first landing, sufficient flight hardware remained for nine follow-on landings with a plan for extended lunar geological and astrophysical exploration. Budget cuts forced the cancellation of three of these. Five of the remaining six missions achieved successful landings, but the Apollo 13 landing was prevented by an oxygen tank explosion in transit to the Moon, which disabled the command spacecraft's propulsion and",
+  " life support. The crew returned to Earth safely by using the Lunar Module as a \"lifeboat\" for these functions.\n\nApollo set several major human spaceflight milestones. It stands alone in sending manned missions beyond low Earth orbit. Apollo 8 was the first manned spacecraft to orbit another celestial body, while the final Apollo 17 mission marked the sixth Moon landing and the ninth manned mission beyond low Earth orbit. The program returned 842 pounds (382 kg) of lunar rocks and soil to Earth, greatly contributing to the understanding of the Moon's composition and geological history. The program laid the foundation for NASA's current human spaceflight capability,",
+  " and funded construction of its Johnson Space Center and Kennedy Space Center. Apollo also spurred advances in many areas of technology incidental to rocketry and manned spaceflight, including avionics, telecommunications, and computers.\n\nThe Apollo program was conceived during the Eisenhower administration in early 1960, as a follow-up to Project Mercury. While the Mercury capsule could only support one astronaut on a limited Earth orbital mission, Apollo would carry three astronauts. Possible missions included ferrying crews to a space station, circumlunar flights, and eventual manned lunar landings. The program was named after the Greek god of light, music, and the sun by NASA",
+  " manager Abe Silverstein, who later said that \"I was naming the spacecraft like I'd name my baby.\" Silverstein chose the name at home one evening, early in 1960, because he felt \"Apollo riding his chariot across the Sun was appropriate to the grand scale of the proposed program.\"\n\nIn July 1960, NASA Deputy Administrator Hugh L. Dryden announced the Apollo program to industry representatives at a series of Space Task Group conferences. Preliminary specifications were laid out for a spacecraft with a mission module cabin separate from the command module (piloting and re-entry cabin), and a propulsion and equipment module. On August",
+  " 30, a feasibility study competition was announced, and on October 25, three study contracts were awarded to General Dynamics/Convair, General Electric, and the Glenn L. Martin Company. Meanwhile, NASA performed its own in-house spacecraft design studies led by Maxime Faget, to serve as a gauge to judge and monitor the three industry designs.\n\nIn November 1960, John F. Kennedy was elected president after a campaign that promised American superiority over the Soviet Union in the fields of space exploration and missile defense. Up to the election of 1960, Kennedy had been speaking out against the \"missile gap\" that he and",
+  " many other senators felt had formed between the Soviets and themselves due to the inaction of President Eisenhower. Beyond military power, Kennedy used aerospace technology as a symbol of national prestige, pledging to make the US not \"first but, first and, first if, but first period.\" Despite Kennedy's rhetoric, he did not immediately come to a decision on the status of the Apollo program once he became president. He knew little about the technical details of the space program, and was put off by the massive financial commitment required by a manned Moon landing. When Kennedy's newly appointed NASA Administrator James E. Webb requested a 30 percent budget increase for his agency,"
+ ],
+ "vocab": {
+  "1": "\"",
+  "8": ")",
+  "11": ",",
+  "12": "-",
+  "13": ".",
+  "14": "/",
+  "40": "I",
+  "50": "S",
+  "75": "l",
+  "79": "p",
+  "82": "s",
+  "85": "v",
+  "198": "\n",
+  "257": " a",
+  "261": "on",
+  "262": " the",
+  "278": "ing",
+  "281": " an",
+  "283": "ar",
+  "284": " to",
+  "286": " of",
+  "287": " in",
+  "290": " and",
+  "302": " re",
+  "314": " I",
+  "316": "et",
+  "319": " on",
+  "326": " that",
+  "329": " for",
+  "338": "'s",
+  "339": " he",
+  "340": " it",
+  "346": "il",
+  "351": " with",
+  "352": " 1",
+  "355": " as",
+  "357": " (",
+  "360": " D",
+  "363": "ag",
+  "366": " \"",
+  "373": " was",
+  "376": " F",
+  "379": " at",
+  "383": " The",
+  "403": "un",
+  "406": " L",
+  "407": " not",
+  "412": " E",
+  "416": " by",
+  "422": " from",
+  "464": "The",
+  "465": " his",
+  "475": " but",
+  "503": " out",
+  "508": " who",
+  "524": "ime",
+  "526": ".\"",
+  "530": " one",
+  "531": " said",
+  "543": " which",
+  "546": " about",
+  "547": " were",
+  "550": " had",
+  "561": " would",
+  "563": "ry",
+  "572": " off",
+  "576": "ile",
+  "582": " man",
+  "584": " other",
+  "587": " been",
+  "588": " like",
+  "611": " if",
+  "616": " my",
+  "617": " some",
+  "625": " over",
+  "632": " It",
+  "635": " also",
+  "654": "ings",
+  "662": " pre",
+  "663": " its",
+  "679": " He",
+  "683": " him",
+  "691": " only",
+  "700": "urn",
+  "706": " after",
+  "714": " could",
+  "717": " first",
+  "726": "oy",
+  "734": " two",
+  "737": ").",
+  "750": " did",
+  "777": " these",
+  "780": " because",
+  "787": " make",
+  "805": "man",
+  "807": " 8",
+  "818": "In",
+  "828": "),",
+  "867": " many",
+  "873": "ics",
+  "886": " end",
+  "898": " own",
+  "900": " set",
+  "929": "up",
+  "958": "air",
+  "973": " used",
+  "981": " while",
+  "1022": " between",
+  "1028": " against",
+  "1044": "land",
+  "1061": " follow",
+  "1104": " support",
+  "1115": " three",
+  "1129": "19",
+  "1141": " during",
+  "1149": " char",
+  "1176": " power",
+  "1194": " another",
+  "1196": " av",
+  "1204": " life",
+  "1234": " put",
+  "1262": " using",
+  "1282": " come",
+  "1294": " US",
+  "1310": " little",
+  "1332": " test",
+  "1363": " home",
+  "1390": " including",
+  "1410": " plan",
+  "1411": " percent",
+  "1430": " program",
+  "1438": " name",
+  "1459": " current",
+  "1486": " design",
+  "1511": " 13",
+  "1542": " 30",
+  "1549": "'d",
+  "1550": " On",
+  "1568": " later",
+  "1578": " United",
+  "1596": " 17",
+  "1605": " American",
+  "1641": " family",
+  "1649": " When",
+  "1657": " light",
+  "1679": " 25",
+  "1688": " major",
+  "1692": " human",
+  "1737": " May",
+  "1752": " once",
+  "1757": " John",
+  "1767": " body",
+  "1811": " several",
+  "1829": " States",
+  "1877": " low",
+  "1893": " president",
+  "1900": " known",
+  "1903": " early",
+  "1906": "\u2013",
+  "1923": " campaign",
+  "1943": " success",
+  "1956": " land",
+  "1973": " across",
+  "1992": " President",
+  "2046": " fire",
+  "2050": " study",
+  "2104": " entire",
+  "2106": " history",
+  "2168": " series",
+  "2209": " address",
+  "2233": " due",
+  "2237": " six",
+  "2260": " national",
+  "2272": " space",
+  "2278": " period",
+  "2293": " After",
+  "2306": "aut",
+  "2351": " National",
+  "2368": " third",
+  "2405": " themselves",
+  "2422": " military",
+  "2457": " final",
+  "2551": " decision",
+  "2620": " increase",
+  "2627": " became",
+  "2647": " music",
+  "2672": " required",
+  "2791": "66",
+  "2831": " industry",
+  "2893": " While",
+  "2901": " July",
+  "2923": " killed",
+  "2932": " August",
+  "2936": " felt",
+  "2957": " led",
+  "2993": " knew",
+  "3006": " areas",
+  "3017": " included",
+  "3037": " technology",
+  "3061": " goal",
+  "3067": " travel",
+  "3071": " election",
+  "3103": "Con",
+  "3141": " command",
+  "3162": " Congress",
+  "3176": " financial",
+  "3205": " Up",
+  "3267": " October",
+  "3274": " First",
+  "3283": " carry",
+  "3306": " necessary",
+  "3307": " details",
+  "3337": " Center",
+  "3389": " November",
+  "3393": " immediately",
+  "3399": " Americans",
+  "3414": " announced",
+  "3436": " alone",
+  "3611": " General",
+  "3614": " limited",
+  "3640": " studies",
+  "3662": " administration",
+  "3668": " Earth",
+  "3675": " beyond",
+  "3682": "42",
+  "3700": " James",
+  "3706": " named",
+  "3722": " status",
+  "3761": " defense",
+  "3805": " despite",
+  "3825": " Sun",
+  "3927": "miss",
+  "3940": " followed",
+  "4086": " agency",
+  "4137": " forced",
+  "4166": " developed",
+  "4219": " launch",
+  "4252": " sun",
+  "4365": " mission",
+  "4388": " successful",
+  "4429": " station",
+  "4456": " circum",
+  "4466": " budget",
+  "4479": " Union",
+  "4490": " grand",
+  "4504": " returned",
+  "4524": "74",
+  "4547": " understanding",
+  "4553": " separate",
+  "4687": " Space",
+  "4691": " serve",
+  "4706": " manager",
+  "4803": "house",
+  "4855": " supported",
+  "4858": " massive",
+  "4912": " Group",
+  "4935": " Project",
+  "4966": " ran",
+  "5030": " Johnson",
+  "5035": " appropriate",
+  "5046": " scale",
+  "5052": " judge",
+  "5103": " construction",
+  "5112": " equipment",
+  "5150": " proposed",
+  "5151": "iot",
+  "5156": " baby",
+  "5193": " nine",
+  "5237": "62",
+  "5274": " Sky",
+  "5281": " carried",
+  "5384": " humans",
+  "5436": " Max",
+  "5449": " competition",
+  "5462": " crew",
+  "5474": " flight",
+  "5486": " speaking",
+  "5499": " functions",
+  "5637": " remaining",
+  "5671": " monitor",
+  "5672": " vehicles",
+  "5714": "stein",
+  "5770": " god",
+  "5780": " Martin",
+  "5834": " Company",
+  "6042": "life",
+  "6118": " Program",
+  "6150": " remained",
+  "6157": " performed",
+  "6180": " evening",
+  "6194": " symbol",
+  "6208": " Test",
+  "6276": " technical",
+  "6296": " stands",
+  "6466": " joint",
+  "6559": "den",
+  "6630": " cuts",
+  "6751": " sufficient",
+  "6869": " Moon",
+  "6873": " tank",
+  "6890": " hardware",
+  "7018": " elected",
+  "7032": " fields",
+  "7042": " formed",
+  "7083": " extended",
+  "7216": " sending",
+  "7256": " dedicated",
+  "7498": " marked",
+  "7570": " Soviet",
+  "7605": " techniques",
+  "7625": " gap",
+  "7690": " chose",
+  "7698": " Silver",
+  "7901": " commitment",
+  "7945": " Despite",
+  "8024": " returning",
+  "8059": " pounds",
+  "8072": " promised",
+  "8104": " laid",
+  "8265": " module",
+  "8308": " newly",
+  "8312": " Greek",
+  "8489": " foundation",
+  "8592": " contracts",
+  "8694": " Administration",
+  "8793": " achieved",
+  "8884": " NASA",
+  "9061": " computers",
+  "9167": " requested",
+  "9257": " greatly",
+  "9260": " soil",
+  "9351": " cabin",
+  "9507": " 1960",
+  "9581": " landing",
+  "9824": " designs",
+  "9899": " appointed",
+  "10058": " disabled",
+  "10105": " missile",
+  "10277": "uz",
+  "10311": " riding",
+  "10401": " Kennedy",
+  "10566": " missions",
+  "10579": " Five",
+  "10588": " funded",
+  "10701": " rocket",
+  "10720": "oting",
+  "10826": " representatives",
+  "11085": "first",
+  "11168": " transit",
+  "11214": " Meanwhile",
+  "11278": " explosion",
+  "11343": " awarded",
+  "11512": " safely",
+  "11695": " sixth",
+  "11742": " composition",
+  "11863": " oxygen",
+  "12197": " Beyond",
+  "12586": " rocks",
+  "12971": " capability",
+  "13000": "entry",
+  "13013": " accomplished",
+  "13066": " orbit",
+  "13214": " rhetoric",
+  "13351": " prevented",
+  "13936": " exploration",
+  "13944": " Electric",
+  "13956": " flights",
+  "14131": " succeeded",
+  "14211": " kg",
+  "14329": " contributing",
+  "14901": " advances",
+  "15110": " Deputy",
+  "15231": " 1975",
+  "15380": "ysical",
+  "15401": " Budget",
+  "15469": " senators",
+  "15578": "ollo",
+  "15674": " 1973",
+  "15781": " Aer",
+  "15904": " 1967",
+  "15941": " Task",
+  "15963": " 1968",
+  "16101": " 1972",
+  "16450": " 1969",
+  "16807": " spacecraft",
+  "16937": " achieving",
+  "17508": " Apollo",
+  "17551": " Glenn",
+  "18266": " gauge",
+  "18936": " crews",
+  "19264": " naming",
+  "19322": " 1966",
+  "19646": " ninth",
+  "19657": " eventual",
+  "19937": " Module",
+  "19954": " consisted",
+  "19993": " conferences",
+  "20033": " 1962",
+  "20245": "Sat",
+  "20293": " rockets",
+  "20510": " 1961",
+  "20640": " specifications",
+  "21581": " conceived",
+  "21673": " Mercury",
+  "22257": " Abe",
+  "22408": " Dry",
+  "22560": "flight",
+  "22998": " Administrator",
+  "23135": " Saturn",
+  "23912": "lab",
+  "24482": "boat",
+  "25130": " Webb",
+  "25189": "Ap",
+  "25395": " cancellation",
+  "25464": " Hugh",
+  "25572": " lunar",
+  "26450": " ferry",
+  "26622": " Applications",
+  "26835": " astronauts",
+  "26883": " superiority",
+  "27473": " telecommunications",
+  "27855": " capsule",
+  "28887": " Prel",
+  "29063": " prestige",
+  "29902": " Dwight",
+  "29998": "NASA",
+  "31062": " Soviets",
+  "31947": " Lunar",
+  "32362": " orbital",
+  "33258": " celestial",
+  "33671": " Possible",
+  "33779": " astronaut",
+  "33806": " Dynamics",
+  "34116": " setback",
+  "34601": " spurred",
+  "34737": " manned",
+  "35015": " Eisenhower",
+  "35495": " Gemini",
+  "35681": "launch",
+  "36243": "382",
+  "38429": "iminary",
+  "38873": " propulsion",
+  "40439": " aerospace",
+  "40460": " feasibility",
+  "40521": " incidental",
+  "41917": " geological",
+  "41926": " milestones",
+  "43858": " pledging",
+  "44376": " inaction",
+  "47480": " concurrently",
+  "48782": " astroph",
+  "49900": "ionics"
+ },
+ "referenceLosses": [
+  2.505504608154297,
+  3.2846720218658447,
+  3.6332736015319824,
+  3.0645947456359863,
+  3.268709182739258,
+  3.8946025371551514,
+  3.4418599605560303,
+  3.6318013668060303
+ ],
+ "referenceLoss": 3.340627670288086,
+ "activationBytes": 393216,
+ "configs": [
+  {
+   "stages": 2,
+   "perStage": [
+    {
+     "layers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "embedding": true,
+     "head": false,
+     "paramBytes": 327644160,
+     "peakRss": 1980563456
+    },
+    {
+     "layers": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "embedding": false,
+     "head": true,
+     "paramBytes": 324504576,
+     "peakRss": 2245820416
+    }
+   ],
+   "schedules": {
+    "gpipe": {
+     "losses": [
+      2.5055019855499268,
+      3.2846741676330566,
+      3.6332736015319824,
+      3.0645956993103027,
+      3.268709897994995,
+      3.8946030139923096,
+      3.4418604373931885,
+      3.631800651550293
+     ],
+     "logs": [
+      [
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.004663,
+        "end": 0.036266,
+        "micro": 0,
+        "held": 38200320,
+        "live": 38200320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 1,
+        "start": 0.036313,
+        "end": 0.036657,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.036689,
+        "end": 0.076187,
+        "micro": 1,
+        "held": 38200320,
+        "live": 76400640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 1,
+        "start": 0.076238,
+        "end": 0.0965,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.096547,
+        "end": 0.139308,
+        "micro": 2,
+        "held": 38200320,
+        "live": 114600960
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 1,
+        "start": 0.139334,
+        "end": 0.158181,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.158237,
+        "end": 0.190431,
+        "micro": 3,
+        "held": 38200320,
+        "live": 152801280
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 1,
+        "start": 0.190498,
+        "end": 0.209842,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.209923,
+        "end": 0.254933,
+        "micro": 4,
+        "held": 38200320,
+        "live": 191001600
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 1,
+        "start": 0.254961,
+        "end": 0.267022,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.267076,
+        "end": 0.316022,
+        "micro": 5,
+        "held": 38200320,
+        "live": 229201920
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 1,
+        "start": 0.316058,
+        "end": 0.335572,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.335653,
+        "end": 0.369263,
+        "micro": 6,
+        "held": 38200320,
+        "live": 267402240
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 1,
+        "start": 0.369291,
+        "end": 0.388102,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 0.38817,
+        "end": 0.431377,
+        "micro": 7,
+        "held": 38200320,
+        "live": 305602560
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 1,
+        "start": 0.431405,
+        "end": 0.443975,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 1,
+        "start": 0.444012,
+        "end": 0.569034,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 0.569064,
+        "end": 0.661098,
+        "micro": 7,
+        "held": 38200320,
+        "live": 267402240
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 1,
+        "start": 0.661127,
+        "end": 0.67793,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 0.677961,
+        "end": 0.776059,
+        "micro": 6,
+        "held": 38200320,
+        "live": 229201920
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 1,
+        "start": 0.77619,
+        "end": 0.815156,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 0.815211,
+        "end": 0.943417,
+        "micro": 5,
+        "held": 38200320,
+        "live": 191001600
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 1,
+        "start": 0.943429,
+        "end": 0.953851,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.953899,
+        "end": 1.085876,
+        "micro": 4,
+        "held": 38200320,
+        "live": 152801280
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 1,
+        "start": 1.085931,
+        "end": 1.102756,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 1.102809,
+        "end": 1.22245,
+        "micro": 3,
+        "held": 38200320,
+        "live": 114600960
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 1,
+        "start": 1.22247,
+        "end": 1.249109,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 1.249148,
+        "end": 1.378935,
+        "micro": 2,
+        "held": 38200320,
+        "live": 76400640
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 1,
+        "start": 1.378966,
+        "end": 1.388611,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 1.388638,
+        "end": 1.520239,
+        "micro": 1,
+        "held": 38200320,
+        "live": 38200320
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 1,
+        "start": 1.520282,
+        "end": 1.54436,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 1.544391,
+        "end": 1.642707,
+        "micro": 0,
+        "held": 38200320,
+        "live": 0
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.642934,
+        "end": 1.707501,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         1
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "gpipe",
+        "start": 0.000214,
+        "end": 1.707516
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 0,
+        "start": 0.00466,
+        "end": 0.036684,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.036738,
+        "end": 0.09602,
+        "micro": 0,
+        "held": 64124100,
+        "live": 64124100
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 0,
+        "start": 0.096071,
+        "end": 0.096546,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.09657,
+        "end": 0.157777,
+        "micro": 1,
+        "held": 64124100,
+        "live": 128248200
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 0,
+        "start": 0.157814,
+        "end": 0.158229,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.158254,
+        "end": 0.209304,
+        "micro": 2,
+        "held": 64124100,
+        "live": 192372300
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 0,
+        "start": 0.209347,
+        "end": 0.209935,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.209967,
+        "end": 0.26654,
+        "micro": 3,
+        "held": 64124100,
+        "live": 256496400
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 0,
+        "start": 0.266586,
+        "end": 0.267068,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.267089,
+        "end": 0.335014,
+        "micro": 4,
+        "held": 64124100,
+        "live": 320620500
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 0,
+        "start": 0.33508,
+        "end": 0.335595,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.335621,
+        "end": 0.387532,
+        "micro": 5,
+        "held": 64124100,
+        "live": 384744600
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 0,
+        "start": 0.387599,
+        "end": 0.38813,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.388166,
+        "end": 0.443675,
+        "micro": 6,
+        "held": 64124100,
+        "live": 448868700
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 0,
+        "start": 0.443703,
+        "end": 0.444056,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 0.444082,
+        "end": 0.494973,
+        "micro": 7,
+        "held": 64124100,
+        "live": 512992800
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 0.495038,
+        "end": 0.568743,
+        "micro": 7,
+        "held": 64124100,
+        "live": 448868700
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 0,
+        "start": 0.568755,
+        "end": 0.568875,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 0.56889,
+        "end": 0.677738,
+        "micro": 6,
+        "held": 64124100,
+        "live": 384744600
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 0,
+        "start": 0.67775,
+        "end": 0.677866,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 0.677879,
+        "end": 0.814659,
+        "micro": 5,
+        "held": 64124100,
+        "live": 320620500
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 0,
+        "start": 0.814704,
+        "end": 0.815048,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.815082,
+        "end": 0.953367,
+        "micro": 4,
+        "held": 64124100,
+        "live": 256496400
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 0,
+        "start": 0.953402,
+        "end": 0.953712,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.953735,
+        "end": 1.102252,
+        "micro": 3,
+        "held": 64124100,
+        "live": 192372300
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 0,
+        "start": 1.102299,
+        "end": 1.102692,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 1.102734,
+        "end": 1.248644,
+        "micro": 2,
+        "held": 64124100,
+        "live": 128248200
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 0,
+        "start": 1.248682,
+        "end": 1.249024,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 1.249054,
+        "end": 1.388394,
+        "micro": 1,
+        "held": 64124100,
+        "live": 64124100
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 0,
+        "start": 1.388406,
+        "end": 1.388549,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 1.388569,
+        "end": 1.543997,
+        "micro": 0,
+        "held": 64124100,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 0,
+        "start": 1.544117,
+        "end": 1.544312,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.544333,
+        "end": 1.70749,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         1
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "gpipe",
+        "start": 0.00022,
+        "end": 1.707512
+       }
+      ]
+     ],
+     "summary": [
+      {
+       "step": 1.707302,
+       "busy": 1.246489,
+       "idle": 0.3915549999999999,
+       "wholeIdle": 0.46081300000000014,
+       "forward": 0.03960362500000001,
+       "backward": 0.11620749999999998,
+       "peakLive": 305602560,
+       "peakMicro": 8,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.642934,
+         "end": 1.707501,
+         "ranks": [
+          0,
+          1
+         ]
+        }
+       ]
+      },
+      {
+       "step": 1.7072919999999998,
+       "busy": 1.5011609999999997,
+       "idle": 0.006098000000000381,
+       "wholeIdle": 0.20613100000000006,
+       "forward": 0.05679349999999999,
+       "backward": 0.13085162499999997,
+       "peakLive": 512992800,
+       "peakMicro": 8,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.544333,
+         "end": 1.70749,
+         "ranks": [
+          0,
+          1
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "1f1b": {
+     "losses": [
+      2.5055019855499268,
+      3.2846741676330566,
+      3.6332736015319824,
+      3.0645956993103027,
+      3.268709897994995,
+      3.8946030139923096,
+      3.4418604373931885,
+      3.631800651550293
+     ],
+     "logs": [
+      [
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.008147,
+        "end": 0.043337,
+        "micro": 0,
+        "held": 38200320,
+        "live": 38200320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 1,
+        "start": 0.043392,
+        "end": 0.043655,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.043698,
+        "end": 0.0779,
+        "micro": 1,
+        "held": 38200320,
+        "live": 76400640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 1,
+        "start": 0.077917,
+        "end": 0.199325,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 1,
+        "start": 0.077917,
+        "end": 0.199325,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 0.199389,
+        "end": 0.303955,
+        "micro": 0,
+        "held": 38200320,
+        "live": 38200320
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.304001,
+        "end": 0.337759,
+        "micro": 2,
+        "held": 38200320,
+        "live": 76400640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 1,
+        "start": 0.337774,
+        "end": 0.403757,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 1,
+        "start": 0.337774,
+        "end": 0.403757,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 0.403805,
+        "end": 0.528834,
+        "micro": 1,
+        "held": 38200320,
+        "live": 38200320
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.528869,
+        "end": 0.569064,
+        "micro": 3,
+        "held": 38200320,
+        "live": 76400640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 1,
+        "start": 0.569118,
+        "end": 0.593734,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 1,
+        "start": 0.569118,
+        "end": 0.593734,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 0.593836,
+        "end": 0.723504,
+        "micro": 2,
+        "held": 38200320,
+        "live": 38200320
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.723544,
+        "end": 0.75922,
+        "micro": 4,
+        "held": 38200320,
+        "live": 76400640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 1,
+        "start": 0.759256,
+        "end": 0.784616,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 1,
+        "start": 0.759256,
+        "end": 0.784616,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.78465,
+        "end": 0.923662,
+        "micro": 3,
+        "held": 38200320,
+        "live": 38200320
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.923709,
+        "end": 0.957837,
+        "micro": 5,
+        "held": 38200320,
+        "live": 76400640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 1,
+        "start": 0.957857,
+        "end": 1.00761,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 1,
+        "start": 0.957857,
+        "end": 1.00761,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 1.007663,
+        "end": 1.127777,
+        "micro": 4,
+        "held": 38200320,
+        "live": 38200320
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 1.127796,
+        "end": 1.15659,
+        "micro": 6,
+        "held": 38200320,
+        "live": 76400640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 1,
+        "start": 1.156639,
+        "end": 1.204539,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 1,
+        "start": 1.156639,
+        "end": 1.204539,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 1.204591,
+        "end": 1.314421,
+        "micro": 5,
+        "held": 38200320,
+        "live": 38200320
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 1.314448,
+        "end": 1.354005,
+        "micro": 7,
+        "held": 38200320,
+        "live": 76400640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 1,
+        "start": 1.354087,
+        "end": 1.398985,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 1,
+        "start": 1.354087,
+        "end": 1.398985,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 1.399019,
+        "end": 1.52358,
+        "micro": 6,
+        "held": 38200320,
+        "live": 38200320
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 1,
+        "start": 1.523611,
+        "end": 1.580989,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 1.581047,
+        "end": 1.664101,
+        "micro": 7,
+        "held": 38200320,
+        "live": 0
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.664329,
+        "end": 1.73162,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         1
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "1f1b",
+        "start": 0.000204,
+        "end": 1.731634
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 0,
+        "start": 0.007568,
+        "end": 0.043696,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.043735,
+        "end": 0.089602,
+        "micro": 0,
+        "held": 64124100,
+        "live": 64124100
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 0.089631,
+        "end": 0.198657,
+        "micro": 0,
+        "held": 64124100,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 0,
+        "start": 0.198705,
+        "end": 0.19935,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 0,
+        "start": 0.198705,
+        "end": 0.19935,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.19939,
+        "end": 0.253235,
+        "micro": 1,
+        "held": 64124100,
+        "live": 64124100
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 0.253294,
+        "end": 0.403094,
+        "micro": 1,
+        "held": 64124100,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 0,
+        "start": 0.403145,
+        "end": 0.403837,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 0,
+        "start": 0.403145,
+        "end": 0.403837,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.403867,
+        "end": 0.457413,
+        "micro": 2,
+        "held": 64124100,
+        "live": 64124100
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 0.457456,
+        "end": 0.593421,
+        "micro": 2,
+        "held": 64124100,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 0,
+        "start": 0.593458,
+        "end": 0.593788,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 0,
+        "start": 0.593458,
+        "end": 0.593788,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.593807,
+        "end": 0.653161,
+        "micro": 3,
+        "held": 64124100,
+        "live": 64124100
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.653201,
+        "end": 0.784001,
+        "micro": 3,
+        "held": 64124100,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 0,
+        "start": 0.784034,
+        "end": 0.784639,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 0,
+        "start": 0.784034,
+        "end": 0.784639,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.785025,
+        "end": 0.845919,
+        "micro": 4,
+        "held": 64124100,
+        "live": 64124100
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.845988,
+        "end": 1.006965,
+        "micro": 4,
+        "held": 64124100,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 0,
+        "start": 1.007014,
+        "end": 1.007625,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 0,
+        "start": 1.007014,
+        "end": 1.007625,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 1.007654,
+        "end": 1.05177,
+        "micro": 5,
+        "held": 64124100,
+        "live": 64124100
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 1.051815,
+        "end": 1.20325,
+        "micro": 5,
+        "held": 64124100,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 0,
+        "start": 1.203949,
+        "end": 1.204539,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 0,
+        "start": 1.203949,
+        "end": 1.204539,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 1.204988,
+        "end": 1.254828,
+        "micro": 6,
+        "held": 64124100,
+        "live": 64124100
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 1.254869,
+        "end": 1.397316,
+        "micro": 6,
+        "held": 64124100,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 0,
+        "start": 1.398599,
+        "end": 1.399033,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 0,
+        "start": 1.398599,
+        "end": 1.399033,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 1.399056,
+        "end": 1.454302,
+        "micro": 7,
+        "held": 64124100,
+        "live": 64124100
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 1.454365,
+        "end": 1.580394,
+        "micro": 7,
+        "held": 64124100,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 0,
+        "start": 1.58059,
+        "end": 1.580936,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.581054,
+        "end": 1.732186,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         1
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "1f1b",
+        "start": 0.000225,
+        "end": 1.732213
+       }
+      ]
+     ],
+     "summary": [
+      {
+       "step": 1.7314299999999998,
+       "busy": 1.217334,
+       "idle": 0.43862000000000023,
+       "wholeIdle": 0.5140959999999999,
+       "forward": 0.03518749999999998,
+       "backward": 0.11697925,
+       "peakLive": 76400640,
+       "peakMicro": 2,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.664329,
+         "end": 1.73162,
+         "ranks": [
+          0,
+          1
+         ]
+        }
+       ]
+      },
+      {
+       "step": 1.731988,
+       "busy": 1.5291870000000003,
+       "idle": 0.007471999999999701,
+       "wholeIdle": 0.2028009999999998,
+       "forward": 0.05283850000000001,
+       "backward": 0.13830987500000003,
+       "peakLive": 64124100,
+       "peakMicro": 1,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.581054,
+         "end": 1.732186,
+         "ranks": [
+          0,
+          1
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "stages": 3,
+   "perStage": [
+    {
+     "layers": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "embedding": true,
+     "head": false,
+     "paramBytes": 270941184,
+     "peakRss": 1700511744
+    },
+    {
+     "layers": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "embedding": false,
+     "head": false,
+     "paramBytes": 113405952,
+     "peakRss": 1048772608
+    },
+    {
+     "layers": [
+      8,
+      9,
+      10,
+      11
+     ],
+     "embedding": false,
+     "head": true,
+     "paramBytes": 267801600,
+     "peakRss": 1931313152
+    }
+   ],
+   "schedules": {
+    "gpipe": {
+     "losses": [
+      2.5055019855499268,
+      3.2846741676330566,
+      3.6332736015319824,
+      3.0645956993103027,
+      3.268709897994995,
+      3.8946030139923096,
+      3.4418604373931885,
+      3.631800651550293
+     ],
+     "logs": [
+      [
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.007103,
+        "end": 0.026024,
+        "micro": 0,
+        "held": 25601024,
+        "live": 25601024
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 1,
+        "start": 0.026042,
+        "end": 0.02618,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.026203,
+        "end": 0.051933,
+        "micro": 1,
+        "held": 25601024,
+        "live": 51202048
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 1,
+        "start": 0.051962,
+        "end": 0.0553,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.055363,
+        "end": 0.089928,
+        "micro": 2,
+        "held": 25601024,
+        "live": 76803072
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 1,
+        "start": 0.089959,
+        "end": 0.109179,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.109205,
+        "end": 0.136547,
+        "micro": 3,
+        "held": 25601024,
+        "live": 102404096
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 1,
+        "start": 0.136582,
+        "end": 0.156615,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.156683,
+        "end": 0.187333,
+        "micro": 4,
+        "held": 25601024,
+        "live": 128005120
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 1,
+        "start": 0.187362,
+        "end": 0.202536,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.202566,
+        "end": 0.236507,
+        "micro": 5,
+        "held": 25601024,
+        "live": 153606144
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 1,
+        "start": 0.236558,
+        "end": 0.254228,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.254305,
+        "end": 0.279157,
+        "micro": 6,
+        "held": 25601024,
+        "live": 179207168
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 1,
+        "start": 0.279185,
+        "end": 0.295005,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 0.295029,
+        "end": 0.328477,
+        "micro": 7,
+        "held": 25601024,
+        "live": 204808192
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 1,
+        "start": 0.328524,
+        "end": 0.34476,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 1,
+        "start": 0.34479,
+        "end": 0.55692,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 0.556974,
+        "end": 0.624841,
+        "micro": 7,
+        "held": 25601024,
+        "live": 179207168
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 1,
+        "start": 0.62487,
+        "end": 0.676144,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 0.676179,
+        "end": 0.759954,
+        "micro": 6,
+        "held": 25601024,
+        "live": 153606144
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 1,
+        "start": 0.760003,
+        "end": 0.797764,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 0.797798,
+        "end": 0.883992,
+        "micro": 5,
+        "held": 25601024,
+        "live": 128005120
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 1,
+        "start": 0.884017,
+        "end": 0.923708,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.923774,
+        "end": 1.016925,
+        "micro": 4,
+        "held": 25601024,
+        "live": 102404096
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 1,
+        "start": 1.016972,
+        "end": 1.074915,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 1.074974,
+        "end": 1.164027,
+        "micro": 3,
+        "held": 25601024,
+        "live": 76803072
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 1,
+        "start": 1.164512,
+        "end": 1.190012,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 1.190072,
+        "end": 1.285954,
+        "micro": 2,
+        "held": 25601024,
+        "live": 51202048
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 1,
+        "start": 1.285998,
+        "end": 1.343038,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 1.343074,
+        "end": 1.427033,
+        "micro": 1,
+        "held": 25601024,
+        "live": 25601024
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 1,
+        "start": 1.427235,
+        "end": 1.442865,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 1.442918,
+        "end": 1.513069,
+        "micro": 0,
+        "held": 25601024,
+        "live": 0
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.513093,
+        "end": 1.581101,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         2
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "gpipe",
+        "start": 0.000146,
+        "end": 1.581117
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 0,
+        "start": 0.003302,
+        "end": 0.026207,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.026232,
+        "end": 0.054399,
+        "micro": 0,
+        "held": 25591808,
+        "live": 25591808
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 2,
+        "start": 0.05446,
+        "end": 0.054877,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 0,
+        "start": 0.054925,
+        "end": 0.055315,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.05534,
+        "end": 0.092936,
+        "micro": 1,
+        "held": 25591808,
+        "live": 51183616
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 2,
+        "start": 0.092982,
+        "end": 0.109018,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 0,
+        "start": 0.109037,
+        "end": 0.109202,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.109217,
+        "end": 0.138797,
+        "micro": 2,
+        "held": 25591808,
+        "live": 76775424
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 2,
+        "start": 0.138893,
+        "end": 0.156324,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 0,
+        "start": 0.15636,
+        "end": 0.156658,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.156675,
+        "end": 0.187694,
+        "micro": 3,
+        "held": 25591808,
+        "live": 102367232
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 2,
+        "start": 0.187721,
+        "end": 0.202202,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 0,
+        "start": 0.20223,
+        "end": 0.202583,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.202623,
+        "end": 0.240304,
+        "micro": 4,
+        "held": 25591808,
+        "live": 127959040
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 2,
+        "start": 0.240343,
+        "end": 0.253851,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 0,
+        "start": 0.253892,
+        "end": 0.254231,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.254257,
+        "end": 0.280248,
+        "micro": 5,
+        "held": 25591808,
+        "live": 153550848
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 2,
+        "start": 0.280279,
+        "end": 0.294806,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 0,
+        "start": 0.294828,
+        "end": 0.295063,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.295082,
+        "end": 0.325106,
+        "micro": 6,
+        "held": 25591808,
+        "live": 179142656
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 2,
+        "start": 0.325127,
+        "end": 0.34449,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 0,
+        "start": 0.344516,
+        "end": 0.344793,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 0.344812,
+        "end": 0.364095,
+        "micro": 7,
+        "held": 25591808,
+        "live": 204734464
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 2,
+        "start": 0.364121,
+        "end": 0.379298,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 2,
+        "start": 0.379337,
+        "end": 0.499787,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 0.499849,
+        "end": 0.556273,
+        "micro": 7,
+        "held": 25591808,
+        "live": 179142656
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 0,
+        "start": 0.556486,
+        "end": 0.556861,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 2,
+        "start": 0.556882,
+        "end": 0.607347,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 0.607396,
+        "end": 0.675348,
+        "micro": 6,
+        "held": 25591808,
+        "live": 153550848
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 0,
+        "start": 0.67583,
+        "end": 0.676084,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 2,
+        "start": 0.6761,
+        "end": 0.717399,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 0.717437,
+        "end": 0.79748,
+        "micro": 5,
+        "held": 25591808,
+        "live": 127959040
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 0,
+        "start": 0.797536,
+        "end": 0.797696,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 2,
+        "start": 0.797706,
+        "end": 0.858153,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.85821,
+        "end": 0.923216,
+        "micro": 4,
+        "held": 25591808,
+        "live": 102367232
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 0,
+        "start": 0.923278,
+        "end": 0.923647,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 2,
+        "start": 0.923663,
+        "end": 0.989884,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.989986,
+        "end": 1.074453,
+        "micro": 3,
+        "held": 25591808,
+        "live": 76775424
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 0,
+        "start": 1.074526,
+        "end": 1.074898,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 2,
+        "start": 1.074941,
+        "end": 1.118957,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 1.118992,
+        "end": 1.189281,
+        "micro": 2,
+        "held": 25591808,
+        "live": 51183616
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 0,
+        "start": 1.189662,
+        "end": 1.189957,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 2,
+        "start": 1.189976,
+        "end": 1.263226,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 1.263257,
+        "end": 1.342628,
+        "micro": 1,
+        "held": 25591808,
+        "live": 25591808
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 0,
+        "start": 1.342799,
+        "end": 1.342927,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 2,
+        "start": 1.342938,
+        "end": 1.39245,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 1.392517,
+        "end": 1.441726,
+        "micro": 0,
+        "held": 25591808,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 0,
+        "start": 1.442363,
+        "end": 1.442808,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "gpipe",
+        "start": 0.000149,
+        "end": 1.443402
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 1,
+        "start": 0.006885,
+        "end": 0.054925,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.05499,
+        "end": 0.108831,
+        "micro": 0,
+        "held": 51524804,
+        "live": 51524804
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 1,
+        "start": 0.108847,
+        "end": 0.109037,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.109051,
+        "end": 0.15584,
+        "micro": 1,
+        "held": 51524804,
+        "live": 103049608
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 1,
+        "start": 0.155887,
+        "end": 0.156406,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.156434,
+        "end": 0.201577,
+        "micro": 2,
+        "held": 51524804,
+        "live": 154574412
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 1,
+        "start": 0.201619,
+        "end": 0.202509,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.202534,
+        "end": 0.253287,
+        "micro": 3,
+        "held": 51524804,
+        "live": 206099216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 1,
+        "start": 0.253329,
+        "end": 0.253878,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.25391,
+        "end": 0.294495,
+        "micro": 4,
+        "held": 51524804,
+        "live": 257624020
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 1,
+        "start": 0.294521,
+        "end": 0.294878,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.294898,
+        "end": 0.344158,
+        "micro": 5,
+        "held": 51524804,
+        "live": 309148824
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 1,
+        "start": 0.344188,
+        "end": 0.344545,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.344573,
+        "end": 0.378775,
+        "micro": 6,
+        "held": 51524804,
+        "live": 360673628
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 1,
+        "start": 0.378822,
+        "end": 0.379328,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 0.379352,
+        "end": 0.416303,
+        "micro": 7,
+        "held": 51524804,
+        "live": 412198432
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 0.416347,
+        "end": 0.49927,
+        "micro": 7,
+        "held": 51524804,
+        "live": 360673628
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 1,
+        "start": 0.499315,
+        "end": 0.499722,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 0.499773,
+        "end": 0.60685,
+        "micro": 6,
+        "held": 51524804,
+        "live": 309148824
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 1,
+        "start": 0.606902,
+        "end": 0.607273,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 0.607336,
+        "end": 0.717073,
+        "micro": 5,
+        "held": 51524804,
+        "live": 257624020
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 1,
+        "start": 0.717097,
+        "end": 0.717358,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.717384,
+        "end": 0.85747,
+        "micro": 4,
+        "held": 51524804,
+        "live": 206099216
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 1,
+        "start": 0.857639,
+        "end": 0.858087,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.858124,
+        "end": 0.989275,
+        "micro": 3,
+        "held": 51524804,
+        "live": 154574412
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 1,
+        "start": 0.989325,
+        "end": 0.989689,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 0.989728,
+        "end": 1.118596,
+        "micro": 2,
+        "held": 51524804,
+        "live": 103049608
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 1,
+        "start": 1.118689,
+        "end": 1.118903,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 1.118921,
+        "end": 1.262888,
+        "micro": 1,
+        "held": 51524804,
+        "live": 51524804
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 1,
+        "start": 1.262915,
+        "end": 1.263122,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 1.263142,
+        "end": 1.39184,
+        "micro": 0,
+        "held": 51524804,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 1,
+        "start": 1.391892,
+        "end": 1.392442,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.392523,
+        "end": 1.581053,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         2
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "gpipe",
+        "start": 0.000121,
+        "end": 1.581074
+       }
+      ]
+     ],
+     "summary": [
+      {
+       "step": 1.5809710000000001,
+       "busy": 0.899481,
+       "idle": 0.6064849999999999,
+       "wholeIdle": 0.6814900000000002,
+       "forward": 0.028681125000000002,
+       "backward": 0.083754,
+       "peakLive": 204808192,
+       "peakMicro": 8,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.513093,
+         "end": 1.581101,
+         "ranks": [
+          0,
+          2
+         ]
+        }
+       ]
+      },
+      {
+       "step": 1.4432530000000001,
+       "busy": 0.792102,
+       "idle": 0.6233920000000001,
+       "wholeIdle": 0.6511510000000001,
+       "forward": 0.029917624999999996,
+       "backward": 0.069095125,
+       "peakLive": 204734464,
+       "peakMicro": 8,
+       "embeddingAllReduce": []
+      },
+      {
+       "step": 1.580953,
+       "busy": 1.3300309999999995,
+       "idle": 0.0068190000000003526,
+       "wholeIdle": 0.25092200000000053,
+       "forward": 0.044690499999999994,
+       "backward": 0.12156337499999996,
+       "peakLive": 412198432,
+       "peakMicro": 8,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.392523,
+         "end": 1.581053,
+         "ranks": [
+          0,
+          2
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "1f1b": {
+     "losses": [
+      2.5055019855499268,
+      3.2846741676330566,
+      3.6332736015319824,
+      3.0645956993103027,
+      3.268709897994995,
+      3.8946030139923096,
+      3.4418604373931885,
+      3.631800651550293
+     ],
+     "logs": [
+      [
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.005346,
+        "end": 0.029068,
+        "micro": 0,
+        "held": 25601024,
+        "live": 25601024
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 1,
+        "start": 0.029104,
+        "end": 0.029317,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.029342,
+        "end": 0.056658,
+        "micro": 1,
+        "held": 25601024,
+        "live": 51202048
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 1,
+        "start": 0.056679,
+        "end": 0.056832,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.056851,
+        "end": 0.079758,
+        "micro": 2,
+        "held": 25601024,
+        "live": 76803072
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 1,
+        "start": 0.079774,
+        "end": 0.245736,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 1,
+        "start": 0.079774,
+        "end": 0.245736,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 0.245763,
+        "end": 0.332876,
+        "micro": 0,
+        "held": 25601024,
+        "live": 51202048
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.332909,
+        "end": 0.353254,
+        "micro": 3,
+        "held": 25601024,
+        "live": 76803072
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 1,
+        "start": 0.353308,
+        "end": 0.467024,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 1,
+        "start": 0.353308,
+        "end": 0.467024,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 0.467127,
+        "end": 0.596521,
+        "micro": 1,
+        "held": 25601024,
+        "live": 51202048
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.596536,
+        "end": 0.617188,
+        "micro": 4,
+        "held": 25601024,
+        "live": 76803072
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 1,
+        "start": 0.617221,
+        "end": 0.652783,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 1,
+        "start": 0.617221,
+        "end": 0.652783,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 0.652818,
+        "end": 0.743586,
+        "micro": 2,
+        "held": 25601024,
+        "live": 51202048
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.743653,
+        "end": 0.771822,
+        "micro": 5,
+        "held": 25601024,
+        "live": 76803072
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 1,
+        "start": 0.771842,
+        "end": 0.849131,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 1,
+        "start": 0.771842,
+        "end": 0.849131,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.849248,
+        "end": 0.930542,
+        "micro": 3,
+        "held": 25601024,
+        "live": 51202048
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.930575,
+        "end": 0.951675,
+        "micro": 6,
+        "held": 25601024,
+        "live": 76803072
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 1,
+        "start": 0.951694,
+        "end": 1.008931,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 1,
+        "start": 0.951694,
+        "end": 1.008931,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 1.008974,
+        "end": 1.095864,
+        "micro": 4,
+        "held": 25601024,
+        "live": 51202048
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 1.095895,
+        "end": 1.120954,
+        "micro": 7,
+        "held": 25601024,
+        "live": 76803072
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 1,
+        "start": 1.120985,
+        "end": 1.180354,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 1,
+        "start": 1.120985,
+        "end": 1.180354,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 1.180558,
+        "end": 1.266942,
+        "micro": 5,
+        "held": 25601024,
+        "live": 51202048
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 1,
+        "start": 1.266998,
+        "end": 1.336962,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 1.337006,
+        "end": 1.435131,
+        "micro": 6,
+        "held": 25601024,
+        "live": 25601024
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 1,
+        "start": 1.435199,
+        "end": 1.485146,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 1.48517,
+        "end": 1.565211,
+        "micro": 7,
+        "held": 25601024,
+        "live": 0
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.56531,
+        "end": 1.634933,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         2
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "1f1b",
+        "start": 0.000134,
+        "end": 1.634958
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 0,
+        "start": 0.002861,
+        "end": 0.029369,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.029399,
+        "end": 0.055123,
+        "micro": 0,
+        "held": 25591808,
+        "live": 25591808
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 2,
+        "start": 0.055181,
+        "end": 0.055574,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 0,
+        "start": 0.055619,
+        "end": 0.056864,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.056888,
+        "end": 0.079343,
+        "micro": 1,
+        "held": 25591808,
+        "live": 51183616
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 2,
+        "start": 0.079365,
+        "end": 0.189616,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 2,
+        "start": 0.079365,
+        "end": 0.189616,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 0.189648,
+        "end": 0.245367,
+        "micro": 0,
+        "held": 25591808,
+        "live": 25591808
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 0,
+        "start": 0.245382,
+        "end": 0.245762,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 0,
+        "start": 0.245382,
+        "end": 0.245762,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.245787,
+        "end": 0.271902,
+        "micro": 2,
+        "held": 25591808,
+        "live": 51183616
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 2,
+        "start": 0.271937,
+        "end": 0.39994,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 2,
+        "start": 0.271937,
+        "end": 0.39994,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 0.399999,
+        "end": 0.466467,
+        "micro": 1,
+        "held": 25591808,
+        "live": 25591808
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 0,
+        "start": 0.466494,
+        "end": 0.467041,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 0,
+        "start": 0.466494,
+        "end": 0.467041,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.467084,
+        "end": 0.506114,
+        "micro": 3,
+        "held": 25591808,
+        "live": 51183616
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 2,
+        "start": 0.506142,
+        "end": 0.587878,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 2,
+        "start": 0.506142,
+        "end": 0.587878,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 0.587942,
+        "end": 0.652009,
+        "micro": 2,
+        "held": 25591808,
+        "live": 25591808
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 0,
+        "start": 0.652366,
+        "end": 0.652865,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 0,
+        "start": 0.652366,
+        "end": 0.652865,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.652931,
+        "end": 0.693458,
+        "micro": 4,
+        "held": 25591808,
+        "live": 51183616
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 2,
+        "start": 0.693478,
+        "end": 0.77538,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 2,
+        "start": 0.693478,
+        "end": 0.77538,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.775408,
+        "end": 0.848327,
+        "micro": 3,
+        "held": 25591808,
+        "live": 25591808
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 0,
+        "start": 0.848391,
+        "end": 0.849158,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 0,
+        "start": 0.848391,
+        "end": 0.849158,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.84926,
+        "end": 0.877709,
+        "micro": 5,
+        "held": 25591808,
+        "live": 51183616
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 2,
+        "start": 0.877792,
+        "end": 0.940084,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 2,
+        "start": 0.877792,
+        "end": 0.940084,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.940178,
+        "end": 1.008337,
+        "micro": 4,
+        "held": 25591808,
+        "live": 25591808
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 0,
+        "start": 1.008381,
+        "end": 1.008978,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 0,
+        "start": 1.008381,
+        "end": 1.008978,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 1.009028,
+        "end": 1.042577,
+        "micro": 6,
+        "held": 25591808,
+        "live": 51183616
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 2,
+        "start": 1.042596,
+        "end": 1.114279,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 2,
+        "start": 1.042596,
+        "end": 1.114279,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 1.114327,
+        "end": 1.179122,
+        "micro": 5,
+        "held": 25591808,
+        "live": 25591808
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 0,
+        "start": 1.179516,
+        "end": 1.180391,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 0,
+        "start": 1.179516,
+        "end": 1.180391,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 1.180478,
+        "end": 1.215841,
+        "micro": 7,
+        "held": 25591808,
+        "live": 51183616
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 2,
+        "start": 1.215872,
+        "end": 1.279659,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 2,
+        "start": 1.215872,
+        "end": 1.279659,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 1.279703,
+        "end": 1.3366,
+        "micro": 6,
+        "held": 25591808,
+        "live": 25591808
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 0,
+        "start": 1.336629,
+        "end": 1.336896,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 2,
+        "start": 1.336942,
+        "end": 1.445566,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 1.445625,
+        "end": 1.484908,
+        "micro": 7,
+        "held": 25591808,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 0,
+        "start": 1.484924,
+        "end": 1.485064,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "1f1b",
+        "start": 0.000142,
+        "end": 1.486077
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 1,
+        "start": 0.005984,
+        "end": 0.055625,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.055674,
+        "end": 0.094156,
+        "micro": 0,
+        "held": 51524804,
+        "live": 51524804
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 0.094243,
+        "end": 0.18918,
+        "micro": 0,
+        "held": 51524804,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 1,
+        "start": 0.18921,
+        "end": 0.189683,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 1,
+        "start": 0.18921,
+        "end": 0.189683,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.189745,
+        "end": 0.236529,
+        "micro": 1,
+        "held": 51524804,
+        "live": 51524804
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 0.23657,
+        "end": 0.399444,
+        "micro": 1,
+        "held": 51524804,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 1,
+        "start": 0.399489,
+        "end": 0.399967,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 1,
+        "start": 0.399489,
+        "end": 0.399967,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.400869,
+        "end": 0.445354,
+        "micro": 2,
+        "held": 51524804,
+        "live": 51524804
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 0.445409,
+        "end": 0.587121,
+        "micro": 2,
+        "held": 51524804,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 1,
+        "start": 0.587215,
+        "end": 0.587914,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 1,
+        "start": 0.587215,
+        "end": 0.587914,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.587973,
+        "end": 0.639833,
+        "micro": 3,
+        "held": 51524804,
+        "live": 51524804
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.63987,
+        "end": 0.77509,
+        "micro": 3,
+        "held": 51524804,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 1,
+        "start": 0.775102,
+        "end": 0.77542,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 1,
+        "start": 0.775102,
+        "end": 0.77542,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.775444,
+        "end": 0.817907,
+        "micro": 4,
+        "held": 51524804,
+        "live": 51524804
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.817965,
+        "end": 0.939486,
+        "micro": 4,
+        "held": 51524804,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 1,
+        "start": 0.939535,
+        "end": 0.94009,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 1,
+        "start": 0.939535,
+        "end": 0.94009,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.940148,
+        "end": 0.978994,
+        "micro": 5,
+        "held": 51524804,
+        "live": 51524804
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 0.979021,
+        "end": 1.113805,
+        "micro": 5,
+        "held": 51524804,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 1,
+        "start": 1.11383,
+        "end": 1.114276,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 1,
+        "start": 1.11383,
+        "end": 1.114276,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 1.114297,
+        "end": 1.151239,
+        "micro": 6,
+        "held": 51524804,
+        "live": 51524804
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 1.151297,
+        "end": 1.278965,
+        "micro": 6,
+        "held": 51524804,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 1,
+        "start": 1.279035,
+        "end": 1.279685,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 1,
+        "start": 1.279035,
+        "end": 1.279685,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 1.279786,
+        "end": 1.320581,
+        "micro": 7,
+        "held": 51524804,
+        "live": 51524804
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 1.320639,
+        "end": 1.445264,
+        "micro": 7,
+        "held": 51524804,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 1,
+        "start": 1.44529,
+        "end": 1.445494,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.445549,
+        "end": 1.634937,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         2
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "1f1b",
+        "start": 0.000134,
+        "end": 1.634976
+       }
+      ]
+     ],
+     "summary": [
+      {
+       "step": 1.6348239999999998,
+       "busy": 0.9292789999999996,
+       "idle": 0.6305860000000002,
+       "wholeIdle": 0.7055450000000002,
+       "forward": 0.023658749999999992,
+       "backward": 0.09250112499999996,
+       "peakLive": 76803072,
+       "peakMicro": 3,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.56531,
+         "end": 1.634933,
+         "ranks": [
+          0,
+          2
+         ]
+        }
+       ]
+      },
+      {
+       "step": 1.485935,
+       "busy": 0.7395189999999999,
+       "idle": 0.71599,
+       "wholeIdle": 0.7464160000000001,
+       "forward": 0.03140149999999999,
+       "backward": 0.061038375000000006,
+       "peakLive": 51183616,
+       "peakMicro": 2,
+       "embeddingAllReduce": []
+      },
+      {
+       "step": 1.634842,
+       "busy": 1.3839979999999998,
+       "idle": 0.005592000000000263,
+       "wholeIdle": 0.25084400000000007,
+       "forward": 0.042582124999999985,
+       "backward": 0.13041762499999998,
+       "peakLive": 51524804,
+       "peakMicro": 1,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.445549,
+         "end": 1.634937,
+         "ranks": [
+          0,
+          2
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "stages": 4,
+   "perStage": [
+    {
+     "layers": [
+      0,
+      1,
+      2
+     ],
+     "embedding": true,
+     "head": false,
+     "paramBytes": 242589696,
+     "peakRss": 1391394816
+    },
+    {
+     "layers": [
+      3,
+      4,
+      5
+     ],
+     "embedding": false,
+     "head": false,
+     "paramBytes": 85054464,
+     "peakRss": 828555264
+    },
+    {
+     "layers": [
+      6,
+      7,
+      8
+     ],
+     "embedding": false,
+     "head": false,
+     "paramBytes": 85054464,
+     "peakRss": 799801344
+    },
+    {
+     "layers": [
+      9,
+      10,
+      11
+     ],
+     "embedding": false,
+     "head": true,
+     "paramBytes": 239450112,
+     "peakRss": 1651703808
+    }
+   ],
+   "schedules": {
+    "gpipe": {
+     "losses": [
+      2.5055019855499268,
+      3.2846741676330566,
+      3.6332736015319824,
+      3.0645956993103027,
+      3.268709897994995,
+      3.8946030139923096,
+      3.4418604373931885,
+      3.631800651550293
+     ],
+     "logs": [
+      [
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.009787,
+        "end": 0.030725,
+        "micro": 0,
+        "held": 19301376,
+        "live": 19301376
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 1,
+        "start": 0.030746,
+        "end": 0.03091,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.030934,
+        "end": 0.043259,
+        "micro": 1,
+        "held": 19301376,
+        "live": 38602752
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 1,
+        "start": 0.043311,
+        "end": 0.045696,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.045745,
+        "end": 0.06774,
+        "micro": 2,
+        "held": 19301376,
+        "live": 57904128
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 1,
+        "start": 0.067779,
+        "end": 0.075078,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.075122,
+        "end": 0.112472,
+        "micro": 3,
+        "held": 19301376,
+        "live": 77205504
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 1,
+        "start": 0.112539,
+        "end": 0.136117,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.13617,
+        "end": 0.167861,
+        "micro": 4,
+        "held": 19301376,
+        "live": 96506880
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 1,
+        "start": 0.167896,
+        "end": 0.197673,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.197711,
+        "end": 0.225433,
+        "micro": 5,
+        "held": 19301376,
+        "live": 115808256
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 1,
+        "start": 0.225471,
+        "end": 0.24147,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.241505,
+        "end": 0.269329,
+        "micro": 6,
+        "held": 19301376,
+        "live": 135109632
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 1,
+        "start": 0.269358,
+        "end": 0.293161,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 0.293197,
+        "end": 0.319372,
+        "micro": 7,
+        "held": 19301376,
+        "live": 154411008
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 1,
+        "start": 0.319388,
+        "end": 0.329812,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 1,
+        "start": 0.329854,
+        "end": 0.624044,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 0.62412,
+        "end": 0.700761,
+        "micro": 7,
+        "held": 19301376,
+        "live": 135109632
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 1,
+        "start": 0.700811,
+        "end": 0.773187,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 0.773249,
+        "end": 0.881224,
+        "micro": 6,
+        "held": 19301376,
+        "live": 115808256
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 1,
+        "start": 0.8814,
+        "end": 0.899925,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 0.89996,
+        "end": 0.987926,
+        "micro": 5,
+        "held": 19301376,
+        "live": 96506880
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 1,
+        "start": 0.987947,
+        "end": 1.022008,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 1.02207,
+        "end": 1.1184,
+        "micro": 4,
+        "held": 19301376,
+        "live": 77205504
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 1,
+        "start": 1.118434,
+        "end": 1.161511,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 1.161576,
+        "end": 1.241341,
+        "micro": 3,
+        "held": 19301376,
+        "live": 57904128
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 1,
+        "start": 1.241529,
+        "end": 1.31065,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 1.310711,
+        "end": 1.385827,
+        "micro": 2,
+        "held": 19301376,
+        "live": 38602752
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 1,
+        "start": 1.385843,
+        "end": 1.430398,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 1.430456,
+        "end": 1.499713,
+        "micro": 1,
+        "held": 19301376,
+        "live": 19301376
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 1,
+        "start": 1.499762,
+        "end": 1.512656,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 1.512715,
+        "end": 1.57316,
+        "micro": 0,
+        "held": 19301376,
+        "live": 0
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.573183,
+        "end": 1.643819,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         3
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "gpipe",
+        "start": 0.000491,
+        "end": 1.643835
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 0,
+        "start": 0.003045,
+        "end": 0.030938,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.030964,
+        "end": 0.045054,
+        "micro": 0,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 2,
+        "start": 0.045099,
+        "end": 0.045408,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 0,
+        "start": 0.045435,
+        "end": 0.045727,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.045741,
+        "end": 0.070013,
+        "micro": 1,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 2,
+        "start": 0.070067,
+        "end": 0.074821,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 0,
+        "start": 0.074842,
+        "end": 0.075108,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.075138,
+        "end": 0.116698,
+        "micro": 2,
+        "held": 19292160,
+        "live": 57876480
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 2,
+        "start": 0.11674,
+        "end": 0.135888,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 0,
+        "start": 0.135907,
+        "end": 0.136166,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.136178,
+        "end": 0.172708,
+        "micro": 3,
+        "held": 19292160,
+        "live": 77168640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 2,
+        "start": 0.172749,
+        "end": 0.19727,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 0,
+        "start": 0.197312,
+        "end": 0.197672,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.197716,
+        "end": 0.223359,
+        "micro": 4,
+        "held": 19292160,
+        "live": 96460800
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 2,
+        "start": 0.22338,
+        "end": 0.241111,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 0,
+        "start": 0.241154,
+        "end": 0.241529,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.241574,
+        "end": 0.273783,
+        "micro": 5,
+        "held": 19292160,
+        "live": 115752960
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 2,
+        "start": 0.273835,
+        "end": 0.292781,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 0,
+        "start": 0.292821,
+        "end": 0.293215,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.293242,
+        "end": 0.324308,
+        "micro": 6,
+        "held": 19292160,
+        "live": 135045120
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 2,
+        "start": 0.324326,
+        "end": 0.32947,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 0,
+        "start": 0.329491,
+        "end": 0.329744,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 0.329763,
+        "end": 0.363791,
+        "micro": 7,
+        "held": 19292160,
+        "live": 154337280
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 2,
+        "start": 0.363844,
+        "end": 0.374455,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 2,
+        "start": 0.374504,
+        "end": 0.581119,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 0.581173,
+        "end": 0.623442,
+        "micro": 7,
+        "held": 19292160,
+        "live": 135045120
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 0,
+        "start": 0.623481,
+        "end": 0.623911,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 2,
+        "start": 0.623932,
+        "end": 0.721282,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 0.721351,
+        "end": 0.772716,
+        "micro": 6,
+        "held": 19292160,
+        "live": 115752960
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 0,
+        "start": 0.772756,
+        "end": 0.773145,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 2,
+        "start": 0.773174,
+        "end": 0.830346,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 0.83041,
+        "end": 0.899617,
+        "micro": 5,
+        "held": 19292160,
+        "live": 96460800
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 0,
+        "start": 0.899637,
+        "end": 0.899785,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 2,
+        "start": 0.899805,
+        "end": 0.985256,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.985308,
+        "end": 1.021565,
+        "micro": 4,
+        "held": 19292160,
+        "live": 77168640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 0,
+        "start": 1.021606,
+        "end": 1.021974,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 2,
+        "start": 1.02201,
+        "end": 1.097789,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 1.097824,
+        "end": 1.161049,
+        "micro": 3,
+        "held": 19292160,
+        "live": 57876480
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 0,
+        "start": 1.161069,
+        "end": 1.16144,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 2,
+        "start": 1.161469,
+        "end": 1.27189,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 1.271986,
+        "end": 1.31013,
+        "micro": 2,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 0,
+        "start": 1.310161,
+        "end": 1.310589,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 2,
+        "start": 1.310624,
+        "end": 1.384963,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 1.385,
+        "end": 1.429905,
+        "micro": 1,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 0,
+        "start": 1.430011,
+        "end": 1.430305,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 2,
+        "start": 1.43033,
+        "end": 1.470799,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 1.470826,
+        "end": 1.512187,
+        "micro": 0,
+        "held": 19292160,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 0,
+        "start": 1.512211,
+        "end": 1.512596,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "gpipe",
+        "start": 0.000365,
+        "end": 1.51265
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 1,
+        "start": 0.00545,
+        "end": 0.04544,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.045494,
+        "end": 0.074222,
+        "micro": 0,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 3,
+        "start": 0.074258,
+        "end": 0.074581,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 1,
+        "start": 0.074604,
+        "end": 0.074851,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.074868,
+        "end": 0.10928,
+        "micro": 1,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 3,
+        "start": 0.109352,
+        "end": 0.135687,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 1,
+        "start": 0.135708,
+        "end": 0.135946,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.135963,
+        "end": 0.173824,
+        "micro": 2,
+        "held": 19292160,
+        "live": 57876480
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 3,
+        "start": 0.173887,
+        "end": 0.196939,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 1,
+        "start": 0.196985,
+        "end": 0.197289,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.197306,
+        "end": 0.226982,
+        "micro": 3,
+        "held": 19292160,
+        "live": 77168640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 3,
+        "start": 0.227018,
+        "end": 0.240758,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 1,
+        "start": 0.2408,
+        "end": 0.241128,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.241149,
+        "end": 0.264971,
+        "micro": 4,
+        "held": 19292160,
+        "live": 96460800
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 3,
+        "start": 0.265014,
+        "end": 0.292328,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 1,
+        "start": 0.292378,
+        "end": 0.29298,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.29326,
+        "end": 0.318715,
+        "micro": 5,
+        "held": 19292160,
+        "live": 115752960
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 3,
+        "start": 0.318732,
+        "end": 0.329259,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 1,
+        "start": 0.329286,
+        "end": 0.329529,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.329554,
+        "end": 0.355757,
+        "micro": 6,
+        "held": 19292160,
+        "live": 135045120
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 3,
+        "start": 0.355804,
+        "end": 0.374031,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 1,
+        "start": 0.374075,
+        "end": 0.374565,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 0.374666,
+        "end": 0.395725,
+        "micro": 7,
+        "held": 19292160,
+        "live": 154337280
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 3,
+        "start": 0.39578,
+        "end": 0.41053,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 3,
+        "start": 0.410553,
+        "end": 0.526463,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 0.526518,
+        "end": 0.580559,
+        "micro": 7,
+        "held": 19292160,
+        "live": 135045120
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 1,
+        "start": 0.580608,
+        "end": 0.581004,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 3,
+        "start": 0.581034,
+        "end": 0.671382,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 0.671423,
+        "end": 0.720724,
+        "micro": 6,
+        "held": 19292160,
+        "live": 115752960
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 1,
+        "start": 0.720775,
+        "end": 0.721151,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 3,
+        "start": 0.721178,
+        "end": 0.790451,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 0.790479,
+        "end": 0.829628,
+        "micro": 5,
+        "held": 19292160,
+        "live": 96460800
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 1,
+        "start": 0.829805,
+        "end": 0.83003,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 3,
+        "start": 0.830071,
+        "end": 0.911976,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.912093,
+        "end": 0.984017,
+        "micro": 4,
+        "held": 19292160,
+        "live": 77168640
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 1,
+        "start": 0.984744,
+        "end": 0.985193,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 3,
+        "start": 0.98523,
+        "end": 1.049794,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 1.049883,
+        "end": 1.097322,
+        "micro": 3,
+        "held": 19292160,
+        "live": 57876480
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 1,
+        "start": 1.097535,
+        "end": 1.09769,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 3,
+        "start": 1.097701,
+        "end": 1.184378,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 1.184406,
+        "end": 1.270753,
+        "micro": 2,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 1,
+        "start": 1.271398,
+        "end": 1.271841,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 3,
+        "start": 1.271895,
+        "end": 1.305899,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 1.305938,
+        "end": 1.384708,
+        "micro": 1,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 1,
+        "start": 1.384746,
+        "end": 1.384905,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 3,
+        "start": 1.384934,
+        "end": 1.425386,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 1.425418,
+        "end": 1.470305,
+        "micro": 0,
+        "held": 19292160,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 1,
+        "start": 1.470598,
+        "end": 1.470753,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "gpipe",
+        "start": 0.000555,
+        "end": 1.470804
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 2,
+        "start": 0.01008,
+        "end": 0.074613,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.074669,
+        "end": 0.135442,
+        "micro": 0,
+        "held": 45225156,
+        "live": 45225156
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 2,
+        "start": 0.135457,
+        "end": 0.135738,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.135758,
+        "end": 0.196363,
+        "micro": 1,
+        "held": 45225156,
+        "live": 90450312
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 2,
+        "start": 0.196411,
+        "end": 0.19697,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.197007,
+        "end": 0.240169,
+        "micro": 2,
+        "held": 45225156,
+        "live": 135675468
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 2,
+        "start": 0.240216,
+        "end": 0.240795,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.240838,
+        "end": 0.29175,
+        "micro": 3,
+        "held": 45225156,
+        "live": 180900624
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 2,
+        "start": 0.291796,
+        "end": 0.292377,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.2924,
+        "end": 0.328949,
+        "micro": 4,
+        "held": 45225156,
+        "live": 226125780
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 2,
+        "start": 0.328971,
+        "end": 0.329297,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.329318,
+        "end": 0.373428,
+        "micro": 5,
+        "held": 45225156,
+        "live": 271350936
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 2,
+        "start": 0.373486,
+        "end": 0.374037,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.374077,
+        "end": 0.410306,
+        "micro": 6,
+        "held": 45225156,
+        "live": 316576092
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 2,
+        "start": 0.410322,
+        "end": 0.410597,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 0.410619,
+        "end": 0.438902,
+        "micro": 7,
+        "held": 45225156,
+        "live": 361801248
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 0.438976,
+        "end": 0.525958,
+        "micro": 7,
+        "held": 45225156,
+        "live": 316576092
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 2,
+        "start": 0.526004,
+        "end": 0.526369,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 0.526404,
+        "end": 0.670836,
+        "micro": 6,
+        "held": 45225156,
+        "live": 271350936
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 2,
+        "start": 0.67088,
+        "end": 0.671265,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 0.671293,
+        "end": 0.789899,
+        "micro": 5,
+        "held": 45225156,
+        "live": 226125780
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 2,
+        "start": 0.790074,
+        "end": 0.790394,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.790414,
+        "end": 0.911437,
+        "micro": 4,
+        "held": 45225156,
+        "live": 180900624
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 2,
+        "start": 0.911481,
+        "end": 0.911903,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.911944,
+        "end": 1.049252,
+        "micro": 3,
+        "held": 45225156,
+        "live": 135675468
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 2,
+        "start": 1.049294,
+        "end": 1.049677,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 1.049713,
+        "end": 1.18415,
+        "micro": 2,
+        "held": 45225156,
+        "live": 90450312
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 2,
+        "start": 1.184167,
+        "end": 1.184312,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 1.184328,
+        "end": 1.305315,
+        "micro": 1,
+        "held": 45225156,
+        "live": 45225156
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 2,
+        "start": 1.305576,
+        "end": 1.305898,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 1.305945,
+        "end": 1.42499,
+        "micro": 0,
+        "held": 45225156,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 2,
+        "start": 1.425014,
+        "end": 1.425259,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.425287,
+        "end": 1.643755,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         3
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "gpipe",
+        "start": 0.000369,
+        "end": 1.643781
+       }
+      ]
+     ],
+     "summary": [
+      {
+       "step": 1.643344,
+       "busy": 0.859515,
+       "idle": 0.7038579999999999,
+       "wholeIdle": 0.7838289999999999,
+       "forward": 0.025752499999999998,
+       "backward": 0.081686875,
+       "peakLive": 154411008,
+       "peakMicro": 8,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.573183,
+         "end": 1.643819,
+         "ranks": [
+          0,
+          3
+         ]
+        }
+       ]
+      },
+      {
+       "step": 1.512285,
+       "busy": 0.6261310000000001,
+       "idle": 0.8550919999999999,
+       "wholeIdle": 0.886154,
+       "forward": 0.02992475,
+       "backward": 0.04834162500000001,
+       "peakLive": 154337280,
+       "peakMicro": 8,
+       "embeddingAllReduce": []
+      },
+      {
+       "step": 1.470249,
+       "busy": 0.6990739999999999,
+       "idle": 0.7257370000000002,
+       "wholeIdle": 0.771175,
+       "forward": 0.028401999999999997,
+       "backward": 0.058982249999999986,
+       "peakLive": 154337280,
+       "peakMicro": 8,
+       "embeddingAllReduce": []
+      },
+      {
+       "step": 1.6434119999999999,
+       "busy": 1.3434430000000004,
+       "idle": 0.006877999999999496,
+       "wholeIdle": 0.2999689999999995,
+       "forward": 0.045077875,
+       "backward": 0.12285250000000006,
+       "peakLive": 361801248,
+       "peakMicro": 8,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.425287,
+         "end": 1.643755,
+         "ranks": [
+          0,
+          3
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "1f1b": {
+     "losses": [
+      2.5055019855499268,
+      3.2846741676330566,
+      3.6332736015319824,
+      3.0645956993103027,
+      3.268709897994995,
+      3.8946030139923096,
+      3.4418604373931885,
+      3.631800651550293
+     ],
+     "logs": [
+      [
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.004792,
+        "end": 0.026298,
+        "micro": 0,
+        "held": 19301376,
+        "live": 19301376
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 1,
+        "start": 0.026331,
+        "end": 0.026544,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.02657,
+        "end": 0.045326,
+        "micro": 1,
+        "held": 19301376,
+        "live": 38602752
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 1,
+        "start": 0.045359,
+        "end": 0.048068,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.048104,
+        "end": 0.073851,
+        "micro": 2,
+        "held": 19301376,
+        "live": 57904128
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 1,
+        "start": 0.073885,
+        "end": 0.076181,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.076214,
+        "end": 0.09636,
+        "micro": 3,
+        "held": 19301376,
+        "live": 77205504
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 1,
+        "start": 0.096374,
+        "end": 0.290429,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 1,
+        "start": 0.096374,
+        "end": 0.290429,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 0.290483,
+        "end": 0.357924,
+        "micro": 0,
+        "held": 19301376,
+        "live": 57904128
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.357995,
+        "end": 0.375061,
+        "micro": 4,
+        "held": 19301376,
+        "live": 77205504
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 1,
+        "start": 0.375081,
+        "end": 0.478532,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 1,
+        "start": 0.375081,
+        "end": 0.478532,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 0.478566,
+        "end": 0.588347,
+        "micro": 1,
+        "held": 19301376,
+        "live": 57904128
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.588527,
+        "end": 0.628873,
+        "micro": 5,
+        "held": 19301376,
+        "live": 77205504
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 1,
+        "start": 0.628927,
+        "end": 0.670213,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 1,
+        "start": 0.628927,
+        "end": 0.670213,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 0.670245,
+        "end": 0.751554,
+        "micro": 2,
+        "held": 19301376,
+        "live": 57904128
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.751597,
+        "end": 0.772905,
+        "micro": 6,
+        "held": 19301376,
+        "live": 77205504
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 1,
+        "start": 0.772936,
+        "end": 0.813093,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 1,
+        "start": 0.772936,
+        "end": 0.813093,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.813144,
+        "end": 0.877869,
+        "micro": 3,
+        "held": 19301376,
+        "live": 57904128
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 0.877916,
+        "end": 0.912822,
+        "micro": 7,
+        "held": 19301376,
+        "live": 77205504
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 1,
+        "start": 0.912925,
+        "end": 0.964381,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 1,
+        "start": 0.912925,
+        "end": 0.964381,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.964423,
+        "end": 1.043216,
+        "micro": 4,
+        "held": 19301376,
+        "live": 57904128
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 1,
+        "start": 1.043237,
+        "end": 1.148041,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 1.148078,
+        "end": 1.21826,
+        "micro": 5,
+        "held": 19301376,
+        "live": 38602752
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 1,
+        "start": 1.218386,
+        "end": 1.313253,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 1.313289,
+        "end": 1.379682,
+        "micro": 6,
+        "held": 19301376,
+        "live": 19301376
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 1,
+        "start": 1.379913,
+        "end": 1.442432,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 1.442475,
+        "end": 1.520652,
+        "micro": 7,
+        "held": 19301376,
+        "live": 0
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.520786,
+        "end": 1.591483,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         3
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "1f1b",
+        "start": 0.000189,
+        "end": 1.591503
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 0,
+        "start": 0.001386,
+        "end": 0.026575,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.02661,
+        "end": 0.047519,
+        "micro": 0,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 2,
+        "start": 0.047566,
+        "end": 0.047817,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 0,
+        "start": 0.04784,
+        "end": 0.048081,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.048098,
+        "end": 0.073739,
+        "micro": 1,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 2,
+        "start": 0.073801,
+        "end": 0.07595,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 0,
+        "start": 0.075974,
+        "end": 0.076176,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.076193,
+        "end": 0.096135,
+        "micro": 2,
+        "held": 19292160,
+        "live": 57876480
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 2,
+        "start": 0.096156,
+        "end": 0.242933,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 2,
+        "start": 0.096156,
+        "end": 0.242933,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 0.24297,
+        "end": 0.289477,
+        "micro": 0,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 0,
+        "start": 0.289494,
+        "end": 0.290446,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 0,
+        "start": 0.289494,
+        "end": 0.290446,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.290497,
+        "end": 0.322383,
+        "micro": 3,
+        "held": 19292160,
+        "live": 57876480
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 2,
+        "start": 0.322452,
+        "end": 0.417733,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 2,
+        "start": 0.322452,
+        "end": 0.417733,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 0.419012,
+        "end": 0.478189,
+        "micro": 1,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 0,
+        "start": 0.478205,
+        "end": 0.47857,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 0,
+        "start": 0.478205,
+        "end": 0.47857,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.478607,
+        "end": 0.503998,
+        "micro": 4,
+        "held": 19292160,
+        "live": 57876480
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 2,
+        "start": 0.504034,
+        "end": 0.584594,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 2,
+        "start": 0.504034,
+        "end": 0.584594,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 0.584619,
+        "end": 0.669898,
+        "micro": 2,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 0,
+        "start": 0.669911,
+        "end": 0.670268,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 0,
+        "start": 0.669911,
+        "end": 0.670268,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.670323,
+        "end": 0.684542,
+        "micro": 5,
+        "held": 19292160,
+        "live": 57876480
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 2,
+        "start": 0.684581,
+        "end": 0.765389,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 2,
+        "start": 0.684581,
+        "end": 0.765389,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.765415,
+        "end": 0.81211,
+        "micro": 3,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 0,
+        "start": 0.812351,
+        "end": 0.813178,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 0,
+        "start": 0.812351,
+        "end": 0.813178,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.813228,
+        "end": 0.836884,
+        "micro": 6,
+        "held": 19292160,
+        "live": 57876480
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 2,
+        "start": 0.836922,
+        "end": 0.914726,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 2,
+        "start": 0.836922,
+        "end": 0.914726,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.914843,
+        "end": 0.963998,
+        "micro": 4,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 0,
+        "start": 0.964021,
+        "end": 0.964427,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 0,
+        "start": 0.964021,
+        "end": 0.964427,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 0.96446,
+        "end": 0.988973,
+        "micro": 7,
+        "held": 19292160,
+        "live": 57876480
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 2,
+        "start": 0.989018,
+        "end": 1.071543,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 2,
+        "start": 0.989018,
+        "end": 1.071543,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 1.071859,
+        "end": 1.147628,
+        "micro": 5,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 0,
+        "start": 1.147819,
+        "end": 1.147966,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 2,
+        "start": 1.147977,
+        "end": 1.24805,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 1.24808,
+        "end": 1.312063,
+        "micro": 6,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 0,
+        "start": 1.312874,
+        "end": 1.313153,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 2,
+        "start": 1.31317,
+        "end": 1.393206,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 1.393267,
+        "end": 1.441933,
+        "micro": 7,
+        "held": 19292160,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 0,
+        "start": 1.442174,
+        "end": 1.44237,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "1f1b",
+        "start": 0.000211,
+        "end": 1.442399
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 1,
+        "start": 0.002142,
+        "end": 0.047847,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.047893,
+        "end": 0.075548,
+        "micro": 0,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F0",
+        "peer": 3,
+        "start": 0.075576,
+        "end": 0.075783,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 1,
+        "start": 0.075798,
+        "end": 0.075992,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.076017,
+        "end": 0.096484,
+        "micro": 1,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F1",
+        "peer": 3,
+        "start": 0.096513,
+        "end": 0.191561,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B0",
+        "peer": 3,
+        "start": 0.096513,
+        "end": 0.191561,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 0.191615,
+        "end": 0.242332,
+        "micro": 0,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 1,
+        "start": 0.242385,
+        "end": 0.242977,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 1,
+        "start": 0.242385,
+        "end": 0.242977,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.243004,
+        "end": 0.26864,
+        "micro": 2,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F2",
+        "peer": 3,
+        "start": 0.268668,
+        "end": 0.371869,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B1",
+        "peer": 3,
+        "start": 0.268668,
+        "end": 0.371869,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 0.3719,
+        "end": 0.417132,
+        "micro": 1,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 1,
+        "start": 0.417167,
+        "end": 0.417738,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 1,
+        "start": 0.417167,
+        "end": 0.417738,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.417762,
+        "end": 0.461401,
+        "micro": 3,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F3",
+        "peer": 3,
+        "start": 0.461471,
+        "end": 0.529873,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B2",
+        "peer": 3,
+        "start": 0.461471,
+        "end": 0.529873,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 0.529959,
+        "end": 0.584241,
+        "micro": 2,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 1,
+        "start": 0.584257,
+        "end": 0.584663,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 1,
+        "start": 0.584257,
+        "end": 0.584663,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.584688,
+        "end": 0.630877,
+        "micro": 4,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F4",
+        "peer": 3,
+        "start": 0.630942,
+        "end": 0.698194,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B3",
+        "peer": 3,
+        "start": 0.630942,
+        "end": 0.698194,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.698227,
+        "end": 0.765042,
+        "micro": 3,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 1,
+        "start": 0.765057,
+        "end": 0.765427,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 1,
+        "start": 0.765057,
+        "end": 0.765427,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.765449,
+        "end": 0.785915,
+        "micro": 5,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F5",
+        "peer": 3,
+        "start": 0.785953,
+        "end": 0.869171,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B4",
+        "peer": 3,
+        "start": 0.785953,
+        "end": 0.869171,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.869211,
+        "end": 0.914019,
+        "micro": 4,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 1,
+        "start": 0.914186,
+        "end": 0.91479,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 1,
+        "start": 0.914186,
+        "end": 0.91479,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 0.914852,
+        "end": 0.957125,
+        "micro": 6,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F6",
+        "peer": 3,
+        "start": 0.957154,
+        "end": 1.027799,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B5",
+        "peer": 3,
+        "start": 0.957154,
+        "end": 1.027799,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 1.027858,
+        "end": 1.07117,
+        "micro": 5,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 1,
+        "start": 1.071189,
+        "end": 1.071611,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 1,
+        "start": 1.071189,
+        "end": 1.071611,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 1.07168,
+        "end": 1.096206,
+        "micro": 7,
+        "held": 19292160,
+        "live": 38584320
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "F7",
+        "peer": 3,
+        "start": 1.096242,
+        "end": 1.189264,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B6",
+        "peer": 3,
+        "start": 1.096242,
+        "end": 1.189264,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 1.189309,
+        "end": 1.247828,
+        "micro": 6,
+        "held": 19292160,
+        "live": 19292160
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 1,
+        "start": 1.247842,
+        "end": 1.247972,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "B7",
+        "peer": 3,
+        "start": 1.247985,
+        "end": 1.346491,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 1.346519,
+        "end": 1.392672,
+        "micro": 7,
+        "held": 19292160,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 1,
+        "start": 1.392719,
+        "end": 1.393129,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "1f1b",
+        "start": 0.000168,
+        "end": 1.393289
+       }
+      ],
+      [
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F0",
+        "peer": 2,
+        "start": 0.006126,
+        "end": 0.075834,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "0",
+        "start": 0.075868,
+        "end": 0.110735,
+        "micro": 0,
+        "held": 45225156,
+        "live": 45225156
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "0",
+        "start": 0.110793,
+        "end": 0.190911,
+        "micro": 0,
+        "held": 45225156,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B0",
+        "peer": 2,
+        "start": 0.19093,
+        "end": 0.191564,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F1",
+        "peer": 2,
+        "start": 0.19093,
+        "end": 0.191564,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "1",
+        "start": 0.192004,
+        "end": 0.2346,
+        "micro": 1,
+        "held": 45225156,
+        "live": 45225156
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "1",
+        "start": 0.234646,
+        "end": 0.371496,
+        "micro": 1,
+        "held": 45225156,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B1",
+        "peer": 2,
+        "start": 0.371512,
+        "end": 0.371916,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F2",
+        "peer": 2,
+        "start": 0.371512,
+        "end": 0.371916,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "2",
+        "start": 0.371936,
+        "end": 0.403548,
+        "micro": 2,
+        "held": 45225156,
+        "live": 45225156
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "2",
+        "start": 0.403588,
+        "end": 0.52948,
+        "micro": 2,
+        "held": 45225156,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B2",
+        "peer": 2,
+        "start": 0.529505,
+        "end": 0.529928,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F3",
+        "peer": 2,
+        "start": 0.529505,
+        "end": 0.529928,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "3",
+        "start": 0.52997,
+        "end": 0.574075,
+        "micro": 3,
+        "held": 45225156,
+        "live": 45225156
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "3",
+        "start": 0.574095,
+        "end": 0.69775,
+        "micro": 3,
+        "held": 45225156,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B3",
+        "peer": 2,
+        "start": 0.697776,
+        "end": 0.698253,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F4",
+        "peer": 2,
+        "start": 0.697776,
+        "end": 0.698253,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "4",
+        "start": 0.698295,
+        "end": 0.750771,
+        "micro": 4,
+        "held": 45225156,
+        "live": 45225156
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "4",
+        "start": 0.750833,
+        "end": 0.868586,
+        "micro": 4,
+        "held": 45225156,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B4",
+        "peer": 2,
+        "start": 0.868847,
+        "end": 0.869236,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F5",
+        "peer": 2,
+        "start": 0.868847,
+        "end": 0.869236,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "5",
+        "start": 0.869278,
+        "end": 0.91866,
+        "micro": 5,
+        "held": 45225156,
+        "live": 45225156
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "5",
+        "start": 0.918707,
+        "end": 1.026809,
+        "micro": 5,
+        "held": 45225156,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B5",
+        "peer": 2,
+        "start": 1.027046,
+        "end": 1.027815,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F6",
+        "peer": 2,
+        "start": 1.027046,
+        "end": 1.027815,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "6",
+        "start": 1.027872,
+        "end": 1.066918,
+        "micro": 6,
+        "held": 45225156,
+        "live": 45225156
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "6",
+        "start": 1.066961,
+        "end": 1.188527,
+        "micro": 6,
+        "held": 45225156,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B6",
+        "peer": 2,
+        "start": 1.188636,
+        "end": 1.189288,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "p2p",
+        "op": "recv",
+        "label": "F7",
+        "peer": 2,
+        "start": 1.188636,
+        "end": 1.189288,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "compute",
+        "op": "F",
+        "label": "7",
+        "start": 1.189319,
+        "end": 1.239854,
+        "micro": 7,
+        "held": 45225156,
+        "live": 45225156
+       },
+       {
+        "kind": "compute",
+        "op": "B",
+        "label": "7",
+        "start": 1.239916,
+        "end": 1.346246,
+        "micro": 7,
+        "held": 45225156,
+        "live": 0
+       },
+       {
+        "kind": "p2p",
+        "op": "send",
+        "label": "B7",
+        "peer": 2,
+        "start": 1.346261,
+        "end": 1.346403,
+        "shape": [
+         128,
+         768
+        ],
+        "bytes": 393216
+       },
+       {
+        "kind": "collective",
+        "op": "all-reduce",
+        "label": "embedding",
+        "start": 1.346423,
+        "end": 1.591348,
+        "shape": [
+         50257,
+         768
+        ],
+        "bytes": 154389504,
+        "ranks": [
+         0,
+         3
+        ]
+       },
+       {
+        "kind": "compute",
+        "op": "step",
+        "label": "1f1b",
+        "start": 0.000202,
+        "end": 1.591433
+       }
+      ]
+     ],
+     "summary": [
+      {
+       "step": 1.591314,
+       "busy": 0.816582,
+       "idle": 0.699278,
+       "wholeIdle": 0.7747319999999999,
+       "forward": 0.02497262499999999,
+       "backward": 0.077100125,
+       "peakLive": 77205504,
+       "peakMicro": 4,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.520786,
+         "end": 1.591483,
+         "ranks": [
+          0,
+          3
+         ]
+        }
+       ]
+      },
+      {
+       "step": 1.442188,
+       "busy": 0.661388,
+       "idle": 0.7539349999999999,
+       "wholeIdle": 0.7808,
+       "forward": 0.023269624999999988,
+       "backward": 0.05940387500000001,
+       "peakLive": 57876480,
+       "peakMicro": 3,
+       "embeddingAllReduce": []
+      },
+      {
+       "step": 1.393121,
+       "busy": 0.660689,
+       "idle": 0.68409,
+       "wholeIdle": 0.7324320000000001,
+       "forward": 0.031356375000000006,
+       "backward": 0.05122974999999999,
+       "peakLive": 38584320,
+       "peakMicro": 2,
+       "embeddingAllReduce": []
+      },
+      {
+       "step": 1.591231,
+       "busy": 1.2648849999999998,
+       "idle": 0.005493000000000192,
+       "wholeIdle": 0.32634600000000025,
+       "forward": 0.043077375000000015,
+       "backward": 0.11503324999999998,
+       "peakLive": 45225156,
+       "peakMicro": 1,
+       "embeddingAllReduce": [
+        {
+         "bytes": 154389504,
+         "start": 1.346423,
+         "end": 1.591348,
+         "ranks": [
+          0,
+          3
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "tensors": {
+  "file": "pp.f32",
+  "sha256": "c285e98d76fb344593ac19ed323a42b6194f9220399b9d37831438cd0457f195",
+  "bytes": 4096,
+  "tensors": {
+   "ids": {
+    "offset": 0,
+    "length": 1024,
+    "shape": [
+     8,
+     128
+    ]
+   }
+  }
+ },
+ "validation": {
+  "p2.gpipe.lossesVsUnsplit": 2.6226043701171875e-06,
+  "p2.gpipe.meanLossVsUnsplit": 2.384185791015625e-07,
+  "p2.gpipe.gradientsVsUnsplit": 4.500150680541992e-06,
+  "p2.gpipe.messagesNotInScheduleOrder": 0.0,
+  "p2.gpipe.unmatchedMessages": 0.0,
+  "p2.1f1b.lossesVsUnsplit": 2.6226043701171875e-06,
+  "p2.1f1b.meanLossVsUnsplit": 2.384185791015625e-07,
+  "p2.1f1b.gradientsVsUnsplit": 4.500150680541992e-06,
+  "p2.1f1b.messagesNotInScheduleOrder": 0.0,
+  "p2.1f1b.unmatchedMessages": 0.0,
+  "p3.gpipe.lossesVsUnsplit": 2.6226043701171875e-06,
+  "p3.gpipe.meanLossVsUnsplit": 2.384185791015625e-07,
+  "p3.gpipe.gradientsVsUnsplit": 4.500150680541992e-06,
+  "p3.gpipe.messagesNotInScheduleOrder": 0.0,
+  "p3.gpipe.unmatchedMessages": 0.0,
+  "p3.1f1b.lossesVsUnsplit": 2.6226043701171875e-06,
+  "p3.1f1b.meanLossVsUnsplit": 2.384185791015625e-07,
+  "p3.1f1b.gradientsVsUnsplit": 4.500150680541992e-06,
+  "p3.1f1b.messagesNotInScheduleOrder": 0.0,
+  "p3.1f1b.unmatchedMessages": 0.0,
+  "p4.gpipe.lossesVsUnsplit": 2.6226043701171875e-06,
+  "p4.gpipe.meanLossVsUnsplit": 2.384185791015625e-07,
+  "p4.gpipe.gradientsVsUnsplit": 4.500150680541992e-06,
+  "p4.gpipe.messagesNotInScheduleOrder": 0.0,
+  "p4.gpipe.unmatchedMessages": 0.0,
+  "p4.1f1b.lossesVsUnsplit": 2.6226043701171875e-06,
+  "p4.1f1b.meanLossVsUnsplit": 2.384185791015625e-07,
+  "p4.1f1b.gradientsVsUnsplit": 4.500150680541992e-06,
+  "p4.1f1b.messagesNotInScheduleOrder": 0.0,
+  "p4.1f1b.unmatchedMessages": 0.0
+ },
+ "capture": {
+  "timestamp": "2026-11-02T05:23:45.536558+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "ranks": 4,
+  "backend": "torch.distributed gloo, 2, 3 and 4 processes on 127.0.0.1 (one run each), 2 CPU threads each",
+  "clock": "time.perf_counter_ns (mach_absolute_time, shared by every process), from a start rank 0 broadcasts",
+  "machine": "Apple M4 Max",
+  "cpuCount": 14,
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "transformers": "4.57.6",
+   "numpy": "2.5.4",
+   "safetensors": "0.8.0"
+  },
+  "script": "scripts/parallelism/record_pp.py",
+  "scriptSha256": "3a16fb0ffae73cbaaa05ad06e1c412647f711a1e9bcde4c07ec04b20161a624b",
+  "helperSha256": "d3e7f9115064bb318fe65afb2c335edbb49d419ce4aa028da409c98a2b24d436",
+  "stages": [
+   2,
+   3,
+   4
+  ],
+  "drawer": "pytorch/parallelism_pp.py",
+  "drawerSha256": "6dcf294d91db0a984712e49fb90621a69c159cdefd4791cbae5ddcccbc935812"
+ }
+}

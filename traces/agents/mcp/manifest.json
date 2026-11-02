@@ -1,0 +1,1341 @@
+{
+	"kind": "agent-run",
+	"tab": "mcp",
+	"model": {
+		"id": "Qwen/Qwen3-1.7B",
+		"name": "Qwen3-1.7B",
+		"revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+		"url": "https://huggingface.co/Qwen/Qwen3-1.7B",
+		"license": "Apache-2.0",
+		"licenseUrl": "https://huggingface.co/Qwen/Qwen3-1.7B/blob/main/LICENSE",
+		"parameters": 1720574976
+	},
+	"sdk": {
+		"package": "mcp",
+		"version": "2.3.0",
+		"repository": "https://github.com/modelcontextprotocol/python-sdk",
+		"license": "MIT",
+		"clientMode": "legacy",
+		"transport": "stdio"
+	},
+	"corpus": {
+		"id": "rajpurkar/squad",
+		"revision": "7b6d24c440a36b6815f21b70d25016731768db1f",
+		"split": "validation",
+		"license": "CC BY-SA 4.0",
+		"url": "https://huggingface.co/datasets/rajpurkar/squad",
+		"paper": "https://arxiv.org/abs/1606.05250",
+		"queryCount": 300,
+		"seed": 0,
+		"rule": "corpus = the unique paragraphs of the validation split in order of first appearance; queries = random.Random(0).sample(range(rows), 300); each query's one relevant paragraph is the one its question was written on",
+		"passages": 2067,
+		"vectors": "static/traces/retrieval/hnsw/vectors.f16",
+		"vectorsSha256": "71a5106b9bbccdc4c7e5af388e1fa55307f505abdc883a87898e9f43a3be1e4c"
+	},
+	"run": {
+		"maxTurns": 6,
+		"maxNewTokens": 256,
+		"top": 8,
+		"decoding": "greedy",
+		"device": "mps",
+		"dtype": "float32",
+		"threads": 8,
+		"answer": "When you know the answer, reply with \"Answer: \" followed by the answer, a short phrase or a number."
+	},
+	"instructions": "Look things up in Wikipedia paragraphs and compute.",
+	"tools": [
+		{
+			"name": "search",
+			"description": "Search Wikipedia and return the two most relevant paragraphs.",
+			"inputSchema": {
+				"properties": {
+					"query": {
+						"description": "What to look for, in a few words",
+						"title": "Query",
+						"type": "string"
+					}
+				},
+				"required": [
+					"query"
+				],
+				"type": "object",
+				"title": "searchArguments"
+			}
+		},
+		{
+			"name": "calculate",
+			"description": "Evaluate an arithmetic expression.",
+			"inputSchema": {
+				"properties": {
+					"expression": {
+						"description": "An arithmetic expression, such as 2016 - 1998",
+						"title": "Expression",
+						"type": "string"
+					}
+				},
+				"required": [
+					"expression"
+				],
+				"type": "object",
+				"title": "calculateArguments"
+			}
+		},
+		{
+			"name": "day_of_week",
+			"description": "Give the day of the week of a date.",
+			"inputSchema": {
+				"properties": {
+					"date": {
+						"description": "A date written YYYY-MM-DD",
+						"title": "Date",
+						"type": "string"
+					}
+				},
+				"required": [
+					"date"
+				],
+				"type": "object",
+				"title": "day_of_weekArguments"
+			}
+		}
+	],
+	"schemas": [
+		{
+			"type": "function",
+			"function": {
+				"name": "search",
+				"description": "Search Wikipedia and return the two most relevant paragraphs.",
+				"parameters": {
+					"properties": {
+						"query": {
+							"description": "What to look for, in a few words",
+							"title": "Query",
+							"type": "string"
+						}
+					},
+					"required": [
+						"query"
+					],
+					"type": "object",
+					"title": "searchArguments"
+				}
+			}
+		},
+		{
+			"type": "function",
+			"function": {
+				"name": "calculate",
+				"description": "Evaluate an arithmetic expression.",
+				"parameters": {
+					"properties": {
+						"expression": {
+							"description": "An arithmetic expression, such as 2016 - 1998",
+							"title": "Expression",
+							"type": "string"
+						}
+					},
+					"required": [
+						"expression"
+					],
+					"type": "object",
+					"title": "calculateArguments"
+				}
+			}
+		},
+		{
+			"type": "function",
+			"function": {
+				"name": "day_of_week",
+				"description": "Give the day of the week of a date.",
+				"parameters": {
+					"properties": {
+						"date": {
+							"description": "A date written YYYY-MM-DD",
+							"title": "Date",
+							"type": "string"
+						}
+					},
+					"required": [
+						"date"
+					],
+					"type": "object",
+					"title": "day_of_weekArguments"
+				}
+			}
+		}
+	],
+	"toolsBlock": [
+		68,
+		333
+	],
+	"session": [
+		{
+			"from": "client",
+			"line": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2025-11-25\",\"capabilities\":{},\"clientInfo\":{\"name\":\"mcp\",\"version\":\"0.1.0\"}}}\n"
+		},
+		{
+			"from": "server",
+			"line": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"capabilities\":{\"prompts\":{\"listChanged\":false},\"resources\":{\"listChanged\":false,\"subscribe\":false},\"tools\":{\"listChanged\":false}},\"instructions\":\"Look things up in Wikipedia paragraphs and compute.\",\"protocolVersion\":\"2025-11-25\",\"serverInfo\":{\"name\":\"squad-tools\",\"version\":\"1.0.0\"}}}\n"
+		},
+		{
+			"from": "client",
+			"line": "{\"jsonrpc\":\"2.0\",\"method\":\"notifications/initialized\"}\n"
+		},
+		{
+			"from": "client",
+			"line": "{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/list\"}\n"
+		},
+		{
+			"from": "server",
+			"line": "{\"jsonrpc\":\"2.0\",\"id\":2,\"result\":{\"tools\":[{\"description\":\"Search Wikipedia and return the two most relevant paragraphs.\",\"inputSchema\":{\"properties\":{\"query\":{\"description\":\"What to look for, in a few words\",\"title\":\"Query\",\"type\":\"string\"}},\"required\":[\"query\"],\"type\":\"object\",\"title\":\"searchArguments\"},\"name\":\"search\"},{\"description\":\"Evaluate an arithmetic expression.\",\"inputSchema\":{\"properties\":{\"expression\":{\"description\":\"An arithmetic expression, such as 2016 - 1998\",\"title\":\"Expression\",\"type\":\"string\"}},\"required\":[\"expression\"],\"type\":\"object\",\"title\":\"calculateArguments\"},\"name\":\"calculate\"},{\"description\":\"Give the day of the week of a date.\",\"inputSchema\":{\"properties\":{\"date\":{\"description\":\"A date written YYYY-MM-DD\",\"title\":\"Date\",\"type\":\"string\"}},\"required\":[\"date\"],\"type\":\"object\",\"title\":\"day_of_weekArguments\"},\"name\":\"day_of_week\"}]}}\n"
+		},
+		{
+			"from": "client",
+			"line": "{\"jsonrpc\":\"2.0\",\"id\":3,\"method\":\"tools/call\",\"params\":{\"name\":\"day_of_week\",\"arguments\":{\"date\":\"2015-12-31\"}}}\n"
+		},
+		{
+			"from": "server",
+			"line": "{\"jsonrpc\":\"2.0\",\"id\":3,\"result\":{\"content\":[{\"text\":\"Thursday\",\"type\":\"text\"}],\"isError\":false}}\n"
+		},
+		{
+			"from": "client",
+			"line": "{\"jsonrpc\":\"2.0\",\"id\":4,\"method\":\"tools/call\",\"params\":{\"name\":\"search\",\"arguments\":{\"query\":\"Harvard University University of Chicago\"}}}\n"
+		},
+		{
+			"from": "server",
+			"line": "{\"jsonrpc\":\"2.0\",\"id\":4,\"result\":{\"content\":[{\"text\":\"[1] University of Chicago: The University of Chicago (UChicago, Chicago, or U of C) is a private research university in Chicago. The university, established in 1890, consists of The College, various graduate programs, interdisciplinary committees organized into four academic research divisions and seven professional schools. Beyond the arts and sciences, Chicago is also well known for its professional schools, which include the Pritzker School of Medicine, the University of Chicago Booth School of Business, the Law School, the School of Social Service Administration, the Harris School of Public Policy Studies, the Graham School of Continuing Liberal and Professional Studies and the Divinity School. The university currently enrolls approximately 5,000 students in the College and around 15,000 students overall. [2] University of Chicago: University of Chicago scholars have played a major role in the development of various academic disciplines, including: the Chicago school of economics, the Chicago school of sociology, the law and economics movement in legal analysis, the Chicago school of literary criticism, the Chicago school of religion, and the behavioralism school of political science. Chicago's physics department helped develop the world's first man-made, self-sustaining nuclear reaction beneath the university's Stagg Field. Chicago's research pursuits have been aided by unique affiliations with world-renowned institutions like the nearby Fermilab and Argonne National Laboratory, as well as the Marine Biological Laboratory. The university is also home to the University of Chicago Press, the largest university press in the United States. With an estimated completion date of 2020, the Barack Obama Presidential Center will be housed at the university and include both the Obama presidential library and offices of the Obama Foundation.\",\"type\":\"text\"}],\"isError\":false}}\n"
+		},
+		{
+			"from": "client",
+			"line": "{\"jsonrpc\":\"2.0\",\"id\":5,\"method\":\"tools/call\",\"params\":{\"name\":\"day_of_week\",\"arguments\":{\"date\":\"1963-06-12\"}}}\n"
+		},
+		{
+			"from": "server",
+			"line": "{\"jsonrpc\":\"2.0\",\"id\":5,\"result\":{\"content\":[{\"text\":\"Wednesday\",\"type\":\"text\"}],\"isError\":false}}\n"
+		}
+	],
+	"links": [
+		{
+			"question": 1,
+			"turn": 0,
+			"request": 5,
+			"response": 6
+		},
+		{
+			"question": 2,
+			"turn": 0,
+			"request": 7,
+			"response": 8
+		},
+		{
+			"question": 3,
+			"turn": 0,
+			"request": 9,
+			"response": 10
+		}
+	],
+	"questions": [
+		{
+			"question": "How many years apart were Nikola Tesla and Martin Luther born?",
+			"gold": 373,
+			"goldFrom": [
+				"calculate",
+				"1856 - 1483"
+			],
+			"evidence": [
+				{
+					"doc": 152,
+					"title": "Nikola Tesla",
+					"quote": "Tesla was born on 10 July [O.S. 28 June] 1856"
+				},
+				{
+					"doc": 349,
+					"title": "Martin Luther",
+					"quote": "on 10 November 1483"
+				}
+			]
+		},
+		{
+			"question": "On what day of the week was Super Bowl 50 played?",
+			"gold": "Sunday",
+			"goldFrom": [
+				"day_of_week",
+				"2016-02-07"
+			],
+			"evidence": [
+				{
+					"doc": 0,
+					"title": "Super Bowl 50",
+					"quote": "The game was played on February 7, 2016"
+				}
+			]
+		},
+		{
+			"question": "How many years older is Harvard University than the University of Chicago?",
+			"gold": 254,
+			"goldFrom": [
+				"calculate",
+				"1890 - 1636"
+			],
+			"evidence": [
+				{
+					"doc": 1352,
+					"title": "Harvard University",
+					"quote": "Harvard was formed in 1636"
+				},
+				{
+					"doc": 1511,
+					"title": "University of Chicago",
+					"quote": "incorporated as a coeducational, secular institution in 1890"
+				}
+			]
+		},
+		{
+			"question": "On what day of the week did Kenya become independent?",
+			"gold": "Thursday",
+			"goldFrom": [
+				"day_of_week",
+				"1963-12-12"
+			],
+			"evidence": [
+				{
+					"doc": 1604,
+					"title": "Kenya",
+					"quote": "came to an end on 12 December 1963 with independence"
+				}
+			]
+		}
+	],
+	"runs": [
+		{
+			"turns": [
+				{
+					"prompt": {
+						"shared": 0,
+						"span": [
+							0,
+							398
+						],
+						"length": 398
+					},
+					"span": [
+						0,
+						20
+					],
+					"reason": "eos",
+					"text": "To find the answer, I will look up the birth years of Nikola Tesla and Martin Luther.",
+					"calls": []
+				}
+			],
+			"answer": "To find the answer, I will look up the birth years of Nikola Tesla and Martin Luther.",
+			"correct": false,
+			"stopped": "answer",
+			"written": 20,
+			"read": 398,
+			"calls": 0,
+			"seconds": 3.7
+		},
+		{
+			"turns": [
+				{
+					"prompt": {
+						"shared": 0,
+						"span": [
+							398,
+							400
+						],
+						"length": 400
+					},
+					"span": [
+						20,
+						30
+					],
+					"reason": "eos",
+					"text": "<tool_call>\n{\"name\": \"day_of_week\", \"arguments\": {\"date\": \"2015-12-31\"}}\n</tool_call>",
+					"calls": [
+						{
+							"name": "day_of_week",
+							"arguments": {
+								"date": "2015-12-31"
+							}
+						}
+					],
+					"rpc": [
+						[
+							5,
+							6
+						]
+					],
+					"results": [
+						"Thursday"
+					]
+				},
+				{
+					"prompt": {
+						"shared": 396,
+						"span": [
+							798,
+							48
+						],
+						"length": 444
+					},
+					"span": [
+						50,
+						4
+					],
+					"reason": "eos",
+					"text": "Answer: Thursday",
+					"calls": []
+				}
+			],
+			"answer": "Thursday",
+			"correct": false,
+			"stopped": "answer",
+			"written": 34,
+			"read": 844,
+			"calls": 1,
+			"seconds": 3.7
+		},
+		{
+			"turns": [
+				{
+					"prompt": {
+						"shared": 0,
+						"span": [
+							846,
+							399
+						],
+						"length": 399
+					},
+					"span": [
+						54,
+						42
+					],
+					"reason": "eos",
+					"text": "I will look up the information about the ages of Harvard University and the University of Chicago.\n<tool_call>\n{\"name\": \"search\", \"arguments\": {\"query\": \"Harvard University University of Chicago\"}}\n</tool_call>",
+					"calls": [
+						{
+							"name": "search",
+							"arguments": {
+								"query": "Harvard University University of Chicago"
+							}
+						}
+					],
+					"rpc": [
+						[
+							7,
+							8
+						]
+					],
+					"results": [
+						"[1] University of Chicago: The University of Chicago (UChicago, Chicago, or U of C) is a private research university in Chicago. The university, established in 1890, consists of The College, various graduate programs, interdisciplinary committees organized into four academic research divisions and seven professional schools. Beyond the arts and sciences, Chicago is also well known for its professional schools, which include the Pritzker School of Medicine, the University of Chicago Booth School of Business, the Law School, the School of Social Service Administration, the Harris School of Public Policy Studies, the Graham School of Continuing Liberal and Professional Studies and the Divinity School. The university currently enrolls approximately 5,000 students in the College and around 15,000 students overall. [2] University of Chicago: University of Chicago scholars have played a major role in the development of various academic disciplines, including: the Chicago school of economics, the Chicago school of sociology, the law and economics movement in legal analysis, the Chicago school of literary criticism, the Chicago school of religion, and the behavioralism school of political science. Chicago's physics department helped develop the world's first man-made, self-sustaining nuclear reaction beneath the university's Stagg Field. Chicago's research pursuits have been aided by unique affiliations with world-renowned institutions like the nearby Fermilab and Argonne National Laboratory, as well as the Marine Biological Laboratory. The university is also home to the University of Chicago Press, the largest university press in the United States. With an estimated completion date of 2020, the Barack Obama Presidential Center will be housed at the university and include both the Obama presidential library and offices of the Obama Foundation."
+					]
+				},
+				{
+					"prompt": {
+						"shared": 395,
+						"span": [
+							1245,
+							408
+						],
+						"length": 803
+					},
+					"span": [
+						96,
+						48
+					],
+					"reason": "eos",
+					"text": "The University of Chicago was established in 1890, and Harvard University was established in 1869. Therefore, Harvard University is 11 years older than the University of Chicago. \n\nAnswer: 11",
+					"calls": []
+				}
+			],
+			"answer": "11",
+			"correct": false,
+			"stopped": "answer",
+			"written": 90,
+			"read": 1202,
+			"calls": 1,
+			"seconds": 9.5
+		},
+		{
+			"turns": [
+				{
+					"prompt": {
+						"shared": 0,
+						"span": [
+							1653,
+							397
+						],
+						"length": 397
+					},
+					"span": [
+						144,
+						30
+					],
+					"reason": "eos",
+					"text": "<tool_call>\n{\"name\": \"day_of_week\", \"arguments\": {\"date\": \"1963-06-12\"}}\n</tool_call>",
+					"calls": [
+						{
+							"name": "day_of_week",
+							"arguments": {
+								"date": "1963-06-12"
+							}
+						}
+					],
+					"rpc": [
+						[
+							9,
+							10
+						]
+					],
+					"results": [
+						"Wednesday"
+					]
+				},
+				{
+					"prompt": {
+						"shared": 393,
+						"span": [
+							2050,
+							48
+						],
+						"length": 441
+					},
+					"span": [
+						174,
+						4
+					],
+					"reason": "eos",
+					"text": "Answer: Wednesday",
+					"calls": []
+				}
+			],
+			"answer": "Wednesday",
+			"correct": false,
+			"stopped": "answer",
+			"written": 34,
+			"read": 838,
+			"calls": 1,
+			"seconds": 4.6
+		}
+	],
+	"summary": {
+		"correct": 0,
+		"questions": 4,
+		"calls": 3,
+		"messages": 11
+	},
+	"vocab": {
+		"151644": "<|im_start|>",
+		"8948": "system",
+		"198": "\n",
+		"10380": "Look",
+		"2513": " things",
+		"705": " up",
+		"304": " in",
+		"26587": " Wikipedia",
+		"42643": " paragraphs",
+		"323": " and",
+		"12564": " compute",
+		"13": ".",
+		"3197": " When",
+		"498": " you",
+		"1414": " know",
+		"279": " the",
+		"4226": " answer",
+		"11": ",",
+		"9851": " reply",
+		"448": " with",
+		"330": " \"",
+		"16141": "Answer",
+		"25": ":",
+		"8110": " followed",
+		"553": " by",
+		"264": " a",
+		"2805": " short",
+		"17133": " phrase",
+		"476": " or",
+		"1372": " number",
+		"382": ".\n\n",
+		"2": "#",
+		"13852": " Tools",
+		"271": "\n\n",
+		"2610": "You",
+		"1231": " may",
+		"1618": " call",
+		"825": " one",
+		"803": " more",
+		"5746": " functions",
+		"311": " to",
+		"7789": " assist",
+		"1196": " user",
+		"3239": " query",
+		"525": " are",
+		"3897": " provided",
+		"729": " function",
+		"32628": " signatures",
+		"2878": " within",
+		"366": " <",
+		"15918": "tools",
+		"1472": "></",
+		"29": ">",
+		"11874": " XML",
+		"9492": " tags",
+		"510": ":\n",
+		"27": "<",
+		"397": ">\n",
+		"4913": "{\"",
+		"1313": "type",
+		"788": "\":",
+		"1688": "function",
+		"497": "\",",
+		"5212": " {\"",
+		"606": "name",
+		"1836": "search",
+		"4684": "description",
+		"5890": "Search",
+		"470": " return",
+		"1378": " two",
+		"1429": " most",
+		"9760": " relevant",
+		"10465": ".\",",
+		"13786": "parameters",
+		"13193": "properties",
+		"1631": "query",
+		"3838": "What",
+		"1401": " look",
+		"369": " for",
+		"2421": " few",
+		"4244": " words",
+		"2102": "title",
+		"2859": "Query",
+		"917": "string",
+		"9207": "\"}",
+		"2137": "},",
+		"6279": "required",
+		"4383": " [\"",
+		"7914": "\"],",
+		"1700": "object",
+		"19139": "Arguments",
+		"30975": "\"}}",
+		"532": "}\n",
+		"35597": "calculate",
+		"82345": "Evaluate",
+		"458": " an",
+		"34784": " arithmetic",
+		"7493": " expression",
+		"28099": "expression",
+		"2082": "An",
+		"1741": " such",
+		"438": " as",
+		"220": " ",
+		"17": "2",
+		"15": "0",
+		"16": "1",
+		"21": "6",
+		"481": " -",
+		"24": "9",
+		"23": "8",
+		"9595": "Expression",
+		"1292": "day",
+		"3575": "_of",
+		"31277": "_week",
+		"35127": "Give",
+		"1899": " day",
+		"315": " of",
+		"2003": " week",
+		"2400": " date",
+		"1028": "date",
+		"32": "A",
+		"5326": " written",
+		"60591": " YYYY",
+		"18506": "-MM",
+		"40175": "-DD",
+		"1916": "Date",
+		"522": "</",
+		"1339": ">\n\n",
+		"2461": "For",
+		"1817": " each",
+		"2951": " json",
+		"1633": " object",
+		"829": " name",
+		"5977": " arguments",
+		"151657": "<tool_call>",
+		"151658": "</tool_call>",
+		"11494": "-name",
+		"8066": ">,",
+		"16370": "arguments",
+		"2116": "args",
+		"56080": "-json",
+		"40432": "-object",
+		"31296": ">}\n",
+		"151645": "<|im_end|>",
+		"872": "user",
+		"4340": "How",
+		"1657": " many",
+		"1635": " years",
+		"10747": " apart",
+		"1033": " were",
+		"96315": " Nikola",
+		"27199": " Tesla",
+		"11565": " Martin",
+		"35202": " Luther",
+		"9223": " born",
+		"30": "?",
+		"77091": "assistant",
+		"151667": "<think>",
+		"151668": "</think>",
+		"1249": "To",
+		"40": "I",
+		"10061": "Let",
+		"785": "The",
+		"22464": "Looking",
+		"5338": "First",
+		"1477": " find",
+		"8253": " determine",
+		"11625": " solve",
+		"11047": " calculate",
+		"3410": " provide",
+		"2621": " address",
+		"700": " out",
+		"1246": " how",
+		"419": " this",
+		"4371": " Out",
+		"411": "out",
+		"9794": "-out",
+		"2662": "Out",
+		"6672": " difference",
+		"4231": " age",
+		"1042": " year",
+		"7194": " birth",
+		"2033": " response",
+		"582": " we",
+		"8826": " regarding",
+		"911": " about",
+		"3837": "，",
+		"358": " I",
+		"1077": " let",
+		"432": " it",
+		"600": " i",
+		"6771": " Let",
+		"686": " will",
+		"1184": " need",
+		"3278": "'ll",
+		"1265": " should",
+		"1035": " would",
+		"4880": " shall",
+		"646": " can",
+		"3880": " needs",
+		"2711": " search",
+		"990": " use",
+		"2736": " perform",
+		"3412": " research",
+		"18615": " lookup",
+		"518": " at",
+		"1119": " into",
+		"5239": "-up",
+		"1995": " information",
+		"862": " their",
+		"6032": " bi",
+		"2176": " both",
+		"12713": " dates",
+		"91850": " birthdays",
+		"65232": " births",
+		"41720": "years",
+		"6394": "dates",
+		"3565": " details",
+		"10793": " decades",
+		"74490": "_years",
+		"59735": " của",
+		"124375": "ของ",
+		"124756": " של",
+		"43223": "\tof",
+		"78441": " Nicola",
+		"39696": " Nicholas",
+		"34031": " Karl",
+		"95557": " Nikol",
+		"89441": "Tesla",
+		"108096": "特斯拉",
+		"23099": " Tes",
+		"50209": " tes",
+		"350": " T",
+		"16439": " Taylor",
+		"47742": " và",
+		"33108": "和",
+		"7587": " и",
+		"437": "and",
+		"58143": " 和",
+		"112370": "和他的",
+		"49119": "Martin",
+		"116916": "马丁",
+		"8127": " Mart",
+		"94916": " martin",
+		"89565": " MART",
+		"7937": " Michael",
+		"55154": " Marty",
+		"444": " L",
+		"84450": " Ludwig",
+		"20607": " Lewis",
+		"81981": " Lutheran",
+		"18360": " Lu",
+		"51586": " Gutenberg",
+		"45170": " Lud",
+		"624": ".\n",
+		"389": " on",
+		"504": " from",
+		"4710": " \n\n",
+		"5005": " Then",
+		"576": " The",
+		"151665": "<tool_response>",
+		"1925": "On",
+		"1128": " what",
+		"572": " was",
+		"7297": " Super",
+		"20288": " Bowl",
+		"20": "5",
+		"6342": " played",
+		"74951": "umably",
+		"319": "\r\n",
+		"715": " \n",
+		"2303": "  \n",
+		"26809": "\n \n",
+		"515": "{\n",
+		"13608": "{'",
+		"16864": "({\"",
+		"1183": "[\"",
+		"15783": "={\"",
+		"675": "Name",
+		"1269": "_name",
+		"11609": "\tname",
+		"2644": ".name",
+		"7535": "NAME",
+		"3153": "(name",
+		"3252": "\":\"",
+		"37051": "\"):",
+		"56533": "”:",
+		"13022": " \":",
+		"755": "\">",
+		"1": "\"",
+		"58528": "\":\"/",
+		"13265": " \"__",
+		"9000": " \"_",
+		"1036": " “",
+		"5201": " \"$",
+		"8428": " \"@",
+		"4055": " \"<",
+		"13778": "days",
+		"10159": "Day",
+		"98197": "\tday",
+		"3157": "year",
+		"8668": "-of",
+		"2124": "Of",
+		"14234": "_OF",
+		"1055": "of",
+		"4940": " Of",
+		"38353": "OfWeek",
+		"86356": "_weak",
+		"76999": "_WEEK",
+		"18933": "_month",
+		"16763": "_day",
+		"14645": "_year",
+		"15876": "_weight",
+		"31792": "_world",
+		"516": "',",
+		"756": "\",\n",
+		"3670": " \",",
+		"9336": "”,",
+		"2198": "\",\"",
+		"54876": "$,",
+		"16215": "\\\",",
+		"38713": " \"...",
+		"14482": " \"--",
+		"445": "(\"",
+		"6228": " \"\n",
+		"52415": ".arguments",
+		"30467": "(arguments",
+		"14479": "argument",
+		"43433": "_arguments",
+		"22317": "\":{\"",
+		"11693": "\\\":",
+		"1210": "':",
+		"4660": "\":\n",
+		"57721": "\"]:",
+		"54734": " \"{\\\"",
+		"61753": " [{\"",
+		"5360": " {'",
+		"45785": "日期",
+		"44086": "\tdate",
+		"9907": ".date",
+		"7097": "DATE",
+		"6523": " \"-",
+		"7178": " \"'",
+		"15898": " \"\\\"",
+		"70154": " \"::",
+		"24918": "２",
+		"18": "3",
+		"93965": "twenty",
+		"23830": "XXXX",
+		"19": "4",
+		"26022": "０",
+		"6148": "XX",
+		"20109": "１",
+		"22": "7",
+		"12": "-",
+		"79629": "-Dec",
+		"70488": "-Nov",
+		"66148": "-Apr",
+		"61635": "-Aug",
+		"92426": "-Oct",
+		"27651": "-\"",
+		"6913": "-\n",
+		"63347": "-{",
+		"11069": "-%",
+		"52077": "-\"+",
+		"73918": "-\",",
+		"69127": "-\r\n",
+		"33517": "３",
+		"26127": " thirty",
+		"105134": "三十",
+		"30986": "₁",
+		"95642": "\"}}\n",
+		"48085": "\"}},\n",
+		"92010": "\"]}\n",
+		"23625": "\"})\n",
+		"11248": "}}\n",
+		"74491": "'}}\n",
+		"151666": "</tool_response>",
+		"133100": "ическая",
+		"20104": "ocomplete",
+		"45195": "orean",
+		"37788": "Thursday",
+		"34620": "Friday",
+		"40519": "Wednesday",
+		"33674": "Saturday",
+		"69599": "Ans",
+		"40199": "Tuesday",
+		"5122": "：",
+		"66963": ":**",
+		"21701": ":$",
+		"75369": ":S",
+		"76475": ":?",
+		"2974": ":\"",
+		"37694": ":N",
+		"7794": " Thursday",
+		"6652": " December",
+		"7920": " Wednesday",
+		"6602": " Friday",
+		"7589": " Tuesday",
+		"10074": " Christmas",
+		"7270": " Sunday",
+		"6058": " January",
+		"11162": " �",
+		"1773": "。",
+		"9014": " older",
+		"374": " is",
+		"24951": " Harvard",
+		"3822": " University",
+		"1091": " than",
+		"10557": " Chicago",
+		"1654": "We",
+		"4700": "’ll",
+		"1779": " check",
+		"1431": " now",
+		"429": " that",
+		"2494": " something",
+		"1045": " some",
+		"35230": " founding",
+		"21269": " establishment",
+		"18047": " founded",
+		"16639": " ages",
+		"4362": " needed",
+		"117749": "哈佛",
+		"1493": " these",
+		"5227": " Har",
+		"26490": "Har",
+		"11799": " differences",
+		"1948": " between",
+		"23106": " universities",
+		"30172": "University",
+		"15545": " Univers",
+		"9126": " College",
+		"74798": " Universities",
+		"99562": "大学",
+		"12103": " university",
+		"7707": " compared",
+		"1782": "the",
+		"18796": " Columbia",
+		"14630": " Michigan",
+		"3639": " United",
+		"66513": " Universidad",
+		"21393": " Massachusetts",
+		"10229": ".of",
+		"46175": "Chicago",
+		"70720": " Chic",
+		"118390": "芝加哥",
+		"18657": " Illinois",
+		"7043": " California",
+		"33282": " Chi",
+		"126507": "ควร",
+		"34492": "сть",
+		"13566": " aspects",
+		"201": "\r",
+		"17642": "\n\t\n",
+		"64238": "{\\\"",
+		"88863": ">{\"",
+		"29991": "名称",
+		"28796": "\"\":",
+		"78973": "搜索",
+		"45573": "\tsearch",
+		"20447": "(search",
+		"10716": "_search",
+		"43545": "SEARCH",
+		"12602": "\":{\n",
+		"51154": "查询",
+		"10741": "(query",
+		"5738": "_query",
+		"42835": "queries",
+		"27274": "\tquery",
+		"13399": " \"&",
+		"10545": " \"[",
+		"5869": " \"#",
+		"12982": "har",
+		"39": "H",
+		"16749": "Age",
+		"26907": "Hard",
+		"21601": "vard",
+		"85": "v",
+		"947": "var",
+		"1606": "ward",
+		"5617": "vey",
+		"7019": "vest",
+		"423": "ver",
+		"8187": "ford",
+		"66512": " Univ",
+		"6165": " vs",
+		"19041": " versus",
+		"53362": " Chapel",
+		"48993": " Ages",
+		"77187": "ocious",
+		"67676": " trousers",
+		"87095": " wreckage",
+		"1406": "\n\n\n",
+		"85469": " civilizations",
+		"58": "[",
+		"60": "]",
+		"320": " (",
+		"52": "U",
+		"547": " U",
+		"356": " C",
+		"8": ")",
+		"869": " private",
+		"9555": " established",
+		"17167": " consists",
+		"5257": " various",
+		"19023": " graduate",
+		"7468": " programs",
+		"87319": " interdisciplinary",
+		"41447": " committees",
+		"16645": " organized",
+		"3040": " four",
+		"14250": " academic",
+		"36501": " divisions",
+		"8094": " seven",
+		"6584": " professional",
+		"8682": " schools",
+		"30786": " Beyond",
+		"18560": " arts",
+		"35688": " sciences",
+		"1083": " also",
+		"1632": " well",
+		"3881": " known",
+		"1181": " its",
+		"892": " which",
+		"2924": " include",
+		"393": " P",
+		"56721": "ritz",
+		"7052": "ker",
+		"6022": " School",
+		"18637": " Medicine",
+		"63270": " Booth",
+		"8025": " Business",
+		"7506": " Law",
+		"9784": " Social",
+		"5362": " Service",
+		"16713": " Administration",
+		"21071": " Harris",
+		"3066": " Public",
+		"10974": " Policy",
+		"18720": " Studies",
+		"25124": " Graham",
+		"81017": " Continuing",
+		"30058": " Liberal",
+		"21237": " Professional",
+		"8765": " Div",
+		"13489": "inity",
+		"5023": " currently",
+		"662": " en",
+		"38274": "rolls",
+		"13187": " approximately",
+		"4143": " students",
+		"2163": " around",
+		"8084": " overall",
+		"508": " [",
+		"30739": " scholars",
+		"614": " have",
+		"3598": " major",
+		"3476": " role",
+		"4401": " development",
+		"48155": " disciplines",
+		"2670": " including",
+		"2906": " school",
+		"27889": " economics",
+		"77108": " sociology",
+		"2329": " law",
+		"7203": " movement",
+		"5777": " legal",
+		"6358": " analysis",
+		"31365": " literary",
+		"18817": " criticism",
+		"13587": " religion",
+		"35595": " behavioral",
+		"2142": "ism",
+		"4948": " political",
+		"8038": " science",
+		"594": "'s",
+		"21321": " physics",
+		"9292": " department",
+		"8910": " helped",
+		"2225": " develop",
+		"1879": " world",
+		"1156": " first",
+		"883": " man",
+		"26877": "-made",
+		"656": " self",
+		"1331": "-s",
+		"590": "ust",
+		"2056": "aining",
+		"11249": " nuclear",
+		"12720": " reaction",
+		"23969": " beneath",
+		"794": " St",
+		"15718": "agg",
+		"8601": " Field",
+		"89787": " pursuits",
+		"1012": " been",
+		"62857": " aided",
+		"4911": " unique",
+		"11938": " affili",
+		"804": "ations",
+		"93009": "-ren",
+		"18332": "owned",
+		"14336": " institutions",
+		"1075": " like",
+		"14046": " nearby",
+		"98262": " Ferm",
+		"321": "il",
+		"370": "ab",
+		"7638": " Arg",
+		"28952": "onne",
+		"5055": " National",
+		"31084": " Laboratory",
+		"22963": " Marine",
+		"62611": " Biological",
+		"2114": " home",
+		"8445": " Press",
+		"7772": " largest",
+		"3493": " press",
+		"4180": " States",
+		"3085": " With",
+		"12943": " estimated",
+		"9755": " completion",
+		"23539": " Barack",
+		"7105": " Obama",
+		"41755": " Presidential",
+		"5832": " Center",
+		"387": " be",
+		"51158": " housed",
+		"13318": " presidential",
+		"6733": " library",
+		"19126": " offices",
+		"5007": " Foundation",
+		"28715": "Based",
+		"7148": " London",
+		"702": " has",
+		"34383": " traces",
+		"6009": " began",
+		"14122": " formed",
+		"86250": " Established",
+		"63768": "-established",
+		"3465": " created",
+		"77711": " Founded",
+		"3855": " started",
+		"6788": " earlier",
+		"1182": " back",
+		"1753": " much",
+		"258": "in",
+		"400": " $",
+		"5813": " April",
+		"6702": " November",
+		"3": "$",
+		"59497": "¹",
+		"65015": "８",
+		"66993": "９",
+		"77876": " ninety",
+		"26": ";",
+		"1393": " while",
+		"1154": " ,",
+		"773": " so",
+		"19853": " whereas",
+		"3259": " making",
+		"3472": "while",
+		"714": " but",
+		"32007": " Harper",
+		"33322": " Harvey",
+		"18562": " officially",
+		"2937": " later",
+		"256": "  ",
+		"26107": " $$",
+		"11568": ".The",
+		"7873": ".[",
+		"15277": " Therefore",
+		"14301": " Thus",
+		"2014": " To",
+		"2055": " So",
+		"1096": " This",
+		"3554": ",\n\n",
+		"68785": "،",
+		"43539": ",H",
+		"1871": ",\r\n",
+		"2079": ".is",
+		"285": "is",
+		"2160": " Is",
+		"17267": " roughly",
+		"3070": " **",
+		"22315": " Years",
+		"4666": "-year",
+		"7948": "年",
+		"48015": " Jahre",
+		"2018": "older",
+		"2310": " old",
+		"53925": " Older",
+		"14650": " younger",
+		"25546": " newer",
+		"22130": " elder",
+		"18284": "Old",
+		"33676": " Than",
+		"53795": "than",
+		"26067": "Than",
+		"51613": "_than",
+		"47654": "-than",
+		"2418": ".$",
+		"17825": ".\r\n\r\n",
+		"1189": ".\"",
+		"15757": ".<",
+		"21806": " Answer",
+		"18611": "  \n\n",
+		"38453": " Ans",
+		"19357": "Final",
+		"14085": "$$",
+		"102349": "答案",
+		"28534": "_answer",
+		"28489": ":)",
+		"16976": ":.",
+		"1447": ":\n\n",
+		"3570": " ${",
+		"57960": " $\\",
+		"26748": " años",
+		"1521": " did",
+		"36666": " Kenya",
+		"3635": " become",
+		"9489": " independent",
+		"55952": "[]{\"",
+		"11970": "(date",
+		"63399": "Independ",
+		"6122": " September",
+		"29549": "September",
+		"6527": " October",
+		"83649": " september",
+		"59496": "６",
+		"99566": "六",
+		"5534": " June",
+		"61986": "-May",
+		"91179": "-Jul",
+		"64422": "merc",
+		"81376": "SEP",
+		"30194": "October",
+		"313": "--",
+		"75391": "-yyyy",
+		"4142": "–",
+		"47241": "Ken",
+		"88634": "Kenn",
+		"35931": "Canada",
+		"68661": ":T",
+		"84488": ":E",
+		"7014": " Monday",
+		"5470": " March"
+	},
+	"tensors": {
+		"file": "mcp.f32",
+		"sha256": "aad3696f9f5677647f240dfbb884c01fcaeae19edc060c6c62d2561d8a75d727",
+		"bytes": 20496,
+		"tensors": {
+			"ids": {
+				"offset": 0,
+				"length": 2098,
+				"shape": [
+					2098
+				]
+			},
+			"out": {
+				"offset": 2098,
+				"length": 178,
+				"shape": [
+					178
+				]
+			},
+			"topIds": {
+				"offset": 2276,
+				"length": 1424,
+				"shape": [
+					178,
+					8
+				]
+			},
+			"topP": {
+				"offset": 3700,
+				"length": 1424,
+				"shape": [
+					178,
+					8
+				]
+			}
+		}
+	},
+	"validation": {
+		"replayMismatches": 0,
+		"schemaMismatches": 0,
+		"callMismatches": 0,
+		"resultMismatches": 0,
+		"parseMismatches": 0,
+		"promptMismatches": 0,
+		"notMostLikely": 0,
+		"evidenceNotFound": 0
+	},
+	"capture": {
+		"timestamp": "2026-11-02T01:43:16.671669+00:00",
+		"device": "mps",
+		"dtype": "float32",
+		"python": "3.12.12",
+		"platform": "macOS-15.5-arm64-arm-64bit",
+		"packages": {
+			"torch": "2.14.1",
+			"transformers": "4.57.6",
+			"mcp": "2.3.0"
+		},
+		"threads": 8,
+		"script": "scripts/agents/record_mcp.py",
+		"scriptSha256": "0c85fef53ea1a32cea6a17e0a4a7a2185f7025bf4e018bcf1aecbff189cb15a9",
+		"helperSha256": "d6f88f47b45d465ee75ab198646905c5a358be6c85037ab1bbefe1b718ac4f13",
+		"reused": true
+	}
+}

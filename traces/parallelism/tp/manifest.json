@@ -1,0 +1,5412 @@
+{
+ "kind": "parallelism-run",
+ "tab": "tp",
+ "model": {
+  "id": "openai-community/gpt2",
+  "name": "GPT-2 (124M)",
+  "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "url": "https://huggingface.co/openai-community/gpt2/tree/607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "license": "MIT",
+  "parameters": 124439808,
+  "numLayers": 12,
+  "hiddenSize": 768,
+  "mlpSize": 3072,
+  "attentionHeads": 12,
+  "headDim": 64,
+  "vocab": 50257,
+  "context": 1024,
+  "dtype": "float32"
+ },
+ "dataset": {
+  "id": "rajpurkar/squad",
+  "revision": "7b6d24c440a36b6815f21b70d25016731768db1f",
+  "split": "validation",
+  "article": "Apollo_program",
+  "license": "CC BY-SA 4.0",
+  "url": "https://huggingface.co/datasets/rajpurkar/squad/tree/7b6d24c440a36b6815f21b70d25016731768db1f",
+  "text": "The Apollo program, also known as Project Apollo, was the third United States human spaceflight program",
+  "paragraph": 0
+ },
+ "tokens": [
+  {
+   "id": 464,
+   "text": "The"
+  },
+  {
+   "id": 17508,
+   "text": " Apollo"
+  },
+  {
+   "id": 1430,
+   "text": " program"
+  },
+  {
+   "id": 11,
+   "text": ","
+  },
+  {
+   "id": 635,
+   "text": " also"
+  },
+  {
+   "id": 1900,
+   "text": " known"
+  },
+  {
+   "id": 355,
+   "text": " as"
+  },
+  {
+   "id": 4935,
+   "text": " Project"
+  },
+  {
+   "id": 17508,
+   "text": " Apollo"
+  },
+  {
+   "id": 11,
+   "text": ","
+  },
+  {
+   "id": 373,
+   "text": " was"
+  },
+  {
+   "id": 262,
+   "text": " the"
+  },
+  {
+   "id": 2368,
+   "text": " third"
+  },
+  {
+   "id": 1578,
+   "text": " United"
+  },
+  {
+   "id": 1829,
+   "text": " States"
+  },
+  {
+   "id": 1692,
+   "text": " human"
+  },
+  {
+   "id": 2272,
+   "text": " space"
+  },
+  {
+   "id": 22560,
+   "text": "flight"
+  },
+  {
+   "id": 1430,
+   "text": " program"
+  }
+ ],
+ "nextToken": [
+  {
+   "id": 13,
+   "text": ".",
+   "p": 0.24749381840229034
+  },
+  {
+   "id": 11,
+   "text": ",",
+   "p": 0.12382736802101135
+  },
+  {
+   "id": 284,
+   "text": " to",
+   "p": 0.0807822048664093
+  },
+  {
+   "id": 706,
+   "text": " after",
+   "p": 0.07169804722070694
+  },
+  {
+   "id": 5611,
+   "text": " launched",
+   "p": 0.058622803539037704
+  },
+  {
+   "id": 326,
+   "text": " that",
+   "p": 0.03686702996492386
+  },
+  {
+   "id": 290,
+   "text": " and",
+   "p": 0.03477396070957184
+  },
+  {
+   "id": 287,
+   "text": " in",
+   "p": 0.0325872078537941
+  },
+  {
+   "id": 739,
+   "text": " under",
+   "p": 0.015451584942638874
+  },
+  {
+   "id": 286,
+   "text": " of",
+   "p": 0.015200428664684296
+  }
+ ],
+ "split": {
+  "ranks": 4,
+  "headsPerRank": 3,
+  "attentionColumnsPerRank": 192,
+  "mlpColumnsPerRank": 768,
+  "shards": [
+   {
+    "name": "wte.weight",
+    "perLayer": false,
+    "full": [
+     50257,
+     768
+    ],
+    "shard": [
+     50257,
+     768
+    ],
+    "split": null,
+    "ranges": null,
+    "bytesPerRank": 154389504,
+    "bytesFull": 154389504
+   },
+   {
+    "name": "wpe.weight",
+    "perLayer": false,
+    "full": [
+     1024,
+     768
+    ],
+    "shard": [
+     1024,
+     768
+    ],
+    "split": null,
+    "ranges": null,
+    "bytesPerRank": 3145728,
+    "bytesFull": 3145728
+   },
+   {
+    "name": "ln_1.weight",
+    "perLayer": true,
+    "full": [
+     768
+    ],
+    "shard": [
+     768
+    ],
+    "split": null,
+    "ranges": null,
+    "bytesPerRank": 3072,
+    "bytesFull": 3072
+   },
+   {
+    "name": "ln_1.bias",
+    "perLayer": true,
+    "full": [
+     768
+    ],
+    "shard": [
+     768
+    ],
+    "split": null,
+    "ranges": null,
+    "bytesPerRank": 3072,
+    "bytesFull": 3072
+   },
+   {
+    "name": "attn.c_attn.weight",
+    "perLayer": true,
+    "full": [
+     768,
+     2304
+    ],
+    "shard": [
+     768,
+     576
+    ],
+    "split": "columns",
+    "ranges": [
+     [
+      [
+       0,
+       192
+      ],
+      [
+       768,
+       960
+      ],
+      [
+       1536,
+       1728
+      ]
+     ],
+     [
+      [
+       192,
+       384
+      ],
+      [
+       960,
+       1152
+      ],
+      [
+       1728,
+       1920
+      ]
+     ],
+     [
+      [
+       384,
+       576
+      ],
+      [
+       1152,
+       1344
+      ],
+      [
+       1920,
+       2112
+      ]
+     ],
+     [
+      [
+       576,
+       768
+      ],
+      [
+       1344,
+       1536
+      ],
+      [
+       2112,
+       2304
+      ]
+     ]
+    ],
+    "bytesPerRank": 1769472,
+    "bytesFull": 7077888
+   },
+   {
+    "name": "attn.c_attn.bias",
+    "perLayer": true,
+    "full": [
+     2304
+    ],
+    "shard": [
+     576
+    ],
+    "split": "columns",
+    "ranges": [
+     [
+      [
+       0,
+       192
+      ],
+      [
+       768,
+       960
+      ],
+      [
+       1536,
+       1728
+      ]
+     ],
+     [
+      [
+       192,
+       384
+      ],
+      [
+       960,
+       1152
+      ],
+      [
+       1728,
+       1920
+      ]
+     ],
+     [
+      [
+       384,
+       576
+      ],
+      [
+       1152,
+       1344
+      ],
+      [
+       1920,
+       2112
+      ]
+     ],
+     [
+      [
+       576,
+       768
+      ],
+      [
+       1344,
+       1536
+      ],
+      [
+       2112,
+       2304
+      ]
+     ]
+    ],
+    "bytesPerRank": 2304,
+    "bytesFull": 9216
+   },
+   {
+    "name": "attn.c_proj.weight",
+    "perLayer": true,
+    "full": [
+     768,
+     768
+    ],
+    "shard": [
+     192,
+     768
+    ],
+    "split": "rows",
+    "ranges": [
+     [
+      [
+       0,
+       192
+      ]
+     ],
+     [
+      [
+       192,
+       384
+      ]
+     ],
+     [
+      [
+       384,
+       576
+      ]
+     ],
+     [
+      [
+       576,
+       768
+      ]
+     ]
+    ],
+    "bytesPerRank": 589824,
+    "bytesFull": 2359296
+   },
+   {
+    "name": "attn.c_proj.bias",
+    "perLayer": true,
+    "full": [
+     768
+    ],
+    "shard": [
+     768
+    ],
+    "split": null,
+    "ranges": null,
+    "bytesPerRank": 3072,
+    "bytesFull": 3072
+   },
+   {
+    "name": "ln_2.weight",
+    "perLayer": true,
+    "full": [
+     768
+    ],
+    "shard": [
+     768
+    ],
+    "split": null,
+    "ranges": null,
+    "bytesPerRank": 3072,
+    "bytesFull": 3072
+   },
+   {
+    "name": "ln_2.bias",
+    "perLayer": true,
+    "full": [
+     768
+    ],
+    "shard": [
+     768
+    ],
+    "split": null,
+    "ranges": null,
+    "bytesPerRank": 3072,
+    "bytesFull": 3072
+   },
+   {
+    "name": "mlp.c_fc.weight",
+    "perLayer": true,
+    "full": [
+     768,
+     3072
+    ],
+    "shard": [
+     768,
+     768
+    ],
+    "split": "columns",
+    "ranges": [
+     [
+      [
+       0,
+       768
+      ]
+     ],
+     [
+      [
+       768,
+       1536
+      ]
+     ],
+     [
+      [
+       1536,
+       2304
+      ]
+     ],
+     [
+      [
+       2304,
+       3072
+      ]
+     ]
+    ],
+    "bytesPerRank": 2359296,
+    "bytesFull": 9437184
+   },
+   {
+    "name": "mlp.c_fc.bias",
+    "perLayer": true,
+    "full": [
+     3072
+    ],
+    "shard": [
+     768
+    ],
+    "split": "columns",
+    "ranges": [
+     [
+      [
+       0,
+       768
+      ]
+     ],
+     [
+      [
+       768,
+       1536
+      ]
+     ],
+     [
+      [
+       1536,
+       2304
+      ]
+     ],
+     [
+      [
+       2304,
+       3072
+      ]
+     ]
+    ],
+    "bytesPerRank": 3072,
+    "bytesFull": 12288
+   },
+   {
+    "name": "mlp.c_proj.weight",
+    "perLayer": true,
+    "full": [
+     3072,
+     768
+    ],
+    "shard": [
+     768,
+     768
+    ],
+    "split": "rows",
+    "ranges": [
+     [
+      [
+       0,
+       768
+      ]
+     ],
+     [
+      [
+       768,
+       1536
+      ]
+     ],
+     [
+      [
+       1536,
+       2304
+      ]
+     ],
+     [
+      [
+       2304,
+       3072
+      ]
+     ]
+    ],
+    "bytesPerRank": 2359296,
+    "bytesFull": 9437184
+   },
+   {
+    "name": "mlp.c_proj.bias",
+    "perLayer": true,
+    "full": [
+     768
+    ],
+    "shard": [
+     768
+    ],
+    "split": null,
+    "ranges": null,
+    "bytesPerRank": 3072,
+    "bytesFull": 3072
+   },
+   {
+    "name": "ln_f.weight",
+    "perLayer": false,
+    "full": [
+     768
+    ],
+    "shard": [
+     768
+    ],
+    "split": null,
+    "ranges": null,
+    "bytesPerRank": 3072,
+    "bytesFull": 3072
+   },
+   {
+    "name": "ln_f.bias",
+    "perLayer": false,
+    "full": [
+     768
+    ],
+    "shard": [
+     768
+    ],
+    "split": null,
+    "ranges": null,
+    "bytesPerRank": 3072,
+    "bytesFull": 3072
+   }
+  ],
+  "shownDims": 64,
+  "outputScale": {
+   "attention": 2570.286376953125,
+   "mlp": 2317.259765625
+  }
+ },
+ "step": {
+  "loss": 2.8145172595977783,
+  "referenceLoss": 2.8145129680633545,
+  "allReduce": {
+   "shape": [
+    19,
+    768
+   ],
+   "bytes": 58368,
+   "perStep": 48
+  },
+  "collectives": [
+   {
+    "layer": 0,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.001475,
+     0.001702,
+     0.001786,
+     0.001739
+    ],
+    "end": [
+     0.003675,
+     0.003414,
+     0.003503,
+     0.003774
+    ]
+   },
+   {
+    "layer": 0,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.005363,
+     0.0051,
+     0.005714,
+     0.005394
+    ],
+    "end": [
+     0.006954,
+     0.006976,
+     0.00697,
+     0.007014
+    ]
+   },
+   {
+    "layer": 1,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.007821,
+     0.007986,
+     0.007851,
+     0.00779
+    ],
+    "end": [
+     0.009354,
+     0.00938,
+     0.009354,
+     0.009321
+    ]
+   },
+   {
+    "layer": 1,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.010607,
+     0.010595,
+     0.010503,
+     0.01043
+    ],
+    "end": [
+     0.011956,
+     0.011981,
+     0.011896,
+     0.011917
+    ]
+   },
+   {
+    "layer": 2,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.012776,
+     0.012808,
+     0.012764,
+     0.012623
+    ],
+    "end": [
+     0.014309,
+     0.014247,
+     0.014316,
+     0.014356
+    ]
+   },
+   {
+    "layer": 2,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.015734,
+     0.015746,
+     0.015387,
+     0.016137
+    ],
+    "end": [
+     0.018181,
+     0.018199,
+     0.01819,
+     0.018185
+    ]
+   },
+   {
+    "layer": 3,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.021078,
+     0.021249,
+     0.020632,
+     0.021474
+    ],
+    "end": [
+     0.022967,
+     0.022915,
+     0.022771,
+     0.022835
+    ]
+   },
+   {
+    "layer": 3,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.024442,
+     0.024716,
+     0.024244,
+     0.02413
+    ],
+    "end": [
+     0.02676,
+     0.026765,
+     0.026757,
+     0.026761
+    ]
+   },
+   {
+    "layer": 4,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.027731,
+     0.027745,
+     0.027888,
+     0.02776
+    ],
+    "end": [
+     0.029599,
+     0.02974,
+     0.029678,
+     0.029409
+    ]
+   },
+   {
+    "layer": 4,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.031431,
+     0.031099,
+     0.030839,
+     0.03041
+    ],
+    "end": [
+     0.032792,
+     0.032743,
+     0.032755,
+     0.032792
+    ]
+   },
+   {
+    "layer": 5,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.033758,
+     0.03387,
+     0.033828,
+     0.033993
+    ],
+    "end": [
+     0.03543,
+     0.035469,
+     0.035552,
+     0.035443
+    ]
+   },
+   {
+    "layer": 5,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.036717,
+     0.036915,
+     0.036718,
+     0.037037
+    ],
+    "end": [
+     0.038534,
+     0.038299,
+     0.038921,
+     0.03857
+    ]
+   },
+   {
+    "layer": 6,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.040006,
+     0.039766,
+     0.039773,
+     0.039937
+    ],
+    "end": [
+     0.042112,
+     0.042264,
+     0.042005,
+     0.042305
+    ]
+   },
+   {
+    "layer": 6,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.043866,
+     0.043866,
+     0.043254,
+     0.043435
+    ],
+    "end": [
+     0.045289,
+     0.045252,
+     0.045239,
+     0.045363
+    ]
+   },
+   {
+    "layer": 7,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.046109,
+     0.04624,
+     0.046309,
+     0.04638
+    ],
+    "end": [
+     0.047806,
+     0.047773,
+     0.04775,
+     0.047753
+    ]
+   },
+   {
+    "layer": 7,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.049112,
+     0.049116,
+     0.049119,
+     0.049103
+    ],
+    "end": [
+     0.050751,
+     0.050741,
+     0.050764,
+     0.050758
+    ]
+   },
+   {
+    "layer": 8,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.051734,
+     0.051738,
+     0.051872,
+     0.051795
+    ],
+    "end": [
+     0.054166,
+     0.054129,
+     0.054102,
+     0.054123
+    ]
+   },
+   {
+    "layer": 8,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.055318,
+     0.055744,
+     0.055752,
+     0.055408
+    ],
+    "end": [
+     0.057268,
+     0.057264,
+     0.057295,
+     0.057251
+    ]
+   },
+   {
+    "layer": 9,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.058369,
+     0.058321,
+     0.058513,
+     0.058241
+    ],
+    "end": [
+     0.060073,
+     0.060076,
+     0.060108,
+     0.060098
+    ]
+   },
+   {
+    "layer": 9,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.061435,
+     0.061605,
+     0.061274,
+     0.0617
+    ],
+    "end": [
+     0.063042,
+     0.063072,
+     0.063114,
+     0.063113
+    ]
+   },
+   {
+    "layer": 10,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.064184,
+     0.063974,
+     0.063945,
+     0.064116
+    ],
+    "end": [
+     0.065589,
+     0.065545,
+     0.065556,
+     0.065632
+    ]
+   },
+   {
+    "layer": 10,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.066686,
+     0.0668,
+     0.066972,
+     0.066775
+    ],
+    "end": [
+     0.068365,
+     0.068298,
+     0.068398,
+     0.068321
+    ]
+   },
+   {
+    "layer": 11,
+    "part": "attention",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.069498,
+     0.06995,
+     0.069916,
+     0.06954
+    ],
+    "end": [
+     0.071411,
+     0.071373,
+     0.071449,
+     0.071431
+    ]
+   },
+   {
+    "layer": 11,
+    "part": "mlp",
+    "f": "g",
+    "phase": "forward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.072685,
+     0.072776,
+     0.072796,
+     0.07279
+    ],
+    "end": [
+     0.074359,
+     0.074269,
+     0.074286,
+     0.074307
+    ]
+   },
+   {
+    "layer": 11,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.131938,
+     0.138637,
+     0.146497,
+     0.14614
+    ],
+    "end": [
+     0.148075,
+     0.148131,
+     0.148084,
+     0.148164
+    ]
+   },
+   {
+    "layer": 11,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.151232,
+     0.149791,
+     0.151291,
+     0.151186
+    ],
+    "end": [
+     0.152955,
+     0.152956,
+     0.152971,
+     0.153085
+    ]
+   },
+   {
+    "layer": 10,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.156275,
+     0.156338,
+     0.157424,
+     0.156976
+    ],
+    "end": [
+     0.158876,
+     0.158889,
+     0.158817,
+     0.158879
+    ]
+   },
+   {
+    "layer": 10,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.161225,
+     0.161072,
+     0.161195,
+     0.160856
+    ],
+    "end": [
+     0.162833,
+     0.162822,
+     0.162854,
+     0.162871
+    ]
+   },
+   {
+    "layer": 9,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.166804,
+     0.167762,
+     0.167804,
+     0.167319
+    ],
+    "end": [
+     0.169624,
+     0.169591,
+     0.169572,
+     0.16957
+    ]
+   },
+   {
+    "layer": 9,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.171566,
+     0.171582,
+     0.171405,
+     0.171925
+    ],
+    "end": [
+     0.17352,
+     0.173423,
+     0.173446,
+     0.173429
+    ]
+   },
+   {
+    "layer": 8,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.176679,
+     0.175945,
+     0.175899,
+     0.175818
+    ],
+    "end": [
+     0.17823,
+     0.178209,
+     0.178238,
+     0.178173
+    ]
+   },
+   {
+    "layer": 8,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.180788,
+     0.179843,
+     0.179884,
+     0.180402
+    ],
+    "end": [
+     0.18234,
+     0.182297,
+     0.182341,
+     0.182342
+    ]
+   },
+   {
+    "layer": 7,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.185057,
+     0.183756,
+     0.185217,
+     0.185954
+    ],
+    "end": [
+     0.187378,
+     0.187349,
+     0.187315,
+     0.187355
+    ]
+   },
+   {
+    "layer": 7,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.18941,
+     0.189163,
+     0.18951,
+     0.189077
+    ],
+    "end": [
+     0.191014,
+     0.191057,
+     0.191044,
+     0.19109
+    ]
+   },
+   {
+    "layer": 6,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.194344,
+     0.194352,
+     0.193571,
+     0.194519
+    ],
+    "end": [
+     0.19606,
+     0.196039,
+     0.196063,
+     0.196149
+    ]
+   },
+   {
+    "layer": 6,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.197968,
+     0.199014,
+     0.19762,
+     0.198045
+    ],
+    "end": [
+     0.200463,
+     0.200463,
+     0.200482,
+     0.200477
+    ]
+   },
+   {
+    "layer": 5,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.203221,
+     0.203144,
+     0.203395,
+     0.203479
+    ],
+    "end": [
+     0.205013,
+     0.20503,
+     0.205064,
+     0.205045
+    ]
+   },
+   {
+    "layer": 5,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.206939,
+     0.208165,
+     0.206608,
+     0.208724
+    ],
+    "end": [
+     0.210329,
+     0.210323,
+     0.210349,
+     0.210334
+    ]
+   },
+   {
+    "layer": 4,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.216129,
+     0.212692,
+     0.212816,
+     0.220576
+    ],
+    "end": [
+     0.22212,
+     0.222167,
+     0.222131,
+     0.222094
+    ]
+   },
+   {
+    "layer": 4,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.224087,
+     0.228037,
+     0.223663,
+     0.224171
+    ],
+    "end": [
+     0.22941,
+     0.229404,
+     0.229511,
+     0.229326
+    ]
+   },
+   {
+    "layer": 3,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.232424,
+     0.231761,
+     0.233659,
+     0.231762
+    ],
+    "end": [
+     0.235006,
+     0.235011,
+     0.234994,
+     0.234952
+    ]
+   },
+   {
+    "layer": 3,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.236559,
+     0.237049,
+     0.236641,
+     0.237129
+    ],
+    "end": [
+     0.238576,
+     0.238579,
+     0.238569,
+     0.23853
+    ]
+   },
+   {
+    "layer": 2,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.241148,
+     0.240463,
+     0.241846,
+     0.240926
+    ],
+    "end": [
+     0.24428,
+     0.244107,
+     0.244549,
+     0.244009
+    ]
+   },
+   {
+    "layer": 2,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.247446,
+     0.247284,
+     0.247888,
+     0.246273
+    ],
+    "end": [
+     0.249542,
+     0.249599,
+     0.249618,
+     0.249509
+    ]
+   },
+   {
+    "layer": 1,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.255635,
+     0.25592,
+     0.255157,
+     0.253843
+    ],
+    "end": [
+     0.262464,
+     0.262372,
+     0.262484,
+     0.262458
+    ]
+   },
+   {
+    "layer": 1,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.264763,
+     0.265703,
+     0.26401,
+     0.270862
+    ],
+    "end": [
+     0.2725,
+     0.272538,
+     0.272434,
+     0.272493
+    ]
+   },
+   {
+    "layer": 0,
+    "part": "mlp",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.282792,
+     0.291676,
+     0.287509,
+     0.284161
+    ],
+    "end": [
+     0.293262,
+     0.293256,
+     0.293219,
+     0.293278
+    ]
+   },
+   {
+    "layer": 0,
+    "part": "attention",
+    "f": "f",
+    "phase": "backward",
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "start": [
+     0.308,
+     0.295151,
+     0.294694,
+     0.294463
+    ],
+    "end": [
+     0.309655,
+     0.309719,
+     0.309775,
+     0.309681
+    ]
+   }
+  ]
+ },
+ "logs": [
+  [
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/attention/g",
+    "start": 0.001475,
+    "end": 0.003675,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/mlp/g",
+    "start": 0.005363,
+    "end": 0.006954,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/attention/g",
+    "start": 0.007821,
+    "end": 0.009354,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/mlp/g",
+    "start": 0.010607,
+    "end": 0.011956,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/attention/g",
+    "start": 0.012776,
+    "end": 0.014309,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/mlp/g",
+    "start": 0.015734,
+    "end": 0.018181,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/attention/g",
+    "start": 0.021078,
+    "end": 0.022967,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/mlp/g",
+    "start": 0.024442,
+    "end": 0.02676,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/attention/g",
+    "start": 0.027731,
+    "end": 0.029599,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/mlp/g",
+    "start": 0.031431,
+    "end": 0.032792,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/attention/g",
+    "start": 0.033758,
+    "end": 0.03543,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/mlp/g",
+    "start": 0.036717,
+    "end": 0.038534,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/attention/g",
+    "start": 0.040006,
+    "end": 0.042112,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/mlp/g",
+    "start": 0.043866,
+    "end": 0.045289,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/attention/g",
+    "start": 0.046109,
+    "end": 0.047806,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/mlp/g",
+    "start": 0.049112,
+    "end": 0.050751,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/attention/g",
+    "start": 0.051734,
+    "end": 0.054166,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/mlp/g",
+    "start": 0.055318,
+    "end": 0.057268,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/attention/g",
+    "start": 0.058369,
+    "end": 0.060073,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/mlp/g",
+    "start": 0.061435,
+    "end": 0.063042,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/attention/g",
+    "start": 0.064184,
+    "end": 0.065589,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/mlp/g",
+    "start": 0.066686,
+    "end": 0.068365,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/attention/g",
+    "start": 0.069498,
+    "end": 0.071411,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/mlp/g",
+    "start": 0.072685,
+    "end": 0.074359,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "compute",
+    "op": "forward",
+    "label": "",
+    "start": 0.000316,
+    "end": 0.085823
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/mlp/f",
+    "start": 0.131938,
+    "end": 0.148075,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/attention/f",
+    "start": 0.151232,
+    "end": 0.152955,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/mlp/f",
+    "start": 0.156275,
+    "end": 0.158876,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/attention/f",
+    "start": 0.161225,
+    "end": 0.162833,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/mlp/f",
+    "start": 0.166804,
+    "end": 0.169624,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/attention/f",
+    "start": 0.171566,
+    "end": 0.17352,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/mlp/f",
+    "start": 0.176679,
+    "end": 0.17823,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/attention/f",
+    "start": 0.180788,
+    "end": 0.18234,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/mlp/f",
+    "start": 0.185057,
+    "end": 0.187378,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/attention/f",
+    "start": 0.18941,
+    "end": 0.191014,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/mlp/f",
+    "start": 0.194344,
+    "end": 0.19606,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/attention/f",
+    "start": 0.197968,
+    "end": 0.200463,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/mlp/f",
+    "start": 0.203221,
+    "end": 0.205013,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/attention/f",
+    "start": 0.206939,
+    "end": 0.210329,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/mlp/f",
+    "start": 0.216129,
+    "end": 0.22212,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/attention/f",
+    "start": 0.224087,
+    "end": 0.22941,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/mlp/f",
+    "start": 0.232424,
+    "end": 0.235006,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/attention/f",
+    "start": 0.236559,
+    "end": 0.238576,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/mlp/f",
+    "start": 0.241148,
+    "end": 0.24428,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/attention/f",
+    "start": 0.247446,
+    "end": 0.249542,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/mlp/f",
+    "start": 0.255635,
+    "end": 0.262464,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/attention/f",
+    "start": 0.264763,
+    "end": 0.2725,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/mlp/f",
+    "start": 0.282792,
+    "end": 0.293262,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/attention/f",
+    "start": 0.308,
+    "end": 0.309655,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "compute",
+    "op": "backward",
+    "label": "",
+    "start": 0.095064,
+    "end": 0.467625
+   }
+  ],
+  [
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/attention/g",
+    "start": 0.001702,
+    "end": 0.003414,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/mlp/g",
+    "start": 0.0051,
+    "end": 0.006976,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/attention/g",
+    "start": 0.007986,
+    "end": 0.00938,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/mlp/g",
+    "start": 0.010595,
+    "end": 0.011981,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/attention/g",
+    "start": 0.012808,
+    "end": 0.014247,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/mlp/g",
+    "start": 0.015746,
+    "end": 0.018199,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/attention/g",
+    "start": 0.021249,
+    "end": 0.022915,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/mlp/g",
+    "start": 0.024716,
+    "end": 0.026765,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/attention/g",
+    "start": 0.027745,
+    "end": 0.02974,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/mlp/g",
+    "start": 0.031099,
+    "end": 0.032743,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/attention/g",
+    "start": 0.03387,
+    "end": 0.035469,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/mlp/g",
+    "start": 0.036915,
+    "end": 0.038299,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/attention/g",
+    "start": 0.039766,
+    "end": 0.042264,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/mlp/g",
+    "start": 0.043866,
+    "end": 0.045252,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/attention/g",
+    "start": 0.04624,
+    "end": 0.047773,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/mlp/g",
+    "start": 0.049116,
+    "end": 0.050741,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/attention/g",
+    "start": 0.051738,
+    "end": 0.054129,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/mlp/g",
+    "start": 0.055744,
+    "end": 0.057264,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/attention/g",
+    "start": 0.058321,
+    "end": 0.060076,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/mlp/g",
+    "start": 0.061605,
+    "end": 0.063072,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/attention/g",
+    "start": 0.063974,
+    "end": 0.065545,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/mlp/g",
+    "start": 0.0668,
+    "end": 0.068298,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/attention/g",
+    "start": 0.06995,
+    "end": 0.071373,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/mlp/g",
+    "start": 0.072776,
+    "end": 0.074269,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "compute",
+    "op": "forward",
+    "label": "",
+    "start": 0.000657,
+    "end": 0.086517
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/mlp/f",
+    "start": 0.138637,
+    "end": 0.148131,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/attention/f",
+    "start": 0.149791,
+    "end": 0.152956,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/mlp/f",
+    "start": 0.156338,
+    "end": 0.158889,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/attention/f",
+    "start": 0.161072,
+    "end": 0.162822,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/mlp/f",
+    "start": 0.167762,
+    "end": 0.169591,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/attention/f",
+    "start": 0.171582,
+    "end": 0.173423,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/mlp/f",
+    "start": 0.175945,
+    "end": 0.178209,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/attention/f",
+    "start": 0.179843,
+    "end": 0.182297,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/mlp/f",
+    "start": 0.183756,
+    "end": 0.187349,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/attention/f",
+    "start": 0.189163,
+    "end": 0.191057,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/mlp/f",
+    "start": 0.194352,
+    "end": 0.196039,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/attention/f",
+    "start": 0.199014,
+    "end": 0.200463,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/mlp/f",
+    "start": 0.203144,
+    "end": 0.20503,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/attention/f",
+    "start": 0.208165,
+    "end": 0.210323,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/mlp/f",
+    "start": 0.212692,
+    "end": 0.222167,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/attention/f",
+    "start": 0.228037,
+    "end": 0.229404,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/mlp/f",
+    "start": 0.231761,
+    "end": 0.235011,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/attention/f",
+    "start": 0.237049,
+    "end": 0.238579,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/mlp/f",
+    "start": 0.240463,
+    "end": 0.244107,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/attention/f",
+    "start": 0.247284,
+    "end": 0.249599,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/mlp/f",
+    "start": 0.25592,
+    "end": 0.262372,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/attention/f",
+    "start": 0.265703,
+    "end": 0.272538,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/mlp/f",
+    "start": 0.291676,
+    "end": 0.293256,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/attention/f",
+    "start": 0.295151,
+    "end": 0.309719,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "compute",
+    "op": "backward",
+    "label": "",
+    "start": 0.09643,
+    "end": 0.482209
+   }
+  ],
+  [
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/attention/g",
+    "start": 0.001786,
+    "end": 0.003503,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/mlp/g",
+    "start": 0.005714,
+    "end": 0.00697,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/attention/g",
+    "start": 0.007851,
+    "end": 0.009354,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/mlp/g",
+    "start": 0.010503,
+    "end": 0.011896,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/attention/g",
+    "start": 0.012764,
+    "end": 0.014316,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/mlp/g",
+    "start": 0.015387,
+    "end": 0.01819,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/attention/g",
+    "start": 0.020632,
+    "end": 0.022771,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/mlp/g",
+    "start": 0.024244,
+    "end": 0.026757,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/attention/g",
+    "start": 0.027888,
+    "end": 0.029678,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/mlp/g",
+    "start": 0.030839,
+    "end": 0.032755,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/attention/g",
+    "start": 0.033828,
+    "end": 0.035552,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/mlp/g",
+    "start": 0.036718,
+    "end": 0.038921,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/attention/g",
+    "start": 0.039773,
+    "end": 0.042005,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/mlp/g",
+    "start": 0.043254,
+    "end": 0.045239,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/attention/g",
+    "start": 0.046309,
+    "end": 0.04775,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/mlp/g",
+    "start": 0.049119,
+    "end": 0.050764,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/attention/g",
+    "start": 0.051872,
+    "end": 0.054102,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/mlp/g",
+    "start": 0.055752,
+    "end": 0.057295,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/attention/g",
+    "start": 0.058513,
+    "end": 0.060108,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/mlp/g",
+    "start": 0.061274,
+    "end": 0.063114,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/attention/g",
+    "start": 0.063945,
+    "end": 0.065556,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/mlp/g",
+    "start": 0.066972,
+    "end": 0.068398,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/attention/g",
+    "start": 0.069916,
+    "end": 0.071449,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/mlp/g",
+    "start": 0.072796,
+    "end": 0.074286,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "compute",
+    "op": "forward",
+    "label": "",
+    "start": 0.000546,
+    "end": 0.089366
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/mlp/f",
+    "start": 0.146497,
+    "end": 0.148084,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/attention/f",
+    "start": 0.151291,
+    "end": 0.152971,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/mlp/f",
+    "start": 0.157424,
+    "end": 0.158817,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/attention/f",
+    "start": 0.161195,
+    "end": 0.162854,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/mlp/f",
+    "start": 0.167804,
+    "end": 0.169572,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/attention/f",
+    "start": 0.171405,
+    "end": 0.173446,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/mlp/f",
+    "start": 0.175899,
+    "end": 0.178238,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/attention/f",
+    "start": 0.179884,
+    "end": 0.182341,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/mlp/f",
+    "start": 0.185217,
+    "end": 0.187315,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/attention/f",
+    "start": 0.18951,
+    "end": 0.191044,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/mlp/f",
+    "start": 0.193571,
+    "end": 0.196063,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/attention/f",
+    "start": 0.19762,
+    "end": 0.200482,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/mlp/f",
+    "start": 0.203395,
+    "end": 0.205064,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/attention/f",
+    "start": 0.206608,
+    "end": 0.210349,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/mlp/f",
+    "start": 0.212816,
+    "end": 0.222131,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/attention/f",
+    "start": 0.223663,
+    "end": 0.229511,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/mlp/f",
+    "start": 0.233659,
+    "end": 0.234994,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/attention/f",
+    "start": 0.236641,
+    "end": 0.238569,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/mlp/f",
+    "start": 0.241846,
+    "end": 0.244549,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/attention/f",
+    "start": 0.247888,
+    "end": 0.249618,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/mlp/f",
+    "start": 0.255157,
+    "end": 0.262484,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/attention/f",
+    "start": 0.26401,
+    "end": 0.272434,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/mlp/f",
+    "start": 0.287509,
+    "end": 0.293219,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/attention/f",
+    "start": 0.294694,
+    "end": 0.309775,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "compute",
+    "op": "backward",
+    "label": "",
+    "start": 0.09931,
+    "end": 0.482177
+   }
+  ],
+  [
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/attention/g",
+    "start": 0.001739,
+    "end": 0.003774,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/mlp/g",
+    "start": 0.005394,
+    "end": 0.007014,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/attention/g",
+    "start": 0.00779,
+    "end": 0.009321,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/mlp/g",
+    "start": 0.01043,
+    "end": 0.011917,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/attention/g",
+    "start": 0.012623,
+    "end": 0.014356,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/mlp/g",
+    "start": 0.016137,
+    "end": 0.018185,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/attention/g",
+    "start": 0.021474,
+    "end": 0.022835,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/mlp/g",
+    "start": 0.02413,
+    "end": 0.026761,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/attention/g",
+    "start": 0.02776,
+    "end": 0.029409,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/mlp/g",
+    "start": 0.03041,
+    "end": 0.032792,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/attention/g",
+    "start": 0.033993,
+    "end": 0.035443,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/mlp/g",
+    "start": 0.037037,
+    "end": 0.03857,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/attention/g",
+    "start": 0.039937,
+    "end": 0.042305,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/mlp/g",
+    "start": 0.043435,
+    "end": 0.045363,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/attention/g",
+    "start": 0.04638,
+    "end": 0.047753,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/mlp/g",
+    "start": 0.049103,
+    "end": 0.050758,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/attention/g",
+    "start": 0.051795,
+    "end": 0.054123,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/mlp/g",
+    "start": 0.055408,
+    "end": 0.057251,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/attention/g",
+    "start": 0.058241,
+    "end": 0.060098,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/mlp/g",
+    "start": 0.0617,
+    "end": 0.063113,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/attention/g",
+    "start": 0.064116,
+    "end": 0.065632,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/mlp/g",
+    "start": 0.066775,
+    "end": 0.068321,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/attention/g",
+    "start": 0.06954,
+    "end": 0.071431,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/mlp/g",
+    "start": 0.07279,
+    "end": 0.074307,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "compute",
+    "op": "forward",
+    "label": "",
+    "start": 0.000667,
+    "end": 0.088147
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/mlp/f",
+    "start": 0.14614,
+    "end": 0.148164,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "11/attention/f",
+    "start": 0.151186,
+    "end": 0.153085,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/mlp/f",
+    "start": 0.156976,
+    "end": 0.158879,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "10/attention/f",
+    "start": 0.160856,
+    "end": 0.162871,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/mlp/f",
+    "start": 0.167319,
+    "end": 0.16957,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "9/attention/f",
+    "start": 0.171925,
+    "end": 0.173429,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/mlp/f",
+    "start": 0.175818,
+    "end": 0.178173,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "8/attention/f",
+    "start": 0.180402,
+    "end": 0.182342,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/mlp/f",
+    "start": 0.185954,
+    "end": 0.187355,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "7/attention/f",
+    "start": 0.189077,
+    "end": 0.19109,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/mlp/f",
+    "start": 0.194519,
+    "end": 0.196149,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "6/attention/f",
+    "start": 0.198045,
+    "end": 0.200477,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/mlp/f",
+    "start": 0.203479,
+    "end": 0.205045,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "5/attention/f",
+    "start": 0.208724,
+    "end": 0.210334,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/mlp/f",
+    "start": 0.220576,
+    "end": 0.222094,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "4/attention/f",
+    "start": 0.224171,
+    "end": 0.229326,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/mlp/f",
+    "start": 0.231762,
+    "end": 0.234952,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "3/attention/f",
+    "start": 0.237129,
+    "end": 0.23853,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/mlp/f",
+    "start": 0.240926,
+    "end": 0.244009,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "2/attention/f",
+    "start": 0.246273,
+    "end": 0.249509,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/mlp/f",
+    "start": 0.253843,
+    "end": 0.262458,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "1/attention/f",
+    "start": 0.270862,
+    "end": 0.272493,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/mlp/f",
+    "start": 0.284161,
+    "end": 0.293278,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "collective",
+    "op": "all-reduce",
+    "label": "0/attention/f",
+    "start": 0.294463,
+    "end": 0.309681,
+    "shape": [
+     19,
+     768
+    ],
+    "bytes": 58368,
+    "ranks": [
+     0,
+     1,
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "compute",
+    "op": "backward",
+    "label": "",
+    "start": 0.097088,
+    "end": 0.489398
+   }
+  ]
+ ],
+ "memory": {
+  "paramBytesPerRank": [
+   242761728,
+   242761728,
+   242761728,
+   242761728
+  ],
+  "paramBytesUnsplit": 497759232,
+  "peakRssPerRank": [
+   1159692288,
+   1127284736,
+   1142243328,
+   1141882880
+  ]
+ },
+ "tensors": {
+  "file": "tp.f32",
+  "sha256": "f952c8def56fe4857678a0f4d46955357a45e64bca8513b03f26fc36971e42aa",
+  "bytes": 1123472,
+  "tensors": {
+   "attention": {
+    "offset": 0,
+    "length": 51984,
+    "shape": [
+     12,
+     12,
+     19,
+     19
+    ]
+   },
+   "partial.attention": {
+    "offset": 51984,
+    "length": 58368,
+    "shape": [
+     12,
+     4,
+     19,
+     64
+    ]
+   },
+   "partial.mlp": {
+    "offset": 110352,
+    "length": 58368,
+    "shape": [
+     12,
+     4,
+     19,
+     64
+    ]
+   },
+   "bias.attention": {
+    "offset": 168720,
+    "length": 768,
+    "shape": [
+     12,
+     64
+    ]
+   },
+   "bias.mlp": {
+    "offset": 169488,
+    "length": 768,
+    "shape": [
+     12,
+     64
+    ]
+   },
+   "norm.qkvColumns": {
+    "offset": 170256,
+    "length": 27648,
+    "shape": [
+     12,
+     2304
+    ]
+   },
+   "norm.attnRows": {
+    "offset": 197904,
+    "length": 9216,
+    "shape": [
+     12,
+     768
+    ]
+   },
+   "norm.fcColumns": {
+    "offset": 207120,
+    "length": 36864,
+    "shape": [
+     12,
+     3072
+    ]
+   },
+   "norm.mlpRows": {
+    "offset": 243984,
+    "length": 36864,
+    "shape": [
+     12,
+     3072
+    ]
+   },
+   "topProbs": {
+    "offset": 280848,
+    "length": 10,
+    "shape": [
+     10
+    ]
+   },
+   "topIds": {
+    "offset": 280858,
+    "length": 10,
+    "shape": [
+     10
+    ]
+   }
+  }
+ },
+ "validation": {
+  "logitsVsUnsplit": 0.000335693359375,
+  "logitsAcrossRanks": 0.0,
+  "lossVsUnsplit": 4.291534423828125e-06,
+  "blockOutputsVsUnsplit": 0.0048828125,
+  "attentionWeightsVsUnsplit": 5.0961971282958984e-06,
+  "attentionPartialSumVsUnsplit": 0.002197265625,
+  "mlpPartialSumVsUnsplit": 0.005126953125,
+  "shardsReassembled": 0.0,
+  "shardGradientsVsUnsplit": 2.08243727684021e-06,
+  "replicatedGradientsVsUnsplit": 5.53131103515625e-05,
+  "allReduceBytesVsSeqTimesHidden": 0.0
+ },
+ "capture": {
+  "timestamp": "2026-11-02T05:03:16.261572+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "ranks": 4,
+  "backend": "torch.distributed gloo, 4 processes on 127.0.0.1, 2 CPU threads each",
+  "clock": "time.perf_counter_ns (mach_absolute_time, shared by every process), from a start rank 0 broadcasts",
+  "machine": "Apple M4 Max",
+  "cpuCount": 14,
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "transformers": "4.57.6",
+   "numpy": "2.5.4",
+   "safetensors": "0.8.0"
+  },
+  "script": "scripts/parallelism/record_tp.py",
+  "scriptSha256": "de3f80eb107af92f0deaef4f2959b21c413d0a14fe2f28df5d65f899d38662fb",
+  "helperSha256": "d3e7f9115064bb318fe65afb2c335edbb49d419ce4aa028da409c98a2b24d436",
+  "drawer": "pytorch/parallelism_tp.py",
+  "drawerSha256": "65776b88fe3cbf2d3bb55d5a2b27a5f42e28b70965436ce5bf3df430b25e083d"
+ }
+}

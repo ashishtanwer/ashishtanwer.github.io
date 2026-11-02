@@ -1,0 +1,1 @@
+import"../chunks/DiByS9l5.js";import"../chunks/BKnyvS7u.js";import{E as t}from"../chunks/Clb5qpnM.js";const o=!0,r="always",p=Object.freeze(Object.defineProperty({__proto__:null,prerender:o,trailingSlash:r},Symbol.toStringTag,{value:"Module"}));function c(e){t(e,{variant:"gptq"})}export{c as component,p as universal};

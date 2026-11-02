@@ -1,0 +1,1 @@
+import"../chunks/DiByS9l5.js";import"../chunks/BKnyvS7u.js";import{E as t}from"../chunks/D-bLrHpr.js";const r=!0,o="always",p=Object.freeze(Object.defineProperty({__proto__:null,prerender:r,trailingSlash:o},Symbol.toStringTag,{value:"Module"}));function l(e){t(e,{variant:"perplexity"})}export{l as component,p as universal};
