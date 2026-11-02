@@ -1,1 +1,0 @@
-import"../chunks/Bn94IlY-.js";import"../chunks/D0NElT5L.js";import{I as t}from"../chunks/BtRwh8Ze.js";const r=!0,o="always",l=Object.freeze(Object.defineProperty({__proto__:null,prerender:r,trailingSlash:o},Symbol.toStringTag,{value:"Module"}));function p(e){t(e,{variant:"logit-lens"})}export{p as component,l as universal};
