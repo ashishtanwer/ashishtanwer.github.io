@@ -1,0 +1,3 @@
+Speech synthesised by Kokoro-82M (hexgrad/Kokoro-82M, revision f3ff3571791e39611d31c381e3a41a3af07b4987), Apache License 2.0,
+https://www.apache.org/licenses/LICENSE-2.0, with the voices af_heart, af_bella, am_michael.
+Text, written for this explainer: "Have you seen my brother? He said he would be back by noon."

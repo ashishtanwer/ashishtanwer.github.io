@@ -15,7 +15,8 @@ The prompt `a red apple on a wooden table`, the empty prompt for classifier-free
 scale 7.5, 256 × 256 pixels (a 4 × 32 × 32 latent), 20 steps and
 `torch.Generator("cpu").manual_seed(0)`, under three schedulers built from the model's own
 scheduler config: `DDIMScheduler` (η = 0), `EulerDiscreteScheduler` and
-`DPMSolverMultistepScheduler` (DPM-Solver++, second order).
+`DPMSolverMultistepScheduler` (DPM-Solver++, second order). Then DDIM again with the same seed at guidance
+scales 1, 2, 3, 5, 7.5, 10, 15 and 20; at 1 the pipeline runs the prompt's pass alone.
 
 ## Files
 
@@ -28,6 +29,8 @@ scheduler config: `DDIMScheduler` (η = 0), `EulerDiscreteScheduler` and
 | `vae.f32`                         | the VAE on a photo: the latent distribution's mean and standard deviation, and mean × 0.18215                                                                                                                                                                                                                       |
 | `*-final.png`                     | each run's image, as the pipeline returns it                                                                                                                                                                                                                                                                        |
 | `*-x0.jpg`, `ddim-xt.jpg`         | 128 px JPEG decodes of every step's x̂₀ (and of DDIM's z_t), by the pipeline's VAE                                                                                                                                                                                                                                   |
+| `guidance-S.jpg`                  | DDIM's image at guidance scale S                                                                                                                                                                                                                                                                                    |
+| `guidance-S-x0.jpg`               | 128 px JPEG decodes of every step's x̂₀ at guidance scales 1, 3 and 15 (7.5's are `ddim-x0.jpg`)                                                                                                                                                                                                                     |
 | `vae-input.png`, `vae-output.png` | the photo as the VAE saw it, and its reconstruction                                                                                                                                                                                                                                                                 |
 
 The photo is [Dog beagle](https://commons.wikimedia.org/wiki/File:Dog_beagle.jpg) by Jon Sullivan,
