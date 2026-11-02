@@ -1,0 +1,1 @@
+import"../chunks/DI73hDX3.js";import"../chunks/ypLyoF_c.js";import{R as t}from"../chunks/D2JmDPne.js";const r=!0,o="always",l=Object.freeze(Object.defineProperty({__proto__:null,prerender:r,trailingSlash:o},Symbol.toStringTag,{value:"Module"}));function p(e){t(e,{variant:"embeddings"})}export{p as component,l as universal};

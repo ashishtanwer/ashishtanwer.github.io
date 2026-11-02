@@ -1,1 +1,0 @@
-import{L as d,u,x as n,d as c,M as p}from"./tTz85v1j.js";function y(s,o,r){d(()=>{var a=u(()=>o(s,r?.())||{});if(r&&a?.update){var t=!1,f={};n(()=>{var e=r();c(e),t&&p(f,e)&&(f=e,a.update(e))}),t=!0}if(a?.destroy)return()=>a.destroy()})}export{y as a};
