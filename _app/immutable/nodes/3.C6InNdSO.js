@@ -1,1 +1,0 @@
-import"../chunks/D4hPVJKZ.js";import"../chunks/WPYnzORR.js";import{A as t}from"../chunks/DHIEWb3r.js";const o=!0,r="always",l=Object.freeze(Object.defineProperty({__proto__:null,prerender:o,trailingSlash:r},Symbol.toStringTag,{value:"Module"}));function p(e){t(e,{variant:"tool-calling"})}export{p as component,l as universal};
