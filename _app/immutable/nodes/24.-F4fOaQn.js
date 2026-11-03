@@ -1,0 +1,1 @@
+import"../chunks/_QuykFFc.js";import"../chunks/BBpFSkTw.js";import{G as r}from"../chunks/C9S-2_CM.js";const t=!0,a="always",i=Object.freeze(Object.defineProperty({__proto__:null,prerender:t,trailingSlash:a},Symbol.toStringTag,{value:"Module"}));function p(e){r(e,{variant:"message-passing"})}export{p as component,i as universal};

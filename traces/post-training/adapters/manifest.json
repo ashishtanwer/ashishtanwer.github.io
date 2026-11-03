@@ -1,0 +1,452 @@
+{
+ "kind": "adapters-compare",
+ "tab": "adapters",
+ "schemaVersion": 1,
+ "methods": [
+  "lora",
+  "qlora",
+  "dora"
+ ],
+ "members": {
+  "lora": {
+   "manifestSha256": "170f7d7853b619caede7d3f70c5ad0db778f5c315abd9f8ca7c15903be275fc2",
+   "dataSha256": "3f32ed966e033db03b612530bb325edc2c205ef36a472d8b532dd1341d2411fb"
+  },
+  "qlora": {
+   "manifestSha256": "891208bfe437a7fa2f29b8d107c0747ee48d05c2f7a9060ee26963cb1632c1d0",
+   "dataSha256": "f2b18175141e7d9090e2630d4a3d8a35416e37014495347c5993a496cf07da6f"
+  },
+  "dora": {
+   "manifestSha256": "6416f72686245560f8e2ad1512dc7ee2a7067185301ca9751ff38db3f8292999",
+   "dataSha256": "48f6a2a93ae7de4f3b86943f291dcb9a05cc90a5ce73ca8e9cd45dde60a8936c"
+  }
+ },
+ "model": {
+  "id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct",
+  "license": "Apache-2.0",
+  "layers": 30,
+  "shapes": {
+   "q_proj": [
+    576,
+    576
+   ],
+   "v_proj": [
+    192,
+    576
+   ]
+  }
+ },
+ "run": {
+  "rank": 8,
+  "alpha": 16,
+  "scale": 2.0,
+  "targets": [
+   "q_proj",
+   "v_proj"
+  ],
+  "steps": 40,
+  "lr": 0.001,
+  "checkpoints": [
+   0,
+   1,
+   2,
+   3,
+   5,
+   10,
+   15,
+   20,
+   25,
+   30,
+   35,
+   40
+  ],
+  "showLayer": 15,
+  "top": 32,
+  "pairs": [
+   [
+    "lora",
+    "qlora"
+   ],
+   [
+    "lora",
+    "dora"
+   ],
+   [
+    "qlora",
+    "dora"
+   ]
+  ],
+  "threads": {
+   "lora": 10,
+   "qlora": 10,
+   "dora": 10
+  },
+  "note": "each method re-run in its own process (twice, in one slot holding both heavy-run slots) for its matrices; step times from a third run of all three in one process, step by step in turn; CPU float32 (QLoRA: NF4 base, float32 compute)"
+ },
+ "cost": {
+  "lora": {
+   "trainable": 460800,
+   "fastestStep": 0.7566017910139635,
+   "medianStep": 1.3849752500100294,
+   "savedForBackward": 962780164,
+   "timing": "the 40 steps, the three runs' steps taken in turn in one process (step s runs the methods starting at index s mod 3 of lora, qlora, dora; 10 threads)",
+   "processes": [
+    {
+     "fastestStep": 0.8006045000074664,
+     "medianStep": 1.6585997499933,
+     "medianForwardBackward": 1.6518387919932138,
+     "medianOptimizerStep": 0.010148916000616737,
+     "wall": 103.83358341699932,
+     "rssBeforeTraining": 1033240576,
+     "rssPeakInSteps": 3860611072,
+     "machineCoresBusy": 4.1323684210526315,
+     "ownCoresBusy": 1.5624699248120302
+    },
+    {
+     "fastestStep": 1.0343496249988675,
+     "medianStep": 1.1509408340061782,
+     "medianForwardBackward": 1.1418858749966603,
+     "medianOptimizerStep": 0.008161584002664313,
+     "wall": 79.71466045900888,
+     "rssBeforeTraining": 1043480576,
+     "rssPeakInSteps": 3163930624,
+     "machineCoresBusy": 5.4366896551724135,
+     "ownCoresBusy": 1.7518965517241378
+    }
+   ],
+   "base": {
+    "embedding": 113246208,
+    "linearWeights": 424673280,
+    "other": 140544,
+    "total": 538060032
+   },
+   "adapters": 1843200,
+   "optimizer": 3686880,
+   "grads": 1843200
+  },
+  "qlora": {
+   "trainable": 460800,
+   "fastestStep": 0.8900715000054333,
+   "medianStep": 1.4491567499935627,
+   "savedForBackward": 962780164,
+   "timing": "the 40 steps, the three runs' steps taken in turn in one process (step s runs the methods starting at index s mod 3 of lora, qlora, dora; 10 threads)",
+   "processes": [
+    {
+     "fastestStep": 0.8663532500067959,
+     "medianStep": 1.5185508339927765,
+     "medianForwardBackward": 1.511674208988552,
+     "medianOptimizerStep": 0.0074046250083483756,
+     "wall": 160.65135737499804,
+     "rssBeforeTraining": 798736384,
+     "rssPeakInSteps": 3382427648,
+     "machineCoresBusy": 4.41469109947644,
+     "ownCoresBusy": 1.682324607329843
+    },
+    {
+     "fastestStep": 0.8858852909907,
+     "medianStep": 1.2437401249917457,
+     "medianForwardBackward": 1.2375648329907563,
+     "medianOptimizerStep": 0.006783582997741178,
+     "wall": 146.6902537499991,
+     "rssBeforeTraining": 760725504,
+     "rssPeakInSteps": 3559096320,
+     "machineCoresBusy": 4.8196179775280905,
+     "ownCoresBusy": 1.6763876404494382
+    }
+   ],
+   "base": {
+    "embedding": 113246208,
+    "linearWeights": 53084160,
+    "absmax": 1658880,
+    "codeTables": 228480,
+    "nestedAbsmax": 26160,
+    "quantStateMetadata": 35407,
+    "other": 140544,
+    "total": 168419839
+   },
+   "adapters": 1843200,
+   "optimizer": 3686880,
+   "grads": 1843200
+  },
+  "dora": {
+   "trainable": 483840,
+   "fastestStep": 0.8114974160125712,
+   "medianStep": 1.302732666998054,
+   "savedForBackward": 1103136772,
+   "timing": "the 40 steps, the three runs' steps taken in turn in one process (step s runs the methods starting at index s mod 3 of lora, qlora, dora; 10 threads)",
+   "processes": [
+    {
+     "fastestStep": 0.78261283399479,
+     "medianStep": 0.9308360419963719,
+     "medianForwardBackward": 0.923432416995638,
+     "medianOptimizerStep": 0.007138041997677647,
+     "wall": 111.64675275000627,
+     "rssBeforeTraining": 1066090496,
+     "rssPeakInSteps": 3918544896,
+     "machineCoresBusy": 4.00709963099631,
+     "ownCoresBusy": 1.838708487084871
+    },
+    {
+     "fastestStep": 0.8814774170023156,
+     "medianStep": 1.4439171670092037,
+     "medianForwardBackward": 1.4355743339983746,
+     "medianOptimizerStep": 0.009320249999291264,
+     "wall": 152.80270962500072,
+     "rssBeforeTraining": 1072873472,
+     "rssPeakInSteps": 3442491392,
+     "machineCoresBusy": 4.96654593175853,
+     "ownCoresBusy": 1.6445853018372703
+    }
+   ],
+   "base": {
+    "embedding": 113246208,
+    "linearWeights": 424673280,
+    "other": 140544,
+    "total": 538060032
+   },
+   "adapters": 1935360,
+   "optimizer": 3871440,
+   "grads": 1935360
+  }
+ },
+ "validation": {
+  "loraLossVsTab": 0.0,
+  "loraHeldLossVsTab": 0.0,
+  "loraGradNormVsTab": 0.0,
+  "qloraLossVsTab": 0.0,
+  "qloraHeldLossVsTab": 0.0,
+  "qloraGradNormVsTab": 0.0,
+  "doraLossVsTab": 0.0,
+  "doraHeldLossVsTab": 0.0,
+  "doraGradNormVsTab": 0.0,
+  "loraBenchLossVsTab": 2.5331974029541016e-07,
+  "loraBenchSavedVaries": 0,
+  "qloraBenchLossVsTab": 0.0,
+  "qloraBenchSavedVaries": 0,
+  "doraBenchLossVsTab": 0.0,
+  "doraBenchSavedVaries": 0,
+  "loraPass2VsPass1": 0.0,
+  "qloraPass2VsPass1": 0.0,
+  "doraPass2VsPass1": 0.0,
+  "loraRepliesMatchTab": 1,
+  "qloraRepliesMatchTab": 1,
+  "doraRepliesMatchTab": 1,
+  "loraAbVsTab": 0.0,
+  "loraFinalAbVsTab": 0.0,
+  "doraAbmVsTab": 0.0,
+  "baseBytesVsQloraTab": 0,
+  "trainableVsTabs": 0,
+  "doraChangeVsTab": 1.8843759619358025e-07,
+  "quantRelErrVsQloraTab": 3.203749656677246e-06
+ },
+ "data": {
+  "file": "adapters.f32",
+  "sha256": "ecfa3cdb49f9720b73edbaf3e76ba818def3b330636671d9a75d0981d21837c0",
+  "bytes": 945840,
+  "tensors": {
+   "spectrum": {
+    "offset": 0,
+    "length": 17280,
+    "shape": [
+     3,
+     12,
+     30,
+     2,
+     8
+    ]
+   },
+   "doraSpectrum": {
+    "offset": 17280,
+    "length": 23040,
+    "shape": [
+     12,
+     30,
+     2,
+     32
+    ]
+   },
+   "norm": {
+    "offset": 40320,
+    "length": 2160,
+    "shape": [
+     3,
+     12,
+     30,
+     2
+    ]
+   },
+   "doraDirNorm": {
+    "offset": 42480,
+    "length": 720,
+    "shape": [
+     12,
+     30,
+     2
+    ]
+   },
+   "cos": {
+    "offset": 43200,
+    "length": 2160,
+    "shape": [
+     3,
+     12,
+     30,
+     2
+    ]
+   },
+   "overlap": {
+    "offset": 45360,
+    "length": 2160,
+    "shape": [
+     3,
+     12,
+     30,
+     2
+    ]
+   },
+   "quantCos": {
+    "offset": 47520,
+    "length": 720,
+    "shape": [
+     12,
+     30,
+     2
+    ]
+   },
+   "qloraChange": {
+    "offset": 48240,
+    "length": 1440,
+    "shape": [
+     12,
+     30,
+     2,
+     2
+    ]
+   },
+   "w0Norm": {
+    "offset": 49680,
+    "length": 60,
+    "shape": [
+     30,
+     2
+    ]
+   },
+   "quantErr": {
+    "offset": 49740,
+    "length": 60,
+    "shape": [
+     30,
+     2
+    ]
+   },
+   "quantTop8": {
+    "offset": 49800,
+    "length": 60,
+    "shape": [
+     30,
+     2
+    ]
+   },
+   "quantSpectrum": {
+    "offset": 49860,
+    "length": 1920,
+    "shape": [
+     30,
+     2,
+     32
+    ]
+   },
+   "stepTime": {
+    "offset": 51780,
+    "length": 120,
+    "shape": [
+     3,
+     40
+    ]
+   },
+   "processStepTime": {
+    "offset": 51900,
+    "length": 240,
+    "shape": [
+     3,
+     2,
+     40
+    ]
+   },
+   "qlora.q_proj.A": {
+    "offset": 52140,
+    "length": 55296,
+    "shape": [
+     12,
+     8,
+     576
+    ]
+   },
+   "qlora.q_proj.B": {
+    "offset": 107436,
+    "length": 55296,
+    "shape": [
+     12,
+     576,
+     8
+    ]
+   },
+   "qlora.v_proj.A": {
+    "offset": 162732,
+    "length": 55296,
+    "shape": [
+     12,
+     8,
+     576
+    ]
+   },
+   "qlora.v_proj.B": {
+    "offset": 218028,
+    "length": 18432,
+    "shape": [
+     12,
+     192,
+     8
+    ]
+   }
+  }
+ },
+ "capture": {
+  "timestamp": "2026-11-03T16:15:39.720206+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "transformers": "4.57.6",
+   "peft": "0.21.2",
+   "bitsandbytes": "0.50.2",
+   "psutil": "7.2.2",
+   "huggingface-hub": "0.36.2"
+  },
+  "script": "scripts/post-training/record_adapters.py",
+  "scriptSha256": "fc91e6b936a1de88094a9f677ab47d5672429067c996230cafb72de7ab7aa382",
+  "helperSha256": "4dfc6e82742641afcd278b9cfbe3ae8bb93f2ab903ee1029945f8e7ffb5f7398",
+  "loraRunSha256": "1abb425cd2340762fd4391061f06366537e640599603139f7612bcb0f4b2c43d",
+  "runPackages": {
+   "lora": {
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "peft": "0.21.2"
+   },
+   "qlora": {
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2"
+   },
+   "dora": {
+    "torch": "2.14.1",
+    "transformers": "4.57.6",
+    "peft": "0.21.2"
+   }
+  }
+ }
+}
