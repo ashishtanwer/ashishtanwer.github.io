@@ -1,1 +1,0 @@
-import"../chunks/DjGbJXzz.js";import"../chunks/aqipA4p8.js";import{R as t}from"../chunks/PgwAolhi.js";const o=!0,r="always",l=Object.freeze(Object.defineProperty({__proto__:null,prerender:o,trailingSlash:r},Symbol.toStringTag,{value:"Module"}));function p(e){t(e,{variant:"value-iteration"})}export{p as component,l as universal};

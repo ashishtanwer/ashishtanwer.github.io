@@ -1,1 +1,0 @@
-import"../chunks/DjGbJXzz.js";import"../chunks/aqipA4p8.js";import{E as t}from"../chunks/CQP15dic.js";const o=!0,r="always",p=Object.freeze(Object.defineProperty({__proto__:null,prerender:o,trailingSlash:r},Symbol.toStringTag,{value:"Module"}));function l(e){t(e,{variant:"act"})}export{l as component,p as universal};
