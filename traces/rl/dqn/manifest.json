@@ -1,0 +1,2108 @@
+{
+	"schemaVersion": 1,
+	"kind": "rl-dqn",
+	"tab": "dqn",
+	"environment": {
+		"id": "CartPole-v1",
+		"url": "https://gymnasium.farama.org/environments/classic_control/cart_pole/",
+		"license": "MIT",
+		"maxSteps": 500,
+		"reward": "+1 for every step the pole stays up; the episode ends when it tips past 12° or the cart leaves the track, or after 500 steps",
+		"observation": [
+			"cart position",
+			"cart velocity",
+			"pole angle",
+			"pole angular velocity"
+		],
+		"actions": [
+			"push left",
+			"push right"
+		]
+	},
+	"run": {
+		"steps": 200000,
+		"batch": 64,
+		"learningStarts": 1000,
+		"lr": 0.00025,
+		"gamma": 0.99,
+		"epsilon": [
+			1.0,
+			0.05,
+			25000
+		],
+		"logEvery": 1000,
+		"evalEvery": 5000,
+		"evalEpisodes": 10,
+		"snapshots": [
+			2000,
+			20000,
+			60000,
+			200000
+		],
+		"snapshotSize": 512,
+		"focusStep": 100000,
+		"probes": {
+			"upright": [
+				0.0,
+				0.0,
+				0.0,
+				0.0
+			],
+			"falling right": [
+				0.0,
+				0.0,
+				0.1,
+				0.5
+			],
+			"falling left": [
+				0.0,
+				0.0,
+				-0.1,
+				-0.5
+			],
+			"near the right edge": [
+				2.0,
+				0.5,
+				0.0,
+				0.0
+			]
+		},
+		"hidden": 128,
+		"optimizer": "Adam",
+		"loss": "mean squared TD error",
+		"logSteps": [
+			1000,
+			2000,
+			3000,
+			4000,
+			5000,
+			6000,
+			7000,
+			8000,
+			9000,
+			10000,
+			11000,
+			12000,
+			13000,
+			14000,
+			15000,
+			16000,
+			17000,
+			18000,
+			19000,
+			20000,
+			21000,
+			22000,
+			23000,
+			24000,
+			25000,
+			26000,
+			27000,
+			28000,
+			29000,
+			30000,
+			31000,
+			32000,
+			33000,
+			34000,
+			35000,
+			36000,
+			37000,
+			38000,
+			39000,
+			40000,
+			41000,
+			42000,
+			43000,
+			44000,
+			45000,
+			46000,
+			47000,
+			48000,
+			49000,
+			50000,
+			51000,
+			52000,
+			53000,
+			54000,
+			55000,
+			56000,
+			57000,
+			58000,
+			59000,
+			60000,
+			61000,
+			62000,
+			63000,
+			64000,
+			65000,
+			66000,
+			67000,
+			68000,
+			69000,
+			70000,
+			71000,
+			72000,
+			73000,
+			74000,
+			75000,
+			76000,
+			77000,
+			78000,
+			79000,
+			80000,
+			81000,
+			82000,
+			83000,
+			84000,
+			85000,
+			86000,
+			87000,
+			88000,
+			89000,
+			90000,
+			91000,
+			92000,
+			93000,
+			94000,
+			95000,
+			96000,
+			97000,
+			98000,
+			99000,
+			100000,
+			101000,
+			102000,
+			103000,
+			104000,
+			105000,
+			106000,
+			107000,
+			108000,
+			109000,
+			110000,
+			111000,
+			112000,
+			113000,
+			114000,
+			115000,
+			116000,
+			117000,
+			118000,
+			119000,
+			120000,
+			121000,
+			122000,
+			123000,
+			124000,
+			125000,
+			126000,
+			127000,
+			128000,
+			129000,
+			130000,
+			131000,
+			132000,
+			133000,
+			134000,
+			135000,
+			136000,
+			137000,
+			138000,
+			139000,
+			140000,
+			141000,
+			142000,
+			143000,
+			144000,
+			145000,
+			146000,
+			147000,
+			148000,
+			149000,
+			150000,
+			151000,
+			152000,
+			153000,
+			154000,
+			155000,
+			156000,
+			157000,
+			158000,
+			159000,
+			160000,
+			161000,
+			162000,
+			163000,
+			164000,
+			165000,
+			166000,
+			167000,
+			168000,
+			169000,
+			170000,
+			171000,
+			172000,
+			173000,
+			174000,
+			175000,
+			176000,
+			177000,
+			178000,
+			179000,
+			180000,
+			181000,
+			182000,
+			183000,
+			184000,
+			185000,
+			186000,
+			187000,
+			188000,
+			189000,
+			190000,
+			191000,
+			192000,
+			193000,
+			194000,
+			195000,
+			196000,
+			197000,
+			198000,
+			199000,
+			200000
+		],
+		"evalSteps": [
+			5000,
+			10000,
+			15000,
+			20000,
+			25000,
+			30000,
+			35000,
+			40000,
+			45000,
+			50000,
+			55000,
+			60000,
+			65000,
+			70000,
+			75000,
+			80000,
+			85000,
+			90000,
+			95000,
+			100000,
+			105000,
+			110000,
+			115000,
+			120000,
+			125000,
+			130000,
+			135000,
+			140000,
+			145000,
+			150000,
+			155000,
+			160000,
+			165000,
+			170000,
+			175000,
+			180000,
+			185000,
+			190000,
+			195000,
+			200000
+		],
+		"variants": {
+			"full": {
+				"label": "full DQN",
+				"buffer": 50000,
+				"targetEvery": 500
+			},
+			"no-target": {
+				"label": "no target network",
+				"buffer": 50000,
+				"targetEvery": null
+			},
+			"no-replay": {
+				"label": "no replay buffer",
+				"buffer": 64,
+				"targetEvery": 500
+			}
+		},
+		"seeds": [
+			0,
+			1,
+			2
+		],
+		"probeNames": [
+			"upright",
+			"falling right",
+			"falling left",
+			"near the right edge"
+		],
+		"bestReturn": 99.343
+	},
+	"runs": {
+		"full.0": {
+			"variant": "full",
+			"seed": 0,
+			"episodes": 965,
+			"seconds": 111.742,
+			"evalLast10": 484.61,
+			"evalBest": 500.0,
+			"firstSolved": 90000,
+			"solvedEvals": 20,
+			"evals": 40,
+			"maxProbeQ": 160.359,
+			"finalProbeQ": [
+				[
+					114.879,
+					114.676
+				],
+				[
+					110.497,
+					118.763
+				],
+				[
+					111.32,
+					108.797
+				],
+				[
+					139.972,
+					142.332
+				]
+			],
+			"buffer": 50000,
+			"targetEvery": 500,
+			"snapshots": {
+				"2000": {
+					"size": 2000,
+					"sampled": 512,
+					"episodes": 92,
+					"medianAge": 994.0,
+					"maxAge": 1996,
+					"terminal": 26
+				},
+				"20000": {
+					"size": 20000,
+					"sampled": 512,
+					"episodes": 227,
+					"medianAge": 10511.5,
+					"maxAge": 19995,
+					"terminal": 10
+				},
+				"60000": {
+					"size": 50000,
+					"sampled": 512,
+					"episodes": 221,
+					"medianAge": 24988.5,
+					"maxAge": 49920,
+					"terminal": 5
+				},
+				"200000": {
+					"size": 50000,
+					"sampled": 512,
+					"episodes": 101,
+					"medianAge": 25132.0,
+					"maxAge": 49364,
+					"terminal": 0
+				}
+			}
+		},
+		"full.1": {
+			"variant": "full",
+			"seed": 1,
+			"episodes": 981,
+			"seconds": 98.0507,
+			"evalLast10": 326.88,
+			"evalBest": 500.0,
+			"firstSolved": 75000,
+			"solvedEvals": 20,
+			"evals": 40,
+			"maxProbeQ": 117.495,
+			"finalProbeQ": [
+				[
+					115.038,
+					115.638
+				],
+				[
+					112.284,
+					112.657
+				],
+				[
+					117.452,
+					111.297
+				],
+				[
+					58.6234,
+					57.5924
+				]
+			],
+			"buffer": 50000,
+			"targetEvery": 500
+		},
+		"full.2": {
+			"variant": "full",
+			"seed": 2,
+			"episodes": 977,
+			"seconds": 108.276,
+			"evalLast10": 500.0,
+			"evalBest": 500.0,
+			"firstSolved": 80000,
+			"solvedEvals": 25,
+			"evals": 40,
+			"maxProbeQ": 110.094,
+			"finalProbeQ": [
+				[
+					108.595,
+					109.004
+				],
+				[
+					102.994,
+					106.868
+				],
+				[
+					110.094,
+					107.498
+				],
+				[
+					92.7582,
+					95.0581
+				]
+			],
+			"buffer": 50000,
+			"targetEvery": 500
+		},
+		"no-target.0": {
+			"variant": "no-target",
+			"seed": 0,
+			"episodes": 1011,
+			"seconds": 99.7457,
+			"evalLast10": 417.46,
+			"evalBest": 500.0,
+			"firstSolved": 100000,
+			"solvedEvals": 15,
+			"evals": 40,
+			"maxProbeQ": 2967.02,
+			"finalProbeQ": [
+				[
+					197.892,
+					197.134
+				],
+				[
+					142.317,
+					151.326
+				],
+				[
+					190.657,
+					178.493
+				],
+				[
+					30.4568,
+					18.9122
+				]
+			],
+			"buffer": 50000,
+			"targetEvery": null,
+			"snapshots": {
+				"2000": {
+					"size": 2000,
+					"sampled": 512,
+					"episodes": 87,
+					"medianAge": 994.0,
+					"maxAge": 1996,
+					"terminal": 21
+				},
+				"20000": {
+					"size": 20000,
+					"sampled": 512,
+					"episodes": 216,
+					"medianAge": 10511.5,
+					"maxAge": 19995,
+					"terminal": 9
+				},
+				"60000": {
+					"size": 50000,
+					"sampled": 512,
+					"episodes": 201,
+					"medianAge": 24988.5,
+					"maxAge": 49920,
+					"terminal": 5
+				},
+				"200000": {
+					"size": 50000,
+					"sampled": 512,
+					"episodes": 118,
+					"medianAge": 25132.0,
+					"maxAge": 49364,
+					"terminal": 1
+				}
+			}
+		},
+		"no-target.1": {
+			"variant": "no-target",
+			"seed": 1,
+			"episodes": 1815,
+			"seconds": 145.925,
+			"evalLast10": 278.51,
+			"evalBest": 500.0,
+			"firstSolved": 45000,
+			"solvedEvals": 15,
+			"evals": 40,
+			"maxProbeQ": 253162.0,
+			"finalProbeQ": [
+				[
+					10476.3,
+					10528.5
+				],
+				[
+					12374.0,
+					14196.3
+				],
+				[
+					5100.21,
+					3747.24
+				],
+				[
+					3817.39,
+					4423.14
+				]
+			],
+			"buffer": 50000,
+			"targetEvery": null
+		},
+		"no-target.2": {
+			"variant": "no-target",
+			"seed": 2,
+			"episodes": 1158,
+			"seconds": 87.3603,
+			"evalLast10": 358.63,
+			"evalBest": 500.0,
+			"firstSolved": 60000,
+			"solvedEvals": 13,
+			"evals": 40,
+			"maxProbeQ": 65434.9,
+			"finalProbeQ": [
+				[
+					1017.7,
+					1002.85
+				],
+				[
+					868.505,
+					1041.25
+				],
+				[
+					862.816,
+					692.213
+				],
+				[
+					876.977,
+					914.823
+				]
+			],
+			"buffer": 50000,
+			"targetEvery": null
+		},
+		"no-replay.0": {
+			"variant": "no-replay",
+			"seed": 0,
+			"episodes": 1020,
+			"seconds": 88.6293,
+			"evalLast10": 379.38,
+			"evalBest": 500.0,
+			"firstSolved": 110000,
+			"solvedEvals": 9,
+			"evals": 40,
+			"maxProbeQ": 113.48,
+			"finalProbeQ": [
+				[
+					113.003,
+					113.23
+				],
+				[
+					86.1917,
+					92.3958
+				],
+				[
+					96.7986,
+					92.7411
+				],
+				[
+					14.2813,
+					12.6546
+				]
+			],
+			"buffer": 64,
+			"targetEvery": 500,
+			"snapshots": {
+				"2000": {
+					"size": 64,
+					"sampled": 64,
+					"episodes": 2,
+					"medianAge": 31.5,
+					"maxAge": 63,
+					"terminal": 1
+				},
+				"20000": {
+					"size": 64,
+					"sampled": 64,
+					"episodes": 1,
+					"medianAge": 31.5,
+					"maxAge": 63,
+					"terminal": 0
+				},
+				"60000": {
+					"size": 64,
+					"sampled": 64,
+					"episodes": 1,
+					"medianAge": 31.5,
+					"maxAge": 63,
+					"terminal": 0
+				},
+				"200000": {
+					"size": 64,
+					"sampled": 64,
+					"episodes": 2,
+					"medianAge": 31.5,
+					"maxAge": 63,
+					"terminal": 0
+				}
+			}
+		},
+		"no-replay.1": {
+			"variant": "no-replay",
+			"seed": 1,
+			"episodes": 1081,
+			"seconds": 95.7803,
+			"evalLast10": 379.0,
+			"evalBest": 500.0,
+			"firstSolved": 110000,
+			"solvedEvals": 7,
+			"evals": 40,
+			"maxProbeQ": 122.299,
+			"finalProbeQ": [
+				[
+					116.341,
+					118.834
+				],
+				[
+					97.6883,
+					104.732
+				],
+				[
+					110.844,
+					110.136
+				],
+				[
+					-4.53898,
+					4.69453
+				]
+			],
+			"buffer": 64,
+			"targetEvery": 500
+		},
+		"no-replay.2": {
+			"variant": "no-replay",
+			"seed": 2,
+			"episodes": 988,
+			"seconds": 88.0125,
+			"evalLast10": 452.46,
+			"evalBest": 500.0,
+			"firstSolved": 65000,
+			"solvedEvals": 11,
+			"evals": 40,
+			"maxProbeQ": 113.41,
+			"finalProbeQ": [
+				[
+					109.522,
+					109.815
+				],
+				[
+					81.3674,
+					86.2602
+				],
+				[
+					81.7311,
+					77.6676
+				],
+				[
+					9.83663,
+					12.8931
+				]
+			],
+			"buffer": 64,
+			"targetEvery": 500
+		}
+	},
+	"check": {
+		"step": 100000,
+		"loss": 0.167724,
+		"adamStep": 99000.0,
+		"parameters": [
+			"fc1.weight",
+			"fc1.bias",
+			"fc2.weight",
+			"fc2.bias",
+			"out.weight",
+			"out.bias"
+		],
+		"finalProbeQ": [
+			[
+				114.879,
+				114.676
+			],
+			[
+				110.497,
+				118.763
+			],
+			[
+				111.32,
+				108.797
+			],
+			[
+				139.972,
+				142.332
+			]
+		]
+	},
+	"capture": {
+		"timestamp": "2026-11-03T05:37:53.759475+00:00",
+		"device": "cpu (arm64, Darwin)",
+		"dtype": "float32",
+		"python": "3.12.12",
+		"packages": {
+			"gymnasium": "1.4.0",
+			"numpy": "2.5.4",
+			"torch": "2.14.1"
+		},
+		"cpuCount": 14,
+		"script": "scripts/rl/train_dqn.py",
+		"scriptSha256": "12a86f4e252edb52334ed04c9e89d3531f309040723e044b8f18df9626d13a52",
+		"recorder": {
+			"timestamp": "2026-11-03T07:04:41.410881+00:00",
+			"device": "cpu (arm64, Darwin)",
+			"dtype": "float32",
+			"python": "3.12.12",
+			"packages": {
+				"gymnasium": "1.4.0",
+				"numpy": "2.5.4",
+				"torch": "2.14.1"
+			},
+			"cpuCount": 14,
+			"script": "scripts/rl/record_dqn.py",
+			"scriptSha256": "b0a1fd272ea66989e6559404f54f251c7dd0430eb38839dab1255321da860b32"
+		}
+	},
+	"data": {
+		"file": "dqn.f32",
+		"sha256": "226ea26c9635006bed3b24f9a3293eb717e81f3eb4bf0df205890f8b9c80a6f3",
+		"bytes": 738704,
+		"tensors": {
+			"full.0.probeQ": {
+				"offset": 0,
+				"length": 1600,
+				"shape": [
+					200,
+					4,
+					2
+				]
+			},
+			"full.0.loss": {
+				"offset": 1600,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"full.0.batchMaxQ": {
+				"offset": 1800,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"full.0.gradNorm": {
+				"offset": 2000,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"full.0.episodeEnd": {
+				"offset": 2200,
+				"length": 965,
+				"shape": [
+					965
+				]
+			},
+			"full.0.episodeReturn": {
+				"offset": 3165,
+				"length": 965,
+				"shape": [
+					965
+				]
+			},
+			"full.0.evalReturn": {
+				"offset": 4130,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"full.buffer.2000.s": {
+				"offset": 4170,
+				"length": 2048,
+				"shape": [
+					512,
+					4
+				]
+			},
+			"full.buffer.2000.a": {
+				"offset": 6218,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.2000.r": {
+				"offset": 6730,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.2000.done": {
+				"offset": 7242,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.2000.step": {
+				"offset": 7754,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.2000.episode": {
+				"offset": 8266,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.20000.s": {
+				"offset": 8778,
+				"length": 2048,
+				"shape": [
+					512,
+					4
+				]
+			},
+			"full.buffer.20000.a": {
+				"offset": 10826,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.20000.r": {
+				"offset": 11338,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.20000.done": {
+				"offset": 11850,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.20000.step": {
+				"offset": 12362,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.20000.episode": {
+				"offset": 12874,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.60000.s": {
+				"offset": 13386,
+				"length": 2048,
+				"shape": [
+					512,
+					4
+				]
+			},
+			"full.buffer.60000.a": {
+				"offset": 15434,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.60000.r": {
+				"offset": 15946,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.60000.done": {
+				"offset": 16458,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.60000.step": {
+				"offset": 16970,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.60000.episode": {
+				"offset": 17482,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.200000.s": {
+				"offset": 17994,
+				"length": 2048,
+				"shape": [
+					512,
+					4
+				]
+			},
+			"full.buffer.200000.a": {
+				"offset": 20042,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.200000.r": {
+				"offset": 20554,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.200000.done": {
+				"offset": 21066,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.200000.step": {
+				"offset": 21578,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.buffer.200000.episode": {
+				"offset": 22090,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"full.1.probeQ": {
+				"offset": 22602,
+				"length": 1600,
+				"shape": [
+					200,
+					4,
+					2
+				]
+			},
+			"full.1.loss": {
+				"offset": 24202,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"full.1.batchMaxQ": {
+				"offset": 24402,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"full.1.gradNorm": {
+				"offset": 24602,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"full.1.episodeEnd": {
+				"offset": 24802,
+				"length": 981,
+				"shape": [
+					981
+				]
+			},
+			"full.1.episodeReturn": {
+				"offset": 25783,
+				"length": 981,
+				"shape": [
+					981
+				]
+			},
+			"full.1.evalReturn": {
+				"offset": 26764,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"full.2.probeQ": {
+				"offset": 26804,
+				"length": 1600,
+				"shape": [
+					200,
+					4,
+					2
+				]
+			},
+			"full.2.loss": {
+				"offset": 28404,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"full.2.batchMaxQ": {
+				"offset": 28604,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"full.2.gradNorm": {
+				"offset": 28804,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"full.2.episodeEnd": {
+				"offset": 29004,
+				"length": 977,
+				"shape": [
+					977
+				]
+			},
+			"full.2.episodeReturn": {
+				"offset": 29981,
+				"length": 977,
+				"shape": [
+					977
+				]
+			},
+			"full.2.evalReturn": {
+				"offset": 30958,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"no-target.0.probeQ": {
+				"offset": 30998,
+				"length": 1600,
+				"shape": [
+					200,
+					4,
+					2
+				]
+			},
+			"no-target.0.loss": {
+				"offset": 32598,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-target.0.batchMaxQ": {
+				"offset": 32798,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-target.0.gradNorm": {
+				"offset": 32998,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-target.0.episodeEnd": {
+				"offset": 33198,
+				"length": 1011,
+				"shape": [
+					1011
+				]
+			},
+			"no-target.0.episodeReturn": {
+				"offset": 34209,
+				"length": 1011,
+				"shape": [
+					1011
+				]
+			},
+			"no-target.0.evalReturn": {
+				"offset": 35220,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"no-target.buffer.2000.s": {
+				"offset": 35260,
+				"length": 2048,
+				"shape": [
+					512,
+					4
+				]
+			},
+			"no-target.buffer.2000.a": {
+				"offset": 37308,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.2000.r": {
+				"offset": 37820,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.2000.done": {
+				"offset": 38332,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.2000.step": {
+				"offset": 38844,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.2000.episode": {
+				"offset": 39356,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.20000.s": {
+				"offset": 39868,
+				"length": 2048,
+				"shape": [
+					512,
+					4
+				]
+			},
+			"no-target.buffer.20000.a": {
+				"offset": 41916,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.20000.r": {
+				"offset": 42428,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.20000.done": {
+				"offset": 42940,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.20000.step": {
+				"offset": 43452,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.20000.episode": {
+				"offset": 43964,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.60000.s": {
+				"offset": 44476,
+				"length": 2048,
+				"shape": [
+					512,
+					4
+				]
+			},
+			"no-target.buffer.60000.a": {
+				"offset": 46524,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.60000.r": {
+				"offset": 47036,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.60000.done": {
+				"offset": 47548,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.60000.step": {
+				"offset": 48060,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.60000.episode": {
+				"offset": 48572,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.200000.s": {
+				"offset": 49084,
+				"length": 2048,
+				"shape": [
+					512,
+					4
+				]
+			},
+			"no-target.buffer.200000.a": {
+				"offset": 51132,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.200000.r": {
+				"offset": 51644,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.200000.done": {
+				"offset": 52156,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.200000.step": {
+				"offset": 52668,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.buffer.200000.episode": {
+				"offset": 53180,
+				"length": 512,
+				"shape": [
+					512
+				]
+			},
+			"no-target.1.probeQ": {
+				"offset": 53692,
+				"length": 1600,
+				"shape": [
+					200,
+					4,
+					2
+				]
+			},
+			"no-target.1.loss": {
+				"offset": 55292,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-target.1.batchMaxQ": {
+				"offset": 55492,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-target.1.gradNorm": {
+				"offset": 55692,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-target.1.episodeEnd": {
+				"offset": 55892,
+				"length": 1815,
+				"shape": [
+					1815
+				]
+			},
+			"no-target.1.episodeReturn": {
+				"offset": 57707,
+				"length": 1815,
+				"shape": [
+					1815
+				]
+			},
+			"no-target.1.evalReturn": {
+				"offset": 59522,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"no-target.2.probeQ": {
+				"offset": 59562,
+				"length": 1600,
+				"shape": [
+					200,
+					4,
+					2
+				]
+			},
+			"no-target.2.loss": {
+				"offset": 61162,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-target.2.batchMaxQ": {
+				"offset": 61362,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-target.2.gradNorm": {
+				"offset": 61562,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-target.2.episodeEnd": {
+				"offset": 61762,
+				"length": 1158,
+				"shape": [
+					1158
+				]
+			},
+			"no-target.2.episodeReturn": {
+				"offset": 62920,
+				"length": 1158,
+				"shape": [
+					1158
+				]
+			},
+			"no-target.2.evalReturn": {
+				"offset": 64078,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"no-replay.0.probeQ": {
+				"offset": 64118,
+				"length": 1600,
+				"shape": [
+					200,
+					4,
+					2
+				]
+			},
+			"no-replay.0.loss": {
+				"offset": 65718,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-replay.0.batchMaxQ": {
+				"offset": 65918,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-replay.0.gradNorm": {
+				"offset": 66118,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-replay.0.episodeEnd": {
+				"offset": 66318,
+				"length": 1020,
+				"shape": [
+					1020
+				]
+			},
+			"no-replay.0.episodeReturn": {
+				"offset": 67338,
+				"length": 1020,
+				"shape": [
+					1020
+				]
+			},
+			"no-replay.0.evalReturn": {
+				"offset": 68358,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"no-replay.buffer.2000.s": {
+				"offset": 68398,
+				"length": 256,
+				"shape": [
+					64,
+					4
+				]
+			},
+			"no-replay.buffer.2000.a": {
+				"offset": 68654,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.2000.r": {
+				"offset": 68718,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.2000.done": {
+				"offset": 68782,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.2000.step": {
+				"offset": 68846,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.2000.episode": {
+				"offset": 68910,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.20000.s": {
+				"offset": 68974,
+				"length": 256,
+				"shape": [
+					64,
+					4
+				]
+			},
+			"no-replay.buffer.20000.a": {
+				"offset": 69230,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.20000.r": {
+				"offset": 69294,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.20000.done": {
+				"offset": 69358,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.20000.step": {
+				"offset": 69422,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.20000.episode": {
+				"offset": 69486,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.60000.s": {
+				"offset": 69550,
+				"length": 256,
+				"shape": [
+					64,
+					4
+				]
+			},
+			"no-replay.buffer.60000.a": {
+				"offset": 69806,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.60000.r": {
+				"offset": 69870,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.60000.done": {
+				"offset": 69934,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.60000.step": {
+				"offset": 69998,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.60000.episode": {
+				"offset": 70062,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.200000.s": {
+				"offset": 70126,
+				"length": 256,
+				"shape": [
+					64,
+					4
+				]
+			},
+			"no-replay.buffer.200000.a": {
+				"offset": 70382,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.200000.r": {
+				"offset": 70446,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.200000.done": {
+				"offset": 70510,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.200000.step": {
+				"offset": 70574,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.buffer.200000.episode": {
+				"offset": 70638,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"no-replay.1.probeQ": {
+				"offset": 70702,
+				"length": 1600,
+				"shape": [
+					200,
+					4,
+					2
+				]
+			},
+			"no-replay.1.loss": {
+				"offset": 72302,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-replay.1.batchMaxQ": {
+				"offset": 72502,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-replay.1.gradNorm": {
+				"offset": 72702,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-replay.1.episodeEnd": {
+				"offset": 72902,
+				"length": 1081,
+				"shape": [
+					1081
+				]
+			},
+			"no-replay.1.episodeReturn": {
+				"offset": 73983,
+				"length": 1081,
+				"shape": [
+					1081
+				]
+			},
+			"no-replay.1.evalReturn": {
+				"offset": 75064,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"no-replay.2.probeQ": {
+				"offset": 75104,
+				"length": 1600,
+				"shape": [
+					200,
+					4,
+					2
+				]
+			},
+			"no-replay.2.loss": {
+				"offset": 76704,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-replay.2.batchMaxQ": {
+				"offset": 76904,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-replay.2.gradNorm": {
+				"offset": 77104,
+				"length": 200,
+				"shape": [
+					200
+				]
+			},
+			"no-replay.2.episodeEnd": {
+				"offset": 77304,
+				"length": 988,
+				"shape": [
+					988
+				]
+			},
+			"no-replay.2.episodeReturn": {
+				"offset": 78292,
+				"length": 988,
+				"shape": [
+					988
+				]
+			},
+			"no-replay.2.evalReturn": {
+				"offset": 79280,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"check.final.fc1.weight": {
+				"offset": 79320,
+				"length": 512,
+				"shape": [
+					128,
+					4
+				]
+			},
+			"check.final.fc1.bias": {
+				"offset": 79832,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.final.fc2.weight": {
+				"offset": 79960,
+				"length": 16384,
+				"shape": [
+					128,
+					128
+				]
+			},
+			"check.final.fc2.bias": {
+				"offset": 96344,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.final.out.weight": {
+				"offset": 96472,
+				"length": 256,
+				"shape": [
+					2,
+					128
+				]
+			},
+			"check.final.out.bias": {
+				"offset": 96728,
+				"length": 2,
+				"shape": [
+					2
+				]
+			},
+			"check.batch.s": {
+				"offset": 96730,
+				"length": 256,
+				"shape": [
+					64,
+					4
+				]
+			},
+			"check.batch.a": {
+				"offset": 96986,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"check.batch.r": {
+				"offset": 97050,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"check.batch.s2": {
+				"offset": 97114,
+				"length": 256,
+				"shape": [
+					64,
+					4
+				]
+			},
+			"check.batch.done": {
+				"offset": 97370,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"check.online.fc1.weight": {
+				"offset": 97434,
+				"length": 512,
+				"shape": [
+					128,
+					4
+				]
+			},
+			"check.online.fc1.bias": {
+				"offset": 97946,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.online.fc2.weight": {
+				"offset": 98074,
+				"length": 16384,
+				"shape": [
+					128,
+					128
+				]
+			},
+			"check.online.fc2.bias": {
+				"offset": 114458,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.online.out.weight": {
+				"offset": 114586,
+				"length": 256,
+				"shape": [
+					2,
+					128
+				]
+			},
+			"check.online.out.bias": {
+				"offset": 114842,
+				"length": 2,
+				"shape": [
+					2
+				]
+			},
+			"check.target.fc1.weight": {
+				"offset": 114844,
+				"length": 512,
+				"shape": [
+					128,
+					4
+				]
+			},
+			"check.target.fc1.bias": {
+				"offset": 115356,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.target.fc2.weight": {
+				"offset": 115484,
+				"length": 16384,
+				"shape": [
+					128,
+					128
+				]
+			},
+			"check.target.fc2.bias": {
+				"offset": 131868,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.target.out.weight": {
+				"offset": 131996,
+				"length": 256,
+				"shape": [
+					2,
+					128
+				]
+			},
+			"check.target.out.bias": {
+				"offset": 132252,
+				"length": 2,
+				"shape": [
+					2
+				]
+			},
+			"check.after.fc1.weight": {
+				"offset": 132254,
+				"length": 512,
+				"shape": [
+					128,
+					4
+				]
+			},
+			"check.after.fc1.bias": {
+				"offset": 132766,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.after.fc2.weight": {
+				"offset": 132894,
+				"length": 16384,
+				"shape": [
+					128,
+					128
+				]
+			},
+			"check.after.fc2.bias": {
+				"offset": 149278,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.after.out.weight": {
+				"offset": 149406,
+				"length": 256,
+				"shape": [
+					2,
+					128
+				]
+			},
+			"check.after.out.bias": {
+				"offset": 149662,
+				"length": 2,
+				"shape": [
+					2
+				]
+			},
+			"check.adam.exp_avg.fc1.weight": {
+				"offset": 149664,
+				"length": 512,
+				"shape": [
+					128,
+					4
+				]
+			},
+			"check.adam.exp_avg_sq.fc1.weight": {
+				"offset": 150176,
+				"length": 512,
+				"shape": [
+					128,
+					4
+				]
+			},
+			"check.adam.exp_avg.fc1.bias": {
+				"offset": 150688,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.adam.exp_avg_sq.fc1.bias": {
+				"offset": 150816,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.adam.exp_avg.fc2.weight": {
+				"offset": 150944,
+				"length": 16384,
+				"shape": [
+					128,
+					128
+				]
+			},
+			"check.adam.exp_avg_sq.fc2.weight": {
+				"offset": 167328,
+				"length": 16384,
+				"shape": [
+					128,
+					128
+				]
+			},
+			"check.adam.exp_avg.fc2.bias": {
+				"offset": 183712,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.adam.exp_avg_sq.fc2.bias": {
+				"offset": 183840,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"check.adam.exp_avg.out.weight": {
+				"offset": 183968,
+				"length": 256,
+				"shape": [
+					2,
+					128
+				]
+			},
+			"check.adam.exp_avg_sq.out.weight": {
+				"offset": 184224,
+				"length": 256,
+				"shape": [
+					2,
+					128
+				]
+			},
+			"check.adam.exp_avg.out.bias": {
+				"offset": 184480,
+				"length": 2,
+				"shape": [
+					2
+				]
+			},
+			"check.adam.exp_avg_sq.out.bias": {
+				"offset": 184482,
+				"length": 2,
+				"shape": [
+					2
+				]
+			},
+			"check.y": {
+				"offset": 184484,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"check.qsa": {
+				"offset": 184548,
+				"length": 64,
+				"shape": [
+					64
+				]
+			},
+			"check.targetMax": {
+				"offset": 184612,
+				"length": 64,
+				"shape": [
+					64
+				]
+			}
+		}
+	}
+}

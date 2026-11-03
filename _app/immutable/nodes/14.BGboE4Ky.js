@@ -1,0 +1,1 @@
+import"../chunks/DjGbJXzz.js";import"../chunks/aqipA4p8.js";import{C as r}from"../chunks/Q_f8YphI.js";const t=!0,o="always",i=Object.freeze(Object.defineProperty({__proto__:null,prerender:t,trailingSlash:o},Symbol.toStringTag,{value:"Module"}));function l(e){r(e,{variant:"graph-capture"})}export{l as component,i as universal};
