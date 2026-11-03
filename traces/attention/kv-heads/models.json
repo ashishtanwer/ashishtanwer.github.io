@@ -1,0 +1,188 @@
+{
+	"schemaVersion": 1,
+	"kind": "attention-kv-heads-models",
+	"models": [
+		{
+			"tab": "mha",
+			"id": "openai-community/gpt2",
+			"name": "GPT-2 small (124M)",
+			"revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+			"modelType": "gpt2",
+			"checkpointDtype": "float32",
+			"parameters": 124439808,
+			"layers": 12,
+			"heads": 12,
+			"kvHeads": 12,
+			"headDim": 64,
+			"hidden": 768,
+			"maxPositions": 1024,
+			"numbersPerToken": 18432,
+			"measured": {
+				"float32": {
+					"perToken": 73728,
+					"runs": [
+						{
+							"example": "coreference",
+							"tokens": 12,
+							"bytes": 884736
+						},
+						{
+							"example": "induction",
+							"tokens": 13,
+							"bytes": 958464
+						},
+						{
+							"example": "names",
+							"tokens": 14,
+							"bytes": 1032192
+						}
+					]
+				},
+				"bfloat16": {
+					"perToken": 36864,
+					"runs": [
+						{
+							"example": "coreference",
+							"tokens": 12,
+							"bytes": 442368
+						},
+						{
+							"example": "induction",
+							"tokens": 13,
+							"bytes": 479232
+						},
+						{
+							"example": "names",
+							"tokens": 14,
+							"bytes": 516096
+						}
+					]
+				}
+			}
+		},
+		{
+			"tab": "mqa",
+			"id": "bigcode/gpt_bigcode-santacoder",
+			"name": "SantaCoder (1.1B)",
+			"revision": "291931872cae83498cf984b16319f47f5e9e7a07",
+			"modelType": "gpt_bigcode",
+			"checkpointDtype": "float16",
+			"parameters": 1124886528,
+			"layers": 24,
+			"heads": 16,
+			"kvHeads": 1,
+			"headDim": 128,
+			"hidden": 2048,
+			"maxPositions": 2048,
+			"numbersPerToken": 6144,
+			"measured": {
+				"float32": {
+					"perToken": 24576,
+					"runs": [
+						{
+							"example": "coreference",
+							"tokens": 13,
+							"bytes": 319488
+						},
+						{
+							"example": "induction",
+							"tokens": 13,
+							"bytes": 319488
+						},
+						{
+							"example": "names",
+							"tokens": 17,
+							"bytes": 417792
+						}
+					]
+				},
+				"bfloat16": {
+					"perToken": 12288,
+					"runs": [
+						{
+							"example": "coreference",
+							"tokens": 13,
+							"bytes": 159744
+						},
+						{
+							"example": "induction",
+							"tokens": 13,
+							"bytes": 159744
+						},
+						{
+							"example": "names",
+							"tokens": 17,
+							"bytes": 208896
+						}
+					]
+				}
+			}
+		},
+		{
+			"tab": "gqa",
+			"id": "Qwen/Qwen2.5-0.5B",
+			"name": "Qwen2.5-0.5B",
+			"revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+			"modelType": "qwen2",
+			"checkpointDtype": "bfloat16",
+			"parameters": 494032768,
+			"layers": 24,
+			"heads": 14,
+			"kvHeads": 2,
+			"headDim": 64,
+			"hidden": 896,
+			"maxPositions": 32768,
+			"numbersPerToken": 6144,
+			"measured": {
+				"float32": {
+					"perToken": 24576,
+					"runs": [
+						{
+							"example": "coreference",
+							"tokens": 12,
+							"bytes": 294912
+						},
+						{
+							"example": "induction",
+							"tokens": 13,
+							"bytes": 319488
+						},
+						{
+							"example": "names",
+							"tokens": 14,
+							"bytes": 344064
+						}
+					]
+				},
+				"bfloat16": {
+					"perToken": 12288,
+					"runs": [
+						{
+							"example": "coreference",
+							"tokens": 12,
+							"bytes": 147456
+						},
+						{
+							"example": "induction",
+							"tokens": 13,
+							"bytes": 159744
+						},
+						{
+							"example": "names",
+							"tokens": 14,
+							"bytes": 172032
+						}
+					]
+				}
+			}
+		}
+	],
+	"capture": {
+		"script": "scripts/attention/record_kv_heads.py",
+		"torch": "2.14.1",
+		"transformers": "4.57.6",
+		"device": "cpu",
+		"measured": "bytes of the key and value tensors in the cache each model returns for the prompt (model(ids, use_cache=True).past_key_values), in float32 and in bfloat16",
+		"shape": "config.json at the pinned revision; GPTBigCode's multi_query means one key/value head"
+	}
+}

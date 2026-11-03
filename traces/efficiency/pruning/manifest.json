@@ -1,0 +1,302 @@
+{
+ "kind": "pruning-compare",
+ "tab": "pruning",
+ "members": [
+  "wanda",
+  "sparsegpt"
+ ],
+ "sources": {
+  "wanda": {
+   "manifestSha256": "dd67da39bf154399689ad5d0e7f7f854e4ed2ad7b2cda8ab39c5ce89297450f0",
+   "matrixSha256": "bffb7009ee7f586fdc4135ca479ee168d7ca89bd1ea7decdd7a065bb9dfda9f6",
+   "layersSha256": "0b7c08d0a1543bb615ec82df7875af067c05840f10e42e7fa6ca0e6dcf7afb32",
+   "outputsSha256": "b61ac2643730ae170ec768358d503e5a3a41c8baff49e33f02459e541b3cb2f7"
+  },
+  "sparsegpt": {
+   "manifestSha256": "d873fc690da5f14cba05548d3ce5ab44b5a72b6c848665cfd644b02644ca3043",
+   "matrixSha256": "2e59f9707bbaa06fae7fc65d19d83c1cb830b647952f40cfe9c1deb6fc750f3c",
+   "layersSha256": "53bd40e419c21bf6ed71d6c750160068a7980e4fe69abf0e38c79eb024b68887",
+   "outputsSha256": "ff77afc95f74178f5efcf02d06385499cdf5134ef60341d0769c036f950ffea4",
+   "hessianSha256": "4d9c55f2d6566a5df1a63cb3ab659882c3133261af82be645635c8145279abc3"
+  }
+ },
+ "model": {
+  "id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "name": "Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct",
+  "license": "Apache-2.0",
+  "licenseUrl": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/blob/main/LICENSE",
+  "layers": 24,
+  "hidden": 896,
+  "intermediate": 4864,
+  "heads": 14,
+  "kvHeads": 2,
+  "parameters": 494032768,
+  "linearWeights": 357826560,
+  "tiedEmbedding": true
+ },
+ "featured": {
+  "layer": 0,
+  "matrix": "self_attn.k_proj",
+  "rows": 128,
+  "cols": 896,
+  "crop": [
+   48,
+   80
+  ],
+  "outliers": [
+   56,
+   490,
+   674,
+   538,
+   53
+  ],
+  "blocksize": 128,
+  "percdamp": 0.01,
+  "damping": 0.532432496547699
+ },
+ "targets": [
+  "50",
+  "2:4"
+ ],
+ "errors": {
+  "50": {
+   "wanda.none": 0.0025998990648502607,
+   "wanda.obs": 0.0010741864810630628,
+   "sparsegpt.none": 0.0008806418886560393,
+   "sparsegpt.obs": 0.00031776954648837536
+  },
+  "2:4": {
+   "wanda.none": 0.007289857708588331,
+   "wanda.obs": 0.002552244012673244,
+   "sparsegpt.none": 0.007874659135569482,
+   "sparsegpt.obs": 0.002202246178837179
+  }
+ },
+ "overlap": {
+  "50": {
+   "both": 0.4014195033482143,
+   "onlyWanda": 0.09858049665178571,
+   "onlySparsegpt": 0.09851946149553571,
+   "neither": 0.4014805385044643
+  },
+  "2:4": {
+   "both": 0.44608851841517855,
+   "onlyWanda": 0.05391148158482143,
+   "onlySparsegpt": 0.05391148158482143,
+   "neither": 0.44608851841517855
+  }
+ },
+ "weighting": {
+  "shareMedian": 0.6075905561447144,
+  "shareMin": 0.02070535719394684,
+  "shareMinChannel": 315,
+  "shareAtOutliers": [
+   0.07886254787445068,
+   0.1940203309059143,
+   0.06482037156820297
+  ]
+ },
+ "variants": [
+  "wanda",
+  "wandaUpdate",
+  "sparsegpt"
+ ],
+ "runs": {
+  "wandaUpdate-50": {
+   "perplexity": 25.363544464111328,
+   "sparsity": 0.5,
+   "pruneSeconds": 222.65022470900294,
+   "methodSeconds": {
+    "wanda": 2.2355927120515844,
+    "wandaUpdate": 39.74217466603295,
+    "sparsegpt": 64.3705219990079
+   },
+   "continuation": " The crater is named after the crater's impact on the lunar surface. The crater is named after the impact on the lunar"
+  },
+  "wandaUpdate-2-4": {
+   "perplexity": 48.546512603759766,
+   "sparsity": 0.5,
+   "pruneSeconds": 216.7593678339981,
+   "methodSeconds": {
+    "wanda": 4.35467883398087,
+    "wandaUpdate": 40.942567580976174,
+    "sparsegpt": 50.20171646797098
+   },
+   "continuation": " The crater is a small, round crater that is the most prominent crater in the Moon.\nThe crater is a small round"
+  }
+ },
+ "matrix": {
+  "file": "matrix.f32",
+  "sha256": "1264170e1ecb37d02fc4094f07d045a2205a38c047d0c14ae031561f8b975519",
+  "bytes": 1835008,
+  "tensors": {
+   "score.sparsegpt.50": {
+    "offset": 0,
+    "length": 114688,
+    "shape": [
+     128,
+     896
+    ]
+   },
+   "pruned.wandaUpdate.50": {
+    "offset": 114688,
+    "length": 114688,
+    "shape": [
+     128,
+     896
+    ]
+   },
+   "score.sparsegpt.2:4": {
+    "offset": 229376,
+    "length": 114688,
+    "shape": [
+     128,
+     896
+    ]
+   },
+   "pruned.wandaUpdate.2:4": {
+    "offset": 344064,
+    "length": 114688,
+    "shape": [
+     128,
+     896
+    ]
+   }
+  }
+ },
+ "layers": {
+  "file": "layers.f32",
+  "sha256": "432fea6b7ada0f9d61fcbd3ee7010420066a639e2d08d1438300bb34802883a6",
+  "bytes": 4032,
+  "tensors": {
+   "errors.wanda.50": {
+    "offset": 0,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   },
+   "errors.wandaUpdate.50": {
+    "offset": 168,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   },
+   "errors.sparsegpt.50": {
+    "offset": 336,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   },
+   "errors.wanda.2:4": {
+    "offset": 504,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   },
+   "errors.wandaUpdate.2:4": {
+    "offset": 672,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   },
+   "errors.sparsegpt.2:4": {
+    "offset": 840,
+    "length": 168,
+    "shape": [
+     24,
+     7
+    ]
+   }
+  }
+ },
+ "validation": {
+  "membersSameWeights": true,
+  "membersSameStatistic": true,
+  "membersSameWandaMasks": true,
+  "inverseFactorDiagVsRecordedMaxError": 0.0,
+  "schurComplementMaxRelError": 7.386572958774658e-05,
+  "sweepVsRecorded.50": 0.0,
+  "fasterpruneOnStoredHessianVsRecorded.50": 0.0,
+  "fixedOwnMaskVsRecorded.50": 0.0,
+  "scoreBlockOrderViolation.50": 0.0,
+  "wandaUpdateKeptMovedFraction.50": 0.9990059733390808,
+  "wanda.noneVsMemberError.50": 4.087526346877479e-08,
+  "sparsegpt.obsVsMemberError.50": 4.3839314459926013e-08,
+  "sweepVsRecorded.2:4": 0.0,
+  "fasterpruneOnStoredHessianVsRecorded.2:4": 0.0,
+  "fixedOwnMaskVsRecorded.2:4": 0.0,
+  "scoreGroupOrderViolations.2:4": 0,
+  "wandaUpdateKeptMovedFraction.2:4": 0.9988664984703064,
+  "wanda.noneVsMemberError.2:4": 1.4400661088567632e-08,
+  "sparsegpt.obsVsMemberError.2:4": 3.339262539997053e-08,
+  "runFeaturedHessianVsStored.50": 0.0,
+  "runFeaturedWeightsVsReplay.50": 0.0,
+  "runFeaturedSparsegptVsRecorded.50": 0.0,
+  "runFeaturedErrorsVsReplay.50": 4.383931253804061e-08,
+  "runFeaturedHessianVsStored.2:4": 0.0,
+  "runFeaturedWeightsVsReplay.2:4": 0.0,
+  "runFeaturedSparsegptVsRecorded.2:4": 0.0,
+  "runFeaturedErrorsVsReplay.2:4": 3.960630799688785e-08
+ },
+ "capture": {
+  "script": "scripts/efficiency/record_pruning.py",
+  "scriptSha256": "d547dec5c412df8759f32e9d8e9cb440e8b89870dcf4c33e46c630c711e290eb",
+  "runner": "scripts/efficiency/pruning_update_run.py",
+  "runnerSha256": "abb7aaa3e299441615c0c0b8fbf8e21dbd94718ee778b420feaf165d4ec66090",
+  "runs": {
+   "wandaUpdate-50": {
+    "timestamp": "2026-11-03T03:22:35.602951+00:00",
+    "device": "mps",
+    "dtype": "float32",
+    "chip": "Apple M4 Max",
+    "python": "3.12.12",
+    "packages": {
+     "torch": "2.14.1",
+     "transformers": "4.57.6",
+     "huggingface_hub": "0.36.2"
+    },
+    "helper": "scripts/efficiency/sparsity_trace.py",
+    "helperSha256": "04f694e02f78dc3ee61fd21ac1dea68d3e19012fe44aafd08f3b23d5b97cdacc",
+    "reference": "github.com/locuslab/wanda @ 8e8fc87 · github.com/IST-DASLab/sparsegpt @ 147d215",
+    "runner": "scripts/efficiency/pruning_update_run.py",
+    "runnerSha256": "abb7aaa3e299441615c0c0b8fbf8e21dbd94718ee778b420feaf165d4ec66090"
+   },
+   "wandaUpdate-2-4": {
+    "timestamp": "2026-11-03T03:31:59.957616+00:00",
+    "device": "mps",
+    "dtype": "float32",
+    "chip": "Apple M4 Max",
+    "python": "3.12.12",
+    "packages": {
+     "torch": "2.14.1",
+     "transformers": "4.57.6",
+     "huggingface_hub": "0.36.2"
+    },
+    "helper": "scripts/efficiency/sparsity_trace.py",
+    "helperSha256": "04f694e02f78dc3ee61fd21ac1dea68d3e19012fe44aafd08f3b23d5b97cdacc",
+    "reference": "github.com/locuslab/wanda @ 8e8fc87 · github.com/IST-DASLab/sparsegpt @ 147d215",
+    "runner": "scripts/efficiency/pruning_update_run.py",
+    "runnerSha256": "abb7aaa3e299441615c0c0b8fbf8e21dbd94718ee778b420feaf165d4ec66090"
+   }
+  },
+  "reference": "github.com/locuslab/wanda @ 8e8fc87 · github.com/IST-DASLab/sparsegpt @ 147d215",
+  "device": "cpu",
+  "dtype": "float32",
+  "packages": {
+   "torch": "2.14.1"
+  },
+  "timestamp": "2026-11-03T03:37:08.935214+00:00"
+ }
+}

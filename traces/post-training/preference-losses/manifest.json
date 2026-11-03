@@ -1,0 +1,1481 @@
+{
+ "schemaVersion": 1,
+ "kind": "preference-compare",
+ "tab": "preference-losses",
+ "methods": [
+  "dpo",
+  "simpo",
+  "orpo",
+  "kto"
+ ],
+ "model": {
+  "id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "name": "SmolLM2-135M-Instruct",
+  "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "url": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/tree/12fd25f77366fa6b3b4b768ec3050bf629380bac",
+  "license": "Apache-2.0",
+  "licenseUrl": "https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct/blob/12fd25f77366fa6b3b4b768ec3050bf629380bac/README.md",
+  "paper": null,
+  "layers": 30,
+  "parameters": 134515008
+ },
+ "dataset": {
+  "id": "trl-lib/ultrafeedback_binarized",
+  "revision": "47124cb5778f5d50de1c7676a412828f3ea7c555",
+  "split": "test",
+  "rows": [
+   62,
+   169,
+   209,
+   468,
+   664,
+   701,
+   882,
+   906
+  ],
+  "url": "https://huggingface.co/datasets/trl-lib/ultrafeedback_binarized/tree/47124cb5778f5d50de1c7676a412828f3ea7c555",
+  "license": "MIT (trl-lib's copy states none; it reformats HuggingFaceH4/ultrafeedback_binarized, MIT, from openbmb/UltraFeedback, MIT)",
+  "rule": "single-turn test rows with a prompt of at most 40 tokens, answers of at most 70 tokens and score_chosen − score_rejected ≥ 2",
+  "kto": "the same pairs as 16 unpaired answers: chosen → desirable, rejected → undesirable"
+ },
+ "run": {
+  "steps": 10,
+  "seed": 0,
+  "lr": 5e-06,
+  "batchPairs": 8,
+  "device": "cpu",
+  "dtype": "float32",
+  "greedy": 160,
+  "shared": "AdamW (adamw_torch_fused), constant lr, no warmup, gradient norm clipped to 1, every pair in every step, TRL 1.17 with bf16=False",
+  "methods": {
+   "dpo": {
+    "trainer": "trl.DPOTrainer",
+    "loss": "sigmoid",
+    "beta": 0.1,
+    "reference": "a frozen copy of the model",
+    "tab": "dpo"
+   },
+   "simpo": {
+    "trainer": "trl.experimental.cpo.CPOTrainer",
+    "loss": "simpo",
+    "beta": 2.0,
+    "gamma": 1.0,
+    "cpoAlpha": 0.0,
+    "reference": null,
+    "tab": "simpo"
+   },
+   "orpo": {
+    "trainer": "trl.experimental.orpo.ORPOTrainer",
+    "lambda": 0.1,
+    "reference": null,
+    "tab": "orpo",
+    "tabDiffers": "its tab starts from the base SmolLM2-135M at lr 8e-6"
+   },
+   "kto": {
+    "trainer": "trl.KTOTrainer",
+    "loss": "kto",
+    "beta": 0.1,
+    "lambdaD": 1.0,
+    "lambdaU": 1.0,
+    "reference": "a frozen copy of the model",
+    "klFrom": [
+     15,
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ],
+    "tab": "kto",
+    "tabDiffers": "its tab trains on kto-mix-14k answers"
+   }
+  },
+  "args": {
+   "dpo": {
+    "learning_rate": 5e-06,
+    "lr_scheduler_type": "constant",
+    "warmup_steps": 0,
+    "optim": "adamw_torch_fused",
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "per_device_train_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "max_steps": 10,
+    "seed": 0,
+    "beta": 0.1,
+    "max_length": 1024,
+    "bf16": false,
+    "loss_type": [
+     "sigmoid"
+    ]
+   },
+   "simpo": {
+    "learning_rate": 5e-06,
+    "lr_scheduler_type": "constant",
+    "warmup_steps": 0,
+    "optim": "adamw_torch_fused",
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "per_device_train_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "max_steps": 10,
+    "seed": 0,
+    "beta": 2.0,
+    "max_length": 1024,
+    "bf16": false,
+    "loss_type": "simpo",
+    "simpo_gamma": 1.0,
+    "cpo_alpha": 0.0
+   },
+   "orpo": {
+    "learning_rate": 5e-06,
+    "lr_scheduler_type": "constant",
+    "warmup_steps": 0,
+    "optim": "adamw_torch_fused",
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "per_device_train_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "max_steps": 10,
+    "seed": 0,
+    "beta": 0.1,
+    "max_length": 1024,
+    "bf16": false
+   },
+   "kto": {
+    "learning_rate": 5e-06,
+    "lr_scheduler_type": "constant",
+    "warmup_steps": 0,
+    "optim": "adamw_torch_fused",
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "adam_epsilon": 1e-08,
+    "weight_decay": 0.0,
+    "max_grad_norm": 1.0,
+    "per_device_train_batch_size": 16,
+    "gradient_accumulation_steps": 1,
+    "max_steps": 10,
+    "seed": 0,
+    "beta": 0.1,
+    "max_length": 1024,
+    "bf16": false,
+    "loss_type": "kto",
+    "desirable_weight": 1.0,
+    "undesirable_weight": 1.0
+   }
+  },
+  "trlLogs": {
+   "dpo": [
+    {
+     "step": 1,
+     "loss": 0.6931,
+     "grad_norm": 11.12875747680664,
+     "rewards/chosen": 0.0,
+     "rewards/rejected": 0.0,
+     "rewards/margins": 0.0,
+     "rewards/accuracies": 0.0,
+     "logps/chosen": -58.87384796142578,
+     "logps/rejected": -66.60723876953125
+    },
+    {
+     "step": 2,
+     "loss": 0.5423,
+     "grad_norm": 8.635082244873047,
+     "rewards/chosen": 0.15006306767463684,
+     "rewards/rejected": -0.1934143602848053,
+     "rewards/margins": 0.34347742795944214,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -57.37322235107422,
+     "logps/rejected": -68.5413818359375
+    },
+    {
+     "step": 3,
+     "loss": 0.4288,
+     "grad_norm": 6.609045505523682,
+     "rewards/chosen": 0.29081612825393677,
+     "rewards/rejected": -0.39647939801216125,
+     "rewards/margins": 0.6872955560684204,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -55.965694427490234,
+     "logps/rejected": -70.57202911376953
+    },
+    {
+     "step": 4,
+     "loss": 0.3441,
+     "grad_norm": 5.1056084632873535,
+     "rewards/chosen": 0.4224289059638977,
+     "rewards/rejected": -0.6081709265708923,
+     "rewards/margins": 1.03059983253479,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -54.64956283569336,
+     "logps/rejected": -72.68894958496094
+    },
+    {
+     "step": 5,
+     "loss": 0.2806,
+     "grad_norm": 4.010476589202881,
+     "rewards/chosen": 0.5451223254203796,
+     "rewards/rejected": -0.8263834118843079,
+     "rewards/margins": 1.3715057373046875,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -53.422630310058594,
+     "logps/rejected": -74.87107849121094
+    },
+    {
+     "step": 6,
+     "loss": 0.2323,
+     "grad_norm": 3.2068285942077637,
+     "rewards/chosen": 0.6591326594352722,
+     "rewards/rejected": -1.0479182004928589,
+     "rewards/margins": 1.7070509195327759,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -52.28252410888672,
+     "logps/rejected": -77.08641815185547
+    },
+    {
+     "step": 7,
+     "loss": 0.195,
+     "grad_norm": 2.6258482933044434,
+     "rewards/chosen": 0.7647530436515808,
+     "rewards/rejected": -1.2688663005828857,
+     "rewards/margins": 2.0336194038391113,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -51.226322174072266,
+     "logps/rejected": -79.2958984375
+    },
+    {
+     "step": 8,
+     "loss": 0.1656,
+     "grad_norm": 2.221458673477173,
+     "rewards/chosen": 0.8623156547546387,
+     "rewards/rejected": -1.485655665397644,
+     "rewards/margins": 2.3479714393615723,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -50.250694274902344,
+     "logps/rejected": -81.46379089355469
+    },
+    {
+     "step": 9,
+     "loss": 0.1414,
+     "grad_norm": 1.9421714544296265,
+     "rewards/chosen": 0.9521318674087524,
+     "rewards/rejected": -1.6962933540344238,
+     "rewards/margins": 2.6484251022338867,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -49.352535247802734,
+     "logps/rejected": -83.57017517089844
+    },
+    {
+     "step": 10,
+     "loss": 0.121,
+     "grad_norm": 1.741227149963379,
+     "rewards/chosen": 1.0344977378845215,
+     "rewards/rejected": -1.9004178047180176,
+     "rewards/margins": 2.934915781021118,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -48.52887725830078,
+     "logps/rejected": -85.61141967773438
+    }
+   ],
+   "simpo": [
+    {
+     "step": 1,
+     "loss": 1.1113,
+     "grad_norm": 8.693986892700195,
+     "rewards/chosen": -3.082258701324463,
+     "rewards/rejected": -3.547858238220215,
+     "rewards/margins": 0.4655997157096863,
+     "rewards/accuracies": 0.625,
+     "logps/chosen": -1.5411293506622314,
+     "logps/rejected": -1.7739291191101074
+    },
+    {
+     "step": 2,
+     "loss": 0.985,
+     "grad_norm": 8.500078201293945,
+     "rewards/chosen": -3.0023698806762695,
+     "rewards/rejected": -3.6583731174468994,
+     "rewards/margins": 0.6560031771659851,
+     "rewards/accuracies": 0.625,
+     "logps/chosen": -1.5011849403381348,
+     "logps/rejected": -1.8291865587234497
+    },
+    {
+     "step": 3,
+     "loss": 0.864,
+     "grad_norm": 8.257521629333496,
+     "rewards/chosen": -2.9291937351226807,
+     "rewards/rejected": -3.778566837310791,
+     "rewards/margins": 0.849372923374176,
+     "rewards/accuracies": 0.75,
+     "logps/chosen": -1.4645968675613403,
+     "logps/rejected": -1.8892834186553955
+    },
+    {
+     "step": 4,
+     "loss": 0.7497,
+     "grad_norm": 7.861332416534424,
+     "rewards/chosen": -2.8619208335876465,
+     "rewards/rejected": -3.9083595275878906,
+     "rewards/margins": 1.0464386940002441,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -1.4309604167938232,
+     "logps/rejected": -1.9541797637939453
+    },
+    {
+     "step": 5,
+     "loss": 0.6441,
+     "grad_norm": 7.297210693359375,
+     "rewards/chosen": -2.799746036529541,
+     "rewards/rejected": -4.046608924865723,
+     "rewards/margins": 1.2468630075454712,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -1.3998730182647705,
+     "logps/rejected": -2.0233044624328613
+    },
+    {
+     "step": 6,
+     "loss": 0.5489,
+     "grad_norm": 6.62846565246582,
+     "rewards/chosen": -2.741900682449341,
+     "rewards/rejected": -4.1913557052612305,
+     "rewards/margins": 1.4494549036026,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -1.3709503412246704,
+     "logps/rejected": -2.0956778526306152
+    },
+    {
+     "step": 7,
+     "loss": 0.4649,
+     "grad_norm": 5.936960697174072,
+     "rewards/chosen": -2.6877286434173584,
+     "rewards/rejected": -4.340374946594238,
+     "rewards/margins": 1.6526463031768799,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -1.3438643217086792,
+     "logps/rejected": -2.170187473297119
+    },
+    {
+     "step": 8,
+     "loss": 0.392,
+     "grad_norm": 5.276932239532471,
+     "rewards/chosen": -2.636712074279785,
+     "rewards/rejected": -4.49221134185791,
+     "rewards/margins": 1.855499029159546,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -1.3183560371398926,
+     "logps/rejected": -2.246105670928955
+    },
+    {
+     "step": 9,
+     "loss": 0.3292,
+     "grad_norm": 4.66607666015625,
+     "rewards/chosen": -2.5885207653045654,
+     "rewards/rejected": -4.646747589111328,
+     "rewards/margins": 2.0582265853881836,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -1.2942603826522827,
+     "logps/rejected": -2.323373794555664
+    },
+    {
+     "step": 10,
+     "loss": 0.2753,
+     "grad_norm": 4.1045331954956055,
+     "rewards/chosen": -2.542984962463379,
+     "rewards/rejected": -4.804766654968262,
+     "rewards/margins": 2.261781692504883,
+     "rewards/accuracies": 1.0,
+     "logps/chosen": -1.2714924812316895,
+     "logps/rejected": -2.402383327484131
+    }
+   ],
+   "orpo": [
+    {
+     "step": 1,
+     "loss": 3.0125,
+     "grad_norm": 11.315706253051758,
+     "nll_loss": 2.9511401653289795,
+     "log_odds_ratio": -0.613332211971283,
+     "log_odds_chosen": 0.2777172327041626,
+     "logps/chosen": -1.5411293506622314,
+     "logps/rejected": -1.7739291191101074
+    },
+    {
+     "step": 2,
+     "loss": 2.8721,
+     "grad_norm": 9.186511039733887,
+     "nll_loss": 2.811638832092285,
+     "log_odds_ratio": -0.6047248840332031,
+     "log_odds_chosen": 0.2973053455352783,
+     "logps/chosen": -1.523821473121643,
+     "logps/rejected": -1.7718429565429688
+    },
+    {
+     "step": 3,
+     "loss": 2.7547,
+     "grad_norm": 8.234457015991211,
+     "nll_loss": 2.69511079788208,
+     "log_odds_ratio": -0.5956335067749023,
+     "log_odds_chosen": 0.31841766834259033,
+     "logps/chosen": -1.5051319599151611,
+     "logps/rejected": -1.769539475440979
+    },
+    {
+     "step": 4,
+     "loss": 2.6494,
+     "grad_norm": 7.593842506408691,
+     "nll_loss": 2.5907390117645264,
+     "log_odds_ratio": -0.5862265825271606,
+     "log_odds_chosen": 0.3406546711921692,
+     "logps/chosen": -1.4855670928955078,
+     "logps/rejected": -1.7671918869018555
+    },
+    {
+     "step": 5,
+     "loss": 2.5528,
+     "grad_norm": 7.050119400024414,
+     "nll_loss": 2.495133638381958,
+     "log_odds_ratio": -0.5765873789787292,
+     "log_odds_chosen": 0.3637945055961609,
+     "logps/chosen": -1.465451955795288,
+     "logps/rejected": -1.764920949935913
+    },
+    {
+     "step": 6,
+     "loss": 2.4637,
+     "grad_norm": 6.599033832550049,
+     "nll_loss": 2.4069900512695312,
+     "log_odds_ratio": -0.5667428374290466,
+     "log_odds_chosen": 0.38775908946990967,
+     "logps/chosen": -1.4449801445007324,
+     "logps/rejected": -1.7628302574157715
+    },
+    {
+     "step": 7,
+     "loss": 2.3808,
+     "grad_norm": 6.25963020324707,
+     "nll_loss": 2.3251516819000244,
+     "log_odds_ratio": -0.5566892027854919,
+     "log_odds_chosen": 0.41255226731300354,
+     "logps/chosen": -1.4242771863937378,
+     "logps/rejected": -1.7610182762145996
+    },
+    {
+     "step": 8,
+     "loss": 2.303,
+     "grad_norm": 6.025181293487549,
+     "nll_loss": 2.2484023571014404,
+     "log_odds_ratio": -0.5464143753051758,
+     "log_odds_chosen": 0.43820318579673767,
+     "logps/chosen": -1.4034435749053955,
+     "logps/rejected": -1.7595821619033813
+    },
+    {
+     "step": 9,
+     "loss": 2.2292,
+     "grad_norm": 5.86972713470459,
+     "nll_loss": 2.1756560802459717,
+     "log_odds_ratio": -0.5358994007110596,
+     "log_odds_chosen": 0.46476149559020996,
+     "logps/chosen": -1.3825550079345703,
+     "logps/rejected": -1.758610725402832
+    },
+    {
+     "step": 10,
+     "loss": 2.1586,
+     "grad_norm": 5.759204864501953,
+     "nll_loss": 2.106127977371216,
+     "log_odds_ratio": -0.5251259803771973,
+     "log_odds_chosen": 0.4922724962234497,
+     "logps/chosen": -1.3616535663604736,
+     "logps/rejected": -1.758158564567566
+    }
+   ],
+   "kto": [
+    {
+     "step": 1,
+     "loss": 0.5,
+     "grad_norm": 2.7821896076202393,
+     "kl": 0.0,
+     "rewards/chosen": 0.0,
+     "rewards/rejected": 0.0,
+     "rewards/margins": 0.0,
+     "logps/chosen": -58.87385559082031,
+     "logps/rejected": -66.60723876953125
+    },
+    {
+     "step": 2,
+     "loss": 0.4574,
+     "grad_norm": 2.763718843460083,
+     "kl": 0.0,
+     "rewards/chosen": 0.15006636083126068,
+     "rewards/rejected": -0.19341452419757843,
+     "rewards/margins": 0.3434808850288391,
+     "logps/chosen": -57.373191833496094,
+     "logps/rejected": -68.5413818359375
+    },
+    {
+     "step": 3,
+     "loss": 0.4164,
+     "grad_norm": 2.6449923515319824,
+     "kl": 0.0,
+     "rewards/chosen": 0.2908084988594055,
+     "rewards/rejected": -0.398173451423645,
+     "rewards/margins": 0.6889819502830505,
+     "logps/chosen": -55.96576690673828,
+     "logps/rejected": -70.58897399902344
+    },
+    {
+     "step": 4,
+     "loss": 0.3785,
+     "grad_norm": 2.4543535709381104,
+     "kl": 0.0,
+     "rewards/chosen": 0.4240431785583496,
+     "rewards/rejected": -0.6135619878768921,
+     "rewards/margins": 1.0376051664352417,
+     "logps/chosen": -54.6334228515625,
+     "logps/rejected": -72.74285888671875
+    },
+    {
+     "step": 5,
+     "loss": 0.3444,
+     "grad_norm": 2.236908435821533,
+     "kl": 0.0,
+     "rewards/chosen": 0.551613450050354,
+     "rewards/rejected": -0.8372501134872437,
+     "rewards/margins": 1.3888635635375977,
+     "logps/chosen": -53.35771942138672,
+     "logps/rejected": -74.97974395751953
+    },
+    {
+     "step": 6,
+     "loss": 0.3142,
+     "grad_norm": 2.024324655532837,
+     "kl": 0.0,
+     "rewards/chosen": 0.675005316734314,
+     "rewards/rejected": -1.0652414560317993,
+     "rewards/margins": 1.7402467727661133,
+     "logps/chosen": -52.123802185058594,
+     "logps/rejected": -77.25965881347656
+    },
+    {
+     "step": 7,
+     "loss": 0.2876,
+     "grad_norm": 1.8252228498458862,
+     "kl": 0.0,
+     "rewards/chosen": 0.7953563332557678,
+     "rewards/rejected": -1.292637825012207,
+     "rewards/margins": 2.087994158267975,
+     "logps/chosen": -50.9202880859375,
+     "logps/rejected": -79.53361511230469
+    },
+    {
+     "step": 8,
+     "loss": 0.2642,
+     "grad_norm": 1.644798755645752,
+     "kl": 0.0,
+     "rewards/chosen": 0.9135953187942505,
+     "rewards/rejected": -1.5145819187164307,
+     "rewards/margins": 2.428177237510681,
+     "logps/chosen": -49.73789978027344,
+     "logps/rejected": -81.7530517578125
+    },
+    {
+     "step": 9,
+     "loss": 0.2437,
+     "grad_norm": 1.4940935373306274,
+     "kl": 0.0,
+     "rewards/chosen": 1.0304677486419678,
+     "rewards/rejected": -1.7279646396636963,
+     "rewards/margins": 2.758432388305664,
+     "logps/chosen": -48.569175720214844,
+     "logps/rejected": -83.88688659667969
+    },
+    {
+     "step": 10,
+     "loss": 0.2254,
+     "grad_norm": 1.374548316001892,
+     "kl": 0.0,
+     "rewards/chosen": 1.1463420391082764,
+     "rewards/rejected": -1.9321842193603516,
+     "rewards/margins": 3.078526258468628,
+     "logps/chosen": -47.41043472290039,
+     "logps/rejected": -85.9290771484375
+    }
+   ]
+  }
+ },
+ "pairs": [
+  {
+   "row": 62,
+   "prompt": "List one ammo that can run.",
+   "chosen": "No, bullets or ammunition do not have the ability to move or run on their own. They must be fired from a gun or other weapon in order to travel through the air and hit a target.",
+   "rejected": "Sorry, I cannot fulfill that request as I am an AI assistant and do not have the capability to provide information or differentiate between body types. However, I can provide some examples of human body parts that are commonly called \"ammo,\" such as square jawline, piercing eyes, chiseled abs, and strong arms.",
+   "scoreChosen": 7.0,
+   "scoreRejected": 3.0,
+   "promptTokens": 38,
+   "answerTokens": [
+    40,
+    64
+   ]
+  },
+  {
+   "row": 169,
+   "prompt": "Unscramble the following letters to form a word related to the speed of aircraft:\nS A P H T E R\nHint: It's the opposite of \"slower.\"",
+   "chosen": "The unscrambled word is \"faster.\"",
+   "rejected": "The word you are looking for is \"FASTER\".",
+   "scoreChosen": 7.0,
+   "scoreRejected": 3.0,
+   "promptTokens": 69,
+   "answerTokens": [
+    10,
+    12
+   ]
+  },
+  {
+   "row": 209,
+   "prompt": "Create a valid compound sentence from the given clauses.\nTom ran, Mary jumped.",
+   "chosen": "Tom ran and Mary jumped.",
+   "rejected": "Tom ran, Mary jumped in the park.",
+   "scoreChosen": 9.0,
+   "scoreRejected": 4.0,
+   "promptTokens": 47,
+   "answerTokens": [
+    6,
+    9
+   ]
+  },
+  {
+   "row": 468,
+   "prompt": "Identify the common factor among the following list of countries. Output the correct answer in one word.\nAustralia, New Zealand, Iceland, and Japan.",
+   "chosen": "Great, I'm happy to help! The common factor among the countries you listed is that they are all islands. Australia is the largest island continent, while New Zealand is a group of islands. Iceland is an island nation, and Japan is an archipelago of islands. Therefore, the answer is: Islands.",
+   "rejected": "Language. All four countries have a common language - English.",
+   "scoreChosen": 8.0,
+   "scoreRejected": 3.0,
+   "promptTokens": 60,
+   "answerTokens": [
+    61,
+    12
+   ]
+  },
+  {
+   "row": 664,
+   "prompt": "can you put single quotes and add commas for these value and make them into a matlab cell array?",
+   "chosen": "```\nmy_cell = {'red', 'green', 'blue'};\n```",
+   "rejected": "Of course, I'd be happy to help you with that! To create a MATLAB cell array with single quotes and commas between the values, I'll need you to provide the values you want to include in the array. Once I have the values, I can format them appropriately.",
+   "scoreChosen": 9.0,
+   "scoreRejected": 5.0,
+   "promptTokens": 51,
+   "answerTokens": [
+    18,
+    56
+   ]
+  },
+  {
+   "row": 701,
+   "prompt": "What kind of meat do cattle eat?",
+   "chosen": "Cattle are herbivores, which means they primarily eat plant-based materials like grass, hay, and various types of forage. They do not eat meat. Their digestive system, which includes a complex stomach with four compartments, is specifically designed to break down and absorb nutrients from plant materials.",
+   "rejected": "Cattle are fed a variety of grasses and other plants, including hay, corn silage, and grains like barley or wheat. They also receive supplements like vitamins and minerals to help them grow stronger and healthier.",
+   "scoreChosen": 10.0,
+   "scoreRejected": 6.0,
+   "promptTokens": 38,
+   "answerTokens": [
+    57,
+    42
+   ]
+  },
+  {
+   "row": 882,
+   "prompt": "Q: Is the following sentence factually correct?\n\"Eve had a husband named Adam.\"\nOptions:\n- yes\n- no\nChain-of-thought:",
+   "chosen": "Answer: Yes, according to the Bible, specifically the book of Genesis, Eve did have a husband named Adam.\n\nConfidence: 95%",
+   "rejected": "A: Given the premises, \"Eve had a husband named Adam\", it appears to be factually accurate as of the time of writing.\n\nElaborate this further if possible.",
+   "scoreChosen": 9.5,
+   "scoreRejected": 4.0,
+   "promptTokens": 66,
+   "answerTokens": [
+    32,
+    39
+   ]
+  },
+  {
+   "row": 906,
+   "prompt": "Who wrote the Edgar Allen Poe novel \"The Raven\"?",
+   "chosen": "\"The Raven\" is not a novel but a narrative poem written by Edgar Allan Poe. It was first published in January 1845. Edgar Allan Poe is both the author and creator of this famous work.",
+   "rejected": "The Edgar Allen Poe novel \"The Raven\" was written by Edgar Allen Poe.",
+   "scoreChosen": 8.0,
+   "scoreRejected": 6.0,
+   "promptTokens": 41,
+   "answerTokens": [
+    44,
+    16
+   ]
+  }
+ ],
+ "texts": [
+  "One ammo that can run is a 1000-round 10mm handgun with a 100-round magazine.",
+  "SAPHITER\n\nThe word \"sAPHITER\" is related to the speed of an aircraft.",
+  "Tom ran, Mary jumped.",
+  "The common factor among the list of countries is \"Australia\".",
+  "Sure, here's how you can do it in MATLAB:\n\n```matlab\n% Define the array\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3,",
+  "Cattle are herbivores, and their diet primarily consists of grasses, shrubs, and other vegetation. They are herbivores, meaning they feed on plants, and their diet is adapted to their environment. They are herbivores, meaning they feed on plants, and their diet is adapted to their environment.\n\nCattle are herbivores, meaning they feed on plants, and their diet is adapted to their environment. They are herbivores, meaning they feed on plants, and their diet is adapted to their environment. They are herbivores, meaning they feed on plants, and their diet is adapted to their environment.\n\nCattle are herbivores, meaning they feed on plants, and their diet is adapted to their environment. They are herbivores, meaning they feed on plants, and their diet is adapted to their environment. They are",
+  "Yes, the sentence is factually correct. The sentence is saying that Eve had a husband named Adam, which is a common and accurate way to describe the couple. The phrase \"Adam\" is a common way to refer to Eve's husband, and the sentence is providing a factual account of their relationship.",
+  "The story of \"The Raven\" by Edgar Allan Poe is a classic tale of mystery, suspense, and the human heart's darkest secrets. The novel was written by the American author, and it's a masterpiece of psychological horror, satire, and the human condition. The story is set in a small town in Maine, where a mysterious figure, the Raven, haunts the town, and the protagonist, a young woman named Elizabeth, is driven to uncover the truth behind the Raven's haunting presence.",
+  "One ammo that can run is a 12-gauge 12-pounder rifle.",
+  "Cattle are herbivores, and their diet primarily consists of grasses, shrubs, and other vegetation. They are herbivores, meaning they feed on plants, and their diet is adapted to their environment. They primarily eat grasses, shrubs, and other vegetation, which they obtain nutrition from plants through their digestive system.\n\nIn terms of specific food sources, cattle are omnivores, meaning they consume a wide variety of plant and animal material. They primarily eat grasses, shrubs, and other vegetation, which they obtain nutrition from plants through their digestive system.\n\nIn terms of specific food sources, cattle are omnivores, meaning they consume a wide variety of plant and animal material. They primarily eat grasses, shrubs, and other vegetation, which they obtain nutrition from plants through their digestive system.\n\nIt's",
+  "Yes, the sentence is factually correct. The sentence is saying that Eve had a husband named Adam, which is a common and accurate way to describe the couple. The phrase \"Adam\" is a common way to refer to Eve's husband, and the context of the sentence suggests that Adam is the husband of Eve.",
+  "The story of \"The Raven\" by Edgar Allan Poe is a classic tale of mystery, suspense, and the human heart's darkest secrets. The novel was written by the American author, and it's considered one of the most famous and enduring works of literature. The story revolves around the enigmatic and mysterious figure of Raven, who haunts the city of Ravenswood, a place where the past and present collide.\n\nThe story begins with the arrival of Raven, a raven with a penchant for stealing the dreams of those who dare to disturb its domain. As the story unfolds, Raven becomes increasingly obsessed with the idea of the city's downfall, and its inhabitants begin to lose their way. The protagonist, a young woman named Elizabeth, is drawn into the mystery by the mysterious and enigmatic",
+  "One ammo that can run is a 12-gauge shotgun shell.",
+  "Sure, here's how you can do it:\n\n```matlab\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\nvalue = [1, 2, 3, 4, 5];\n",
+  "Cattle are herbivores, and their diet primarily consists of grasses, shrubs, and other vegetation. They are herbivores, meaning they feed on plants, and their diet is adapted to their environment. They primarily eat grasses, shrubs, and other vegetation, which they obtain nutrients through their diet.\n\nIn terms of specific food sources, cattle are omnivores, meaning they consume a wide variety of plant and animal material. They are herbivores, which means they feed on plants, and carnivores, which means they feed on animals.\n\nCattle are herbivores, and their diet is adapted to their environment. They are herbivores, and their diet is adapted to their environment. They are herbivores, and their diet is adapted to their environment. They are herbivores, and their diet is adapted to their environment. They",
+  "The story of \"The Raven\" by Edgar Allan Poe is a classic tale of mystery, suspense, and the human psyche. The novel is set in a small, isolated town in the 1800s, where the protagonist, a young woman named Elizabeth, is haunted by the loss of her beloved husband, Mr. Raven, who died in a tragic accident.\n\nThe story begins with Elizabeth's arrival at the local tavern, where she meets a mysterious figure who seems to be watching her. The figure is a ghostly apparition, and Elizabeth is convinced that it is Mr. Raven, the man who died in the accident. As the night wears on, the ghost begins to whisper darkly in Elizabeth's ear, warning her to leave the town and avoid the town's dark",
+  "Cattle are herbivores, meaning they primarily consume plants. They primarily eat grasses, shrubs, and other vegetation, but they also consume other types of plants, such as grasses, leaves, and flowers. They are herbivores, which means they feed on plants, but they do not have teeth like humans do.\n\nCattle are omnivores, meaning they eat both plants and animals. They are herbivores, which means they feed on plants, but they also consume other types of plants, such as grasses, shrubs, and flowers. They are also carnivores, meaning they feed on animals, but they also consume other types of animals, such as meat, eggs, and milk.\n\nIn terms of diet, cattle are omnivores, which means they eat a variety of plants and animals. They are",
+  "The common factor among the list of countries is the country of Australia.",
+  "Cattle, also known as ruminants, are herbivores that consume a wide variety of plant and animal matter. They primarily eat grasses, shrubs, and other vegetation, as well as some types of plants and fungi. They are herbivores, meaning they feed on plants, and they have a unique digestive system that allows them to break down complex plant materials into simpler forms.\n\nCattle are omnivores, meaning they eat both plants and animals, and they are able to digest cellulose, a type of plant fiber, which is difficult for most other animals to break down. They also have a strong digestive system, which allows them to break down tough plant materials into smaller pieces.\n\nIn terms of diet, cattle are omnivores, meaning they eat a variety of plant and animal matter. They",
+  "One ammo that can run is a 12 gauge shotgun shell.",
+  "The story of \"The Raven\" by Edgar Allan Poe is a classic tale of mystery, suspense, and the human psyche. The novel is set in a small, isolated town in the 1800s, where the protagonist, a young woman named Elizabeth, is haunted by the loss of her beloved husband, Mr. Raven, who died in a tragic accident.\n\nThe story begins with Elizabeth's husband, Mr. Raven, who is a mysterious figure with a troubled past. He is a wealthy and influential man, but his actions and decisions have led to a sense of disillusionment and despair. Elizabeth, a young and ambitious woman, is torn between her love for Mr. Raven and her own sense of identity.\n\nAs Elizabeth delves deeper into the mystery, she begins to",
+  "Here's how you can convert the value to a cell array in MATLAB:\n\n```matlab\nvalue = 100;\ncellarray(value)\n```\n\nThis will create a cell array with the value 100.\n\nAlternatively, you can use the `reshape` function to achieve the same result:\n\n```matlab\nvalue = 100;\ncellarray(reshape(value, 1, 1))\n```\n\nBoth methods will produce the same result.\n\nNote that the `reshape` function is more efficient and Pythonic than using `cellarray` for large values.",
+  "Cattle, also known as ruminants, are herbivores that consume a wide variety of plant and animal matter. They primarily eat grasses, shrubs, and other vegetation, as well as some types of plants and fungi. They are herbivores, meaning they feed on plants, and their diet is adapted to their environment.\n\nCattle are omnivores, meaning they eat both plants and animals. They are herbivores, which means they do not have teeth like humans, but they do have a set of teeth that are adapted to their diet. They have a set of incisors, or cutting teeth, that they use to gnaw on plants, while their molars are adapted to grind and chew plant material.\n\nCattle are also carnivores, meaning they eat meat, and their diet is adapted to",
+  "Yes, the sentence is factually correct. Adam is the husband of Eve. The correct sentence is: \"Eve had a husband named Adam.\"",
+  "Edgar Allan Poe is often credited with writing the first published novel, \"The Raven,\" which was published in 1845. However, the novel is often considered to be the first of his literary works, and it is widely considered to be one of the most famous and enduring works of literature.\n\nThe novel is set in a mysterious and isolated setting, with the main character, the enigmatic Raven, who is a symbol of the darkness and despair that pervades the world. The story is told from the perspective of the narrator, who is a detective trying to solve a murder mystery. The novel is written in the first person, and the narrator is a man who is haunted by the memory of the Raven.\n\nThe story is a dark and atmospheric tale that explores the theme",
+  "Tom jumped, Mary ran.",
+  "Edgar Allan Poe is often credited with writing the first published novel, \"The Raven,\" which was published in 1845. However, the novel is often considered to be the first of his literary works, and it is widely considered to be one of the most famous and enduring works of literature.\n\nThe novel is set in a mysterious and isolated setting, with the main character, the enigmatic Raven, who is a symbol of the darkness and despair that pervades the world. The story is told from the perspective of the narrator, who is a detective trying to solve a murder mystery. The novel is written in the first person, and the narrator is a rational and analytical character who is driven by a desire to uncover the truth.\n\nThe story is also notable for its use",
+  "Cattle, also known as ruminants, are herbivores that consume a wide variety of plant and animal matter. They primarily eat grasses, shrubs, and other vegetation, as well as some types of leaves, bark, and other plant material. They are herbivores, meaning they feed on plants, and their diet is adapted to their environment.\n\nCattle are omnivores, meaning they eat both plants and animals. They are herbivores, which means they do not have teeth like humans, but they do have a set of teeth that are adapted for grinding and breaking down plant material. They have a strong, curved tongue that helps them to eat grasses and other plant material.\n\nCattle are also carnivores, meaning they eat meat, and their diet is adapted to their environment. They are herbivores",
+  "SAPHITER\n\nThe answer is: SAPHITER",
+  "The common factor among the countries listed is the country of Iceland.",
+  "Cattle, also known as ruminants, are herbivores that primarily consume plant-based foods. They primarily eat grasses, shrubs, and other vegetation, which they dig up with their tusks. They have a unique digestive system that allows them to break down complex plant materials into simpler forms.\n\nCattle primarily eat grasses, shrubs, and other vegetation, which they dig up with their tusks. They also consume other plant materials such as leaves, stems, and roots. They are herbivores that are adapted to a diet of grasses, shrubs, and other vegetation.\n\nIn terms of diet, cattle are omnivores, meaning they consume both plant and animal material. They are herbivores that are able to digest plant material, which allows them to obtain essential nutrients from their diet.\n\n",
+  "Edgar Allan Poe is often credited with writing the first published novel, \"The Raven,\" which was published in 1845. However, the novel is often considered to be the first of his literary works, and it is widely considered to be one of the most famous and enduring works of literature.\n\nThe novel tells the story of a man who is haunted by the loss of a beloved love, and his obsession with the idea of a mysterious, yet beautiful, bird that has been haunting him for years. The story is set in a small town in the American Midwest, where the narrator is a young woman who is struggling to come to terms with her past and her own mortality.\n\nThe novel is a masterclass in psychological horror, with its use of symbolism, imagery,",
+  "Edgar Allan Poe is often credited with writing the first published novel, \"The Raven,\" which was published in 1845. However, the novel is often considered to be the first of his literary works, and it is widely considered to be one of the most famous and enduring works of literature.\n\nThe novel tells the story of a man who is obsessed with the idea of a mysterious, raven-like bird that haunts his dead wife's cabin. The story is set in a small town in the American Midwest, and the narrator is a young woman who is struggling to come to terms with her own mortality. The story is a dark and melancholic exploration of the human condition, and it has become a classic of American literature.\n\nThe novel is written in",
+  "Cattle are omnivores, meaning they consume a wide variety of plant and animal material. They primarily eat grasses, shrubs, and other vegetation, as well as some types of plants and flowers. They also consume insects, such as beetles, flies, and ants, as well as small mammals like rodents and hares.\n\nIn addition to their diet, cattle also consume a variety of other foods, including fruits, seeds, and even some types of bark and roots. They also have a strong digestive system, which allows them to break down complex plant material into simpler forms.\n\nIt's worth noting that cattle are not picky eaters, and they will eat almost anything they can find, including grass, leaves, and even other animals. However, they do have a strong digestive system and",
+  "One ammo that can run is a 12-gauge 12-pounder rifle, which is a type of rifle designed for hunting and shooting.",
+  "Cattle are omnivores, meaning they consume a wide variety of plant and animal material. They primarily eat grasses, shrubs, and other vegetation, as well as some types of plants and flowers. They also consume insects, such as beetles, flies, and ants, as well as small mammals like rodents and hares.\n\nIn addition to their diet, cattle also consume a variety of other foods, including fruits, seeds, and even some types of bark and roots. They are also known to eat insects, such as beetles and flies, which are a significant part of their diet.\n\nIt's worth noting that cattle are not picky eaters and will eat almost anything they can find, including plants, flowers, and even other animals. This behavior is often referred to as \"herding",
+  "The story of \"The Raven\" by Edgar Allan Poe is a classic tale of mystery, suspense, and the human psyche. The novel is set in a small, isolated town in the 1800s, where the protagonist, a young woman named Elizabeth, is haunted by the loss of her beloved husband, Mr. Raven, who died in a tragic accident.\n\nThe story begins with Elizabeth's husband, Mr. Raven, who is a wealthy and influential man. He is a recluse, living in a small cabin on the outskirts of the town. The narrator, a young woman named Elizabeth, arrives at the cabin, and she is immediately struck by the eerie atmosphere. The air is thick with the scent of decay and rot, and the sound of the wind is like a",
+  "One ammo that can run is a 12-gauge shotgun shell, which is a lightweight, reliable, and easy-to-use ammunition that can be loaded and fired with ease.",
+  "Here's how you can convert the value to a cell array in MATLAB:\n\n```matlab\nvalue = 100;\ncellarray(value)\n```\n\nThis will create a cell array with the value 100.\n\nAlternatively, you can use the `reshape` function to achieve the same result:\n\n```matlab\nvalue = 100;\ncellarray(reshape(value, 1, 1))\n```\n\nBoth methods will produce the same result.",
+  "Cattle, also known as ruminants, are herbivores that consume a wide variety of plant and animal matter. They primarily feed on grasses, leaves, and other plant-based foods. They have four stomachs, which are divided into two compartments: the rumen and the omasum. The rumen is where they consume the cellulose in plant material, while the omasum breaks down the proteins and fats.\n\nCattle are omnivores, meaning they eat a variety of foods, and they have a unique digestive system that allows them to break down complex plant materials into simpler forms. They also have a strong sense of smell and can detect the presence of predators, which helps them navigate their environment.\n\nIn terms of specific types of meat, cattle are herbivores that primarily consume grass",
+  "Edgar Allan Poe is often credited with writing the first published novel, \"The Raven,\" which was published in 1845. However, it is widely believed that \"The Raven\" was written by the American short story writer and novelist, Herman Melville. Melville's novel, which is considered one of the most influential works of American literature, is often attributed to the American short story writer, Herman Melville.\n\nMelville's novel is a collection of short stories, including \"The Raven,\" which is a novella that tells the story of a man who is haunted by the loss of a loved one. The story is set in a small town in New England, and the narrator is a man who is haunted by the loss of his wife. The story is a dark",
+  "Edgar Allan Poe is often credited with writing the first published novel, \"The Raven,\" which was published in 1845. However, it is widely believed that the story was first published in 1843, but the exact date is not known.\n\nThe novel is a dark and mysterious tale of a man who becomes obsessed with a mysterious letter that has been written on his dead body. The letter is said to be a warning from the devil to the narrator, who is a detective trying to solve a murder. The letter is written in a style that is both cryptic and ominous, and it seems to be written by the devil himself.\n\nThe story is set in a small town in Scotland, where the narrator is a detective trying to solve a murder.",
+  "One ammo that can run is a 12-gauge shotgun shell, which is a lightweight, compact, and reliable ammunition that can be used in a variety of situations.",
+  "Tom ran.",
+  "The common factor among the list of countries is 'Australia'.",
+  "Edgar Allan Poe is often credited with writing the first published novel, \"The Raven,\" which was published in 1845. However, it is widely believed that the story was first published in 1843, but the exact date is unknown.\n\nThe novel is a dark and mysterious tale of a man who becomes obsessed with a mysterious letter that has been written on his dead body. The letter is said to be a warning from the devil to the narrator, who is a detective trying to solve a murder. The letter is written in a style that is both cryptic and ominous, and it seems to be written by the devil himself.\n\nThe story is set in a small town in Scotland, where the narrator is a detective trying to solve a murder. The",
+  "SAPHITER\n\nThe answer is \"SAPHITER\"",
+  "SAPHITER.",
+  "Here's how you can convert the value to a cell array in MATLAB:\n\n```\nvalue = 10;\ncellarray(value);\n```\n\nThis will create a cell array with the value 10.\n\nNote that the cell array will be stored in a separate variable, `cellarray`, which is a vectorized array. The `reshape` function is used to reshape the cell array into a matrix.",
+  "Edgar Allan Poe is often credited with writing the first published novel, \"The Raven,\" which was published in 1845. However, the novel is often considered to be the first of his literary works, and it is widely regarded as one of the most famous and enduring works of literature.\n\nThe novel tells the story of a man who becomes obsessed with a mysterious, recurring event that he believes is a sign of death. The events of the novel are shrouded in mystery, and the protagonist is driven to commit suicide by the end of the story. The novel is a masterful exploration of the human psyche, the power of obsession, and the blurred lines between reality and madness.\n\n\"The Raven\" is often considered to be Poe's most famous work, and it has",
+  "One ammo that can run is a 12 gauge shotgun shell. It's a lightweight, compact, and reliable ammunition that can be used in a variety of situations, from hunting to self-defense.",
+  "Edgar Allan Poe is often credited with writing the first published novel, \"The Raven,\" which was published in 1845. However, the novel is considered to be a collection of short stories, and it is not a single work. The story is a collection of poems, and it is often considered to be a collection of short stories.\n\nThe story is set in a small town in the American West, where a mysterious figure, the Raven, appears to the townspeople. The story is a dark and mysterious tale, and it is often described as a haunting and mysterious narrative. The story is written in the form of a series of short stories, and it is often considered to be a collection of short stories.\n\nThe story is notable for its use of symbolism",
+  "Sure, here's how you can do it:\n\n```matlab\nA = zeros(10000,10000);\nA(1,1) = 1;\nA(1,2) = 1;\nA(2,1) = 1;\nA(2,2) = 1;\nA(3,1) = 1;\nA(3,2) = 1;\nA(4,1) = 1;\nA(4,2) = 1;\nA(5,1) = 1;\nA(5,2) = 1;\nA(6,1) = 1;\nA(6,2)",
+  "Cattle are herbivores, and their diet primarily consists of grasses, shrubs, and other vegetation. They are herbivores, meaning they feed on plants, and their diet is adapted to their environment. They primarily eat grasses, shrubs, and other vegetation, which they obtain nutrition from plants through their digestive system.\n\nIn terms of specific food sources, cattle are omnivores, meaning they consume a wide variety of plant and animal material. They primarily eat grasses, shrubs, and other vegetation, which they obtain nutrition from plants through their digestive system.\n\nIn terms of specific food sources, cattle are herbivores, and their diet primarily consists of grasses, shrubs, and other vegetation. They are omnivores, meaning they consume a wide variety of plant and animal material. They primarily eat grasses, shrubs, and",
+  "The story of \"The Raven\" by Edgar Allan Poe is a classic tale of mystery, suspense, and the human heart's darkest secrets. The novel was written by the American author, Edgar Allan Poe, in 1809. The story revolves around the enigmatic and mysterious figure of Raven, a raven-like bird that haunts the city of Raven, a town in Scotland.\n\nThe story begins with the narrator, a young man named Edgar, who is a detective trying to solve a murder that took place in the city. The murder is a tragic one, and the narrator is convinced that the killer is the raven. The narrator is haunted by the feeling that he is being watched, and he begins to investigate the city, searching for clues and evidence that might lead him",
+  "One ammo that can run is the 12-pounder, a 12-pounder is a 12-pounder rifle that has a 12-pounder barrel.",
+  "Cattle are herbivores, and their diet primarily consists of grass, which they graze on in the wild. They primarily eat grasses, which they dig up with their tusks, and other plant material such as leaves, stems, and roots. They also consume other small animals like insects, worms, and other invertebrates.\n\nIn addition to grass, they also eat other plant material like leaves, stems, and roots. They also consume other animals like insects, birds, and small mammals.\n\nIt's worth noting that cattle are omnivores, meaning they eat both plants and animals. They are a herbivore, meaning they primarily consume plant material, but they also consume other animals, including insects, birds, and small mammals.",
+  "Yes, the sentence is factually correct. The sentence is saying that Eve had a husband named Adam, which is a common and accurate statement. The phrase \"Adam\" is a proper noun, and it is a proper noun in the sense that it is a name of a person, not a place or a thing.\n\nThe sentence is also consistent with the fact that Eve was the mother of Adam, and Adam was the father of Eve. The phrase \"Adam\" is a proper noun, and it is a proper noun in the sense that it is a name of a person, not a place or a thing.\n\nSo, the answer is:\n\nYes, the sentence is factually correct.",
+  "The story of \"The Raven\" by Edgar Allan Poe is a classic tale of mystery, suspense, and the human psyche. It is a classic example of a gothic horror novel, set in a world of dark, foreboding, and supernatural events. The story is narrated by a mysterious figure, the narrator, who is a member of a group of characters who are trapped in a world of darkness and despair.\n\nThe story is set in a small town in the American Midwest, where the main character, a young woman named Elizabeth, is struggling to survive. She is a talented but reclusive artist, and her art is a reflection of her inner turmoil. The story is told through the eyes of the narrator, who is a member of the group of characters who are trapped in the town",
+  "One ammo that can run is the 12-pounder, a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a 12-pounder is a",
+  "Yes, the sentence is factually correct. The sentence is saying that Eve had a husband named Adam, which is a common and accurate statement. The phrase \"Adam\" is a proper noun, and it is a proper noun in the sense that it is a name of a person.\n\nThe sentence is also consistent with the fact that Adam is a proper noun, which is a noun that refers to a specific person. The phrase \"Adam\" is a proper noun, and it is a noun that refers to a specific person.\n\nSo, the answer is:\n\nYes, the sentence is factually correct.",
+  "Cattle are herbivores, meaning they primarily consume plant-based foods. They primarily eat grasses, shrubs, and other vegetation, but they also consume other types of plants, such as grasses, leaves, and flowers. They are omnivores, meaning they eat both plants and animals.\n\nIn terms of diet, cattle are omnivores, meaning they consume a wide variety of plant and animal materials. They are herbivores, which means they feed on plants, and carnivores, which means they feed on animal material.\n\nCattle are also known to eat other animals, such as insects, birds, and small mammals, which are part of their diet. They are also known to eat other types of plants, such as grasses, leaves, and flowers, which are also part of their diet.\n",
+  "The novel \"The Raven\" by Edgar Allan Poe is written by the American author, and it is attributed to the renowned English poet, Alexander Pope. The story is set in a small town in Ireland, where a mysterious figure, the \"Raven,\" haunts the town, and the townspeople are plagued by a terrible loss. The story is a dark and mysterious tale, filled with eerie and macabre elements.",
+  "Cattle are herbivores, meaning they primarily consume plant-based foods. They primarily eat grasses, shrubs, and other vegetation, which they forage for in their natural habitats. They are herbivores, meaning they feed on plants, and they do not have teeth like humans.\n\nCattle are omnivores, meaning they eat both plants and animals. They are herbivores, which means they feed on plants, and they are carnivores, meaning they feed on animals. They are herbivores because they do not have teeth like humans, but they do have a digestive system that allows them to break down plant material.\n\nCattle are herbivores, and they are primarily herbivores, which means they primarily eat plants. They are herbivores because they do not have teeth like humans, but they do have a digestive system that allows",
+  "Yes, the sentence is factually correct. The sentence is saying that Eve had a husband named Adam, which is a common and accurate statement. The phrase \"Adam\" is a proper noun, and it is a proper noun in the sense that it is a name of a person.\n\nThe sentence is also consistent with the fact that Adam is a proper noun, which is a noun that refers to a specific person. The sentence is also a good example of how to use the correct form of a word in a sentence, which is \"Adam\" in this case.",
+  "Here's how you can convert the value to a cell array in MATLAB:\n\n```matlab\nvalue = 100;\ncellarray(value)\n```\n\nThis will create a cell array with the value 100.\n\nNote: The `cellarray` function in MATLAB is a convenient way to create a cell array from a variable. It allows you to access and manipulate the elements of the array in a more concise way.",
+  "Cattle are herbivores, meaning they primarily consume plant-based foods. They primarily eat grass, which they graze on in their natural habitat. They also eat other vegetation, such as grasses, leaves, and roots. However, they are not picky eaters and will eat almost anything they can find.\n\nIn terms of diet, cattle are omnivores, meaning they eat both plants and animals. They are herbivores, which means they do not have teeth like humans do. They are herbivores, which means they do not have a carnivore's digestive system. Instead, they have a digestive system that is adapted to extract nutrients from plant-based foods.\n\nCattle are herbivores, which means they do not have a specialized digestive system like humans do. They do not have a stomach, which",
+  "Yes, the sentence is factually correct. The sentence is saying that Eve had a husband named Adam, which is a common and accurate statement. The phrase \"Adam\" is a proper noun, and it is a proper noun in the sense that it is a name of a person.\n\nThe sentence is also consistent with the fact that Adam is a proper noun, which is a noun that refers to a specific person. The sentence is not an example of a nonsensical or nonsensical statement, as it is a factual statement about Eve's relationship with Adam.",
+  "The novel \"The Raven\" by Edgar Allan Poe is written by the American author, and it is attributed to the renowned English poet, Alexander Pope. The story is set in a mysterious and isolated setting, where the protagonist, a young woman named Elizabeth, is haunted by the loss of her beloved, the Raven, a bird that has been haunting her since she was a child.\n\nPope's novel is a masterpiece of psychological horror, exploring the theme of the human psyche and the power of the subconscious. The story is a dark and suspenseful tale that delves into the psychological and emotional aspects of the human experience, and it has been widely acclaimed for its innovative use of language and its ability to evoke a sense of unease and foreboding.",
+  "Cattle are herbivores, meaning they primarily consume plant-based foods. They primarily eat grass, which they graze on in their natural habitat. They also eat other vegetation, such as grasses, leaves, and roots. However, they are not picky eaters and will eat almost anything they can find.\n\nIn terms of diet, cattle are omnivores, meaning they eat both plants and animals. They are herbivores, which means they do not have teeth like humans do. They are herbivores, which means they do not have a carnivore's digestive system. Instead, they have a digestive system that is adapted to extract nutrients from plant-based foods.\n\nCattle are herbivores, which means they do not have a specialized digestive system like humans do. They do not have a stomach like humans",
+  "Yes, the sentence is factually correct. The sentence is saying that Eve had a husband named Adam, which is a common and accurate statement. The phrase \"Adam\" is a proper noun, referring to a specific person, and Eve is a common noun, referring to a person or a group of people.",
+  "Cattle, also known as ruminants, are herbivores that consume a wide variety of plant and animal matter. They primarily eat grasses, shrubs, and other vegetation, as well as some types of plants and fungi. They are herbivores, meaning they feed on plants, and they have a unique digestive system that allows them to break down complex plant materials into simpler forms.\n\nCattle are omnivores, meaning they eat both plants and animals, and they are able to digest cellulose, a type of plant fiber, in their rumen, a long, muscular tube that connects the mouth to the stomach. This allows them to break down and absorb nutrients from plant material.\n\nIn terms of specific dietary needs, cattle are omnivores, meaning they eat a wide variety of plant and animal matter",
+  "Cattle, also known as ruminants, are herbivores that primarily consume plant-based foods. They primarily eat grasses, shrubs, and other vegetation, which they dig up with their tusks. They have a unique digestive system that allows them to break down complex plant materials into simpler forms.\n\nCattle are herbivores, meaning they primarily feed on plants, and they have a specialized stomach that helps them digest cellulose, a type of plant fiber. They also have a unique way of eating, called rumination, where they chew their cud, which is a mixture of saliva and digestive enzymes, to break down the cellulose in the plant material.\n\nIn addition to their diet, cattle also consume other types of vegetation, such as grasses, leaves, and roots, which they dig up",
+  "Here's how you can convert the value to a cell array in MATLAB:\n\n```matlab\nvalue = 100;\ncellarray(value)\n```\n\nThis will create a cell array with the value 100.\n\nAlternatively, you can use the `reshape` function to achieve the same result:\n\n```matlab\nvalue = 100;\ncellarray(reshape(value, 1, 1))\n```\n\nBoth methods will produce the same result:\n\n```\n[100]\n```",
+  "Cattle, also known as ruminants, are herbivores that primarily consume plant-based foods. They primarily eat grasses, shrubs, and other vegetation, which they dig up with their tusks. They have a unique digestive system that allows them to break down complex plant materials into simpler forms.\n\nCattle are herbivores, meaning they primarily feed on plants, and they have a specialized stomach that helps them digest cellulose, a type of plant cell wall. This unique digestive system allows them to break down plant material into a form that can be easily absorbed by their bloodstream.\n\nIn terms of meat, cattle primarily eat grass, which they dig up with their tusks. They also consume other plant materials, such as leaves, stems, and roots, which they dig up with their tusks",
+  "The common factor among the countries listed is \"Australia\".",
+  "Cattle, also known as ruminants, are herbivores that primarily consume plant-based foods. They primarily eat grasses, shrubs, and other vegetation, which they dig up with their tusks. They have a unique digestive system that allows them to break down complex plant materials into simpler forms.\n\nCattle primarily eat grasses, shrubs, and other vegetation, which they dig up with their tusks. They also consume other plant materials such as leaves, stems, and roots. They are herbivores that are adapted to a diet of grasses, shrubs, and other vegetation.\n\nIn terms of diet, cattle are omnivores, meaning they eat both plants and animals. They are herbivores that are able to digest plant material, which allows them to obtain essential nutrients from a diet of grasses, shrubs",
+  "Cattle, also known as ruminants, are herbivores that primarily consume plant-based foods. They primarily eat grasses, shrubs, and other vegetation, which they dig up with their tusks. They have a unique digestive system that allows them to break down complex plant materials into simpler forms.\n\nCattle primarily eat grasses, shrubs, and other vegetation, which they dig up with their tusks. They also consume other plant materials such as leaves, stems, and roots. They are herbivores that are able to digest cellulose, which is the main component of plant cell walls.\n\nIn terms of specific dietary needs, cattle are omnivores, meaning they can consume a variety of plant materials, including fruits, seeds, and insects. However, they are primarily herbivores, and their diet is"
+ ],
+ "greedy": {
+  "dpo": [
+   [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   [
+    8,
+    1,
+    2,
+    3,
+    4,
+    9,
+    10,
+    11
+   ],
+   [
+    12,
+    1,
+    2,
+    3,
+    13,
+    14,
+    10,
+    15
+   ],
+   [
+    12,
+    1,
+    2,
+    3,
+    13,
+    16,
+    10,
+    15
+   ],
+   [
+    12,
+    1,
+    2,
+    17,
+    13,
+    18,
+    10,
+    15
+   ],
+   [
+    19,
+    1,
+    2,
+    17,
+    13,
+    18,
+    10,
+    20
+   ],
+   [
+    19,
+    1,
+    2,
+    17,
+    21,
+    22,
+    23,
+    24
+   ],
+   [
+    19,
+    1,
+    25,
+    17,
+    21,
+    22,
+    23,
+    26
+   ],
+   [
+    19,
+    1,
+    25,
+    17,
+    21,
+    27,
+    23,
+    26
+   ],
+   [
+    19,
+    28,
+    25,
+    29,
+    21,
+    30,
+    23,
+    31
+   ],
+   [
+    19,
+    28,
+    25,
+    29,
+    21,
+    30,
+    23,
+    32
+   ]
+  ],
+  "simpo": [
+   [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   [
+    8,
+    1,
+    2,
+    3,
+    13,
+    33,
+    10,
+    15
+   ],
+   [
+    8,
+    1,
+    2,
+    3,
+    13,
+    33,
+    10,
+    15
+   ],
+   [
+    34,
+    1,
+    2,
+    3,
+    13,
+    35,
+    10,
+    36
+   ],
+   [
+    37,
+    1,
+    2,
+    3,
+    38,
+    39,
+    10,
+    40
+   ],
+   [
+    37,
+    1,
+    2,
+    3,
+    38,
+    39,
+    10,
+    41
+   ],
+   [
+    37,
+    1,
+    2,
+    3,
+    38,
+    39,
+    10,
+    41
+   ],
+   [
+    42,
+    28,
+    43,
+    44,
+    38,
+    39,
+    10,
+    45
+   ],
+   [
+    42,
+    46,
+    43,
+    44,
+    38,
+    30,
+    10,
+    45
+   ],
+   [
+    19,
+    47,
+    43,
+    44,
+    48,
+    30,
+    10,
+    49
+   ],
+   [
+    50,
+    47,
+    43,
+    44,
+    48,
+    30,
+    10,
+    51
+   ]
+  ],
+  "orpo": [
+   [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   [
+    8,
+    1,
+    2,
+    3,
+    52,
+    5,
+    6,
+    7
+   ],
+   [
+    8,
+    1,
+    2,
+    3,
+    52,
+    5,
+    6,
+    7
+   ],
+   [
+    8,
+    1,
+    2,
+    3,
+    52,
+    53,
+    6,
+    7
+   ],
+   [
+    8,
+    1,
+    2,
+    3,
+    52,
+    53,
+    6,
+    54
+   ],
+   [
+    55,
+    1,
+    2,
+    3,
+    52,
+    56,
+    57,
+    58
+   ],
+   [
+    59,
+    1,
+    2,
+    3,
+    52,
+    56,
+    60,
+    58
+   ],
+   [
+    59,
+    1,
+    2,
+    17,
+    52,
+    61,
+    60,
+    62
+   ],
+   [
+    59,
+    1,
+    2,
+    17,
+    52,
+    63,
+    64,
+    62
+   ],
+   [
+    59,
+    1,
+    2,
+    17,
+    65,
+    66,
+    67,
+    68
+   ],
+   [
+    59,
+    1,
+    2,
+    17,
+    38,
+    69,
+    70,
+    68
+   ]
+  ],
+  "kto": [
+   [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   [
+    8,
+    1,
+    2,
+    3,
+    4,
+    9,
+    10,
+    11
+   ],
+   [
+    12,
+    1,
+    2,
+    3,
+    13,
+    14,
+    10,
+    15
+   ],
+   [
+    12,
+    1,
+    2,
+    3,
+    13,
+    16,
+    10,
+    15
+   ],
+   [
+    19,
+    1,
+    2,
+    17,
+    13,
+    71,
+    10,
+    15
+   ],
+   [
+    19,
+    1,
+    2,
+    17,
+    13,
+    18,
+    10,
+    20
+   ],
+   [
+    19,
+    1,
+    2,
+    17,
+    21,
+    72,
+    23,
+    24
+   ],
+   [
+    19,
+    1,
+    2,
+    17,
+    73,
+    74,
+    23,
+    24
+   ],
+   [
+    19,
+    1,
+    25,
+    17,
+    73,
+    30,
+    23,
+    26
+   ],
+   [
+    19,
+    1,
+    25,
+    75,
+    73,
+    76,
+    23,
+    26
+   ],
+   [
+    19,
+    1,
+    25,
+    29,
+    73,
+    77,
+    23,
+    26
+   ]
+  ]
+ },
+ "tensors": {
+  "file": "preference-losses.f32",
+  "sha256": "58f0677d191e07a151035f4c50e734bf94af9101b335f5b871ecb367f641818e",
+  "bytes": 193980,
+  "tensors": {
+   "answerLogps": {
+    "offset": 0,
+    "length": 46464,
+    "shape": [
+     4,
+     11,
+     8,
+     2,
+     66
+    ]
+   },
+   "endLogps": {
+    "offset": 46464,
+    "length": 352,
+    "shape": [
+     2,
+     11,
+     8,
+     2
+    ]
+   },
+   "loss": {
+    "offset": 46816,
+    "length": 44,
+    "shape": [
+     4,
+     11
+    ]
+   },
+   "margin": {
+    "offset": 46860,
+    "length": 352,
+    "shape": [
+     4,
+     11,
+     8
+    ]
+   },
+   "orpoNll": {
+    "offset": 47212,
+    "length": 11,
+    "shape": [
+     11
+    ]
+   },
+   "orpoOrTerm": {
+    "offset": 47223,
+    "length": 88,
+    "shape": [
+     11,
+     8
+    ]
+   },
+   "orpoPromptSeq": {
+    "offset": 47311,
+    "length": 88,
+    "shape": [
+     11,
+     8
+    ]
+   },
+   "ktoKlPolicy": {
+    "offset": 47399,
+    "length": 176,
+    "shape": [
+     11,
+     16
+    ]
+   },
+   "ktoKlRef": {
+    "offset": 47575,
+    "length": 16,
+    "shape": [
+     16
+    ]
+   },
+   "ktoRowLoss": {
+    "offset": 47591,
+    "length": 176,
+    "shape": [
+     11,
+     8,
+     2
+    ]
+   },
+   "lengths": {
+    "offset": 47767,
+    "length": 16,
+    "shape": [
+     8,
+     2
+    ]
+   },
+   "promptLengths": {
+    "offset": 47783,
+    "length": 8,
+    "shape": [
+     8
+    ]
+   },
+   "greedyLengths": {
+    "offset": 47791,
+    "length": 352,
+    "shape": [
+     4,
+     11,
+     8
+    ]
+   },
+   "greedyCapped": {
+    "offset": 48143,
+    "length": 352,
+    "shape": [
+     4,
+     11,
+     8
+    ]
+   }
+  }
+ },
+ "metrics": {
+  "dpo": {
+   "lossStart": 0.6931471805599452,
+   "lossEnd": 0.10314943389887729,
+   "marginEnd": 3.2081496283671687,
+   "greedyTokensStart": 69.375,
+   "greedyTokensEnd": 66.875
+  },
+  "simpo": {
+   "lossStart": 1.1113195568515206,
+   "lossEnd": 0.22921016343740247,
+   "marginEnd": 2.4672768653952746,
+   "greedyTokensStart": 69.375,
+   "greedyTokensEnd": 67.25
+  },
+  "orpo": {
+   "lossStart": 3.0124983527750264,
+   "lossEnd": 2.0908139419949583,
+   "marginEnd": 0.5207668895301925,
+   "greedyTokensStart": 69.375,
+   "greedyTokensEnd": 85.875
+  },
+  "kto": {
+   "lossStart": 0.49999999999999994,
+   "lossEnd": 0.20886681162211213,
+   "marginEnd": 3.3892606683558038,
+   "greedyTokensStart": 69.375,
+   "greedyTokensEnd": 66.25
+  }
+ },
+ "validation": {
+  "dpoTrlLossVsRecomputedMaxError": 4.888857700374727e-05,
+  "dpoTrlRewardsChosenVsRecomputedMaxError": 4.4259127310875e-06,
+  "dpoTrlRewardsRejectedVsRecomputedMaxError": 1.7983360993678588e-06,
+  "dpoTrlRewardsMarginsVsRecomputedMaxError": 5.254853712166607e-06,
+  "dpoTrlLogpsChosenVsRecomputedMaxError": 2.0198318210873367e-05,
+  "dpoTrlLogpsRejectedVsRecomputedMaxError": 1.7234599454241106e-05,
+  "simpoTrlLossVsRecomputedMaxError": 4.9167590187360055e-05,
+  "simpoTrlRewardsChosenVsRecomputedMaxError": 9.256582504946209e-07,
+  "simpoTrlRewardsRejectedVsRecomputedMaxError": 4.955106671644671e-07,
+  "simpoTrlRewardsMarginsVsRecomputedMaxError": 8.015308772257868e-07,
+  "simpoTrlLogpsChosenVsRecomputedMaxError": 4.6282912524731046e-07,
+  "simpoTrlLogpsRejectedVsRecomputedMaxError": 2.4775533358223356e-07,
+  "orpoTrlLossVsRecomputedMaxError": 7.302990127255882e-05,
+  "orpoTrlNllLossVsRecomputedMaxError": 2.700073382877477e-05,
+  "orpoTrlLogOddsRatioVsRecomputedMaxError": 2.226528637017111e-07,
+  "orpoTrlLogOddsChosenVsRecomputedMaxError": 6.037642185652281e-07,
+  "orpoTrlLogpsChosenVsRecomputedMaxError": 4.532359816344922e-07,
+  "orpoTrlLogpsRejectedVsRecomputedMaxError": 1.61155541356095e-07,
+  "ktoTrlLossVsRecomputedMaxError": 3.6607182126530136e-05,
+  "ktoTrlKlVsRecomputedMaxError": 0.0,
+  "ktoTrlRewardsChosenVsRecomputedMaxError": 3.315540169995801e-06,
+  "ktoTrlRewardsRejectedVsRecomputedMaxError": 2.1766355100538703e-06,
+  "ktoTrlRewardsMarginsVsRecomputedMaxError": 3.116816167381131e-06,
+  "ktoTrlLogpsChosenVsRecomputedMaxError": 2.3941599813781522e-05,
+  "ktoTrlLogpsRejectedVsRecomputedMaxError": 1.949466749806561e-05,
+  "tokensDifferFromDpoTrainers": 0.0,
+  "trlBatchesNotTheSixteenAnswers": 0.0,
+  "ktoKlRotationNotByOne": 0.0,
+  "ktoKlPairsWithTheirOwnPrompt": 0.0,
+  "step0AcrossMethodsMaxError": 2.3658290799311033e-05,
+  "dpoReferenceVsStep0MaxError": 1.4210854715202004e-14,
+  "ktoReferenceVsStep0MaxError": 1.4210854715202004e-14,
+  "ktoKlPairsStep0VsReferenceMaxError": 0.0,
+  "dpoVsDpoTabSeqMaxError": 7.488721166737378e-06,
+  "dpoVsDpoTabLossMaxError": 1.391816600859741e-08,
+  "simpoVsSimpoTabSeqMaxError": 6.861348765596631e-06,
+  "simpoVsSimpoTabLossMaxError": 2.865309878252731e-08,
+  "storedDpoLossVsRecomputedMaxError": 9.679636703285865e-09
+ },
+ "reproduced": {
+  "dpoGreedyAfterSameAsDpoTab": 8.0,
+  "simpoGreedyAfterSameAsSimpoTab": 8.0,
+  "greedyBeforeSameAsDpoTab": 8.0
+ },
+ "capture": {
+  "timestamp": "2026-11-03T03:04:01.277344+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "transformers": "4.57.6",
+   "trl": "1.17.0",
+   "datasets": "5.0.1",
+   "accelerate": "1.15.0"
+  },
+  "threads": 10,
+  "script": "scripts/post-training/record_preference_losses.py",
+  "scriptSha256": "2d344c398b7026e15cc238439ab224375cd04a6c8bc977ce165e5acc1770516f",
+  "helperSha256": "5b0f24c9344e11081d46d5222bd3338c3196948d4257232896e97d58693d89e6",
+  "notes": "TRL's DPOTrainer, CPOTrainer (simpo), ORPOTrainer and KTOTrainer train; their loss calls are wrapped only to score the 16 answers and let the policy answer the eight prompts greedily before each update. Log-probabilities are recomputed one sequence at a time in float64 from float32 logits."
+ }
+}
