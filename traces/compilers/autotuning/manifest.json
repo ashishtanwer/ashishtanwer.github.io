@@ -1,0 +1,3938 @@
+{
+	"model": {
+		"id": "openai-community/gpt2",
+		"name": "GPT-2 small, block 0",
+		"revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+		"url": "https://huggingface.co/openai-community/gpt2",
+		"license": "MIT"
+	},
+	"text": {
+		"dataset": "rajpurkar/squad",
+		"split": "validation",
+		"url": "https://huggingface.co/datasets/rajpurkar/squad",
+		"license": "CC BY-SA 4.0",
+		"note": "the first distinct validation paragraphs, joined by blank lines",
+		"tokens": [
+			"Super",
+			" Bowl",
+			" 50",
+			" was",
+			" an",
+			" American",
+			" football",
+			" game",
+			" to",
+			" determine",
+			" the",
+			" champion",
+			" of",
+			" the",
+			" National",
+			" Football",
+			" League",
+			" (",
+			"NFL",
+			")",
+			" for",
+			" the",
+			" 2015",
+			" season",
+			".",
+			" The",
+			" American",
+			" Football",
+			" Conference",
+			" (",
+			"A",
+			"FC",
+			")",
+			" champion",
+			" Denver",
+			" Broncos",
+			" defeated",
+			" the",
+			" National",
+			" Football",
+			" Conference",
+			" (",
+			"N",
+			"FC",
+			")",
+			" champion",
+			" Carolina",
+			" Panthers",
+			" 24",
+			"âĢĵ",
+			"10",
+			" to",
+			" earn",
+			" their",
+			" third",
+			" Super",
+			" Bowl",
+			" title",
+			".",
+			" The",
+			" game",
+			" was",
+			" played",
+			" on",
+			" February",
+			" 7",
+			",",
+			" 2016",
+			",",
+			" at",
+			" Levi",
+			"'s",
+			" Stadium",
+			" in",
+			" the",
+			" San",
+			" Francisco",
+			" Bay",
+			" Area",
+			" at",
+			" Santa",
+			" Clara",
+			",",
+			" California",
+			".",
+			" As",
+			" this",
+			" was",
+			" the",
+			" 50",
+			"th",
+			" Super",
+			" Bowl",
+			",",
+			" the",
+			" league",
+			" emphasized",
+			" the",
+			" \"",
+			"gold",
+			"en",
+			" anniversary",
+			"\"",
+			" with",
+			" various",
+			" gold",
+			"-",
+			"themed",
+			" initiatives",
+			",",
+			" as",
+			" well",
+			" as",
+			" temporarily",
+			" suspending",
+			" the",
+			" tradition",
+			" of",
+			" naming",
+			" each",
+			" Super",
+			" Bowl",
+			" game",
+			" with",
+			" Roman",
+			" numer",
+			"als",
+			" ("
+		]
+	},
+	"tokenIds": [
+		12442,
+		8693,
+		2026,
+		373,
+		281,
+		1605,
+		4346,
+		983,
+		284,
+		5004,
+		262,
+		8783,
+		286,
+		262,
+		2351,
+		9957,
+		4041,
+		357,
+		32078,
+		8,
+		329,
+		262,
+		1853,
+		1622,
+		13,
+		383,
+		1605,
+		9957,
+		8785,
+		357,
+		32,
+		4851,
+		8,
+		8783,
+		10656,
+		16582,
+		9772,
+		262,
+		2351,
+		9957,
+		8785,
+		357,
+		45,
+		4851,
+		8,
+		8783,
+		5913,
+		17782,
+		1987,
+		1906,
+		940,
+		284,
+		5160,
+		511,
+		2368,
+		3115,
+		8693,
+		3670,
+		13,
+		383,
+		983,
+		373,
+		2826,
+		319,
+		3945,
+		767,
+		11,
+		1584,
+		11,
+		379,
+		20196,
+		338,
+		10499,
+		287,
+		262,
+		2986,
+		6033,
+		4696,
+		9498,
+		379,
+		8909,
+		27443,
+		11,
+		3442,
+		13,
+		1081,
+		428,
+		373,
+		262,
+		2026,
+		400,
+		3115,
+		8693,
+		11,
+		262,
+		4652,
+		20047,
+		262,
+		366,
+		24267,
+		268,
+		11162,
+		1,
+		351,
+		2972,
+		3869,
+		12,
+		26966,
+		15446,
+		11,
+		355,
+		880,
+		355,
+		13413,
+		47499,
+		262,
+		6761,
+		286,
+		19264,
+		1123,
+		3115,
+		8693,
+		983,
+		351,
+		7993,
+		5470,
+		874,
+		357,
+		4625,
+		543,
+		262,
+		983,
+		561,
+		423,
+		587,
+		1900,
+		355,
+		366,
+		12442,
+		8693,
+		406,
+		12340,
+		523,
+		326,
+		262,
+		11112,
+		714,
+		31015,
+		3895,
+		262,
+		17526,
+		5470,
+		874,
+		2026,
+		13,
+		198,
+		198,
+		464,
+		17782,
+		5201,
+		262,
+		3218,
+		1622,
+		351,
+		257,
+		1315,
+		1906,
+		16,
+		1700,
+		11,
+		290,
+		7880,
+		7298,
+		17321,
+		373,
+		3706,
+		262,
+		5134,
+		4042,
+		3254,
+		7153,
+		7853,
+		357,
+		44,
+		8859,
+		737,
+		1119,
+		9772,
+		262,
+		7943,
+		18071,
+		5125,
+		1906,
+		1314,
+		287,
+		262,
+		24004,
+		10749,
+		3776,
+		290,
+		6190,
+		284,
+		511,
+		1218,
+		3115,
+		8693,
+		5585,
+		1201,
+		262,
+		8663,
+		373,
+		9393,
+		287,
+		8735,
+		13,
+		383,
+		16582,
+		5201,
+		262,
+		3218,
+		1622,
+		351,
+		257,
+		1105,
+		1906,
+		19,
+		1700,
+		11,
+		290,
+		6699,
+		262,
+		968,
+		4492,
+		13104,
+		257,
+		2863,
+		284,
+		4404,
+		511,
+		3670,
+		422,
+		3115,
+		8693,
+		16276,
+		10426,
+		416,
+		21320,
+		606,
+		1160,
+		1906,
+		1507,
+		287,
+		262,
+		27987,
+		10749,
+		3776,
+		13,
+		1119,
+		5399,
+		262,
+		13104,
+		11,
+		8533,
+		16535,
+		11,
+		290,
+		12767,
+		21323,
+		355,
+		530,
+		286,
+		1440,
+		3466,
+		326,
+		423,
+		925,
+		3624,
+		11057,
+		287,
+		262,
+		3115,
+		8693,
+		13,
+		198,
+		198,
+		464,
+		16582,
+		1718,
+		281,
+		1903,
+		1085,
+		287,
+		3115,
+		8693,
+		2026,
+		290,
+		1239,
+		40060,
+		13,
+		17321,
+		373,
+		3614,
+		416,
+		10656,
+		338,
+		3761,
+		11,
+		543,
+		32564,
+		683,
+		3598,
+		1661,
+		290,
+		4137,
+		683,
+		656,
+		1115,
+		33888,
+		11,
+		1390,
+		257,
+		41405,
+		543,
+		484,
+		11911,
+		329,
+		257,
+		10242,
+		13,
+		10656,
+		18961,
+		26985,
+		7920,
+		373,
+		3706,
+		3115,
+		8693,
+		12742,
+		11,
+		8296,
+		1936,
+		12199,
+		18034,
+		11,
+		362,
+		23141,
+		23249,
+		11,
+		290,
+		734,
+		4137,
+		277,
+		25329,
+		13,
+		198,
+		198,
+		22923,
+		7025,
+		3115,
+		8693,
+		2026,
+		287,
+		262,
+		471,
+		13,
+		50,
+		1539,
+		290,
+		5047,
+		281,
+		2811,
+		286,
+		720,
+		20,
+		1510,
+		329,
+		257,
+		1542,
+		12,
+		12227,
+		5068,
+		1141,
+		262,
+		983,
+		13,
+		383,
+		3115,
+		8693,
+		2026,
+		35185,
+		905,
+		373,
+		46958,
+		416,
+		262,
+		3517,
+		3881,
+		1448,
+		10250,
+		1759,
+		351,
+		2041,
+		8319,
+		23827,
+		37361,
+		32682,
+		290,
+		31045,
+		8706,
+		11,
+		508,
+		46958,
+		262,
+		3115,
+		8693,
+		16276,
+		45529,
+		290,
+		3115,
+		8693,
+		16276,
+		53,
+		10855,
+		35185,
+		2523,
+		11,
+		8148,
+		13,
+		632,
+		373,
+		262,
+		2368,
+		12,
+		1712,
+		7342,
+		471,
+		13,
+		50,
+		13,
+		7025,
+		1683,
+		13,
+		198,
+		198,
+		818,
+		1903,
+		2321,
+		11,
+		5134,
+		13270,
+		13637,
+		41648,
+		5081,
+		326,
+		262,
+		4652,
+		6027,
+		284,
+		787,
+		262,
+		2026,
+		400,
+		3115,
+		8693,
+		366,
+		4443,
+		12754,
+		1,
+		290,
+		326,
+		340,
+		561,
+		307,
+		366,
+		272,
+		1593,
+		983,
+		329,
+		514,
+		355,
+		257,
+		4652,
+		1911,
+		198,
+		198,
+		464,
+		4652,
+		4191,
+		33214,
+		262,
+		27837,
+		284,
+		1115,
+		5043,
+		25,
+		968,
+		12255,
+		6,
+		21279,
+		12,
+		42484,
+		3115,
+		67,
+		462,
+		11,
+		8437,
+		338,
+		3825,
+		5155,
+		10499,
+		11,
+		290
+	],
+	"runs": [
+		{
+			"tokens": 1,
+			"compileSeconds": 13.0537,
+			"gemms": [
+				{
+					"op": "addmm",
+					"linear": "attn.c_attn",
+					"shapes": [
+						[
+							1,
+							2304
+						],
+						[
+							1,
+							768
+						],
+						[
+							768,
+							2304
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							0.022958
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_0",
+							0.0896665
+						]
+					],
+					"winner": "addmm"
+				},
+				{
+					"op": "addmm",
+					"linear": "attn.c_proj",
+					"shapes": [
+						[
+							1,
+							768
+						],
+						[
+							1,
+							768
+						],
+						[
+							768,
+							768
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							0.014458
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_1",
+							0.079834
+						]
+					],
+					"winner": "addmm"
+				},
+				{
+					"op": "addmm",
+					"linear": "mlp.c_fc",
+					"shapes": [
+						[
+							1,
+							3072
+						],
+						[
+							1,
+							768
+						],
+						[
+							768,
+							3072
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							0.026208
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_2",
+							0.096375
+						]
+					],
+					"winner": "addmm"
+				},
+				{
+					"op": "addmm",
+					"linear": "mlp.c_proj",
+					"shapes": [
+						[
+							1,
+							768
+						],
+						[
+							1,
+							3072
+						],
+						[
+							3072,
+							768
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							0.033625
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_3",
+							0.0937295
+						]
+					],
+					"winner": "addmm"
+				}
+			],
+			"maxAbsDiff": 7.62939e-6,
+			"time": {
+				"eager": {
+					"median": 0.394358,
+					"min": 0.366113,
+					"max": 0.452263,
+					"rounds": 15
+				},
+				"default": {
+					"median": 0.249284,
+					"min": 0.237927,
+					"max": 0.27434,
+					"rounds": 15
+				},
+				"maxAutotune": {
+					"median": 0.244102,
+					"min": 0.23142,
+					"max": 0.267275,
+					"rounds": 15
+				}
+			}
+		},
+		{
+			"tokens": 8,
+			"compileSeconds": 10.8854,
+			"gemms": [
+				{
+					"op": "addmm",
+					"linear": "attn.c_attn",
+					"shapes": [
+						[
+							8,
+							2304
+						],
+						[
+							8,
+							768
+						],
+						[
+							768,
+							2304
+						]
+					],
+					"candidates": [
+						[
+							"cpp_CppMicroGemmFP32Vec_4",
+							0.126188
+						],
+						[
+							"addmm",
+							0.464458
+						]
+					],
+					"winner": "cpp_CppMicroGemmFP32Vec_4"
+				},
+				{
+					"op": "bmm",
+					"linear": "gemm",
+					"shapes": [
+						[
+							12,
+							8,
+							8
+						],
+						[
+							12,
+							8,
+							64
+						]
+					],
+					"candidates": [
+						[
+							"bmm",
+							0.07775
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_5",
+							0.178104
+						]
+					],
+					"winner": "bmm"
+				},
+				{
+					"op": "addmm",
+					"linear": "attn.c_proj",
+					"shapes": [
+						[
+							8,
+							768
+						],
+						[
+							8,
+							768
+						],
+						[
+							768,
+							768
+						]
+					],
+					"candidates": [
+						[
+							"cpp_CppMicroGemmFP32Vec_6",
+							0.086375
+						],
+						[
+							"addmm",
+							0.160083
+						]
+					],
+					"winner": "cpp_CppMicroGemmFP32Vec_6"
+				},
+				{
+					"op": "addmm",
+					"linear": "mlp.c_fc",
+					"shapes": [
+						[
+							8,
+							3072
+						],
+						[
+							8,
+							768
+						],
+						[
+							768,
+							3072
+						]
+					],
+					"candidates": [
+						[
+							"cpp_CppMicroGemmFP32Vec_7",
+							0.138792
+						],
+						[
+							"addmm",
+							0.516083
+						]
+					],
+					"winner": "cpp_CppMicroGemmFP32Vec_7"
+				},
+				{
+					"op": "addmm",
+					"linear": "mlp.c_proj",
+					"shapes": [
+						[
+							8,
+							768
+						],
+						[
+							8,
+							3072
+						],
+						[
+							3072,
+							768
+						]
+					],
+					"candidates": [
+						[
+							"cpp_CppMicroGemmFP32Vec_8",
+							0.135708
+						],
+						[
+							"addmm",
+							0.389354
+						]
+					],
+					"winner": "cpp_CppMicroGemmFP32Vec_8"
+				}
+			],
+			"maxAbsDiff": 4.57764e-5,
+			"time": {
+				"eager": {
+					"median": 3.22577,
+					"min": 3.06413,
+					"max": 3.40233,
+					"rounds": 15
+				},
+				"default": {
+					"median": 3.58812,
+					"min": 3.43295,
+					"max": 3.82638,
+					"rounds": 15
+				},
+				"maxAutotune": {
+					"median": 1.02605,
+					"min": 0.989026,
+					"max": 1.151,
+					"rounds": 15
+				}
+			}
+		},
+		{
+			"tokens": 32,
+			"compileSeconds": 10.7534,
+			"gemms": [
+				{
+					"op": "addmm",
+					"linear": "attn.c_attn",
+					"shapes": [
+						[
+							32,
+							2304
+						],
+						[
+							32,
+							768
+						],
+						[
+							768,
+							2304
+						]
+					],
+					"candidates": [
+						[
+							"cpp_CppMicroGemmFP32Vec_9",
+							0.247416
+						],
+						[
+							"addmm",
+							0.291792
+						]
+					],
+					"winner": "cpp_CppMicroGemmFP32Vec_9"
+				},
+				{
+					"op": "bmm",
+					"linear": "gemm",
+					"shapes": [
+						[
+							12,
+							32,
+							32
+						],
+						[
+							12,
+							32,
+							64
+						]
+					],
+					"candidates": [
+						[
+							"bmm",
+							0.092
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_10",
+							0.168354
+						]
+					],
+					"winner": "bmm"
+				},
+				{
+					"op": "addmm",
+					"linear": "attn.c_proj",
+					"shapes": [
+						[
+							32,
+							768
+						],
+						[
+							32,
+							768
+						],
+						[
+							768,
+							768
+						]
+					],
+					"candidates": [
+						[
+							"cpp_CppMicroGemmFP32Vec_11",
+							0.122292
+						],
+						[
+							"addmm",
+							0.126375
+						]
+					],
+					"winner": "cpp_CppMicroGemmFP32Vec_11"
+				},
+				{
+					"op": "addmm",
+					"linear": "mlp.c_fc",
+					"shapes": [
+						[
+							32,
+							3072
+						],
+						[
+							32,
+							768
+						],
+						[
+							768,
+							3072
+						]
+					],
+					"candidates": [
+						[
+							"cpp_CppMicroGemmFP32Vec_12",
+							0.300917
+						],
+						[
+							"addmm",
+							0.436896
+						]
+					],
+					"winner": "cpp_CppMicroGemmFP32Vec_12"
+				},
+				{
+					"op": "addmm",
+					"linear": "mlp.c_proj",
+					"shapes": [
+						[
+							32,
+							768
+						],
+						[
+							32,
+							3072
+						],
+						[
+							3072,
+							768
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							0.225937
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_13",
+							0.275541
+						]
+					],
+					"winner": "addmm"
+				}
+			],
+			"maxAbsDiff": 3.8147e-5,
+			"time": {
+				"eager": {
+					"median": 2.14668,
+					"min": 2.06347,
+					"max": 2.29507,
+					"rounds": 15
+				},
+				"default": {
+					"median": 2.56506,
+					"min": 2.45586,
+					"max": 2.71475,
+					"rounds": 15
+				},
+				"maxAutotune": {
+					"median": 1.98535,
+					"min": 1.91282,
+					"max": 2.13606,
+					"rounds": 15
+				}
+			}
+		},
+		{
+			"tokens": 128,
+			"compileSeconds": 10.7085,
+			"gemms": [
+				{
+					"op": "addmm",
+					"linear": "attn.c_attn",
+					"shapes": [
+						[
+							128,
+							2304
+						],
+						[
+							128,
+							768
+						],
+						[
+							768,
+							2304
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							0.423208
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_14",
+							0.746417
+						]
+					],
+					"winner": "addmm"
+				},
+				{
+					"op": "bmm",
+					"linear": "gemm",
+					"shapes": [
+						[
+							12,
+							128,
+							128
+						],
+						[
+							12,
+							128,
+							64
+						]
+					],
+					"candidates": [
+						[
+							"bmm",
+							0.116542
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_15",
+							0.204458
+						]
+					],
+					"winner": "bmm"
+				},
+				{
+					"op": "addmm",
+					"linear": "attn.c_proj",
+					"shapes": [
+						[
+							128,
+							768
+						],
+						[
+							128,
+							768
+						],
+						[
+							768,
+							768
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							0.183208
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_16",
+							0.233666
+						]
+					],
+					"winner": "addmm"
+				},
+				{
+					"op": "addmm",
+					"linear": "mlp.c_fc",
+					"shapes": [
+						[
+							128,
+							3072
+						],
+						[
+							128,
+							768
+						],
+						[
+							768,
+							3072
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							0.5505
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_17",
+							0.912895
+						]
+					],
+					"winner": "addmm"
+				},
+				{
+					"op": "addmm",
+					"linear": "mlp.c_proj",
+					"shapes": [
+						[
+							128,
+							768
+						],
+						[
+							128,
+							3072
+						],
+						[
+							3072,
+							768
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							0.631375
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_18",
+							0.721604
+						]
+					],
+					"winner": "addmm"
+				}
+			],
+			"maxAbsDiff": 2.28882e-5,
+			"time": {
+				"eager": {
+					"median": 4.2351,
+					"min": 3.8714,
+					"max": 4.62587,
+					"rounds": 15
+				},
+				"default": {
+					"median": 3.96373,
+					"min": 3.77966,
+					"max": 4.62453,
+					"rounds": 15
+				},
+				"maxAutotune": {
+					"median": 4.01782,
+					"min": 3.8007,
+					"max": 4.43855,
+					"rounds": 15
+				}
+			}
+		},
+		{
+			"tokens": 512,
+			"compileSeconds": 10.6017,
+			"gemms": [
+				{
+					"op": "addmm",
+					"linear": "attn.c_attn",
+					"shapes": [
+						[
+							512,
+							2304
+						],
+						[
+							512,
+							768
+						],
+						[
+							768,
+							2304
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							1.26662
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_19",
+							2.14117
+						]
+					],
+					"winner": "addmm"
+				},
+				{
+					"op": "bmm",
+					"linear": "gemm",
+					"shapes": [
+						[
+							12,
+							512,
+							512
+						],
+						[
+							12,
+							512,
+							64
+						]
+					],
+					"candidates": [
+						[
+							"bmm",
+							0.46975
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_20",
+							0.819479
+						]
+					],
+					"winner": "bmm"
+				},
+				{
+					"op": "addmm",
+					"linear": "attn.c_proj",
+					"shapes": [
+						[
+							512,
+							768
+						],
+						[
+							512,
+							768
+						],
+						[
+							768,
+							768
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							0.472688
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_21",
+							1.00994
+						]
+					],
+					"winner": "addmm"
+				},
+				{
+					"op": "addmm",
+					"linear": "mlp.c_fc",
+					"shapes": [
+						[
+							512,
+							3072
+						],
+						[
+							512,
+							768
+						],
+						[
+							768,
+							3072
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							1.40415
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_22",
+							2.74708
+						]
+					],
+					"winner": "addmm"
+				},
+				{
+					"op": "addmm",
+					"linear": "mlp.c_proj",
+					"shapes": [
+						[
+							512,
+							768
+						],
+						[
+							512,
+							3072
+						],
+						[
+							3072,
+							768
+						]
+					],
+					"candidates": [
+						[
+							"addmm",
+							1.24408
+						],
+						[
+							"cpp_CppMicroGemmFP32Vec_23",
+							2.82883
+						]
+					],
+					"winner": "addmm"
+				}
+			],
+			"maxAbsDiff": 2.28882e-5,
+			"time": {
+				"eager": {
+					"median": 13.7701,
+					"min": 10.7132,
+					"max": 15.0591,
+					"rounds": 15
+				},
+				"default": {
+					"median": 11.7676,
+					"min": 10.298,
+					"max": 14.6939,
+					"rounds": 15
+				},
+				"maxAutotune": {
+					"median": 12.015,
+					"min": 10.3836,
+					"max": 13.8526,
+					"rounds": 15
+				}
+			}
+		}
+	],
+	"autotuneCache": {
+		"tokens": 128,
+		"compileSeconds": 0.63437,
+		"feedbacks": 5,
+		"firstCompileSeconds": 10.7085
+	},
+	"search": {
+		"tokens": 128,
+		"linear": "mlp.c_fc",
+		"shape": {
+			"M": 128,
+			"K": 768,
+			"N": 3072
+		},
+		"register": [
+			[
+				4,
+				24,
+				1
+			],
+			[
+				4,
+				16,
+				1
+			],
+			[
+				8,
+				8,
+				1
+			]
+		],
+		"kc": [
+			64,
+			128,
+			256,
+			512,
+			768
+		],
+		"threads": [
+			"1,10,1",
+			"2,5,1",
+			"5,2,1",
+			"10,1,1"
+		],
+		"candidates": [
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					4,
+					24,
+					32,
+					1,
+					64,
+					32,
+					13,
+					768
+				],
+				"time": {
+					"median": 0.985765,
+					"min": 0.830168,
+					"max": 1.0788,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					4,
+					24,
+					16,
+					1,
+					64,
+					16,
+					26,
+					768
+				],
+				"time": {
+					"median": 0.998725,
+					"min": 0.880123,
+					"max": 1.13166,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					4,
+					24,
+					7,
+					1,
+					64,
+					7,
+					64,
+					768
+				],
+				"time": {
+					"median": 0.931754,
+					"min": 0.883297,
+					"max": 1.03965,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					4,
+					24,
+					4,
+					1,
+					64,
+					4,
+					128,
+					768
+				],
+				"time": {
+					"median": 0.897731,
+					"min": 0.811373,
+					"max": 1.01335,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					4,
+					24,
+					32,
+					1,
+					128,
+					32,
+					13,
+					768
+				],
+				"time": {
+					"median": 1.0163,
+					"min": 0.871015,
+					"max": 1.15821,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					4,
+					24,
+					16,
+					1,
+					128,
+					16,
+					26,
+					768
+				],
+				"time": {
+					"median": 0.944555,
+					"min": 0.823225,
+					"max": 1.07793,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					4,
+					24,
+					7,
+					1,
+					128,
+					7,
+					64,
+					768
+				],
+				"time": {
+					"median": 0.948157,
+					"min": 0.902576,
+					"max": 1.12826,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					4,
+					24,
+					4,
+					1,
+					128,
+					4,
+					128,
+					768
+				],
+				"time": {
+					"median": 0.885592,
+					"min": 0.825707,
+					"max": 1.0548,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					4,
+					24,
+					32,
+					1,
+					256,
+					32,
+					13,
+					768
+				],
+				"time": {
+					"median": 0.944494,
+					"min": 0.820856,
+					"max": 1.08095,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					4,
+					24,
+					16,
+					1,
+					256,
+					16,
+					26,
+					768
+				],
+				"time": {
+					"median": 0.946867,
+					"min": 0.837181,
+					"max": 1.13706,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					4,
+					24,
+					7,
+					1,
+					256,
+					7,
+					64,
+					768
+				],
+				"time": {
+					"median": 0.966129,
+					"min": 0.904679,
+					"max": 1.00722,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					4,
+					24,
+					4,
+					1,
+					256,
+					4,
+					128,
+					768
+				],
+				"time": {
+					"median": 0.867712,
+					"min": 0.82891,
+					"max": 0.96354,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					4,
+					24,
+					32,
+					1,
+					512,
+					32,
+					13,
+					768
+				],
+				"time": {
+					"median": 0.92301,
+					"min": 0.848415,
+					"max": 1.13636,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					4,
+					24,
+					16,
+					1,
+					512,
+					16,
+					26,
+					768
+				],
+				"time": {
+					"median": 0.946473,
+					"min": 0.882971,
+					"max": 1.14168,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					4,
+					24,
+					7,
+					1,
+					512,
+					7,
+					64,
+					768
+				],
+				"time": {
+					"median": 0.954211,
+					"min": 0.865237,
+					"max": 1.2739,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					4,
+					24,
+					4,
+					1,
+					512,
+					4,
+					128,
+					768
+				],
+				"time": {
+					"median": 0.874351,
+					"min": 0.816015,
+					"max": 0.941898,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					4,
+					24,
+					32,
+					1,
+					768,
+					32,
+					13,
+					768
+				],
+				"time": {
+					"median": 0.936677,
+					"min": 0.851306,
+					"max": 1.03225,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					4,
+					24,
+					16,
+					1,
+					768,
+					16,
+					26,
+					768
+				],
+				"time": {
+					"median": 0.94277,
+					"min": 0.851239,
+					"max": 1.06103,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					4,
+					24,
+					7,
+					1,
+					768,
+					7,
+					64,
+					768
+				],
+				"time": {
+					"median": 0.931002,
+					"min": 0.884476,
+					"max": 1.04116,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						24,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					4,
+					24,
+					4,
+					1,
+					768,
+					4,
+					128,
+					768
+				],
+				"time": {
+					"median": 0.855208,
+					"min": 0.831365,
+					"max": 1.30768,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					4,
+					16,
+					32,
+					1,
+					64,
+					32,
+					20,
+					768
+				],
+				"time": {
+					"median": 1.01693,
+					"min": 0.948958,
+					"max": 1.16459,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					4,
+					16,
+					16,
+					1,
+					64,
+					16,
+					39,
+					768
+				],
+				"time": {
+					"median": 1.07252,
+					"min": 0.987669,
+					"max": 1.1465,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					4,
+					16,
+					7,
+					1,
+					64,
+					7,
+					96,
+					768
+				],
+				"time": {
+					"median": 0.989491,
+					"min": 0.924058,
+					"max": 1.04779,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					4,
+					16,
+					4,
+					1,
+					64,
+					4,
+					192,
+					768
+				],
+				"time": {
+					"median": 0.915487,
+					"min": 0.87834,
+					"max": 1.03274,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					4,
+					16,
+					32,
+					1,
+					128,
+					32,
+					20,
+					768
+				],
+				"time": {
+					"median": 1.01711,
+					"min": 0.940762,
+					"max": 1.1,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					4,
+					16,
+					16,
+					1,
+					128,
+					16,
+					39,
+					768
+				],
+				"time": {
+					"median": 1.0272,
+					"min": 0.928464,
+					"max": 1.20171,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					4,
+					16,
+					7,
+					1,
+					128,
+					7,
+					96,
+					768
+				],
+				"time": {
+					"median": 0.988309,
+					"min": 0.905121,
+					"max": 1.26391,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					4,
+					16,
+					4,
+					1,
+					128,
+					4,
+					192,
+					768
+				],
+				"time": {
+					"median": 0.92,
+					"min": 0.889085,
+					"max": 1.1197,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					4,
+					16,
+					32,
+					1,
+					256,
+					32,
+					20,
+					768
+				],
+				"time": {
+					"median": 1.00834,
+					"min": 0.915273,
+					"max": 1.20312,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					4,
+					16,
+					16,
+					1,
+					256,
+					16,
+					39,
+					768
+				],
+				"time": {
+					"median": 1.05093,
+					"min": 0.920037,
+					"max": 1.19217,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					4,
+					16,
+					7,
+					1,
+					256,
+					7,
+					96,
+					768
+				],
+				"time": {
+					"median": 0.986274,
+					"min": 0.911958,
+					"max": 1.11141,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					4,
+					16,
+					4,
+					1,
+					256,
+					4,
+					192,
+					768
+				],
+				"time": {
+					"median": 0.929089,
+					"min": 0.863298,
+					"max": 1.071,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					4,
+					16,
+					32,
+					1,
+					512,
+					32,
+					20,
+					768
+				],
+				"time": {
+					"median": 0.998494,
+					"min": 0.932328,
+					"max": 1.14644,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					4,
+					16,
+					16,
+					1,
+					512,
+					16,
+					39,
+					768
+				],
+				"time": {
+					"median": 0.998194,
+					"min": 0.86204,
+					"max": 1.17352,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					4,
+					16,
+					7,
+					1,
+					512,
+					7,
+					96,
+					768
+				],
+				"time": {
+					"median": 1.00974,
+					"min": 0.932362,
+					"max": 1.16087,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					4,
+					16,
+					4,
+					1,
+					512,
+					4,
+					192,
+					768
+				],
+				"time": {
+					"median": 0.943571,
+					"min": 0.873014,
+					"max": 1.04984,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					4,
+					16,
+					32,
+					1,
+					768,
+					32,
+					20,
+					768
+				],
+				"time": {
+					"median": 0.996081,
+					"min": 0.930288,
+					"max": 1.15346,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					4,
+					16,
+					16,
+					1,
+					768,
+					16,
+					39,
+					768
+				],
+				"time": {
+					"median": 1.02327,
+					"min": 0.945066,
+					"max": 1.17258,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					4,
+					16,
+					7,
+					1,
+					768,
+					7,
+					96,
+					768
+				],
+				"time": {
+					"median": 1.02145,
+					"min": 0.958316,
+					"max": 1.11399,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						4,
+						16,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					4,
+					16,
+					4,
+					1,
+					768,
+					4,
+					192,
+					768
+				],
+				"time": {
+					"median": 0.938061,
+					"min": 0.863654,
+					"max": 1.04947,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					8,
+					8,
+					16,
+					1,
+					64,
+					16,
+					39,
+					768
+				],
+				"time": {
+					"median": 1.41871,
+					"min": 1.30656,
+					"max": 1.5178,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					8,
+					8,
+					8,
+					1,
+					64,
+					8,
+					77,
+					768
+				],
+				"time": {
+					"median": 1.41941,
+					"min": 1.24754,
+					"max": 1.55247,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					8,
+					8,
+					4,
+					1,
+					64,
+					4,
+					192,
+					768
+				],
+				"time": {
+					"median": 1.30021,
+					"min": 1.23109,
+					"max": 1.58005,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,64",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					8,
+					8,
+					2,
+					1,
+					64,
+					2,
+					384,
+					768
+				],
+				"time": {
+					"median": 1.30193,
+					"min": 1.21398,
+					"max": 1.52674,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					8,
+					8,
+					16,
+					1,
+					128,
+					16,
+					39,
+					768
+				],
+				"time": {
+					"median": 1.38484,
+					"min": 1.22473,
+					"max": 1.54645,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					8,
+					8,
+					8,
+					1,
+					128,
+					8,
+					77,
+					768
+				],
+				"time": {
+					"median": 1.39996,
+					"min": 1.25843,
+					"max": 1.72125,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					8,
+					8,
+					4,
+					1,
+					128,
+					4,
+					192,
+					768
+				],
+				"time": {
+					"median": 1.30001,
+					"min": 1.21079,
+					"max": 1.47535,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,128",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					8,
+					8,
+					2,
+					1,
+					128,
+					2,
+					384,
+					768
+				],
+				"time": {
+					"median": 1.29504,
+					"min": 1.20086,
+					"max": 1.85823,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					8,
+					8,
+					16,
+					1,
+					256,
+					16,
+					39,
+					768
+				],
+				"time": {
+					"median": 1.31836,
+					"min": 1.23487,
+					"max": 1.5165,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					8,
+					8,
+					8,
+					1,
+					256,
+					8,
+					77,
+					768
+				],
+				"time": {
+					"median": 1.35485,
+					"min": 1.23781,
+					"max": 1.70497,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					8,
+					8,
+					4,
+					1,
+					256,
+					4,
+					192,
+					768
+				],
+				"time": {
+					"median": 1.27296,
+					"min": 1.20755,
+					"max": 1.6191,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,256",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					8,
+					8,
+					2,
+					1,
+					256,
+					2,
+					384,
+					768
+				],
+				"time": {
+					"median": 1.28593,
+					"min": 1.20829,
+					"max": 1.38433,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					8,
+					8,
+					16,
+					1,
+					512,
+					16,
+					39,
+					768
+				],
+				"time": {
+					"median": 1.35688,
+					"min": 1.23556,
+					"max": 1.50471,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					8,
+					8,
+					8,
+					1,
+					512,
+					8,
+					77,
+					768
+				],
+				"time": {
+					"median": 1.34886,
+					"min": 1.26489,
+					"max": 1.51209,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					8,
+					8,
+					4,
+					1,
+					512,
+					4,
+					192,
+					768
+				],
+				"time": {
+					"median": 1.3066,
+					"min": 1.20877,
+					"max": 1.50181,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,512",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					8,
+					8,
+					2,
+					1,
+					512,
+					2,
+					384,
+					768
+				],
+				"time": {
+					"median": 1.31557,
+					"min": 1.19929,
+					"max": 1.42002,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "1,10,1"
+				},
+				"tiles": [
+					8,
+					8,
+					16,
+					1,
+					768,
+					16,
+					39,
+					768
+				],
+				"time": {
+					"median": 1.35772,
+					"min": 1.12198,
+					"max": 1.59103,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "2,5,1"
+				},
+				"tiles": [
+					8,
+					8,
+					8,
+					1,
+					768,
+					8,
+					77,
+					768
+				],
+				"time": {
+					"median": 1.30161,
+					"min": 1.13755,
+					"max": 1.56352,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "5,2,1"
+				},
+				"tiles": [
+					8,
+					8,
+					4,
+					1,
+					768,
+					4,
+					192,
+					768
+				],
+				"time": {
+					"median": 1.29766,
+					"min": 1.18695,
+					"max": 1.57746,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {
+					"register_blocking": [
+						8,
+						8,
+						1
+					],
+					"cache_blocking": "999,1,768",
+					"thread_factors": "10,1,1"
+				},
+				"tiles": [
+					8,
+					8,
+					2,
+					1,
+					768,
+					2,
+					384,
+					768
+				],
+				"time": {
+					"median": 1.26941,
+					"min": 1.19464,
+					"max": 1.81787,
+					"rounds": 15
+				},
+				"inductorDefault": false
+			},
+			{
+				"candidate": {},
+				"tiles": [
+					4,
+					24,
+					32,
+					1,
+					546,
+					32,
+					13,
+					768
+				],
+				"time": {
+					"median": 0.956733,
+					"min": 0.877978,
+					"max": 1.04606,
+					"rounds": 15
+				},
+				"inductorDefault": true
+			}
+		],
+		"aten": {
+			"median": 0.716782,
+			"min": 0.636461,
+			"max": 0.774602,
+			"rounds": 15
+		},
+		"finals": [
+			{
+				"index": 15,
+				"time": {
+					"median": 0.898167,
+					"min": 0.815134,
+					"max": 1.75092,
+					"rounds": 40
+				}
+			},
+			{
+				"index": 3,
+				"time": {
+					"median": 0.915661,
+					"min": 0.820149,
+					"max": 1.82753,
+					"rounds": 40
+				}
+			},
+			{
+				"index": 7,
+				"time": {
+					"median": 0.884871,
+					"min": 0.828132,
+					"max": 1.20694,
+					"rounds": 40
+				}
+			},
+			{
+				"index": 60,
+				"time": {
+					"median": 0.964762,
+					"min": 0.834911,
+					"max": 1.50939,
+					"rounds": 40
+				}
+			},
+			{
+				"index": 8,
+				"time": {
+					"median": 0.99082,
+					"min": 0.854346,
+					"max": 1.40922,
+					"rounds": 40
+				}
+			},
+			{
+				"index": 5,
+				"time": {
+					"median": 0.964811,
+					"min": 0.876355,
+					"max": 1.25854,
+					"rounds": 40
+				}
+			}
+		],
+		"atenFinal": {
+			"median": 0.761682,
+			"min": 0.579471,
+			"max": 0.86651,
+			"rounds": 40
+		}
+	},
+	"recorder": {
+		"timestamp": "2026-11-03T15:22:19.440950+00:00",
+		"device": "cpu (arm64, Darwin)",
+		"dtype": "float32",
+		"python": "3.12.12",
+		"packages": {
+			"torch": "2.14.1",
+			"numpy": "2.5.4"
+		},
+		"cpuCount": 14,
+		"machine": {
+			"cpu": "Apple M4 Max",
+			"cores": 14,
+			"threads": 10,
+			"l1dBytes": 65536,
+			"l2Bytes": 4194304,
+			"compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+			"os": "Darwin 24.5.0 (arm64)",
+			"mps": true
+		},
+		"script": "scripts/compilers/record_autotuning.py",
+		"scriptSha256": "73379eba51410e91350fe905f26ba8e684921d906c6ea6eea0f5e8f923853bf4",
+		"loadAverage": [
+			[
+				6.34,
+				6.38,
+				8.36
+			],
+			[
+				9.83,
+				7.44,
+				8.41
+			]
+		]
+	},
+	"data": {
+		"file": "autotuning.f32",
+		"sha256": "27df71855d5719a40684d57bcca19b39b1cd069bfc0f5686101ea9a3b3e4df1f",
+		"bytes": 398956,
+		"tensors": {
+			"A": {
+				"offset": 0,
+				"length": 98304,
+				"shape": [
+					128,
+					768
+				]
+			},
+			"run.1.eager": {
+				"offset": 98304,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.1.default": {
+				"offset": 98319,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.1.maxAutotune": {
+				"offset": 98334,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.8.eager": {
+				"offset": 98349,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.8.default": {
+				"offset": 98364,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.8.maxAutotune": {
+				"offset": 98379,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.32.eager": {
+				"offset": 98394,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.32.default": {
+				"offset": 98409,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.32.maxAutotune": {
+				"offset": 98424,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.128.eager": {
+				"offset": 98439,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.128.default": {
+				"offset": 98454,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.128.maxAutotune": {
+				"offset": 98469,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.512.eager": {
+				"offset": 98484,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.512.default": {
+				"offset": 98499,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"run.512.maxAutotune": {
+				"offset": 98514,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.3": {
+				"offset": 98529,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.15": {
+				"offset": 98544,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.8": {
+				"offset": 98559,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.5": {
+				"offset": 98574,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.7": {
+				"offset": 98589,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.11": {
+				"offset": 98604,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.0": {
+				"offset": 98619,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.19": {
+				"offset": 98634,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.9": {
+				"offset": 98649,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.12": {
+				"offset": 98664,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.17": {
+				"offset": 98679,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.16": {
+				"offset": 98694,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.33": {
+				"offset": 98709,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.31": {
+				"offset": 98724,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.39": {
+				"offset": 98739,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.14": {
+				"offset": 98754,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.4": {
+				"offset": 98769,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.35": {
+				"offset": 98784,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.60": {
+				"offset": 98799,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.23": {
+				"offset": 98814,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.1": {
+				"offset": 98829,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.13": {
+				"offset": 98844,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.2": {
+				"offset": 98859,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.18": {
+				"offset": 98874,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.27": {
+				"offset": 98889,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.6": {
+				"offset": 98904,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.10": {
+				"offset": 98919,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.26": {
+				"offset": 98934,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.30": {
+				"offset": 98949,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.28": {
+				"offset": 98964,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.29": {
+				"offset": 98979,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.22": {
+				"offset": 98994,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.25": {
+				"offset": 99009,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.36": {
+				"offset": 99024,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.32": {
+				"offset": 99039,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.34": {
+				"offset": 99054,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.24": {
+				"offset": 99069,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.37": {
+				"offset": 99084,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.20": {
+				"offset": 99099,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.38": {
+				"offset": 99114,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.21": {
+				"offset": 99129,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.56": {
+				"offset": 99144,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.57": {
+				"offset": 99159,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.58": {
+				"offset": 99174,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.59": {
+				"offset": 99189,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.55": {
+				"offset": 99204,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.47": {
+				"offset": 99219,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.50": {
+				"offset": 99234,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.51": {
+				"offset": 99249,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.54": {
+				"offset": 99264,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.46": {
+				"offset": 99279,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.43": {
+				"offset": 99294,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.44": {
+				"offset": 99309,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.42": {
+				"offset": 99324,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.48": {
+				"offset": 99339,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.52": {
+				"offset": 99354,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.49": {
+				"offset": 99369,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.41": {
+				"offset": 99384,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.45": {
+				"offset": 99399,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.53": {
+				"offset": 99414,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"search.40": {
+				"offset": 99429,
+				"length": 15,
+				"shape": [
+					15
+				]
+			},
+			"final.15": {
+				"offset": 99444,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"final.3": {
+				"offset": 99484,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"final.7": {
+				"offset": 99524,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"final.60": {
+				"offset": 99564,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"final.8": {
+				"offset": 99604,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"final.5": {
+				"offset": 99644,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"final.aten": {
+				"offset": 99684,
+				"length": 40,
+				"shape": [
+					40
+				]
+			},
+			"search.aten": {
+				"offset": 99724,
+				"length": 15,
+				"shape": [
+					15
+				]
+			}
+		}
+	}
+}

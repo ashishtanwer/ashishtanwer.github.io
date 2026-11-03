@@ -1,0 +1,8634 @@
+{
+	"model": {
+		"id": "openai-community/gpt2",
+		"name": "GPT-2 small, block 0",
+		"revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+		"url": "https://huggingface.co/openai-community/gpt2",
+		"license": "MIT"
+	},
+	"text": {
+		"dataset": "rajpurkar/squad",
+		"split": "validation",
+		"url": "https://huggingface.co/datasets/rajpurkar/squad",
+		"license": "CC BY-SA 4.0",
+		"note": "the first distinct validation paragraphs, joined by blank lines",
+		"tokens": [
+			"Super",
+			" Bowl",
+			" 50",
+			" was",
+			" an",
+			" American",
+			" football",
+			" game",
+			" to",
+			" determine",
+			" the",
+			" champion",
+			" of",
+			" the",
+			" National",
+			" Football",
+			" League",
+			" (",
+			"NFL",
+			")",
+			" for",
+			" the",
+			" 2015",
+			" season",
+			".",
+			" The",
+			" American",
+			" Football",
+			" Conference",
+			" (",
+			"A",
+			"FC",
+			")",
+			" champion",
+			" Denver",
+			" Broncos",
+			" defeated",
+			" the",
+			" National",
+			" Football",
+			" Conference",
+			" (",
+			"N",
+			"FC",
+			")",
+			" champion",
+			" Carolina",
+			" Panthers",
+			" 24",
+			"âĢĵ",
+			"10",
+			" to",
+			" earn",
+			" their",
+			" third",
+			" Super",
+			" Bowl",
+			" title",
+			".",
+			" The",
+			" game",
+			" was",
+			" played",
+			" on",
+			" February",
+			" 7",
+			",",
+			" 2016",
+			",",
+			" at",
+			" Levi",
+			"'s",
+			" Stadium",
+			" in",
+			" the",
+			" San",
+			" Francisco",
+			" Bay",
+			" Area",
+			" at",
+			" Santa",
+			" Clara",
+			",",
+			" California",
+			".",
+			" As",
+			" this",
+			" was",
+			" the",
+			" 50",
+			"th",
+			" Super",
+			" Bowl",
+			",",
+			" the",
+			" league",
+			" emphasized",
+			" the",
+			" \"",
+			"gold",
+			"en",
+			" anniversary",
+			"\"",
+			" with",
+			" various",
+			" gold",
+			"-",
+			"themed",
+			" initiatives",
+			",",
+			" as",
+			" well",
+			" as",
+			" temporarily",
+			" suspending",
+			" the",
+			" tradition",
+			" of",
+			" naming",
+			" each",
+			" Super",
+			" Bowl",
+			" game",
+			" with",
+			" Roman",
+			" numer",
+			"als",
+			" ("
+		]
+	},
+	"tokenIds": [
+		12442,
+		8693,
+		2026,
+		373,
+		281,
+		1605,
+		4346,
+		983,
+		284,
+		5004,
+		262,
+		8783,
+		286,
+		262,
+		2351,
+		9957,
+		4041,
+		357,
+		32078,
+		8,
+		329,
+		262,
+		1853,
+		1622,
+		13,
+		383,
+		1605,
+		9957,
+		8785,
+		357,
+		32,
+		4851,
+		8,
+		8783,
+		10656,
+		16582,
+		9772,
+		262,
+		2351,
+		9957,
+		8785,
+		357,
+		45,
+		4851,
+		8,
+		8783,
+		5913,
+		17782,
+		1987,
+		1906,
+		940,
+		284,
+		5160,
+		511,
+		2368,
+		3115,
+		8693,
+		3670,
+		13,
+		383,
+		983,
+		373,
+		2826,
+		319,
+		3945,
+		767,
+		11,
+		1584,
+		11,
+		379,
+		20196,
+		338,
+		10499,
+		287,
+		262,
+		2986,
+		6033,
+		4696,
+		9498,
+		379,
+		8909,
+		27443,
+		11,
+		3442,
+		13,
+		1081,
+		428,
+		373,
+		262,
+		2026,
+		400,
+		3115,
+		8693,
+		11,
+		262,
+		4652,
+		20047,
+		262,
+		366,
+		24267,
+		268,
+		11162,
+		1,
+		351,
+		2972,
+		3869,
+		12,
+		26966,
+		15446,
+		11,
+		355,
+		880,
+		355,
+		13413,
+		47499,
+		262,
+		6761,
+		286,
+		19264,
+		1123,
+		3115,
+		8693,
+		983,
+		351,
+		7993,
+		5470,
+		874,
+		357
+	],
+	"devices": {
+		"cpu": {
+			"device": "cpu",
+			"backend": "Inductor C++ (OpenMP, NEON vectors)",
+			"tokens": 128,
+			"maxAbsDiffVsEager": 2.28882e-5,
+			"atenGraph": [
+				{
+					"name": "arg0_1",
+					"op": "placeholder",
+					"target": "arg0_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "arg1_1",
+					"op": "placeholder",
+					"target": "arg1_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "arg2_1",
+					"op": "placeholder",
+					"target": "arg2_1",
+					"args": [],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "arg3_1",
+					"op": "placeholder",
+					"target": "arg3_1",
+					"args": [],
+					"shape": [
+						2304,
+						768
+					],
+					"bytes": 7077888,
+					"view": false
+				},
+				{
+					"name": "arg4_1",
+					"op": "placeholder",
+					"target": "arg4_1",
+					"args": [],
+					"shape": [
+						2304
+					],
+					"bytes": 9216,
+					"view": false
+				},
+				{
+					"name": "arg5_1",
+					"op": "placeholder",
+					"target": "arg5_1",
+					"args": [],
+					"shape": [
+						768,
+						768
+					],
+					"bytes": 2359296,
+					"view": false
+				},
+				{
+					"name": "arg6_1",
+					"op": "placeholder",
+					"target": "arg6_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "arg7_1",
+					"op": "placeholder",
+					"target": "arg7_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "arg8_1",
+					"op": "placeholder",
+					"target": "arg8_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "arg9_1",
+					"op": "placeholder",
+					"target": "arg9_1",
+					"args": [],
+					"shape": [
+						3072,
+						768
+					],
+					"bytes": 9437184,
+					"view": false
+				},
+				{
+					"name": "arg10_1",
+					"op": "placeholder",
+					"target": "arg10_1",
+					"args": [],
+					"shape": [
+						3072
+					],
+					"bytes": 12288,
+					"view": false
+				},
+				{
+					"name": "arg11_1",
+					"op": "placeholder",
+					"target": "arg11_1",
+					"args": [],
+					"shape": [
+						768,
+						3072
+					],
+					"bytes": 9437184,
+					"view": false
+				},
+				{
+					"name": "arg12_1",
+					"op": "placeholder",
+					"target": "arg12_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "var_mean",
+					"op": "call_function",
+					"target": "var_mean.correction",
+					"args": [
+						"arg2_1"
+					],
+					"shape": null,
+					"bytes": 1024,
+					"view": false
+				},
+				{
+					"name": "getitem",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"var_mean"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": true
+				},
+				{
+					"name": "getitem_1",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"var_mean"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": true
+				},
+				{
+					"name": "sub",
+					"op": "call_function",
+					"target": "sub.Tensor",
+					"args": [
+						"arg2_1",
+						"getitem_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "add",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"getitem"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": false
+				},
+				{
+					"name": "rsqrt",
+					"op": "call_function",
+					"target": "rsqrt.default",
+					"args": [
+						"add"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": false
+				},
+				{
+					"name": "mul",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"sub",
+						"rsqrt"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "mul_1",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"mul",
+						"arg0_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "add_1",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"mul_1",
+						"arg1_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"add_1"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"arg3_1"
+					],
+					"shape": [
+						768,
+						2304
+					],
+					"bytes": 7077888,
+					"view": true
+				},
+				{
+					"name": "addmm",
+					"op": "call_function",
+					"target": "addmm.default",
+					"args": [
+						"arg4_1",
+						"view",
+						"permute"
+					],
+					"shape": [
+						128,
+						2304
+					],
+					"bytes": 1179648,
+					"view": false
+				},
+				{
+					"name": "view_1",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"addmm"
+					],
+					"shape": [
+						1,
+						128,
+						2304
+					],
+					"bytes": 1179648,
+					"view": true
+				},
+				{
+					"name": "split",
+					"op": "call_function",
+					"target": "split.Tensor",
+					"args": [
+						"view_1"
+					],
+					"shape": null,
+					"bytes": 1179648,
+					"view": true
+				},
+				{
+					"name": "getitem_2",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"split"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "getitem_3",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"split"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "getitem_4",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"split"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "iota",
+					"op": "call_function",
+					"target": "prims.iota.default",
+					"args": [],
+					"shape": [
+						128
+					],
+					"bytes": 1024,
+					"view": false
+				},
+				{
+					"name": "unsqueeze",
+					"op": "call_function",
+					"target": "unsqueeze.default",
+					"args": [
+						"iota"
+					],
+					"shape": [
+						1,
+						128
+					],
+					"bytes": 1024,
+					"view": true
+				},
+				{
+					"name": "iota_1",
+					"op": "call_function",
+					"target": "prims.iota.default",
+					"args": [],
+					"shape": [
+						128
+					],
+					"bytes": 1024,
+					"view": false
+				},
+				{
+					"name": "unsqueeze_1",
+					"op": "call_function",
+					"target": "unsqueeze.default",
+					"args": [
+						"iota_1"
+					],
+					"shape": [
+						128,
+						1
+					],
+					"bytes": 1024,
+					"view": true
+				},
+				{
+					"name": "sub_1",
+					"op": "call_function",
+					"target": "sub.Tensor",
+					"args": [
+						"unsqueeze",
+						"unsqueeze_1"
+					],
+					"shape": [
+						128,
+						128
+					],
+					"bytes": 131072,
+					"view": false
+				},
+				{
+					"name": "le",
+					"op": "call_function",
+					"target": "le.Scalar",
+					"args": [
+						"sub_1"
+					],
+					"shape": [
+						128,
+						128
+					],
+					"bytes": 16384,
+					"view": false
+				},
+				{
+					"name": "full_default",
+					"op": "call_function",
+					"target": "full.default",
+					"args": [],
+					"shape": [
+						128,
+						128
+					],
+					"bytes": 16384,
+					"view": false
+				},
+				{
+					"name": "logical_and",
+					"op": "call_function",
+					"target": "logical_and.default",
+					"args": [
+						"le",
+						"full_default"
+					],
+					"shape": [
+						128,
+						128
+					],
+					"bytes": 16384,
+					"view": false
+				},
+				{
+					"name": "bitwise_not",
+					"op": "call_function",
+					"target": "bitwise_not.default",
+					"args": [
+						"logical_and"
+					],
+					"shape": [
+						128,
+						128
+					],
+					"bytes": 16384,
+					"view": false
+				},
+				{
+					"name": "full_default_1",
+					"op": "call_function",
+					"target": "full.default",
+					"args": [],
+					"shape": [],
+					"bytes": 4,
+					"view": false
+				},
+				{
+					"name": "view_2",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"getitem_2"
+					],
+					"shape": [
+						1,
+						128,
+						12,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_1",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"view_2"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "expand",
+					"op": "call_function",
+					"target": "expand.default",
+					"args": [
+						"permute_1"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "view_5",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"expand"
+					],
+					"shape": [
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "view_3",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"getitem_3"
+					],
+					"shape": [
+						1,
+						128,
+						12,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_2",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"view_3"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_4",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"permute_2"
+					],
+					"shape": [
+						1,
+						12,
+						64,
+						128
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "expand_1",
+					"op": "call_function",
+					"target": "expand.default",
+					"args": [
+						"permute_4"
+					],
+					"shape": [
+						1,
+						12,
+						64,
+						128
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "view_6",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"expand_1"
+					],
+					"shape": [
+						12,
+						64,
+						128
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "bmm",
+					"op": "call_function",
+					"target": "bmm.default",
+					"args": [
+						"view_5",
+						"view_6"
+					],
+					"shape": [
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "view_7",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"bmm"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": true
+				},
+				{
+					"name": "div",
+					"op": "call_function",
+					"target": "div.Tensor",
+					"args": [
+						"view_7"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "where",
+					"op": "call_function",
+					"target": "where.self",
+					"args": [
+						"bitwise_not",
+						"full_default_1",
+						"div"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "amax",
+					"op": "call_function",
+					"target": "amax.default",
+					"args": [
+						"where"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						1
+					],
+					"bytes": 6144,
+					"view": false
+				},
+				{
+					"name": "sub_2",
+					"op": "call_function",
+					"target": "sub.Tensor",
+					"args": [
+						"where",
+						"amax"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "exp",
+					"op": "call_function",
+					"target": "exp.default",
+					"args": [
+						"sub_2"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "sum_1",
+					"op": "call_function",
+					"target": "sum.dim_IntList",
+					"args": [
+						"exp"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						1
+					],
+					"bytes": 6144,
+					"view": false
+				},
+				{
+					"name": "div_1",
+					"op": "call_function",
+					"target": "div.Tensor",
+					"args": [
+						"exp",
+						"sum_1"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "expand_2",
+					"op": "call_function",
+					"target": "expand.default",
+					"args": [
+						"div_1"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": true
+				},
+				{
+					"name": "view_8",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"expand_2"
+					],
+					"shape": [
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": true
+				},
+				{
+					"name": "view_4",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"getitem_4"
+					],
+					"shape": [
+						1,
+						128,
+						12,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_3",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"view_4"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "expand_3",
+					"op": "call_function",
+					"target": "expand.default",
+					"args": [
+						"permute_3"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "view_9",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"expand_3"
+					],
+					"shape": [
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "bmm_1",
+					"op": "call_function",
+					"target": "bmm.default",
+					"args": [
+						"view_8",
+						"view_9"
+					],
+					"shape": [
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view_10",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"bmm_1"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_5",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"view_10"
+					],
+					"shape": [
+						1,
+						128,
+						12,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "clone",
+					"op": "call_function",
+					"target": "clone.default",
+					"args": [
+						"permute_5"
+					],
+					"shape": [
+						1,
+						128,
+						12,
+						64
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view_11",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"clone"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "view_12",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"view_11"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_6",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"arg5_1"
+					],
+					"shape": [
+						768,
+						768
+					],
+					"bytes": 2359296,
+					"view": true
+				},
+				{
+					"name": "addmm_1",
+					"op": "call_function",
+					"target": "addmm.default",
+					"args": [
+						"arg6_1",
+						"view_12",
+						"permute_6"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view_13",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"addmm_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "add_2",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"arg2_1",
+						"view_13"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "var_mean_1",
+					"op": "call_function",
+					"target": "var_mean.correction",
+					"args": [
+						"add_2"
+					],
+					"shape": null,
+					"bytes": 1024,
+					"view": false
+				},
+				{
+					"name": "getitem_5",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"var_mean_1"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": true
+				},
+				{
+					"name": "getitem_6",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"var_mean_1"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": true
+				},
+				{
+					"name": "sub_3",
+					"op": "call_function",
+					"target": "sub.Tensor",
+					"args": [
+						"add_2",
+						"getitem_6"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "add_3",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"getitem_5"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": false
+				},
+				{
+					"name": "rsqrt_1",
+					"op": "call_function",
+					"target": "rsqrt.default",
+					"args": [
+						"add_3"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": false
+				},
+				{
+					"name": "mul_2",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"sub_3",
+						"rsqrt_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "mul_3",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"mul_2",
+						"arg7_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "add_4",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"mul_3",
+						"arg8_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view_14",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"add_4"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_7",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"arg9_1"
+					],
+					"shape": [
+						768,
+						3072
+					],
+					"bytes": 9437184,
+					"view": true
+				},
+				{
+					"name": "addmm_2",
+					"op": "call_function",
+					"target": "addmm.default",
+					"args": [
+						"arg10_1",
+						"view_14",
+						"permute_7"
+					],
+					"shape": [
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "view_15",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"addmm_2"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": true
+				},
+				{
+					"name": "mul_8",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"view_15"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "mul_4",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"view_15"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "mul_5",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"mul_4",
+						"view_15"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "mul_6",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"mul_5"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "add_5",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"view_15",
+						"mul_6"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "mul_7",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"add_5"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "tanh",
+					"op": "call_function",
+					"target": "tanh.default",
+					"args": [
+						"mul_7"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "add_6",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"tanh"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "mul_9",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"mul_8",
+						"add_6"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "view_16",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"mul_9"
+					],
+					"shape": [
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": true
+				},
+				{
+					"name": "permute_8",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"arg11_1"
+					],
+					"shape": [
+						3072,
+						768
+					],
+					"bytes": 9437184,
+					"view": true
+				},
+				{
+					"name": "addmm_3",
+					"op": "call_function",
+					"target": "addmm.default",
+					"args": [
+						"arg12_1",
+						"view_16",
+						"permute_8"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view_17",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"addmm_3"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "add_7",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"add_2",
+						"view_17"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				}
+			],
+			"preFusion": [
+				{
+					"name": "op0",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op0"
+					],
+					"origins": [
+						"var_mean"
+					],
+					"reads": {
+						"arg2_1": 1572864
+					},
+					"writes": {
+						"buf0": 2048
+					}
+				},
+				{
+					"name": "op1",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op1"
+					],
+					"origins": [
+						"var_mean"
+					],
+					"reads": {
+						"buf0": 2048
+					},
+					"writes": {
+						"buf1": 2048
+					}
+				},
+				{
+					"name": "op2",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op2"
+					],
+					"origins": [
+						"var_mean"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"buf1": 2048
+					},
+					"writes": {
+						"buf2": 2048
+					}
+				},
+				{
+					"name": "op3",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op3"
+					],
+					"origins": [
+						"add",
+						"add_1",
+						"mul",
+						"mul_1",
+						"rsqrt",
+						"sub",
+						"var_mean"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"buf1": 2048,
+						"buf2": 2048,
+						"arg0_1": 3072,
+						"arg1_1": 3072
+					},
+					"writes": {
+						"buf3": 1572864
+					}
+				},
+				{
+					"name": "op4",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op4"
+					],
+					"origins": [
+						"add",
+						"add_1",
+						"addmm",
+						"mul",
+						"mul_1",
+						"permute",
+						"rsqrt",
+						"sub",
+						"var_mean",
+						"view"
+					],
+					"reads": {
+						"arg4_1": 9216,
+						"buf3": 1572864,
+						"arg3_1": 7077888
+					},
+					"writes": {
+						"buf4": 4718592
+					}
+				},
+				{
+					"name": "op5",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op5"
+					],
+					"origins": [
+						"bmm",
+						"permute_1",
+						"permute_2",
+						"permute_4",
+						"split",
+						"view_1",
+						"view_2",
+						"view_3",
+						"view_5",
+						"view_6"
+					],
+					"reads": {
+						"buf4": 4718592
+					},
+					"writes": {
+						"buf5": 12582912
+					}
+				},
+				{
+					"name": "op6",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op6"
+					],
+					"origins": [
+						"amax",
+						"bitwise_not",
+						"div",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"sub_1",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_7",
+						"where"
+					],
+					"reads": {
+						"buf5": 12582912
+					},
+					"writes": {
+						"buf6": 24576
+					}
+				},
+				{
+					"name": "op7",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op7"
+					],
+					"origins": [
+						"bitwise_not",
+						"div",
+						"exp",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"sub_1",
+						"sub_2",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_7",
+						"where"
+					],
+					"reads": {
+						"buf5": 12582912,
+						"buf6": 24576
+					},
+					"writes": {
+						"buf7": 12582912
+					}
+				},
+				{
+					"name": "op8",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op8"
+					],
+					"origins": [
+						"sum_1"
+					],
+					"reads": {
+						"buf7": 12582912
+					},
+					"writes": {
+						"buf8": 24576
+					}
+				},
+				{
+					"name": "op9",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op9"
+					],
+					"origins": [
+						"div_1"
+					],
+					"reads": {
+						"buf7": 12582912,
+						"buf8": 24576
+					},
+					"writes": {
+						"buf9": 12582912
+					}
+				},
+				{
+					"name": "op10",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op10"
+					],
+					"origins": [
+						"bmm_1",
+						"div_1",
+						"permute_3",
+						"split",
+						"view_1",
+						"view_4",
+						"view_8",
+						"view_9"
+					],
+					"reads": {
+						"buf9": 12582912,
+						"buf4": 4718592
+					},
+					"writes": {
+						"buf10": 1572864
+					}
+				},
+				{
+					"name": "op11",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op11"
+					],
+					"origins": [
+						"clone",
+						"permute_5",
+						"view_10"
+					],
+					"reads": {
+						"buf10": 1572864
+					},
+					"writes": {
+						"buf11": 1572864
+					}
+				},
+				{
+					"name": "op12",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op12"
+					],
+					"origins": [
+						"addmm_1",
+						"clone",
+						"permute_5",
+						"permute_6",
+						"view_10",
+						"view_11",
+						"view_12"
+					],
+					"reads": {
+						"arg6_1": 3072,
+						"buf11": 1572864,
+						"arg5_1": 2359296
+					},
+					"writes": {
+						"buf12": 1572864
+					}
+				},
+				{
+					"name": "op13",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op13"
+					],
+					"origins": [
+						"add_2",
+						"var_mean_1",
+						"view_13"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"buf12": 1572864
+					},
+					"writes": {
+						"buf13": 2048
+					}
+				},
+				{
+					"name": "op14",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op14"
+					],
+					"origins": [
+						"add_2",
+						"var_mean_1",
+						"view_13"
+					],
+					"reads": {
+						"buf13": 2048
+					},
+					"writes": {
+						"buf14": 2048
+					}
+				},
+				{
+					"name": "op15",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op15"
+					],
+					"origins": [
+						"add_2",
+						"var_mean_1",
+						"view_13"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"buf12": 1572864,
+						"buf14": 2048
+					},
+					"writes": {
+						"buf15": 2048
+					}
+				},
+				{
+					"name": "op16",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op16"
+					],
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"mul_2",
+						"mul_3",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"buf12": 1572864,
+						"buf14": 2048,
+						"buf15": 2048,
+						"arg7_1": 3072,
+						"arg8_1": 3072
+					},
+					"writes": {
+						"buf16": 1572864
+					}
+				},
+				{
+					"name": "op17",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op17"
+					],
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"addmm_2",
+						"mul_2",
+						"mul_3",
+						"permute_7",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13",
+						"view_14"
+					],
+					"reads": {
+						"arg10_1": 12288,
+						"buf16": 1572864,
+						"arg9_1": 9437184
+					},
+					"writes": {
+						"buf17": 6291456
+					}
+				},
+				{
+					"name": "op18",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op18"
+					],
+					"origins": [
+						"add_5",
+						"add_6",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"tanh",
+						"view_15"
+					],
+					"reads": {
+						"buf17": 6291456
+					},
+					"writes": {
+						"buf18": 6291456
+					}
+				},
+				{
+					"name": "op19",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op19"
+					],
+					"origins": [
+						"add_5",
+						"add_6",
+						"addmm_3",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"permute_8",
+						"tanh",
+						"view_15",
+						"view_16"
+					],
+					"reads": {
+						"arg12_1": 3072,
+						"buf18": 6291456,
+						"arg11_1": 9437184
+					},
+					"writes": {
+						"buf19": 1572864
+					}
+				},
+				{
+					"name": "op20",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op20"
+					],
+					"origins": [
+						"add_2",
+						"add_7",
+						"view_13",
+						"view_17"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"buf12": 1572864,
+						"buf19": 1572864
+					},
+					"writes": {
+						"buf20": 1572864
+					}
+				}
+			],
+			"postFusion": [
+				{
+					"name": "op0_op1_op2_op3",
+					"kind": "OuterLoopFusedSchedulerNode",
+					"parts": [
+						"op0",
+						"op1",
+						"op2",
+						"op3"
+					],
+					"origins": [
+						"add",
+						"add_1",
+						"mul",
+						"mul_1",
+						"rsqrt",
+						"sub",
+						"var_mean"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"arg0_1": 3072,
+						"arg1_1": 3072
+					},
+					"writes": {
+						"buf3": 1572864
+					}
+				},
+				{
+					"name": "op4",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op4"
+					],
+					"origins": [
+						"add",
+						"add_1",
+						"addmm",
+						"mul",
+						"mul_1",
+						"permute",
+						"rsqrt",
+						"sub",
+						"var_mean",
+						"view"
+					],
+					"reads": {
+						"arg4_1": 9216,
+						"buf3": 1572864,
+						"arg3_1": 7077888
+					},
+					"writes": {
+						"buf4": 4718592
+					}
+				},
+				{
+					"name": "op5",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op5"
+					],
+					"origins": [
+						"bmm",
+						"permute_1",
+						"permute_2",
+						"permute_4",
+						"split",
+						"view_1",
+						"view_2",
+						"view_3",
+						"view_5",
+						"view_6"
+					],
+					"reads": {
+						"buf4": 4718592
+					},
+					"writes": {
+						"buf5": 12582912
+					}
+				},
+				{
+					"name": "op6_op7",
+					"kind": "OuterLoopFusedSchedulerNode",
+					"parts": [
+						"op6",
+						"op7"
+					],
+					"origins": [
+						"amax",
+						"bitwise_not",
+						"div",
+						"exp",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"sub_1",
+						"sub_2",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_7",
+						"where"
+					],
+					"reads": {
+						"buf5": 12582912
+					},
+					"writes": {
+						"buf7": 12582912
+					}
+				},
+				{
+					"name": "op8_op9",
+					"kind": "OuterLoopFusedSchedulerNode",
+					"parts": [
+						"op8",
+						"op9"
+					],
+					"origins": [
+						"div_1",
+						"sum_1"
+					],
+					"reads": {
+						"buf7": 12582912
+					},
+					"writes": {
+						"buf9": 12582912
+					}
+				},
+				{
+					"name": "op10",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op10"
+					],
+					"origins": [
+						"bmm_1",
+						"div_1",
+						"permute_3",
+						"split",
+						"view_1",
+						"view_4",
+						"view_8",
+						"view_9"
+					],
+					"reads": {
+						"buf9": 12582912,
+						"buf4": 4718592
+					},
+					"writes": {
+						"buf10": 1572864
+					}
+				},
+				{
+					"name": "op11",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op11"
+					],
+					"origins": [
+						"clone",
+						"permute_5",
+						"view_10"
+					],
+					"reads": {
+						"buf10": 1572864
+					},
+					"writes": {
+						"buf11": 1572864
+					}
+				},
+				{
+					"name": "op12",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op12"
+					],
+					"origins": [
+						"addmm_1",
+						"clone",
+						"permute_5",
+						"permute_6",
+						"view_10",
+						"view_11",
+						"view_12"
+					],
+					"reads": {
+						"arg6_1": 3072,
+						"buf11": 1572864,
+						"arg5_1": 2359296
+					},
+					"writes": {
+						"buf12": 1572864
+					}
+				},
+				{
+					"name": "op13_op14_op15_op16",
+					"kind": "OuterLoopFusedSchedulerNode",
+					"parts": [
+						"op13",
+						"op14",
+						"op15",
+						"op16"
+					],
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"mul_2",
+						"mul_3",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"buf12": 1572864,
+						"arg7_1": 3072,
+						"arg8_1": 3072
+					},
+					"writes": {
+						"buf16": 1572864
+					}
+				},
+				{
+					"name": "op17",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op17"
+					],
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"addmm_2",
+						"mul_2",
+						"mul_3",
+						"permute_7",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13",
+						"view_14"
+					],
+					"reads": {
+						"arg10_1": 12288,
+						"buf16": 1572864,
+						"arg9_1": 9437184
+					},
+					"writes": {
+						"buf17": 6291456
+					}
+				},
+				{
+					"name": "op18",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op18"
+					],
+					"origins": [
+						"add_5",
+						"add_6",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"tanh",
+						"view_15"
+					],
+					"reads": {
+						"buf17": 6291456
+					},
+					"writes": {
+						"buf18": 6291456
+					}
+				},
+				{
+					"name": "op19",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op19"
+					],
+					"origins": [
+						"add_5",
+						"add_6",
+						"addmm_3",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"permute_8",
+						"tanh",
+						"view_15",
+						"view_16"
+					],
+					"reads": {
+						"arg12_1": 3072,
+						"buf18": 6291456,
+						"arg11_1": 9437184
+					},
+					"writes": {
+						"buf19": 1572864
+					}
+				},
+				{
+					"name": "op20",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op20"
+					],
+					"origins": [
+						"add_2",
+						"add_7",
+						"view_13",
+						"view_17"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"buf12": 1572864,
+						"buf19": 1572864
+					},
+					"writes": {
+						"buf20": 1572864
+					}
+				}
+			],
+			"launches": [
+				{
+					"name": "cpp_fused_native_layer_norm_0",
+					"library": false,
+					"args": [
+						[
+							"buf1",
+							"buf1",
+							128,
+							"rw"
+						],
+						[
+							"arg2_1",
+							"arg2_1",
+							98304,
+							"r"
+						],
+						[
+							"arg0_1",
+							"arg0_1",
+							768,
+							"r"
+						],
+						[
+							"arg1_1",
+							"arg1_1",
+							768,
+							"r"
+						],
+						[
+							"buf2",
+							"buf2",
+							128,
+							"w"
+						],
+						[
+							"buf3",
+							"buf3",
+							98304,
+							"w"
+						]
+					],
+					"read": 399872,
+					"written": 394240,
+					"node": "op0_op1_op2_op3",
+					"origins": [
+						"add",
+						"add_1",
+						"mul",
+						"mul_1",
+						"rsqrt",
+						"sub",
+						"var_mean"
+					],
+					"inductorRead": 399360,
+					"inductorWritten": 393216,
+					"us": 174.938
+				},
+				{
+					"name": "extern_kernels.addmm",
+					"library": true,
+					"args": [
+						[
+							"arg4_1",
+							"arg4_1",
+							2304,
+							"r"
+						],
+						[
+							"reinterpret_tensor(buf3, (128, 768), (768, 1), 0)",
+							"buf3",
+							98304,
+							"r"
+						],
+						[
+							"reinterpret_tensor(arg3_1, (768, 2304), (1, 768), 0)",
+							"arg3_1",
+							1769472,
+							"r"
+						],
+						[
+							"buf4",
+							"buf4",
+							294912,
+							"w"
+						]
+					],
+					"read": 7480320,
+					"written": 1179648,
+					"node": "op4",
+					"origins": [
+						"add",
+						"add_1",
+						"addmm",
+						"mul",
+						"mul_1",
+						"permute",
+						"rsqrt",
+						"sub",
+						"var_mean",
+						"view"
+					],
+					"inductorRead": 7480320,
+					"inductorWritten": 1179648,
+					"us": 351.625
+				},
+				{
+					"name": "extern_kernels.bmm",
+					"library": true,
+					"args": [
+						[
+							"reinterpret_tensor(buf4, (12, 128, 64), (64, 2304, 1), 0)",
+							"buf4",
+							98304,
+							"r"
+						],
+						[
+							"reinterpret_tensor(buf4, (12, 64, 128), (64, 1, 2304), 768)",
+							"buf4",
+							98304,
+							"r"
+						],
+						[
+							"buf5",
+							"buf5",
+							196608,
+							"w"
+						]
+					],
+					"read": 786432,
+					"written": 786432,
+					"node": "op5",
+					"origins": [
+						"bmm",
+						"permute_1",
+						"permute_2",
+						"permute_4",
+						"split",
+						"view_1",
+						"view_2",
+						"view_3",
+						"view_5",
+						"view_6"
+					],
+					"inductorRead": 1179648,
+					"inductorWritten": 786432,
+					"us": 96.0625
+				},
+				{
+					"name": "cpp_fused__softmax_bitwise_not_div_masked_fill_ones_tril_view_1",
+					"library": false,
+					"args": [
+						[
+							"buf9",
+							"buf9",
+							196608,
+							"rw"
+						],
+						[
+							"buf6",
+							"buf6",
+							1536,
+							"w"
+						],
+						[
+							"buf8",
+							"buf8",
+							1536,
+							"w"
+						]
+					],
+					"read": 786432,
+					"written": 798720,
+					"node": "op6_op7",
+					"origins": [
+						"amax",
+						"bitwise_not",
+						"div",
+						"exp",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"sub_1",
+						"sub_2",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_7",
+						"where"
+					],
+					"inductorRead": 786432,
+					"inductorWritten": 786432,
+					"us": 171.166
+				},
+				{
+					"name": "extern_kernels.bmm",
+					"library": true,
+					"args": [
+						[
+							"reinterpret_tensor(buf9, (12, 128, 128), (16384, 128, 1), 0)",
+							"buf9",
+							196608,
+							"r"
+						],
+						[
+							"reinterpret_tensor(buf4, (12, 128, 64), (64, 2304, 1), 1536)",
+							"buf4",
+							98304,
+							"r"
+						],
+						[
+							"buf10",
+							"buf10",
+							98304,
+							"w"
+						]
+					],
+					"read": 1179648,
+					"written": 393216,
+					"node": "op10",
+					"origins": [
+						"bmm_1",
+						"div_1",
+						"permute_3",
+						"split",
+						"view_1",
+						"view_4",
+						"view_8",
+						"view_9"
+					],
+					"inductorRead": 1966080,
+					"inductorWritten": 393216,
+					"us": 54.229
+				},
+				{
+					"name": "cpp_fused_clone_transpose_view_2",
+					"library": false,
+					"args": [
+						[
+							"buf10",
+							"buf10",
+							98304,
+							"r"
+						],
+						[
+							"buf11",
+							"buf11",
+							98304,
+							"w"
+						]
+					],
+					"read": 393216,
+					"written": 393216,
+					"node": "op11",
+					"origins": [
+						"clone",
+						"permute_5",
+						"view_10"
+					],
+					"inductorRead": 393216,
+					"inductorWritten": 393216,
+					"us": 83.354
+				},
+				{
+					"name": "extern_kernels.addmm",
+					"library": true,
+					"args": [
+						[
+							"arg6_1",
+							"arg6_1",
+							768,
+							"r"
+						],
+						[
+							"reinterpret_tensor(buf11, (128, 768), (768, 1), 0)",
+							"buf11",
+							98304,
+							"r"
+						],
+						[
+							"reinterpret_tensor(arg5_1, (768, 768), (1, 768), 0)",
+							"arg5_1",
+							589824,
+							"r"
+						],
+						[
+							"buf12",
+							"buf12",
+							98304,
+							"w"
+						]
+					],
+					"read": 2755584,
+					"written": 393216,
+					"node": "op12",
+					"origins": [
+						"addmm_1",
+						"clone",
+						"permute_5",
+						"permute_6",
+						"view_10",
+						"view_11",
+						"view_12"
+					],
+					"inductorRead": 2755584,
+					"inductorWritten": 393216,
+					"us": 238.958
+				},
+				{
+					"name": "cpp_fused_add_native_layer_norm_view_3",
+					"library": false,
+					"args": [
+						[
+							"buf14",
+							"buf14",
+							128,
+							"rw"
+						],
+						[
+							"arg2_1",
+							"arg2_1",
+							98304,
+							"r"
+						],
+						[
+							"buf12",
+							"buf12",
+							98304,
+							"r"
+						],
+						[
+							"arg7_1",
+							"arg7_1",
+							768,
+							"r"
+						],
+						[
+							"arg8_1",
+							"arg8_1",
+							768,
+							"r"
+						],
+						[
+							"buf15",
+							"buf15",
+							128,
+							"w"
+						],
+						[
+							"buf16",
+							"buf16",
+							98304,
+							"w"
+						]
+					],
+					"read": 793088,
+					"written": 394240,
+					"node": "op13_op14_op15_op16",
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"mul_2",
+						"mul_3",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13"
+					],
+					"inductorRead": 792576,
+					"inductorWritten": 393216,
+					"us": 169.125
+				},
+				{
+					"name": "extern_kernels.addmm",
+					"library": true,
+					"args": [
+						[
+							"arg10_1",
+							"arg10_1",
+							3072,
+							"r"
+						],
+						[
+							"reinterpret_tensor(buf16, (128, 768), (768, 1), 0)",
+							"buf16",
+							98304,
+							"r"
+						],
+						[
+							"reinterpret_tensor(arg9_1, (768, 3072), (1, 768), 0)",
+							"arg9_1",
+							2359296,
+							"r"
+						],
+						[
+							"buf17",
+							"buf17",
+							393216,
+							"w"
+						]
+					],
+					"read": 9842688,
+					"written": 1572864,
+					"node": "op17",
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"addmm_2",
+						"mul_2",
+						"mul_3",
+						"permute_7",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13",
+						"view_14"
+					],
+					"inductorRead": 9842688,
+					"inductorWritten": 1572864,
+					"us": 469.854
+				},
+				{
+					"name": "cpp_fused_gelu_view_4",
+					"library": false,
+					"args": [
+						[
+							"buf18",
+							"buf18",
+							393216,
+							"rw"
+						]
+					],
+					"read": 1572864,
+					"written": 1572864,
+					"node": "op18",
+					"origins": [
+						"add_5",
+						"add_6",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"tanh",
+						"view_15"
+					],
+					"inductorRead": 1572864,
+					"inductorWritten": 1572864,
+					"us": 339.958
+				},
+				{
+					"name": "extern_kernels.addmm",
+					"library": true,
+					"args": [
+						[
+							"arg12_1",
+							"arg12_1",
+							768,
+							"r"
+						],
+						[
+							"reinterpret_tensor(buf18, (128, 3072), (3072, 1), 0)",
+							"buf18",
+							393216,
+							"r"
+						],
+						[
+							"reinterpret_tensor(arg11_1, (3072, 768), (1, 3072), 0)",
+							"arg11_1",
+							2359296,
+							"r"
+						],
+						[
+							"buf19",
+							"buf19",
+							98304,
+							"w"
+						]
+					],
+					"read": 11013120,
+					"written": 393216,
+					"node": "op19",
+					"origins": [
+						"add_5",
+						"add_6",
+						"addmm_3",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"permute_8",
+						"tanh",
+						"view_15",
+						"view_16"
+					],
+					"inductorRead": 11013120,
+					"inductorWritten": 393216,
+					"us": 574.563
+				},
+				{
+					"name": "cpp_fused_add_view_5",
+					"library": false,
+					"args": [
+						[
+							"buf20",
+							"buf20",
+							98304,
+							"rw"
+						],
+						[
+							"arg2_1",
+							"arg2_1",
+							98304,
+							"r"
+						],
+						[
+							"buf19",
+							"buf19",
+							98304,
+							"r"
+						]
+					],
+					"read": 1179648,
+					"written": 393216,
+					"node": "op20",
+					"origins": [
+						"add_2",
+						"add_7",
+						"view_13",
+						"view_17"
+					],
+					"inductorRead": 1179648,
+					"inductorWritten": 393216,
+					"us": 73.125
+				}
+			],
+			"generated": 6,
+			"library": 6,
+			"sources": {
+				"cpp_fused_native_layer_norm_0": "#include <torch/csrc/inductor/cpp_prefix.h>\nextern \"C\"  void  kernel(float* in_out_ptr0,\n                       const float* in_ptr0,\n                       const float* in_ptr1,\n                       const float* in_ptr2,\n                       float* out_ptr1,\n                       float* out_ptr2)\n{\n    std::atomic<int> inductor_cpu_integer_div_error{0};\n    inductor_cpu_integer_div_error_flag = &inductor_cpu_integer_div_error;\n    auto out_ptr0 = in_out_ptr0;\n    #pragma omp parallel num_threads(10)\n    {\n        int tid = omp_get_thread_num();\n        {\n            #pragma omp for\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(128LL); x0+=static_cast<int64_t>(1LL))\n            {\n                {\n                    float tmp_acc0 = 0;\n                    at::vec::Vectorized<float> tmp_acc0_vec = at::vec::Vectorized<float>(0);\n                    for(int64_t x1=static_cast<int64_t>(0LL); x1<static_cast<int64_t>(768LL); x1+=static_cast<int64_t>(4LL))\n                    {\n                        {\n                            if(C10_LIKELY(x1 >= static_cast<int64_t>(0) && x1 < static_cast<int64_t>(768LL)))\n                            {\n                                auto tmp0 = at::vec::Vectorized<float>::loadu(in_ptr0 + static_cast<int64_t>(x1 + 768LL*x0), static_cast<int64_t>(4));\n                                tmp_acc0_vec = tmp_acc0_vec + tmp0;\n                            }\n                        }\n                    }\n                    tmp_acc0 = tmp_acc0 + at::vec::vec_reduce_all<float, 1>([](at::vec::Vectorized<float>& x, at::vec::Vectorized<float>& y) { return x + y; }, tmp_acc0_vec);\n                    in_out_ptr0[static_cast<int64_t>(x0)] = static_cast<float>(tmp_acc0);\n                }\n            }\n        }\n        #pragma omp single\n        {\n            {\n                for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(128LL); x0+=static_cast<int64_t>(4LL))\n                {\n                    {\n                        if(C10_LIKELY(x0 >= static_cast<int64_t>(0) && x0 < static_cast<int64_t>(128LL)))\n                        {\n                            auto tmp0 = at::vec::Vectorized<float>::loadu(out_ptr0 + static_cast<int64_t>(x0), static_cast<int64_t>(4));\n                            auto tmp1 = static_cast<float>(768.0);\n                            auto tmp2 = at::vec::Vectorized<float>(tmp1);\n                            auto tmp3 = tmp0 / tmp2;\n                            tmp3.store(in_out_ptr0 + static_cast<int64_t>(x0));\n                        }\n                    }\n                }\n            }\n        }\n        {\n            #pragma omp for\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(128LL); x0+=static_cast<int64_t>(1LL))\n            {\n                {\n                    float tmp_acc0 = 0;\n                    at::vec::Vectorized<float> tmp_acc0_vec = at::vec::Vectorized<float>(0);\n                    for(int64_t x1=static_cast<int64_t>(0LL); x1<static_cast<int64_t>(768LL); x1+=static_cast<int64_t>(4LL))\n                    {\n                        {\n                            if(C10_LIKELY(x1 >= static_cast<int64_t>(0) && x1 < static_cast<int64_t>(768LL)))\n                            {\n                                auto tmp0 = at::vec::Vectorized<float>::loadu(in_ptr0 + static_cast<int64_t>(x1 + 768LL*x0), static_cast<int64_t>(4));\n                                auto tmp1 = in_out_ptr0[static_cast<int64_t>(x0)];\n                                auto tmp2 = at::vec::Vectorized<float>(tmp1);\n                                auto tmp3 = tmp0 - tmp2;\n                                auto tmp4 = tmp3 * tmp3;\n                                tmp_acc0_vec = tmp_acc0_vec + tmp4;\n                            }\n                        }\n                    }\n                    tmp_acc0 = tmp_acc0 + at::vec::vec_reduce_all<float, 1>([](at::vec::Vectorized<float>& x, at::vec::Vectorized<float>& y) { return x + y; }, tmp_acc0_vec);\n                    out_ptr1[static_cast<int64_t>(x0)] = static_cast<float>(tmp_acc0);\n                }\n            }\n        }\n        {\n            #pragma omp for\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(128LL); x0+=static_cast<int64_t>(1LL))\n            {\n                for(int64_t x1=static_cast<int64_t>(0LL); x1<static_cast<int64_t>(768LL); x1+=static_cast<int64_t>(4LL))\n                {\n                    {\n                        if(C10_LIKELY(x1 >= static_cast<int64_t>(0) && x1 < static_cast<int64_t>(768LL)))\n                        {\n                            auto tmp0 = at::vec::Vectorized<float>::loadu(in_ptr0 + static_cast<int64_t>(x1 + 768LL*x0), static_cast<int64_t>(4));\n                            auto tmp1 = in_out_ptr0[static_cast<int64_t>(x0)];\n                            auto tmp4 = out_ptr1[static_cast<int64_t>(x0)];\n                            auto tmp12 = at::vec::Vectorized<float>::loadu(in_ptr1 + static_cast<int64_t>(x1), static_cast<int64_t>(4));\n                            auto tmp14 = at::vec::Vectorized<float>::loadu(in_ptr2 + static_cast<int64_t>(x1), static_cast<int64_t>(4));\n                            auto tmp2 = at::vec::Vectorized<float>(tmp1);\n                            auto tmp3 = tmp0 - tmp2;\n                            auto tmp5 = static_cast<float>(768.0);\n                            auto tmp6 = tmp4 / tmp5;\n                            auto tmp7 = static_cast<float>(1e-5);\n                            auto tmp8 = float(tmp6 + tmp7);\n                            auto tmp9 = 1 / std::sqrt(tmp8);\n                            auto tmp10 = at::vec::Vectorized<float>(tmp9);\n                            auto tmp11 = tmp3 * tmp10;\n                            auto tmp13 = tmp11 * tmp12;\n                            auto tmp15 = tmp13 + tmp14;\n                            tmp15.store(out_ptr2 + static_cast<int64_t>(x1 + 768LL*x0));\n                        }\n                    }\n                }\n            }\n        }\n    }\n    inductor_cpu_integer_div_error_flag = nullptr;\n    inductor_cpu_throw_if_integer_div_error(inductor_cpu_integer_div_error);\n}",
+				"cpp_fused__softmax_bitwise_not_div_masked_fill_ones_tril_view_1": "#include <torch/csrc/inductor/cpp_prefix.h>\nextern \"C\"  void  kernel(float* in_out_ptr0,\n                       float* out_ptr0,\n                       float* out_ptr1)\n{\n    std::atomic<int> inductor_cpu_integer_div_error{0};\n    inductor_cpu_integer_div_error_flag = &inductor_cpu_integer_div_error;\n    auto in_ptr0 = in_out_ptr0;\n    #pragma omp parallel num_threads(10)\n    {\n        int tid = omp_get_thread_num();\n        {\n            #pragma omp for collapse(2)\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(12LL); x0+=static_cast<int64_t>(1LL))\n            {\n                for(int64_t x1=static_cast<int64_t>(0LL); x1<static_cast<int64_t>(128LL); x1+=static_cast<int64_t>(1LL))\n                {\n                    {\n                        float tmp_acc0 = -std::numeric_limits<float>::infinity();\n                        at::vec::Vectorized<float> tmp_acc0_vec = at::vec::Vectorized<float>(-std::numeric_limits<float>::infinity());\n                        for(int64_t x2=static_cast<int64_t>(0LL); x2<static_cast<int64_t>(128LL); x2+=static_cast<int64_t>(4LL))\n                        {\n                            {\n                                if(C10_LIKELY(x2 >= static_cast<int64_t>(0) && x2 < static_cast<int64_t>(128LL)))\n                                {\n                                    auto tmp12 = at::vec::Vectorized<float>::loadu(in_ptr0 + static_cast<int64_t>(x2 + 128LL*x1 + 16384LL*x0), static_cast<int64_t>(4));\n                                    auto tmp0 = x2 + ((-1LL)*x1);\n                                    auto tmp1 = c10::convert<int64_t>(tmp0);\n                                    auto tmp2 = at::vec::VectorizedN<int64_t,2>::arange(tmp1, 1);\n                                    auto tmp3 = static_cast<int64_t>(0);\n                                    auto tmp4 = at::vec::VectorizedN<int64_t,2>(tmp3);\n                                    auto tmp5 = at::vec::VecMask<int64_t,2>(tmp2 <= tmp4);\n                                    auto tmp6 = static_cast<bool>(true);\n                                    auto tmp7 = at::vec::VecMask<float,1>::from(tmp6);\n                                    auto tmp8 = tmp5.template cast<int32_t,1>();\n                                    auto tmp9 = tmp7.template cast<int32_t,1>();\n                                    auto tmp10 = tmp8 & tmp9;\n                                    auto tmp11 = ~tmp10;\n                                    auto tmp13 = static_cast<float>(8.0);\n                                    auto tmp14 = at::vec::Vectorized<float>(tmp13);\n                                    auto tmp15 = tmp12 / tmp14;\n                                    auto tmp16 = -std::numeric_limits<float>::infinity();\n                                    auto tmp17 = at::vec::Vectorized<float>(tmp16);\n                                    auto tmp18 = decltype(tmp17)::blendv(tmp15, tmp17, tmp11.template cast<float,1>());\n                                    tmp_acc0_vec = at::vec::maximum(tmp_acc0_vec, tmp18);\n                                }\n                            }\n                        }\n                        tmp_acc0 = max_propagate_nan(tmp_acc0, at::vec::vec_reduce_all<float, 1>([](at::vec::Vectorized<float>& x, at::vec::Vectorized<float>& y) { return at::vec::maximum(x, y); }, tmp_acc0_vec));\n                        out_ptr0[static_cast<int64_t>(x1 + 128LL*x0)] = static_cast<float>(tmp_acc0);\n                    }\n                    for(int64_t x2=static_cast<int64_t>(0LL); x2<static_cast<int64_t>(128LL); x2+=static_cast<int64_t>(4LL))\n                    {\n                        {\n                            if(C10_LIKELY(x2 >= static_cast<int64_t>(0) && x2 < static_cast<int64_t>(128LL)))\n                            {\n                                auto tmp12 = at::vec::Vectorized<float>::loadu(in_out_ptr0 + static_cast<int64_t>(x2 + 128LL*x1 + 16384LL*x0), static_cast<int64_t>(4));\n                                auto tmp19 = out_ptr0[static_cast<int64_t>(x1 + 128LL*x0)];\n                                auto tmp0 = x2 + ((-1LL)*x1);\n                                auto tmp1 = c10::convert<int64_t>(tmp0);\n                                auto tmp2 = at::vec::VectorizedN<int64_t,2>::arange(tmp1, 1);\n                                auto tmp3 = static_cast<int64_t>(0);\n                                auto tmp4 = at::vec::VectorizedN<int64_t,2>(tmp3);\n                                auto tmp5 = at::vec::VecMask<int64_t,2>(tmp2 <= tmp4);\n                                auto tmp6 = static_cast<bool>(true);\n                                auto tmp7 = at::vec::VecMask<float,1>::from(tmp6);\n                                auto tmp8 = tmp5.template cast<int32_t,1>();\n                                auto tmp9 = tmp7.template cast<int32_t,1>();\n                                auto tmp10 = tmp8 & tmp9;\n                                auto tmp11 = ~tmp10;\n                                auto tmp13 = static_cast<float>(8.0);\n                                auto tmp14 = at::vec::Vectorized<float>(tmp13);\n                                auto tmp15 = tmp12 / tmp14;\n                                auto tmp16 = -std::numeric_limits<float>::infinity();\n                                auto tmp17 = at::vec::Vectorized<float>(tmp16);\n                                auto tmp18 = decltype(tmp17)::blendv(tmp15, tmp17, tmp11.template cast<float,1>());\n                                auto tmp20 = at::vec::Vectorized<float>(tmp19);\n                                auto tmp21 = tmp18 - tmp20;\n                                auto tmp22 = tmp21.exp();\n                                tmp22.store(in_out_ptr0 + static_cast<int64_t>(x2 + 128LL*x1 + 16384LL*x0));\n                            }\n                        }\n                    }\n                }\n            }\n        }\n        {\n            #pragma omp for\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(1536LL); x0+=static_cast<int64_t>(1LL))\n            {\n                {\n                    float tmp_acc0 = 0;\n                    at::vec::Vectorized<float> tmp_acc0_vec = at::vec::Vectorized<float>(0);\n                    for(int64_t x1=static_cast<int64_t>(0LL); x1<static_cast<int64_t>(128LL); x1+=static_cast<int64_t>(4LL))\n                    {\n                        {\n                            if(C10_LIKELY(x1 >= static_cast<int64_t>(0) && x1 < static_cast<int64_t>(128LL)))\n                            {\n                                auto tmp0 = at::vec::Vectorized<float>::loadu(in_out_ptr0 + static_cast<int64_t>(x1 + 128LL*x0), static_cast<int64_t>(4));\n                                tmp_acc0_vec = tmp_acc0_vec + tmp0;\n                            }\n                        }\n                    }\n                    tmp_acc0 = tmp_acc0 + at::vec::vec_reduce_all<float, 1>([](at::vec::Vectorized<float>& x, at::vec::Vectorized<float>& y) { return x + y; }, tmp_acc0_vec);\n                    out_ptr1[static_cast<int64_t>(x0)] = static_cast<float>(tmp_acc0);\n                }\n                for(int64_t x1=static_cast<int64_t>(0LL); x1<static_cast<int64_t>(128LL); x1+=static_cast<int64_t>(4LL))\n                {\n                    {\n                        if(C10_LIKELY(x1 >= static_cast<int64_t>(0) && x1 < static_cast<int64_t>(128LL)))\n                        {\n                            auto tmp0 = at::vec::Vectorized<float>::loadu(in_out_ptr0 + static_cast<int64_t>(x1 + 128LL*x0), static_cast<int64_t>(4));\n                            auto tmp1 = out_ptr1[static_cast<int64_t>(x0)];\n                            auto tmp2 = at::vec::Vectorized<float>(tmp1);\n                            auto tmp3 = tmp0 / tmp2;\n                            tmp3.store(in_out_ptr0 + static_cast<int64_t>(x1 + 128LL*x0));\n                        }\n                    }\n                }\n            }\n        }\n    }\n    inductor_cpu_integer_div_error_flag = nullptr;\n    inductor_cpu_throw_if_integer_div_error(inductor_cpu_integer_div_error);\n}",
+				"cpp_fused_clone_transpose_view_2": "#include <torch/csrc/inductor/cpp_prefix.h>\nextern \"C\"  void  kernel(const float* in_ptr0,\n                       float* out_ptr0)\n{\n    std::atomic<int> inductor_cpu_integer_div_error{0};\n    inductor_cpu_integer_div_error_flag = &inductor_cpu_integer_div_error;\n    #pragma omp parallel num_threads(10)\n    {\n        int tid = omp_get_thread_num();\n        {\n            #pragma omp for\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(128LL); x0+=static_cast<int64_t>(1LL))\n            {\n                for(int64_t x1=static_cast<int64_t>(0LL); x1<static_cast<int64_t>(12LL); x1+=static_cast<int64_t>(1LL))\n                {\n                    for(int64_t x2=static_cast<int64_t>(0LL); x2<static_cast<int64_t>(64LL); x2+=static_cast<int64_t>(4LL))\n                    {\n                        {\n                            if(C10_LIKELY(x2 >= static_cast<int64_t>(0) && x2 < static_cast<int64_t>(64LL)))\n                            {\n                                auto tmp0 = at::vec::Vectorized<float>::loadu(in_ptr0 + static_cast<int64_t>(x2 + 64LL*x0 + 8192LL*x1), static_cast<int64_t>(4));\n                                tmp0.store(out_ptr0 + static_cast<int64_t>(x2 + 64LL*x1 + 768LL*x0));\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    }\n    inductor_cpu_integer_div_error_flag = nullptr;\n    inductor_cpu_throw_if_integer_div_error(inductor_cpu_integer_div_error);\n}",
+				"cpp_fused_add_native_layer_norm_view_3": "#include <torch/csrc/inductor/cpp_prefix.h>\nextern \"C\"  void  kernel(float* in_out_ptr0,\n                       const float* in_ptr0,\n                       const float* in_ptr1,\n                       const float* in_ptr2,\n                       const float* in_ptr3,\n                       float* out_ptr1,\n                       float* out_ptr2)\n{\n    std::atomic<int> inductor_cpu_integer_div_error{0};\n    inductor_cpu_integer_div_error_flag = &inductor_cpu_integer_div_error;\n    auto out_ptr0 = in_out_ptr0;\n    #pragma omp parallel num_threads(10)\n    {\n        int tid = omp_get_thread_num();\n        {\n            #pragma omp for\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(128LL); x0+=static_cast<int64_t>(1LL))\n            {\n                {\n                    float tmp_acc0 = 0;\n                    at::vec::Vectorized<float> tmp_acc0_vec = at::vec::Vectorized<float>(0);\n                    for(int64_t x1=static_cast<int64_t>(0LL); x1<static_cast<int64_t>(768LL); x1+=static_cast<int64_t>(4LL))\n                    {\n                        {\n                            if(C10_LIKELY(x1 >= static_cast<int64_t>(0) && x1 < static_cast<int64_t>(768LL)))\n                            {\n                                auto tmp0 = at::vec::Vectorized<float>::loadu(in_ptr0 + static_cast<int64_t>(x1 + 768LL*x0), static_cast<int64_t>(4));\n                                auto tmp1 = at::vec::Vectorized<float>::loadu(in_ptr1 + static_cast<int64_t>(x1 + 768LL*x0), static_cast<int64_t>(4));\n                                auto tmp2 = tmp0 + tmp1;\n                                tmp_acc0_vec = tmp_acc0_vec + tmp2;\n                            }\n                        }\n                    }\n                    tmp_acc0 = tmp_acc0 + at::vec::vec_reduce_all<float, 1>([](at::vec::Vectorized<float>& x, at::vec::Vectorized<float>& y) { return x + y; }, tmp_acc0_vec);\n                    in_out_ptr0[static_cast<int64_t>(x0)] = static_cast<float>(tmp_acc0);\n                }\n            }\n        }\n        #pragma omp single\n        {\n            {\n                for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(128LL); x0+=static_cast<int64_t>(4LL))\n                {\n                    {\n                        if(C10_LIKELY(x0 >= static_cast<int64_t>(0) && x0 < static_cast<int64_t>(128LL)))\n                        {\n                            auto tmp0 = at::vec::Vectorized<float>::loadu(out_ptr0 + static_cast<int64_t>(x0), static_cast<int64_t>(4));\n                            auto tmp1 = static_cast<float>(768.0);\n                            auto tmp2 = at::vec::Vectorized<float>(tmp1);\n                            auto tmp3 = tmp0 / tmp2;\n                            tmp3.store(in_out_ptr0 + static_cast<int64_t>(x0));\n                        }\n                    }\n                }\n            }\n        }\n        {\n            #pragma omp for\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(128LL); x0+=static_cast<int64_t>(1LL))\n            {\n                {\n                    float tmp_acc0 = 0;\n                    at::vec::Vectorized<float> tmp_acc0_vec = at::vec::Vectorized<float>(0);\n                    for(int64_t x1=static_cast<int64_t>(0LL); x1<static_cast<int64_t>(768LL); x1+=static_cast<int64_t>(4LL))\n                    {\n                        {\n                            if(C10_LIKELY(x1 >= static_cast<int64_t>(0) && x1 < static_cast<int64_t>(768LL)))\n                            {\n                                auto tmp0 = at::vec::Vectorized<float>::loadu(in_ptr0 + static_cast<int64_t>(x1 + 768LL*x0), static_cast<int64_t>(4));\n                                auto tmp1 = at::vec::Vectorized<float>::loadu(in_ptr1 + static_cast<int64_t>(x1 + 768LL*x0), static_cast<int64_t>(4));\n                                auto tmp3 = in_out_ptr0[static_cast<int64_t>(x0)];\n                                auto tmp2 = tmp0 + tmp1;\n                                auto tmp4 = at::vec::Vectorized<float>(tmp3);\n                                auto tmp5 = tmp2 - tmp4;\n                                auto tmp6 = tmp5 * tmp5;\n                                tmp_acc0_vec = tmp_acc0_vec + tmp6;\n                            }\n                        }\n                    }\n                    tmp_acc0 = tmp_acc0 + at::vec::vec_reduce_all<float, 1>([](at::vec::Vectorized<float>& x, at::vec::Vectorized<float>& y) { return x + y; }, tmp_acc0_vec);\n                    out_ptr1[static_cast<int64_t>(x0)] = static_cast<float>(tmp_acc0);\n                }\n            }\n        }\n        {\n            #pragma omp for\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(128LL); x0+=static_cast<int64_t>(1LL))\n            {\n                for(int64_t x1=static_cast<int64_t>(0LL); x1<static_cast<int64_t>(768LL); x1+=static_cast<int64_t>(4LL))\n                {\n                    {\n                        if(C10_LIKELY(x1 >= static_cast<int64_t>(0) && x1 < static_cast<int64_t>(768LL)))\n                        {\n                            auto tmp0 = at::vec::Vectorized<float>::loadu(in_ptr0 + static_cast<int64_t>(x1 + 768LL*x0), static_cast<int64_t>(4));\n                            auto tmp1 = at::vec::Vectorized<float>::loadu(in_ptr1 + static_cast<int64_t>(x1 + 768LL*x0), static_cast<int64_t>(4));\n                            auto tmp3 = in_out_ptr0[static_cast<int64_t>(x0)];\n                            auto tmp6 = out_ptr1[static_cast<int64_t>(x0)];\n                            auto tmp14 = at::vec::Vectorized<float>::loadu(in_ptr2 + static_cast<int64_t>(x1), static_cast<int64_t>(4));\n                            auto tmp16 = at::vec::Vectorized<float>::loadu(in_ptr3 + static_cast<int64_t>(x1), static_cast<int64_t>(4));\n                            auto tmp2 = tmp0 + tmp1;\n                            auto tmp4 = at::vec::Vectorized<float>(tmp3);\n                            auto tmp5 = tmp2 - tmp4;\n                            auto tmp7 = static_cast<float>(768.0);\n                            auto tmp8 = tmp6 / tmp7;\n                            auto tmp9 = static_cast<float>(1e-5);\n                            auto tmp10 = float(tmp8 + tmp9);\n                            auto tmp11 = 1 / std::sqrt(tmp10);\n                            auto tmp12 = at::vec::Vectorized<float>(tmp11);\n                            auto tmp13 = tmp5 * tmp12;\n                            auto tmp15 = tmp13 * tmp14;\n                            auto tmp17 = tmp15 + tmp16;\n                            tmp17.store(out_ptr2 + static_cast<int64_t>(x1 + 768LL*x0));\n                        }\n                    }\n                }\n            }\n        }\n    }\n    inductor_cpu_integer_div_error_flag = nullptr;\n    inductor_cpu_throw_if_integer_div_error(inductor_cpu_integer_div_error);\n}",
+				"cpp_fused_gelu_view_4": "#include <torch/csrc/inductor/cpp_prefix.h>\nextern \"C\"  void  kernel(float* in_out_ptr0)\n{\n    std::atomic<int> inductor_cpu_integer_div_error{0};\n    inductor_cpu_integer_div_error_flag = &inductor_cpu_integer_div_error;\n    #pragma omp parallel num_threads(10)\n    {\n        int tid = omp_get_thread_num();\n        {\n            #pragma omp for\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(393216LL); x0+=static_cast<int64_t>(4LL))\n            {\n                {\n                    if(C10_LIKELY(x0 >= static_cast<int64_t>(0) && x0 < static_cast<int64_t>(393216LL)))\n                    {\n                        auto tmp0 = at::vec::Vectorized<float>::loadu(in_out_ptr0 + static_cast<int64_t>(x0), static_cast<int64_t>(4));\n                        auto tmp1 = static_cast<float>(0.5);\n                        auto tmp2 = at::vec::Vectorized<float>(tmp1);\n                        auto tmp3 = tmp0 * tmp2;\n                        auto tmp4 = tmp0 * tmp0;\n                        auto tmp5 = tmp4 * tmp0;\n                        auto tmp6 = static_cast<float>(0.044715);\n                        auto tmp7 = at::vec::Vectorized<float>(tmp6);\n                        auto tmp8 = tmp5 * tmp7;\n                        auto tmp9 = tmp0 + tmp8;\n                        auto tmp10 = static_cast<float>(0.7978845608028654);\n                        auto tmp11 = at::vec::Vectorized<float>(tmp10);\n                        auto tmp12 = tmp9 * tmp11;\n                        auto tmp13 = tmp12.tanh();\n                        auto tmp14 = static_cast<float>(1.0);\n                        auto tmp15 = at::vec::Vectorized<float>(tmp14);\n                        auto tmp16 = tmp13 + tmp15;\n                        auto tmp17 = tmp3 * tmp16;\n                        tmp17.store(in_out_ptr0 + static_cast<int64_t>(x0));\n                    }\n                }\n            }\n        }\n    }\n    inductor_cpu_integer_div_error_flag = nullptr;\n    inductor_cpu_throw_if_integer_div_error(inductor_cpu_integer_div_error);\n}",
+				"cpp_fused_add_view_5": "#include <torch/csrc/inductor/cpp_prefix.h>\nextern \"C\"  void  kernel(float* in_out_ptr0,\n                       const float* in_ptr0,\n                       const float* in_ptr1)\n{\n    std::atomic<int> inductor_cpu_integer_div_error{0};\n    inductor_cpu_integer_div_error_flag = &inductor_cpu_integer_div_error;\n    #pragma omp parallel num_threads(10)\n    {\n        int tid = omp_get_thread_num();\n        {\n            #pragma omp for\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(98304LL); x0+=static_cast<int64_t>(4LL))\n            {\n                {\n                    if(C10_LIKELY(x0 >= static_cast<int64_t>(0) && x0 < static_cast<int64_t>(98304LL)))\n                    {\n                        auto tmp0 = at::vec::Vectorized<float>::loadu(in_ptr0 + static_cast<int64_t>(x0), static_cast<int64_t>(4));\n                        auto tmp1 = at::vec::Vectorized<float>::loadu(in_out_ptr0 + static_cast<int64_t>(x0), static_cast<int64_t>(4));\n                        auto tmp3 = at::vec::Vectorized<float>::loadu(in_ptr1 + static_cast<int64_t>(x0), static_cast<int64_t>(4));\n                        auto tmp2 = tmp0 + tmp1;\n                        auto tmp4 = tmp2 + tmp3;\n                        tmp4.store(in_out_ptr0 + static_cast<int64_t>(x0));\n                    }\n                }\n            }\n        }\n    }\n    inductor_cpu_integer_div_error_flag = nullptr;\n    inductor_cpu_throw_if_integer_div_error(inductor_cpu_integer_div_error);\n}"
+			},
+			"call": "    def call(self, args):\n        arg0_1, arg1_1, arg2_1, arg3_1, arg4_1, arg5_1, arg6_1, arg7_1, arg8_1, arg9_1, arg10_1, arg11_1, arg12_1 = args\n        args.clear()\n        assert_size_stride_grouped((arg2_1, arg0_1, arg1_1), ((1, 128, 768), (768, ), (768, )), ((98304, 768, 1), (1, ), (1, )), 'input')\n        buf0 = empty_strided_cpu((1, 128, 1), (128, 1, 128), torch.float32)\n        buf1 = buf0; del buf0  # reuse\n        buf2 = empty_strided_cpu((1, 128, 1), (128, 1, 128), torch.float32)\n        buf3 = empty_strided_cpu((1, 128, 768), (98304, 768, 1), torch.float32)\n        assert_size_stride_grouped((arg4_1, arg3_1), ((2304, ), (2304, 768)), ((1, ), (768, 1)), 'input')\n        cpp_fused_native_layer_norm_0(buf1, arg2_1, arg0_1, arg1_1, buf2, buf3)\n        del arg0_1\n        del arg1_1\n        buf4 = empty_strided_cpu((128, 2304), (2304, 1), torch.float32)\n        # Topologically Sorted Source Nodes: [layer_norm, linear], Original ATen: [aten.native_layer_norm, aten.view, aten.t, aten.addmm]\n        extern_kernels.addmm(arg4_1, reinterpret_tensor(buf3, (128, 768), (768, 1), 0), reinterpret_tensor(arg3_1, (768, 2304), (1, 768), 0), alpha=1, beta=1, out=buf4)\n        del arg3_1\n        del arg4_1\n        buf5 = empty_strided_cpu((12, 128, 128), (16384, 128, 1), torch.float32)\n        # Topologically Sorted Source Nodes: [linear, split, view, q_1, matmul, view_1, k_1, transpose_3], Original ATen: [aten.view, aten.split, aten.transpose, aten.bmm]\n        extern_kernels.bmm(reinterpret_tensor(buf4, (12, 128, 64), (64, 2304, 1), 0), reinterpret_tensor(buf4, (12, 64, 128), (64, 1, 2304), 768), out=buf5)\n        buf6 = empty_strided_cpu((1, 12, 128, 1), (1536, 128, 1, 1536), torch.float32)\n        buf7 = reinterpret_tensor(buf5, (1, 12, 128, 128), (196608, 16384, 128, 1), 0); del buf5  # reuse\n        buf8 = empty_strided_cpu((1, 12, 128, 1), (1536, 128, 1, 1536), torch.float32)\n        buf9 = buf7; del buf7  # reuse\n        cpp_fused__softmax_bitwise_not_div_masked_fill_ones_tril_view_1(buf9, buf6, buf8)\n        del buf6\n        del buf8\n        buf10 = reinterpret_tensor(buf3, (12, 128, 64), (8192, 64, 1), 0); del buf3  # reuse\n        # Topologically Sorted Source Nodes: [linear, split, att_1, matmul_1, view_2, v_1], Original ATen: [aten.view, aten.split, aten._softmax, aten.transpose, aten.bmm]\n        extern_kernels.bmm(reinterpret_tensor(buf9, (12, 128, 128), (16384, 128, 1), 0), reinterpret_tensor(buf4, (12, 128, 64), (64, 2304, 1), 1536), out=buf10)\n        del buf4\n        del buf9\n        buf11 = empty_strided_cpu((1, 128, 12, 64), (98304, 768, 64, 1), torch.float32)\n        assert_size_stride_grouped((arg6_1, arg5_1), ((768, ), (768, 768)), ((1, ), (768, 1)), 'input')\n        cpp_fused_clone_transpose_view_2(buf10, buf11)\n        buf12 = reinterpret_tensor(buf10, (128, 768), (768, 1), 0); del buf10  # reuse\n        # Topologically Sorted Source Nodes: [matmul_1, transpose_4, y, linear_1], Original ATen: [aten.view, aten.transpose, aten.clone, aten._unsafe_view, aten.t, aten.addmm]\n        extern_kernels.addmm(arg6_1, reinterpret_tensor(buf11, (128, 768), (768, 1), 0), reinterpret_tensor(arg5_1, (768, 768), (1, 768), 0), alpha=1, beta=1, out=buf12)\n        del arg5_1\n        del arg6_1\n        assert_size_stride_grouped((arg7_1, arg8_1), ((768, ), (768, )), ((1, ), (1, )), 'input')\n        buf13 = buf2; del buf2  # reuse\n        buf14 = buf13; del buf13  # reuse\n        buf15 = buf1; del buf1  # reuse\n        buf16 = reinterpret_tensor(buf11, (1, 128, 768), (98304, 768, 1), 0); del buf11  # reuse\n        assert_size_stride_grouped((arg10_1, arg9_1), ((3072, ), (3072, 768)), ((1, ), (768, 1)), 'input')\n        cpp_fused_add_native_layer_norm_view_3(buf14, arg2_1, buf12, arg7_1, arg8_1, buf15, buf16)\n        del arg7_1\n        del arg8_1\n        del buf14\n        del buf15\n        buf17 = empty_strided_cpu((128, 3072), (3072, 1), torch.float32)\n        # Topologically Sorted Source Nodes: [linear_1, x, layer_norm_1, linear_2], Original ATen: [aten.view, aten.add, aten.native_layer_norm, aten.t, aten.addmm]\n        extern_kernels.addmm(arg10_1, reinterpret_tensor(buf16, (128, 768), (768, 1), 0), reinterpret_tensor(arg9_1, (768, 3072), (1, 768), 0), alpha=1, beta=1, out=buf17)\n        del arg10_1\n        del arg9_1\n        del buf16\n        buf18 = reinterpret_tensor(buf17, (1, 128, 3072), (393216, 3072, 1), 0); del buf17  # reuse\n        assert_size_stride_grouped((arg12_1, arg11_1), ((768, ), (768, 3072)), ((1, ), (3072, 1)), 'input')\n        cpp_fused_gelu_view_4(buf18)\n        buf19 = empty_strided_cpu((128, 768), (768, 1), torch.float32)\n        # Topologically Sorted Source Nodes: [linear_2, gelu, linear_3], Original ATen: [aten.view, aten.gelu, aten.t, aten.addmm]\n        extern_kernels.addmm(arg12_1, reinterpret_tensor(buf18, (128, 3072), (3072, 1), 0), reinterpret_tensor(arg11_1, (3072, 768), (1, 3072), 0), alpha=1, beta=1, out=buf19)\n        del arg11_1\n        del arg12_1\n        del buf18\n        buf20 = reinterpret_tensor(buf12, (1, 128, 768), (98304, 768, 1), 0); del buf12  # reuse\n        cpp_fused_add_view_5(buf20, arg2_1, buf19)\n        del arg2_1\n        return (buf20, )",
+			"eagerOps": [
+				{
+					"op": "native_layer_norm",
+					"aten": "aten::native_layer_norm",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						],
+						[
+							768
+						],
+						[
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 399360,
+					"written": 394240,
+					"us": 44.9435
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							128,
+							768
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "t",
+					"aten": "aten::t",
+					"inputs": [
+						[
+							2304,
+							768
+						]
+					],
+					"output": [
+						[
+							768,
+							2304
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0,
+					"us": 1.542
+				},
+				{
+					"op": "addmm",
+					"aten": "aten::addmm",
+					"inputs": [
+						[
+							2304
+						],
+						[
+							128,
+							768
+						],
+						[
+							768,
+							2304
+						]
+					],
+					"output": [
+						[
+							128,
+							2304
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 7480320,
+					"written": 1179648,
+					"us": 365.984
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							128,
+							2304
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							2304
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "split.Tensor",
+					"aten": "aten::split",
+					"inputs": [
+						[
+							1,
+							128,
+							2304
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0,
+					"us": 8.2705
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "transpose.int",
+					"aten": "aten::transpose",
+					"inputs": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "transpose.int",
+					"aten": "aten::transpose",
+					"inputs": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "transpose.int",
+					"aten": "aten::transpose",
+					"inputs": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "transpose.int",
+					"aten": "aten::transpose",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							64,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "expand",
+					"aten": "aten::expand",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "expand",
+					"aten": "aten::expand",
+					"inputs": [
+						[
+							1,
+							12,
+							64,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							64,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							12,
+							64,
+							128
+						]
+					],
+					"output": [
+						[
+							12,
+							64,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "bmm",
+					"aten": "aten::bmm",
+					"inputs": [
+						[
+							12,
+							128,
+							64
+						],
+						[
+							12,
+							64,
+							128
+						]
+					],
+					"output": [
+						[
+							12,
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 786432,
+					"written": 786432,
+					"us": 118.217
+				},
+				{
+					"op": "_unsafe_view",
+					"aten": "aten::_unsafe_view",
+					"inputs": [
+						[
+							12,
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0,
+					"us": 0.6875
+				},
+				{
+					"op": "div.Tensor",
+					"aten": "aten::div",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 786432,
+					"written": 786432,
+					"us": 47.7555
+				},
+				{
+					"op": "ones",
+					"aten": "aten::ones",
+					"inputs": [],
+					"output": [
+						[
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 0,
+					"written": 16384,
+					"us": 3.9255
+				},
+				{
+					"op": "tril",
+					"aten": "aten::tril",
+					"inputs": [
+						[
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 16384,
+					"written": 16384,
+					"us": 36.464
+				},
+				{
+					"op": "bitwise_not",
+					"aten": "aten::bitwise_not",
+					"inputs": [
+						[
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 16384,
+					"written": 16384,
+					"us": 3.417
+				},
+				{
+					"op": "masked_fill.Scalar",
+					"aten": "aten::masked_fill",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							128
+						],
+						[
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 802816,
+					"written": 786432,
+					"us": 89.8865
+				},
+				{
+					"op": "_softmax",
+					"aten": "aten::_softmax",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 786432,
+					"written": 786432,
+					"us": 79.67
+				},
+				{
+					"op": "expand",
+					"aten": "aten::expand",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							12,
+							128,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "expand",
+					"aten": "aten::expand",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "bmm",
+					"aten": "aten::bmm",
+					"inputs": [
+						[
+							12,
+							128,
+							128
+						],
+						[
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							12,
+							128,
+							64
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 1179648,
+					"written": 393216,
+					"us": 71.182
+				},
+				{
+					"op": "_unsafe_view",
+					"aten": "aten::_unsafe_view",
+					"inputs": [
+						[
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0,
+					"us": 0.333
+				},
+				{
+					"op": "transpose.int",
+					"aten": "aten::transpose",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "clone",
+					"aten": "aten::clone",
+					"inputs": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 393216,
+					"written": 393216
+				},
+				{
+					"op": "_unsafe_view",
+					"aten": "aten::_unsafe_view",
+					"inputs": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0,
+					"us": 0.292
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							128,
+							768
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "t",
+					"aten": "aten::t",
+					"inputs": [
+						[
+							768,
+							768
+						]
+					],
+					"output": [
+						[
+							768,
+							768
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0,
+					"us": 1.1125
+				},
+				{
+					"op": "addmm",
+					"aten": "aten::addmm",
+					"inputs": [
+						[
+							768
+						],
+						[
+							128,
+							768
+						],
+						[
+							768,
+							768
+						]
+					],
+					"output": [
+						[
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 2755584,
+					"written": 393216,
+					"us": 251.255
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "add.Tensor",
+					"aten": "aten::add",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						],
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 786432,
+					"written": 393216,
+					"us": 33.0175
+				},
+				{
+					"op": "native_layer_norm",
+					"aten": "aten::native_layer_norm",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						],
+						[
+							768
+						],
+						[
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 399360,
+					"written": 394240,
+					"us": 39.276
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							128,
+							768
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "t",
+					"aten": "aten::t",
+					"inputs": [
+						[
+							3072,
+							768
+						]
+					],
+					"output": [
+						[
+							768,
+							3072
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0,
+					"us": 1.187
+				},
+				{
+					"op": "addmm",
+					"aten": "aten::addmm",
+					"inputs": [
+						[
+							3072
+						],
+						[
+							128,
+							768
+						],
+						[
+							768,
+							3072
+						]
+					],
+					"output": [
+						[
+							128,
+							3072
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 9842688,
+					"written": 1572864,
+					"us": 446.007
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							128,
+							3072
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							3072
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "gelu",
+					"aten": "aten::gelu",
+					"inputs": [
+						[
+							1,
+							128,
+							3072
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							3072
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 1572864,
+					"written": 1572864,
+					"us": 273.201
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							128,
+							3072
+						]
+					],
+					"output": [
+						[
+							128,
+							3072
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "t",
+					"aten": "aten::t",
+					"inputs": [
+						[
+							768,
+							3072
+						]
+					],
+					"output": [
+						[
+							3072,
+							768
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0,
+					"us": 1.25
+				},
+				{
+					"op": "addmm",
+					"aten": "aten::addmm",
+					"inputs": [
+						[
+							768
+						],
+						[
+							128,
+							3072
+						],
+						[
+							3072,
+							768
+						]
+					],
+					"output": [
+						[
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 11013120,
+					"written": 393216,
+					"us": 548.194
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "add.Tensor",
+					"aten": "aten::add",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						],
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 786432,
+					"written": 393216,
+					"us": 39.309
+				}
+			],
+			"sweep": [
+				{
+					"tokens": 16,
+					"eager": {
+						"median": 1.97299,
+						"min": 1.77069,
+						"max": 2.47799,
+						"rounds": 21
+					},
+					"compiled": {
+						"median": 2.34129,
+						"min": 2.09581,
+						"max": 3.23824,
+						"rounds": 21
+					},
+					"generated": 6,
+					"library": 6,
+					"read": 29408384,
+					"written": 911104
+				},
+				{
+					"tokens": 64,
+					"eager": {
+						"median": 1.86306,
+						"min": 1.62868,
+						"max": 2.16812,
+						"rounds": 21
+					},
+					"compiled": {
+						"median": 1.93629,
+						"min": 1.78243,
+						"max": 2.1699,
+						"rounds": 21
+					},
+					"generated": 6,
+					"library": 6,
+					"read": 32873984,
+					"written": 3939328
+				},
+				{
+					"tokens": 128,
+					"eager": {
+						"median": 2.68245,
+						"min": 2.441,
+						"max": 3.13708,
+						"rounds": 21
+					},
+					"compiled": {
+						"median": 2.62647,
+						"min": 2.42163,
+						"max": 3.10836,
+						"rounds": 21
+					},
+					"generated": 6,
+					"library": 6,
+					"read": 38182912,
+					"written": 8665088
+				},
+				{
+					"tokens": 256,
+					"eager": {
+						"median": 6.29912,
+						"min": 4.9986,
+						"max": 12.5639,
+						"rounds": 21
+					},
+					"compiled": {
+						"median": 5.40058,
+						"min": 4.37681,
+						"max": 7.44716,
+						"rounds": 21
+					},
+					"generated": 6,
+					"library": 6,
+					"read": 51160064,
+					"written": 20475904
+				},
+				{
+					"tokens": 512,
+					"eager": {
+						"median": 11.7968,
+						"min": 9.60994,
+						"max": 19.6685,
+						"rounds": 21
+					},
+					"compiled": {
+						"median": 10.446,
+						"min": 8.30342,
+						"max": 18.7783,
+						"rounds": 21
+					},
+					"generated": 6,
+					"library": 6,
+					"read": 86551552,
+					"written": 53534720
+				}
+			]
+		},
+		"mps": {
+			"device": "mps",
+			"backend": "Inductor Metal (MPS)",
+			"tokens": 128,
+			"maxAbsDiffVsEager": 1.52588e-5,
+			"atenGraph": [
+				{
+					"name": "arg0_1",
+					"op": "placeholder",
+					"target": "arg0_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "arg1_1",
+					"op": "placeholder",
+					"target": "arg1_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "arg2_1",
+					"op": "placeholder",
+					"target": "arg2_1",
+					"args": [],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "arg3_1",
+					"op": "placeholder",
+					"target": "arg3_1",
+					"args": [],
+					"shape": [
+						2304,
+						768
+					],
+					"bytes": 7077888,
+					"view": false
+				},
+				{
+					"name": "arg4_1",
+					"op": "placeholder",
+					"target": "arg4_1",
+					"args": [],
+					"shape": [
+						2304
+					],
+					"bytes": 9216,
+					"view": false
+				},
+				{
+					"name": "arg5_1",
+					"op": "placeholder",
+					"target": "arg5_1",
+					"args": [],
+					"shape": [
+						768,
+						768
+					],
+					"bytes": 2359296,
+					"view": false
+				},
+				{
+					"name": "arg6_1",
+					"op": "placeholder",
+					"target": "arg6_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "arg7_1",
+					"op": "placeholder",
+					"target": "arg7_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "arg8_1",
+					"op": "placeholder",
+					"target": "arg8_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "arg9_1",
+					"op": "placeholder",
+					"target": "arg9_1",
+					"args": [],
+					"shape": [
+						3072,
+						768
+					],
+					"bytes": 9437184,
+					"view": false
+				},
+				{
+					"name": "arg10_1",
+					"op": "placeholder",
+					"target": "arg10_1",
+					"args": [],
+					"shape": [
+						3072
+					],
+					"bytes": 12288,
+					"view": false
+				},
+				{
+					"name": "arg11_1",
+					"op": "placeholder",
+					"target": "arg11_1",
+					"args": [],
+					"shape": [
+						768,
+						3072
+					],
+					"bytes": 9437184,
+					"view": false
+				},
+				{
+					"name": "arg12_1",
+					"op": "placeholder",
+					"target": "arg12_1",
+					"args": [],
+					"shape": [
+						768
+					],
+					"bytes": 3072,
+					"view": false
+				},
+				{
+					"name": "var_mean",
+					"op": "call_function",
+					"target": "var_mean.correction",
+					"args": [
+						"arg2_1"
+					],
+					"shape": null,
+					"bytes": 1024,
+					"view": false
+				},
+				{
+					"name": "getitem",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"var_mean"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": true
+				},
+				{
+					"name": "getitem_1",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"var_mean"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": true
+				},
+				{
+					"name": "sub",
+					"op": "call_function",
+					"target": "sub.Tensor",
+					"args": [
+						"arg2_1",
+						"getitem_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "add",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"getitem"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": false
+				},
+				{
+					"name": "rsqrt",
+					"op": "call_function",
+					"target": "rsqrt.default",
+					"args": [
+						"add"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": false
+				},
+				{
+					"name": "mul",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"sub",
+						"rsqrt"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "mul_1",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"mul",
+						"arg0_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "add_1",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"mul_1",
+						"arg1_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"add_1"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"arg3_1"
+					],
+					"shape": [
+						768,
+						2304
+					],
+					"bytes": 7077888,
+					"view": true
+				},
+				{
+					"name": "addmm",
+					"op": "call_function",
+					"target": "addmm.default",
+					"args": [
+						"arg4_1",
+						"view",
+						"permute"
+					],
+					"shape": [
+						128,
+						2304
+					],
+					"bytes": 1179648,
+					"view": false
+				},
+				{
+					"name": "view_1",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"addmm"
+					],
+					"shape": [
+						1,
+						128,
+						2304
+					],
+					"bytes": 1179648,
+					"view": true
+				},
+				{
+					"name": "split",
+					"op": "call_function",
+					"target": "split.Tensor",
+					"args": [
+						"view_1"
+					],
+					"shape": null,
+					"bytes": 1179648,
+					"view": true
+				},
+				{
+					"name": "getitem_2",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"split"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "getitem_3",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"split"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "getitem_4",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"split"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "iota",
+					"op": "call_function",
+					"target": "prims.iota.default",
+					"args": [],
+					"shape": [
+						128
+					],
+					"bytes": 1024,
+					"view": false
+				},
+				{
+					"name": "unsqueeze",
+					"op": "call_function",
+					"target": "unsqueeze.default",
+					"args": [
+						"iota"
+					],
+					"shape": [
+						1,
+						128
+					],
+					"bytes": 1024,
+					"view": true
+				},
+				{
+					"name": "iota_1",
+					"op": "call_function",
+					"target": "prims.iota.default",
+					"args": [],
+					"shape": [
+						128
+					],
+					"bytes": 1024,
+					"view": false
+				},
+				{
+					"name": "unsqueeze_1",
+					"op": "call_function",
+					"target": "unsqueeze.default",
+					"args": [
+						"iota_1"
+					],
+					"shape": [
+						128,
+						1
+					],
+					"bytes": 1024,
+					"view": true
+				},
+				{
+					"name": "sub_1",
+					"op": "call_function",
+					"target": "sub.Tensor",
+					"args": [
+						"unsqueeze",
+						"unsqueeze_1"
+					],
+					"shape": [
+						128,
+						128
+					],
+					"bytes": 131072,
+					"view": false
+				},
+				{
+					"name": "le",
+					"op": "call_function",
+					"target": "le.Scalar",
+					"args": [
+						"sub_1"
+					],
+					"shape": [
+						128,
+						128
+					],
+					"bytes": 16384,
+					"view": false
+				},
+				{
+					"name": "full_default",
+					"op": "call_function",
+					"target": "full.default",
+					"args": [],
+					"shape": [
+						128,
+						128
+					],
+					"bytes": 16384,
+					"view": false
+				},
+				{
+					"name": "logical_and",
+					"op": "call_function",
+					"target": "logical_and.default",
+					"args": [
+						"le",
+						"full_default"
+					],
+					"shape": [
+						128,
+						128
+					],
+					"bytes": 16384,
+					"view": false
+				},
+				{
+					"name": "bitwise_not",
+					"op": "call_function",
+					"target": "bitwise_not.default",
+					"args": [
+						"logical_and"
+					],
+					"shape": [
+						128,
+						128
+					],
+					"bytes": 16384,
+					"view": false
+				},
+				{
+					"name": "full_default_1",
+					"op": "call_function",
+					"target": "full.default",
+					"args": [],
+					"shape": [],
+					"bytes": 4,
+					"view": false
+				},
+				{
+					"name": "view_2",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"getitem_2"
+					],
+					"shape": [
+						1,
+						128,
+						12,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_1",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"view_2"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "expand",
+					"op": "call_function",
+					"target": "expand.default",
+					"args": [
+						"permute_1"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "view_5",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"expand"
+					],
+					"shape": [
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "view_3",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"getitem_3"
+					],
+					"shape": [
+						1,
+						128,
+						12,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_2",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"view_3"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_4",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"permute_2"
+					],
+					"shape": [
+						1,
+						12,
+						64,
+						128
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "expand_1",
+					"op": "call_function",
+					"target": "expand.default",
+					"args": [
+						"permute_4"
+					],
+					"shape": [
+						1,
+						12,
+						64,
+						128
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "view_6",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"expand_1"
+					],
+					"shape": [
+						12,
+						64,
+						128
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "bmm",
+					"op": "call_function",
+					"target": "bmm.default",
+					"args": [
+						"view_5",
+						"view_6"
+					],
+					"shape": [
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "view_7",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"bmm"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": true
+				},
+				{
+					"name": "div",
+					"op": "call_function",
+					"target": "div.Tensor",
+					"args": [
+						"view_7"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "where",
+					"op": "call_function",
+					"target": "where.self",
+					"args": [
+						"bitwise_not",
+						"full_default_1",
+						"div"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "amax",
+					"op": "call_function",
+					"target": "amax.default",
+					"args": [
+						"where"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						1
+					],
+					"bytes": 6144,
+					"view": false
+				},
+				{
+					"name": "sub_2",
+					"op": "call_function",
+					"target": "sub.Tensor",
+					"args": [
+						"where",
+						"amax"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "exp",
+					"op": "call_function",
+					"target": "exp.default",
+					"args": [
+						"sub_2"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "sum_1",
+					"op": "call_function",
+					"target": "sum.dim_IntList",
+					"args": [
+						"exp"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						1
+					],
+					"bytes": 6144,
+					"view": false
+				},
+				{
+					"name": "div_1",
+					"op": "call_function",
+					"target": "div.Tensor",
+					"args": [
+						"exp",
+						"sum_1"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": false
+				},
+				{
+					"name": "expand_2",
+					"op": "call_function",
+					"target": "expand.default",
+					"args": [
+						"div_1"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": true
+				},
+				{
+					"name": "view_8",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"expand_2"
+					],
+					"shape": [
+						12,
+						128,
+						128
+					],
+					"bytes": 786432,
+					"view": true
+				},
+				{
+					"name": "view_4",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"getitem_4"
+					],
+					"shape": [
+						1,
+						128,
+						12,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_3",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"view_4"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "expand_3",
+					"op": "call_function",
+					"target": "expand.default",
+					"args": [
+						"permute_3"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "view_9",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"expand_3"
+					],
+					"shape": [
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "bmm_1",
+					"op": "call_function",
+					"target": "bmm.default",
+					"args": [
+						"view_8",
+						"view_9"
+					],
+					"shape": [
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view_10",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"bmm_1"
+					],
+					"shape": [
+						1,
+						12,
+						128,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_5",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"view_10"
+					],
+					"shape": [
+						1,
+						128,
+						12,
+						64
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "clone",
+					"op": "call_function",
+					"target": "clone.default",
+					"args": [
+						"permute_5"
+					],
+					"shape": [
+						1,
+						128,
+						12,
+						64
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view_11",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"clone"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "view_12",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"view_11"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_6",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"arg5_1"
+					],
+					"shape": [
+						768,
+						768
+					],
+					"bytes": 2359296,
+					"view": true
+				},
+				{
+					"name": "mm_default_2",
+					"op": "call_function",
+					"target": "mm.default",
+					"args": [
+						"view_12",
+						"permute_6"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "add_tensor_2",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"arg6_1",
+						"mm_default_2"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view_13",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"add_tensor_2"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "add_2",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"arg2_1",
+						"view_13"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "var_mean_1",
+					"op": "call_function",
+					"target": "var_mean.correction",
+					"args": [
+						"add_2"
+					],
+					"shape": null,
+					"bytes": 1024,
+					"view": false
+				},
+				{
+					"name": "getitem_5",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"var_mean_1"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": true
+				},
+				{
+					"name": "getitem_6",
+					"op": "call_function",
+					"target": "getitem",
+					"args": [
+						"var_mean_1"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": true
+				},
+				{
+					"name": "sub_3",
+					"op": "call_function",
+					"target": "sub.Tensor",
+					"args": [
+						"add_2",
+						"getitem_6"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "add_3",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"getitem_5"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": false
+				},
+				{
+					"name": "rsqrt_1",
+					"op": "call_function",
+					"target": "rsqrt.default",
+					"args": [
+						"add_3"
+					],
+					"shape": [
+						1,
+						128,
+						1
+					],
+					"bytes": 512,
+					"view": false
+				},
+				{
+					"name": "mul_2",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"sub_3",
+						"rsqrt_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "mul_3",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"mul_2",
+						"arg7_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "add_4",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"mul_3",
+						"arg8_1"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view_14",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"add_4"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "permute_7",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"arg9_1"
+					],
+					"shape": [
+						768,
+						3072
+					],
+					"bytes": 9437184,
+					"view": true
+				},
+				{
+					"name": "mm_default_1",
+					"op": "call_function",
+					"target": "mm.default",
+					"args": [
+						"view_14",
+						"permute_7"
+					],
+					"shape": [
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "add_tensor_1",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"arg10_1",
+						"mm_default_1"
+					],
+					"shape": [
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "view_15",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"add_tensor_1"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": true
+				},
+				{
+					"name": "mul_8",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"view_15"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "mul_4",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"view_15"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "mul_5",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"mul_4",
+						"view_15"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "mul_6",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"mul_5"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "add_5",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"view_15",
+						"mul_6"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "mul_7",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"add_5"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "tanh",
+					"op": "call_function",
+					"target": "tanh.default",
+					"args": [
+						"mul_7"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "add_6",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"tanh"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "mul_9",
+					"op": "call_function",
+					"target": "mul.Tensor",
+					"args": [
+						"mul_8",
+						"add_6"
+					],
+					"shape": [
+						1,
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": false
+				},
+				{
+					"name": "view_16",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"mul_9"
+					],
+					"shape": [
+						128,
+						3072
+					],
+					"bytes": 1572864,
+					"view": true
+				},
+				{
+					"name": "permute_8",
+					"op": "call_function",
+					"target": "permute.default",
+					"args": [
+						"arg11_1"
+					],
+					"shape": [
+						3072,
+						768
+					],
+					"bytes": 9437184,
+					"view": true
+				},
+				{
+					"name": "mm_default",
+					"op": "call_function",
+					"target": "mm.default",
+					"args": [
+						"view_16",
+						"permute_8"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "add_tensor",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"arg12_1",
+						"mm_default"
+					],
+					"shape": [
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				},
+				{
+					"name": "view_17",
+					"op": "call_function",
+					"target": "reshape.default",
+					"args": [
+						"add_tensor"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": true
+				},
+				{
+					"name": "add_7",
+					"op": "call_function",
+					"target": "add.Tensor",
+					"args": [
+						"add_2",
+						"view_17"
+					],
+					"shape": [
+						1,
+						128,
+						768
+					],
+					"bytes": 393216,
+					"view": false
+				}
+			],
+			"preFusion": [
+				{
+					"name": "op0",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op0"
+					],
+					"origins": [
+						"var_mean"
+					],
+					"reads": {
+						"arg2_1": 1572864
+					},
+					"writes": {
+						"buf0": 2048
+					}
+				},
+				{
+					"name": "op1",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op1"
+					],
+					"origins": [
+						"var_mean"
+					],
+					"reads": {
+						"arg2_1": 1572864
+					},
+					"writes": {
+						"buf1": 2048
+					}
+				},
+				{
+					"name": "op3",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op3"
+					],
+					"origins": [
+						"add",
+						"add_1",
+						"mul",
+						"mul_1",
+						"rsqrt",
+						"sub",
+						"var_mean"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"buf0": 2048,
+						"buf1": 2048,
+						"arg0_1": 3072,
+						"arg1_1": 3072
+					},
+					"writes": {
+						"buf3": 1572864
+					}
+				},
+				{
+					"name": "op4",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op4"
+					],
+					"origins": [
+						"add",
+						"add_1",
+						"addmm",
+						"mul",
+						"mul_1",
+						"permute",
+						"rsqrt",
+						"sub",
+						"var_mean",
+						"view"
+					],
+					"reads": {
+						"arg4_1": 9216,
+						"buf3": 1572864,
+						"arg3_1": 7077888
+					},
+					"writes": {
+						"buf4": 4718592
+					}
+				},
+				{
+					"name": "op5",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op5"
+					],
+					"origins": [
+						"bmm",
+						"permute_1",
+						"permute_2",
+						"permute_4",
+						"split",
+						"view_1",
+						"view_2",
+						"view_3",
+						"view_5",
+						"view_6"
+					],
+					"reads": {
+						"buf4": 4718592
+					},
+					"writes": {
+						"buf5": 12582912
+					}
+				},
+				{
+					"name": "op6",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op6"
+					],
+					"origins": [
+						"amax",
+						"bitwise_not",
+						"div",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"sub_1",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_7",
+						"where"
+					],
+					"reads": {
+						"buf5": 12582912
+					},
+					"writes": {
+						"buf6": 24576
+					}
+				},
+				{
+					"name": "op7",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op7"
+					],
+					"origins": [
+						"bitwise_not",
+						"div",
+						"exp",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"sub_1",
+						"sub_2",
+						"sum_1",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_7",
+						"where"
+					],
+					"reads": {
+						"buf5": 12582912,
+						"buf6": 24576
+					},
+					"writes": {
+						"buf7": 24576
+					}
+				},
+				{
+					"name": "op8",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op8"
+					],
+					"origins": [
+						"bitwise_not",
+						"div",
+						"div_1",
+						"exp",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"sub_1",
+						"sub_2",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_7",
+						"where"
+					],
+					"reads": {
+						"buf5": 12582912,
+						"buf6": 24576,
+						"buf7": 24576
+					},
+					"writes": {
+						"buf8": 12582912
+					}
+				},
+				{
+					"name": "op9",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op9"
+					],
+					"origins": [
+						"bitwise_not",
+						"bmm_1",
+						"div",
+						"div_1",
+						"exp",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"permute_3",
+						"split",
+						"sub_1",
+						"sub_2",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_1",
+						"view_4",
+						"view_7",
+						"view_8",
+						"view_9",
+						"where"
+					],
+					"reads": {
+						"buf8": 12582912,
+						"buf4": 4718592
+					},
+					"writes": {
+						"buf9": 1572864
+					}
+				},
+				{
+					"name": "op10",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op10"
+					],
+					"origins": [
+						"clone",
+						"permute_5",
+						"view_10"
+					],
+					"reads": {
+						"buf9": 1572864
+					},
+					"writes": {
+						"buf10": 1572864
+					}
+				},
+				{
+					"name": "op11",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op11"
+					],
+					"origins": [
+						"clone",
+						"mm_default_2",
+						"permute_5",
+						"permute_6",
+						"view_10",
+						"view_11",
+						"view_12"
+					],
+					"reads": {
+						"buf10": 1572864,
+						"arg5_1": 2359296
+					},
+					"writes": {
+						"buf11": 1572864
+					}
+				},
+				{
+					"name": "op12",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op12"
+					],
+					"origins": [
+						"add_2",
+						"add_tensor_2",
+						"var_mean_1",
+						"view_13"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"arg6_1": 3072,
+						"buf11": 1572864
+					},
+					"writes": {
+						"buf12": 2048
+					}
+				},
+				{
+					"name": "op13",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op13"
+					],
+					"origins": [
+						"add_2",
+						"add_tensor_2",
+						"var_mean_1",
+						"view_13"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"arg6_1": 3072,
+						"buf11": 1572864
+					},
+					"writes": {
+						"buf13": 2048
+					}
+				},
+				{
+					"name": "op15",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op15"
+					],
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"add_tensor_2",
+						"mul_2",
+						"mul_3",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"arg6_1": 3072,
+						"buf11": 1572864,
+						"buf12": 2048,
+						"buf13": 2048,
+						"arg7_1": 3072,
+						"arg8_1": 3072
+					},
+					"writes": {
+						"buf15": 1572864
+					}
+				},
+				{
+					"name": "op16",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op16"
+					],
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"add_tensor_2",
+						"mm_default_1",
+						"mul_2",
+						"mul_3",
+						"permute_7",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13",
+						"view_14"
+					],
+					"reads": {
+						"buf15": 1572864,
+						"arg9_1": 9437184
+					},
+					"writes": {
+						"buf16": 6291456
+					}
+				},
+				{
+					"name": "op17",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op17"
+					],
+					"origins": [
+						"add_5",
+						"add_6",
+						"add_tensor_1",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"tanh",
+						"view_15"
+					],
+					"reads": {
+						"arg10_1": 12288,
+						"buf16": 6291456
+					},
+					"writes": {
+						"buf17": 6291456
+					}
+				},
+				{
+					"name": "op18",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op18"
+					],
+					"origins": [
+						"add_5",
+						"add_6",
+						"add_tensor_1",
+						"mm_default",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"permute_8",
+						"tanh",
+						"view_15",
+						"view_16"
+					],
+					"reads": {
+						"buf17": 6291456,
+						"arg11_1": 9437184
+					},
+					"writes": {
+						"buf18": 1572864
+					}
+				},
+				{
+					"name": "op19",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op19"
+					],
+					"origins": [
+						"add_2",
+						"add_7",
+						"add_tensor",
+						"add_tensor_2",
+						"view_13",
+						"view_17"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"arg6_1": 3072,
+						"buf11": 1572864,
+						"arg12_1": 3072,
+						"buf18": 1572864
+					},
+					"writes": {
+						"buf19": 1572864
+					}
+				}
+			],
+			"postFusion": [
+				{
+					"name": "op0_op1_op3",
+					"kind": "FusedSchedulerNode",
+					"parts": [
+						"op0",
+						"op1",
+						"op3"
+					],
+					"origins": [
+						"add",
+						"add_1",
+						"mul",
+						"mul_1",
+						"rsqrt",
+						"sub",
+						"var_mean"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"arg0_1": 3072,
+						"arg1_1": 3072
+					},
+					"writes": {
+						"buf3": 1572864
+					}
+				},
+				{
+					"name": "op4",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op4"
+					],
+					"origins": [
+						"add",
+						"add_1",
+						"addmm",
+						"mul",
+						"mul_1",
+						"permute",
+						"rsqrt",
+						"sub",
+						"var_mean",
+						"view"
+					],
+					"reads": {
+						"arg4_1": 9216,
+						"buf3": 1572864,
+						"arg3_1": 7077888
+					},
+					"writes": {
+						"buf4": 4718592
+					}
+				},
+				{
+					"name": "op5",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op5"
+					],
+					"origins": [
+						"bmm",
+						"permute_1",
+						"permute_2",
+						"permute_4",
+						"split",
+						"view_1",
+						"view_2",
+						"view_3",
+						"view_5",
+						"view_6"
+					],
+					"reads": {
+						"buf4": 4718592
+					},
+					"writes": {
+						"buf5": 12582912
+					}
+				},
+				{
+					"name": "op6_op7_op8",
+					"kind": "FusedSchedulerNode",
+					"parts": [
+						"op6",
+						"op7",
+						"op8"
+					],
+					"origins": [
+						"amax",
+						"bitwise_not",
+						"div",
+						"div_1",
+						"exp",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"sub_1",
+						"sub_2",
+						"sum_1",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_7",
+						"where"
+					],
+					"reads": {
+						"buf5": 12582912
+					},
+					"writes": {
+						"buf8": 12582912
+					}
+				},
+				{
+					"name": "op9",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op9"
+					],
+					"origins": [
+						"bitwise_not",
+						"bmm_1",
+						"div",
+						"div_1",
+						"exp",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"permute_3",
+						"split",
+						"sub_1",
+						"sub_2",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_1",
+						"view_4",
+						"view_7",
+						"view_8",
+						"view_9",
+						"where"
+					],
+					"reads": {
+						"buf8": 12582912,
+						"buf4": 4718592
+					},
+					"writes": {
+						"buf9": 1572864
+					}
+				},
+				{
+					"name": "op10",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op10"
+					],
+					"origins": [
+						"clone",
+						"permute_5",
+						"view_10"
+					],
+					"reads": {
+						"buf9": 1572864
+					},
+					"writes": {
+						"buf10": 1572864
+					}
+				},
+				{
+					"name": "op11",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op11"
+					],
+					"origins": [
+						"clone",
+						"mm_default_2",
+						"permute_5",
+						"permute_6",
+						"view_10",
+						"view_11",
+						"view_12"
+					],
+					"reads": {
+						"buf10": 1572864,
+						"arg5_1": 2359296
+					},
+					"writes": {
+						"buf11": 1572864
+					}
+				},
+				{
+					"name": "op12_op13_op15",
+					"kind": "FusedSchedulerNode",
+					"parts": [
+						"op12",
+						"op13",
+						"op15"
+					],
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"add_tensor_2",
+						"mul_2",
+						"mul_3",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"arg6_1": 3072,
+						"buf11": 1572864,
+						"arg7_1": 3072,
+						"arg8_1": 3072
+					},
+					"writes": {
+						"buf15": 1572864
+					}
+				},
+				{
+					"name": "op16",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op16"
+					],
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"add_tensor_2",
+						"mm_default_1",
+						"mul_2",
+						"mul_3",
+						"permute_7",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13",
+						"view_14"
+					],
+					"reads": {
+						"buf15": 1572864,
+						"arg9_1": 9437184
+					},
+					"writes": {
+						"buf16": 6291456
+					}
+				},
+				{
+					"name": "op17",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op17"
+					],
+					"origins": [
+						"add_5",
+						"add_6",
+						"add_tensor_1",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"tanh",
+						"view_15"
+					],
+					"reads": {
+						"arg10_1": 12288,
+						"buf16": 6291456
+					},
+					"writes": {
+						"buf17": 6291456
+					}
+				},
+				{
+					"name": "op18",
+					"kind": "ExternKernelSchedulerNode",
+					"parts": [
+						"op18"
+					],
+					"origins": [
+						"add_5",
+						"add_6",
+						"add_tensor_1",
+						"mm_default",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"permute_8",
+						"tanh",
+						"view_15",
+						"view_16"
+					],
+					"reads": {
+						"buf17": 6291456,
+						"arg11_1": 9437184
+					},
+					"writes": {
+						"buf18": 1572864
+					}
+				},
+				{
+					"name": "op19",
+					"kind": "SchedulerNode",
+					"parts": [
+						"op19"
+					],
+					"origins": [
+						"add_2",
+						"add_7",
+						"add_tensor",
+						"add_tensor_2",
+						"view_13",
+						"view_17"
+					],
+					"reads": {
+						"arg2_1": 1572864,
+						"arg6_1": 3072,
+						"buf11": 1572864,
+						"arg12_1": 3072,
+						"buf18": 1572864
+					},
+					"writes": {
+						"buf19": 1572864
+					}
+				}
+			],
+			"launches": [
+				{
+					"name": "generated_kernel_0",
+					"library": false,
+					"args": [
+						[
+							"buf3",
+							"buf3",
+							98304,
+							"w"
+						],
+						[
+							"arg2_1",
+							"arg2_1",
+							98304,
+							"r"
+						],
+						[
+							"arg0_1",
+							"arg0_1",
+							768,
+							"r"
+						],
+						[
+							"arg1_1",
+							"arg1_1",
+							768,
+							"r"
+						]
+					],
+					"read": 399360,
+					"written": 393216,
+					"node": "op0_op1_op3",
+					"origins": [
+						"add",
+						"add_1",
+						"mul",
+						"mul_1",
+						"rsqrt",
+						"sub",
+						"var_mean"
+					],
+					"inductorRead": 399360,
+					"inductorWritten": 393216
+				},
+				{
+					"name": "extern_kernels.addmm",
+					"library": true,
+					"args": [
+						[
+							"arg4_1",
+							"arg4_1",
+							2304,
+							"r"
+						],
+						[
+							"reinterpret_tensor(buf3, (128, 768), (768, 1), 0)",
+							"buf3",
+							98304,
+							"r"
+						],
+						[
+							"reinterpret_tensor(arg3_1, (768, 2304), (1, 768), 0)",
+							"arg3_1",
+							1769472,
+							"r"
+						],
+						[
+							"buf4",
+							"buf4",
+							294912,
+							"w"
+						]
+					],
+					"read": 7480320,
+					"written": 1179648,
+					"node": "op4",
+					"origins": [
+						"add",
+						"add_1",
+						"addmm",
+						"mul",
+						"mul_1",
+						"permute",
+						"rsqrt",
+						"sub",
+						"var_mean",
+						"view"
+					],
+					"inductorRead": 7480320,
+					"inductorWritten": 1179648
+				},
+				{
+					"name": "extern_kernels.bmm",
+					"library": true,
+					"args": [
+						[
+							"reinterpret_tensor(buf4, (12, 128, 64), (64, 2304, 1), 0)",
+							"buf4",
+							98304,
+							"r"
+						],
+						[
+							"reinterpret_tensor(buf4, (12, 64, 128), (64, 1, 2304), 768)",
+							"buf4",
+							98304,
+							"r"
+						],
+						[
+							"buf5",
+							"buf5",
+							196608,
+							"w"
+						]
+					],
+					"read": 786432,
+					"written": 786432,
+					"node": "op5",
+					"origins": [
+						"bmm",
+						"permute_1",
+						"permute_2",
+						"permute_4",
+						"split",
+						"view_1",
+						"view_2",
+						"view_3",
+						"view_5",
+						"view_6"
+					],
+					"inductorRead": 1179648,
+					"inductorWritten": 786432
+				},
+				{
+					"name": "generated_kernel_1",
+					"library": false,
+					"args": [
+						[
+							"buf8",
+							"buf8",
+							196608,
+							"w"
+						],
+						[
+							"buf5",
+							"buf5",
+							196608,
+							"r"
+						]
+					],
+					"read": 786432,
+					"written": 786432,
+					"node": "op6_op7_op8",
+					"origins": [
+						"amax",
+						"bitwise_not",
+						"div",
+						"div_1",
+						"exp",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"sub_1",
+						"sub_2",
+						"sum_1",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_7",
+						"where"
+					],
+					"inductorRead": 786432,
+					"inductorWritten": 786432
+				},
+				{
+					"name": "extern_kernels.bmm",
+					"library": true,
+					"args": [
+						[
+							"reinterpret_tensor(buf8, (12, 128, 128), (16384, 128, 1), 0)",
+							"buf8",
+							196608,
+							"r"
+						],
+						[
+							"reinterpret_tensor(buf4, (12, 128, 64), (64, 2304, 1), 1536)",
+							"buf4",
+							98304,
+							"r"
+						],
+						[
+							"buf9",
+							"buf9",
+							98304,
+							"w"
+						]
+					],
+					"read": 1179648,
+					"written": 393216,
+					"node": "op9",
+					"origins": [
+						"bitwise_not",
+						"bmm_1",
+						"div",
+						"div_1",
+						"exp",
+						"full_default",
+						"full_default_1",
+						"iota",
+						"iota_1",
+						"le",
+						"logical_and",
+						"permute_3",
+						"split",
+						"sub_1",
+						"sub_2",
+						"unsqueeze",
+						"unsqueeze_1",
+						"view_1",
+						"view_4",
+						"view_7",
+						"view_8",
+						"view_9",
+						"where"
+					],
+					"inductorRead": 1966080,
+					"inductorWritten": 393216
+				},
+				{
+					"name": "generated_kernel_2",
+					"library": false,
+					"args": [
+						[
+							"buf10",
+							"buf10",
+							98304,
+							"w"
+						],
+						[
+							"buf9",
+							"buf9",
+							98304,
+							"r"
+						]
+					],
+					"read": 393216,
+					"written": 393216,
+					"node": "op10",
+					"origins": [
+						"clone",
+						"permute_5",
+						"view_10"
+					],
+					"inductorRead": 393216,
+					"inductorWritten": 393216
+				},
+				{
+					"name": "extern_kernels.mm",
+					"library": true,
+					"args": [
+						[
+							"reinterpret_tensor(buf10, (128, 768), (768, 1), 0)",
+							"buf10",
+							98304,
+							"r"
+						],
+						[
+							"reinterpret_tensor(arg5_1, (768, 768), (1, 768), 0)",
+							"arg5_1",
+							589824,
+							"r"
+						],
+						[
+							"buf11",
+							"buf11",
+							98304,
+							"w"
+						]
+					],
+					"read": 2752512,
+					"written": 393216,
+					"node": "op11",
+					"origins": [
+						"clone",
+						"mm_default_2",
+						"permute_5",
+						"permute_6",
+						"view_10",
+						"view_11",
+						"view_12"
+					],
+					"inductorRead": 2752512,
+					"inductorWritten": 393216
+				},
+				{
+					"name": "generated_kernel_3",
+					"library": false,
+					"args": [
+						[
+							"buf15",
+							"buf15",
+							98304,
+							"w"
+						],
+						[
+							"arg2_1",
+							"arg2_1",
+							98304,
+							"r"
+						],
+						[
+							"arg6_1",
+							"arg6_1",
+							768,
+							"r"
+						],
+						[
+							"buf11",
+							"buf11",
+							98304,
+							"r"
+						],
+						[
+							"arg7_1",
+							"arg7_1",
+							768,
+							"r"
+						],
+						[
+							"arg8_1",
+							"arg8_1",
+							768,
+							"r"
+						]
+					],
+					"read": 795648,
+					"written": 393216,
+					"node": "op12_op13_op15",
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"add_tensor_2",
+						"mul_2",
+						"mul_3",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13"
+					],
+					"inductorRead": 795648,
+					"inductorWritten": 393216
+				},
+				{
+					"name": "extern_kernels.mm",
+					"library": true,
+					"args": [
+						[
+							"reinterpret_tensor(buf15, (128, 768), (768, 1), 0)",
+							"buf15",
+							98304,
+							"r"
+						],
+						[
+							"reinterpret_tensor(arg9_1, (768, 3072), (1, 768), 0)",
+							"arg9_1",
+							2359296,
+							"r"
+						],
+						[
+							"buf16",
+							"buf16",
+							393216,
+							"w"
+						]
+					],
+					"read": 9830400,
+					"written": 1572864,
+					"node": "op16",
+					"origins": [
+						"add_2",
+						"add_3",
+						"add_4",
+						"add_tensor_2",
+						"mm_default_1",
+						"mul_2",
+						"mul_3",
+						"permute_7",
+						"rsqrt_1",
+						"sub_3",
+						"var_mean_1",
+						"view_13",
+						"view_14"
+					],
+					"inductorRead": 9830400,
+					"inductorWritten": 1572864
+				},
+				{
+					"name": "generated_kernel_4",
+					"library": false,
+					"args": [
+						[
+							"buf17",
+							"buf17",
+							393216,
+							"w"
+						],
+						[
+							"arg10_1",
+							"arg10_1",
+							3072,
+							"r"
+						],
+						[
+							"buf16",
+							"buf16",
+							393216,
+							"r"
+						]
+					],
+					"read": 1585152,
+					"written": 1572864,
+					"node": "op17",
+					"origins": [
+						"add_5",
+						"add_6",
+						"add_tensor_1",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"tanh",
+						"view_15"
+					],
+					"inductorRead": 1585152,
+					"inductorWritten": 1572864
+				},
+				{
+					"name": "extern_kernels.mm",
+					"library": true,
+					"args": [
+						[
+							"reinterpret_tensor(buf17, (128, 3072), (3072, 1), 0)",
+							"buf17",
+							393216,
+							"r"
+						],
+						[
+							"reinterpret_tensor(arg11_1, (3072, 768), (1, 3072), 0)",
+							"arg11_1",
+							2359296,
+							"r"
+						],
+						[
+							"buf18",
+							"buf18",
+							98304,
+							"w"
+						]
+					],
+					"read": 11010048,
+					"written": 393216,
+					"node": "op18",
+					"origins": [
+						"add_5",
+						"add_6",
+						"add_tensor_1",
+						"mm_default",
+						"mul_4",
+						"mul_5",
+						"mul_6",
+						"mul_7",
+						"mul_8",
+						"mul_9",
+						"permute_8",
+						"tanh",
+						"view_15",
+						"view_16"
+					],
+					"inductorRead": 11010048,
+					"inductorWritten": 393216
+				},
+				{
+					"name": "generated_kernel_5",
+					"library": false,
+					"args": [
+						[
+							"buf19",
+							"buf19",
+							98304,
+							"w"
+						],
+						[
+							"arg2_1",
+							"arg2_1",
+							98304,
+							"r"
+						],
+						[
+							"arg6_1",
+							"arg6_1",
+							768,
+							"r"
+						],
+						[
+							"buf11",
+							"buf11",
+							98304,
+							"r"
+						],
+						[
+							"arg12_1",
+							"arg12_1",
+							768,
+							"r"
+						],
+						[
+							"buf18",
+							"buf18",
+							98304,
+							"r"
+						]
+					],
+					"read": 1185792,
+					"written": 393216,
+					"node": "op19",
+					"origins": [
+						"add_2",
+						"add_7",
+						"add_tensor",
+						"add_tensor_2",
+						"view_13",
+						"view_17"
+					],
+					"inductorRead": 1185792,
+					"inductorWritten": 393216
+				}
+			],
+			"generated": 6,
+			"library": 6,
+			"sources": {
+				"generated_kernel_0": "[[max_total_threads_per_threadgroup(768)]]\n    kernel void generated_kernel_0(\n        device float* out_ptr2,\n        constant float* in_ptr0,\n        constant float* in_ptr1,\n        constant float* in_ptr2,\n        uint2 thread_pos [[thread_position_in_grid]],\n        uint2 group_pos [[thread_position_in_threadgroup]]\n    ) {\n        auto xindex = thread_pos.x;\n        auto r0_index = thread_pos.y;\n        int r0_1 = r0_index;\n        int x0 = xindex;\n        threadgroup float3 tmp_acc_0[768];\n        auto tmp0 = in_ptr0[r0_1 + 768*x0];\n        tmp_acc_0[r0_index * 1] = float3(tmp0, 0.0, 1.0);\n        auto tmp1 = c10::metal::threadgroup_welford_combine(tmp_acc_0, r0_index * 1, 768);\n        auto tmp9 = in_ptr1[r0_1];\n        auto tmp11 = in_ptr2[r0_1];\n        auto tmp2 = tmp0 - tmp1.x;\n        auto tmp3 = 768.0;\n        auto tmp4 = tmp1.y / tmp3;\n        auto tmp5 = 1e-5;\n        auto tmp6 = tmp4 + tmp5;\n        auto tmp7 = metal::precise::rsqrt(tmp6);\n        auto tmp8 = tmp2 * tmp7;\n        auto tmp10 = tmp8 * tmp9;\n        auto tmp12 = tmp10 + tmp11;\n        out_ptr2[r0_1 + 768*x0] = static_cast<float>(tmp12);\n    }",
+				"generated_kernel_1": "[[max_total_threads_per_threadgroup(128)]]\n    kernel void generated_kernel_1(\n        device float* out_ptr2,\n        constant float* in_ptr0,\n        uint2 thread_pos [[thread_position_in_grid]],\n        uint2 group_pos [[thread_position_in_threadgroup]]\n    ) {\n        auto xindex = thread_pos.x;\n        auto r0_index = thread_pos.y;\n        int r0_2 = r0_index;\n        int x0 = (xindex) % (128);\n        int x3 = xindex;\n        threadgroup float tmp_acc_0[4];\n        threadgroup float tmp_acc_1[4];\n        auto tmp7 = in_ptr0[r0_2 + 128*x3];\n        auto tmp0 = r0_2 + ((-1)*x0);\n        auto tmp1 = static_cast<long>(tmp0);\n        auto tmp2 = 0;\n        auto tmp3 = tmp1 <= tmp2;\n        auto tmp4 = true;\n        auto tmp5 = tmp3 && tmp4;\n        auto tmp6 = tmp5 == 0;\n        auto tmp8 = 0.125;\n        auto tmp9 = tmp7 * tmp8;\n        auto tmp10 = -HUGE_VALF;\n        auto tmp11 = tmp6 ? tmp10 : static_cast<decltype(tmp10)>(tmp9);\n        auto tmp12 = c10::metal::threadgroup_max(tmp_acc_0, static_cast<float>(tmp11), r0_index * 1, 128);\n        auto tmp13 = tmp11 - tmp12;\n        auto tmp14 = metal::precise::exp(tmp13);\n        auto tmp15 = c10::metal::threadgroup_sum(tmp_acc_1, tmp14, r0_index * 1, 128);\n        auto tmp16 = tmp14 / tmp15;\n        out_ptr2[r0_2 + 128*x3] = static_cast<float>(tmp16);\n    }",
+				"generated_kernel_2": "kernel void generated_kernel_2(\n        device float* out_ptr0,\n        constant float* in_ptr0,\n        uint xindex [[thread_position_in_grid]]\n    ) {\n        int x0 = (xindex) % (64);\n        int x1 = ((xindex) / (64)) % (12);\n        int x2 = c10::metal::floor_divide(xindex, 768);\n        int x3 = xindex;\n        auto tmp0 = in_ptr0[x0 + 64*x2 + 8192*x1];\n        out_ptr0[x3] = static_cast<float>(tmp0);\n    }",
+				"generated_kernel_3": "[[max_total_threads_per_threadgroup(768)]]\n    kernel void generated_kernel_3(\n        device float* out_ptr2,\n        constant float* in_ptr0,\n        constant float* in_ptr1,\n        constant float* in_ptr2,\n        constant float* in_ptr3,\n        constant float* in_ptr4,\n        uint2 thread_pos [[thread_position_in_grid]],\n        uint2 group_pos [[thread_position_in_threadgroup]]\n    ) {\n        auto xindex = thread_pos.x;\n        auto r0_index = thread_pos.y;\n        int r0_1 = r0_index;\n        int x0 = xindex;\n        threadgroup float3 tmp_acc_0[768];\n        auto tmp0 = in_ptr0[r0_1 + 768*x0];\n        auto tmp1 = in_ptr1[r0_1];\n        auto tmp2 = in_ptr2[r0_1 + 768*x0];\n        auto tmp3 = tmp1 + tmp2;\n        auto tmp4 = tmp0 + tmp3;\n        tmp_acc_0[r0_index * 1] = float3(tmp4, 0.0, 1.0);\n        auto tmp5 = c10::metal::threadgroup_welford_combine(tmp_acc_0, r0_index * 1, 768);\n        auto tmp13 = in_ptr3[r0_1];\n        auto tmp15 = in_ptr4[r0_1];\n        auto tmp6 = tmp4 - tmp5.x;\n        auto tmp7 = 768.0;\n        auto tmp8 = tmp5.y / tmp7;\n        auto tmp9 = 1e-5;\n        auto tmp10 = tmp8 + tmp9;\n        auto tmp11 = metal::precise::rsqrt(tmp10);\n        auto tmp12 = tmp6 * tmp11;\n        auto tmp14 = tmp12 * tmp13;\n        auto tmp16 = tmp14 + tmp15;\n        out_ptr2[r0_1 + 768*x0] = static_cast<float>(tmp16);\n    }",
+				"generated_kernel_4": "kernel void generated_kernel_4(\n        device float* out_ptr0,\n        constant float* in_ptr0,\n        constant float* in_ptr1,\n        uint xindex [[thread_position_in_grid]]\n    ) {\n        int x0 = (xindex) % (3072);\n        int x2 = xindex;\n        auto tmp0 = in_ptr0[x0];\n        auto tmp1 = in_ptr1[x2];\n        auto tmp2 = tmp0 + tmp1;\n        auto tmp3 = 0.5;\n        auto tmp4 = tmp2 * tmp3;\n        auto tmp5 = tmp2 * tmp2;\n        auto tmp6 = tmp5 * tmp2;\n        auto tmp7 = 0.044715;\n        auto tmp8 = tmp6 * tmp7;\n        auto tmp9 = tmp2 + tmp8;\n        auto tmp10 = 0.7978845608028654;\n        auto tmp11 = tmp9 * tmp10;\n        auto tmp12 = metal::precise::tanh(tmp11);\n        auto tmp13 = 1.0;\n        auto tmp14 = tmp12 + tmp13;\n        auto tmp15 = tmp4 * tmp14;\n        out_ptr0[x2] = static_cast<float>(tmp15);\n    }",
+				"generated_kernel_5": "kernel void generated_kernel_5(\n        device float* out_ptr0,\n        constant float* in_ptr0,\n        constant float* in_ptr1,\n        constant float* in_ptr2,\n        constant float* in_ptr3,\n        constant float* in_ptr4,\n        uint xindex [[thread_position_in_grid]]\n    ) {\n        int x2 = xindex;\n        int x0 = (xindex) % (768);\n        auto tmp0 = in_ptr0[x2];\n        auto tmp1 = in_ptr1[x0];\n        auto tmp2 = in_ptr2[x2];\n        auto tmp5 = in_ptr3[x0];\n        auto tmp6 = in_ptr4[x2];\n        auto tmp3 = tmp1 + tmp2;\n        auto tmp4 = tmp0 + tmp3;\n        auto tmp7 = tmp5 + tmp6;\n        auto tmp8 = tmp4 + tmp7;\n        out_ptr0[x2] = static_cast<float>(tmp8);\n    }"
+			},
+			"call": "    def call(self, args):\n        arg0_1, arg1_1, arg2_1, arg3_1, arg4_1, arg5_1, arg6_1, arg7_1, arg8_1, arg9_1, arg10_1, arg11_1, arg12_1 = args\n        args.clear()\n        assert_size_stride_grouped((arg2_1, arg0_1, arg1_1), ((1, 128, 768), (768, ), (768, )), ((98304, 768, 1), (1, ), (1, )), 'input')\n        arg2_1 = copy_if_misaligned(arg2_1)\n        buf3 = empty_strided((1, 128, 768), (98304, 768, 1), device='mps', dtype=torch.float32)\n        generated_kernel_0(buf3, arg2_1, arg0_1, arg1_1, threads=[128, 768], group_size=[1, 768])\n        del arg0_1\n        del arg1_1\n        assert_size_stride_grouped((arg4_1, arg3_1), ((2304, ), (2304, 768)), ((1, ), (768, 1)), 'input')\n        buf4 = empty_strided((128, 2304), (2304, 1), device='mps', dtype=torch.float32)\n        # Topologically Sorted Source Nodes: [layer_norm, linear], Original ATen: [aten.native_layer_norm, aten.linear]\n        extern_kernels.addmm(arg4_1, reinterpret_tensor(buf3, (128, 768), (768, 1), 0), reinterpret_tensor(arg3_1, (768, 2304), (1, 768), 0), alpha=1, beta=1, out=buf4)\n        del arg3_1\n        del arg4_1\n        buf5 = empty_strided((12, 128, 128), (16384, 128, 1), device='mps', dtype=torch.float32)\n        # Topologically Sorted Source Nodes: [linear, split, view, q_1, matmul, view_1, k_1, transpose_3], Original ATen: [aten.linear, aten.split, aten.view, aten.transpose, aten.bmm]\n        extern_kernels.bmm(reinterpret_tensor(buf4, (12, 128, 64), (64, 2304, 1), 0), reinterpret_tensor(buf4, (12, 64, 128), (64, 1, 2304), 768), out=buf5)\n        buf8 = empty_strided((1, 12, 128, 128), (196608, 16384, 128, 1), device='mps', dtype=torch.float32)\n        generated_kernel_1(buf8, buf5, threads=[1536, 128], group_size=[1, 128])\n        del buf5\n        buf9 = reinterpret_tensor(buf3, (12, 128, 64), (8192, 64, 1), 0); del buf3  # reuse\n        # Topologically Sorted Source Nodes: [linear, split, mask, ones, invert, masked_fill, matmul, att, att_1, matmul_1, view_2, v_1], Original ATen: [aten.linear, aten.split, aten.tril, aten.ones, aten.bitwise_not, aten.masked_fill, aten.view, aten.div, aten._softmax, aten.transpose, aten.bmm]\n        extern_kernels.bmm(reinterpret_tensor(buf8, (12, 128, 128), (16384, 128, 1), 0), reinterpret_tensor(buf4, (12, 128, 64), (64, 2304, 1), 1536), out=buf9)\n        del buf4\n        del buf8\n        buf10 = empty_strided((1, 128, 12, 64), (98304, 768, 64, 1), device='mps', dtype=torch.float32)\n        generated_kernel_2(buf10, buf9, threads=[98304])\n        assert_size_stride(arg5_1, (768, 768), (768, 1), 'input')\n        buf11 = reinterpret_tensor(buf9, (128, 768), (768, 1), 0); del buf9  # reuse\n        # Topologically Sorted Source Nodes: [matmul_1, transpose_4, y, linear_1], Original ATen: [aten.view, aten.transpose, aten.clone, aten._unsafe_view, aten.linear]\n        extern_kernels.mm(reinterpret_tensor(buf10, (128, 768), (768, 1), 0), reinterpret_tensor(arg5_1, (768, 768), (1, 768), 0), out=buf11)\n        del arg5_1\n        assert_size_stride_grouped((arg6_1, arg7_1, arg8_1), ((768, ), (768, ), (768, )), ((1, ), (1, ), (1, )), 'input')\n        buf15 = reinterpret_tensor(buf10, (1, 128, 768), (98304, 768, 1), 0); del buf10  # reuse\n        generated_kernel_3(buf15, arg2_1, arg6_1, buf11, arg7_1, arg8_1, threads=[128, 768], group_size=[1, 768])\n        del arg7_1\n        del arg8_1\n        assert_size_stride(arg9_1, (3072, 768), (768, 1), 'input')\n        buf16 = empty_strided((128, 3072), (3072, 1), device='mps', dtype=torch.float32)\n        # Topologically Sorted Source Nodes: [linear_1, x, layer_norm_1, linear_2], Original ATen: [aten.linear, aten.add, aten.native_layer_norm]\n        extern_kernels.mm(reinterpret_tensor(buf15, (128, 768), (768, 1), 0), reinterpret_tensor(arg9_1, (768, 3072), (1, 768), 0), out=buf16)\n        del arg9_1\n        del buf15\n        assert_size_stride(arg10_1, (3072, ), (1, ), 'input')\n        buf17 = empty_strided((1, 128, 3072), (393216, 3072, 1), device='mps', dtype=torch.float32)\n        generated_kernel_4(buf17, arg10_1, buf16, threads=[393216])\n        del arg10_1\n        del buf16\n        assert_size_stride(arg11_1, (768, 3072), (3072, 1), 'input')\n        buf18 = empty_strided((128, 768), (768, 1), device='mps', dtype=torch.float32)\n        # Topologically Sorted Source Nodes: [linear_2, gelu, linear_3], Original ATen: [aten.linear, aten.gelu]\n        extern_kernels.mm(reinterpret_tensor(buf17, (128, 3072), (3072, 1), 0), reinterpret_tensor(arg11_1, (3072, 768), (1, 3072), 0), out=buf18)\n        del arg11_1\n        del buf17\n        assert_size_stride(arg12_1, (768, ), (1, ), 'input')\n        buf19 = empty_strided((1, 128, 768), (98304, 768, 1), device='mps', dtype=torch.float32)\n        generated_kernel_5(buf19, arg2_1, arg6_1, buf11, arg12_1, buf18, threads=[98304])\n        del arg12_1\n        del arg2_1\n        del arg6_1\n        return (buf19, )",
+			"eagerOps": [
+				{
+					"op": "native_layer_norm",
+					"aten": "aten::native_layer_norm",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						],
+						[
+							768
+						],
+						[
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 399360,
+					"written": 394240
+				},
+				{
+					"op": "linear",
+					"aten": "aten::linear",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						],
+						[
+							2304,
+							768
+						],
+						[
+							2304
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							2304
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 7480320,
+					"written": 1179648
+				},
+				{
+					"op": "split.Tensor",
+					"aten": "aten::split",
+					"inputs": [
+						[
+							1,
+							128,
+							2304
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "transpose.int",
+					"aten": "aten::transpose",
+					"inputs": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "transpose.int",
+					"aten": "aten::transpose",
+					"inputs": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "transpose.int",
+					"aten": "aten::transpose",
+					"inputs": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "transpose.int",
+					"aten": "aten::transpose",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							64,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "expand",
+					"aten": "aten::expand",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "expand",
+					"aten": "aten::expand",
+					"inputs": [
+						[
+							1,
+							12,
+							64,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							64,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							12,
+							64,
+							128
+						]
+					],
+					"output": [
+						[
+							12,
+							64,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "bmm",
+					"aten": "aten::bmm",
+					"inputs": [
+						[
+							12,
+							128,
+							64
+						],
+						[
+							12,
+							64,
+							128
+						]
+					],
+					"output": [
+						[
+							12,
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 786432,
+					"written": 786432
+				},
+				{
+					"op": "_unsafe_view",
+					"aten": "aten::_unsafe_view",
+					"inputs": [
+						[
+							12,
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "div.Tensor",
+					"aten": "aten::div",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 786432,
+					"written": 786432
+				},
+				{
+					"op": "ones",
+					"aten": "aten::ones",
+					"inputs": [],
+					"output": [
+						[
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 0,
+					"written": 16384
+				},
+				{
+					"op": "tril",
+					"aten": "aten::tril",
+					"inputs": [
+						[
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 16384,
+					"written": 16384
+				},
+				{
+					"op": "bitwise_not",
+					"aten": "aten::bitwise_not",
+					"inputs": [
+						[
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 16384,
+					"written": 16384
+				},
+				{
+					"op": "masked_fill.Scalar",
+					"aten": "aten::masked_fill",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							128
+						],
+						[
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 802816,
+					"written": 786432
+				},
+				{
+					"op": "_softmax",
+					"aten": "aten::_softmax",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 786432,
+					"written": 786432
+				},
+				{
+					"op": "expand",
+					"aten": "aten::expand",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							128
+						]
+					],
+					"output": [
+						[
+							12,
+							128,
+							128
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "expand",
+					"aten": "aten::expand",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "view",
+					"aten": "aten::view",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "bmm",
+					"aten": "aten::bmm",
+					"inputs": [
+						[
+							12,
+							128,
+							128
+						],
+						[
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							12,
+							128,
+							64
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 1179648,
+					"written": 393216
+				},
+				{
+					"op": "_unsafe_view",
+					"aten": "aten::_unsafe_view",
+					"inputs": [
+						[
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "transpose.int",
+					"aten": "aten::transpose",
+					"inputs": [
+						[
+							1,
+							12,
+							128,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "clone",
+					"aten": "aten::clone",
+					"inputs": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 393216,
+					"written": 393216
+				},
+				{
+					"op": "_unsafe_view",
+					"aten": "aten::_unsafe_view",
+					"inputs": [
+						[
+							1,
+							128,
+							12,
+							64
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": true,
+					"inplace": false,
+					"read": 0,
+					"written": 0
+				},
+				{
+					"op": "linear",
+					"aten": "aten::linear",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						],
+						[
+							768,
+							768
+						],
+						[
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 2755584,
+					"written": 393216
+				},
+				{
+					"op": "add.Tensor",
+					"aten": "aten::add",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						],
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 786432,
+					"written": 393216
+				},
+				{
+					"op": "native_layer_norm",
+					"aten": "aten::native_layer_norm",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						],
+						[
+							768
+						],
+						[
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 399360,
+					"written": 394240
+				},
+				{
+					"op": "linear",
+					"aten": "aten::linear",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						],
+						[
+							3072,
+							768
+						],
+						[
+							3072
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							3072
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 9842688,
+					"written": 1572864
+				},
+				{
+					"op": "gelu",
+					"aten": "aten::gelu",
+					"inputs": [
+						[
+							1,
+							128,
+							3072
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							3072
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 1572864,
+					"written": 1572864
+				},
+				{
+					"op": "linear",
+					"aten": "aten::linear",
+					"inputs": [
+						[
+							1,
+							128,
+							3072
+						],
+						[
+							768,
+							3072
+						],
+						[
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 11013120,
+					"written": 393216
+				},
+				{
+					"op": "add.Tensor",
+					"aten": "aten::add",
+					"inputs": [
+						[
+							1,
+							128,
+							768
+						],
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"output": [
+						[
+							1,
+							128,
+							768
+						]
+					],
+					"view": false,
+					"inplace": false,
+					"read": 786432,
+					"written": 393216
+				}
+			],
+			"sweep": [
+				{
+					"tokens": 16,
+					"eager": {
+						"median": 0.277128,
+						"min": 0.259037,
+						"max": 0.296352,
+						"rounds": 21
+					},
+					"compiled": {
+						"median": 0.2006,
+						"min": 0.191178,
+						"max": 0.225886,
+						"rounds": 21
+					},
+					"generated": 6,
+					"library": 6,
+					"read": 29411328,
+					"written": 909312
+				},
+				{
+					"tokens": 64,
+					"eager": {
+						"median": 0.280011,
+						"min": 0.266636,
+						"max": 0.595632,
+						"rounds": 21
+					},
+					"compiled": {
+						"median": 0.214242,
+						"min": 0.209941,
+						"max": 0.490545,
+						"rounds": 21
+					},
+					"generated": 6,
+					"library": 6,
+					"read": 32876544,
+					"written": 3932160
+				},
+				{
+					"tokens": 128,
+					"eager": {
+						"median": 0.358608,
+						"min": 0.353665,
+						"max": 0.39328,
+						"rounds": 21
+					},
+					"compiled": {
+						"median": 0.335303,
+						"min": 0.330684,
+						"max": 0.395386,
+						"rounds": 21
+					},
+					"generated": 6,
+					"library": 6,
+					"read": 38184960,
+					"written": 8650752
+				},
+				{
+					"tokens": 256,
+					"eager": {
+						"median": 0.63865,
+						"min": 0.601832,
+						"max": 0.757024,
+						"rounds": 21
+					},
+					"compiled": {
+						"median": 0.581643,
+						"min": 0.548827,
+						"max": 0.67889,
+						"rounds": 21
+					},
+					"generated": 6,
+					"library": 6,
+					"read": 51161088,
+					"written": 20447232
+				},
+				{
+					"tokens": 512,
+					"eager": {
+						"median": 1.95104,
+						"min": 1.40397,
+						"max": 2.13144,
+						"rounds": 21
+					},
+					"compiled": {
+						"median": 1.69735,
+						"min": 1.30075,
+						"max": 1.90861,
+						"rounds": 21
+					},
+					"generated": 6,
+					"library": 6,
+					"read": 86550528,
+					"written": 53477376
+				}
+			]
+		}
+	},
+	"check": {
+		"cpu": {
+			"atenOps": 88,
+			"launches": [
+				[
+					"cpp_fused_native_layer_norm_0",
+					399872,
+					394240
+				],
+				[
+					"extern_kernels.addmm",
+					7480320,
+					1179648
+				],
+				[
+					"extern_kernels.bmm",
+					786432,
+					786432
+				],
+				[
+					"cpp_fused__softmax_bitwise_not_div_masked_fill_ones_tril_view_1",
+					786432,
+					798720
+				],
+				[
+					"extern_kernels.bmm",
+					1179648,
+					393216
+				],
+				[
+					"cpp_fused_clone_transpose_view_2",
+					393216,
+					393216
+				],
+				[
+					"extern_kernels.addmm",
+					2755584,
+					393216
+				],
+				[
+					"cpp_fused_add_native_layer_norm_view_3",
+					793088,
+					394240
+				],
+				[
+					"extern_kernels.addmm",
+					9842688,
+					1572864
+				],
+				[
+					"cpp_fused_gelu_view_4",
+					1572864,
+					1572864
+				],
+				[
+					"extern_kernels.addmm",
+					11013120,
+					393216
+				],
+				[
+					"cpp_fused_add_view_5",
+					1179648,
+					393216
+				]
+			]
+		},
+		"mps": {
+			"atenOps": 91,
+			"launches": [
+				[
+					"generated_kernel_0",
+					399360,
+					393216
+				],
+				[
+					"extern_kernels.addmm",
+					7480320,
+					1179648
+				],
+				[
+					"extern_kernels.bmm",
+					786432,
+					786432
+				],
+				[
+					"generated_kernel_1",
+					786432,
+					786432
+				],
+				[
+					"extern_kernels.bmm",
+					1179648,
+					393216
+				],
+				[
+					"generated_kernel_2",
+					393216,
+					393216
+				],
+				[
+					"extern_kernels.mm",
+					2752512,
+					393216
+				],
+				[
+					"generated_kernel_3",
+					795648,
+					393216
+				],
+				[
+					"extern_kernels.mm",
+					9830400,
+					1572864
+				],
+				[
+					"generated_kernel_4",
+					1585152,
+					1572864
+				],
+				[
+					"extern_kernels.mm",
+					11010048,
+					393216
+				],
+				[
+					"generated_kernel_5",
+					1185792,
+					393216
+				]
+			]
+		}
+	},
+	"recorder": {
+		"timestamp": "2026-11-03T16:10:11.065092+00:00",
+		"device": "cpu (arm64, Darwin)",
+		"dtype": "float32",
+		"python": "3.12.12",
+		"packages": {
+			"torch": "2.14.1",
+			"numpy": "2.5.4"
+		},
+		"cpuCount": 14,
+		"machine": {
+			"cpu": "Apple M4 Max",
+			"cores": 14,
+			"threads": 10,
+			"l1dBytes": 65536,
+			"l2Bytes": 4194304,
+			"compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+			"os": "Darwin 24.5.0 (arm64)",
+			"mps": true
+		},
+		"script": "scripts/compilers/record_fusion.py",
+		"scriptSha256": "6138dd17219b9a42cf1b69ad7161d004fd5ff25e5631c08097ccfd95d113b308",
+		"loadAverage": [
+			[
+				6.24,
+				6.42,
+				6.81
+			],
+			[
+				6.37,
+				6.44,
+				6.79
+			]
+		]
+	},
+	"data": {
+		"file": "fusion.f32",
+		"sha256": "b8fbb8d27b3d594c0b578b9a70101210426a9e56e968588e71ae421d2c02070b",
+		"bytes": 1680,
+		"tensors": {
+			"cpu.16.eagerMs": {
+				"offset": 0,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"cpu.16.compiledMs": {
+				"offset": 21,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"cpu.64.eagerMs": {
+				"offset": 42,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"cpu.64.compiledMs": {
+				"offset": 63,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"cpu.128.eagerMs": {
+				"offset": 84,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"cpu.128.compiledMs": {
+				"offset": 105,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"cpu.256.eagerMs": {
+				"offset": 126,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"cpu.256.compiledMs": {
+				"offset": 147,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"cpu.512.eagerMs": {
+				"offset": 168,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"cpu.512.compiledMs": {
+				"offset": 189,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"mps.16.eagerMs": {
+				"offset": 210,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"mps.16.compiledMs": {
+				"offset": 231,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"mps.64.eagerMs": {
+				"offset": 252,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"mps.64.compiledMs": {
+				"offset": 273,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"mps.128.eagerMs": {
+				"offset": 294,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"mps.128.compiledMs": {
+				"offset": 315,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"mps.256.eagerMs": {
+				"offset": 336,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"mps.256.compiledMs": {
+				"offset": 357,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"mps.512.eagerMs": {
+				"offset": 378,
+				"length": 21,
+				"shape": [
+					21
+				]
+			},
+			"mps.512.compiledMs": {
+				"offset": 399,
+				"length": 21,
+				"shape": [
+					21
+				]
+			}
+		}
+	}
+}

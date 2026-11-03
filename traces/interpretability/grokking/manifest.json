@@ -1,0 +1,464 @@
+{
+ "kind": "grokking-run",
+ "tab": "grokking",
+ "model": {
+  "id": "one-layer transformer on (a + b) mod 113",
+  "name": "One-layer transformer",
+  "p": 113,
+  "dModel": 128,
+  "heads": 4,
+  "dHead": 32,
+  "dMlp": 512,
+  "parameters": 226688,
+  "layout": "tokens \"a b =\", learned positions, one attention layer (4 heads), one ReLU MLP, no LayerNorm",
+  "init": "Gaussian, 1/√fan-in (unembedding 1/√113), zero biases; seed 0"
+ },
+ "training": {
+  "optimizer": "AdamW",
+  "lr": 0.001,
+  "betas": [
+   0.9,
+   0.98
+  ],
+  "warmup": 10,
+  "batch": "full",
+  "loss": "cross-entropy at \"=\", float64",
+  "device": "cpu, 1 thread",
+  "dataSeed": 0,
+  "split": "Python random.shuffle of the 12,769 pairs (seed 0), the first frac of them",
+  "every": {
+   "curves": 10,
+   "checkpoints": 100
+  }
+ },
+ "paper": {
+  "nanda": "https://arxiv.org/abs/2301.05217",
+  "power": "https://arxiv.org/abs/2201.02177",
+  "code": "https://github.com/mechanistic-interpretability-grokking/progress-measures-paper/tree/23d2c64dd1f8a5ca65efaf27e15c2b2cd47dedf1"
+ },
+ "order": [
+  "main",
+  "no-wd",
+  "less-data"
+ ],
+ "runs": {
+  "main": {
+   "frac_train": 0.3,
+   "weight_decay": 1.0,
+   "trainPairs": 3830,
+   "steps": 25000,
+   "snapshots": [
+    0,
+    200,
+    2200,
+    4200,
+    5200,
+    25000
+   ],
+   "events": {
+    "memorized": 200,
+    "testHalf": 4200,
+    "testFull": 5200
+   },
+   "final": {
+    "trainLoss": 9.423593798506469e-08,
+    "testLoss": 1.7488427335261476e-07,
+    "trainAcc": 1.0,
+    "testAcc": 1.0,
+    "sumSq": 909.8376765297936,
+    "gini": 0.7592369283870949,
+    "restricted": 5.8425979609183065e-08,
+    "excluded": 6.1210335737904815,
+    "keyShare": 0.9705571852359196
+   }
+  },
+  "no-wd": {
+   "frac_train": 0.3,
+   "weight_decay": 0.0,
+   "trainPairs": 3830,
+   "steps": 25000,
+   "snapshots": [
+    0,
+    200,
+    25000
+   ],
+   "events": {
+    "memorized": 200,
+    "testHalf": null,
+    "testFull": null
+   },
+   "final": {
+    "trainLoss": 6.639105679229018e-11,
+    "testLoss": 50.456314486985846,
+    "trainAcc": 1.0,
+    "testAcc": 0.07584741022485737,
+    "sumSq": 5450.757080152629,
+    "gini": 0.06716956693770841,
+    "restricted": 6.996268378601783,
+    "excluded": 3.537406129303508e-06,
+    "keyShare": 0.12482518093168392
+   }
+  },
+  "less-data": {
+   "frac_train": 0.15,
+   "weight_decay": 1.0,
+   "trainPairs": 1915,
+   "steps": 25000,
+   "snapshots": [
+    0,
+    200,
+    25000
+   ],
+   "events": {
+    "memorized": 200,
+    "testHalf": null,
+    "testFull": null
+   },
+   "final": {
+    "trainLoss": 1.965792132792331e-07,
+    "testLoss": 37.82172283988299,
+    "trainAcc": 1.0,
+    "testAcc": 0.00552791597567717,
+    "sumSq": 1749.9511570667562,
+    "gini": 0.08952826049824769,
+    "restricted": 5.931071063487275,
+    "excluded": 2.444747643339696e-07,
+    "keyShare": 0.045000652782304966
+   }
+  }
+ },
+ "measures": [
+  "trainLoss",
+  "testLoss",
+  "trainAcc",
+  "testAcc",
+  "sumSq",
+  "gini",
+  "restricted",
+  "excluded",
+  "keyShare"
+ ],
+ "curveRows": [
+  "trainLoss",
+  "testLoss",
+  "trainAcc",
+  "testAcc"
+ ],
+ "keyFrequencies": [
+  7,
+  37,
+  42,
+  52
+ ],
+ "keyRule": "the frequencies that are the best single frequency of at least 10 of the main run's 512 neurons at step 25000, where that frequency holds ≥ 85% of the neuron's variance (mean removed)",
+ "neuronsPerFrequency": {
+  "7": 77,
+  "37": 91,
+  "42": 109,
+  "52": 150
+ },
+ "neurons": [
+  377,
+  390,
+  397,
+  158
+ ],
+ "data": {
+  "file": "grokking.f32",
+  "sha256": "a6c6c0a15ec8996fb9f7477dc6f5ce50b78acbb33dbd1273b3cc847417c19dfa",
+  "bytes": 6891968,
+  "tensors": {
+   "main.curves": {
+    "offset": 0,
+    "length": 10000,
+    "shape": [
+     4,
+     2500
+    ]
+   },
+   "main.measures": {
+    "offset": 10000,
+    "length": 2259,
+    "shape": [
+     9,
+     251
+    ]
+   },
+   "main.spectrum": {
+    "offset": 12259,
+    "length": 14056,
+    "shape": [
+     251,
+     56
+    ]
+   },
+   "main.train": {
+    "offset": 26315,
+    "length": 12769,
+    "shape": [
+     12769
+    ]
+   },
+   "main.attn": {
+    "offset": 39084,
+    "length": 306456,
+    "shape": [
+     6,
+     4,
+     113,
+     113
+    ]
+   },
+   "main.neurons": {
+    "offset": 345540,
+    "length": 306456,
+    "shape": [
+     6,
+     4,
+     113,
+     113
+    ]
+   },
+   "main.correct": {
+    "offset": 651996,
+    "length": 76614,
+    "shape": [
+     6,
+     113,
+     113
+    ]
+   },
+   "no-wd.curves": {
+    "offset": 728610,
+    "length": 10000,
+    "shape": [
+     4,
+     2500
+    ]
+   },
+   "no-wd.measures": {
+    "offset": 738610,
+    "length": 2259,
+    "shape": [
+     9,
+     251
+    ]
+   },
+   "no-wd.spectrum": {
+    "offset": 740869,
+    "length": 14056,
+    "shape": [
+     251,
+     56
+    ]
+   },
+   "no-wd.train": {
+    "offset": 754925,
+    "length": 12769,
+    "shape": [
+     12769
+    ]
+   },
+   "no-wd.attn": {
+    "offset": 767694,
+    "length": 153228,
+    "shape": [
+     3,
+     4,
+     113,
+     113
+    ]
+   },
+   "no-wd.neurons": {
+    "offset": 920922,
+    "length": 153228,
+    "shape": [
+     3,
+     4,
+     113,
+     113
+    ]
+   },
+   "no-wd.correct": {
+    "offset": 1074150,
+    "length": 38307,
+    "shape": [
+     3,
+     113,
+     113
+    ]
+   },
+   "less-data.curves": {
+    "offset": 1112457,
+    "length": 10000,
+    "shape": [
+     4,
+     2500
+    ]
+   },
+   "less-data.measures": {
+    "offset": 1122457,
+    "length": 2259,
+    "shape": [
+     9,
+     251
+    ]
+   },
+   "less-data.spectrum": {
+    "offset": 1124716,
+    "length": 14056,
+    "shape": [
+     251,
+     56
+    ]
+   },
+   "less-data.train": {
+    "offset": 1138772,
+    "length": 12769,
+    "shape": [
+     12769
+    ]
+   },
+   "less-data.attn": {
+    "offset": 1151541,
+    "length": 153228,
+    "shape": [
+     3,
+     4,
+     113,
+     113
+    ]
+   },
+   "less-data.neurons": {
+    "offset": 1304769,
+    "length": 153228,
+    "shape": [
+     3,
+     4,
+     113,
+     113
+    ]
+   },
+   "less-data.correct": {
+    "offset": 1457997,
+    "length": 38307,
+    "shape": [
+     3,
+     113,
+     113
+    ]
+   },
+   "weights.W_E": {
+    "offset": 1496304,
+    "length": 14592,
+    "shape": [
+     128,
+     114
+    ]
+   },
+   "weights.W_pos": {
+    "offset": 1510896,
+    "length": 384,
+    "shape": [
+     3,
+     128
+    ]
+   },
+   "weights.W_K": {
+    "offset": 1511280,
+    "length": 16384,
+    "shape": [
+     4,
+     32,
+     128
+    ]
+   },
+   "weights.W_Q": {
+    "offset": 1527664,
+    "length": 16384,
+    "shape": [
+     4,
+     32,
+     128
+    ]
+   },
+   "weights.W_V": {
+    "offset": 1544048,
+    "length": 16384,
+    "shape": [
+     4,
+     32,
+     128
+    ]
+   },
+   "weights.W_O": {
+    "offset": 1560432,
+    "length": 16384,
+    "shape": [
+     128,
+     128
+    ]
+   },
+   "weights.W_in": {
+    "offset": 1576816,
+    "length": 65536,
+    "shape": [
+     512,
+     128
+    ]
+   },
+   "weights.W_out": {
+    "offset": 1642352,
+    "length": 65536,
+    "shape": [
+     128,
+     512
+    ]
+   },
+   "weights.W_U": {
+    "offset": 1707888,
+    "length": 14464,
+    "shape": [
+     128,
+     113
+    ]
+   },
+   "weights.b_in": {
+    "offset": 1722352,
+    "length": 512,
+    "shape": [
+     512
+    ]
+   },
+   "weights.b_out": {
+    "offset": 1722864,
+    "length": 128,
+    "shape": [
+     128
+    ]
+   }
+  }
+ },
+ "capture": {
+  "timestamp": "2026-11-03T13:30:21.719439+00:00",
+  "device": "cpu",
+  "dtype": "float32",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "numpy": "2.5.4"
+  },
+  "threads": 8,
+  "script": "scripts/interpretability/record_grokking.py",
+  "scriptSha256": "b284be00862436c62ba1fc13a7ed580199e437ee449aaf6caeaf0238210d50b8",
+  "helperSha256": "1e66fbcdefd5ecf96aa9928c457ae5d4defe1697e90fd79fc8ad6fabbf5117be",
+  "trainer": "scripts/interpretability/train_grokking.py"
+ },
+ "validation": {
+  "attentionRowSumMaxError": 1.7881393432617188e-07,
+  "sumDirectionsOrthonormalError": 1.3877787807814457e-14,
+  "mainCheckpointVsCurveTestLossError": 4.38318377027397e-15,
+  "no-wdCheckpointVsCurveTestLossError": 1.1295398408458703e-08,
+  "less-dataCheckpointVsCurveTestLossError": 4.309991096048987e-08
+ }
+}

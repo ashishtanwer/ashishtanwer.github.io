@@ -1,0 +1,2214 @@
+{
+	"schemaVersion": 1,
+	"kind": "classical-em",
+	"tab": "em",
+	"dataset": {
+		"name": "Wine (scikit-learn load_wine)",
+		"source": "Forina et al., via the UCI Machine Learning Repository",
+		"url": "https://archive.ics.uci.edu/dataset/109/wine",
+		"license": "CC BY 4.0",
+		"samples": 178,
+		"features": 13,
+		"cultivars": [
+			"cultivar 1",
+			"cultivar 2",
+			"cultivar 3"
+		],
+		"projection": "standardized, then the first two principal components",
+		"explainedVariance": [
+			0.361988,
+			0.192075
+		]
+	},
+	"run": {
+		"components": 3,
+		"covariance": "full",
+		"regCovar": 1e-6,
+		"starts": 40,
+		"maxIter": 500,
+		"tolerance": 1e-10,
+		"init": "scikit-learn's random_from_data: a point-sized Gaussian on each of 3 wines picked by RandomState(seed).choice"
+	},
+	"starts": [
+		{
+			"seed": 0,
+			"picked": [
+				54,
+				151,
+				63
+			],
+			"iterations": 35,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				63,
+				48,
+				67
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 1,
+			"picked": [
+				161,
+				117,
+				19
+			],
+			"iterations": 29,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				48,
+				67,
+				63
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 2,
+			"picked": [
+				12,
+				23,
+				166
+			],
+			"iterations": 36,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				63,
+				67,
+				48
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 3,
+			"picked": [
+				40,
+				53,
+				34
+			],
+			"iterations": 84,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				67,
+				63,
+				48
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 4,
+			"picked": [
+				163,
+				142,
+				14
+			],
+			"iterations": 92,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				47,
+				53,
+				78
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 5,
+			"picked": [
+				28,
+				66,
+				3
+			],
+			"iterations": 44,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				48,
+				67,
+				63
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 6,
+			"picked": [
+				30,
+				97,
+				92
+			],
+			"iterations": 59,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				63,
+				67,
+				48
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 7,
+			"picked": [
+				147,
+				36,
+				167
+			],
+			"iterations": 116,
+			"logLikelihood": -634.569,
+			"ari": 0.34099,
+			"sizes": [
+				7,
+				93,
+				78
+			],
+			"optimum": 4
+		},
+		{
+			"seed": 8,
+			"picked": [
+				57,
+				163,
+				76
+			],
+			"iterations": 33,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				63,
+				48,
+				67
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 9,
+			"picked": [
+				53,
+				44,
+				17
+			],
+			"iterations": 43,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				63,
+				67,
+				48
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 10,
+			"picked": [
+				69,
+				103,
+				20
+			],
+			"iterations": 78,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				67,
+				48,
+				63
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 11,
+			"picked": [
+				135,
+				0,
+				97
+			],
+			"iterations": 38,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				48,
+				63,
+				67
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 12,
+			"picked": [
+				160,
+				156,
+				78
+			],
+			"iterations": 84,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				53,
+				47,
+				78
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 13,
+			"picked": [
+				145,
+				7,
+				150
+			],
+			"iterations": 82,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				53,
+				78,
+				47
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 14,
+			"picked": [
+				15,
+				166,
+				82
+			],
+			"iterations": 28,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				63,
+				48,
+				67
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 15,
+			"picked": [
+				170,
+				21,
+				147
+			],
+			"iterations": 79,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				53,
+				78,
+				47
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 16,
+			"picked": [
+				151,
+				172,
+				0
+			],
+			"iterations": 88,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				53,
+				47,
+				78
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 17,
+			"picked": [
+				128,
+				64,
+				85
+			],
+			"iterations": 24,
+			"logLikelihood": -622.397,
+			"ari": 0.403234,
+			"sizes": [
+				20,
+				68,
+				90
+			],
+			"optimum": 2
+		},
+		{
+			"seed": 18,
+			"picked": [
+				65,
+				103,
+				115
+			],
+			"iterations": 127,
+			"logLikelihood": -635.27,
+			"ari": 0.376037,
+			"sizes": [
+				108,
+				67,
+				3
+			],
+			"optimum": 5
+		},
+		{
+			"seed": 19,
+			"picked": [
+				122,
+				30,
+				144
+			],
+			"iterations": 54,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				67,
+				63,
+				48
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 20,
+			"picked": [
+				111,
+				177,
+				46
+			],
+			"iterations": 30,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				67,
+				48,
+				63
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 21,
+			"picked": [
+				13,
+				113,
+				21
+			],
+			"iterations": 105,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				78,
+				53,
+				47
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 22,
+			"picked": [
+				77,
+				142,
+				150
+			],
+			"iterations": 99,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				78,
+				53,
+				47
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 23,
+			"picked": [
+				162,
+				30,
+				174
+			],
+			"iterations": 78,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				53,
+				78,
+				47
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 24,
+			"picked": [
+				127,
+				148,
+				77
+			],
+			"iterations": 46,
+			"logLikelihood": -624.748,
+			"ari": 0.459181,
+			"sizes": [
+				20,
+				48,
+				110
+			],
+			"optimum": 3
+		},
+		{
+			"seed": 25,
+			"picked": [
+				85,
+				42,
+				43
+			],
+			"iterations": 38,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				67,
+				63,
+				48
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 26,
+			"picked": [
+				167,
+				157,
+				71
+			],
+			"iterations": 117,
+			"logLikelihood": -634.569,
+			"ari": 0.34099,
+			"sizes": [
+				78,
+				7,
+				93
+			],
+			"optimum": 4
+		},
+		{
+			"seed": 27,
+			"picked": [
+				27,
+				109,
+				144
+			],
+			"iterations": 42,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				63,
+				67,
+				48
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 28,
+			"picked": [
+				47,
+				153,
+				53
+			],
+			"iterations": 58,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				67,
+				48,
+				63
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 29,
+			"picked": [
+				53,
+				73,
+				101
+			],
+			"iterations": 93,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				47,
+				78,
+				53
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 30,
+			"picked": [
+				73,
+				24,
+				169
+			],
+			"iterations": 38,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				63,
+				67,
+				48
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 31,
+			"picked": [
+				117,
+				131,
+				89
+			],
+			"iterations": 70,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				78,
+				47,
+				53
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 32,
+			"picked": [
+				103,
+				93,
+				44
+			],
+			"iterations": 76,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				48,
+				67,
+				63
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 33,
+			"picked": [
+				27,
+				54,
+				126
+			],
+			"iterations": 89,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				67,
+				63,
+				48
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 34,
+			"picked": [
+				144,
+				67,
+				74
+			],
+			"iterations": 53,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				47,
+				53,
+				78
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 35,
+			"picked": [
+				117,
+				124,
+				113
+			],
+			"iterations": 78,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				47,
+				78,
+				53
+			],
+			"optimum": 1
+		},
+		{
+			"seed": 36,
+			"picked": [
+				65,
+				28,
+				71
+			],
+			"iterations": 85,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				48,
+				63,
+				67
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 37,
+			"picked": [
+				84,
+				37,
+				48
+			],
+			"iterations": 35,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				67,
+				48,
+				63
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 38,
+			"picked": [
+				162,
+				54,
+				34
+			],
+			"iterations": 47,
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"sizes": [
+				48,
+				63,
+				67
+			],
+			"optimum": 0
+		},
+		{
+			"seed": 39,
+			"picked": [
+				61,
+				21,
+				60
+			],
+			"iterations": 37,
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"sizes": [
+				47,
+				78,
+				53
+			],
+			"optimum": 1
+		}
+	],
+	"optima": [
+		{
+			"logLikelihood": -612.625,
+			"ari": 0.896291,
+			"seeds": [
+				3,
+				5,
+				38,
+				19,
+				30,
+				2,
+				28,
+				1,
+				27,
+				0,
+				6,
+				8,
+				9,
+				14,
+				25,
+				10,
+				37,
+				33,
+				32,
+				36,
+				11,
+				20
+			]
+		},
+		{
+			"logLikelihood": -612.632,
+			"ari": 0.661688,
+			"seeds": [
+				31,
+				21,
+				13,
+				12,
+				22,
+				15,
+				35,
+				23,
+				16,
+				39,
+				34,
+				29,
+				4
+			]
+		},
+		{
+			"logLikelihood": -622.397,
+			"ari": 0.403234,
+			"seeds": [
+				17
+			]
+		},
+		{
+			"logLikelihood": -624.748,
+			"ari": 0.459181,
+			"seeds": [
+				24
+			]
+		},
+		{
+			"logLikelihood": -634.569,
+			"ari": 0.34099,
+			"seeds": [
+				7,
+				26
+			]
+		},
+		{
+			"logLikelihood": -635.27,
+			"ari": 0.376037,
+			"seeds": [
+				18
+			]
+		}
+	],
+	"good": 3,
+	"poor": 18,
+	"default": {
+		"init": "k-means (scikit-learn default)",
+		"logLikelihood": -612.625,
+		"iterations": 30,
+		"ari": 0.896291
+	},
+	"capture": {
+		"timestamp": "2026-11-03T13:30:58.975602+00:00",
+		"device": "cpu (arm64, Darwin)",
+		"dtype": "float64",
+		"python": "3.12.12",
+		"packages": {
+			"scikit-learn": "1.9.1",
+			"numpy": "2.5.4",
+			"scipy": "1.18.1"
+		},
+		"cpuCount": 14,
+		"script": "scripts/classical/record_em.py",
+		"scriptSha256": "0d33a86b076c1af8c57437311537682e3f9c1c23ba8c14c4118c3b2972db8075"
+	},
+	"data": {
+		"file": "em.f32",
+		"sha256": "e935ba0ddcf5cf32362dc0155f924cc05afe6821c768571fb9f82298d08be9e7",
+		"bytes": 686520,
+		"tensors": {
+			"x": {
+				"offset": 0,
+				"length": 356,
+				"shape": [
+					178,
+					2
+				]
+			},
+			"cultivar": {
+				"offset": 356,
+				"length": 178,
+				"shape": [
+					178
+				]
+			},
+			"start.0.means": {
+				"offset": 534,
+				"length": 216,
+				"shape": [
+					36,
+					3,
+					2
+				]
+			},
+			"start.0.covariances": {
+				"offset": 750,
+				"length": 432,
+				"shape": [
+					36,
+					3,
+					2,
+					2
+				]
+			},
+			"start.0.weights": {
+				"offset": 1182,
+				"length": 108,
+				"shape": [
+					36,
+					3
+				]
+			},
+			"start.0.logLikelihood": {
+				"offset": 1290,
+				"length": 36,
+				"shape": [
+					36
+				]
+			},
+			"start.1.means": {
+				"offset": 1326,
+				"length": 180,
+				"shape": [
+					30,
+					3,
+					2
+				]
+			},
+			"start.1.covariances": {
+				"offset": 1506,
+				"length": 360,
+				"shape": [
+					30,
+					3,
+					2,
+					2
+				]
+			},
+			"start.1.weights": {
+				"offset": 1866,
+				"length": 90,
+				"shape": [
+					30,
+					3
+				]
+			},
+			"start.1.logLikelihood": {
+				"offset": 1956,
+				"length": 30,
+				"shape": [
+					30
+				]
+			},
+			"start.2.means": {
+				"offset": 1986,
+				"length": 222,
+				"shape": [
+					37,
+					3,
+					2
+				]
+			},
+			"start.2.covariances": {
+				"offset": 2208,
+				"length": 444,
+				"shape": [
+					37,
+					3,
+					2,
+					2
+				]
+			},
+			"start.2.weights": {
+				"offset": 2652,
+				"length": 111,
+				"shape": [
+					37,
+					3
+				]
+			},
+			"start.2.logLikelihood": {
+				"offset": 2763,
+				"length": 37,
+				"shape": [
+					37
+				]
+			},
+			"start.3.means": {
+				"offset": 2800,
+				"length": 510,
+				"shape": [
+					85,
+					3,
+					2
+				]
+			},
+			"start.3.covariances": {
+				"offset": 3310,
+				"length": 1020,
+				"shape": [
+					85,
+					3,
+					2,
+					2
+				]
+			},
+			"start.3.weights": {
+				"offset": 4330,
+				"length": 255,
+				"shape": [
+					85,
+					3
+				]
+			},
+			"start.3.logLikelihood": {
+				"offset": 4585,
+				"length": 85,
+				"shape": [
+					85
+				]
+			},
+			"start.4.means": {
+				"offset": 4670,
+				"length": 558,
+				"shape": [
+					93,
+					3,
+					2
+				]
+			},
+			"start.4.covariances": {
+				"offset": 5228,
+				"length": 1116,
+				"shape": [
+					93,
+					3,
+					2,
+					2
+				]
+			},
+			"start.4.weights": {
+				"offset": 6344,
+				"length": 279,
+				"shape": [
+					93,
+					3
+				]
+			},
+			"start.4.logLikelihood": {
+				"offset": 6623,
+				"length": 93,
+				"shape": [
+					93
+				]
+			},
+			"start.5.means": {
+				"offset": 6716,
+				"length": 270,
+				"shape": [
+					45,
+					3,
+					2
+				]
+			},
+			"start.5.covariances": {
+				"offset": 6986,
+				"length": 540,
+				"shape": [
+					45,
+					3,
+					2,
+					2
+				]
+			},
+			"start.5.weights": {
+				"offset": 7526,
+				"length": 135,
+				"shape": [
+					45,
+					3
+				]
+			},
+			"start.5.logLikelihood": {
+				"offset": 7661,
+				"length": 45,
+				"shape": [
+					45
+				]
+			},
+			"start.6.means": {
+				"offset": 7706,
+				"length": 360,
+				"shape": [
+					60,
+					3,
+					2
+				]
+			},
+			"start.6.covariances": {
+				"offset": 8066,
+				"length": 720,
+				"shape": [
+					60,
+					3,
+					2,
+					2
+				]
+			},
+			"start.6.weights": {
+				"offset": 8786,
+				"length": 180,
+				"shape": [
+					60,
+					3
+				]
+			},
+			"start.6.logLikelihood": {
+				"offset": 8966,
+				"length": 60,
+				"shape": [
+					60
+				]
+			},
+			"start.7.means": {
+				"offset": 9026,
+				"length": 702,
+				"shape": [
+					117,
+					3,
+					2
+				]
+			},
+			"start.7.covariances": {
+				"offset": 9728,
+				"length": 1404,
+				"shape": [
+					117,
+					3,
+					2,
+					2
+				]
+			},
+			"start.7.weights": {
+				"offset": 11132,
+				"length": 351,
+				"shape": [
+					117,
+					3
+				]
+			},
+			"start.7.logLikelihood": {
+				"offset": 11483,
+				"length": 117,
+				"shape": [
+					117
+				]
+			},
+			"start.8.means": {
+				"offset": 11600,
+				"length": 204,
+				"shape": [
+					34,
+					3,
+					2
+				]
+			},
+			"start.8.covariances": {
+				"offset": 11804,
+				"length": 408,
+				"shape": [
+					34,
+					3,
+					2,
+					2
+				]
+			},
+			"start.8.weights": {
+				"offset": 12212,
+				"length": 102,
+				"shape": [
+					34,
+					3
+				]
+			},
+			"start.8.logLikelihood": {
+				"offset": 12314,
+				"length": 34,
+				"shape": [
+					34
+				]
+			},
+			"start.9.means": {
+				"offset": 12348,
+				"length": 264,
+				"shape": [
+					44,
+					3,
+					2
+				]
+			},
+			"start.9.covariances": {
+				"offset": 12612,
+				"length": 528,
+				"shape": [
+					44,
+					3,
+					2,
+					2
+				]
+			},
+			"start.9.weights": {
+				"offset": 13140,
+				"length": 132,
+				"shape": [
+					44,
+					3
+				]
+			},
+			"start.9.logLikelihood": {
+				"offset": 13272,
+				"length": 44,
+				"shape": [
+					44
+				]
+			},
+			"start.10.means": {
+				"offset": 13316,
+				"length": 474,
+				"shape": [
+					79,
+					3,
+					2
+				]
+			},
+			"start.10.covariances": {
+				"offset": 13790,
+				"length": 948,
+				"shape": [
+					79,
+					3,
+					2,
+					2
+				]
+			},
+			"start.10.weights": {
+				"offset": 14738,
+				"length": 237,
+				"shape": [
+					79,
+					3
+				]
+			},
+			"start.10.logLikelihood": {
+				"offset": 14975,
+				"length": 79,
+				"shape": [
+					79
+				]
+			},
+			"start.11.means": {
+				"offset": 15054,
+				"length": 234,
+				"shape": [
+					39,
+					3,
+					2
+				]
+			},
+			"start.11.covariances": {
+				"offset": 15288,
+				"length": 468,
+				"shape": [
+					39,
+					3,
+					2,
+					2
+				]
+			},
+			"start.11.weights": {
+				"offset": 15756,
+				"length": 117,
+				"shape": [
+					39,
+					3
+				]
+			},
+			"start.11.logLikelihood": {
+				"offset": 15873,
+				"length": 39,
+				"shape": [
+					39
+				]
+			},
+			"start.12.means": {
+				"offset": 15912,
+				"length": 510,
+				"shape": [
+					85,
+					3,
+					2
+				]
+			},
+			"start.12.covariances": {
+				"offset": 16422,
+				"length": 1020,
+				"shape": [
+					85,
+					3,
+					2,
+					2
+				]
+			},
+			"start.12.weights": {
+				"offset": 17442,
+				"length": 255,
+				"shape": [
+					85,
+					3
+				]
+			},
+			"start.12.logLikelihood": {
+				"offset": 17697,
+				"length": 85,
+				"shape": [
+					85
+				]
+			},
+			"start.13.means": {
+				"offset": 17782,
+				"length": 498,
+				"shape": [
+					83,
+					3,
+					2
+				]
+			},
+			"start.13.covariances": {
+				"offset": 18280,
+				"length": 996,
+				"shape": [
+					83,
+					3,
+					2,
+					2
+				]
+			},
+			"start.13.weights": {
+				"offset": 19276,
+				"length": 249,
+				"shape": [
+					83,
+					3
+				]
+			},
+			"start.13.logLikelihood": {
+				"offset": 19525,
+				"length": 83,
+				"shape": [
+					83
+				]
+			},
+			"start.14.means": {
+				"offset": 19608,
+				"length": 174,
+				"shape": [
+					29,
+					3,
+					2
+				]
+			},
+			"start.14.covariances": {
+				"offset": 19782,
+				"length": 348,
+				"shape": [
+					29,
+					3,
+					2,
+					2
+				]
+			},
+			"start.14.weights": {
+				"offset": 20130,
+				"length": 87,
+				"shape": [
+					29,
+					3
+				]
+			},
+			"start.14.logLikelihood": {
+				"offset": 20217,
+				"length": 29,
+				"shape": [
+					29
+				]
+			},
+			"start.15.means": {
+				"offset": 20246,
+				"length": 480,
+				"shape": [
+					80,
+					3,
+					2
+				]
+			},
+			"start.15.covariances": {
+				"offset": 20726,
+				"length": 960,
+				"shape": [
+					80,
+					3,
+					2,
+					2
+				]
+			},
+			"start.15.weights": {
+				"offset": 21686,
+				"length": 240,
+				"shape": [
+					80,
+					3
+				]
+			},
+			"start.15.logLikelihood": {
+				"offset": 21926,
+				"length": 80,
+				"shape": [
+					80
+				]
+			},
+			"start.16.means": {
+				"offset": 22006,
+				"length": 534,
+				"shape": [
+					89,
+					3,
+					2
+				]
+			},
+			"start.16.covariances": {
+				"offset": 22540,
+				"length": 1068,
+				"shape": [
+					89,
+					3,
+					2,
+					2
+				]
+			},
+			"start.16.weights": {
+				"offset": 23608,
+				"length": 267,
+				"shape": [
+					89,
+					3
+				]
+			},
+			"start.16.logLikelihood": {
+				"offset": 23875,
+				"length": 89,
+				"shape": [
+					89
+				]
+			},
+			"start.17.means": {
+				"offset": 23964,
+				"length": 150,
+				"shape": [
+					25,
+					3,
+					2
+				]
+			},
+			"start.17.covariances": {
+				"offset": 24114,
+				"length": 300,
+				"shape": [
+					25,
+					3,
+					2,
+					2
+				]
+			},
+			"start.17.weights": {
+				"offset": 24414,
+				"length": 75,
+				"shape": [
+					25,
+					3
+				]
+			},
+			"start.17.logLikelihood": {
+				"offset": 24489,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"start.18.means": {
+				"offset": 24514,
+				"length": 768,
+				"shape": [
+					128,
+					3,
+					2
+				]
+			},
+			"start.18.covariances": {
+				"offset": 25282,
+				"length": 1536,
+				"shape": [
+					128,
+					3,
+					2,
+					2
+				]
+			},
+			"start.18.weights": {
+				"offset": 26818,
+				"length": 384,
+				"shape": [
+					128,
+					3
+				]
+			},
+			"start.18.logLikelihood": {
+				"offset": 27202,
+				"length": 128,
+				"shape": [
+					128
+				]
+			},
+			"start.19.means": {
+				"offset": 27330,
+				"length": 330,
+				"shape": [
+					55,
+					3,
+					2
+				]
+			},
+			"start.19.covariances": {
+				"offset": 27660,
+				"length": 660,
+				"shape": [
+					55,
+					3,
+					2,
+					2
+				]
+			},
+			"start.19.weights": {
+				"offset": 28320,
+				"length": 165,
+				"shape": [
+					55,
+					3
+				]
+			},
+			"start.19.logLikelihood": {
+				"offset": 28485,
+				"length": 55,
+				"shape": [
+					55
+				]
+			},
+			"start.20.means": {
+				"offset": 28540,
+				"length": 186,
+				"shape": [
+					31,
+					3,
+					2
+				]
+			},
+			"start.20.covariances": {
+				"offset": 28726,
+				"length": 372,
+				"shape": [
+					31,
+					3,
+					2,
+					2
+				]
+			},
+			"start.20.weights": {
+				"offset": 29098,
+				"length": 93,
+				"shape": [
+					31,
+					3
+				]
+			},
+			"start.20.logLikelihood": {
+				"offset": 29191,
+				"length": 31,
+				"shape": [
+					31
+				]
+			},
+			"start.21.means": {
+				"offset": 29222,
+				"length": 636,
+				"shape": [
+					106,
+					3,
+					2
+				]
+			},
+			"start.21.covariances": {
+				"offset": 29858,
+				"length": 1272,
+				"shape": [
+					106,
+					3,
+					2,
+					2
+				]
+			},
+			"start.21.weights": {
+				"offset": 31130,
+				"length": 318,
+				"shape": [
+					106,
+					3
+				]
+			},
+			"start.21.logLikelihood": {
+				"offset": 31448,
+				"length": 106,
+				"shape": [
+					106
+				]
+			},
+			"start.22.means": {
+				"offset": 31554,
+				"length": 600,
+				"shape": [
+					100,
+					3,
+					2
+				]
+			},
+			"start.22.covariances": {
+				"offset": 32154,
+				"length": 1200,
+				"shape": [
+					100,
+					3,
+					2,
+					2
+				]
+			},
+			"start.22.weights": {
+				"offset": 33354,
+				"length": 300,
+				"shape": [
+					100,
+					3
+				]
+			},
+			"start.22.logLikelihood": {
+				"offset": 33654,
+				"length": 100,
+				"shape": [
+					100
+				]
+			},
+			"start.23.means": {
+				"offset": 33754,
+				"length": 474,
+				"shape": [
+					79,
+					3,
+					2
+				]
+			},
+			"start.23.covariances": {
+				"offset": 34228,
+				"length": 948,
+				"shape": [
+					79,
+					3,
+					2,
+					2
+				]
+			},
+			"start.23.weights": {
+				"offset": 35176,
+				"length": 237,
+				"shape": [
+					79,
+					3
+				]
+			},
+			"start.23.logLikelihood": {
+				"offset": 35413,
+				"length": 79,
+				"shape": [
+					79
+				]
+			},
+			"start.24.means": {
+				"offset": 35492,
+				"length": 282,
+				"shape": [
+					47,
+					3,
+					2
+				]
+			},
+			"start.24.covariances": {
+				"offset": 35774,
+				"length": 564,
+				"shape": [
+					47,
+					3,
+					2,
+					2
+				]
+			},
+			"start.24.weights": {
+				"offset": 36338,
+				"length": 141,
+				"shape": [
+					47,
+					3
+				]
+			},
+			"start.24.logLikelihood": {
+				"offset": 36479,
+				"length": 47,
+				"shape": [
+					47
+				]
+			},
+			"start.25.means": {
+				"offset": 36526,
+				"length": 234,
+				"shape": [
+					39,
+					3,
+					2
+				]
+			},
+			"start.25.covariances": {
+				"offset": 36760,
+				"length": 468,
+				"shape": [
+					39,
+					3,
+					2,
+					2
+				]
+			},
+			"start.25.weights": {
+				"offset": 37228,
+				"length": 117,
+				"shape": [
+					39,
+					3
+				]
+			},
+			"start.25.logLikelihood": {
+				"offset": 37345,
+				"length": 39,
+				"shape": [
+					39
+				]
+			},
+			"start.26.means": {
+				"offset": 37384,
+				"length": 708,
+				"shape": [
+					118,
+					3,
+					2
+				]
+			},
+			"start.26.covariances": {
+				"offset": 38092,
+				"length": 1416,
+				"shape": [
+					118,
+					3,
+					2,
+					2
+				]
+			},
+			"start.26.weights": {
+				"offset": 39508,
+				"length": 354,
+				"shape": [
+					118,
+					3
+				]
+			},
+			"start.26.logLikelihood": {
+				"offset": 39862,
+				"length": 118,
+				"shape": [
+					118
+				]
+			},
+			"start.27.means": {
+				"offset": 39980,
+				"length": 258,
+				"shape": [
+					43,
+					3,
+					2
+				]
+			},
+			"start.27.covariances": {
+				"offset": 40238,
+				"length": 516,
+				"shape": [
+					43,
+					3,
+					2,
+					2
+				]
+			},
+			"start.27.weights": {
+				"offset": 40754,
+				"length": 129,
+				"shape": [
+					43,
+					3
+				]
+			},
+			"start.27.logLikelihood": {
+				"offset": 40883,
+				"length": 43,
+				"shape": [
+					43
+				]
+			},
+			"start.28.means": {
+				"offset": 40926,
+				"length": 354,
+				"shape": [
+					59,
+					3,
+					2
+				]
+			},
+			"start.28.covariances": {
+				"offset": 41280,
+				"length": 708,
+				"shape": [
+					59,
+					3,
+					2,
+					2
+				]
+			},
+			"start.28.weights": {
+				"offset": 41988,
+				"length": 177,
+				"shape": [
+					59,
+					3
+				]
+			},
+			"start.28.logLikelihood": {
+				"offset": 42165,
+				"length": 59,
+				"shape": [
+					59
+				]
+			},
+			"start.29.means": {
+				"offset": 42224,
+				"length": 564,
+				"shape": [
+					94,
+					3,
+					2
+				]
+			},
+			"start.29.covariances": {
+				"offset": 42788,
+				"length": 1128,
+				"shape": [
+					94,
+					3,
+					2,
+					2
+				]
+			},
+			"start.29.weights": {
+				"offset": 43916,
+				"length": 282,
+				"shape": [
+					94,
+					3
+				]
+			},
+			"start.29.logLikelihood": {
+				"offset": 44198,
+				"length": 94,
+				"shape": [
+					94
+				]
+			},
+			"start.30.means": {
+				"offset": 44292,
+				"length": 234,
+				"shape": [
+					39,
+					3,
+					2
+				]
+			},
+			"start.30.covariances": {
+				"offset": 44526,
+				"length": 468,
+				"shape": [
+					39,
+					3,
+					2,
+					2
+				]
+			},
+			"start.30.weights": {
+				"offset": 44994,
+				"length": 117,
+				"shape": [
+					39,
+					3
+				]
+			},
+			"start.30.logLikelihood": {
+				"offset": 45111,
+				"length": 39,
+				"shape": [
+					39
+				]
+			},
+			"start.31.means": {
+				"offset": 45150,
+				"length": 426,
+				"shape": [
+					71,
+					3,
+					2
+				]
+			},
+			"start.31.covariances": {
+				"offset": 45576,
+				"length": 852,
+				"shape": [
+					71,
+					3,
+					2,
+					2
+				]
+			},
+			"start.31.weights": {
+				"offset": 46428,
+				"length": 213,
+				"shape": [
+					71,
+					3
+				]
+			},
+			"start.31.logLikelihood": {
+				"offset": 46641,
+				"length": 71,
+				"shape": [
+					71
+				]
+			},
+			"start.32.means": {
+				"offset": 46712,
+				"length": 462,
+				"shape": [
+					77,
+					3,
+					2
+				]
+			},
+			"start.32.covariances": {
+				"offset": 47174,
+				"length": 924,
+				"shape": [
+					77,
+					3,
+					2,
+					2
+				]
+			},
+			"start.32.weights": {
+				"offset": 48098,
+				"length": 231,
+				"shape": [
+					77,
+					3
+				]
+			},
+			"start.32.logLikelihood": {
+				"offset": 48329,
+				"length": 77,
+				"shape": [
+					77
+				]
+			},
+			"start.33.means": {
+				"offset": 48406,
+				"length": 540,
+				"shape": [
+					90,
+					3,
+					2
+				]
+			},
+			"start.33.covariances": {
+				"offset": 48946,
+				"length": 1080,
+				"shape": [
+					90,
+					3,
+					2,
+					2
+				]
+			},
+			"start.33.weights": {
+				"offset": 50026,
+				"length": 270,
+				"shape": [
+					90,
+					3
+				]
+			},
+			"start.33.logLikelihood": {
+				"offset": 50296,
+				"length": 90,
+				"shape": [
+					90
+				]
+			},
+			"start.34.means": {
+				"offset": 50386,
+				"length": 324,
+				"shape": [
+					54,
+					3,
+					2
+				]
+			},
+			"start.34.covariances": {
+				"offset": 50710,
+				"length": 648,
+				"shape": [
+					54,
+					3,
+					2,
+					2
+				]
+			},
+			"start.34.weights": {
+				"offset": 51358,
+				"length": 162,
+				"shape": [
+					54,
+					3
+				]
+			},
+			"start.34.logLikelihood": {
+				"offset": 51520,
+				"length": 54,
+				"shape": [
+					54
+				]
+			},
+			"start.35.means": {
+				"offset": 51574,
+				"length": 474,
+				"shape": [
+					79,
+					3,
+					2
+				]
+			},
+			"start.35.covariances": {
+				"offset": 52048,
+				"length": 948,
+				"shape": [
+					79,
+					3,
+					2,
+					2
+				]
+			},
+			"start.35.weights": {
+				"offset": 52996,
+				"length": 237,
+				"shape": [
+					79,
+					3
+				]
+			},
+			"start.35.logLikelihood": {
+				"offset": 53233,
+				"length": 79,
+				"shape": [
+					79
+				]
+			},
+			"start.36.means": {
+				"offset": 53312,
+				"length": 516,
+				"shape": [
+					86,
+					3,
+					2
+				]
+			},
+			"start.36.covariances": {
+				"offset": 53828,
+				"length": 1032,
+				"shape": [
+					86,
+					3,
+					2,
+					2
+				]
+			},
+			"start.36.weights": {
+				"offset": 54860,
+				"length": 258,
+				"shape": [
+					86,
+					3
+				]
+			},
+			"start.36.logLikelihood": {
+				"offset": 55118,
+				"length": 86,
+				"shape": [
+					86
+				]
+			},
+			"start.37.means": {
+				"offset": 55204,
+				"length": 216,
+				"shape": [
+					36,
+					3,
+					2
+				]
+			},
+			"start.37.covariances": {
+				"offset": 55420,
+				"length": 432,
+				"shape": [
+					36,
+					3,
+					2,
+					2
+				]
+			},
+			"start.37.weights": {
+				"offset": 55852,
+				"length": 108,
+				"shape": [
+					36,
+					3
+				]
+			},
+			"start.37.logLikelihood": {
+				"offset": 55960,
+				"length": 36,
+				"shape": [
+					36
+				]
+			},
+			"start.38.means": {
+				"offset": 55996,
+				"length": 288,
+				"shape": [
+					48,
+					3,
+					2
+				]
+			},
+			"start.38.covariances": {
+				"offset": 56284,
+				"length": 576,
+				"shape": [
+					48,
+					3,
+					2,
+					2
+				]
+			},
+			"start.38.weights": {
+				"offset": 56860,
+				"length": 144,
+				"shape": [
+					48,
+					3
+				]
+			},
+			"start.38.logLikelihood": {
+				"offset": 57004,
+				"length": 48,
+				"shape": [
+					48
+				]
+			},
+			"start.39.means": {
+				"offset": 57052,
+				"length": 228,
+				"shape": [
+					38,
+					3,
+					2
+				]
+			},
+			"start.39.covariances": {
+				"offset": 57280,
+				"length": 456,
+				"shape": [
+					38,
+					3,
+					2,
+					2
+				]
+			},
+			"start.39.weights": {
+				"offset": 57736,
+				"length": 114,
+				"shape": [
+					38,
+					3
+				]
+			},
+			"start.39.logLikelihood": {
+				"offset": 57850,
+				"length": 38,
+				"shape": [
+					38
+				]
+			},
+			"good.responsibilities": {
+				"offset": 57888,
+				"length": 45390,
+				"shape": [
+					85,
+					178,
+					3
+				]
+			},
+			"poor.responsibilities": {
+				"offset": 103278,
+				"length": 68352,
+				"shape": [
+					128,
+					178,
+					3
+				]
+			}
+		}
+	}
+}

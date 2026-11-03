@@ -1,0 +1,637 @@
+{
+	"schemaVersion": 1,
+	"kind": "classical-tsne",
+	"tab": "tsne",
+	"dataset": {
+		"name": "Digits (scikit-learn load_digits)",
+		"source": "UCI Optical Recognition of Handwritten Digits",
+		"url": "https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits",
+		"license": "CC BY 4.0",
+		"samples": 1797,
+		"pixels": 64,
+		"scale": "pixel / 16"
+	},
+	"run": {
+		"perplexity": 30.0,
+		"earlyExaggeration": 12.0,
+		"exploration": 250,
+		"iterations": 1000,
+		"momentum": [
+			0.5,
+			0.8
+		],
+		"learningRate": 50.0,
+		"method": "exact",
+		"init": "pca",
+		"seed": 0,
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9,
+			10,
+			12,
+			14,
+			16,
+			18,
+			20,
+			22,
+			24,
+			26,
+			28,
+			30,
+			32,
+			34,
+			36,
+			38,
+			40,
+			42,
+			44,
+			46,
+			48,
+			50,
+			55,
+			60,
+			65,
+			70,
+			75,
+			80,
+			85,
+			90,
+			95,
+			100,
+			105,
+			110,
+			115,
+			120,
+			125,
+			130,
+			135,
+			140,
+			145,
+			150,
+			155,
+			160,
+			165,
+			170,
+			175,
+			180,
+			185,
+			190,
+			195,
+			200,
+			205,
+			210,
+			215,
+			220,
+			225,
+			230,
+			235,
+			240,
+			245,
+			250,
+			255,
+			260,
+			270,
+			280,
+			290,
+			300,
+			310,
+			320,
+			330,
+			340,
+			350,
+			360,
+			370,
+			380,
+			390,
+			400,
+			410,
+			420,
+			430,
+			440,
+			450,
+			460,
+			470,
+			480,
+			490,
+			500,
+			525,
+			550,
+			575,
+			600,
+			625,
+			650,
+			675,
+			700,
+			725,
+			750,
+			775,
+			800,
+			825,
+			850,
+			875,
+			900,
+			925,
+			950,
+			975,
+			1000
+		],
+		"checkAt": [
+			0,
+			100,
+			240,
+			250,
+			500,
+			900
+		],
+		"knn": 10,
+		"minGain": 0.01
+	},
+	"main": {
+		"perplexity": 30.0,
+		"learningRate": 50.0,
+		"iterations": 1000,
+		"klDivergence": 0.679975,
+		"klFinal": 0.679922,
+		"trustworthiness": 0.992328,
+		"knnAgreement": 0.98197,
+		"pMatch": 4.06576e-19
+	},
+	"noExaggeration": {
+		"frames": [
+			0,
+			10,
+			25,
+			50,
+			100,
+			250,
+			500,
+			1000
+		],
+		"klFinal": 0.677981,
+		"trustworthiness": 0.992822,
+		"knnAgreement": 0.984029,
+		"knnAgreementByFrame": [
+			0.57084,
+			0.865331,
+			0.982415,
+			0.983695,
+			0.984196,
+			0.984085,
+			0.984196,
+			0.984029
+		]
+	},
+	"sweep": [
+		{
+			"perplexity": 5.0,
+			"klDivergence": 0.879564,
+			"trustworthiness": 0.991124,
+			"knnAgreement": 0.977184,
+			"medianSigma": 0.328415
+		},
+		{
+			"perplexity": 30.0,
+			"klDivergence": 0.679975,
+			"trustworthiness": 0.992328,
+			"knnAgreement": 0.98197,
+			"medianSigma": 0.513973
+		},
+		{
+			"perplexity": 100.0,
+			"klDivergence": 0.527213,
+			"trustworthiness": 0.991516,
+			"knnAgreement": 0.974569,
+			"medianSigma": 0.664151
+		},
+		{
+			"perplexity": 300.0,
+			"klDivergence": 0.439628,
+			"trustworthiness": 0.985824,
+			"knnAgreement": 0.959711,
+			"medianSigma": 0.832931
+		}
+	],
+	"umap": {
+		"nNeighbors": 15,
+		"minDist": 0.1,
+		"epochs": [
+			1,
+			2,
+			3,
+			6,
+			11,
+			21,
+			51,
+			101,
+			201,
+			351,
+			500
+		],
+		"a": 1.57694,
+		"b": 0.895061,
+		"edges": 34236,
+		"trustworthiness": 0.988234,
+		"knnAgreement": 0.98158,
+		"knnAgreementByFrame": [
+			0.722148,
+			0.382805,
+			0.364162,
+			0.521035,
+			0.720868,
+			0.848859,
+			0.905064,
+			0.943016,
+			0.951029,
+			0.972732,
+			0.98158
+		]
+	},
+	"umapSweep": [
+		{
+			"nNeighbors": 5,
+			"minDist": 0.1,
+			"trustworthiness": 0.989877,
+			"knnAgreement": 0.979577
+		},
+		{
+			"nNeighbors": 50,
+			"minDist": 0.1,
+			"trustworthiness": 0.985481,
+			"knnAgreement": 0.973957
+		},
+		{
+			"nNeighbors": 15,
+			"minDist": 0.0,
+			"trustworthiness": 0.989134,
+			"knnAgreement": 0.979633
+		},
+		{
+			"nNeighbors": 15,
+			"minDist": 0.5,
+			"trustworthiness": 0.984838,
+			"knnAgreement": 0.972398
+		}
+	],
+	"capture": {
+		"timestamp": "2026-11-03T13:18:38.591503+00:00",
+		"device": "cpu (arm64, Darwin)",
+		"dtype": "float64",
+		"python": "3.12.12",
+		"packages": {
+			"scikit-learn": "1.9.1",
+			"numpy": "2.5.4",
+			"scipy": "1.18.1",
+			"umap-learn": "0.5.12",
+			"numba": "0.68.1",
+			"pynndescent": "0.7.0"
+		},
+		"cpuCount": 14,
+		"script": "scripts/classical/record_tsne.py",
+		"scriptSha256": "f06d7e0cfbdeb87a56f1d631fb308096c54dc18f6e51d9e8158718d660e8d27f"
+	},
+	"data": {
+		"file": "tsne.f32",
+		"sha256": "571f51d53aea6d37d7a73acfadfad5c1c39e4e6b841cfbbefbb7930e827fb6f3",
+		"bytes": 2920432,
+		"tensors": {
+			"x": {
+				"offset": 0,
+				"length": 115008,
+				"shape": [
+					1797,
+					64
+				]
+			},
+			"label": {
+				"offset": 115008,
+				"length": 1797,
+				"shape": [
+					1797
+				]
+			},
+			"beta": {
+				"offset": 116805,
+				"length": 1797,
+				"shape": [
+					1797
+				]
+			},
+			"frames": {
+				"offset": 118602,
+				"length": 420498,
+				"shape": [
+					117,
+					1797,
+					2
+				]
+			},
+			"kl": {
+				"offset": 539100,
+				"length": 1001,
+				"shape": [
+					1001
+				]
+			},
+			"gradNorm": {
+				"offset": 540101,
+				"length": 1000,
+				"shape": [
+					1000
+				]
+			},
+			"spread": {
+				"offset": 541101,
+				"length": 1001,
+				"shape": [
+					1001
+				]
+			},
+			"knnAgreement": {
+				"offset": 542102,
+				"length": 117,
+				"shape": [
+					117
+				]
+			},
+			"check.0.params": {
+				"offset": 542219,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.0.update": {
+				"offset": 545813,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.0.gains": {
+				"offset": 549407,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.0.after": {
+				"offset": 553001,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.100.params": {
+				"offset": 556595,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.100.update": {
+				"offset": 560189,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.100.gains": {
+				"offset": 563783,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.100.after": {
+				"offset": 567377,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.240.params": {
+				"offset": 570971,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.240.update": {
+				"offset": 574565,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.240.gains": {
+				"offset": 578159,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.240.after": {
+				"offset": 581753,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.250.params": {
+				"offset": 585347,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.250.update": {
+				"offset": 588941,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.250.gains": {
+				"offset": 592535,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.250.after": {
+				"offset": 596129,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.500.params": {
+				"offset": 599723,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.500.update": {
+				"offset": 603317,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.500.gains": {
+				"offset": 606911,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.500.after": {
+				"offset": 610505,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.900.params": {
+				"offset": 614099,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.900.update": {
+				"offset": 617693,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.900.gains": {
+				"offset": 621287,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"check.900.after": {
+				"offset": 624881,
+				"length": 3594,
+				"shape": [
+					3594
+				]
+			},
+			"noExaggeration.frames": {
+				"offset": 628475,
+				"length": 28752,
+				"shape": [
+					8,
+					1797,
+					2
+				]
+			},
+			"noExaggeration.kl": {
+				"offset": 657227,
+				"length": 1001,
+				"shape": [
+					1001
+				]
+			},
+			"sweep.0": {
+				"offset": 658228,
+				"length": 3594,
+				"shape": [
+					1797,
+					2
+				]
+			},
+			"sweep.1": {
+				"offset": 661822,
+				"length": 3594,
+				"shape": [
+					1797,
+					2
+				]
+			},
+			"sweep.2": {
+				"offset": 665416,
+				"length": 3594,
+				"shape": [
+					1797,
+					2
+				]
+			},
+			"sweep.3": {
+				"offset": 669010,
+				"length": 3594,
+				"shape": [
+					1797,
+					2
+				]
+			},
+			"umap.frames": {
+				"offset": 672604,
+				"length": 39534,
+				"shape": [
+					11,
+					1797,
+					2
+				]
+			},
+			"umap.sigma": {
+				"offset": 712138,
+				"length": 1797,
+				"shape": [
+					1797
+				]
+			},
+			"umap.rho": {
+				"offset": 713935,
+				"length": 1797,
+				"shape": [
+					1797
+				]
+			},
+			"umapSweep.0": {
+				"offset": 715732,
+				"length": 3594,
+				"shape": [
+					1797,
+					2
+				]
+			},
+			"umapSweep.1": {
+				"offset": 719326,
+				"length": 3594,
+				"shape": [
+					1797,
+					2
+				]
+			},
+			"umapSweep.2": {
+				"offset": 722920,
+				"length": 3594,
+				"shape": [
+					1797,
+					2
+				]
+			},
+			"umapSweep.3": {
+				"offset": 726514,
+				"length": 3594,
+				"shape": [
+					1797,
+					2
+				]
+			}
+		}
+	}
+}

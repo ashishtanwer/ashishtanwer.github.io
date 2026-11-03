@@ -1,0 +1,3080 @@
+{
+ "kind": "cnn-features",
+ "tab": "cnn-features",
+ "model": {
+  "id": "torchvision/googlenet",
+  "name": "GoogLeNet (Inception v1)",
+  "revision": "IMAGENET1K_V1",
+  "url": "https://docs.pytorch.org/vision/main/models/generated/torchvision.models.googlenet.html",
+  "license": "BSD-3-Clause (torchvision)",
+  "weights": {
+   "id": "torchvision GoogLeNet_Weights.IMAGENET1K_V1",
+   "url": "https://download.pytorch.org/models/googlenet-1378be20.pth",
+   "sha256": "1378be20a8e875cf1568b8a71654e704449655e34711a959a38b04fb34905cef"
+  },
+  "top1": 69.778,
+  "note": "torchvision: weights ported from the original paper; its \"5 × 5\" branch is a 3 × 3 convolution, as in the TensorFlow model they came from",
+  "parameters": 6624904,
+  "paper": "https://arxiv.org/abs/1409.4842"
+ },
+ "images": {
+  "name": "Open Images V4, validation split",
+  "count": 3000,
+  "seed": 0,
+  "rule": "images whose Rotation field is 0, sorted by ImageID; 3,000 drawn without replacement (NumPy default_rng(0))",
+  "license": "CC BY 2.0 (every validation image, per its metadata)",
+  "url": "https://storage.googleapis.com/openimages/web/index.html",
+  "paper": "https://arxiv.org/abs/1811.00982",
+  "crop": "shortest side to 256 (bilinear), centre 224"
+ },
+ "featureViz": {
+  "objective": "mean of the channel over all positions (Lucid \"channel\")",
+  "parametrization": "Fourier coefficients scaled by 1/max(|f|, 1/224), inverse FFT ÷ 4, decorrelated colour (√ of ImageNet colour SVD), sigmoid",
+  "transforms": "pad 12 px grey; jitter ≤ 8 px; scale 0.90–1.10; rotate −10°…10° (0 a quarter of the time); jitter ≤ 4 px; fresh each step",
+  "raw": "raw pixels through a sigmoid, starting from N(0, 1²) noise, no transforms",
+  "optimizer": "Adam, lr 0.05",
+  "steps": 512,
+  "kept": [
+   0,
+   16,
+   64,
+   256
+  ],
+  "seed": 0,
+  "device": "mps",
+  "lucid": "https://github.com/tensorflow/lucid"
+ },
+ "stages": [
+  {
+   "name": "conv3",
+   "channels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "width": 192,
+   "grid": [
+    56,
+    56
+   ],
+   "receptiveField": 19,
+   "crop": 48,
+   "seconds": {
+    "regularized": 68.7,
+    "raw": 17.8
+   }
+  },
+  {
+   "name": "inception3b",
+   "channels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "width": 480,
+   "grid": [
+    28,
+    28
+   ],
+   "receptiveField": 59,
+   "crop": 64,
+   "seconds": {
+    "regularized": 19.9,
+    "raw": 11.8
+   }
+  },
+  {
+   "name": "inception4b",
+   "channels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "width": 512,
+   "grid": [
+    14,
+    14
+   ],
+   "receptiveField": 139,
+   "crop": 139,
+   "seconds": {
+    "regularized": 19.8,
+    "raw": 14.0
+   }
+  },
+  {
+   "name": "inception4d",
+   "channels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "width": 528,
+   "grid": [
+    14,
+    14
+   ],
+   "receptiveField": 203,
+   "crop": 203,
+   "seconds": {
+    "regularized": 21.8,
+    "raw": 15.5
+   }
+  },
+  {
+   "name": "inception4e",
+   "channels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "width": 832,
+   "grid": [
+    14,
+    14
+   ],
+   "receptiveField": 235,
+   "crop": 224,
+   "seconds": {
+    "regularized": 22.2,
+    "raw": 16.5
+   }
+  },
+  {
+   "name": "inception5b",
+   "channels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "width": 1024,
+   "grid": [
+    7,
+    7
+   ],
+   "receptiveField": 379,
+   "crop": 224,
+   "seconds": {
+    "regularized": 23.5,
+    "raw": 18.3
+   }
+  }
+ ],
+ "top": 6,
+ "topIds": {
+  "conv3": [
+   [
+    "ec5372f303a7b396",
+    "6672d7ee2ebd6e5d",
+    "93edd03d4dc21c89",
+    "6f11f23cea22966f",
+    "857b6398458a0474",
+    "912ca58be69eee96"
+   ],
+   [
+    "56801db675e013bf",
+    "c23e48dde864fd54",
+    "a27a9243e6b353dc",
+    "412848df1320e9ce",
+    "f93491fc41aea089",
+    "0f5171d4b36bf229"
+   ],
+   [
+    "cc69a9eb7fe70f8f",
+    "595b516834a1a57f",
+    "433351080edae7e6",
+    "554e2ce74443f55b",
+    "0ac166d12e401a98",
+    "13b35a2fb629446e"
+   ],
+   [
+    "f2688c0eb1043f5c",
+    "ac6558d78d28f921",
+    "449ab3574968820d",
+    "8ee7bfc2adf361eb",
+    "48c23ee234f733eb",
+    "3e3f45d51c4a049e"
+   ],
+   [
+    "681001533b0b3a18",
+    "cc69a9eb7fe70f8f",
+    "3c150369d937d139",
+    "4742fb7019167c72",
+    "90920aeb973843da",
+    "9c351bc9ee8c2b51"
+   ],
+   [
+    "f6bdc72ea62ba119",
+    "56801db675e013bf",
+    "7d0dcdc0f73ea9dc",
+    "ac6558d78d28f921",
+    "a27a9243e6b353dc",
+    "f9dad76f10403183"
+   ],
+   [
+    "7a180bbb61401d59",
+    "56801db675e013bf",
+    "81988b6d2a52ff05",
+    "f2fbceebb45c2260",
+    "c26218c11af68d4c",
+    "78dfb7313cf18766"
+   ],
+   [
+    "7a180bbb61401d59",
+    "56801db675e013bf",
+    "23e5a8469bf4344e",
+    "f8ca116285a527c4",
+    "4dbcb861be92912c",
+    "ec5372f303a7b396"
+   ]
+  ],
+  "inception3b": [
+   [
+    "8a602ec25f57653e",
+    "0700fc00b1ce2612",
+    "99edefe3740881ce",
+    "363ae76c1f4a1c0d",
+    "11d7b238a0f8db56",
+    "82560833eab971a5"
+   ],
+   [
+    "f80fec51c16cf184",
+    "8ad20899f493a8c0",
+    "f4b4e8594afb03f2",
+    "de2772e16ca8a2c0",
+    "974ae17fb029a956",
+    "8367c62dac18cf8d"
+   ],
+   [
+    "604af23ba71c2cf7",
+    "103fe1d03c93fb17",
+    "7259f87c5ffc8cd2",
+    "e708b92ae16d73cb",
+    "e2f7e59f95b889c3",
+    "30e38b3289619651"
+   ],
+   [
+    "296c5668f84bdc3c",
+    "0581f63e01f70ead",
+    "3b78e7bc404e7549",
+    "10fb570420734d6c",
+    "4750b8787882a524",
+    "4fc8246e1ffddf77"
+   ],
+   [
+    "3d101db207902196",
+    "2c3ebd619e0da940",
+    "837455ab182613f7",
+    "9dba9c1e70302873",
+    "1de38c170bce1b3c",
+    "e0f10f90cf6150f0"
+   ],
+   [
+    "f37311426841caf0",
+    "936bce5d805329da",
+    "48c23ee234f733eb",
+    "1b9361a6e6a9dd89",
+    "0ccdcc825086803a",
+    "3175e3a157b311e7"
+   ],
+   [
+    "6d88b954ad5295fc",
+    "eb297ce62f882402",
+    "cec622472f1f0092",
+    "59e2b03991f6a4ea",
+    "d0f4244d04835dc4",
+    "b8a0fb549656e6dc"
+   ],
+   [
+    "bb5399d8f5222646",
+    "141a0086d791f30a",
+    "af480e7927502211",
+    "05e1950bf46569a0",
+    "b68ab20605e93c1c",
+    "e60c8574d93ac919"
+   ]
+  ],
+  "inception4b": [
+   [
+    "1c82b82a88c432cb",
+    "087ad820683067b0",
+    "e48175c7866ade38",
+    "2c3ebd619e0da940",
+    "9fa34f43b920f689",
+    "824e2908879c131d"
+   ],
+   [
+    "3c150369d937d139",
+    "8a3777a25f493742",
+    "186d668b88451394",
+    "d3af9f99b1ab1f0f",
+    "543a5cb895cf690b",
+    "857b6398458a0474"
+   ],
+   [
+    "70c9dcc9b361e1de",
+    "ef71b34edf8edd8d",
+    "334823af8772202b",
+    "908b7ddec75da210",
+    "4cacf91612e0c25d",
+    "dc747e1d542bf243"
+   ],
+   [
+    "8cb74f2517f0a7ae",
+    "0581f63e01f70ead",
+    "6cf289736ff3b6b4",
+    "4d03f18377578c53",
+    "449ab3574968820d",
+    "cce8238132b27960"
+   ],
+   [
+    "4a79af705404ab96",
+    "e5a7e8fe6c1f3948",
+    "ae90ffbfef2831ec",
+    "e28d0c47664a1986",
+    "35dc1191f902bd74",
+    "3f6654fd5a3e5ccf"
+   ],
+   [
+    "95a2301dfa7e1c94",
+    "ed5344bed8018a43",
+    "272781f2753c00a1",
+    "84af25555f7c818b",
+    "7ff05f195437d318",
+    "d540c2a75cbb78ea"
+   ],
+   [
+    "636dbb4aea120bae",
+    "45c6589db22f7524",
+    "47b0312ea225781d",
+    "6c694386d7a217ea",
+    "9a9eb9cc4635f2b5",
+    "0347677e05719710"
+   ],
+   [
+    "0572b61a4613221d",
+    "e1be337cbe35181f",
+    "15799afd3f43e56a",
+    "3983c3fc401fb665",
+    "30f0848269103d1f",
+    "9036157b782b13e5"
+   ]
+  ],
+  "inception4d": [
+   [
+    "8053c38d6d802e08",
+    "0c73e9f99274d223",
+    "ef7b80ed65e8aa76",
+    "ff170cdebcd8d899",
+    "d8c13dba00bd5e65",
+    "a262bb9d3cadae69"
+   ],
+   [
+    "cc7146ee57dd3b70",
+    "6ae33df5f4d87701",
+    "b158eac8fa185f9c",
+    "7de0f89ec55f83c1",
+    "dc081bac9957131c",
+    "aa8d4b32566756dc"
+   ],
+   [
+    "a6ee28c427dafa94",
+    "126197043e0e77a9",
+    "2e2b0436bde738e7",
+    "481251260745178b",
+    "4c4ad4c4c7c24929",
+    "7e07848e1c0bffdd"
+   ],
+   [
+    "cacb42f56413a86f",
+    "9af708441e8abd6d",
+    "49a7d4072520bce9",
+    "8f856c17bec02419",
+    "15799afd3f43e56a",
+    "429a1dc98a68b015"
+   ],
+   [
+    "9851e17333cc5b05",
+    "21ad3641156a1107",
+    "76b8e5c99b52d348",
+    "845759a510d23542",
+    "43e1adff2f02db64",
+    "809bb22c4ad40308"
+   ],
+   [
+    "e4d6e7addfa0777c",
+    "272781f2753c00a1",
+    "2fd4c20ccb9282d6",
+    "517f36764e316d50",
+    "79cc12373e3461b6",
+    "6d9338d7cd5c2343"
+   ],
+   [
+    "9a07ebae25b79349",
+    "3866289709f96f4d",
+    "94c99b3aea7ee041",
+    "f7536f94cafdac52",
+    "0b312a9e9c21c247",
+    "2ae454e86b4a021d"
+   ],
+   [
+    "4ce448635c113f11",
+    "915cc32087a39342",
+    "f2d2e89640ef8258",
+    "27e59184c6c621dc",
+    "a6ee28c427dafa94",
+    "36d2f7a33a9562e1"
+   ]
+  ],
+  "inception4e": [
+   [
+    "005b598d8fecb139",
+    "7d836745544db140",
+    "ec59924d7484e7fb",
+    "857b6398458a0474",
+    "6bc153aa89749a00",
+    "3834ab435eef7ff4"
+   ],
+   [
+    "b601f5118361cdec",
+    "fe44d7a4e70a8209",
+    "fca7ec0bf3ca91cd",
+    "56072270bb285c9c",
+    "90f957b475c41da9",
+    "f900dfb5cecb4af0"
+   ],
+   [
+    "fb3fed6d3c8c3276",
+    "abf8cc90370e7066",
+    "b348d915bbfcae9b",
+    "105bb771a8fc8f47",
+    "e15a37c2a5626f54",
+    "f35ad6328ed3ce8b"
+   ],
+   [
+    "605a90b97d9ceb4e",
+    "37dbbdc19bd21765",
+    "c1d95c16fa8c7254",
+    "5013a8a33f521259",
+    "bc23ad8a6dfdcecc",
+    "42912153cba51c7e"
+   ],
+   [
+    "76a378a08464d3e5",
+    "dc747e1d542bf243",
+    "e5535a2cf65c6f2b",
+    "8bb85a35543e18ef",
+    "1eeda2f2e8f31933",
+    "034f71ee4e111261"
+   ],
+   [
+    "7259f87c5ffc8cd2",
+    "e8636f672e4243c1",
+    "67d2ab35698d4ced",
+    "ae5097c5fe8a0824",
+    "678e32c5a897c181",
+    "e78a42acf2fa26b4"
+   ],
+   [
+    "9851e17333cc5b05",
+    "946da51dcb93a138",
+    "e5c5e4e7999cc2ba",
+    "c2b9ea7fa6acb336",
+    "d4d97d6bcfe34f66",
+    "13c7fe8cee9111a5"
+   ],
+   [
+    "3aee04bf8fce5717",
+    "9ff70a3ea47fffa4",
+    "47c410a1973b7fa2",
+    "f2c33b284eaf4945",
+    "76b8e5c99b52d348",
+    "022ba69f29b7383f"
+   ]
+  ],
+  "inception5b": [
+   [
+    "4fa6f0a5f32109d5",
+    "749610d50093e03a",
+    "fad127f9fa3316ba",
+    "7856edf3e921a039",
+    "12ca5298fc9865d2",
+    "7d0dcdc0f73ea9dc"
+   ],
+   [
+    "633935f7e4c534b1",
+    "1c7afb8df810987c",
+    "de65441a9370966a",
+    "a382e559b760c916",
+    "d19489c45985294b",
+    "6ef26d875ac4caf2"
+   ],
+   [
+    "b50483f7668f354a",
+    "8bbd4ef81880961d",
+    "8c1a88fb02e198ce",
+    "8157a28a69989c71",
+    "1aefd062c80478d1",
+    "2efd7b446d41cc93"
+   ],
+   [
+    "e15b3f94b4d3e3eb",
+    "ee515c9191f83f06",
+    "b23bfeadc650227b",
+    "e2daf7ef50cac4ed",
+    "7d26985faa71cfe9",
+    "98da3ab20187069b"
+   ],
+   [
+    "34355691cb8bbc19",
+    "ca52643ff4e775b7",
+    "88dbf149f90fdfce",
+    "2cbef3f360dd4113",
+    "54e2a340c0de2e5d",
+    "ccda9e268769b54b"
+   ],
+   [
+    "d092fc428eb4be1d",
+    "4959e1685dbdb2a1",
+    "51b8be0b944a6e9b",
+    "f3a42d394fcdb4ea",
+    "c9203457ab97042a",
+    "dfc0dd2c0d823da1"
+   ],
+   [
+    "cfa308f41737905d",
+    "db3dd370a393d5e4",
+    "2fdbe9ca76fdfd99",
+    "bd6d7e915f016937",
+    "c540d9c96b6a79a2",
+    "595b516834a1a57f"
+   ],
+   [
+    "33aed84d3fc39a7e",
+    "6dd4278eedb92d97",
+    "5d82587a68964be8",
+    "739f43679fadf6b3",
+    "f80fec51c16cf184",
+    "de34b0a92f6a5e40"
+   ]
+  ]
+ },
+ "files": {
+  "viz.conv3": {
+   "file": "viz-conv3.jpg",
+   "tile": 224,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "a8e215fcdb76e07e7bc3484386e37f21457de3c099ea2a794d00dafa0e66c7a6",
+   "bytes": 340660
+  },
+  "raw.conv3": {
+   "file": "raw-conv3.jpg",
+   "tile": 112,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "e7dfb6046638e4c266f688d81cbff9f879408469fffb48af7d5befff88d7e1e9",
+   "bytes": 64847
+  },
+  "steps.conv3": {
+   "file": "steps-conv3.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 4,
+   "sha256": "ac0a20b0c23951b67705c4dd10e2b652db1f353096fbfddf1eafa4c2203e9f7c",
+   "bytes": 85790
+  },
+  "top.conv3": {
+   "file": "top-conv3.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 6,
+   "sha256": "29ec6172e7d1106bd8552671da575899d52f6babb0f62496a8f0d2b9f29a17f0",
+   "bytes": 86944
+  },
+  "viz.inception3b": {
+   "file": "viz-inception3b.jpg",
+   "tile": 224,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "3a2cdd5c71cda25923bc109c9ec4c269c7bf7e1822a4dea0ad26bd32af9efdef",
+   "bytes": 300987
+  },
+  "raw.inception3b": {
+   "file": "raw-inception3b.jpg",
+   "tile": 112,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "e8d1829b1f94dbff277dd3585b7e35e6a14cb7753cef00c80d12645a97032403",
+   "bytes": 65633
+  },
+  "steps.inception3b": {
+   "file": "steps-inception3b.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 4,
+   "sha256": "17282364337e1f67643bafb13be7de503f5e4ce513af2296bd70b14b581680cc",
+   "bytes": 83828
+  },
+  "top.inception3b": {
+   "file": "top-inception3b.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 6,
+   "sha256": "a4751e9a0622d8b918a461e595dd5a5b22aa9887530a5e9fc83edef02b7deac5",
+   "bytes": 97660
+  },
+  "viz.inception4b": {
+   "file": "viz-inception4b.jpg",
+   "tile": 224,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "dd8e23b2ef3472d87025b5d6f3f3fe59eb6071aa49afc9ea2c81049cf8ad3a19",
+   "bytes": 279964
+  },
+  "raw.inception4b": {
+   "file": "raw-inception4b.jpg",
+   "tile": 112,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "c83f71efd17d26d76b9780c2c4a9681883ea12c41f1327d83580818ffae2717e",
+   "bytes": 62103
+  },
+  "steps.inception4b": {
+   "file": "steps-inception4b.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 4,
+   "sha256": "0ddb37b3b38531f70aa8297688161285ecc5e03b76799c515a4d7ee12adec476",
+   "bytes": 87178
+  },
+  "top.inception4b": {
+   "file": "top-inception4b.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 6,
+   "sha256": "4e2b3b11cda106fee6b5023fb20705818bb417bfbaa9ad7ee2d7da6dbac9acfa",
+   "bytes": 132930
+  },
+  "viz.inception4d": {
+   "file": "viz-inception4d.jpg",
+   "tile": 224,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "5e9efeac4c3855ca0deff54c5c7679e8fdd9b3acd8d60e98595db16ebb92e781",
+   "bytes": 247102
+  },
+  "raw.inception4d": {
+   "file": "raw-inception4d.jpg",
+   "tile": 112,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "4d97cca4687743aa36611f00eb0e718003075c0c904c7796dbb4ca98708a8f1a",
+   "bytes": 60501
+  },
+  "steps.inception4d": {
+   "file": "steps-inception4d.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 4,
+   "sha256": "3c4b02ee6dcd807460e129b5f14af7d6961eba833efe1aaa62b747112fe54af6",
+   "bytes": 80288
+  },
+  "top.inception4d": {
+   "file": "top-inception4d.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 6,
+   "sha256": "ea3a7f5e8ab935c2fe647b2fe1aa169020df6dcf5b4a8adf9cbc90f6c25f6cc0",
+   "bytes": 135953
+  },
+  "viz.inception4e": {
+   "file": "viz-inception4e.jpg",
+   "tile": 224,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "468fe51e931f4bd63c301398b47af264489005989381ecfb404a959f9bc0d691",
+   "bytes": 264822
+  },
+  "raw.inception4e": {
+   "file": "raw-inception4e.jpg",
+   "tile": 112,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "f8654cab1e8ac7161ad4de1d94b5974ef69e9777cacb0cd681a9536c949d9549",
+   "bytes": 48602
+  },
+  "steps.inception4e": {
+   "file": "steps-inception4e.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 4,
+   "sha256": "2c7de474ec8b221cc6735907ff19795d36c6841a005d202f23b328325b11481e",
+   "bytes": 72301
+  },
+  "top.inception4e": {
+   "file": "top-inception4e.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 6,
+   "sha256": "f0f372cde506111a8fb5fac6a5224468607c53e92c352e61833fce890a2b7a52",
+   "bytes": 137365
+  },
+  "viz.inception5b": {
+   "file": "viz-inception5b.jpg",
+   "tile": 224,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "2f7e0b471acdab4debb21c7fbe941fed2f0daf2e3f819aa498ee1f5ab5100a5e",
+   "bytes": 257513
+  },
+  "raw.inception5b": {
+   "file": "raw-inception5b.jpg",
+   "tile": 112,
+   "rows": 1,
+   "columns": 8,
+   "sha256": "acc508cb88c8c34e7f7dddcda5021fa07a53e8e4c132eddb16c7e981d4eaa179",
+   "bytes": 54301
+  },
+  "steps.inception5b": {
+   "file": "steps-inception5b.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 4,
+   "sha256": "7cde82dd74fcb5363243a183154d44993fa20f48114bfe7e16a5fe8ea6460073",
+   "bytes": 84165
+  },
+  "top.inception5b": {
+   "file": "top-inception5b.jpg",
+   "tile": 96,
+   "rows": 8,
+   "columns": 6,
+   "sha256": "45f9b7fcfadd493ca70ee4739cd6b2ad0403c0d2c3bb42cc995dab3f76a29cd6",
+   "bytes": 135906
+  },
+  "cam.0": {
+   "file": "cam-0.jpg",
+   "sha256": "64e4a49112f4e76243d1d5f7caa3ef20a0a023d8577026dff08f7ad5fcb559a5",
+   "bytes": 20671
+  },
+  "cam.1": {
+   "file": "cam-1.jpg",
+   "sha256": "cbd5584166ad1e376adf6a95a06bcf157e3ccf427e3a1c3f9abe380be6104df7",
+   "bytes": 16981
+  },
+  "cam.2": {
+   "file": "cam-2.jpg",
+   "sha256": "a8601710350c4442e0963fcc816633971eec8eab90938d9bc4a454ac05c4f461",
+   "bytes": 17507
+  },
+  "cam.3": {
+   "file": "cam-3.jpg",
+   "sha256": "5723709a98baa985f8a12539f2305f1b54f5ff3e4c62dad4aa7808b41b5747f1",
+   "bytes": 16263
+  },
+  "cam.4": {
+   "file": "cam-4.jpg",
+   "sha256": "02d1a056111b9e07ccbacad168f6f1e5d65ac061f22a4d5658278e6d98f5f81b",
+   "bytes": 11661
+  }
+ },
+ "gradcam": {
+  "layer": "inception5b",
+  "grid": [
+   7,
+   7
+  ],
+  "photos": [
+   {
+    "index": 2286,
+    "id": "c4e8395425f49d05",
+    "why": "a rider: two objects the network names, in two places",
+    "classes": [
+     671,
+     518,
+     444
+    ],
+    "names": [
+     "mountain bike",
+     "crash helmet",
+     "bicycle-built-for-two"
+    ],
+    "p": [
+     0.6619346141815186,
+     0.11600707471370697,
+     0.02883501537144184
+    ],
+    "rank": [
+     1,
+     2,
+     3
+    ],
+    "top5": [
+     "mountain bike",
+     "crash helmet",
+     "bicycle-built-for-two",
+     "moped",
+     "alp"
+    ],
+    "labels": [
+     "Bicycle",
+     "Bicycle helmet",
+     "Bicycle wheel",
+     "Motorcycle",
+     "Person",
+     "Sports equipment",
+     "Tree",
+     "Wheel"
+    ],
+    "credit": {
+     "author": "holding graz",
+     "page": "https://www.flickr.com/photos/holdinggraz/14527052546",
+     "title": "EMX am Schöckl",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    }
+   },
+   {
+    "index": 508,
+    "id": "2b942bdbc72adfec",
+    "why": "two dogs side by side, a dalmatian and a white one",
+    "classes": [
+     251,
+     212,
+     222
+    ],
+    "names": [
+     "dalmatian",
+     "English setter",
+     "kuvasz"
+    ],
+    "p": [
+     0.27298596501350403,
+     0.030317572876811028,
+     0.027476582676172256
+    ],
+    "rank": [
+     1,
+     2,
+     3
+    ],
+    "top5": [
+     "dalmatian",
+     "English setter",
+     "kuvasz",
+     "cocker spaniel",
+     "Labrador retriever"
+    ],
+    "labels": [
+     "Car",
+     "Clothing",
+     "Dog",
+     "Girl",
+     "Human nose",
+     "Land vehicle",
+     "Person",
+     "Woman"
+    ],
+    "credit": {
+     "author": "Cheese Lin",
+     "page": "https://www.flickr.com/photos/cheeseelaine/441656316",
+     "title": "IMGP4899",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    }
+   },
+   {
+    "index": 2816,
+    "id": "f0825d484e29f990",
+    "why": "wildebeest with a few zebras; ImageNet has no wildebeest class",
+    "classes": [
+     346,
+     343,
+     347,
+     340
+    ],
+    "names": [
+     "water buffalo",
+     "warthog",
+     "bison",
+     "zebra"
+    ],
+    "p": [
+     0.5219483375549316,
+     0.15005049109458923,
+     0.1072019413113594,
+     0.01509916502982378
+    ],
+    "rank": [
+     1,
+     2,
+     3,
+     6
+    ],
+    "top5": [
+     "water buffalo",
+     "warthog",
+     "bison",
+     "hartebeest",
+     "African elephant"
+    ],
+    "labels": [
+     "Animal",
+     "Mammal",
+     "Zebra"
+    ],
+    "credit": {
+     "author": "Keith Springer",
+     "page": "https://www.flickr.com/photos/keithspringer/6516755203",
+     "title": "Africa Trip 11-2011 Keith Springer 083",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    }
+   },
+   {
+    "index": 887,
+    "id": "4cc0ef3c4cc19492",
+    "why": "logging with horses; the top class is wrong",
+    "classes": [
+     912,
+     634,
+     703,
+     339
+    ],
+    "names": [
+     "worm fence",
+     "lumbermill",
+     "park bench",
+     "sorrel"
+    ],
+    "p": [
+     0.468502938747406,
+     0.13798223435878754,
+     0.1049160584807396,
+     0.00015148920647334307
+    ],
+    "rank": [
+     1,
+     2,
+     3,
+     175
+    ],
+    "top5": [
+     "worm fence",
+     "lumbermill",
+     "park bench",
+     "maze",
+     "stone wall"
+    ],
+    "labels": [
+     "Horse",
+     "Human head",
+     "Mammal",
+     "Man",
+     "Plant",
+     "Tree"
+    ],
+    "credit": {
+     "author": "Richard",
+     "page": "https://www.flickr.com/photos/rich701/5806540604",
+     "title": "New Jersey logging 3 of 6",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    }
+   },
+   {
+    "index": 99,
+    "id": "074524fc2d1b38c5",
+    "why": "a yawning cat; the top class is wrong",
+    "classes": [
+     333,
+     338,
+     359,
+     283
+    ],
+    "names": [
+     "hamster",
+     "guinea pig",
+     "black-footed ferret",
+     "Persian cat"
+    ],
+    "p": [
+     0.5024706125259399,
+     0.07908456027507782,
+     0.060989368706941605,
+     0.04063182324171066
+    ],
+    "rank": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "top5": [
+     "hamster",
+     "guinea pig",
+     "black-footed ferret",
+     "Persian cat",
+     "Samoyed"
+    ],
+    "labels": [
+     "Cat"
+    ],
+    "credit": {
+     "author": "Ma1974",
+     "page": "https://www.flickr.com/photos/ma1974/364904677",
+     "title": "Godmorgen",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+    }
+   }
+  ]
+ },
+ "credits": {
+  "ec5372f303a7b396": {
+   "author": "Nan Palmero",
+   "page": "https://www.flickr.com/photos/nanpalmero/4800987264",
+   "title": "Yelp San Antonio Luau",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "6672d7ee2ebd6e5d": {
+   "author": "Razor512",
+   "page": "https://www.flickr.com/photos/razor512/4466453746",
+   "title": "Sandisk-Sansa-Fuze",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "93edd03d4dc21c89": {
+   "author": "Jeroen Mirck",
+   "page": "https://www.flickr.com/photos/jeroenmirck/7908935716",
+   "title": "Zombie Lamp",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "6f11f23cea22966f": {
+   "author": "Phoenix Wolf-Ray",
+   "page": "https://www.flickr.com/photos/phoenixwolfray/3810958200",
+   "title": "Bianca at the Cirque",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "857b6398458a0474": {
+   "author": "Grant",
+   "page": "https://www.flickr.com/photos/visual_dichotomy/3437093928",
+   "title": "iphone glamour",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "912ca58be69eee96": {
+   "author": "Maret Hosemann",
+   "page": "https://www.flickr.com/photos/maret1983/6262154338",
+   "title": "Viele bunte Bälle",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "56801db675e013bf": {
+   "author": "Alan L",
+   "page": "https://www.flickr.com/photos/35188692@N00/4774952987",
+   "title": "iPhone art",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "c23e48dde864fd54": {
+   "author": "Eric Prunier",
+   "page": "https://www.flickr.com/photos/96577023@N07/11759379553/",
+   "title": "Industrial legacy",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "a27a9243e6b353dc": {
+   "author": "Infinity Instruments",
+   "page": "https://www.flickr.com/photos/75680924@N08/6976341703",
+   "title": "Kaleidoscope - 14024",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "412848df1320e9ce": {
+   "author": "sputnik",
+   "page": "https://www.flickr.com/photos/hellosputnik/1507603789",
+   "title": "Mailboxes in the 80s",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f93491fc41aea089": {
+   "author": "Cliff",
+   "page": "https://www.flickr.com/photos/nostri-imago/3347077990",
+   "title": "Northrop YB-35 Flying Wing Model",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "0f5171d4b36bf229": {
+   "author": "cea +",
+   "page": "https://www.flickr.com/photos/centralasian/4285570999",
+   "title": "Plaza Plus",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "cc69a9eb7fe70f8f": {
+   "author": "aniaruet",
+   "page": "https://www.flickr.com/photos/7793077@N02/457900392",
+   "title": "propuestas de guiños para campaña publicitaria plaza galerias",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "595b516834a1a57f": {
+   "author": "thierry ehrmann",
+   "page": "https://www.flickr.com/photos/home_of_chaos/13383906564",
+   "title": "ak47 islam",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "433351080edae7e6": {
+   "author": "Danielle Fox",
+   "page": "https://www.flickr.com/photos/dafox1992/5887890744",
+   "title": "Firespinner",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "554e2ce74443f55b": {
+   "author": "ajari",
+   "page": "https://www.flickr.com/photos/ajari/8703356469",
+   "title": "Yokohama_407",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "0ac166d12e401a98": {
+   "author": "Chester",
+   "page": "https://www.flickr.com/photos/chesterbr/10674895816",
+   "title": "DSCN1401",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "13b35a2fb629446e": {
+   "author": "GAb GAbelich",
+   "page": "https://www.flickr.com/photos/gab_gabelich/374650252",
+   "title": "Maxi",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f2688c0eb1043f5c": {
+   "author": "KID the Euforia",
+   "page": "https://www.flickr.com/photos/blueberrystream/17052969265",
+   "title": "たーん！",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "ac6558d78d28f921": {
+   "author": "Khalid Albaih",
+   "page": "https://www.flickr.com/photos/khalidalbaih/8227887022",
+   "title": "Plastine Key",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "449ab3574968820d": {
+   "author": "GA-Kayaker",
+   "page": "https://www.flickr.com/photos/ga-kayaker/7227339016",
+   "title": "Wild Azalea",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8ee7bfc2adf361eb": {
+   "author": "Ben Sutherland",
+   "page": "https://www.flickr.com/photos/bensutherland/5800904541",
+   "title": "80 candles alight for a very special birthday",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "48c23ee234f733eb": {
+   "author": "Charley On The Go",
+   "page": "https://www.flickr.com/photos/charleyonthego/7601560392",
+   "title": "003",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "3e3f45d51c4a049e": {
+   "author": "feli*",
+   "page": "https://www.flickr.com/photos/absolut_feli/5445429344",
+   "title": "Project 365: 12.02.11",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "681001533b0b3a18": {
+   "author": "Ged Carroll",
+   "page": "https://www.flickr.com/photos/renaissancechambara/5227103737",
+   "title": "Collon",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "3c150369d937d139": {
+   "author": "Joe King",
+   "page": "https://www.flickr.com/photos/jking89/1363091677",
+   "title": "Billiard Balls",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4742fb7019167c72": {
+   "author": "Luisa Contreras",
+   "page": "https://www.flickr.com/photos/luisacontreras-87/9190534123",
+   "title": "bizcocho de chocolate y nata",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "90920aeb973843da": {
+   "author": "Deb Nystrom",
+   "page": "https://www.flickr.com/photos/stella12/19014121824",
+   "title": "Alaska Shasta Daisies & Bee Balm",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "9c351bc9ee8c2b51": {
+   "author": "Paul_the_Seeker",
+   "page": "https://www.flickr.com/photos/paul_the_seeker/15057731547",
+   "title": "Bike Addict Fair at Terminal 21",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f6bdc72ea62ba119": {
+   "author": "iMorpheus",
+   "page": "https://www.flickr.com/photos/sfj/305060512",
+   "title": "GS: Pelican Delivery Service.",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "7d0dcdc0f73ea9dc": {
+   "author": "ysishikawa",
+   "page": "https://www.flickr.com/photos/vmconverter/6013918896",
+   "title": "ちょw やられたw このコラボは反則だろw  今日発売開始なのにアスカのとマリのモデルは売り切れも出てたぞw",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f9dad76f10403183": {
+   "author": "Maureen Didde",
+   "page": "https://www.flickr.com/photos/maureendidde/8344682420",
+   "title": "The Eye from below",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "7a180bbb61401d59": {
+   "author": "Joel Bez",
+   "page": "https://www.flickr.com/photos/lejoe/5450334081",
+   "title": "LESS",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "81988b6d2a52ff05": {
+   "author": "Craig Howell",
+   "page": "https://www.flickr.com/photos/seat850/15364007666",
+   "title": "DSC_0157",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f2fbceebb45c2260": {
+   "author": "Anders Henrikson",
+   "page": "https://www.flickr.com/photos/anders-h-foto/8435557540",
+   "title": "a_8_0343",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "c26218c11af68d4c": {
+   "author": "Salman Almqati سلمان المقاطي",
+   "page": "https://www.flickr.com/photos/salo0om/5108318977",
+   "title": "المحترف وود مان",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "78dfb7313cf18766": {
+   "author": "Martin Pettitt",
+   "page": "https://www.flickr.com/photos/mdpettitt/3126746540",
+   "title": "Race Of Champions",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "23e5a8469bf4344e": {
+   "author": "Ilya Meshkovskiy",
+   "page": "https://www.flickr.com/photos/frescoumbiatore/5954681070",
+   "title": "Camaro",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f8ca116285a527c4": {
+   "author": "CasparGirl",
+   "page": "https://www.flickr.com/photos/caspargirl/7531060532/",
+   "title": "Safety under the rainbow",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4dbcb861be92912c": {
+   "author": "Foxcroft Academy",
+   "page": "https://www.flickr.com/photos/foxcroftacademy/18708192120",
+   "title": "waterdrop-taylorThomas(10)",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8a602ec25f57653e": {
+   "author": "CSM Library",
+   "page": "https://www.flickr.com/photos/collegeofsanmateolibrary/14956744904",
+   "title": "Make a Recycled Journal",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "0700fc00b1ce2612": {
+   "author": "くーさん",
+   "page": "https://www.flickr.com/photos/ezakicoo/5908017849",
+   "title": "東北新幹線はやぶさ 清掃中もがんばるメッセージ",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "99edefe3740881ce": {
+   "author": "Michael Sheehan",
+   "page": "https://www.flickr.com/photos/hightechdad/8379986555",
+   "title": "Center Console - 2013 Volvo XC60",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "363ae76c1f4a1c0d": {
+   "author": "c_ambler",
+   "page": "https://www.flickr.com/photos/chazoid/8526668314/",
+   "title": "Untitled",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "11d7b238a0f8db56": {
+   "author": "Paul Smith",
+   "page": "https://www.flickr.com/photos/widnes_road/14824848939/",
+   "title": "Pistonheads AMG C63 Owners meet @ Topcats Racing",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "82560833eab971a5": {
+   "author": "James Creegan",
+   "page": "https://www.flickr.com/photos/lostseouls/101547933",
+   "title": "family snacktime",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f80fec51c16cf184": {
+   "author": "City of Boston Archives",
+   "page": "https://www.flickr.com/photos/cityofbostonarchives/8637013347",
+   "title": "Life preserver aboard Tall Ship in Boston Harbor",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8ad20899f493a8c0": {
+   "author": "Clemens v. Vogelsang",
+   "page": "https://www.flickr.com/photos/vauvau/11855393546",
+   "title": "Lumberjack Breakfast",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f4b4e8594afb03f2": {
+   "author": "Cara Faus",
+   "page": "https://www.flickr.com/photos/39794839@N03/4845023250",
+   "title": "Cupboard",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "de2772e16ca8a2c0": {
+   "author": "USFWS Endangered Species",
+   "page": "https://www.flickr.com/photos/usfwsendsp/6359209971",
+   "title": "Threatened Apache trout (Oncorhynchus apache)",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "974ae17fb029a956": {
+   "author": "Kanko*",
+   "page": "https://www.flickr.com/photos/kankan/102547797",
+   "title": "rice porridge / おかゆ",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8367c62dac18cf8d": {
+   "author": "Acielle Garcera",
+   "page": "https://www.flickr.com/photos/126764446@N06/14671441568",
+   "title": "Shoyu Ramen @ Wabi Sabi",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "604af23ba71c2cf7": {
+   "author": "rodrigo costa",
+   "page": "https://www.flickr.com/photos/rodrigocostarcc/3869096464",
+   "title": "fake",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "103fe1d03c93fb17": {
+   "author": "USAG- Humphreys",
+   "page": "https://www.flickr.com/photos/usaghumphreys/4291690819",
+   "title": "4-2 Aviation Battalion hones skills during gunnery",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "7259f87c5ffc8cd2": {
+   "author": "Dawn Scranton",
+   "page": "https://www.flickr.com/photos/68782989@N03/6739926435",
+   "title": "DSC_1205",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e708b92ae16d73cb": {
+   "author": "Kurtis Garbutt",
+   "page": "https://www.flickr.com/photos/kjgarbutt/14873507141",
+   "title": "Tree of Life",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e2f7e59f95b889c3": {
+   "author": "Billy Metcalf Photography",
+   "page": "https://www.flickr.com/photos/23122254@N07/18949719668",
+   "title": "PSW Elise Wedding-5.jpg",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "30e38b3289619651": {
+   "author": "Florian",
+   "page": "https://www.flickr.com/photos/otourly/3085986393",
+   "title": "Char Sherman - Gray (Haute-Saône)",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "296c5668f84bdc3c": {
+   "author": "Maja Dumat",
+   "page": "https://www.flickr.com/photos/blumenbiene/10824636935",
+   "title": "Erster Nachfrost Mitte November",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "0581f63e01f70ead": {
+   "author": "Iain Watson",
+   "page": "https://www.flickr.com/photos/dagoaty/2934557658",
+   "title": "FlexiScale Slinky",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "3b78e7bc404e7549": {
+   "author": "tommypjr",
+   "page": "https://www.flickr.com/photos/tommypayne/7052730871",
+   "title": "#Artistic floor of Heikie Weber #drawing #art #marker #installation #kayarebel",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "10fb570420734d6c": {
+   "author": "Andy / Andrew Fogg",
+   "page": "https://www.flickr.com/photos/ndrwfgg/1252459450",
+   "title": "the aerodynamic oildrum",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4750b8787882a524": {
+   "author": "DWNews Recent Celeb Gallery",
+   "page": "https://www.flickr.com/photos/dwnews/8704913327",
+   "title": "Eric Dane and Rebecca Gayheart",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4fc8246e1ffddf77": {
+   "author": "Joey Dong",
+   "page": "https://www.flickr.com/photos/joeydong/4626788297",
+   "title": "SLS GT",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "3d101db207902196": {
+   "author": "burnbless",
+   "page": "https://www.flickr.com/photos/95713517@N06/15676704301",
+   "title": "shiny lineup",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "2c3ebd619e0da940": {
+   "author": "Peter Shanks",
+   "page": "https://www.flickr.com/photos/botheredbybees/2389301872",
+   "title": "green circuit board III",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "837455ab182613f7": {
+   "author": "Windell Oskay",
+   "page": "https://www.flickr.com/photos/oskay/436195912",
+   "title": "toast - 1",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "9dba9c1e70302873": {
+   "author": "Ryan Vaarsi",
+   "page": "https://www.flickr.com/photos/77799978@N00/4555217460",
+   "title": "Deep freeze",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "1de38c170bce1b3c": {
+   "author": "Carlos Mendoza Lima",
+   "page": "https://www.flickr.com/photos/fotodisenocm/385028368",
+   "title": "IMG_2190",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e0f10f90cf6150f0": {
+   "author": "Tommy Wong",
+   "page": "https://www.flickr.com/photos/gracewong/2246598486",
+   "title": "Pre Chinese New Year Lunch",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f37311426841caf0": {
+   "author": "Two Helmets Cooking",
+   "page": "https://www.flickr.com/photos/34338566@N08/3886459755",
+   "title": "Grill out skewers",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "936bce5d805329da": {
+   "author": "Jeremy",
+   "page": "https://www.flickr.com/photos/126433814@N04/21412293093",
+   "title": "MG ZR",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "1b9361a6e6a9dd89": {
+   "author": "denise carbonell",
+   "page": "https://www.flickr.com/photos/denisecarbonell/1161898544",
+   "title": "red hook chain",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "0ccdcc825086803a": {
+   "author": "IQRemix",
+   "page": "https://www.flickr.com/photos/iqremix/9496357560",
+   "title": "Animethon 20",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "3175e3a157b311e7": {
+   "author": "André Gustavo Stumpf",
+   "page": "https://www.flickr.com/photos/degu_andre/9412224172",
+   "title": "NEU",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "6d88b954ad5295fc": {
+   "author": "Plamen Dragozov",
+   "page": "https://www.flickr.com/photos/dragozov/16715988206",
+   "title": "IMG_8065",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "eb297ce62f882402": {
+   "author": "heiwa4126",
+   "page": "https://www.flickr.com/photos/heiwa4126/2508833448",
+   "title": "Ovum",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "cec622472f1f0092": {
+   "author": "Norsk Elbilforening",
+   "page": "https://www.flickr.com/photos/elbilforeningen/11432113925",
+   "title": "Ferske tall fra #OFV forteller at det nå er rundt 470 VW #eup på norske veier. Bedre tilgang til #CCS-lading (bildet) nærmer seg også. #norskelbilforening #elbilforeningen #ev #evnorway #gronnkontakt #drammen",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "59e2b03991f6a4ea": {
+   "author": "Enrico Matteucci",
+   "page": "https://www.flickr.com/photos/enricomatteucci/3974873685/",
+   "title": "Laura a piedi nudi",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "d0f4244d04835dc4": {
+   "author": "wizardjournal",
+   "page": "https://www.flickr.com/photos/85799360@N06/7906051834",
+   "title": "apple macbook pro",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "b8a0fb549656e6dc": {
+   "author": "Paul Skeie",
+   "page": "https://www.flickr.com/photos/paulskeie/4926093003",
+   "title": "DSC_0168",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "bb5399d8f5222646": {
+   "author": "Minale Tattersfield",
+   "page": "https://www.flickr.com/photos/minaletattersfield/8674919587",
+   "title": "The Costa Express Self-serve",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "141a0086d791f30a": {
+   "author": "MIKI Yoshihito",
+   "page": "https://www.flickr.com/photos/mujitra/8063031749",
+   "title": "TAMIYA compound.",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "af480e7927502211": {
+   "author": "Paleontour",
+   "page": "https://www.flickr.com/photos/paleontour/4136114371",
+   "title": "IMG_8618",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "05e1950bf46569a0": {
+   "author": "Nesster",
+   "page": "https://www.flickr.com/photos/nesster/9189642159",
+   "title": "NASA and Nikon 1981",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "b68ab20605e93c1c": {
+   "author": "photosteve101",
+   "page": "https://www.flickr.com/photos/42931449@N07/6803094615",
+   "title": "Mercedes CLS Class",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e60c8574d93ac919": {
+   "author": "Tony",
+   "page": "https://www.flickr.com/photos/triplea4/19034737611",
+   "title": "2015-06-21 14.42.38",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "1c82b82a88c432cb": {
+   "author": "downing.amanda",
+   "page": "https://www.flickr.com/photos/tinkerroll21/2684633384",
+   "title": "The Sand Bucket",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "087ad820683067b0": {
+   "author": "Arcadiuš",
+   "page": "https://www.flickr.com/photos/arcadius/5732839645",
+   "title": "135-365 Fullmoon",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e48175c7866ade38": {
+   "author": "Norbert Seeböck",
+   "page": "https://www.flickr.com/photos/100504007@N05/16771522374",
+   "title": "Chewbacca",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "9fa34f43b920f689": {
+   "author": "Mike Seyfang",
+   "page": "https://www.flickr.com/photos/mikeblogs/8771148384",
+   "title": "Chinque",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "824e2908879c131d": {
+   "author": "Dutch Treat",
+   "page": "https://www.flickr.com/photos/dutchtreatnl/6292634316",
+   "title": "Lego 3723 in Blue and White - 2",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8a3777a25f493742": {
+   "author": "Roberto Garcia",
+   "page": "https://www.flickr.com/photos/rgarciah55/12485114885",
+   "title": "P2092059cc",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "186d668b88451394": {
+   "author": "Rusty Clark - On the Air M-F 8am-noon",
+   "page": "https://www.flickr.com/photos/rusty_clark/6227579931",
+   "title": "Hampton Ponds - Westfield MA",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "d3af9f99b1ab1f0f": {
+   "author": "typexnick",
+   "page": "https://www.flickr.com/photos/ringkong/8126432425",
+   "title": "UNIQLO Shiny Nylon Down Coat",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "543a5cb895cf690b": {
+   "author": "Jeff Wilcox",
+   "page": "https://www.flickr.com/photos/jeffwilcox/95556390",
+   "title": "2005_05_23_0613_1300_2",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "70c9dcc9b361e1de": {
+   "author": "Emran Kassim",
+   "page": "https://www.flickr.com/photos/emrank/2349567602",
+   "title": "Play at Jusco",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "ef71b34edf8edd8d": {
+   "author": "Núria i JC",
+   "page": "https://www.flickr.com/photos/nuriaijoancarles/1277205984",
+   "title": "Pèsols al mercat de Helsinki",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "334823af8772202b": {
+   "author": "Amy",
+   "page": "https://www.flickr.com/photos/amylovesyah/2204499955",
+   "title": "Lucky 8",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "908b7ddec75da210": {
+   "author": "Stewart Butterfield",
+   "page": "https://www.flickr.com/photos/stewart/125383170",
+   "title": "Add wine and cook under medium heat for 45 minutes to 1 hour",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4cacf91612e0c25d": {
+   "author": "prilfish",
+   "page": "https://www.flickr.com/photos/silkebaron/7774891920",
+   "title": "Red Anemone",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "dc747e1d542bf243": {
+   "author": "EHRENBERG Kommunikation",
+   "page": "https://www.flickr.com/photos/ehrenbergkommunikation/15823041733",
+   "title": "Thule EnRoute Triumph Backpack",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8cb74f2517f0a7ae": {
+   "author": "Listener42",
+   "page": "https://www.flickr.com/photos/listener42/3567507835",
+   "title": "the source of all life",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "6cf289736ff3b6b4": {
+   "author": "Smabs Sputzer",
+   "page": "https://www.flickr.com/photos/10413717@N08/3474768442",
+   "title": "Red",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4d03f18377578c53": {
+   "author": "Beth Nazario",
+   "page": "https://www.flickr.com/photos/bnazario/4229417991",
+   "title": "IMG_3270",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "cce8238132b27960": {
+   "author": "Les Chatfield",
+   "page": "https://www.flickr.com/photos/elsie/34331024",
+   "title": "What is it. . . . .",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4a79af705404ab96": {
+   "author": "yoggy0",
+   "page": "https://www.flickr.com/photos/yoggy0/4581180597",
+   "title": "P1030333",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e5a7e8fe6c1f3948": {
+   "author": "Ismaïl Taha",
+   "page": "https://www.flickr.com/photos/101125222@N02/17194590602",
+   "title": "ct4",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "ae90ffbfef2831ec": {
+   "author": "SenseiAlan",
+   "page": "https://www.flickr.com/photos/91591049@N00/14465637605",
+   "title": "1966 Oldsmobile Toronado Advertisement Road & Track November 1965",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e28d0c47664a1986": {
+   "author": "goodhugh",
+   "page": "https://www.flickr.com/photos/goodhugh/766905532",
+   "title": "Doha November 2006 - Souvenirs 009",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "35dc1191f902bd74": {
+   "author": "Dennis Yang",
+   "page": "https://www.flickr.com/photos/dennis/90829828",
+   "title": "puppies are cute and stuff",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "3f6654fd5a3e5ccf": {
+   "author": "Keith Cooper",
+   "page": "https://www.flickr.com/photos/cooperweb/10043218476",
+   "title": "Ploant in the sculpture park in Skokie IL",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "95a2301dfa7e1c94": {
+   "author": "Justin Taylor",
+   "page": "https://www.flickr.com/photos/bludgeoner86/4788138292",
+   "title": "AS_3480",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "ed5344bed8018a43": {
+   "author": "Matthew Paul  Argall",
+   "page": "https://www.flickr.com/photos/79157069@N03/18804259893",
+   "title": "Back of Elikon 35c",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "272781f2753c00a1": {
+   "author": "USCG Press",
+   "page": "https://www.flickr.com/photos/uscgpress/3974624971",
+   "title": "Waesche Sea Trials",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "84af25555f7c818b": {
+   "author": "casers jean",
+   "page": "https://www.flickr.com/photos/casers/112842063",
+   "title": "snorkel carrie",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "7ff05f195437d318": {
+   "author": "Geek_Lord",
+   "page": "https://www.flickr.com/photos/shobhit/2792987775",
+   "title": "Amazing Shots Olympics 2008 (26)",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "d540c2a75cbb78ea": {
+   "author": "Joe",
+   "page": "https://www.flickr.com/photos/18474854@N00/4656997785",
+   "title": "ubuntu key",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "636dbb4aea120bae": {
+   "author": "Yahya S.",
+   "page": "https://www.flickr.com/photos/128326674@N06/15233736829",
+   "title": "1971 Ford Mustang Boss 302",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "45c6589db22f7524": {
+   "author": "diaper",
+   "page": "https://www.flickr.com/photos/diaper/803566474",
+   "title": "Nice looking",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "47b0312ea225781d": {
+   "author": "Roland Tanglao",
+   "page": "https://www.flickr.com/photos/roland/4728649267",
+   "title": "Black Locust / Robinia pseudoacacia 'Frisia' (yellow-foliage cultivar) - 0623201021636",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "6c694386d7a217ea": {
+   "author": "Francisco Muñoz",
+   "page": "https://www.flickr.com/photos/harry_plotter/58020960",
+   "title": "Bianca",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "9a9eb9cc4635f2b5": {
+   "author": "steve lodefink",
+   "page": "https://www.flickr.com/photos/lodefink/825165275",
+   "title": "hot plane",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "0347677e05719710": {
+   "author": "Helder Mira",
+   "page": "https://www.flickr.com/photos/citizenhelder/12548250783",
+   "title": "IMG_0222",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "0572b61a4613221d": {
+   "author": "Upsilon Andromedae",
+   "page": "https://www.flickr.com/photos/upsand/13278952423",
+   "title": "Blue belt next",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e1be337cbe35181f": {
+   "author": "Jonathan.vail",
+   "page": "https://www.flickr.com/photos/jonathanvail/3654588974/",
+   "title": "Sailfish",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "15799afd3f43e56a": {
+   "author": "Bruno Kussler Marques",
+   "page": "https://www.flickr.com/photos/bkm_br/7618301436",
+   "title": "Volkswagen Golf GTI W12 650 Concept",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "3983c3fc401fb665": {
+   "author": "ideowl",
+   "page": "https://www.flickr.com/photos/ideowl/2825425857",
+   "title": "Corpses",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "30f0848269103d1f": {
+   "author": "Nirvana Melo",
+   "page": "https://www.flickr.com/photos/nipatchnails/16034435050",
+   "title": "Misturinha by Andreia + Jade Majestic",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "9036157b782b13e5": {
+   "author": "Tatsuo Yamashita",
+   "page": "https://www.flickr.com/photos/yto/14033799676",
+   "title": "子育て支援センターにて 2014/4",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8053c38d6d802e08": {
+   "author": "JaxStrong",
+   "page": "https://www.flickr.com/photos/jaxstrong/8287421535",
+   "title": "Coyote  swimming across the C-38 canal in Pool A",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "0c73e9f99274d223": {
+   "author": "Sarah",
+   "page": "https://www.flickr.com/photos/dichohecho/2589836017",
+   "title": "The return of the chocolate satin brownie",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "ef7b80ed65e8aa76": {
+   "author": "Samuel Jacob",
+   "page": "https://www.flickr.com/photos/samueldotj/8182207959",
+   "title": "California Academy of Science",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "ff170cdebcd8d899": {
+   "author": "Ralph Aichinger",
+   "page": "https://www.flickr.com/photos/sooperkuh/4455566592",
+   "title": "Bella Maccina",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "d8c13dba00bd5e65": {
+   "author": "John Queen",
+   "page": "https://www.flickr.com/photos/jdqueen/6310191834",
+   "title": "Magpie",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "a262bb9d3cadae69": {
+   "author": "Michiel Dijcks",
+   "page": "https://www.flickr.com/photos/michieldijcks/2577673274",
+   "title": "1977 VW Golf",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "cc7146ee57dd3b70": {
+   "author": "Pacific Southwest Region USFWS",
+   "page": "https://www.flickr.com/photos/usfws_pacificsw/16094924270",
+   "title": "Student watering plants",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "6ae33df5f4d87701": {
+   "author": "Chickbrarian",
+   "page": "https://www.flickr.com/photos/chickbrarian/6247443809",
+   "title": "340",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "b158eac8fa185f9c": {
+   "author": "Don O&#x27;Brien",
+   "page": "https://www.flickr.com/photos/dok1/187670805",
+   "title": "Golden Retriever Puppy",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "7de0f89ec55f83c1": {
+   "author": "Raymond Brown",
+   "page": "https://www.flickr.com/photos/raymundopelayo/2537277182",
+   "title": "Bishop John Ricard",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "dc081bac9957131c": {
+   "author": "John Fowler",
+   "page": "https://www.flickr.com/photos/snowpeak/4863327703",
+   "title": "Patterns",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "aa8d4b32566756dc": {
+   "author": "Y. Hino",
+   "page": "https://www.flickr.com/photos/123844925@N07/13995139695",
+   "title": "Tennoji zoo",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "a6ee28c427dafa94": {
+   "author": "Doriano Jaroudi",
+   "page": "https://www.flickr.com/photos/dorianojaroudi/14735458388",
+   "title": "IMG_7436.jpg",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "126197043e0e77a9": {
+   "author": "Deb",
+   "page": "https://www.flickr.com/photos/ferlinka/916371042",
+   "title": "Myka &amp; Tahnka",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "2e2b0436bde738e7": {
+   "author": "Gideon",
+   "page": "https://www.flickr.com/photos/malias/114173269",
+   "title": "Ramen",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "481251260745178b": {
+   "author": "Jeremy",
+   "page": "https://www.flickr.com/photos/126433814@N04/15897092325",
+   "title": "Willys Overland Ute",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4c4ad4c4c7c24929": {
+   "author": "Jeremy",
+   "page": "https://www.flickr.com/photos/126433814@N04/16193018569",
+   "title": "BMW M635CSi E24",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "7e07848e1c0bffdd": {
+   "author": "Chris",
+   "page": "https://www.flickr.com/photos/chrisfp/9703144439",
+   "title": "Colin Yates Big Band (3)",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "cacb42f56413a86f": {
+   "author": "Caulier Gilles",
+   "page": "https://www.flickr.com/photos/digikam/8747420729/",
+   "title": "Rox",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "9af708441e8abd6d": {
+   "author": "_fenixn",
+   "page": "https://www.flickr.com/photos/hpthnguyen/14890090342",
+   "title": "1FlySTi",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "49a7d4072520bce9": {
+   "author": "Leon G",
+   "page": "https://www.flickr.com/photos/lelik/92555044",
+   "title": "Java up north",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8f856c17bec02419": {
+   "author": "Charles de Mille-Isles",
+   "page": "https://www.flickr.com/photos/demartigny/4317071554",
+   "title": "Tigresse se réchauffe",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "429a1dc98a68b015": {
+   "author": "Gael Aveline",
+   "page": "https://www.flickr.com/photos/vinylourson/16178530866",
+   "title": "TACV Cabo Verde Airlines",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "9851e17333cc5b05": {
+   "author": "grassrootsgroundswell",
+   "page": "https://www.flickr.com/photos/grassrootsgroundswell/14631493990",
+   "title": "MG BGT",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "21ad3641156a1107": {
+   "author": "Craig Howell",
+   "page": "https://www.flickr.com/photos/seat850/3659402432",
+   "title": "P1120224",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "76b8e5c99b52d348": {
+   "author": "Miguel A. Tovar",
+   "page": "https://www.flickr.com/photos/blogaceutics/3204715995",
+   "title": "Entretenimiento a bordo de Air Canada",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "845759a510d23542": {
+   "author": "Remko van Dokkum",
+   "page": "https://www.flickr.com/photos/remkovandokkum/101655369",
+   "title": "koper geld muntjes euro 1 2 5",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "43e1adff2f02db64": {
+   "author": "Jeremy Segrott",
+   "page": "https://www.flickr.com/photos/126337928@N05/21202235868",
+   "title": "Pontypridd Bus Station",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "809bb22c4ad40308": {
+   "author": "Ray_LAC",
+   "page": "https://www.flickr.com/photos/15132846@N00/3827606885",
+   "title": "Cute dog",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e4d6e7addfa0777c": {
+   "author": "Lwp Kommunikáció",
+   "page": "https://www.flickr.com/photos/lwpkommunikacio/14394300291",
+   "title": "Maffiózófeleségek",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "2fd4c20ccb9282d6": {
+   "author": "Julián Ortega Martínez",
+   "page": "https://www.flickr.com/photos/julianortegam/6484226995",
+   "title": "Luna llena en Bogotá",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "517f36764e316d50": {
+   "author": "Sheila Sund",
+   "page": "https://www.flickr.com/photos/sheila_sund/9266381920",
+   "title": "Manta Ray.jpg",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "79cc12373e3461b6": {
+   "author": "José Moutinho",
+   "page": "https://www.flickr.com/photos/jamoutinho/8751631240",
+   "title": "White Heron",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "6d9338d7cd5c2343": {
+   "author": "The Conmunity -  Pop Culture Geek",
+   "page": "https://www.flickr.com/photos/popculturegeek/5581403952",
+   "title": "WonderCon 2011 - Join S.H.I.E.L.D. sign",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "9a07ebae25b79349": {
+   "author": "Lenore Edman",
+   "page": "https://www.flickr.com/photos/lenore-m/13025118114",
+   "title": "Untitled",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "3866289709f96f4d": {
+   "author": "Daniel Paixão Fontes",
+   "page": "https://www.flickr.com/photos/danielpaixao/4163364511/",
+   "title": "JAPANESE DINER II - UDOM",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "94c99b3aea7ee041": {
+   "author": "Bruno Melnic Incáo",
+   "page": "https://www.flickr.com/photos/melnic/3298977300",
+   "title": "Sorocaba é do Senhor Jesus Cristo",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f7536f94cafdac52": {
+   "author": "Aaron Parecki",
+   "page": "https://www.flickr.com/photos/aaronpk/5031970263",
+   "title": "Server Room at California Academy of Sciences",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "0b312a9e9c21c247": {
+   "author": "Ian Ransley",
+   "page": "https://www.flickr.com/photos/design-dog/1105387190",
+   "title": "Peppers!",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "2ae454e86b4a021d": {
+   "author": "crabchick",
+   "page": "https://www.flickr.com/photos/crabchick/2629159240",
+   "title": "Tyres at Sharpness",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4ce448635c113f11": {
+   "author": "Graham Hellewell",
+   "page": "https://www.flickr.com/photos/grahambones/3283887378",
+   "title": "Untitled",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "915cc32087a39342": {
+   "author": "Chris Heard",
+   "page": "https://www.flickr.com/photos/35704895@N03/14727865794",
+   "title": "IotR 46-48 Drizzt/Cleric/Ranger",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f2d2e89640ef8258": {
+   "author": "Anuradha Sengupta",
+   "page": "https://www.flickr.com/photos/piusen/3967696725",
+   "title": "Urak/feni brewing",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "27e59184c6c621dc": {
+   "author": "angelandspot",
+   "page": "https://www.flickr.com/photos/angelandspot/8330461593",
+   "title": "Flight",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "36d2f7a33a9562e1": {
+   "author": "PSParrot",
+   "page": "https://www.flickr.com/photos/parkstreetparrot/10124412285",
+   "title": "Blue Spitfire in Blue sky - Large Model Association_BALDOCK_06_OCTOBER_2013",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "005b598d8fecb139": {
+   "author": "Jukka Peura",
+   "page": "https://www.flickr.com/photos/jpeura/750912399",
+   "title": "Ford 1934 Hot Rod",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "7d836745544db140": {
+   "author": "Jamie",
+   "page": "https://www.flickr.com/photos/jamiesrabbits/3686229162/",
+   "title": "iPod collage",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "ec59924d7484e7fb": {
+   "author": "David McKelvey",
+   "page": "https://www.flickr.com/photos/dgmckelvey/7067664473",
+   "title": "Hanoi style power point",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "6bc153aa89749a00": {
+   "author": "German Medeot",
+   "page": "https://www.flickr.com/photos/motosclasicas/8362309678",
+   "title": "1960 Maserati 3500 GT Coupe by Touring of Milan",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "3834ab435eef7ff4": {
+   "author": "SmartSign",
+   "page": "https://www.flickr.com/photos/smartsignbrooklyn/10275527013",
+   "title": "Safety is my goal",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "b601f5118361cdec": {
+   "author": "zeliq",
+   "page": "https://www.flickr.com/photos/zeliq/14819974364",
+   "title": "figaró :: prunes",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "fe44d7a4e70a8209": {
+   "author": "Andrew Ball",
+   "page": "https://www.flickr.com/photos/77593963@N00/13943802934",
+   "title": "IMG_0080_720",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "fca7ec0bf3ca91cd": {
+   "author": "Marc Smith",
+   "page": "https://www.flickr.com/photos/marc_smith/9317045961",
+   "title": "Singapore 2013",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "56072270bb285c9c": {
+   "author": "dshfl",
+   "page": "https://www.flickr.com/photos/20348469@N06/4462444212",
+   "title": "P1010001",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "90f957b475c41da9": {
+   "author": "Narith5",
+   "page": "https://www.flickr.com/photos/naritheole/701804542",
+   "title": "Custard Apple/ Tiep",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f900dfb5cecb4af0": {
+   "author": "Nadia Prigoda-Lee",
+   "page": "https://www.flickr.com/photos/the_girl/34957611",
+   "title": "Spider Wort",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "fb3fed6d3c8c3276": {
+   "author": "Kristijan Tkalec",
+   "page": "https://www.flickr.com/photos/lapor/1136502277",
+   "title": "bočanje",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "abf8cc90370e7066": {
+   "author": "moronicbajebus",
+   "page": "https://www.flickr.com/photos/moronicbajebus/2465842419/",
+   "title": "light switch",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "b348d915bbfcae9b": {
+   "author": "Phil Whitehouse",
+   "page": "https://www.flickr.com/photos/philliecasablanca/6038983972",
+   "title": "HMS",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "105bb771a8fc8f47": {
+   "author": "John Morgan",
+   "page": "https://www.flickr.com/photos/aidanmorgan/4115503355/",
+   "title": "Porsche",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e15a37c2a5626f54": {
+   "author": "Fred Benenson",
+   "page": "https://www.flickr.com/photos/fcb/41491757",
+   "title": "freeing the beer 005",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f35ad6328ed3ce8b": {
+   "author": "Eliya",
+   "page": "https://www.flickr.com/photos/eliya/284545344",
+   "title": "Mimes",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "605a90b97d9ceb4e": {
+   "author": "Paul Downey",
+   "page": "https://www.flickr.com/photos/psd/8521053057/",
+   "title": "Hot cross buns",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "37dbbdc19bd21765": {
+   "author": "EdmondMeinfelder",
+   "page": "https://www.flickr.com/photos/16216900@N00/225288108",
+   "title": "IMGP0100",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "c1d95c16fa8c7254": {
+   "author": "Ashley Van Haeften",
+   "page": "https://www.flickr.com/photos/wikimediacommons/16421063445",
+   "title": "Pair of Man's Slippers LACMA M.45.3.237a-b",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "5013a8a33f521259": {
+   "author": "Brent Moore",
+   "page": "https://www.flickr.com/photos/brent_nashville/105707203",
+   "title": "Rock City's White Deer",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "bc23ad8a6dfdcecc": {
+   "author": "rkrichardson",
+   "page": "https://www.flickr.com/photos/45126397@N06/4169222951",
+   "title": "Winter Berry",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "42912153cba51c7e": {
+   "author": "Iwan Gabovitch",
+   "page": "https://www.flickr.com/photos/qubodup/15686845590",
+   "title": "Programmer's Pretzel at Berlin Mini Jam @King",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "76a378a08464d3e5": {
+   "author": "ShashiBellamkonda",
+   "page": "https://www.flickr.com/photos/drbeachvacation/4629274930",
+   "title": "Aloo Bonda at the Vindalho Restaurant in Portland OR",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e5535a2cf65c6f2b": {
+   "author": "Mellie",
+   "page": "https://www.flickr.com/photos/efilsgood/3622678579/",
+   "title": "Tribute #1",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8bb85a35543e18ef": {
+   "author": "Matthias Forster",
+   "page": "https://www.flickr.com/photos/forsterfoto/168970635",
+   "title": "Giraffe",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "1eeda2f2e8f31933": {
+   "author": "Angel Arcones",
+   "page": "https://www.flickr.com/photos/freddy-click-boy/3202208642",
+   "title": "Dia 83: Saber escuchar",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "034f71ee4e111261": {
+   "author": "Clyde Robinson",
+   "page": "https://www.flickr.com/photos/crobj/331074963",
+   "title": "The Brothers",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e8636f672e4243c1": {
+   "author": "Brian Gratwicke",
+   "page": "https://www.flickr.com/photos/briangratwicke/8501216558",
+   "title": "Blue-footed booby",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "67d2ab35698d4ced": {
+   "author": "Niklas  Freidwall",
+   "page": "https://www.flickr.com/photos/nirufe/3347365020",
+   "title": "Fish",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "ae5097c5fe8a0824": {
+   "author": "Ross Elliott",
+   "page": "https://www.flickr.com/photos/ross_elliott/7347885458",
+   "title": "BlackBackGull 0612 8444",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "678e32c5a897c181": {
+   "author": "HarmonyRae",
+   "page": "https://www.flickr.com/photos/harmonyraelingen/11923568224",
+   "title": "DSC_0462",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e78a42acf2fa26b4": {
+   "author": "Evan Guerra",
+   "page": "https://www.flickr.com/photos/evanguerra/14855468877",
+   "title": "Heading towards the path of awakening requires you first to acknowledge you are awake. Enlightenment will follow.   #temples #thailand #tourist #tourism #onegrainofrice #love #travel #meditation #awake #wakeup #live #life #earth #buddha #buddhism #picofth",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "946da51dcb93a138": {
+   "author": "Reece Chapman",
+   "page": "https://www.flickr.com/photos/reeceoliver/15194581266",
+   "title": "Low Collective 2014",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e5c5e4e7999cc2ba": {
+   "author": "lukewilson93",
+   "page": "https://www.flickr.com/photos/21258095@N04/2713588413",
+   "title": "ford focus rs",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "c2b9ea7fa6acb336": {
+   "author": "FairbanksMike",
+   "page": "https://www.flickr.com/photos/fairbanksmike/7166426781",
+   "title": "Deluxe accomodations",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "d4d97d6bcfe34f66": {
+   "author": "Alan Levine",
+   "page": "https://www.flickr.com/photos/cogdog/7995075600",
+   "title": "Red VW",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "13c7fe8cee9111a5": {
+   "author": "Pierre Phaneuf",
+   "page": "https://www.flickr.com/photos/pphaneuf/7541280770",
+   "title": "IMG_3054",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "3aee04bf8fce5717": {
+   "author": "Nicolas de Camaret",
+   "page": "https://www.flickr.com/photos/ndecam/5804448430",
+   "title": "IMG_2522",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "9ff70a3ea47fffa4": {
+   "author": "Harrison Webster",
+   "page": "https://www.flickr.com/photos/harrisonwebster/5194321646",
+   "title": "Silvana D'Abriola",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "47c410a1973b7fa2": {
+   "author": "Corey Taratuta",
+   "page": "https://www.flickr.com/photos/onthewhiteline/7097591087",
+   "title": "Louisiana Crawfish Dinner",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f2c33b284eaf4945": {
+   "author": "roanokecollege",
+   "page": "https://www.flickr.com/photos/26254305@N08/6283541016",
+   "title": "20 year RC Golf Team Reunion Trip",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "022ba69f29b7383f": {
+   "author": "Fisher Chia",
+   "page": "https://www.flickr.com/photos/yuanfeng/5853818834",
+   "title": "Super GT 2011 Race Queen 31",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4fa6f0a5f32109d5": {
+   "author": "Ninian  Reid",
+   "page": "https://www.flickr.com/photos/ninian_reid/16816731039",
+   "title": "Untitled",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "749610d50093e03a": {
+   "author": "schmalzer24",
+   "page": "https://www.flickr.com/photos/47049534@N03/7714364686",
+   "title": "Perfect in every way",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "fad127f9fa3316ba": {
+   "author": "Aaron Tait",
+   "page": "https://www.flickr.com/photos/aarontait/69718263",
+   "title": "The girls",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "7856edf3e921a039": {
+   "author": "David Berry",
+   "page": "https://www.flickr.com/photos/dberry/384391282",
+   "title": "William Jones 1788-1858",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "12ca5298fc9865d2": {
+   "author": "Angie Garrett",
+   "page": "https://www.flickr.com/photos/smoorenburg/3786420929",
+   "title": "White tigers",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "633935f7e4c534b1": {
+   "author": "Penn State",
+   "page": "https://www.flickr.com/photos/pennstatelive/6755183281",
+   "title": "Untitled",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "1c7afb8df810987c": {
+   "author": "Fort Carson",
+   "page": "https://www.flickr.com/photos/fortcarson/8456422100",
+   "title": "Blackhawk_arrival_(2)",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "de65441a9370966a": {
+   "author": "Михал Орела",
+   "page": "https://www.flickr.com/photos/mihalorel/3164668708",
+   "title": "Скулптура: „Туаханако“",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "a382e559b760c916": {
+   "author": "Graham C99",
+   "page": "https://www.flickr.com/photos/schnappi/16276563593",
+   "title": "Vientiane 14",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "d19489c45985294b": {
+   "author": "Sterling College",
+   "page": "https://www.flickr.com/photos/sterlingcollege/16598910029",
+   "title": "Stories & Storytelling_1295",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "6ef26d875ac4caf2": {
+   "author": "Yuya Tamai",
+   "page": "https://www.flickr.com/photos/tamaiyuya/12023485115",
+   "title": "2013-11-24 17.29.15",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "b50483f7668f354a": {
+   "author": "m01229",
+   "page": "https://www.flickr.com/photos/39908901@N06/7539206842",
+   "title": "Jefferson Vineyards Tasting Room",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8bbd4ef81880961d": {
+   "author": "Paul Hood",
+   "page": "https://www.flickr.com/photos/pazhood/4396024487",
+   "title": "Ruski Bowl",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8c1a88fb02e198ce": {
+   "author": "ellebil1",
+   "page": "https://www.flickr.com/photos/ellebil1/15309931584",
+   "title": "Haare an der Luft trocknen lassen: ✔️",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "8157a28a69989c71": {
+   "author": "stephen boisvert",
+   "page": "https://www.flickr.com/photos/srboisvert/80057778",
+   "title": "Gill",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "1aefd062c80478d1": {
+   "author": "Robert Anthony Provost",
+   "page": "https://www.flickr.com/photos/twon/1108635914",
+   "title": "photo.jpg",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "2efd7b446d41cc93": {
+   "author": "Jennifer C.",
+   "page": "https://www.flickr.com/photos/29638108@N06/4164331315",
+   "title": "Berries",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e15b3f94b4d3e3eb": {
+   "author": "froisnaidu",
+   "page": "https://www.flickr.com/photos/froisnaidu/6266014503",
+   "title": "SKC_0006.jpg",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "ee515c9191f83f06": {
+   "author": "Laurence Simon (Crap Mariner)",
+   "page": "https://www.flickr.com/photos/isfullofcrap/13950776043",
+   "title": "Easter basket for the unlucky fucker with the flu",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "b23bfeadc650227b": {
+   "author": "Alan Kotok",
+   "page": "https://www.flickr.com/photos/runneralan/8746389710",
+   "title": "Oyster catcher",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "e2daf7ef50cac4ed": {
+   "author": "andreas hagerman",
+   "page": "https://www.flickr.com/photos/andreashagerman/14741371024",
+   "title": "Massey Ferguson 7626",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "7d26985faa71cfe9": {
+   "author": "Ram Prasad",
+   "page": "https://www.flickr.com/photos/33169984@N08/3365417144",
+   "title": "Cold Coffee.........",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "98da3ab20187069b": {
+   "author": "Andreanna Moya Photography",
+   "page": "https://www.flickr.com/photos/andreanna/2810242962",
+   "title": "Somewhere Over the Rainbow",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "34355691cb8bbc19": {
+   "author": "Microsoft Sweden",
+   "page": "https://www.flickr.com/photos/microsoftsweden/4460160002",
+   "title": "TechDays 2010",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "ca52643ff4e775b7": {
+   "author": "Jamie Davies",
+   "page": "https://www.flickr.com/photos/jamiejohn/2484272434",
+   "title": "Meerkat at London Zoo",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "88dbf149f90fdfce": {
+   "author": "Indrik myneur",
+   "page": "https://www.flickr.com/photos/myneur/3705951424",
+   "title": "Sex on the Beach",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "2cbef3f360dd4113": {
+   "author": "The Pug Father",
+   "page": "https://www.flickr.com/photos/fleur-design/527366673",
+   "title": "Bug eye Sprite",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "54e2a340c0de2e5d": {
+   "author": "U.S. Army Europe Images",
+   "page": "https://www.flickr.com/photos/usarmyeurope_images/5276862758",
+   "title": "2SCR_holiday_goodies_Afghanistan_18Dec2010.jpg",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "ccda9e268769b54b": {
+   "author": "Maxwell Hamilton",
+   "page": "https://www.flickr.com/photos/mualphachi/6842040923",
+   "title": "A Winter Scene of Red Deer in Bushy Park",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "d092fc428eb4be1d": {
+   "author": "CDC Global",
+   "page": "https://www.flickr.com/photos/cdcglobal/8190818627",
+   "title": "India Polio Communication Review 2011 (11182011) 385",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4959e1685dbdb2a1": {
+   "author": "Fighting Irish 1977",
+   "page": "https://www.flickr.com/photos/globaltrotters/16777244119",
+   "title": "Vancouver Spring",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "51b8be0b944a6e9b": {
+   "author": "Yellowstone National Park",
+   "page": "https://www.flickr.com/photos/yellowstonenps/9573567356",
+   "title": "Druid Complex",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f3a42d394fcdb4ea": {
+   "author": "Kevin Jarrett",
+   "page": "https://www.flickr.com/photos/kjarrett/7395124750",
+   "title": "Wheeled Cart Thing",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "c9203457ab97042a": {
+   "author": "gingerchrismc",
+   "page": "https://www.flickr.com/photos/gingerchrismc/7361030350",
+   "title": "Filament bulb",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "dfc0dd2c0d823da1": {
+   "author": "Colby Stopa",
+   "page": "http://www.flickr.com/photos/93057803@N06/15809342955",
+   "title": "Heat",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "cfa308f41737905d": {
+   "author": "Jhon",
+   "page": "https://www.flickr.com/photos/48066806@N06/6962869639",
+   "title": "VNTM - FINAL RUNWAY",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "db3dd370a393d5e4": {
+   "author": "Sameer Manek",
+   "page": "https://www.flickr.com/photos/sameermanek/16285120590/",
+   "title": "IMG_1484",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "2fdbe9ca76fdfd99": {
+   "author": "Lee Coursey",
+   "page": "https://www.flickr.com/photos/leeco/1485754255",
+   "title": "Ferns in a redwood forest",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "bd6d7e915f016937": {
+   "author": "Tilemahos Efthimiadis",
+   "page": "https://www.flickr.com/photos/telemax/3209686517",
+   "title": "Golden Tiara",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "c540d9c96b6a79a2": {
+   "author": "Upsilon Andromedae",
+   "page": "https://www.flickr.com/photos/upsand/213403523",
+   "title": "First sailing lessons",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "33aed84d3fc39a7e": {
+   "author": "Josef Seibel",
+   "page": "https://www.flickr.com/photos/josefseibel/7090418517",
+   "title": "Anja '02' in Daino",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "6dd4278eedb92d97": {
+   "author": "Melinda",
+   "page": "https://www.flickr.com/photos/melindarae/2249481867/",
+   "title": "Cute as a button. And comfy to boot!",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "5d82587a68964be8": {
+   "author": "Masahiro TAKAGI",
+   "page": "https://www.flickr.com/photos/m-takagi/18014807845",
+   "title": "DSC00427",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "739f43679fadf6b3": {
+   "author": "Gerard van der Schaaf",
+   "page": "https://www.flickr.com/photos/34153108@N06/8012439888",
+   "title": "RA-76502",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "de34b0a92f6a5e40": {
+   "author": "Brian Mullender",
+   "page": "https://www.flickr.com/photos/30624565@N08/14686587805/",
+   "title": "A400M",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "c4e8395425f49d05": {
+   "author": "holding graz",
+   "page": "https://www.flickr.com/photos/holdinggraz/14527052546",
+   "title": "EMX am Schöckl",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "2b942bdbc72adfec": {
+   "author": "Cheese Lin",
+   "page": "https://www.flickr.com/photos/cheeseelaine/441656316",
+   "title": "IMGP4899",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "f0825d484e29f990": {
+   "author": "Keith Springer",
+   "page": "https://www.flickr.com/photos/keithspringer/6516755203",
+   "title": "Africa Trip 11-2011 Keith Springer 083",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "4cc0ef3c4cc19492": {
+   "author": "Richard",
+   "page": "https://www.flickr.com/photos/rich701/5806540604",
+   "title": "New Jersey logging 3 of 6",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  },
+  "074524fc2d1b38c5": {
+   "author": "Ma1974",
+   "page": "https://www.flickr.com/photos/ma1974/364904677",
+   "title": "Godmorgen",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0/"
+  }
+ },
+ "replay": {
+  "stage": "inception4b",
+  "steps": 8,
+  "device": "cpu, 1 thread"
+ },
+ "data": {
+  "file": "cnn-features.f32",
+  "sha256": "8f16f55387333a146f41390e344531ef5297a541748299f78f8a3c958c8153b0",
+  "bytes": 213940,
+  "tensors": {
+   "viz.curve": {
+    "offset": 0,
+    "length": 24576,
+    "shape": [
+     6,
+     8,
+     512
+    ]
+   },
+   "viz.curveRaw": {
+    "offset": 24576,
+    "length": 24576,
+    "shape": [
+     6,
+     8,
+     512
+    ]
+   },
+   "viz.shown": {
+    "offset": 49152,
+    "length": 96,
+    "shape": [
+     6,
+     8,
+     2
+    ]
+   },
+   "top.values": {
+    "offset": 49248,
+    "length": 288,
+    "shape": [
+     6,
+     8,
+     6
+    ]
+   },
+   "top.where": {
+    "offset": 49536,
+    "length": 576,
+    "shape": [
+     6,
+     8,
+     6,
+     2
+    ]
+   },
+   "top.index": {
+    "offset": 50112,
+    "length": 288,
+    "shape": [
+     6,
+     8,
+     6
+    ]
+   },
+   "top.hist": {
+    "offset": 50400,
+    "length": 1920,
+    "shape": [
+     6,
+     8,
+     40
+    ]
+   },
+   "top.max": {
+    "offset": 52320,
+    "length": 48,
+    "shape": [
+     6,
+     8
+    ]
+   },
+   "top.median": {
+    "offset": 52368,
+    "length": 48,
+    "shape": [
+     6,
+     8
+    ]
+   },
+   "cam.maps": {
+    "offset": 52416,
+    "length": 980,
+    "shape": [
+     5,
+     4,
+     7,
+     7
+    ]
+   },
+   "cam.top5": {
+    "offset": 53396,
+    "length": 25,
+    "shape": [
+     5,
+     5
+    ]
+   },
+   "check.replay": {
+    "offset": 53421,
+    "length": 64,
+    "shape": [
+     8,
+     8
+    ]
+   }
+  }
+ },
+ "validation": {
+  "drawerVsTorchvisionLogitsMaxError": 9.059906005859375e-06,
+  "datasetTopRecomputedMaxError": 2.574920654296875e-05
+ },
+ "capture": {
+  "timestamp": "2026-11-03T13:31:06.300880+00:00",
+  "device": "mps",
+  "dtype": "float32",
+  "python": "3.12.12",
+  "packages": {
+   "torch": "2.14.1",
+   "torchvision": "0.29.1",
+   "numpy": "2.5.4",
+   "pillow": "13.0.0"
+  },
+  "threads": 4,
+  "script": "scripts/interpretability/record_cnn_features.py",
+  "scriptSha256": "3b10ebe4e9df509bbacee60ec09b0bc45e3a7a0bd6406ffdf864b30756842843",
+  "helperSha256": "1e66fbcdefd5ecf96aa9928c457ae5d4defe1697e90fd79fc8ad6fabbf5117be",
+  "images": "scripts/interpretability/cnn_images.py"
+ }
+}

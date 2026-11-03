@@ -1,0 +1,1426 @@
+{
+	"model": {
+		"id": "openai-community/gpt2",
+		"name": "GPT-2 small, block 0",
+		"revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+		"url": "https://huggingface.co/openai-community/gpt2",
+		"license": "MIT"
+	},
+	"text": {
+		"dataset": "rajpurkar/squad",
+		"split": "validation",
+		"url": "https://huggingface.co/datasets/rajpurkar/squad",
+		"license": "CC BY-SA 4.0",
+		"note": "the first distinct validation paragraphs, joined by blank lines",
+		"tokens": [
+			"Super",
+			" Bowl",
+			" 50",
+			" was",
+			" an",
+			" American",
+			" football",
+			" game",
+			" to",
+			" determine",
+			" the",
+			" champion",
+			" of",
+			" the",
+			" National",
+			" Football",
+			" League",
+			" (",
+			"NFL",
+			")",
+			" for",
+			" the",
+			" 2015",
+			" season",
+			".",
+			" The",
+			" American",
+			" Football",
+			" Conference",
+			" (",
+			"A",
+			"FC",
+			")",
+			" champion",
+			" Denver",
+			" Broncos",
+			" defeated",
+			" the",
+			" National",
+			" Football",
+			" Conference",
+			" (",
+			"N",
+			"FC",
+			")",
+			" champion",
+			" Carolina",
+			" Panthers",
+			" 24",
+			"âĢĵ",
+			"10",
+			" to",
+			" earn",
+			" their",
+			" third",
+			" Super",
+			" Bowl",
+			" title",
+			".",
+			" The",
+			" game",
+			" was",
+			" played",
+			" on",
+			" February",
+			" 7",
+			",",
+			" 2016",
+			",",
+			" at",
+			" Levi",
+			"'s",
+			" Stadium",
+			" in",
+			" the",
+			" San",
+			" Francisco",
+			" Bay",
+			" Area",
+			" at",
+			" Santa",
+			" Clara",
+			",",
+			" California",
+			".",
+			" As",
+			" this",
+			" was",
+			" the",
+			" 50",
+			"th",
+			" Super",
+			" Bowl",
+			",",
+			" the",
+			" league",
+			" emphasized",
+			" the",
+			" \"",
+			"gold",
+			"en",
+			" anniversary",
+			"\"",
+			" with",
+			" various",
+			" gold",
+			"-",
+			"themed",
+			" initiatives",
+			",",
+			" as",
+			" well",
+			" as",
+			" temporarily",
+			" suspending",
+			" the",
+			" tradition",
+			" of",
+			" naming",
+			" each",
+			" Super",
+			" Bowl",
+			" game",
+			" with",
+			" Roman",
+			" numer",
+			"als",
+			" ("
+		]
+	},
+	"tokenIds": [
+		12442,
+		8693,
+		2026,
+		373,
+		281,
+		1605,
+		4346,
+		983,
+		284,
+		5004,
+		262,
+		8783,
+		286,
+		262,
+		2351,
+		9957,
+		4041,
+		357,
+		32078,
+		8,
+		329,
+		262,
+		1853,
+		1622,
+		13,
+		383,
+		1605,
+		9957,
+		8785,
+		357,
+		32,
+		4851,
+		8,
+		8783,
+		10656,
+		16582,
+		9772,
+		262,
+		2351,
+		9957,
+		8785,
+		357,
+		45,
+		4851,
+		8,
+		8783,
+		5913,
+		17782,
+		1987,
+		1906,
+		940,
+		284,
+		5160,
+		511,
+		2368,
+		3115,
+		8693,
+		3670,
+		13,
+		383,
+		983,
+		373,
+		2826,
+		319,
+		3945,
+		767,
+		11,
+		1584,
+		11,
+		379,
+		20196,
+		338,
+		10499,
+		287,
+		262,
+		2986,
+		6033,
+		4696,
+		9498,
+		379,
+		8909,
+		27443,
+		11,
+		3442,
+		13,
+		1081,
+		428,
+		373,
+		262,
+		2026,
+		400,
+		3115,
+		8693,
+		11,
+		262,
+		4652,
+		20047,
+		262,
+		366,
+		24267,
+		268,
+		11162,
+		1,
+		351,
+		2972,
+		3869,
+		12,
+		26966,
+		15446,
+		11,
+		355,
+		880,
+		355,
+		13413,
+		47499,
+		262,
+		6761,
+		286,
+		19264,
+		1123,
+		3115,
+		8693,
+		983,
+		351,
+		7993,
+		5470,
+		874,
+		357
+	],
+	"shape": {
+		"M": 128,
+		"K": 768,
+		"N": 3072
+	},
+	"cache": {
+		"l1dBytes": 65536,
+		"l2Bytes": 4194304,
+		"l1Factor": 0.8,
+		"l2Factor": 0.5,
+		"source": "torch.cpu.get_capabilities()"
+	},
+	"default": {
+		"label": "Inductor default",
+		"knobs": {},
+		"blocking": {
+			"num_threads": 10,
+			"M": 128,
+			"N": 3072,
+			"K": 768,
+			"Mr": 4,
+			"Nr": 24,
+			"Kr": 1,
+			"Mt_blocks": 32,
+			"Nt_blocks": 13,
+			"Kt_blocks": 768,
+			"Mc_blocks": 32,
+			"Nc_blocks": 1,
+			"Kc_blocks": 546
+		},
+		"maxAbsDiff": 3.09944e-6,
+		"time": {
+			"median": 1.02426,
+			"min": 0.89572,
+			"max": 1.18081,
+			"rounds": 25
+		},
+		"msTensor": "ms.0"
+	},
+	"rule": [
+		32,
+		1,
+		546
+	],
+	"gemmSource": "#include <torch/csrc/inductor/cpp_prefix.h>\n#include <c10/util/Unroll.h>\n#include <torch/csrc/inductor/aoti_torch/c/shim.h>\n\n\n\n\ntemplate <int64_t BLOCK_M, int64_t BLOCK_N, bool accum, bool prefetch=false>\ninline void kernel_micro_gemm_kernel(\n    const float* __restrict__ A,\n    const float* __restrict__ B,\n    float* __restrict__ C,\n    int64_t K,\n    int64_t lda,\n    int64_t ldb,\n    int64_t ldc\n) {\n    using Vectorized = at::vec::Vectorized<float>;\n    constexpr auto VLEN = Vectorized::size();\n    constexpr auto ROWS = BLOCK_M;\n    constexpr auto COLS = BLOCK_N / VLEN;\n\n    Vectorized va;\n    at::vec::VectorizedN<float, COLS> vb;\n    at::vec::VectorizedN<float, ROWS*COLS> vc;\n    auto loadc = [&](auto i) {\n        if constexpr (accum) {\n            constexpr int row = i / COLS;\n            constexpr int col = i % COLS;\n            vc[i] = Vectorized::loadu(C + row * ldc + col * VLEN);\n        } else {\n            vc[i] = Vectorized(0.0f);\n        }\n    };\n    c10::ForcedUnroll<ROWS * COLS>{}(loadc);\n\n    auto compute = [&, COLS](auto i, int k) {\n        constexpr int row = i / COLS;\n        constexpr int col = i % COLS;\n        if constexpr (col == 0) {\n            va = Vectorized(static_cast<float>(A[row * lda + k]));\n        }\n\n        if constexpr (row == 0) {\n            vb[col] = Vectorized::loadu(B + k * ldb + col * VLEN);\n\n        }\n\n        constexpr int idx = row * COLS + col;\n        vc[idx] = at::vec::fmadd(va, vb[col], vc[idx]);\n    };\n\n    for (int k = 0; k < K; ++k) {\n        c10::ForcedUnroll<ROWS * COLS>{}(compute, k);\n    }\n\n    // store to C\n    auto storec = [&](auto i) {\n        constexpr int row = i / COLS;\n        constexpr int col = i % COLS;\n        vc[i].store(C + row * ldc + col * VLEN);\n    };\n    c10::ForcedUnroll<ROWS * COLS>{}(storec);\n}\n\ntemplate <bool accum, bool prefetch=false>\ninline void kernel_micro_gemm(\n    const float* __restrict__ A,\n    const float* __restrict__ B,\n    float* __restrict__ C,\n    int64_t M,\n    int64_t N,\n    int64_t K,\n    int64_t lda,\n    int64_t ldb,\n    int64_t ldc\n) {\n    using Vectorized = at::vec::Vectorized<float>;\n    constexpr auto VLEN = Vectorized::size();\n    TORCH_CHECK(24 % VLEN == 0, \"block_n dimension must be multiple of Vector size\");\n    TORCH_CHECK(K % 1 == 0, \"K dimension must be multiple of 1\");\n    // TODO(jgong5): loop unroll for M and N\n    for (int64_t m = 0; m < M; m += 4) {\n        int64_t block_m = std::min<int64_t>(M - m, 4);\n        for (int64_t n = 0; n < N; n += 24) {\n            int64_t block_n = std::min<int64_t>(N - n, 24);\n            if (block_m == 4 && block_n == 24) {\n                kernel_micro_gemm_kernel<4, 24, accum, prefetch>(\n                    A + m * lda,\n                    B + n,\n                    C + m * ldc + n,\n                    K,\n                    lda,\n                    ldb,\n                    ldc\n                );\n            } else {\n                switch (block_m) {\n                case 3:\n                    kernel_micro_gemm_kernel<3, 24, accum, prefetch>(\n                        A + m * lda,\n                        B + n,\n                        C + m * ldc + n,\n                        K,\n                        lda,\n                        ldb,\n                        ldc\n                    );\n                    break;\n                case 2:\n                    kernel_micro_gemm_kernel<2, 24, accum, prefetch>(\n                        A + m * lda,\n                        B + n,\n                        C + m * ldc + n,\n                        K,\n                        lda,\n                        ldb,\n                        ldc\n                    );\n                    break;\n                case 1:\n                    kernel_micro_gemm_kernel<1, 24, accum, prefetch>(\n                        A + m * lda,\n                        B + n,\n                        C + m * ldc + n,\n                        K,\n                        lda,\n                        ldb,\n                        ldc\n                    );\n                    break;\n                default:\n                    TORCH_CHECK(false, \"Unsupported block_m: 4\");\n                }\n            }\n        }\n    }\n}\n\nextern \"C\" \nvoid kernel(const float* X, const float* W, const float* inp, float* Y)\n{\n\n\n    constexpr int64_t num_threads = 10;\n    constexpr int64_t N = 3072;\n    constexpr int64_t K = 768;\n    constexpr int64_t Mr = 4;\n    constexpr int64_t Nr = 24;\n    constexpr int64_t Kr = 1;\n    constexpr int64_t Nr_blocks = (N + Nr - 1) / Nr;\n    constexpr int64_t Kr_blocks = (K + Kr - 1) / Kr;\n    constexpr int64_t M = static_cast<int64_t>(128LL);\n    constexpr int64_t Mr_blocks = (M + Mr - 1) / Mr;\n    constexpr int64_t Mt_blocks = 32;\n    constexpr int64_t Nt_blocks = 13;\n    constexpr int64_t Kt_blocks = 768;\n    constexpr int64_t Mc_blocks = 32;\n    constexpr int64_t Nc_blocks = 1;\n    constexpr int64_t Kc_blocks = 546;\n    constexpr int64_t num_Mc_blocks = (Mr_blocks + Mc_blocks - 1) / Mc_blocks;\n    constexpr int64_t num_Nc_blocks = (Nr_blocks + Nc_blocks - 1) / Nc_blocks;\n    constexpr int64_t num_Mt_blocks = (Mr_blocks + Mt_blocks - 1) / Mt_blocks;\n    constexpr int64_t num_Nt_blocks = (Nr_blocks + Nt_blocks - 1) / Nt_blocks;\n    constexpr int64_t num_Kt_blocks = (Kr_blocks + Kt_blocks - 1) / Kt_blocks;\n\n    // make sure all partitions are assigned\n    TORCH_CHECK(\n        Mt_blocks * Nt_blocks * Kt_blocks * 10 >= Mr_blocks * Nr_blocks * Kr_blocks,\n        \"Not all partitions are assigned.\"\n    );\n    #pragma omp parallel num_threads(10)\n    {\n\n        #pragma omp for schedule(static, 1)\n        for (int64_t tid = 0; tid < 10; tid++) {\n\n            const int64_t k_group_id = tid / num_Kt_blocks;\n            const int64_t k_slice_id = tid % num_Kt_blocks;\n            const int64_t n_group_id = k_group_id / num_Nt_blocks;\n            const int64_t n_slice_id = k_group_id % num_Nt_blocks;\n            const int64_t k_block_start = k_slice_id * Kt_blocks;\n            const int64_t k_block_end = std::min(k_block_start + Kt_blocks, Kr_blocks);\n            const int64_t n_block_start = n_slice_id * Nt_blocks;\n            const int64_t n_block_end = std::min(n_block_start + Nt_blocks, Nr_blocks);\n            const int64_t m_block_start = std::min(n_group_id * Mt_blocks, Mr_blocks);\n            const int64_t m_block_end = std::min(m_block_start + Mt_blocks, Mr_blocks);\n            const int64_t num_Mc_blocks_per_thread = (m_block_end - m_block_start + Mc_blocks - 1) / Mc_blocks;\n        for (int64_t mc_block_id = 0; mc_block_id < num_Mc_blocks_per_thread; mc_block_id++) {\n\n            const int64_t my_mc_block_id = (mc_block_id + n_slice_id) % num_Mc_blocks_per_thread;\n            const int64_t mc = m_block_start + my_mc_block_id * Mc_blocks;\n            const int64_t m_start = mc * Mr;\n            const int64_t m_end = std::min(std::min(mc + Mc_blocks, m_block_end) * Mr, M);\n            const int64_t m_size = m_end - m_start;\n            for (int64_t nc = n_block_start; nc < n_block_end; nc += Nc_blocks) {\n\n                const int64_t n_start = nc * Nr;\n                const int64_t n_end = std::min(std::min(nc + Nc_blocks, n_block_end) * Nr, N);\n                const int64_t n_size = n_end - n_start;\n                // NB: assume we pad N, nc_block_end won't exceed padded N here.\n                const int64_t nc_block_end = std::min(nc + Nc_blocks, n_block_end);\n                for (int64_t kc = k_block_start; kc < k_block_end; kc += Kc_blocks) {\n                    int64_t k_start = kc * Kr;\n                    int64_t k_end = std::min(std::min(kc + Kc_blocks, k_block_end) * Kr, K);\n                    for (int64_t nci = nc; nci < nc_block_end; nci++) {\n                        if (kc == k_block_start) {\n                            kernel_micro_gemm<static_cast<bool>(false), static_cast<bool>(false)>(\n                                &(X[static_cast<int64_t>(k_start + 768LL*m_start)]),\n                                &(W[static_cast<int64_t>(24LL*k_start + 18432LL*nci)]),\n                                &(Y[static_cast<int64_t>(n_start + 3072LL*m_start + Nr*nci + ((-1LL)*Nr*nc))]),\n                                static_cast<int64_t>(m_end + ((-1LL)*m_start)),\n                                static_cast<int64_t>(Nr),\n                                static_cast<int64_t>(k_end + ((-1LL)*k_start)),\n                                static_cast<int64_t>(768LL),\n                                static_cast<int64_t>(24LL),\n                                static_cast<int64_t>(3072LL)\n                            );\n\n                        } else {\n                            kernel_micro_gemm<static_cast<bool>(true), static_cast<bool>(false)>(\n                                &(X[static_cast<int64_t>(k_start + 768LL*m_start)]),\n                                &(W[static_cast<int64_t>(24LL*k_start + 18432LL*nci)]),\n                                &(Y[static_cast<int64_t>(n_start + 3072LL*m_start + Nr*nci + ((-1LL)*Nr*nc))]),\n                                static_cast<int64_t>(m_end + ((-1LL)*m_start)),\n                                static_cast<int64_t>(Nr),\n                                static_cast<int64_t>(k_end + ((-1LL)*k_start)),\n                                static_cast<int64_t>(768LL),\n                                static_cast<int64_t>(24LL),\n                                static_cast<int64_t>(3072LL)\n                            );\n\n                        }\n                    }\n                }\n                {\n                    {\n                        for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(m_end + ((-1LL)*m_start)); x0+=static_cast<int64_t>(1LL))\n                        {\n                            for(int64_t x1=static_cast<int64_t>(0LL); x1<static_cast<int64_t>(n_end + ((-1LL)*n_start)); x1+=static_cast<int64_t>(4LL))\n                            {\n                                {\n                                    if(C10_LIKELY(x1 >= static_cast<int64_t>(0) && x1 < static_cast<int64_t>(4LL*(c10::div_floor_integer(static_cast<int64_t>(n_end + ((-1LL)*n_start)), static_cast<int64_t>(4LL))))))\n                                    {\n                                        auto tmp0 = at::vec::Vectorized<float>::loadu(inp + static_cast<int64_t>(n_start + x1), static_cast<int64_t>(4));\n                                        auto tmp1 = at::vec::Vectorized<float>::loadu(Y + static_cast<int64_t>(n_start + x1 + 3072LL*m_start + 3072LL*x0), static_cast<int64_t>(4));\n                                        auto tmp2 = tmp0 + tmp1;\n                                        auto tmp3 = static_cast<float>(0.5);\n                                        auto tmp4 = at::vec::Vectorized<float>(tmp3);\n                                        auto tmp5 = tmp2 * tmp4;\n                                        auto tmp6 = tmp2 * tmp2;\n                                        auto tmp7 = tmp6 * tmp2;\n                                        auto tmp8 = static_cast<float>(0.044715);\n                                        auto tmp9 = at::vec::Vectorized<float>(tmp8);\n                                        auto tmp10 = tmp7 * tmp9;\n                                        auto tmp11 = tmp2 + tmp10;\n                                        auto tmp12 = static_cast<float>(0.7978845608028654);\n                                        auto tmp13 = at::vec::Vectorized<float>(tmp12);\n                                        auto tmp14 = tmp11 * tmp13;\n                                        auto tmp15 = tmp14.tanh();\n                                        auto tmp16 = static_cast<float>(1.0);\n                                        auto tmp17 = at::vec::Vectorized<float>(tmp16);\n                                        auto tmp18 = tmp15 + tmp17;\n                                        auto tmp19 = tmp5 * tmp18;\n                                        tmp19.store(Y + static_cast<int64_t>(n_start + x1 + 3072LL*m_start + 3072LL*x0));\n                                    }\n                                    if(C10_UNLIKELY(x1 >= static_cast<int64_t>(4LL*(c10::div_floor_integer(static_cast<int64_t>(n_end + ((-1LL)*n_start)), static_cast<int64_t>(4LL)))) && x1 < static_cast<int64_t>(n_end + ((-1LL)*n_start))))\n                                    {\n                                        auto tmp0 = at::vec::Vectorized<float>::loadu(inp + static_cast<int64_t>(n_start + x1), static_cast<int64_t>(n_end + ((-1LL)*n_start) + (-4LL)*(c10::div_floor_integer(static_cast<int64_t>(n_end + ((-1LL)*n_start)), static_cast<int64_t>(4LL)))));\n                                        auto tmp1 = at::vec::Vectorized<float>::loadu(Y + static_cast<int64_t>(n_start + x1 + 3072LL*m_start + 3072LL*x0), static_cast<int64_t>(n_end + ((-1LL)*n_start) + (-4LL)*(c10::div_floor_integer(static_cast<int64_t>(n_end + ((-1LL)*n_start)), static_cast<int64_t>(4LL)))));\n                                        auto tmp2 = tmp0 + tmp1;\n                                        auto tmp3 = static_cast<float>(0.5);\n                                        auto tmp4 = at::vec::Vectorized<float>(tmp3);\n                                        auto tmp5 = tmp2 * tmp4;\n                                        auto tmp6 = tmp2 * tmp2;\n                                        auto tmp7 = tmp6 * tmp2;\n                                        auto tmp8 = static_cast<float>(0.044715);\n                                        auto tmp9 = at::vec::Vectorized<float>(tmp8);\n                                        auto tmp10 = tmp7 * tmp9;\n                                        auto tmp11 = tmp2 + tmp10;\n                                        auto tmp12 = static_cast<float>(0.7978845608028654);\n                                        auto tmp13 = at::vec::Vectorized<float>(tmp12);\n                                        auto tmp14 = tmp11 * tmp13;\n                                        auto tmp15 = tmp14.tanh();\n                                        auto tmp16 = static_cast<float>(1.0);\n                                        auto tmp17 = at::vec::Vectorized<float>(tmp16);\n                                        auto tmp18 = tmp15 + tmp17;\n                                        auto tmp19 = tmp5 * tmp18;\n                                        tmp19.store(Y + static_cast<int64_t>(n_start + x1 + 3072LL*m_start + 3072LL*x0), static_cast<int64_t>(n_end + ((-1LL)*n_start) + (-4LL)*(c10::div_floor_integer(static_cast<int64_t>(n_end + ((-1LL)*n_start)), static_cast<int64_t>(4LL)))));\n                                    }\n                                }\n                            }\n                        }\n                    }\n\n                }\n            }\n        }\n            }\n\n    }\n}",
+	"call": "    def call(self, args):\n        arg2_1, = args\n        args.clear()\n        assert_size_stride(arg2_1, (128, 768), (768, 1), 'input')\n        buf1 = empty_strided_cpu((128, 3072), (3072, 1), torch.float32)\n        cpp_fused_addmm_gelu_0(arg2_1, constant2, _frozen_param1, buf1)\n        del arg2_1\n        return (buf1, )",
+	"sweeps": {
+		"Kc": [
+			{
+				"label": "Kc (32, 1, 8)",
+				"knobs": {
+					"cache_blocking": "32,1,8"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 1,
+					"Kc_blocks": 8
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.03349,
+					"min": 0.900335,
+					"max": 1.2044,
+					"rounds": 25
+				},
+				"msTensor": "ms.1"
+			},
+			{
+				"label": "Kc (32, 1, 16)",
+				"knobs": {
+					"cache_blocking": "32,1,16"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 1,
+					"Kc_blocks": 16
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.02557,
+					"min": 0.818179,
+					"max": 1.22497,
+					"rounds": 25
+				},
+				"msTensor": "ms.2"
+			},
+			{
+				"label": "Kc (32, 1, 32)",
+				"knobs": {
+					"cache_blocking": "32,1,32"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 1,
+					"Kc_blocks": 32
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.02111,
+					"min": 0.853265,
+					"max": 1.18913,
+					"rounds": 25
+				},
+				"msTensor": "ms.3"
+			},
+			{
+				"label": "Kc (32, 1, 64)",
+				"knobs": {
+					"cache_blocking": "32,1,64"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 1,
+					"Kc_blocks": 64
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.03093,
+					"min": 0.855598,
+					"max": 1.22025,
+					"rounds": 25
+				},
+				"msTensor": "ms.4"
+			},
+			{
+				"label": "Kc (32, 1, 128)",
+				"knobs": {
+					"cache_blocking": "32,1,128"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 1,
+					"Kc_blocks": 128
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.02929,
+					"min": 0.814594,
+					"max": 1.19311,
+					"rounds": 25
+				},
+				"msTensor": "ms.5"
+			},
+			{
+				"label": "Kc (32, 1, 256)",
+				"knobs": {
+					"cache_blocking": "32,1,256"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 1,
+					"Kc_blocks": 256
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 0.962063,
+					"min": 0.759204,
+					"max": 1.19146,
+					"rounds": 25
+				},
+				"msTensor": "ms.6"
+			},
+			{
+				"label": "Kc (32, 1, 384)",
+				"knobs": {
+					"cache_blocking": "32,1,384"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 1,
+					"Kc_blocks": 384
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.03138,
+					"min": 0.773721,
+					"max": 1.19077,
+					"rounds": 25
+				},
+				"msTensor": "ms.7"
+			},
+			{
+				"label": "Kc (32, 1, 546)",
+				"knobs": {
+					"cache_blocking": "32,1,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 1,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.07038,
+					"min": 0.768204,
+					"max": 1.18877,
+					"rounds": 25
+				},
+				"msTensor": "ms.8"
+			},
+			{
+				"label": "Kc (32, 1, 768)",
+				"knobs": {
+					"cache_blocking": "32,1,768"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 1,
+					"Kc_blocks": 768
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.04548,
+					"min": 0.760569,
+					"max": 1.18037,
+					"rounds": 25
+				},
+				"msTensor": "ms.9"
+			}
+		],
+		"Mc": [
+			{
+				"label": "Mc (1, 1, 546)",
+				"knobs": {
+					"cache_blocking": "1,1,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 1,
+					"Nc_blocks": 1,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.0385,
+					"min": 0.905486,
+					"max": 1.19378,
+					"rounds": 25
+				},
+				"msTensor": "ms.10"
+			},
+			{
+				"label": "Mc (2, 1, 546)",
+				"knobs": {
+					"cache_blocking": "2,1,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 2,
+					"Nc_blocks": 1,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.05674,
+					"min": 0.79068,
+					"max": 1.24722,
+					"rounds": 25
+				},
+				"msTensor": "ms.11"
+			},
+			{
+				"label": "Mc (4, 1, 546)",
+				"knobs": {
+					"cache_blocking": "4,1,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 4,
+					"Nc_blocks": 1,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.04511,
+					"min": 0.85,
+					"max": 1.27357,
+					"rounds": 25
+				},
+				"msTensor": "ms.12"
+			},
+			{
+				"label": "Mc (8, 1, 546)",
+				"knobs": {
+					"cache_blocking": "8,1,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 8,
+					"Nc_blocks": 1,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.04715,
+					"min": 0.887917,
+					"max": 1.24493,
+					"rounds": 25
+				},
+				"msTensor": "ms.13"
+			},
+			{
+				"label": "Mc (16, 1, 546)",
+				"knobs": {
+					"cache_blocking": "16,1,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 16,
+					"Nc_blocks": 1,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.04723,
+					"min": 0.743623,
+					"max": 1.16457,
+					"rounds": 25
+				},
+				"msTensor": "ms.14"
+			},
+			{
+				"label": "Mc (32, 1, 546)",
+				"knobs": {
+					"cache_blocking": "32,1,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 1,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.04744,
+					"min": 0.786211,
+					"max": 1.25145,
+					"rounds": 25
+				},
+				"msTensor": "ms.15"
+			}
+		],
+		"Nc": [
+			{
+				"label": "Nc (32, 1, 546)",
+				"knobs": {
+					"cache_blocking": "32,1,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 1,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.05091,
+					"min": 0.843412,
+					"max": 1.16353,
+					"rounds": 25
+				},
+				"msTensor": "ms.16"
+			},
+			{
+				"label": "Nc (32, 2, 546)",
+				"knobs": {
+					"cache_blocking": "32,2,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 2,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.0471,
+					"min": 0.859148,
+					"max": 1.25557,
+					"rounds": 25
+				},
+				"msTensor": "ms.17"
+			},
+			{
+				"label": "Nc (32, 4, 546)",
+				"knobs": {
+					"cache_blocking": "32,4,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 4,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.03599,
+					"min": 0.801432,
+					"max": 1.19713,
+					"rounds": 25
+				},
+				"msTensor": "ms.18"
+			},
+			{
+				"label": "Nc (32, 8, 546)",
+				"knobs": {
+					"cache_blocking": "32,8,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 8,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.03651,
+					"min": 0.810426,
+					"max": 1.2344,
+					"rounds": 25
+				},
+				"msTensor": "ms.19"
+			},
+			{
+				"label": "Nc (32, 13, 546)",
+				"knobs": {
+					"cache_blocking": "32,13,546"
+				},
+				"blocking": {
+					"num_threads": 10,
+					"M": 128,
+					"N": 3072,
+					"K": 768,
+					"Mr": 4,
+					"Nr": 24,
+					"Kr": 1,
+					"Mt_blocks": 32,
+					"Nt_blocks": 13,
+					"Kt_blocks": 768,
+					"Mc_blocks": 32,
+					"Nc_blocks": 13,
+					"Kc_blocks": 546
+				},
+				"maxAbsDiff": 3.09944e-6,
+				"time": {
+					"median": 1.00349,
+					"min": 0.770903,
+					"max": 1.20008,
+					"rounds": 25
+				},
+				"msTensor": "ms.20"
+			}
+		]
+	},
+	"register": [
+		{
+			"label": "register (4, 24, 1)",
+			"knobs": {
+				"register_blocking": [
+					4,
+					24,
+					1
+				]
+			},
+			"blocking": {
+				"num_threads": 10,
+				"M": 128,
+				"N": 3072,
+				"K": 768,
+				"Mr": 4,
+				"Nr": 24,
+				"Kr": 1,
+				"Mt_blocks": 32,
+				"Nt_blocks": 13,
+				"Kt_blocks": 768,
+				"Mc_blocks": 32,
+				"Nc_blocks": 1,
+				"Kc_blocks": 546
+			},
+			"maxAbsDiff": 3.09944e-6,
+			"time": {
+				"median": 1.01258,
+				"min": 0.849707,
+				"max": 1.41575,
+				"rounds": 25
+			},
+			"msTensor": "ms.21"
+		},
+		{
+			"label": "register (4, 16, 1)",
+			"knobs": {
+				"register_blocking": [
+					4,
+					16,
+					1
+				]
+			},
+			"blocking": {
+				"num_threads": 10,
+				"M": 128,
+				"N": 3072,
+				"K": 768,
+				"Mr": 4,
+				"Nr": 16,
+				"Kr": 1,
+				"Mt_blocks": 32,
+				"Nt_blocks": 20,
+				"Kt_blocks": 768,
+				"Mc_blocks": 32,
+				"Nc_blocks": 1,
+				"Kc_blocks": 768
+			},
+			"maxAbsDiff": 3.09944e-6,
+			"time": {
+				"median": 1.00854,
+				"min": 0.8208,
+				"max": 1.17416,
+				"rounds": 25
+			},
+			"msTensor": "ms.22"
+		},
+		{
+			"label": "register (8, 8, 1)",
+			"knobs": {
+				"register_blocking": [
+					8,
+					8,
+					1
+				]
+			},
+			"blocking": {
+				"num_threads": 10,
+				"M": 128,
+				"N": 3072,
+				"K": 768,
+				"Mr": 8,
+				"Nr": 8,
+				"Kr": 1,
+				"Mt_blocks": 16,
+				"Nt_blocks": 39,
+				"Kt_blocks": 768,
+				"Mc_blocks": 16,
+				"Nc_blocks": 1,
+				"Kc_blocks": 768
+			},
+			"maxAbsDiff": 3.09944e-6,
+			"time": {
+				"median": 1.02446,
+				"min": 0.782731,
+				"max": 1.1659,
+				"rounds": 25
+			},
+			"msTensor": "ms.23"
+		}
+	],
+	"threads": [
+		{
+			"label": "threads 1,10,1",
+			"knobs": {
+				"thread_factors": "1,10,1"
+			},
+			"blocking": {
+				"num_threads": 10,
+				"M": 128,
+				"N": 3072,
+				"K": 768,
+				"Mr": 4,
+				"Nr": 24,
+				"Kr": 1,
+				"Mt_blocks": 32,
+				"Nt_blocks": 13,
+				"Kt_blocks": 768,
+				"Mc_blocks": 32,
+				"Nc_blocks": 1,
+				"Kc_blocks": 546
+			},
+			"maxAbsDiff": 3.09944e-6,
+			"time": {
+				"median": 1.04266,
+				"min": 0.935396,
+				"max": 1.19385,
+				"rounds": 25
+			},
+			"msTensor": "ms.24"
+		},
+		{
+			"label": "threads 2,5,1",
+			"knobs": {
+				"thread_factors": "2,5,1"
+			},
+			"blocking": {
+				"num_threads": 10,
+				"M": 128,
+				"N": 3072,
+				"K": 768,
+				"Mr": 4,
+				"Nr": 24,
+				"Kr": 1,
+				"Mt_blocks": 16,
+				"Nt_blocks": 26,
+				"Kt_blocks": 768,
+				"Mc_blocks": 16,
+				"Nc_blocks": 1,
+				"Kc_blocks": 546
+			},
+			"maxAbsDiff": 3.09944e-6,
+			"time": {
+				"median": 1.06213,
+				"min": 0.737007,
+				"max": 1.26427,
+				"rounds": 25
+			},
+			"msTensor": "ms.25"
+		},
+		{
+			"label": "threads 5,2,1",
+			"knobs": {
+				"thread_factors": "5,2,1"
+			},
+			"blocking": {
+				"num_threads": 10,
+				"M": 128,
+				"N": 3072,
+				"K": 768,
+				"Mr": 4,
+				"Nr": 24,
+				"Kr": 1,
+				"Mt_blocks": 7,
+				"Nt_blocks": 64,
+				"Kt_blocks": 768,
+				"Mc_blocks": 7,
+				"Nc_blocks": 1,
+				"Kc_blocks": 546
+			},
+			"maxAbsDiff": 3.09944e-6,
+			"time": {
+				"median": 1.06298,
+				"min": 0.817176,
+				"max": 1.26883,
+				"rounds": 25
+			},
+			"msTensor": "ms.26"
+		},
+		{
+			"label": "threads 10,1,1",
+			"knobs": {
+				"thread_factors": "10,1,1"
+			},
+			"blocking": {
+				"num_threads": 10,
+				"M": 128,
+				"N": 3072,
+				"K": 768,
+				"Mr": 4,
+				"Nr": 24,
+				"Kr": 1,
+				"Mt_blocks": 4,
+				"Nt_blocks": 128,
+				"Kt_blocks": 768,
+				"Mc_blocks": 4,
+				"Nc_blocks": 1,
+				"Kc_blocks": 546
+			},
+			"maxAbsDiff": 3.09944e-6,
+			"time": {
+				"median": 1.02024,
+				"min": 0.826115,
+				"max": 1.19671,
+				"rounds": 25
+			},
+			"msTensor": "ms.27"
+		}
+	],
+	"references": {
+		"eager": {
+			"median": 1.00309,
+			"min": 0.760615,
+			"max": 1.14318,
+			"rounds": 25
+		},
+		"atenGemm": {
+			"median": 1.01654,
+			"min": 0.785771,
+			"max": 1.13336,
+			"rounds": 25
+		},
+		"atenCall": "    def call(self, args):\n        arg2_1, = args\n        args.clear()\n        assert_size_stride(arg2_1, (128, 768), (768, 1), 'input')\n        buf0 = empty_strided_cpu((128, 3072), (3072, 1), torch.float32)\n        # Topologically Sorted Source Nodes: [linear], Original ATen: [aten.addmm]\n        extern_kernels.addmm(_frozen_param1, arg2_1, _frozen_param2, alpha=1, beta=1, out=buf0)\n        del arg2_1\n        buf1 = buf0; del buf0  # reuse\n        cpp_fused_gelu_0(buf1)\n        return (buf1, )",
+		"atenSources": {
+			"cpp_fused_gelu_0": "#include <torch/csrc/inductor/cpp_prefix.h>\nextern \"C\"  void  kernel(float* in_out_ptr0)\n{\n    std::atomic<int> inductor_cpu_integer_div_error{0};\n    inductor_cpu_integer_div_error_flag = &inductor_cpu_integer_div_error;\n    #pragma omp parallel num_threads(10)\n    {\n        int tid = omp_get_thread_num();\n        {\n            #pragma omp for\n            for(int64_t x0=static_cast<int64_t>(0LL); x0<static_cast<int64_t>(393216LL); x0+=static_cast<int64_t>(4LL))\n            {\n                {\n                    if(C10_LIKELY(x0 >= static_cast<int64_t>(0) && x0 < static_cast<int64_t>(393216LL)))\n                    {\n                        auto tmp0 = at::vec::Vectorized<float>::loadu(in_out_ptr0 + static_cast<int64_t>(x0), static_cast<int64_t>(4));\n                        auto tmp1 = static_cast<float>(0.5);\n                        auto tmp2 = at::vec::Vectorized<float>(tmp1);\n                        auto tmp3 = tmp0 * tmp2;\n                        auto tmp4 = tmp0 * tmp0;\n                        auto tmp5 = tmp4 * tmp0;\n                        auto tmp6 = static_cast<float>(0.044715);\n                        auto tmp7 = at::vec::Vectorized<float>(tmp6);\n                        auto tmp8 = tmp5 * tmp7;\n                        auto tmp9 = tmp0 + tmp8;\n                        auto tmp10 = static_cast<float>(0.7978845608028654);\n                        auto tmp11 = at::vec::Vectorized<float>(tmp10);\n                        auto tmp12 = tmp9 * tmp11;\n                        auto tmp13 = tmp12.tanh();\n                        auto tmp14 = static_cast<float>(1.0);\n                        auto tmp15 = at::vec::Vectorized<float>(tmp14);\n                        auto tmp16 = tmp13 + tmp15;\n                        auto tmp17 = tmp3 * tmp16;\n                        tmp17.store(in_out_ptr0 + static_cast<int64_t>(x0));\n                    }\n                }\n            }\n        }\n    }\n    inductor_cpu_integer_div_error_flag = nullptr;\n    inductor_cpu_throw_if_integer_div_error(inductor_cpu_integer_div_error);\n}"
+		}
+	},
+	"metal": {
+		"call": "    def call(self, args):\n        arg0_1, arg1_1, arg2_1 = args\n        args.clear()\n        assert_size_stride_grouped((arg2_1, arg0_1), ((128, 768), (3072, 768)), ((768, 1), (768, 1)), 'input')\n        arg2_1 = copy_if_misaligned(arg2_1)\n        buf0 = empty_strided((128, 3072), (3072, 1), device='mps', dtype=torch.float32)\n        # Topologically Sorted Source Nodes: [linear], Original ATen: [aten.linear]\n        extern_kernels.mm(arg2_1, reinterpret_tensor(arg0_1, (768, 3072), (1, 768), 0), out=buf0)\n        del arg0_1\n        del arg2_1\n        assert_size_stride(arg1_1, (3072, ), (1, ), 'input')\n        buf1 = empty_strided((128, 3072), (3072, 1), device='mps', dtype=torch.float32)\n        generated_kernel_0(buf1, arg1_1, buf0, threads=[393216])\n        del arg1_1\n        return (buf1, )",
+		"sources": {
+			"generated_kernel_0": "kernel void generated_kernel_0(\n        device float* out_ptr0,\n        constant float* in_ptr0,\n        constant float* in_ptr1,\n        uint xindex [[thread_position_in_grid]]\n    ) {\n        int x0 = (xindex) % (3072);\n        int x2 = xindex;\n        auto tmp0 = in_ptr0[x0];\n        auto tmp1 = in_ptr1[x2];\n        auto tmp2 = tmp0 + tmp1;\n        auto tmp3 = 0.5;\n        auto tmp4 = tmp2 * tmp3;\n        auto tmp5 = tmp2 * tmp2;\n        auto tmp6 = tmp5 * tmp2;\n        auto tmp7 = 0.044715;\n        auto tmp8 = tmp6 * tmp7;\n        auto tmp9 = tmp2 + tmp8;\n        auto tmp10 = 0.7978845608028654;\n        auto tmp11 = tmp9 * tmp10;\n        auto tmp12 = metal::precise::tanh(tmp11);\n        auto tmp13 = 1.0;\n        auto tmp14 = tmp12 + tmp13;\n        auto tmp15 = tmp4 * tmp14;\n        out_ptr0[x2] = static_cast<float>(tmp15);\n    }"
+		},
+		"compiled": {
+			"median": 0.0836575,
+			"min": 0.0830483,
+			"max": 0.0844541,
+			"rounds": 25
+		},
+		"eager": {
+			"median": 0.112027,
+			"min": 0.11041,
+			"max": 0.115589,
+			"rounds": 25
+		},
+		"maxAbsDiff": 3.09944e-6
+	},
+	"recorder": {
+		"timestamp": "2026-11-03T15:19:23.621621+00:00",
+		"device": "cpu (arm64, Darwin)",
+		"dtype": "float32",
+		"python": "3.12.12",
+		"packages": {
+			"torch": "2.14.1",
+			"numpy": "2.5.4"
+		},
+		"cpuCount": 14,
+		"machine": {
+			"cpu": "Apple M4 Max",
+			"cores": 14,
+			"threads": 10,
+			"l1dBytes": 65536,
+			"l2Bytes": 4194304,
+			"compiler": "Apple clang version 17.0.0 (clang-1700.0.13.5)",
+			"os": "Darwin 24.5.0 (arm64)",
+			"mps": true
+		},
+		"script": "scripts/compilers/record_tiling.py",
+		"scriptSha256": "296722b8d6036f72a0ce4df6c0c28fd9d5512fc5e7fdeeb7d151ce5af515ba63",
+		"loadAverage": [
+			[
+				5.6,
+				6.27,
+				8.47
+			],
+			[
+				6.63,
+				6.44,
+				8.4
+			]
+		]
+	},
+	"data": {
+		"file": "tiling.f32",
+		"sha256": "3bb305347eee8031a09035598304420b7b95cfd4edb954df1d6c6b5b14d94ab4",
+		"bytes": 396216,
+		"tensors": {
+			"ms.0": {
+				"offset": 0,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.1": {
+				"offset": 25,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.2": {
+				"offset": 50,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.3": {
+				"offset": 75,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.4": {
+				"offset": 100,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.5": {
+				"offset": 125,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.6": {
+				"offset": 150,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.7": {
+				"offset": 175,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.8": {
+				"offset": 200,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.9": {
+				"offset": 225,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.10": {
+				"offset": 250,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.11": {
+				"offset": 275,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.12": {
+				"offset": 300,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.13": {
+				"offset": 325,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.14": {
+				"offset": 350,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.15": {
+				"offset": 375,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.16": {
+				"offset": 400,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.17": {
+				"offset": 425,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.18": {
+				"offset": 450,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.19": {
+				"offset": 475,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.20": {
+				"offset": 500,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.21": {
+				"offset": 525,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.22": {
+				"offset": 550,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.23": {
+				"offset": 575,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.24": {
+				"offset": 600,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.25": {
+				"offset": 625,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.26": {
+				"offset": 650,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"ms.27": {
+				"offset": 675,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"eagerMs": {
+				"offset": 700,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"atenMs": {
+				"offset": 725,
+				"length": 25,
+				"shape": [
+					25
+				]
+			},
+			"A": {
+				"offset": 750,
+				"length": 98304,
+				"shape": [
+					128,
+					768
+				]
+			}
+		}
+	}
+}

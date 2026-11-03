@@ -1,0 +1,1 @@
+import"../chunks/_QuykFFc.js";import"../chunks/BBpFSkTw.js";import{C as t}from"../chunks/1qAV-KiT.js";const o=!0,r="always",s=Object.freeze(Object.defineProperty({__proto__:null,prerender:o,trailingSlash:r},Symbol.toStringTag,{value:"Module"}));function l(e){t(e,{variant:"svm"})}export{l as component,s as universal};

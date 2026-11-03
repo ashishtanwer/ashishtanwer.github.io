@@ -1,0 +1,1258 @@
+{
+	"schemaVersion": 1,
+	"kind": "classical-svm",
+	"tab": "svm",
+	"dataset": {
+		"name": "Iris (scikit-learn load_iris)",
+		"source": "Fisher 1936 / UCI Machine Learning Repository",
+		"url": "https://archive.ics.uci.edu/dataset/53/iris",
+		"license": "CC BY 4.0",
+		"features": [
+			"petal length (cm)",
+			"petal width (cm)"
+		],
+		"positive": "versicolor",
+		"negative": [
+			"setosa",
+			"virginica"
+		],
+		"species": [
+			"setosa",
+			"versicolor",
+			"virginica"
+		],
+		"samples": 150,
+		"train": 105,
+		"test": 45,
+		"mean": [
+			3.73714,
+			1.19714
+		],
+		"std": [
+			1.78054,
+			0.759882
+		]
+	},
+	"run": {
+		"split": "stratified 70/30, random_state 0",
+		"tolerance": 1e-8,
+		"grid": 81,
+		"limit": 2.4,
+		"poly": {
+			"degree": 2,
+			"gamma": 1.0,
+			"coef0": 1.0
+		},
+		"gamma": 1.0,
+		"C": 1.0,
+		"cSweep": [
+			0.1,
+			1.0,
+			10.0,
+			100.0,
+			1000.0
+		],
+		"gammaSweep": [
+			0.1,
+			1.0,
+			10.0,
+			100.0
+		],
+		"standardize": "training-set mean and standard deviation"
+	},
+	"fits": {
+		"linear": {
+			"C": 1.0,
+			"b": -0.906006,
+			"supportVectors": 72,
+			"atBound": 69,
+			"trainAccuracy": 0.666667,
+			"testAccuracy": 0.666667,
+			"wNorm": 0.924309,
+			"margin": 2.16378,
+			"slack": 69.1457
+		},
+		"poly": {
+			"C": 1.0,
+			"degree": 2,
+			"gamma": 1.0,
+			"coef0": 1.0,
+			"b": 2.15401,
+			"supportVectors": 14,
+			"atBound": 10,
+			"trainAccuracy": 0.971429,
+			"testAccuracy": 0.955556,
+			"wNorm": 1.8952,
+			"margin": 1.0553,
+			"slack": 8.20739,
+			"w": [
+				2.22045e-16,
+				-0.0799906,
+				-0.363305,
+				-1.15387,
+				-1.06032,
+				-0.998838
+			],
+			"explicitVsKernel": 3.19744e-14,
+			"phiGram": 1.42109e-14
+		},
+		"rbf": {
+			"C": 1.0,
+			"gamma": 1.0,
+			"b": -0.553065,
+			"supportVectors": 20,
+			"atBound": 14,
+			"trainAccuracy": 0.971429,
+			"testAccuracy": 0.955556,
+			"wNorm": 2.88579,
+			"margin": 0.693051,
+			"slack": 8.41722
+		}
+	},
+	"sweep": [
+		{
+			"C": 0.1,
+			"gamma": 0.1,
+			"b": -1.19659,
+			"supportVectors": 71,
+			"atBound": 69,
+			"trainAccuracy": 0.666667,
+			"testAccuracy": 0.666667,
+			"wNorm": 0.918134,
+			"margin": 2.17833,
+			"slack": 61.5703
+		},
+		{
+			"C": 1.0,
+			"gamma": 0.1,
+			"b": -2.45656,
+			"supportVectors": 53,
+			"atBound": 50,
+			"trainAccuracy": 0.961905,
+			"testAccuracy": 0.911111,
+			"wNorm": 5.61225,
+			"margin": 0.356363,
+			"slack": 20.4404
+		},
+		{
+			"C": 10.0,
+			"gamma": 0.1,
+			"b": -4.67599,
+			"supportVectors": 22,
+			"atBound": 18,
+			"trainAccuracy": 0.961905,
+			"testAccuracy": 0.955556,
+			"wNorm": 10.0892,
+			"margin": 0.198231,
+			"slack": 9.52607
+		},
+		{
+			"C": 100.0,
+			"gamma": 0.1,
+			"b": -8.38465,
+			"supportVectors": 12,
+			"atBound": 8,
+			"trainAccuracy": 0.961905,
+			"testAccuracy": 0.955556,
+			"wNorm": 16.5275,
+			"margin": 0.121011,
+			"slack": 7.23304
+		},
+		{
+			"C": 1000.0,
+			"gamma": 0.1,
+			"b": -26.7415,
+			"supportVectors": 8,
+			"atBound": 5,
+			"trainAccuracy": 0.971429,
+			"testAccuracy": 0.955556,
+			"wNorm": 47.8243,
+			"margin": 0.0418198,
+			"slack": 5.24212
+		},
+		{
+			"C": 0.1,
+			"gamma": 1.0,
+			"b": -0.426834,
+			"supportVectors": 56,
+			"atBound": 50,
+			"trainAccuracy": 0.971429,
+			"testAccuracy": 0.955556,
+			"wNorm": 1.86602,
+			"margin": 1.0718,
+			"slack": 17.197
+		},
+		{
+			"C": 1.0,
+			"gamma": 1.0,
+			"b": -0.553065,
+			"supportVectors": 20,
+			"atBound": 14,
+			"trainAccuracy": 0.971429,
+			"testAccuracy": 0.955556,
+			"wNorm": 2.88579,
+			"margin": 0.693051,
+			"slack": 8.41722
+		},
+		{
+			"C": 10.0,
+			"gamma": 1.0,
+			"b": -1.68776,
+			"supportVectors": 12,
+			"atBound": 8,
+			"trainAccuracy": 0.971429,
+			"testAccuracy": 0.955556,
+			"wNorm": 5.67248,
+			"margin": 0.35258,
+			"slack": 5.77299
+		},
+		{
+			"C": 100.0,
+			"gamma": 1.0,
+			"b": -4.041,
+			"supportVectors": 9,
+			"atBound": 3,
+			"trainAccuracy": 0.990476,
+			"testAccuracy": 0.955556,
+			"wNorm": 11.812,
+			"margin": 0.16932,
+			"slack": 3.54253
+		},
+		{
+			"C": 1000.0,
+			"gamma": 1.0,
+			"b": -7.47814,
+			"supportVectors": 8,
+			"atBound": 1,
+			"trainAccuracy": 0.990476,
+			"testAccuracy": 0.955556,
+			"wNorm": 25.881,
+			"margin": 0.0772767,
+			"slack": 2.28502
+		},
+		{
+			"C": 0.1,
+			"gamma": 10.0,
+			"b": -0.564717,
+			"supportVectors": 70,
+			"atBound": 60,
+			"trainAccuracy": 0.942857,
+			"testAccuracy": 0.888889,
+			"wNorm": 2.12726,
+			"margin": 0.940178,
+			"slack": 21.5205
+		},
+		{
+			"C": 1.0,
+			"gamma": 10.0,
+			"b": -0.443161,
+			"supportVectors": 34,
+			"atBound": 9,
+			"trainAccuracy": 0.980952,
+			"testAccuracy": 0.955556,
+			"wNorm": 3.69505,
+			"margin": 0.541264,
+			"slack": 4.45837
+		},
+		{
+			"C": 10.0,
+			"gamma": 10.0,
+			"b": -0.492567,
+			"supportVectors": 28,
+			"atBound": 2,
+			"trainAccuracy": 0.990476,
+			"testAccuracy": 0.955556,
+			"wNorm": 5.71297,
+			"margin": 0.350081,
+			"slack": 2.17149
+		},
+		{
+			"C": 100.0,
+			"gamma": 10.0,
+			"b": -0.481659,
+			"supportVectors": 28,
+			"atBound": 1,
+			"trainAccuracy": 0.990476,
+			"testAccuracy": 0.955556,
+			"wNorm": 6.27821,
+			"margin": 0.318562,
+			"slack": 2.0
+		},
+		{
+			"C": 1000.0,
+			"gamma": 10.0,
+			"b": -0.481659,
+			"supportVectors": 28,
+			"atBound": 1,
+			"trainAccuracy": 0.990476,
+			"testAccuracy": 0.955556,
+			"wNorm": 6.27821,
+			"margin": 0.318562,
+			"slack": 2.0
+		},
+		{
+			"C": 0.1,
+			"gamma": 100.0,
+			"b": -0.889103,
+			"supportVectors": 83,
+			"atBound": 44,
+			"trainAccuracy": 0.666667,
+			"testAccuracy": 0.666667,
+			"wNorm": 1.18674,
+			"margin": 1.68529,
+			"slack": 55.9165
+		},
+		{
+			"C": 1.0,
+			"gamma": 100.0,
+			"b": -0.358244,
+			"supportVectors": 77,
+			"atBound": 12,
+			"trainAccuracy": 0.990476,
+			"testAccuracy": 0.888889,
+			"wNorm": 6.22792,
+			"margin": 0.321135,
+			"slack": 3.83697
+		},
+		{
+			"C": 10.0,
+			"gamma": 100.0,
+			"b": -0.324634,
+			"supportVectors": 74,
+			"atBound": 2,
+			"trainAccuracy": 0.990476,
+			"testAccuracy": 0.888889,
+			"wNorm": 6.54631,
+			"margin": 0.305516,
+			"slack": 2.0
+		},
+		{
+			"C": 100.0,
+			"gamma": 100.0,
+			"b": -0.324634,
+			"supportVectors": 74,
+			"atBound": 2,
+			"trainAccuracy": 0.990476,
+			"testAccuracy": 0.888889,
+			"wNorm": 6.54631,
+			"margin": 0.305516,
+			"slack": 2.0
+		},
+		{
+			"C": 1000.0,
+			"gamma": 100.0,
+			"b": -0.324634,
+			"supportVectors": 73,
+			"atBound": 2,
+			"trainAccuracy": 0.990476,
+			"testAccuracy": 0.888889,
+			"wNorm": 6.54631,
+			"margin": 0.305516,
+			"slack": 2.0
+		}
+	],
+	"polySweep": [
+		{
+			"C": 0.1,
+			"degree": 2,
+			"gamma": 1.0,
+			"coef0": 1.0,
+			"b": 1.40486,
+			"supportVectors": 30,
+			"atBound": 27,
+			"trainAccuracy": 0.961905,
+			"testAccuracy": 0.955556,
+			"wNorm": 1.29089,
+			"margin": 1.54932,
+			"slack": 12.1151,
+			"w": [
+				-1.38778e-17,
+				0.00761164,
+				-0.236323,
+				-0.678159,
+				-0.847436,
+				-0.657601
+			]
+		},
+		{
+			"C": 1.0,
+			"degree": 2,
+			"gamma": 1.0,
+			"coef0": 1.0,
+			"b": 2.15401,
+			"supportVectors": 14,
+			"atBound": 10,
+			"trainAccuracy": 0.971429,
+			"testAccuracy": 0.955556,
+			"wNorm": 1.8952,
+			"margin": 1.0553,
+			"slack": 8.20739,
+			"w": [
+				2.22045e-16,
+				-0.0799906,
+				-0.363305,
+				-1.15387,
+				-1.06032,
+				-0.998838
+			]
+		},
+		{
+			"C": 10.0,
+			"degree": 2,
+			"gamma": 1.0,
+			"coef0": 1.0,
+			"b": 3.2433,
+			"supportVectors": 12,
+			"atBound": 7,
+			"trainAccuracy": 0.971429,
+			"testAccuracy": 0.955556,
+			"wNorm": 4.00633,
+			"margin": 0.49921,
+			"slack": 6.61196,
+			"w": [
+				-7.10543e-15,
+				-0.241525,
+				-0.77909,
+				-3.00499,
+				0.268404,
+				-2.50667
+			]
+		},
+		{
+			"C": 100.0,
+			"degree": 2,
+			"gamma": 1.0,
+			"coef0": 1.0,
+			"b": 2.29113,
+			"supportVectors": 8,
+			"atBound": 4,
+			"trainAccuracy": 0.990476,
+			"testAccuracy": 0.933333,
+			"wNorm": 14.6262,
+			"margin": 0.136741,
+			"slack": 3.95018,
+			"w": [
+				9.9476e-14,
+				3.3278,
+				-1.9482,
+				-8.74078,
+				6.85603,
+				-8.69771
+			]
+		},
+		{
+			"C": 1000.0,
+			"degree": 2,
+			"gamma": 1.0,
+			"coef0": 1.0,
+			"b": 4.67443,
+			"supportVectors": 7,
+			"atBound": 2,
+			"trainAccuracy": 0.990476,
+			"testAccuracy": 0.933333,
+			"wNorm": 33.4179,
+			"margin": 0.0598482,
+			"slack": 2.96565,
+			"w": [
+				1.13687e-12,
+				10.1035,
+				-10.2272,
+				-20.901,
+				17.7519,
+				-12.5736
+			]
+		}
+	],
+	"rff": [
+		{
+			"D": 10,
+			"kernelError": 0.751574,
+			"kernelRms": 0.364602,
+			"agreement": 0.914342,
+			"testAccuracy": 0.911111,
+			"supportVectors": 31
+		},
+		{
+			"D": 100,
+			"kernelError": 0.281385,
+			"kernelRms": 0.0879564,
+			"agreement": 0.984911,
+			"testAccuracy": 0.955556,
+			"supportVectors": 17
+		},
+		{
+			"D": 1000,
+			"kernelError": 0.0825546,
+			"kernelRms": 0.0375044,
+			"agreement": 0.988569,
+			"testAccuracy": 0.955556,
+			"supportVectors": 19
+		},
+		{
+			"D": 10000,
+			"kernelError": 0.0158475,
+			"kernelRms": 0.00608422,
+			"agreement": 0.998476,
+			"testAccuracy": 0.955556,
+			"supportVectors": 21
+		}
+	],
+	"capture": {
+		"timestamp": "2026-11-03T13:08:38.868315+00:00",
+		"device": "cpu (arm64, Darwin)",
+		"dtype": "float64",
+		"python": "3.12.12",
+		"packages": {
+			"scikit-learn": "1.9.1",
+			"numpy": "2.5.4",
+			"scipy": "1.18.1"
+		},
+		"cpuCount": 14,
+		"script": "scripts/classical/record_svm.py",
+		"scriptSha256": "eebf4b9a6f712b2d35e6447f41817477b8473c753fad0b94b8a96f11552beef6"
+	},
+	"data": {
+		"file": "svm.f32",
+		"sha256": "0fea5302ad426cad61e9451d8478fd4ea2534e69fe686ebf7802b02b15ff7335",
+		"bytes": 886668,
+		"tensors": {
+			"xTrain": {
+				"offset": 0,
+				"length": 210,
+				"shape": [
+					105,
+					2
+				]
+			},
+			"yTrain": {
+				"offset": 210,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"xTest": {
+				"offset": 315,
+				"length": 90,
+				"shape": [
+					45,
+					2
+				]
+			},
+			"yTest": {
+				"offset": 405,
+				"length": 45,
+				"shape": [
+					45
+				]
+			},
+			"speciesTrain": {
+				"offset": 450,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"speciesTest": {
+				"offset": 555,
+				"length": 45,
+				"shape": [
+					45
+				]
+			},
+			"linear.grid": {
+				"offset": 600,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"linear.alpha": {
+				"offset": 7161,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"linear.fTrain": {
+				"offset": 7266,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"linear.fTest": {
+				"offset": 7371,
+				"length": 45,
+				"shape": [
+					45
+				]
+			},
+			"poly.grid": {
+				"offset": 7416,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"poly.alpha": {
+				"offset": 13977,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"poly.fTrain": {
+				"offset": 14082,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"poly.fTest": {
+				"offset": 14187,
+				"length": 45,
+				"shape": [
+					45
+				]
+			},
+			"rbf.grid": {
+				"offset": 14232,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"rbf.alpha": {
+				"offset": 20793,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"rbf.fTrain": {
+				"offset": 20898,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"rbf.fTest": {
+				"offset": 21003,
+				"length": 45,
+				"shape": [
+					45
+				]
+			},
+			"sweep.0.0.grid": {
+				"offset": 21048,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.0.0.alpha": {
+				"offset": 27609,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.0.0.fTrain": {
+				"offset": 27714,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.0.1.grid": {
+				"offset": 27819,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.0.1.alpha": {
+				"offset": 34380,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.0.1.fTrain": {
+				"offset": 34485,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.0.2.grid": {
+				"offset": 34590,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.0.2.alpha": {
+				"offset": 41151,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.0.2.fTrain": {
+				"offset": 41256,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.0.3.grid": {
+				"offset": 41361,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.0.3.alpha": {
+				"offset": 47922,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.0.3.fTrain": {
+				"offset": 48027,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.0.4.grid": {
+				"offset": 48132,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.0.4.alpha": {
+				"offset": 54693,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.0.4.fTrain": {
+				"offset": 54798,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.1.0.grid": {
+				"offset": 54903,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.1.0.alpha": {
+				"offset": 61464,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.1.0.fTrain": {
+				"offset": 61569,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.1.1.grid": {
+				"offset": 61674,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.1.1.alpha": {
+				"offset": 68235,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.1.1.fTrain": {
+				"offset": 68340,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.1.2.grid": {
+				"offset": 68445,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.1.2.alpha": {
+				"offset": 75006,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.1.2.fTrain": {
+				"offset": 75111,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.1.3.grid": {
+				"offset": 75216,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.1.3.alpha": {
+				"offset": 81777,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.1.3.fTrain": {
+				"offset": 81882,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.1.4.grid": {
+				"offset": 81987,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.1.4.alpha": {
+				"offset": 88548,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.1.4.fTrain": {
+				"offset": 88653,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.2.0.grid": {
+				"offset": 88758,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.2.0.alpha": {
+				"offset": 95319,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.2.0.fTrain": {
+				"offset": 95424,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.2.1.grid": {
+				"offset": 95529,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.2.1.alpha": {
+				"offset": 102090,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.2.1.fTrain": {
+				"offset": 102195,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.2.2.grid": {
+				"offset": 102300,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.2.2.alpha": {
+				"offset": 108861,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.2.2.fTrain": {
+				"offset": 108966,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.2.3.grid": {
+				"offset": 109071,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.2.3.alpha": {
+				"offset": 115632,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.2.3.fTrain": {
+				"offset": 115737,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.2.4.grid": {
+				"offset": 115842,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.2.4.alpha": {
+				"offset": 122403,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.2.4.fTrain": {
+				"offset": 122508,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.3.0.grid": {
+				"offset": 122613,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.3.0.alpha": {
+				"offset": 129174,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.3.0.fTrain": {
+				"offset": 129279,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.3.1.grid": {
+				"offset": 129384,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.3.1.alpha": {
+				"offset": 135945,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.3.1.fTrain": {
+				"offset": 136050,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.3.2.grid": {
+				"offset": 136155,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.3.2.alpha": {
+				"offset": 142716,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.3.2.fTrain": {
+				"offset": 142821,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.3.3.grid": {
+				"offset": 142926,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.3.3.alpha": {
+				"offset": 149487,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.3.3.fTrain": {
+				"offset": 149592,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.3.4.grid": {
+				"offset": 149697,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"sweep.3.4.alpha": {
+				"offset": 156258,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.3.4.fTrain": {
+				"offset": 156363,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"sweep.support": {
+				"offset": 156468,
+				"length": 2100,
+				"shape": [
+					4,
+					5,
+					105
+				]
+			},
+			"polySweep.0.grid": {
+				"offset": 158568,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"polySweep.0.alpha": {
+				"offset": 165129,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"polySweep.0.fTrain": {
+				"offset": 165234,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"polySweep.1.grid": {
+				"offset": 165339,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"polySweep.1.alpha": {
+				"offset": 171900,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"polySweep.1.fTrain": {
+				"offset": 172005,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"polySweep.2.grid": {
+				"offset": 172110,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"polySweep.2.alpha": {
+				"offset": 178671,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"polySweep.2.fTrain": {
+				"offset": 178776,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"polySweep.3.grid": {
+				"offset": 178881,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"polySweep.3.alpha": {
+				"offset": 185442,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"polySweep.3.fTrain": {
+				"offset": 185547,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"polySweep.4.grid": {
+				"offset": 185652,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"polySweep.4.alpha": {
+				"offset": 192213,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"polySweep.4.fTrain": {
+				"offset": 192318,
+				"length": 105,
+				"shape": [
+					105
+				]
+			},
+			"rff.10.grid": {
+				"offset": 192423,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"rff.100.grid": {
+				"offset": 198984,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"rff.1000.grid": {
+				"offset": 205545,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			},
+			"rff.1000.omega": {
+				"offset": 212106,
+				"length": 2000,
+				"shape": [
+					2,
+					1000
+				]
+			},
+			"rff.1000.beta": {
+				"offset": 214106,
+				"length": 1000,
+				"shape": [
+					1000
+				]
+			},
+			"rff.10000.grid": {
+				"offset": 215106,
+				"length": 6561,
+				"shape": [
+					81,
+					81
+				]
+			}
+		}
+	}
+}
